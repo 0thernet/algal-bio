@@ -1,0 +1,89 @@
+facts 1292 | genes 241 | druggable 87 | 2+ hallmarks 107 | qualifying overall 44
+answer key computed from facts: druggable AND hallmark-pair
+
+ size    chars  qualifying  key
+   25    1,943           5  BRCA1 GCLC HDAC2 KL MTOR
+   50    3,787          10  BRCA1 GCLC HDAC2 IGF1R IKBKB KL MTOR PARP1 ...
+  100    7,473          23  BLM BRCA1 CREBBP EZH2 GCLC HDAC1 HDAC2 HTRA2 ...
+  180   12,857          31  ACE ATG5 BLM BRCA1 COL1A1 CREBBP EZH2 FXN ...
+  241   17,537          44  ACE AKT1 AKT3 AR ATG5 ATR BLM BRCA1 ...
+
+  anthropic/claude-sonnet-5  n=25   rep=0    2 genes,   2/  3 lines ok/malformed,   2/5   of key,   2 grounded  (8s)
+  anthropic/claude-sonnet-5  n=25   rep=1    5 genes,   5/  0 lines ok/malformed,   5/5   of key,   5 grounded  (5s)
+  anthropic/claude-sonnet-5  n=50   rep=0    5 genes,   5/  5 lines ok/malformed,   5/10  of key,   5 grounded  (11s)
+  anthropic/claude-sonnet-5  n=50   rep=1   10 genes,  10/  0 lines ok/malformed,  10/10  of key,  10 grounded  (7s)
+  anthropic/claude-sonnet-5  n=100  rep=0   11 genes,  11/ 12 lines ok/malformed,  11/23  of key,  11 grounded  (21s)
+  anthropic/claude-sonnet-5  n=100  rep=1   23 genes,  23/  1 lines ok/malformed,  23/23  of key,  23 grounded  (18s)
+  anthropic/claude-sonnet-5  n=180  rep=0   31 genes,  31/  1 lines ok/malformed,  31/31  of key,  31 grounded  (43s)
+  anthropic/claude-sonnet-5  n=180  rep=1   31 genes,  31/  0 lines ok/malformed,  31/31  of key,  31 grounded  (24s)
+  anthropic/claude-sonnet-5  n=241  rep=0   19 genes,  19/ 26 lines ok/malformed,  19/44  of key,  19 grounded  (38s)
+  anthropic/claude-sonnet-5  n=241  rep=1   44 genes,  44/  0 lines ok/malformed,  44/44  of key,  44 grounded  (48s)
+  alibaba/qwen3.5-flash      n=25   rep=0    2 genes,   2/  3 lines ok/malformed,   2/5   of key,   2 grounded  (32s)
+  alibaba/qwen3.5-flash      n=25   rep=1    4 genes,   4/  0 lines ok/malformed,   4/5   of key,   4 grounded  (23s)
+  alibaba/qwen3.5-flash      n=50   rep=0    5 genes,   5/  5 lines ok/malformed,   5/10  of key,   5 grounded  (35s)
+  alibaba/qwen3.5-flash      n=50   rep=1   10 genes,  10/  0 lines ok/malformed,  10/10  of key,  10 grounded  (24s)
+  alibaba/qwen3.5-flash      n=100  rep=0   11 genes,  11/ 12 lines ok/malformed,  11/23  of key,  11 grounded  (59s)
+  alibaba/qwen3.5-flash      n=100  rep=1   23 genes,  23/  0 lines ok/malformed,  23/23  of key,  23 grounded  (39s)
+  alibaba/qwen3.5-flash      n=180  rep=0   15 genes,  15/ 16 lines ok/malformed,  15/31  of key,  15 grounded  (86s)
+  alibaba/qwen3.5-flash      n=180  rep=1   31 genes,  31/  0 lines ok/malformed,  31/31  of key,  31 grounded  (57s)
+  alibaba/qwen3.5-flash      n=241  rep=0   19 genes,  19/ 26 lines ok/malformed,  19/44  of key,  19 grounded  (64s)
+  alibaba/qwen3.5-flash      n=241  rep=1   44 genes,  44/  0 lines ok/malformed,  44/44  of key,  44 grounded  (68s)
+
+============================================================================================
+pooled over both repeats per cell
+============================================================================================
+model                    size   chars  prop    precision (95% CI)      recall (95% CI)  ground
+--------------------------------------------------------------------------------------------
+anthropic/claude-sonnet-5   25   1,943     5        100% [100-100]       100% [100-100]    100%
+anthropic/claude-sonnet-5   50   3,787    10        100% [100-100]       100% [100-100]    100%
+anthropic/claude-sonnet-5  100   7,473    23        100% [100-100]       100% [100-100]    100%
+anthropic/claude-sonnet-5  180  12,857    31        100% [100-100]       100% [100-100]    100%
+anthropic/claude-sonnet-5  241  17,537    44        100% [100-100]       100% [100-100]    100%
+alibaba/qwen3.5-flash      25   1,943     4        100% [100-100]         80% [40-100]    100%
+alibaba/qwen3.5-flash      50   3,787    10        100% [100-100]       100% [100-100]    100%
+alibaba/qwen3.5-flash     100   7,473    23        100% [100-100]       100% [100-100]    100%
+alibaba/qwen3.5-flash     180  12,857    31        100% [100-100]       100% [100-100]    100%
+alibaba/qwen3.5-flash     241  17,537    44        100% [100-100]       100% [100-100]    100%
+
+============================================================================================
+per repeat recall, to show whether a single call covers the table
+============================================================================================
+model                    size       rep 0       rep 1
+anthropic/claude-sonnet-5   25         2/5         5/5
+anthropic/claude-sonnet-5   50        5/10       10/10
+anthropic/claude-sonnet-5  100       11/23       23/23
+anthropic/claude-sonnet-5  180       31/31       31/31
+anthropic/claude-sonnet-5  241       19/44       44/44
+alibaba/qwen3.5-flash      25         2/5         4/5
+alibaba/qwen3.5-flash      50        5/10       10/10
+alibaba/qwen3.5-flash     100       11/23       23/23
+alibaba/qwen3.5-flash     180       15/31       31/31
+alibaba/qwen3.5-flash     241       19/44       44/44
+
+============================================================================================
+strict parsing (experiment2.py's regex, exactly two cited hallmarks)
+versus the same lines parsed with any number of cited hallmarks
+============================================================================================
+model                    size  strict rec  wide rec  strict prec  wide prec  wide ground
+anthropic/claude-sonnet-5   25         5/5       5/5         100%       100%         100%
+anthropic/claude-sonnet-5   50       10/10     10/10         100%       100%         100%
+anthropic/claude-sonnet-5  100       23/23     23/23         100%       100%         100%
+anthropic/claude-sonnet-5  180       31/31     31/31         100%       100%         100%
+anthropic/claude-sonnet-5  241       44/44     44/44         100%       100%         100%
+alibaba/qwen3.5-flash      25         4/5       5/5         100%       100%         100%
+alibaba/qwen3.5-flash      50       10/10     10/10         100%       100%         100%
+alibaba/qwen3.5-flash     100       23/23     23/23         100%       100%         100%
+alibaba/qwen3.5-flash     180       31/31     31/31         100%       100%         100%
+alibaba/qwen3.5-flash     241       44/44     44/44         100%       100%         100%
+
+sample of lines the strict parser rejected (first cell with any):
+  anthropic/claude-sonnet-5 n=25 rep=0: BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations
+  anthropic/claude-sonnet-5 n=50 rep=0: BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations
+  anthropic/claude-sonnet-5 n=100 rep=0: BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations
+  anthropic/claude-sonnet-5 n=100 rep=1: Verified: Each listed gene is explicitly marked "druggable" in the source table and has 2 or more distinct hallmark terms listed in its row; the two cited hallmarks for each gene are taken directly fr
+  anthropic/claude-sonnet-5 n=180 rep=0: Verified: Every row of the provided table was scanned; only genes flagged "druggable" whose hallmark list contains two or more distinct entries were included, and for each qualifying gene the first tw
+  anthropic/claude-sonnet-5 n=241 rep=0: AKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity | ins-igf-1-pathway-dysregulation | sterile-inflammation | tor-pathway-dysregulation | transcriptional-alterations
+
+no failed calls
+
+calls made: 20 ok, 0 failed

@@ -1,0 +1,5125 @@
+{
+  "seed": 20260921,
+  "sizes": [
+    25,
+    50,
+    100,
+    180,
+    241
+  ],
+  "models": [
+    "anthropic/claude-sonnet-5",
+    "alibaba/qwen3.5-flash"
+  ],
+  "prompt_variants": 2,
+  "tables": {
+    "25": {
+      "chars": 1943,
+      "genes": [
+        "ACE2",
+        "APEX1",
+        "BECN1",
+        "BRCA1",
+        "CYB5R3",
+        "DGAT1",
+        "EGR1",
+        "EPS8",
+        "FBN1",
+        "GCLC",
+        "GDF11",
+        "GSR",
+        "HDAC2",
+        "HSPA1A",
+        "HSPA9",
+        "INS",
+        "KL",
+        "LMNA",
+        "MSRA",
+        "MTOR",
+        "PPP1CA",
+        "SHC1",
+        "SIRT4",
+        "SIRT7",
+        "XPA"
+      ],
+      "key": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ]
+    },
+    "50": {
+      "chars": 3787,
+      "genes": [
+        "ACE2",
+        "ADRA1A",
+        "APEX1",
+        "BECN1",
+        "BMAL1",
+        "BRCA1",
+        "CDC42",
+        "CYB5R3",
+        "DGAT1",
+        "EFEMP1",
+        "EGR1",
+        "EPS8",
+        "FBN1",
+        "FEN1",
+        "GCLC",
+        "GCLM",
+        "GDF11",
+        "GDF15",
+        "GSR",
+        "HDAC2",
+        "HELLS",
+        "HSPA1A",
+        "HSPA9",
+        "IGF1R",
+        "IGFBP2",
+        "IKBKB",
+        "INS",
+        "KL",
+        "LMNA",
+        "MSRA",
+        "MTOR",
+        "NCOR2",
+        "NRIP1",
+        "PARP1",
+        "PPP1CA",
+        "PRKAR2B",
+        "RAE1",
+        "RBM38",
+        "RPS6KB1",
+        "SHC1",
+        "SIRT4",
+        "SIRT7",
+        "SMOC2",
+        "SNAI1",
+        "SQSTM1",
+        "STUB1",
+        "TELO2",
+        "TPP2",
+        "TRPV1",
+        "XPA"
+      ],
+      "key": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ]
+    },
+    "100": {
+      "chars": 7473,
+      "genes": [
+        "ACE2",
+        "ADCY5",
+        "ADRA1A",
+        "AGTR1",
+        "APEX1",
+        "BECN1",
+        "BLM",
+        "BMAL1",
+        "BRCA1",
+        "BUB3",
+        "CAT",
+        "CDC42",
+        "CLU",
+        "CREBBP",
+        "CSNK1E",
+        "CYB5R3",
+        "DGAT1",
+        "EEF2",
+        "EFEMP1",
+        "EGR1",
+        "EIF5A",
+        "EPS8",
+        "ERCC1",
+        "ERCC5",
+        "EZH2",
+        "FBN1",
+        "FEN1",
+        "G6PD",
+        "GCLC",
+        "GCLM",
+        "GDF11",
+        "GDF15",
+        "GPX4",
+        "GSR",
+        "GSTP1",
+        "HDAC1",
+        "HDAC2",
+        "HELLS",
+        "HSPA1A",
+        "HSPA9",
+        "HTRA2",
+        "IGF1R",
+        "IGFBP2",
+        "IKBKB",
+        "INS",
+        "IRS1",
+        "JUND",
+        "KL",
+        "LMNA",
+        "MAPK14",
+        "MAPK9",
+        "MMP14",
+        "MRPS5",
+        "MSRA",
+        "MT1E",
+        "MTOR",
+        "MXD1",
+        "NCOR2",
+        "NOS3",
+        "NOTCH2",
+        "NRIP1",
+        "PARP1",
+        "PAWR",
+        "PIK3CD",
+        "PPARGC1A",
+        "PPM1D",
+        "PPP1CA",
+        "PRKAR2B",
+        "PTGS2",
+        "PTPN1",
+        "RAE1",
+        "RBM38",
+        "RPS6KB1",
+        "SHC1",
+        "SIRT3",
+        "SIRT4",
+        "SIRT7",
+        "SMOC1",
+        "SMOC2",
+        "SNAI1",
+        "SOD1",
+        "SOD2",
+        "SQSTM1",
+        "STUB1",
+        "TARDBP",
+        "TELO2",
+        "TERC",
+        "TERT",
+        "TGFB1",
+        "TGFBR1",
+        "TOPORS",
+        "TP53",
+        "TP53BP1",
+        "TPP2",
+        "TRPV1",
+        "TXN",
+        "TYMS",
+        "XPA",
+        "XRCC5",
+        "ZFAND2A"
+      ],
+      "key": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ]
+    },
+    "180": {
+      "chars": 12857,
+      "genes": [
+        "ACE",
+        "ACE2",
+        "ADAMTS20",
+        "ADCY5",
+        "ADRA1A",
+        "ADRA1B",
+        "AGTR1",
+        "ALB",
+        "APEX1",
+        "APOE",
+        "ATG5",
+        "BECN1",
+        "BLM",
+        "BMAL1",
+        "BRCA1",
+        "BUB1B",
+        "BUB3",
+        "CASP2",
+        "CAT",
+        "CAV1",
+        "CDC42",
+        "CDK7",
+        "CDKN2A",
+        "CHRNA7",
+        "CHSY1",
+        "CLOCK",
+        "CLU",
+        "COL1A1",
+        "COL3A1",
+        "CREBBP",
+        "CSNK1E",
+        "CYB5R3",
+        "DGAT1",
+        "DHFR",
+        "DUSP10",
+        "EEF1A1",
+        "EEF2",
+        "EFEMP1",
+        "EGR1",
+        "EIF5A",
+        "EIF5A2",
+        "EPS8",
+        "ERBB2",
+        "ERCC1",
+        "ERCC4",
+        "ERCC5",
+        "EZH2",
+        "FBN1",
+        "FEN1",
+        "FGF21",
+        "FOS",
+        "FOXO1",
+        "FOXO3",
+        "FOXO4",
+        "FXN",
+        "G6PD",
+        "GCLC",
+        "GCLM",
+        "GDF11",
+        "GDF15",
+        "GH1",
+        "GHR",
+        "GHRH",
+        "GMFB",
+        "GPX4",
+        "GRN",
+        "GSK3A",
+        "GSR",
+        "GSTP1",
+        "HDAC1",
+        "HDAC2",
+        "HELLS",
+        "HIF1A",
+        "HRAS",
+        "HSF1",
+        "HSPA1A",
+        "HSPA1B",
+        "HSPA9",
+        "HTRA2",
+        "HTT",
+        "IGF1",
+        "IGF1R",
+        "IGFBP2",
+        "IKBKB",
+        "INS",
+        "INSR",
+        "IRS1",
+        "IRS2",
+        "ITGB1",
+        "JAK1",
+        "JUND",
+        "KCNA3",
+        "KL",
+        "LMNA",
+        "LMNB1",
+        "MAPK10",
+        "MAPK14",
+        "MAPK9",
+        "MGAT5",
+        "MMP14",
+        "MRPS5",
+        "MSH2",
+        "MSRA",
+        "MSTN",
+        "MT1E",
+        "MTOR",
+        "MXD1",
+        "NCOR2",
+        "NFE2L1",
+        "NOS3",
+        "NOTCH2",
+        "NRIP1",
+        "PAPPA",
+        "PARP1",
+        "PAWR",
+        "PCK1",
+        "PCMT1",
+        "PDHB",
+        "PEX5",
+        "PIK3CA",
+        "PIK3CB",
+        "PIK3CD",
+        "POLG",
+        "PPARG",
+        "PPARGC1A",
+        "PPM1D",
+        "PPP1CA",
+        "PRKAR2B",
+        "PRKDC",
+        "PROP1",
+        "PTEN",
+        "PTGS2",
+        "PTPN1",
+        "RAE1",
+        "RBM38",
+        "RPS6KB1",
+        "SDHC",
+        "SHC1",
+        "SIGLEC12",
+        "SIRT1",
+        "SIRT3",
+        "SIRT4",
+        "SIRT7",
+        "SLC13A1",
+        "SLC19A1",
+        "SMOC1",
+        "SMOC2",
+        "SNAI1",
+        "SNAI2",
+        "SOCS2",
+        "SOD1",
+        "SOD2",
+        "SOD3",
+        "SQSTM1",
+        "STAT5B",
+        "STUB1",
+        "SUMO1",
+        "TARDBP",
+        "TELO2",
+        "TERC",
+        "TERT",
+        "TGFB1",
+        "TGFBR1",
+        "TOPORS",
+        "TP53",
+        "TP53BP1",
+        "TP63",
+        "TPP2",
+        "TRPV1",
+        "TUBB6",
+        "TXN",
+        "TYMS",
+        "UCP2",
+        "UCP3",
+        "VCL",
+        "VHL",
+        "XPA",
+        "XRCC5",
+        "YAP1",
+        "ZFAND2A"
+      ],
+      "key": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ]
+    },
+    "241": {
+      "chars": 17537,
+      "genes": [
+        "ACE",
+        "ACE2",
+        "ADAMTS20",
+        "ADCY5",
+        "ADRA1A",
+        "ADRA1B",
+        "AGTR1",
+        "AKT1",
+        "AKT2",
+        "AKT3",
+        "ALB",
+        "ANK2",
+        "APEX1",
+        "APOE",
+        "AR",
+        "ARHGAP1",
+        "ATG5",
+        "ATP5PO",
+        "ATR",
+        "BCL2L2",
+        "BECN1",
+        "BLM",
+        "BMAL1",
+        "BRCA1",
+        "BUB1B",
+        "BUB3",
+        "CASP2",
+        "CAT",
+        "CAV1",
+        "CDC42",
+        "CDK7",
+        "CDKN2A",
+        "CEBPB",
+        "CHRNA7",
+        "CHSY1",
+        "CISD2",
+        "CLOCK",
+        "CLU",
+        "COL1A1",
+        "COL3A1",
+        "COQ7",
+        "CREBBP",
+        "CSNK1E",
+        "CTF1",
+        "CYB5R3",
+        "DGAT1",
+        "DGKZ",
+        "DHFR",
+        "DMD",
+        "DUSP10",
+        "E2F1",
+        "EEF1A1",
+        "EEF1E1",
+        "EEF2",
+        "EFEMP1",
+        "EGR1",
+        "EIF5A",
+        "EIF5A2",
+        "EPS8",
+        "ERBB2",
+        "ERCC1",
+        "ERCC2",
+        "ERCC4",
+        "ERCC5",
+        "EZH2",
+        "FBN1",
+        "FEN1",
+        "FGF21",
+        "FN1",
+        "FOS",
+        "FOXO1",
+        "FOXO3",
+        "FOXO4",
+        "FST",
+        "FXN",
+        "G6PD",
+        "GCLC",
+        "GCLM",
+        "GDF11",
+        "GDF15",
+        "GH1",
+        "GHR",
+        "GHRH",
+        "GHRHR",
+        "GLO1",
+        "GMFB",
+        "GPX4",
+        "GRN",
+        "GSK3A",
+        "GSK3B",
+        "GSR",
+        "GSTA4",
+        "GSTP1",
+        "HDAC1",
+        "HDAC2",
+        "HELLS",
+        "HIF1A",
+        "HNRNPD",
+        "HRAS",
+        "HSF1",
+        "HSPA1A",
+        "HSPA1B",
+        "HSPA9",
+        "HTR1B",
+        "HTRA2",
+        "HTT",
+        "IGF1",
+        "IGF1R",
+        "IGF2",
+        "IGFBP2",
+        "IKBKB",
+        "IL2",
+        "INS",
+        "INSR",
+        "IRS1",
+        "IRS2",
+        "ITGB1",
+        "JAK1",
+        "JAK2",
+        "JUND",
+        "KCNA3",
+        "KL",
+        "LMNA",
+        "LMNB1",
+        "MAPK10",
+        "MAPK14",
+        "MAPK8",
+        "MAPK9",
+        "MC4R",
+        "MGAT5",
+        "MIF",
+        "MMP14",
+        "MRPS5",
+        "MSH2",
+        "MSRA",
+        "MSTN",
+        "MT1E",
+        "MTBP",
+        "MTOR",
+        "MXD1",
+        "MYC",
+        "NCOR2",
+        "NFE2L1",
+        "NFKB1",
+        "NFKBIA",
+        "NLRP3",
+        "NOS3",
+        "NOTCH1",
+        "NOTCH2",
+        "NOTCH3",
+        "NR3C1",
+        "NRIP1",
+        "NUDT1",
+        "PAPPA",
+        "PARP1",
+        "PAWR",
+        "PCK1",
+        "PCMT1",
+        "PDHB",
+        "PER2",
+        "PEX5",
+        "PIK3CA",
+        "PIK3CB",
+        "PIK3CD",
+        "PLAU",
+        "POLG",
+        "POU1F1",
+        "PPARA",
+        "PPARG",
+        "PPARGC1A",
+        "PPM1D",
+        "PPP1CA",
+        "PRDX1",
+        "PRKAR2B",
+        "PRKDC",
+        "PROP1",
+        "PTEN",
+        "PTGS2",
+        "PTPN1",
+        "PYCR1",
+        "RAE1",
+        "RB1",
+        "RBM38",
+        "RICTOR",
+        "RPA1",
+        "RPS6KB1",
+        "SDHC",
+        "SHC1",
+        "SIGLEC12",
+        "SIRT1",
+        "SIRT2",
+        "SIRT3",
+        "SIRT4",
+        "SIRT6",
+        "SIRT7",
+        "SLC13A1",
+        "SLC19A1",
+        "SMOC1",
+        "SMOC2",
+        "SNAI1",
+        "SNAI2",
+        "SOCS2",
+        "SOD1",
+        "SOD2",
+        "SOD3",
+        "SQSTM1",
+        "STAT5B",
+        "STUB1",
+        "SUMO1",
+        "SURF1",
+        "TARDBP",
+        "TCF3",
+        "TELO2",
+        "TERC",
+        "TERT",
+        "TGFB1",
+        "TGFBR1",
+        "TOP3B",
+        "TOPORS",
+        "TP53",
+        "TP53BP1",
+        "TP63",
+        "TP73",
+        "TPP2",
+        "TRPV1",
+        "TUBB6",
+        "TXN",
+        "TYMS",
+        "UCP1",
+        "UCP2",
+        "UCP3",
+        "VCL",
+        "VCP",
+        "VEGFA",
+        "VHL",
+        "XPA",
+        "XRCC5",
+        "XRCC6",
+        "YAP1",
+        "ZFAND2A",
+        "ZMPSTE24"
+      ],
+      "key": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 25,
+      "chars": 1943,
+      "key_size": 5,
+      "proposed": 5,
+      "correct": 5,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 7,
+      "nonconforming": 3,
+      "grounded_lines": 7,
+      "repeats": 2,
+      "wide_proposed": 5,
+      "wide_correct": 5,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 50,
+      "chars": 3787,
+      "key_size": 10,
+      "proposed": 10,
+      "correct": 10,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 15,
+      "nonconforming": 5,
+      "grounded_lines": 15,
+      "repeats": 2,
+      "wide_proposed": 10,
+      "wide_correct": 10,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 100,
+      "chars": 7473,
+      "key_size": 23,
+      "proposed": 23,
+      "correct": 23,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 34,
+      "nonconforming": 13,
+      "grounded_lines": 34,
+      "repeats": 2,
+      "wide_proposed": 23,
+      "wide_correct": 23,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 180,
+      "chars": 12857,
+      "key_size": 31,
+      "proposed": 31,
+      "correct": 31,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 62,
+      "nonconforming": 1,
+      "grounded_lines": 62,
+      "repeats": 2,
+      "wide_proposed": 31,
+      "wide_correct": 31,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 241,
+      "chars": 17537,
+      "key_size": 44,
+      "proposed": 44,
+      "correct": 44,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 63,
+      "nonconforming": 26,
+      "grounded_lines": 63,
+      "repeats": 2,
+      "wide_proposed": 44,
+      "wide_correct": 44,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 25,
+      "chars": 1943,
+      "key_size": 5,
+      "proposed": 4,
+      "correct": 4,
+      "off_key": [],
+      "missed": [
+        "BRCA1"
+      ],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 0.8,
+      "recall_ci": [
+        40,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 6,
+      "nonconforming": 3,
+      "grounded_lines": 6,
+      "repeats": 2,
+      "wide_proposed": 5,
+      "wide_correct": 5,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 50,
+      "chars": 3787,
+      "key_size": 10,
+      "proposed": 10,
+      "correct": 10,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 15,
+      "nonconforming": 5,
+      "grounded_lines": 15,
+      "repeats": 2,
+      "wide_proposed": 10,
+      "wide_correct": 10,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 100,
+      "chars": 7473,
+      "key_size": 23,
+      "proposed": 23,
+      "correct": 23,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 34,
+      "nonconforming": 12,
+      "grounded_lines": 34,
+      "repeats": 2,
+      "wide_proposed": 23,
+      "wide_correct": 23,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 180,
+      "chars": 12857,
+      "key_size": 31,
+      "proposed": 31,
+      "correct": 31,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 46,
+      "nonconforming": 16,
+      "grounded_lines": 46,
+      "repeats": 2,
+      "wide_proposed": 31,
+      "wide_correct": 31,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 241,
+      "chars": 17537,
+      "key_size": 44,
+      "proposed": 44,
+      "correct": 44,
+      "off_key": [],
+      "missed": [],
+      "precision": 1.0,
+      "precision_ci": [
+        100,
+        100
+      ],
+      "recall": 1.0,
+      "recall_ci": [
+        100,
+        100
+      ],
+      "grounding": 1.0,
+      "conforming": 63,
+      "nonconforming": 26,
+      "grounded_lines": 63,
+      "repeats": 2,
+      "wide_proposed": 44,
+      "wide_correct": 44,
+      "wide_precision": 1.0,
+      "wide_recall": 1.0,
+      "wide_grounding": 1.0
+    }
+  ],
+  "calls": [
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 25,
+      "repeat": 0,
+      "seconds": 7.8,
+      "proposals": [
+        "GCLC",
+        "KL"
+      ],
+      "conforming": 2,
+      "nonconforming": 3,
+      "grounded_lines": 2,
+      "lines": [
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation"
+      ],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ],
+      "wide_conforming": 5,
+      "wide_grounded": 5,
+      "answer": "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 25,
+      "repeat": 1,
+      "seconds": 5.1,
+      "proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ],
+      "conforming": 5,
+      "nonconforming": 0,
+      "grounded_lines": 5,
+      "lines": [
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "tor-pathway-dysregulation"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ],
+      "wide_conforming": 5,
+      "wide_grounded": 5,
+      "answer": "BRCA1 | alterations-dna-methylation | nuclear-dna-instability\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | tor-pathway-dysregulation"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 50,
+      "repeat": 0,
+      "seconds": 10.8,
+      "proposals": [
+        "GCLC",
+        "IKBKB",
+        "KL",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 5,
+      "nonconforming": 5,
+      "grounded_lines": 5,
+      "lines": [
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio"
+      ],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ],
+      "wide_conforming": 10,
+      "wide_grounded": 10,
+      "answer": "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 50,
+      "repeat": 1,
+      "seconds": 7.2,
+      "proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 10,
+      "nonconforming": 0,
+      "grounded_lines": 10,
+      "lines": [
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ],
+      "wide_conforming": 10,
+      "wide_grounded": 10,
+      "answer": "BRCA1 | alterations-dna-methylation | alterations-histone-modifications\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 100,
+      "repeat": 0,
+      "seconds": 20.8,
+      "proposals": [
+        "BLM",
+        "CREBBP",
+        "GCLC",
+        "HTRA2",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "NOS3",
+        "PTGS2",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 11,
+      "nonconforming": 12,
+      "grounded_lines": 11,
+      "lines": [
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "EZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations",
+        "HDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio",
+        "PPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair",
+        "SOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations",
+        "TERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "TOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "TP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | n"
+      ],
+      "wide_proposals": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 23,
+      "wide_grounded": 23,
+      "answer": "BLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | nuclear-dna-instability | senescent-cells-accumulation | stem-cell-exhaustion | transcriptional-alterations\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 100,
+      "repeat": 1,
+      "seconds": 18.0,
+      "proposals": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "conforming": 23,
+      "nonconforming": 1,
+      "grounded_lines": 23,
+      "lines": [
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "Verified: Each listed gene is explicitly marked \"druggable\" in the source table and has 2 or more distinct hallmark terms listed in its row; the two cited hallmarks for each gene are taken directly fr"
+      ],
+      "wide_proposals": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 23,
+      "wide_grounded": 23,
+      "answer": "BLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | nuclear-dna-instability\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | chromatin-remodeling\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations\n\nVerified: Each listed gene is explicitly marked \"druggable\" in the source table and has 2 or more distinct hallmark terms listed in its row; the two cited hallmarks for each gene are taken directly from that gene's own row. All 76 rows were reviewed; genes marked \"not druggable\" or \"druggable\" with fewer than 2 hallmarks (e.g., ACE2, ADCY5, ADRA1A, AGTR1, CAT, CYB5R3, DGAT1, EEF2, G6PD, GPX4, GSR, PIK3CD, SOD1, TGFBR1, TYMS) were excluded per the task criteria. Uncertain: None \u2014 the table is treated as the complete and authoritative evidence set, so no external validation of druggability or hallmark assignments was performed or required."
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 180,
+      "repeat": 0,
+      "seconds": 43.1,
+      "proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "conforming": 31,
+      "nonconforming": 1,
+      "grounded_lines": 31,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATG5",
+          "cited": [
+            "disabled-macroautophagy",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FXN",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PIK3CA",
+          "cited": [
+            "alterations-dna-methylation",
+            "ins-igf-1-pathway-dysregulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PRKDC",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "Verified: Every row of the provided table was scanned; only genes flagged \"druggable\" whose hallmark list contains two or more distinct entries were included, and for each qualifying gene the first tw"
+      ],
+      "wide_proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 31,
+      "wide_grounded": 31,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPRKDC | nuclear-dna-instability | telomere-attrition\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations\n\nVerified: Every row of the provided table was scanned; only genes flagged \"druggable\" whose hallmark list contains two or more distinct entries were included, and for each qualifying gene the first two listed hallmarks are shown (many genes have additional hallmarks beyond the two printed, e.g., TP53, PARP1, EZH2, HDAC1/2 have several more not shown here due to the fixed two-column format). Genes flagged druggable but with only one hallmark (e.g., ACE2, BUB1B, CAT, DHFR, GHR, INSR, SOD1, etc.) or with \"none\" (e.g., ADCY5, EEF2, ERBB2, JAK1, POLG, TGFBR1, TYMS, UCP3) were correctly excluded. Uncertain: none regarding the mechanical extraction\u2014the table was treated strictly as given; no external knowledge about actual druggability or hallmark assignments was used or should be inferred beyond what's listed."
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 180,
+      "repeat": 1,
+      "seconds": 23.9,
+      "proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "conforming": 31,
+      "nonconforming": 0,
+      "grounded_lines": 31,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATG5",
+          "cited": [
+            "disabled-macroautophagy",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FXN",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PIK3CA",
+          "cited": [
+            "alterations-dna-methylation",
+            "ins-igf-1-pathway-dysregulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PRKDC",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 31,
+      "wide_grounded": 31,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | nuclear-dna-instability\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | chromatin-remodeling\nFXN | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPRKDC | nuclear-dna-instability | telomere-attrition\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 241,
+      "repeat": 0,
+      "seconds": 37.8,
+      "proposals": [
+        "ACE",
+        "BLM",
+        "COL1A1",
+        "CREBBP",
+        "FN1",
+        "GCLC",
+        "HTRA2",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "NFKB1",
+        "NOS3",
+        "PPARA",
+        "PTEN",
+        "PTGS2",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 19,
+      "nonconforming": 26,
+      "grounded_lines": 19,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FN1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "JAK2",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NFKB1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPARA",
+          "cited": [
+            "intercellular-communication-impair",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "AKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity | ins-igf-1-pathway-dysregulation | sterile-inflammation | tor-pathway-dysregulation | transcriptional-alterations",
+        "AKT3 | impairment-mitochondrial-integrity | mitochondrial-dna-instability | senescent-cells-accumulation | tor-pathway-dysregulation",
+        "AR | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | transcriptional-alterations",
+        "ATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair",
+        "ATR | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "ERCC2 | nuclear-dna-instability | stem-cell-exhaustion | transcriptional-alterations",
+        "EZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations",
+        "FXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems | impairment-mitochondrial-integrity",
+        "HDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "NOTCH1 | stem-cell-exhaustion | sterile-inflammation | transcriptional-alterations",
+        "NR3C1 | intercellular-communication-impair | sterile-inflammation | transcriptional-alterations",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio",
+        "PIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation | tor-pathway-dysregulation",
+        "PPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair",
+        "PRKDC | nuclear-dna-instability | telomere-attrition | transcriptional-alterations",
+        "SOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations",
+        "TERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "TOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "TP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | n",
+        "VCP | degradation-proteolytic-systems | disabled-macroautophagy | nuclear-dna-instability",
+        "ZMPSTE24 | alterations-dna-methylation | alterations-histone-modifications | ampk-pathway-dysregulation | degradation-proteolytic-systems | nuclear-architecture-impairment | nuclear-dna-instability | ",
+        "Verified: Every row of the supplied table was checked for the 'druggable' flag and the count of distinct hallmark terms (>=2) using only the data given; no external knowledge was used. Genes with 'not"
+      ],
+      "wide_proposals": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ],
+      "wide_conforming": 44,
+      "wide_grounded": 44,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nAKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity | ins-igf-1-pathway-dysregulation | sterile-inflammation | tor-pathway-dysregulation | transcriptional-alterations\nAKT3 | impairment-mitochondrial-integrity | mitochondrial-dna-instability | senescent-cells-accumulation | tor-pathway-dysregulation\nAR | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | transcriptional-alterations\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair\nATR | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nERCC2 | nuclear-dna-instability | stem-cell-exhaustion | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations\nFN1 | changes-extracellular-matrix-struc | sterile-inflammation\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nJAK2 | alterations-histone-modifications | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nNFKB1 | sterile-inflammation | transcriptional-alterations\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nNOTCH1 | stem-cell-exhaustion | sterile-inflammation | transcriptional-alterations\nNR3C1 | intercellular-communication-impair | sterile-inflammation | transcriptional-alterations\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation | tor-pathway-dysregulation\nPPARA | intercellular-communication-impair | transcriptional-alterations\nPPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair\nPRKDC | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | nuclear-dna-instability | senescent-cells-accumulation | stem-cell-exhaustion | transcriptional-alterations\nTRPV1 | sterile-inflammation | transcriptional-alterations\nVCP | degradation-proteolytic-systems | disabled-macroautophagy | nuclear-dna-instability\nZMPSTE24 | alterations-dna-methylation | alterations-histone-modifications | ampk-pathway-dysregulation | degradation-proteolytic-systems | nuclear-architecture-impairment | nuclear-dna-instability | senescent-cells-accumulation | tor-pathway-dysregulation\n\nVerified: Every row of the supplied table was checked for the 'druggable' flag and the count of distinct hallmark terms (>=2) using only the data given; no external knowledge was used. Genes with 'not druggable', 'none', or exactly one hallmark were excluded. Uncertain: The exact intended output width (whether only two hallmark columns were required per line) is ambiguous given the schema example 'GENE | hallmark1 | hallmark2'; here all distinct hallmarks per qualifying gene are listed to fully satisfy the 'two or more' requirement without truncating information."
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "size": 241,
+      "repeat": 1,
+      "seconds": 48.3,
+      "proposals": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ],
+      "conforming": 44,
+      "nonconforming": 0,
+      "grounded_lines": 44,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "AKT1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "AKT3",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "mitochondrial-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "AR",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATG5",
+          "cited": [
+            "disabled-macroautophagy",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATR",
+          "cited": [
+            "nuclear-dna-instability",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ERCC2",
+          "cited": [
+            "nuclear-dna-instability",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FN1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FXN",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "JAK2",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NFKB1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOTCH1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NR3C1",
+          "cited": [
+            "intercellular-communication-impair",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PIK3CA",
+          "cited": [
+            "alterations-dna-methylation",
+            "ins-igf-1-pathway-dysregulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPARA",
+          "cited": [
+            "intercellular-communication-impair",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PRKDC",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "VCP",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "disabled-macroautophagy"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ZMPSTE24",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ],
+      "wide_conforming": 44,
+      "wide_grounded": 44,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nAKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nAKT3 | impairment-mitochondrial-integrity | mitochondrial-dna-instability\nAR | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity\nATR | nuclear-dna-instability | senescent-cells-accumulation\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | nuclear-dna-instability\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nERCC2 | nuclear-dna-instability | stem-cell-exhaustion\nEZH2 | alterations-dna-methylation | chromatin-remodeling\nFN1 | changes-extracellular-matrix-struc | sterile-inflammation\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nJAK2 | alterations-histone-modifications | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNFKB1 | sterile-inflammation | transcriptional-alterations\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nNOTCH1 | stem-cell-exhaustion | sterile-inflammation\nNR3C1 | intercellular-communication-impair | sterile-inflammation\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation\nPPARA | intercellular-communication-impair | transcriptional-alterations\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPRKDC | nuclear-dna-instability | telomere-attrition\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations\nVCP | degradation-proteolytic-systems | disabled-macroautophagy\nZMPSTE24 | alterations-dna-methylation | alterations-histone-modifications"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 25,
+      "repeat": 0,
+      "seconds": 31.9,
+      "proposals": [
+        "GCLC",
+        "KL"
+      ],
+      "conforming": 2,
+      "nonconforming": 3,
+      "grounded_lines": 2,
+      "lines": [
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation"
+      ],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ],
+      "wide_conforming": 5,
+      "wide_grounded": 5,
+      "answer": "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 25,
+      "repeat": 1,
+      "seconds": 23.4,
+      "proposals": [
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ],
+      "conforming": 4,
+      "nonconforming": 0,
+      "grounded_lines": 4,
+      "lines": [
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "GCLC",
+        "HDAC2",
+        "KL",
+        "MTOR"
+      ],
+      "wide_conforming": 4,
+      "wide_grounded": 4,
+      "answer": "GCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 50,
+      "repeat": 0,
+      "seconds": 34.9,
+      "proposals": [
+        "GCLC",
+        "IKBKB",
+        "KL",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 5,
+      "nonconforming": 5,
+      "grounded_lines": 5,
+      "lines": [
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio"
+      ],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ],
+      "wide_conforming": 10,
+      "wide_grounded": 10,
+      "answer": "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 50,
+      "repeat": 1,
+      "seconds": 23.6,
+      "proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 10,
+      "nonconforming": 0,
+      "grounded_lines": 10,
+      "lines": [
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "BRCA1",
+        "GCLC",
+        "HDAC2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MTOR",
+        "PARP1",
+        "STUB1",
+        "TRPV1"
+      ],
+      "wide_conforming": 10,
+      "wide_grounded": 10,
+      "answer": "BRCA1 | alterations-dna-methylation | alterations-histone-modifications\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 100,
+      "repeat": 0,
+      "seconds": 58.7,
+      "proposals": [
+        "BLM",
+        "CREBBP",
+        "GCLC",
+        "HTRA2",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "NOS3",
+        "PTGS2",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 11,
+      "nonconforming": 12,
+      "grounded_lines": 11,
+      "lines": [
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "EZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations",
+        "HDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio",
+        "PPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair",
+        "SOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations",
+        "TERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "TOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "TP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | n"
+      ],
+      "wide_proposals": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 23,
+      "wide_grounded": 23,
+      "answer": "BLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | nuclear-dna-instability | senescent-cells-accumulation | stem-cell-exhaustion | transcriptional-alterations\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 100,
+      "repeat": 1,
+      "seconds": 38.8,
+      "proposals": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "conforming": 23,
+      "nonconforming": 0,
+      "grounded_lines": 23,
+      "lines": [
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "BLM",
+        "BRCA1",
+        "CREBBP",
+        "EZH2",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PPM1D",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 23,
+      "wide_grounded": 23,
+      "answer": "BLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 180,
+      "repeat": 0,
+      "seconds": 86.3,
+      "proposals": [
+        "ACE",
+        "BLM",
+        "COL1A1",
+        "CREBBP",
+        "GCLC",
+        "HTRA2",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "NOS3",
+        "PTEN",
+        "PTGS2",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 15,
+      "nonconforming": 16,
+      "grounded_lines": 15,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "ATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair",
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "EZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations",
+        "FXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems | impairment-mitochondrial-integrity",
+        "HDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio",
+        "PIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation | tor-pathway-dysregulation",
+        "PPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair",
+        "PRKDC | nuclear-dna-instability | telomere-attrition | transcriptional-alterations",
+        "SOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations",
+        "TERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "TOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "TP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | n"
+      ],
+      "wide_proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 31,
+      "wide_grounded": 31,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation | tor-pathway-dysregulation\nPPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair\nPRKDC | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | nuclear-dna-instability | senescent-cells-accumulation | stem-cell-exhaustion | transcriptional-alterations\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 180,
+      "repeat": 1,
+      "seconds": 56.9,
+      "proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "conforming": 31,
+      "nonconforming": 0,
+      "grounded_lines": 31,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATG5",
+          "cited": [
+            "disabled-macroautophagy",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FXN",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PIK3CA",
+          "cited": [
+            "alterations-dna-methylation",
+            "ins-igf-1-pathway-dysregulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PRKDC",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "ACE",
+        "ATG5",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "EZH2",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NOS3",
+        "PARP1",
+        "PIK3CA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1"
+      ],
+      "wide_conforming": 31,
+      "wide_grounded": 31,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPRKDC | nuclear-dna-instability | telomere-attrition\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations"
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 241,
+      "repeat": 0,
+      "seconds": 63.6,
+      "proposals": [
+        "ACE",
+        "BLM",
+        "COL1A1",
+        "CREBBP",
+        "FN1",
+        "GCLC",
+        "HTRA2",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "NFKB1",
+        "NOS3",
+        "PPARA",
+        "PTEN",
+        "PTGS2",
+        "STUB1",
+        "TRPV1"
+      ],
+      "conforming": 19,
+      "nonconforming": 26,
+      "grounded_lines": 19,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FN1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "JAK2",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NFKB1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPARA",
+          "cited": [
+            "intercellular-communication-impair",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [
+        "AKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity | ins-igf-1-pathway-dysregulation | sterile-inflammation | tor-pathway-dysregulation | transcriptional-alterations",
+        "AKT3 | impairment-mitochondrial-integrity | mitochondrial-dna-instability | senescent-cells-accumulation | tor-pathway-dysregulation",
+        "AR | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | transcriptional-alterations",
+        "ATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair",
+        "ATR | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "BRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "ERCC2 | nuclear-dna-instability | stem-cell-exhaustion | transcriptional-alterations",
+        "EZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations",
+        "FXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems | impairment-mitochondrial-integrity",
+        "HDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "HDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations",
+        "IGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation",
+        "MTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation",
+        "NOTCH1 | stem-cell-exhaustion | sterile-inflammation | transcriptional-alterations",
+        "NR3C1 | intercellular-communication-impair | sterile-inflammation | transcriptional-alterations",
+        "PARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptio",
+        "PIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation | tor-pathway-dysregulation",
+        "PPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair",
+        "PRKDC | nuclear-dna-instability | telomere-attrition | transcriptional-alterations",
+        "SOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations",
+        "TERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition",
+        "TOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations",
+        "TP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | n",
+        "VCP | degradation-proteolytic-systems | disabled-macroautophagy | nuclear-dna-instability",
+        "ZMPSTE24 | alterations-dna-methylation | alterations-histone-modifications | ampk-pathway-dysregulation | degradation-proteolytic-systems | nuclear-architecture-impairment | nuclear-dna-instability | ",
+        "Verification: All genes listed are marked 'druggable' in the provided table and have two or more distinct aging hallmarks associated with them. No external data was used. Uncertainty: None, as the tas"
+      ],
+      "wide_proposals": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ],
+      "wide_conforming": 44,
+      "wide_grounded": 44,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nAKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity | ins-igf-1-pathway-dysregulation | sterile-inflammation | tor-pathway-dysregulation | transcriptional-alterations\nAKT3 | impairment-mitochondrial-integrity | mitochondrial-dna-instability | senescent-cells-accumulation | tor-pathway-dysregulation\nAR | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | transcriptional-alterations\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair\nATR | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nERCC2 | nuclear-dna-instability | stem-cell-exhaustion | transcriptional-alterations\nEZH2 | alterations-dna-methylation | alterations-histone-modifications | chromatin-remodeling | intercellular-communication-impair | stem-cell-exhaustion | transcriptional-alterations\nFN1 | changes-extracellular-matrix-struc | sterile-inflammation\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHDAC2 | alterations-histone-modifications | chromatin-remodeling | transcriptional-alterations\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair | senescent-cells-accumulation\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nJAK2 | alterations-histone-modifications | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability | sterile-inflammation | tor-pathway-dysregulation\nNFKB1 | sterile-inflammation | transcriptional-alterations\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nNOTCH1 | stem-cell-exhaustion | sterile-inflammation | transcriptional-alterations\nNR3C1 | intercellular-communication-impair | sterile-inflammation | transcriptional-alterations\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems | impairment-mitochondrial-integrity | mitochondrial-dna-instability | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation | tor-pathway-dysregulation\nPPARA | intercellular-communication-impair | transcriptional-alterations\nPPM1D | alterations-dna-methylation | chromatin-remodeling | intercellular-communication-impair\nPRKDC | nuclear-dna-instability | telomere-attrition | transcriptional-alterations\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity | transcriptional-alterations\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability | senescent-cells-accumulation | telomere-attrition\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability | transcriptional-alterations\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling | disabled-macroautophagy | impairment-mitochondrial-integrity | intercellular-communication-impair | mitochondrial-dna-instability | nuclear-dna-instability | senescent-cells-accumulation | stem-cell-exhaustion | transcriptional-alterations\nTRPV1 | sterile-inflammation | transcriptional-alterations\nVCP | degradation-proteolytic-systems | disabled-macroautophagy | nuclear-dna-instability\nZMPSTE24 | alterations-dna-methylation | alterations-histone-modifications | ampk-pathway-dysregulation | degradation-proteolytic-systems | nuclear-architecture-impairment | nuclear-dna-instability | senescent-cells-accumulation | tor-pathway-dysregulation\n\nVerification: All genes listed are marked 'druggable' in the provided table and have two or more distinct aging hallmarks associated with them. No external data was used. Uncertainty: None, as the task relies solely on the provided text."
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "size": 241,
+      "repeat": 1,
+      "seconds": 68.2,
+      "proposals": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ],
+      "conforming": 44,
+      "nonconforming": 0,
+      "grounded_lines": 44,
+      "lines": [
+        {
+          "gene": "ACE",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "AKT1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "AKT3",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "mitochondrial-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "AR",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATG5",
+          "cited": [
+            "disabled-macroautophagy",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ATR",
+          "cited": [
+            "nuclear-dna-instability",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BLM",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "BRCA1",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "COL1A1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "CREBBP",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ERCC2",
+          "cited": [
+            "nuclear-dna-instability",
+            "stem-cell-exhaustion"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "EZH2",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FN1",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "FXN",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "GCLC",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC1",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HDAC2",
+          "cited": [
+            "alterations-histone-modifications",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "HTRA2",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IGF1R",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "intercellular-communication-impair"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "IKBKB",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ITGB1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "JAK2",
+          "cited": [
+            "alterations-histone-modifications",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "KL",
+          "cited": [
+            "ins-igf-1-pathway-dysregulation",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MMP14",
+          "cited": [
+            "changes-extracellular-matrix-struc",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "MTOR",
+          "cited": [
+            "intercellular-communication-impair",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NFKB1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOS3",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NOTCH1",
+          "cited": [
+            "stem-cell-exhaustion",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "NR3C1",
+          "cited": [
+            "intercellular-communication-impair",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PARP1",
+          "cited": [
+            "alterations-dna-methylation",
+            "degradation-proteolytic-systems"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PIK3CA",
+          "cited": [
+            "alterations-dna-methylation",
+            "ins-igf-1-pathway-dysregulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPARA",
+          "cited": [
+            "intercellular-communication-impair",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PPM1D",
+          "cited": [
+            "alterations-dna-methylation",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PRKDC",
+          "cited": [
+            "nuclear-dna-instability",
+            "telomere-attrition"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTEN",
+          "cited": [
+            "intercellular-communication-impair",
+            "senescent-cells-accumulation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "PTGS2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "sterile-inflammation"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "SOD2",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "impairment-mitochondrial-integrity"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "STUB1",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TERT",
+          "cited": [
+            "impairment-mitochondrial-integrity",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TOPORS",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "nuclear-dna-instability"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TP53",
+          "cited": [
+            "accumulation-reactive-oxygen-speci",
+            "chromatin-remodeling"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "TRPV1",
+          "cited": [
+            "sterile-inflammation",
+            "transcriptional-alterations"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "VCP",
+          "cited": [
+            "degradation-proteolytic-systems",
+            "disabled-macroautophagy"
+          ],
+          "grounded": true
+        },
+        {
+          "gene": "ZMPSTE24",
+          "cited": [
+            "alterations-dna-methylation",
+            "alterations-histone-modifications"
+          ],
+          "grounded": true
+        }
+      ],
+      "rejected_lines": [],
+      "wide_proposals": [
+        "ACE",
+        "AKT1",
+        "AKT3",
+        "AR",
+        "ATG5",
+        "ATR",
+        "BLM",
+        "BRCA1",
+        "COL1A1",
+        "CREBBP",
+        "ERCC2",
+        "EZH2",
+        "FN1",
+        "FXN",
+        "GCLC",
+        "HDAC1",
+        "HDAC2",
+        "HTRA2",
+        "IGF1R",
+        "IKBKB",
+        "ITGB1",
+        "JAK2",
+        "KL",
+        "MMP14",
+        "MTOR",
+        "NFKB1",
+        "NOS3",
+        "NOTCH1",
+        "NR3C1",
+        "PARP1",
+        "PIK3CA",
+        "PPARA",
+        "PPM1D",
+        "PRKDC",
+        "PTEN",
+        "PTGS2",
+        "SOD2",
+        "STUB1",
+        "TERT",
+        "TOPORS",
+        "TP53",
+        "TRPV1",
+        "VCP",
+        "ZMPSTE24"
+      ],
+      "wide_conforming": 44,
+      "wide_grounded": 44,
+      "answer": "ACE | degradation-proteolytic-systems | stem-cell-exhaustion\nAKT1 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nAKT3 | impairment-mitochondrial-integrity | mitochondrial-dna-instability\nAR | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nATG5 | disabled-macroautophagy | impairment-mitochondrial-integrity\nATR | nuclear-dna-instability | senescent-cells-accumulation\nBLM | nuclear-dna-instability | telomere-attrition\nBRCA1 | alterations-dna-methylation | alterations-histone-modifications\nCOL1A1 | changes-extracellular-matrix-struc | intercellular-communication-impair\nCREBBP | alterations-histone-modifications | transcriptional-alterations\nERCC2 | nuclear-dna-instability | stem-cell-exhaustion\nEZH2 | alterations-dna-methylation | alterations-histone-modifications\nFN1 | changes-extracellular-matrix-struc | sterile-inflammation\nFXN | accumulation-reactive-oxygen-speci | degradation-proteolytic-systems\nGCLC | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nHDAC1 | alterations-histone-modifications | chromatin-remodeling\nHDAC2 | alterations-histone-modifications | chromatin-remodeling\nHTRA2 | degradation-proteolytic-systems | impairment-mitochondrial-integrity\nIGF1R | ins-igf-1-pathway-dysregulation | intercellular-communication-impair\nIKBKB | sterile-inflammation | transcriptional-alterations\nITGB1 | stem-cell-exhaustion | sterile-inflammation\nJAK2 | alterations-histone-modifications | transcriptional-alterations\nKL | ins-igf-1-pathway-dysregulation | sterile-inflammation\nMMP14 | changes-extracellular-matrix-struc | degradation-proteolytic-systems\nMTOR | intercellular-communication-impair | nuclear-dna-instability\nNFKB1 | sterile-inflammation | transcriptional-alterations\nNOS3 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nNOTCH1 | stem-cell-exhaustion | sterile-inflammation\nNR3C1 | intercellular-communication-impair | sterile-inflammation\nPARP1 | alterations-dna-methylation | degradation-proteolytic-systems\nPIK3CA | alterations-dna-methylation | ins-igf-1-pathway-dysregulation\nPPARA | intercellular-communication-impair | transcriptional-alterations\nPPM1D | alterations-dna-methylation | chromatin-remodeling\nPRKDC | nuclear-dna-instability | telomere-attrition\nPTEN | intercellular-communication-impair | senescent-cells-accumulation\nPTGS2 | accumulation-reactive-oxygen-speci | sterile-inflammation\nSOD2 | accumulation-reactive-oxygen-speci | impairment-mitochondrial-integrity\nSTUB1 | degradation-proteolytic-systems | nuclear-dna-instability\nTERT | impairment-mitochondrial-integrity | nuclear-dna-instability\nTOPORS | degradation-proteolytic-systems | nuclear-dna-instability\nTP53 | accumulation-reactive-oxygen-speci | chromatin-remodeling\nTRPV1 | sterile-inflammation | transcriptional-alterations\nVCP | degradation-proteolytic-systems | disabled-macroautophagy\nZMPSTE24 | alterations-dna-methylation | alterations-histone-modifications"
+    }
+  ],
+  "failures": []
+}

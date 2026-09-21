@@ -184,7 +184,8 @@ compliance against Sonnet 5's 93%, at a fraction of the cost.
   Compliance is computed only over genes present in the fact base, so the
   percentages hold, but the proposal column for arm C is noise.
 - **Grounded subsets cap at 25** because the largest requested count was 25.
-  The grounded figure is a floor, not a ceiling.
+  The grounded figure is a floor, not a ceiling. (Confirmed: removing the cap
+  gives 44 of 44. See "Where the model breaks" below.)
 - **Arm A verification** is run separately by `run.sh`; the inline check in
   `experiment.py` passes the result on stdin, which the CLI does not accept.
 
@@ -346,3 +347,64 @@ relation instead of a product. That is a real engine change, not a tuning knob.
 What this means for the thesis: projection is still required above roughly 800
 relevant facts per question. But it is now a scale decision rather than a
 workaround for paying to scan facts that could never match.
+
+## Where the model breaks: it doesn't, within reach of the engine
+
+`modelscale.py` grows the grounded evidence table and asks where 100% compliance
+fails. Independently re-scored from the raw model answers, not from the run's own
+summary:
+
+| model | genes | table chars | key | recall | precision | grounding |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Sonnet 5 | 25 → 241 | 1,943 → 17,537 | 5 → 44 | **44/44** at every size | 100% | 100% |
+| Qwen 3.5 Flash | 25 → 241 | 1,943 → 17,537 | 5 → 44 | **44/44** at every size | 100% | 100% |
+
+**Null result. No degradation at any size, for either model.** Zero false
+positives across 20 calls, and every proposal cited two hallmarks genuinely
+present in that gene's own row.
+
+The earlier run's 24% "malformed line" rate turned out to be an artifact of our
+format spec, not model error: the rejected lines were genes with three or more
+hallmarks listing all of them, e.g. `BRCA1 | ... | ... | ... | ... | ...`.
+Over-citation is not non-compliance. A parser accepting two *or more* valid
+hallmarks recovers every one, which is why the grounded figure in the previous
+section was correctly labelled a floor.
+
+### This inverts the comparison
+
+Put the two ceilings side by side. The engine exhausts its work budget at about
+350 genes. The model was exact at 241 genes and showed no sign of strain.
+
+So **the rule's advantage was never accuracy, and it is not scale either.** At
+every scale we could test, a grounded model matched the engine exactly, and the
+engine is the side that runs out of budget first.
+
+What the rule actually provides:
+
+- exactness **by construction** rather than by measurement
+- zero marginal cost per query
+- a proof object that re-derives, rather than a citation that has to be checked
+- immunity to prompt phrasing
+
+What the model provides:
+
+- reach beyond the evidence, 2.8 to 4.4 held-out genes of 11, where the rule
+  scores zero by construction
+- tolerance of messy input and no schema to maintain
+
+### What the whole thing actually argues for
+
+Not a rule engine, and not an agent. **The load-bearing component in every
+experiment here was the fact base used as an answer key.** It is what caught 20
+fabricated gene symbols on-device, what scored 40-56% compliance from memory
+against 100% grounded, what verified 44 of 44 at full scale, and what made the
+holdout measurable at all. The rule and the model are both just proposers. The
+checkable evidence layer is the product.
+
+### Cost and honesty notes
+
+20 gateway calls in the recorded run, zero failures, $1.83 spent cumulatively of
+a $25 cap. The delegated run overran its instructed call budget: 41 calls total
+including a discarded first pass that failed to capture raw answers, and a smoke
+test. Pooled numbers from both passes agreed, so the discarded pass functions as
+a replication, but the overrun is an overrun.
