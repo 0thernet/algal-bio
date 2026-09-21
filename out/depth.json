@@ -1,0 +1,558 @@
+{
+  "edges": 65,
+  "truth": {
+    "memory": {
+      "main": 1,
+      "registry": 1,
+      "runtime": 2,
+      "graph": 2,
+      "civilization": 3,
+      "acp": 3,
+      "bench": 3,
+      "effects": 3
+    },
+    "context": {
+      "main": 1,
+      "registry": 1,
+      "acp": 1,
+      "runtime": 2,
+      "graph": 2,
+      "civilization": 3,
+      "bench": 3,
+      "effects": 3
+    },
+    "registry": {
+      "runtime": 1,
+      "graph": 1,
+      "civilization": 2,
+      "main": 2,
+      "acp": 2,
+      "bench": 2,
+      "effects": 2
+    },
+    "runtime": {
+      "registry": 1,
+      "civilization": 1,
+      "main": 1,
+      "acp": 1,
+      "bench": 1,
+      "graph": 2,
+      "effects": 3
+    },
+    "effects": {
+      "civilization": 1,
+      "main": 1,
+      "acp": 1,
+      "runtime": 1,
+      "bench": 1,
+      "registry": 2,
+      "graph": 3
+    },
+    "store": {
+      "graph": 1,
+      "civilization": 1,
+      "main": 1,
+      "acp": 1,
+      "runtime": 1,
+      "bench": 1,
+      "effects": 2,
+      "registry": 2
+    }
+  },
+  "rows": [
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "memory",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "memory",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "context",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "context",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "registry",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "registry",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "runtime",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "runtime",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "effects",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "effects",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "store",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "anthropic/claude-sonnet-5",
+      "subject": "store",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "memory",
+      "rep": 0,
+      "got": [
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "memory",
+      "rep": 1,
+      "got": [
+        "acp",
+        "civilization",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "context",
+      "rep": 0,
+      "got": [
+        "acp",
+        "civilization",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "context",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "registry",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "graph",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "registry",
+      "rep": 1,
+      "got": [
+        "civilization",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "runtime",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "runtime",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "effects",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "effects",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "store",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime",
+        "store"
+      ]
+    },
+    {
+      "model": "openai/gpt-5.4-mini",
+      "subject": "store",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime",
+        "store"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "memory",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "memory",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "context",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "context",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "registry",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "registry",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "runtime",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "runtime",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "effects",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "effects",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "store",
+      "rep": 0,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "model": "alibaba/qwen3.5-flash",
+      "subject": "store",
+      "rep": 1,
+      "got": [
+        "acp",
+        "bench",
+        "civilization",
+        "effects",
+        "graph",
+        "main",
+        "registry",
+        "runtime"
+      ]
+    }
+  ]
+}

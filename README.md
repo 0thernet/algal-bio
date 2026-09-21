@@ -237,3 +237,77 @@ alone.
 directly. Source files are wrapped as `{path, text}` records and the digest of
 that record is the fact's source. Inline `crate::foo::bar` paths are not
 parsed, so the fact base is a lower bound on real dependencies.
+
+## Hardened replication, and a hypothesis that did not survive
+
+Two further runs. `experiment2.py` replaces the prose-scavenging parser with
+strict line formats, adds three prompt paraphrases per arm, reports compliance
+with bootstrap 95% intervals, and rescores holdout reach across 25 splits.
+`depth.py` tests a criterion of the opposite shape from all the others.
+
+### Compliance, with intervals
+
+| arm | genes | compliance (95% CI) | malformed lines |
+| --- | ---: | ---: | ---: |
+| Sonnet 5, from memory | 44 | 40% [22-59] | 3% |
+| GPT-5.4-mini, from memory | 63 | 46% [31-66] | 0% |
+| Qwen 3.5 Flash, from memory | 47 | 56% [35-74] | 0% |
+| Sonnet 5, grounded | 29 | **100% [100-100]** | 2% |
+| GPT-5.4-mini, grounded | 39 | 66% [51-82] | 0% |
+| Qwen 3.5 Flash, grounded | 26 | **100% [100-100]** | 20% |
+
+Holdout reach over 25 random splits, arm B being split-independent: Sonnet 2.8
+hits of 11 on average, GPT-5.4-mini 4.4, Qwen 3.8, ranges spanning 0 to 9. The
+rule scores 0 on every split by construction.
+
+### The hypothesis that failed
+
+We predicted a model's deficit would grow with relational depth, on the theory
+that every earlier criterion was satisfiable by reading one row. `depth.py`
+tests it: same 65 dependency facts the engine gets, asked which modules a
+breaking change reaches, scored by shortest-chain depth against the verified
+closure.
+
+| | depth 1 | depth 2 | depth 3 | false positives |
+| --- | ---: | ---: | ---: | ---: |
+| Datalog engine | 100% | 100% | 100% | 0 |
+| Sonnet 5 | 100% | 96% | 94% | 0 |
+| GPT-5.4-mini | 100% | 38% | 27% | 3 |
+| Qwen 3.5 Flash | 100% | 100% | 100% | 0 |
+
+**The prediction was wrong for two of three models.** Qwen 3.5 Flash computes
+depth-3 transitive closure over 65 facts perfectly, and Sonnet 5 nearly so.
+Relational composition is not where capable models fail at this scale. Only
+GPT-5.4-mini shows the predicted collapse.
+
+A first version of this experiment was worse than wrong: it followed import
+edges forwards, asking what a module depends *on*, so every subject bottomed
+out at depth 1 against leaf utilities and the depth knob never moved. Impact
+runs against the arrow. The bug and its fix are in `depth.py`.
+
+### What the evidence actually supports
+
+Not "structure makes models smarter", and not "models cannot chain". The
+dividing line is **whether the model is working from evidence in front of it or
+from its own memory.**
+
+- **From memory**, compliance is 40% to 56%, and the intervals overlap across
+  three models spanning two orders of magnitude in price.
+- **From evidence**, two of three models hit exactly 100%, with a degenerate
+  interval, and stay near-exact through depth-3 composition.
+
+So the harness earns its keep twice over. Putting evidence in front of the
+model roughly doubles reliability. And measuring is not optional, because
+model reliability is unpredictable: GPT-5.4-mini, neither the cheapest nor the
+weakest on paper, was worst on both experiments, while Qwen 3.5 Flash matched
+Sonnet 5 at a fraction of the cost. No price tier or vendor would have told you
+that. A bench would.
+
+### Still open: scale
+
+Every result here sits at 180 genes or 65 facts, small enough to paste into a
+prompt. At that size the rule's advantage is exactness, zero marginal cost and
+proofs, *not* capability. The unanswered question is where a model breaks as
+the fact base grows past what fits in context, which is exactly where the
+engine's own work ceiling bites too. Until that is measured, no claim here
+should be extended to corpus scale.
