@@ -114,6 +114,13 @@ def main() -> int:
         for cls in sorted(names(item, "proteinClasses") & set(DRUGGABLE)):
             add("druggable", [gene, DRUGGABLE[cls]], digest)
 
+        # Symbols are display names, not identifiers: they get renamed, merged
+        # and reused. Rather than rekey the whole base and invalidate every
+        # measurement in this repo, record the stable NCBI id as its own fact.
+        # Anything downstream can join through it; the symbol stays the label.
+        if item.get("ncbiId"):
+            add("gene-ncbi", [gene, int(item["ncbiId"])], digest)
+
         for cause in sorted(names(item, "commentCause")):
             if cause in EXTEND:
                 add("extends-lifespan", [gene, EXTEND[cause]], digest)

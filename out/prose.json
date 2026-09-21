@@ -1,0 +1,1229 @@
+{
+  "sample": [
+    {
+      "gene": "ADAMTS20",
+      "ncbiId": 80070,
+      "comment": "Deletion of gon-1 (ortholog of human ADAMTS20) induced longevity and dauer formation. FUdR (40 \u03bcM) was added.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "ADCY5",
+      "ncbiId": 111,
+      "comment": "Median lifespan difference was significant p < 0.01. The maximum survival was also significantly different p < 0.02.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "ADRA1A",
+      "ncbiId": 148,
+      "comment": "Mice, expressing a constitutively active version of ADRA1A, had better cognitive functions and a longer lifespan, compared to wild type.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "gene modification to increase protein activity/stability"
+      ]
+    },
+    {
+      "gene": "ADRA1B",
+      "ncbiId": 147,
+      "comment": "Mice, expressing a constitutively active version of ADRA1B, had lower body weight at a young age, compared to wild type, but a similar weight in maturity, and shortened lifespan.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene modification to increase protein activity/stability"
+      ]
+    },
+    {
+      "gene": "AGTR1",
+      "ncbiId": 185,
+      "comment": "Agtr1a \u2013/\u2013 mice developed less cardiac and vascular injury, less oxidative damage, increased number of mitochondria, prosurvival genes Nampt and Sirt3 were upregulated in the kidney. Agtr1a \u2013/\u2013 mice lifespan was increased (P < 0.0001).",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "AKT1",
+      "ncbiId": 207,
+      "comment": "Overexpression of Akt promoted early death in flies. In contrast, downregulation of Akt by RNAi showed no effect on longevity.",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "AKT1",
+      "ncbiId": 207,
+      "comment": "Haploinsufficiency of Akt1 prolongs the lifespan of mice (mean p<0.05, max P<0.001). Maximum lifespan was calculated as the average for the oldest 20% of the mice in each group.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "AKT1",
+      "ncbiId": 207,
+      "comment": "Knockdown of akt-1 significantly prolonged the lifespan of worms and resulted in decreased expression of ribosomal genes and reduction of mitochondrial DNA. Nematodes at the L4 stage were transferred to RNAi bacterial plates in the presence of 1 mM isopropyl \u03b2-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 5-fluoro-20-deoxyuridine (FUdR, 0.5 mg/ml). L1 period as t = 0 for lifespan analysis.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT1",
+      "ncbiId": 207,
+      "comment": "Haploinsufficiency of Akt1 prolongs the lifespan of mice (mean p<0.001, max p<0.001). Maximum lifespan was calculated as the average for the oldest 20% of the mice in each group.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "AKT1",
+      "ncbiId": 207,
+      "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT1",
+      "ncbiId": 207,
+      "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT2",
+      "ncbiId": 208,
+      "comment": "AKT2 knockout in mice promoted aging-induced cardiac hypertrophy but rescued aging-induced changes in Ca signaling and functioning of cardiomyocytes. Aging-dependent downregulation of SIRT1 and phosphorylation of FOXO1 and AKT were partially compensated by AKT2 knockout.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "AKT2",
+      "ncbiId": 208,
+      "comment": "Knockdown of akt-1 significantly prolonged the lifespan of worms and resulted in decreased expression of ribosomal genes and reduction of mitochondrial DNA. Nematodes at the L4 stage were transferred to RNAi bacterial plates in the presence of 1 mM isopropyl \u03b2-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 5-fluoro-20-deoxyuridine (FUdR, 0.5 mg/ml). L1 period as t = 0 for lifespan analysis.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT2",
+      "ncbiId": 208,
+      "comment": "Age was counted from the L1 stage. 1 mM isopropyl b-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 0.5 mg/ml 5-fluoro-20-deoxyuridine (FUdR) were added to the culture medium.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT2",
+      "ncbiId": 208,
+      "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT2",
+      "ncbiId": 208,
+      "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT2",
+      "ncbiId": 208,
+      "comment": "Overexpression of Akt promoted early death in flies. In contrast, downregulation of Akt by RNAi showed no effect on longevity.",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "AKT3",
+      "ncbiId": 10000,
+      "comment": "Knockdown of akt-1 significantly prolonged the lifespan of worms and resulted in decreased expression of ribosomal genes and reduction of mitochondrial DNA. Nematodes at the L4 stage were transferred to RNAi bacterial plates in the presence of 1 mM isopropyl \u03b2-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 5-fluoro-20-deoxyuridine (FUdR, 0.5 mg/ml). L1 period as t = 0 for lifespan analysis.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT3",
+      "ncbiId": 10000,
+      "comment": "Age was counted from the L1 stage. 1 mM isopropyl b-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 0.5 mg/ml 5-fluoro-20-deoxyuridine (FUdR) were added to the culture medium.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT3",
+      "ncbiId": 10000,
+      "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT3",
+      "ncbiId": 10000,
+      "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "AKT3",
+      "ncbiId": 10000,
+      "comment": "Overexpression of Akt promoted early death in flies. In contrast, downregulation of Akt by RNAi showed no effect on longevity.",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ALB",
+      "ncbiId": 213,
+      "comment": "Recombinant mouse serum albumin (rMSA) improved the lifespan and healthspan of mice (preprint). p=0,0342",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "treatment with protein"
+      ]
+    },
+    {
+      "gene": "ALB",
+      "ncbiId": 213,
+      "comment": "Recombinant mouse serum albumin (rMSA) improved the lifespan and healthspan of mice (preprint). p=0,0164",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "treatment with protein"
+      ]
+    },
+    {
+      "gene": "ALB",
+      "ncbiId": 213,
+      "comment": "Recombinant mouse serum albumin (rMSA) improved the lifespan and healthspan of mice (preprint). p=0,0019",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "treatment with protein"
+      ]
+    },
+    {
+      "gene": "ANK2",
+      "ncbiId": 287,
+      "comment": "Mis-expression of ANK2 causes a reduction in lifespan, movement, memory, and neuronal excitability.",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "interfering rna transgene"
+      ]
+    },
+    {
+      "gene": "ANK2",
+      "ncbiId": 287,
+      "comment": "Mis-expression of ANK2 causes a reduction in lifespan, movement, memory, and neuronal excitability.",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "interfering rna transgene"
+      ]
+    },
+    {
+      "gene": "APEX1",
+      "ncbiId": 328,
+      "comment": "The age was counted from the first day of adulthood. 25 \u00b5g/ml of carbenicillin, and 1 mM IPTG were added to the culture media. No FUDR was added.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "decreases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "APOE",
+      "ncbiId": 348,
+      "comment": "APOE knockout mice had severe atherosclerosis and xanthomatosis, 35% of them died within 18 months.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "AR",
+      "ncbiId": 367,
+      "comment": "P < 0.001 The triglyceride and cholesterol levels in the liver were considerably higher in knockout males (measured at 20 weeks old) than in control males when the mice were fed high-fat diet (HFD). When male mice were fed HFD, the weight of liver in the knockout group was markedly greater than that in the control group. These changed were not observed in knockout males with standard diet or in female knockout mice. Blood glucose levels in knockout males (measured at 20 weeks old) fed with HFD were significantly higher than those in HFD-fed control males at all times points after the glucose challenge. Insulin sensitivity (i.e., the decrease of blood glucose levels after insulin injection) was lower in knockout mice than that in the corresponding controls. These changed were not observed in knockout males with standard diet or in female knockout mice.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "ARHGAP1",
+      "ncbiId": 392,
+      "comment": "Majority of mice with homozygotic knockout of ARHGAP1 died in neonatal period, survivors showed phenotypes of premature aging.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "ATG5",
+      "ncbiId": 9474,
+      "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ATG5",
+      "ncbiId": 9474,
+      "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ATG5",
+      "ncbiId": 9474,
+      "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ATG5",
+      "ncbiId": 9474,
+      "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ATG5",
+      "ncbiId": 9474,
+      "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ATG5",
+      "ncbiId": 9474,
+      "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "ATP5PO",
+      "ncbiId": 539,
+      "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "ATP5PO",
+      "ncbiId": 539,
+      "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "ATP5PO",
+      "ncbiId": 539,
+      "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "ATP5PO",
+      "ncbiId": 539,
+      "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "decreases lifespan",
+      "method": [
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "ATR",
+      "ncbiId": 545,
+      "comment": "Authors showed that ATL-1 (ATR ortholog) regulates the mtDNA replication and its defect results in the mild oxidative stress response. L1 larvae stage was considered as t=0 for lifespan counting.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "ATR",
+      "ncbiId": 545,
+      "comment": "Mice, homozygous by ATR mutation similar to Seckel syndrome, suffered elevated levels of replicative stress during embryogenesis and accelerated aging.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "splicing modification"
+      ]
+    },
+    {
+      "gene": "ATR",
+      "ncbiId": 545,
+      "comment": "Mice, homozygous by ATR mutation similar to Seckel syndrome, suffered elevated levels of replicative stress during embryogenesis and accelerated aging.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "splicing modification"
+      ]
+    },
+    {
+      "gene": "ATR",
+      "ncbiId": 545,
+      "comment": "Mice, homozygous by ATR mutation similar to Seckel syndrome, suffered elevated levels of replicative stress during embryogenesis and accelerated aging.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "splicing modification"
+      ]
+    },
+    {
+      "gene": "BCL2L2",
+      "ncbiId": 599,
+      "comment": "Constitutive activation of ced-9 (BCL2L1 ortholog) extended the lifespan of worms.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "increases lifespan",
+      "method": [
+        "gene modification to increase protein activity/stability"
+      ]
+    },
+    {
+      "gene": "BECN1",
+      "ncbiId": 8678,
+      "comment": "The pre-fertile period of adulthood was identified as t = 0.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "decreases lifespan",
+      "method": [
+        "additional copies of a gene in the genome",
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "BECN1",
+      "ncbiId": 8678,
+      "comment": "The pre-fertile period of adulthood was identified as t = 0.",
+      "organism": "roundworm caenorhabditis elegans",
+      "direction": "decreases lifespan",
+      "method": [
+        "additional copies of a gene in the genome",
+        "rna interferention"
+      ]
+    },
+    {
+      "gene": "BLM",
+      "ncbiId": 641,
+      "comment": "The data show that Drosophila lacking BLM have an elevated frequency of spontaneous genome rearrangements that increases with age. Loss of BLM significantly affects lifespan:mean lifespan of blm mutants was reduced more than 35% relative to wild type",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene mutation"
+      ]
+    },
+    {
+      "gene": "BLM",
+      "ncbiId": 641,
+      "comment": "The data show that Drosophila lacking BLM have an elevated frequency of spontaneous genome rearrangements that increases with age. Loss of BLM significantly affects lifespan:mean lifespan of blm mutants was reduced more than 35% relative to wild type.",
+      "organism": "fly drosophila melanogaster",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene mutation"
+      ]
+    },
+    {
+      "gene": "BMAL1",
+      "ncbiId": 406,
+      "comment": "Bmal1 (ARNTL) knockout mice started showing growth retardation at 16-18 weeks of age, and their aging phenotypes were more severe than in control mice of the same age.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "BRCA1",
+      "ncbiId": 672,
+      "comment": "BRCA1 heterozygous mice were prone to spontaneous tumorigenesis and had a shorter lifespan than wild type.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "BRCA1",
+      "ncbiId": 672,
+      "comment": "Irradiated BRCA1 heterozygous mice didn't have lifespan differences from irradiated wild-type mice, but had 96.4% tumor occurrence.",
+      "organism": "mouse",
+      "direction": "decreases survival under stress conditions",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "BRCA1",
+      "ncbiId": 672,
+      "comment": "Heterozygous TP53BP1 knockout does not rescued BRCA1 mutant mice from senescence, although it does protect against intrauterine death.",
+      "organism": "mouse",
+      "direction": "increases lifespan in animals with decreased lifespans",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "BRCA1",
+      "ncbiId": 672,
+      "comment": "TP53BP1 deletion rescued mice from intrauterine death, premature aging, senescence, and cell death, caused by the BRCA1 mutation without significantly increasing the rates of tumorgenesis. It is not possible to determine the average lifespan of mice because the authors did not wait for them to die.",
+      "organism": "mouse",
+      "direction": "increases lifespan in animals with decreased lifespans",
+      "method": [
+        "gene knockout"
+      ]
+    },
+    {
+      "gene": "BUB1B",
+      "ncbiId": 701,
+      "comment": "The increase in life span was associated with attenuated tumor development P <0.001 (fig 3b).",
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "BUB1B",
+      "ncbiId": 701,
+      "comment": "Lifespans of BubR1H/H (hypomorphic) and SIRT2tg/BubR1H/H were compared (fig 4), P = 0.0384. According to the article max lifespan was extended by 21%.",
+      "organism": "mouse",
+      "direction": "increases lifespan in animals with decreased lifespans",
+      "method": [
+        "additional copies of a gene in the genome",
+        "gene modification to reduce gene expression"
+      ]
+    },
+    {
+      "gene": "BUB1B",
+      "ncbiId": 701,
+      "comment": "Lifespans of BubR1H/H (hypomorphic) and SIRT2tg/BubR1H/H were compared (fig 4), P = 0.004.",
+      "organism": "mouse",
+      "direction": "increases lifespan in animals with decreased lifespans",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "BUB1B",
+      "ncbiId": 701,
+      "comment": "Lifespans of BubR1H/H (hypomorphic) and SIRT2tg/BubR1H/H were compared (fig 4), P = 0.7915",
+      "organism": "mouse",
+      "direction": "increases lifespan in animals with decreased lifespans",
+      "method": [
+        "additional copies of a gene in the genome"
+      ]
+    },
+    {
+      "gene": "BUB3",
+      "ncbiId": 9184,
+      "comment": "Bub3/Rae1 haploinsufficient mice manifest aging-related phenotypes and shortened lifespan (p<0.05). Haploinsufficiency of Bub3 and Rae1 separately didn't cause these effects, suggesting synergy between Bub3 and Rae1.",
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": [
+        "gene knockout"
+      ]
+    }
+  ],
+  "results": {
+    "anthropic/claude-sonnet-5": {
+      "scores": {
+        "organism": 39,
+        "direction": 37,
+        "method": 9
+      },
+      "counted": 60,
+      "predictions": [
+        {
+          "organism": "worm",
+          "direction": "increases lifespan",
+          "method": "gene deletion"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "mutation (constitutively active)"
+        },
+        {
+          "organism": "mouse",
+          "direction": "decreases lifespan",
+          "method": "mutation (constitutively active)"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "fly",
+          "direction": "decreases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "haploinsufficiency (mutation)"
+        },
+        {
+          "organism": "worm",
+          "direction": "increases lifespan",
+          "method": "knockdown"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "haploinsufficiency (mutation)"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "mouse",
+          "direction": "unstated",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "worm",
+          "direction": "increases lifespan",
+          "method": "knockdown"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "fly",
+          "direction": "decreases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "worm",
+          "direction": "increases lifespan",
+          "method": "knockdown"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "fly",
+          "direction": "decreases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "unstated",
+          "direction": "decreases lifespan",
+          "method": "mis-expression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "decreases lifespan",
+          "method": "mis-expression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "mouse",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mouse",
+          "direction": "unstated",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "worms",
+          "direction": "no change",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "no change",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "no change",
+          "method": "unstated"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "knockdown"
+        },
+        {
+          "organism": "worm",
+          "direction": "unstated",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "worm",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "drosophila",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "drosophila",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mouse",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mouse",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mouse",
+          "direction": "no change",
+          "method": "mutation"
+        },
+        {
+          "organism": "mouse",
+          "direction": "unstated",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mouse",
+          "direction": "unstated",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "unstated",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mouse",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mouse",
+          "direction": "no change",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mouse",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        }
+      ]
+    },
+    "alibaba/qwen3.5-flash": {
+      "scores": {
+        "organism": 2,
+        "direction": 36,
+        "method": 8
+      },
+      "counted": 60,
+      "predictions": [
+        {
+          "organism": "unstated",
+          "direction": "increases lifespan",
+          "method": "deletion"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "knockout"
+        },
+        {
+          "organism": "flies",
+          "direction": "decreases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "haploinsufficiency"
+        },
+        {
+          "organism": "worms",
+          "direction": "increases lifespan",
+          "method": "knockdown"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "haploinsufficiency"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "mice",
+          "direction": "unstated",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "worms",
+          "direction": "increases lifespan",
+          "method": "gene knockdown"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "flies",
+          "direction": "decreases lifespan",
+          "method": "overexpression, knockdown"
+        },
+        {
+          "organism": "worms",
+          "direction": "increases lifespan",
+          "method": "gene knockdown"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "flies",
+          "direction": "decreases lifespan",
+          "method": "overexpression, knockdown"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "unstated",
+          "direction": "decreases lifespan",
+          "method": "misexpression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "decreases lifespan",
+          "method": "misexpression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "unstated",
+          "method": "knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "knockdown"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "knockdown"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "knockdown"
+        },
+        {
+          "organism": "worms",
+          "direction": "unstated",
+          "method": "rnai knockdown"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "worms",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "unstated"
+        },
+        {
+          "organism": "drosophila",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "drosophila",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "no change",
+          "method": "mutation"
+        },
+        {
+          "organism": "mice",
+          "direction": "no change",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "mice",
+          "direction": "unstated",
+          "method": "gene knockout"
+        },
+        {
+          "organism": "unstated",
+          "direction": "increases lifespan",
+          "method": "unstated"
+        },
+        {
+          "organism": "unstated",
+          "direction": "increases lifespan",
+          "method": "overexpression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "unstated",
+          "method": "overexpression"
+        },
+        {
+          "organism": "unstated",
+          "direction": "no change",
+          "method": "overexpression"
+        },
+        {
+          "organism": "mice",
+          "direction": "decreases lifespan",
+          "method": "mutation"
+        }
+      ]
+    }
+  }
+}

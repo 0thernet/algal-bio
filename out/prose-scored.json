@@ -1,0 +1,38 @@
+{
+  "anthropic/claude-sonnet-5": {
+    "scores": {
+      "organism": [
+        52,
+        52
+      ],
+      "direction": [
+        37,
+        42
+      ],
+      "method": [
+        31,
+        39
+      ]
+    },
+    "abstain_ok": 7,
+    "abstain_bad": 1
+  },
+  "alibaba/qwen3.5-flash": {
+    "scores": {
+      "organism": [
+        46,
+        46
+      ],
+      "direction": [
+        36,
+        39
+      ],
+      "method": [
+        31,
+        40
+      ]
+    },
+    "abstain_ok": 14,
+    "abstain_bad": 0
+  }
+}

@@ -30,7 +30,7 @@ product.**
 | Stage | File | Output |
 | --- | --- | --- |
 | Fetch | `fetch.sh` | OpenGenes gene table, 2,405 genes |
-| Extract | `extract.py` | 1,292 facts, each citing a CAS digest |
+| Extract | `extract.py` | 1,533 facts, each citing a CAS digest |
 | Project | `project.py` | a question-scoped snapshot, cost-checked |
 | Derive | `rules/*.query.json` | rows plus a proof map |
 | Verify | `algal memory verify` | re-derives and compares canonically |
@@ -184,6 +184,59 @@ bound is unreachable because 2,048 facts exceed the byte cap. With bounds
 raised in a throwaway build, 12,264 facts run in ~1.5 s at 15% of the work
 budget.
 
+## Facts from prose, the untested half
+
+Every fact above was copied out of a structured field, so extraction was a
+field mapping and no model read anything. That matters, because this repo's own
+conclusion is that reliability reduces to curation, and curating contested
+claims means reading prose.
+
+OpenGenes ships both halves for the same record. Each lifespan experiment
+carries a curator-written free-text comment alongside the structured fields
+that curator derived from it. So the prose is the input and the curator's own
+values are the answer key. 395 experiments across 78 genes, median comment 186
+characters. `prose.py` extracts, `prose_score.py` scores.
+
+| model | organism | direction | intervention | abstained |
+| --- | ---: | ---: | ---: | --- |
+| Sonnet 5 | 52/52 (100%) | 37/42 (88%) | 31/39 (79%) | 7 right, 1 wrong |
+| Qwen 3.5 Flash | 46/46 (100%) | 36/39 (92%) | 31/40 (77%) | 14 right, 0 wrong |
+
+**Extraction is good and not perfect.** Roughly 10% error on the direction of a
+lifespan effect and 22% on the intervention method. Unlike every earlier
+result, this one does not reach 100% at any setting.
+
+### The first scorer was measuring wording
+
+It reported 39/60 and 2/60 for the same task on two capable models. That gap
+was not accuracy. The curator writes `mouse` and one model writes `mice`; the
+curator writes `gene knockout` and a model writes `gene deletion`. Both are
+right and both scored zero. The table above uses synonym classes and scores
+abstention separately, because a model declining to name an organism the prose
+never mentions is behaving correctly.
+
+That correction is itself a finding. **Extraction accuracy is not a property of
+a model, it is a property of a model against a schema.** The curator
+distinguishes `gene knockout` from `additional copies of a gene in the genome`
+from `rna interferention`, a taxonomy nobody would volunteer from prose.
+Scoring it requires first deciding that `deletion` and `knockout` are the same
+claim, which is a curation judgement, not a measurement.
+
+### And it costs coverage
+
+Rebuilding the contradiction derivation from extracted facts instead of curated
+ones recovers **3 of 7** contradicted genes on the same 60 experiments. Most of
+that loss is not error: it is abstention. A model that declines to state a
+direction the prose leaves vague produces a smaller, cleaner fact base that
+derives fewer conclusions.
+
+So a cautious extractor and a complete one are different products, and the
+choice is not visible in any proof. Which is the real limit on all of this:
+**proof-carrying derivation over model-extracted facts inherits an error rate
+and a coverage gap that the proofs cannot see.** The proof shows a conclusion
+follows from the facts. It says nothing about the 10% of facts that are wrong
+or the ones a careful reader declined to assert.
+
 ## How much of this needs algal?
 
 `without_algal.py` reimplements the load-bearing core in plain Python with no
@@ -297,8 +350,10 @@ byte cap.
 - **Contamination** is retired for the grounded arm by the `opaque` and
   `conflict` conditions. The from-memory and holdout numbers are still recall
   of public curation.
-- **Genes are keyed by symbol**, which is not a stable identifier. `ncbiId` is
-  in every stored record and should replace it before anything depends on this.
+- **Genes are keyed by symbol** for display, which is not a stable identifier.
+  `gene-ncbi(symbol, ncbiId)` facts now record the stable id citing the same
+  source digest, so downstream work can join through it. The internal join key
+  is still the symbol.
 - **Curation is the remaining risk.** Every reliability claim here reduces to a
   claim about the fact base, and nothing in this repo establishes that the facts
   are true. `conflict` proves a model will propagate bad evidence flawlessly.

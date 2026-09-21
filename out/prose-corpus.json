@@ -1,0 +1,3962 @@
+[
+  {
+    "gene": "ADAMTS20",
+    "ncbiId": 80070,
+    "comment": "Deletion of gon-1 (ortholog of human ADAMTS20) induced longevity and dauer formation. FUdR (40 \u03bcM) was added.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ADCY5",
+    "ncbiId": 111,
+    "comment": "Median lifespan difference was significant p < 0.01. The maximum survival was also significantly different p < 0.02.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ADRA1A",
+    "ncbiId": 148,
+    "comment": "Mice, expressing a constitutively active version of ADRA1A, had better cognitive functions and a longer lifespan, compared to wild type.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ADRA1B",
+    "ncbiId": 147,
+    "comment": "Mice, expressing a constitutively active version of ADRA1B, had lower body weight at a young age, compared to wild type, but a similar weight in maturity, and shortened lifespan.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "AGTR1",
+    "ncbiId": 185,
+    "comment": "Agtr1a \u2013/\u2013 mice developed less cardiac and vascular injury, less oxidative damage, increased number of mitochondria, prosurvival genes Nampt and Sirt3 were upregulated in the kidney. Agtr1a \u2013/\u2013 mice lifespan was increased (P < 0.0001).",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "AKT1",
+    "ncbiId": 207,
+    "comment": "Overexpression of Akt promoted early death in flies. In contrast, downregulation of Akt by RNAi showed no effect on longevity.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "AKT1",
+    "ncbiId": 207,
+    "comment": "Haploinsufficiency of Akt1 prolongs the lifespan of mice (mean p<0.05, max P<0.001). Maximum lifespan was calculated as the average for the oldest 20% of the mice in each group.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "AKT1",
+    "ncbiId": 207,
+    "comment": "Knockdown of akt-1 significantly prolonged the lifespan of worms and resulted in decreased expression of ribosomal genes and reduction of mitochondrial DNA. Nematodes at the L4 stage were transferred to RNAi bacterial plates in the presence of 1 mM isopropyl \u03b2-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 5-fluoro-20-deoxyuridine (FUdR, 0.5 mg/ml). L1 period as t = 0 for lifespan analysis.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT1",
+    "ncbiId": 207,
+    "comment": "Haploinsufficiency of Akt1 prolongs the lifespan of mice (mean p<0.001, max p<0.001). Maximum lifespan was calculated as the average for the oldest 20% of the mice in each group.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "AKT1",
+    "ncbiId": 207,
+    "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT1",
+    "ncbiId": 207,
+    "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT2",
+    "ncbiId": 208,
+    "comment": "AKT2 knockout in mice promoted aging-induced cardiac hypertrophy but rescued aging-induced changes in Ca signaling and functioning of cardiomyocytes. Aging-dependent downregulation of SIRT1 and phosphorylation of FOXO1 and AKT were partially compensated by AKT2 knockout.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "AKT2",
+    "ncbiId": 208,
+    "comment": "Knockdown of akt-1 significantly prolonged the lifespan of worms and resulted in decreased expression of ribosomal genes and reduction of mitochondrial DNA. Nematodes at the L4 stage were transferred to RNAi bacterial plates in the presence of 1 mM isopropyl \u03b2-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 5-fluoro-20-deoxyuridine (FUdR, 0.5 mg/ml). L1 period as t = 0 for lifespan analysis.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT2",
+    "ncbiId": 208,
+    "comment": "Age was counted from the L1 stage. 1 mM isopropyl b-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 0.5 mg/ml 5-fluoro-20-deoxyuridine (FUdR) were added to the culture medium.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT2",
+    "ncbiId": 208,
+    "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT2",
+    "ncbiId": 208,
+    "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT2",
+    "ncbiId": 208,
+    "comment": "Overexpression of Akt promoted early death in flies. In contrast, downregulation of Akt by RNAi showed no effect on longevity.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "AKT3",
+    "ncbiId": 10000,
+    "comment": "Knockdown of akt-1 significantly prolonged the lifespan of worms and resulted in decreased expression of ribosomal genes and reduction of mitochondrial DNA. Nematodes at the L4 stage were transferred to RNAi bacterial plates in the presence of 1 mM isopropyl \u03b2-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 5-fluoro-20-deoxyuridine (FUdR, 0.5 mg/ml). L1 period as t = 0 for lifespan analysis.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT3",
+    "ncbiId": 10000,
+    "comment": "Age was counted from the L1 stage. 1 mM isopropyl b-D-thiogalactopyranoside (IPTG), 25 mg/ml carbenicillin and 0.5 mg/ml 5-fluoro-20-deoxyuridine (FUdR) were added to the culture medium.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT3",
+    "ncbiId": 10000,
+    "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT3",
+    "ncbiId": 10000,
+    "comment": "Age was counted from the first day of the adulthood. Worms were threated with 2 mM IPTG during the development. Beginning from the first day of the adulthood, they were transferred in the 0.1 mg/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "AKT3",
+    "ncbiId": 10000,
+    "comment": "Overexpression of Akt promoted early death in flies. In contrast, downregulation of Akt by RNAi showed no effect on longevity.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ALB",
+    "ncbiId": 213,
+    "comment": "Recombinant mouse serum albumin (rMSA) improved the lifespan and healthspan of mice (preprint). p=0,0342",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "treatment with protein"
+    ]
+  },
+  {
+    "gene": "ALB",
+    "ncbiId": 213,
+    "comment": "Recombinant mouse serum albumin (rMSA) improved the lifespan and healthspan of mice (preprint). p=0,0164",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "treatment with protein"
+    ]
+  },
+  {
+    "gene": "ALB",
+    "ncbiId": 213,
+    "comment": "Recombinant mouse serum albumin (rMSA) improved the lifespan and healthspan of mice (preprint). p=0,0019",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "treatment with protein"
+    ]
+  },
+  {
+    "gene": "ANK2",
+    "ncbiId": 287,
+    "comment": "Mis-expression of ANK2 causes a reduction in lifespan, movement, memory, and neuronal excitability.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "ANK2",
+    "ncbiId": 287,
+    "comment": "Mis-expression of ANK2 causes a reduction in lifespan, movement, memory, and neuronal excitability.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "APEX1",
+    "ncbiId": 328,
+    "comment": "The age was counted from the first day of adulthood. 25 \u00b5g/ml of carbenicillin, and 1 mM IPTG were added to the culture media. No FUDR was added.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "APOE",
+    "ncbiId": 348,
+    "comment": "APOE knockout mice had severe atherosclerosis and xanthomatosis, 35% of them died within 18 months.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "AR",
+    "ncbiId": 367,
+    "comment": "P < 0.001 The triglyceride and cholesterol levels in the liver were considerably higher in knockout males (measured at 20 weeks old) than in control males when the mice were fed high-fat diet (HFD). When male mice were fed HFD, the weight of liver in the knockout group was markedly greater than that in the control group. These changed were not observed in knockout males with standard diet or in female knockout mice. Blood glucose levels in knockout males (measured at 20 weeks old) fed with HFD were significantly higher than those in HFD-fed control males at all times points after the glucose challenge. Insulin sensitivity (i.e., the decrease of blood glucose levels after insulin injection) was lower in knockout mice than that in the corresponding controls. These changed were not observed in knockout males with standard diet or in female knockout mice.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ARHGAP1",
+    "ncbiId": 392,
+    "comment": "Majority of mice with homozygotic knockout of ARHGAP1 died in neonatal period, survivors showed phenotypes of premature aging.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ATG5",
+    "ncbiId": 9474,
+    "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ATG5",
+    "ncbiId": 9474,
+    "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ATG5",
+    "ncbiId": 9474,
+    "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ATG5",
+    "ncbiId": 9474,
+    "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ATG5",
+    "ncbiId": 9474,
+    "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ATG5",
+    "ncbiId": 9474,
+    "comment": "Mice, moderately overexpressing ATG5, developed normally, had a longer lifespan and anti-aging phenotypes.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ATP5PO",
+    "ncbiId": 539,
+    "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "ATP5PO",
+    "ncbiId": 539,
+    "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "ATP5PO",
+    "ncbiId": 539,
+    "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "ATP5PO",
+    "ncbiId": 539,
+    "comment": "Worms were grown on 6-cm RNAi plate (NGM agar + 1 mM IPTG, 100 \u03bcg/ml ampicillin, and 5 \u03bcg/ml tetracycline).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "ATR",
+    "ncbiId": 545,
+    "comment": "Authors showed that ATL-1 (ATR ortholog) regulates the mtDNA replication and its defect results in the mild oxidative stress response. L1 larvae stage was considered as t=0 for lifespan counting.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ATR",
+    "ncbiId": 545,
+    "comment": "Mice, homozygous by ATR mutation similar to Seckel syndrome, suffered elevated levels of replicative stress during embryogenesis and accelerated aging.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "splicing modification"
+    ]
+  },
+  {
+    "gene": "ATR",
+    "ncbiId": 545,
+    "comment": "Mice, homozygous by ATR mutation similar to Seckel syndrome, suffered elevated levels of replicative stress during embryogenesis and accelerated aging.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "splicing modification"
+    ]
+  },
+  {
+    "gene": "ATR",
+    "ncbiId": 545,
+    "comment": "Mice, homozygous by ATR mutation similar to Seckel syndrome, suffered elevated levels of replicative stress during embryogenesis and accelerated aging.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "splicing modification"
+    ]
+  },
+  {
+    "gene": "BCL2L2",
+    "ncbiId": 599,
+    "comment": "Constitutive activation of ced-9 (BCL2L1 ortholog) extended the lifespan of worms.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "BECN1",
+    "ncbiId": 8678,
+    "comment": "The pre-fertile period of adulthood was identified as t = 0.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome",
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "BECN1",
+    "ncbiId": 8678,
+    "comment": "The pre-fertile period of adulthood was identified as t = 0.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome",
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "BLM",
+    "ncbiId": 641,
+    "comment": "The data show that Drosophila lacking BLM have an elevated frequency of spontaneous genome rearrangements that increases with age. Loss of BLM significantly affects lifespan:mean lifespan of blm mutants was reduced more than 35% relative to wild type",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene mutation"
+    ]
+  },
+  {
+    "gene": "BLM",
+    "ncbiId": 641,
+    "comment": "The data show that Drosophila lacking BLM have an elevated frequency of spontaneous genome rearrangements that increases with age. Loss of BLM significantly affects lifespan:mean lifespan of blm mutants was reduced more than 35% relative to wild type.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene mutation"
+    ]
+  },
+  {
+    "gene": "BMAL1",
+    "ncbiId": 406,
+    "comment": "Bmal1 (ARNTL) knockout mice started showing growth retardation at 16-18 weeks of age, and their aging phenotypes were more severe than in control mice of the same age.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "BRCA1",
+    "ncbiId": 672,
+    "comment": "BRCA1 heterozygous mice were prone to spontaneous tumorigenesis and had a shorter lifespan than wild type.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "BRCA1",
+    "ncbiId": 672,
+    "comment": "Irradiated BRCA1 heterozygous mice didn't have lifespan differences from irradiated wild-type mice, but had 96.4% tumor occurrence.",
+    "organism": "mouse",
+    "direction": "decreases survival under stress conditions",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "BRCA1",
+    "ncbiId": 672,
+    "comment": "Heterozygous TP53BP1 knockout does not rescued BRCA1 mutant mice from senescence, although it does protect against intrauterine death.",
+    "organism": "mouse",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "BRCA1",
+    "ncbiId": 672,
+    "comment": "TP53BP1 deletion rescued mice from intrauterine death, premature aging, senescence, and cell death, caused by the BRCA1 mutation without significantly increasing the rates of tumorgenesis. It is not possible to determine the average lifespan of mice because the authors did not wait for them to die.",
+    "organism": "mouse",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "BUB1B",
+    "ncbiId": 701,
+    "comment": "The increase in life span was associated with attenuated tumor development P <0.001 (fig 3b).",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "BUB1B",
+    "ncbiId": 701,
+    "comment": "Lifespans of BubR1H/H (hypomorphic) and SIRT2tg/BubR1H/H were compared (fig 4), P = 0.0384. According to the article max lifespan was extended by 21%.",
+    "organism": "mouse",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "additional copies of a gene in the genome",
+      "gene modification to reduce gene expression"
+    ]
+  },
+  {
+    "gene": "BUB1B",
+    "ncbiId": 701,
+    "comment": "Lifespans of BubR1H/H (hypomorphic) and SIRT2tg/BubR1H/H were compared (fig 4), P = 0.004.",
+    "organism": "mouse",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "BUB1B",
+    "ncbiId": 701,
+    "comment": "Lifespans of BubR1H/H (hypomorphic) and SIRT2tg/BubR1H/H were compared (fig 4), P = 0.7915",
+    "organism": "mouse",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "BUB3",
+    "ncbiId": 9184,
+    "comment": "Bub3/Rae1 haploinsufficient mice manifest aging-related phenotypes and shortened lifespan (p<0.05). Haploinsufficiency of Bub3 and Rae1 separately didn't cause these effects, suggesting synergy between Bub3 and Rae1.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "BUB3",
+    "ncbiId": 9184,
+    "comment": "Autors do not provide values for the mean life span, the p-values only are available. Beginning from the first day of the adulthood, worms were transferred in the 20 \u00b5g/ml FUDR containing media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CASP2",
+    "ncbiId": 835,
+    "comment": "CASP2 knockout caused lifespan decrease and early onset of aging phenotypes in mice.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Transgenic mice that overexpress human catalase localized to the peroxisome, the nucleus, or mitochondria (MCAT) were generated. Median and maximum life spans were maximally increased in MCAT animals (fig 3C, founders 4403). Min and max values were found on the graph. Max LP was measured using combined data (17%, 4.5months p=0,001)",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Transgenic mice that overexpress human catalase localized to the peroxisome, the nucleus, or mitochondria (MCAT) were generated. Median and maximum life spans were maximally increased in MCAT animals (fig 3C, founders 4033). Min and max values were found on the graph. Max LP was measured using combined data (17%, 4.5 months p=0,001).",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Transgenic mice that overexpress human catalase localized to the peroxisome, the nucleus, or mitochondria (MCAT) were generated. Median and maximum life spans were maximally increased in MCAT animals (fig S2). Min and max lifespan was found on the graph. Significant increase in lifespan was found p<0.0001 for males and p=0.0003 for females with MCAT.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Transgenic mice that overexpress human catalase localized to the peroxisome, the nucleus, or mitochondria (MCAT) were generated. Median and maximum life spans were maximally increased in MCAT animals (fig S2). Min and max lifespan was found on the graph. Significant increase in lifespan was found p<0.0001 for males and p=0.0003 for females with MCAT.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Survival of transgenic animals and littermate pairs was analyzed for CAT expressed in peroxisomes (PCAT). Figure 2A, founders 2058.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Survival of transgenic animals and littermate pairs was analyzed for CAT expressed in peroxisomes (PCAT). Figure 2A, founders 2088, p=0,02",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Survival of transgenic animals and littermate pairs was analyzed for CAT expressed in the nucleus (NCAT). Figure 2\u0412, founders 885",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Survival of transgenic animals and littermate pairs was analyzed for CAT expressed in the nucleus (NCAT). Figure 2\u0412, founders 900",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "The survival of transgenic animals a with increased catalase expression in peroxisomes (PCAT) was analyzed. Figure 2D, PCAT-SOD-control, PCAT+SOD-experiment, p=0.013",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "The survival of transgenic animals with increased catalase expression in peroxisomes (PCAT) was analyzed. Figure 2D, PCAT-SOD-control, PCAT+SOD+ experiment, p=0.0001",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "As compared to diploid controls, transgenic flies carrying three copies of each of these genes exhibited as much as a one-third extension of life-span, a longer mortality rate doubling time, a lower amount of protein oxidative damage, and a delayed loss in physical performance.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.0164, flies line FLP1;CAT2A2;SOD3A1 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.0548, flies line FLP1;CAT2A2;SOD3A1 in the long-lived background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.4354, flies line FLP1;CAT2B2;SOD3A1 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2B2;SOD3A1 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2B12;SOD3A1 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.0132, flies line FLP1;CAT2B12;SOD3A1 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2A2;SOD3B2 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2A2;SOD3B2 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2B2;SOD3B2 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2B2;SOD3B2 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2B12;SOD3B2 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.1118, flies line FLP1;CAT2B12;SOD3B2 in the long-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2A2;SOD3A1 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.5418, flies line FLP1;CAT2A2;SOD3A1 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.2892, flies line FLP1;CAT2B2;SOD3A1 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.0818, flies line FLP1;CAT2B2;SOD3A1 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.4654, flies line FLP1;CAT2B12;SOD3A1 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.1362, flies line FLP1;CAT2B12;SOD3A1 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2A2;SOD3B2 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.0136, flies line FLP1;CAT2A2;SOD3B2 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P<0.0001, flies line FLP1;CAT2B2;SOD3B2 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.9204 flies line FLP1;CAT2B2;SOD3B2 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.2892, flies line FLP1;CAT2B12;SOD3B2 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "P=0.002, flies line FLP1;CAT2B12;SOD3B2 in the short-lived genetic background were used.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAT",
+    "ncbiId": 847,
+    "comment": "Significant increases in the activities of both CuZn-SOD had no beneficial effect on survivorship in relatively long-lived mutant flies and were associated with slightly decreased life spans in wild type flies of the Oregon-R strain.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CAV1",
+    "ncbiId": 857,
+    "comment": "Heterozygous knockout of CAV1 didn't affect mice's lifespan. Life spans are determined from survival curves.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CAV1",
+    "ncbiId": 857,
+    "comment": "Homozygous knockout of CAV1 reduced mice viability by 50% to the end of the second year of life. CAV1 -/- mice exhibited cardiac pathologies and pulmonary defects compared with wild-type mice of the same age. Life spans are determined from survival curves.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CAV1",
+    "ncbiId": 857,
+    "comment": "Heterozygous knockout of CAV1 didn't affect mice's lifespan. Life spans are determined from survival curves.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CAV1",
+    "ncbiId": 857,
+    "comment": "Homozygous knockout of CAV1 reduced mice viability by 50% to the end of the second year of life. CAV1 -/- mice exhibited cardiac pathologies and pulmonary defects compared with wild-type mice of the same age. Life spans are determined from survival curves.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CAV1",
+    "ncbiId": 857,
+    "comment": "Homozygous knockout of CAV1 reduced mice viability by 50% to the end of the second year of life. CAV1 -/- mice exhibited cardiac pathologies and pulmonary defects compared with wild-type mice of the same age. Life spans are determined from survival curves.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CDK7",
+    "ncbiId": 1022,
+    "comment": "8-month-old mice with CDK7 knockout exhibited aging phenotypes and shortened lifespan. The Cdk7loxfrt allele carries the genetrap vector in the active orientation and prevents Cdk7 gene. This allele has been designated as Cdk7mut to indicate that it retains all the Cdk7 genomic sequences, yet it does not produce detectable Cdk7 transcripts or Cdk7 proteinexpression.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce gene expression"
+    ]
+  },
+  {
+    "gene": "CDKN2A",
+    "ncbiId": 1029,
+    "comment": "Ink4/Arf locus encodes p16Ink4a and p15Ink4b proteins. Ink4/Arf-tg mice had a normal lifespan, not significantly different from wt mice (log rank test, P = 0.09) (Fig. 3B). Remarkably, however, Ink4/Arf-tg/tg mice presented a significantly different survival curve (logrank test, P = 0.001) with a more square shape. Median survival was extended from 27.5 months to 31.7 months, i.e. an extension of 15%.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CEBPB",
+    "ncbiId": 1051,
+    "comment": "Authors replaced C/EBP\u03b1 gene with C/EBP\u03b2, generating the \u03b2\u03b2 alleles in the mouse genome. The \u03b2\u03b2 / \u03b1\u03b2 heterozygotes were served as a control.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome",
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CEBPB",
+    "ncbiId": 1051,
+    "comment": "Authors replaced C/EBP\u03b1 gene with C/EBP\u03b2, generating the \u03b2\u03b2 alleles in the mouse genome. The \u03b2\u03b2 / \u03b1\u03b2 heterozygotes were served as a control.",
+    "organism": "mouse",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "additional copies of a gene in the genome",
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CEBPB",
+    "ncbiId": 1051,
+    "comment": "From C/EBP\u03b2 mRNA, three protein isoforms are synthesized through the usage of different translation initiation sites: two isoforms acting as transcriptional activators, liver-enriched activator protein (LAP)\u22121 and \u22122, and a transcriptional inhibitory isoform called liver-enriched inhibitory protein (LIP). Translation into LIP depends on a cis-regulatory uORF and is stimulated by mTORC1 signalling. In the present experiment a reduction of LIP expression was achieved by genetic ablation of the uORF.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "reduced expression of one of the isoforms in transgenic animals"
+    ]
+  },
+  {
+    "gene": "CEBPB",
+    "ncbiId": 1051,
+    "comment": "From C/EBP\u03b2 mRNA, three protein isoforms are synthesized through the usage of different translation initiation sites: two isoforms acting as transcriptional activators, liver-enriched activator protein (LAP)\u22121 and \u22122, and a transcriptional inhibitory isoform called liver-enriched inhibitory protein (LIP). Translation into LIP depends on a cis-regulatory uORF and is stimulated by mTORC1 signalling. In the present experiment a reduction of LIP expression was achieved by genetic ablation of the uORF.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "reduced expression of one of the isoforms in transgenic animals"
+    ]
+  },
+  {
+    "gene": "CHRNA7",
+    "ncbiId": 1139,
+    "comment": "cbp-1 knockdown blocked eat-2 (CHRNA7 ortholog) mutation-induced lifespan increase. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CHRNA7",
+    "ncbiId": 1139,
+    "comment": "Inactivation of either mxl-1 or mdl-1 did not significantly extend eat-2(ad465) lifespan, with median lifespans of 29.1+/\u20131.1; 29.3+/\u20131.1 (p = 0.398); 32.0+/\u20132.2 days (p = 0.28), respectively.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CHRNA7",
+    "ncbiId": 1139,
+    "comment": "ad1113 mutation of eat-2 (CHRNA7) increased the lifespan of worms.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "CHRNA7",
+    "ncbiId": 1139,
+    "comment": "No FUdR was used for any of the lifespan assays. Lifespan was count as days from adulthood.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CHRNA7",
+    "ncbiId": 1139,
+    "comment": "No FUdR was used for any of the lifespan assays. Lifespan was count as days from adulthood.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CLU",
+    "ncbiId": 1191,
+    "comment": "An over-expression of human clusterin extends the lifespan of Drosophila. rank p-value<0.0001",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "COL1A1",
+    "ncbiId": 1277,
+    "comment": "Authors investigated mice which are homozygous at the COL1A1 gene mutation, {Gln774Pro; Ile776Met; Ala777Pro; Val782Ala; Val783Ala}, this mutation makes collagen resistent to the collagenase which cleaves cjllagen at the site 775-776. Mutant mice hat shortened lifespan. By 70 weeks, all wild type animals were alive, but 65% of mutant mice died. Moreover, mutant mice showed features of premature aging, including kyphosis, weight loss, decreased bone mineral density, and hypertension.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COL1A1",
+    "ncbiId": 1277,
+    "comment": "Authors investigated mice which are homozygous at the deletion in the gene COL1A1 first intron. This deletion reduces the COL1A1 gene expression in the heart and aortic tissues.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce gene expression"
+    ]
+  },
+  {
+    "gene": "COL1A1",
+    "ncbiId": 1277,
+    "comment": "Authors investigated deletion in the first intron of the COL1A1 gene. This deletion reduces the COL1A1 gene expression in the heart and aortic tissues.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce gene expression"
+    ]
+  },
+  {
+    "gene": "COL3A1",
+    "ncbiId": 1281,
+    "comment": "Only about 10% of mutant mice survived to adulthood, and their average lifespan was about 6 months. The main cause of dead was the blood vessel rupture.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "A missense mutation in clk-1 extended the lifespan of C. elegans, with maximum effect achieved by keeping the worms at 15\u00b0C.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "A missense mutation in clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "A missense mutation in clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "A missense mutation of clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "The null mutation of clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "The null mutation of clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "The null mutation of clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "The null mutation of clk-1 extended the lifespan of C. elegans.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "Missense mutation of clk-1 (COQ7) extended the lifespan of worms. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "cbp-1 (CREBBP) knockdown decreased the life-extending effect of clk-1 (COQ7) mutation in worms. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "Once hatched worms reached L4 larval stage, animals were transferred onto plates containing 50 \u00b5M 5-fluorodeoxyuridine (FUdR).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "Once hatched worms reached L4 larval stage, animals were transferred onto plates containing 50 \u00b5M 5-fluorodeoxyuridine (FUdR).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "COQ7",
+    "ncbiId": 10229,
+    "comment": "Once hatched worms reached L4 larval stage, animals were transferred onto plates containing 50 \u00b5M 5-fluorodeoxyuridine (FUdR).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 knockdown reduced the lifespan of worms. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP ortholog) knockdown reduced daf-2 knockout-mediated lifespan extension in worms. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 knockdown blocked eat-2 (CHRNA7 ortholog) mutation-induced lifespan increase. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "Diet, containing 10^9 bacteria/ml increased worm lifespan by 65% compared with ad libitum diet, cbp-1 knockdown blocked this effect. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "daf-2 mutation additively increased lifespan in worms kept with optimum bacterial concentration 10^9 bacteria/ml, cbp-1 (CREBBP ortholog) knockdown completely blocked the lifespan increase. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "The aphid survival did not differ significantly between the p300/CBP dsRNA and control group during the first ~5 days post-injection. However, the overall lifespan of aphids injected with p300/CBP dsRNA was severely reduced. p300/CBP dsRNA concentration 50 ng/\u03bcl.",
+    "organism": "acyrthosiphon pisum",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "The aphid survival did not differ significantly between the p300/CBP dsRNA and control group during the first ~5 days post-injection. However, the overall lifespan of aphids injected with p300/CBP dsRNA was severely reduced. p300/CBP dsRNA concentration 3000 ng/\u03bcl.",
+    "organism": "acyrthosiphon pisum",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "Worms, cultured on axenic medium, showed a prolonged lifespan (axenic dietary restriction (ADR). Knockdown of cbp-1 (CREBBP ortholog) completely blocks ADR-induced lifespan extension. Progeny production was avoided by the addition of 5-fluoro-2\u2032-deoxyuridine at 50 \u00b5M",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "Worms, cultured on axenic medium, showed a prolonged lifespan (axenic dietary restriction (ADR). Neuronal knockdown of cbp-1 (CREBBP ortholog) completely blocks ADR-induced lifespan extension. Progeny production was avoided by the addition of 5-fluoro-2\u2032-deoxyuridine at 50 \u00b5M",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown decreased the lifespan of worms on a limited diet. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown decreased the life-extending effect of daf-2 (IGF1R) knockout in worms on a restricted diet. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown decreased the life-extending effect of glp-1 (NOTCH) mutation in worms. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown decreased the life-extending effect of clk-1 (COQ7) mutation in worms. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown decreased the life-extending effect of mev-1 (SDHC) mutation in worms. Age was counted from stage L4. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown canceled the mrps5 knockdown-mediated lifespan extension. mrps5 knockdown also increased the worm's resistance to P. aeruginosa through mild mitochondrial stress mechanisms, cbp-1 RNAi abolished this effect.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "cbp-1 (CREBBP) knockdown canceled the cco-1 knockdown-mediated lifespan extension. cco-1 knockdown increased the worm's resistance to P. aeruginosa through mild mitochondrial stress mechanisms, cbp-1 RNAi abolished this effect.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CREBBP",
+    "ncbiId": 1387,
+    "comment": "Knockdown of cbp-1 (CREBBP) decreased the lifespan of worms. Bacterial dilution for feeding was supplemented with FUDR, IPTG, and ampicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "CSNK1E",
+    "ncbiId": 1454,
+    "comment": "The life span of male and female hamsters from three genotypes (wild-type, heterozygous, and homozygous tau mutants) was recorded in constant darkness. Male and female homozygous mutant hamsters lived significantly longer rather than shorter compared to wild-types.",
+    "organism": "hamster",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "CSNK1E",
+    "ncbiId": 1454,
+    "comment": "The experimental results showed a reduction of > 20% in the life span of taus/+ animals in light-dark 14:10 conditions compared with the other 2 genotypes.",
+    "organism": "hamster",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "CSNK1E",
+    "ncbiId": 1454,
+    "comment": "The life span of male and female hamsters from three genotypes (wild-type, heterozygous, and homozygous tau mutants) was recorded in constant darkness. Male and female homozygous mutant hamsters lived significantly longer rather than shorter compared to wild-types.",
+    "organism": "hamster",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "CSNK1E",
+    "ncbiId": 1454,
+    "comment": "The life span of male and female hamsters from three genotypes (wild-type, heterozygous, and homozygous tau mutants) was recorded in constant darkness. Male and female homozygous mutant hamsters lived significantly longer rather than shorter compared to wild-types.",
+    "organism": "hamster",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=120-190 Flies overexpressing the CYB5R gene (CG5946; CYB5R-OE) were created and validated by showing an approximately twofold increase in CYB5R enzymatic activity in male CYB5R-OE versus control (CT) flies. The log-rank test indicated that male CYB5R-OE flies lived longer with a 10.59% increase in mean lifespan, 10.67% extension in 20% survival (P=0.011, \u03c72=10.6), and 8.1% increase in 10% survival (P=0.0142, \u03c72=6).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=120-140 The compound RU486 induced a twofold increase in CYB5R messenger RNA levels versus vehicle-treated CTs (0.92\u00b10.08 vs. 0.47\u00b10.06, P=0.004), which translated into significant increase in both mean and maximum lifespan when given to young flies (P=0.0008).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "A reduction in longevity was observed when flies in the transitional and senescence stages were treated with RU486 to induce CYB5R (P=0.00375, \u03c72=8.4 and P=0.0413, \u03c72=4.2 for transitional and senescence stage, respectively).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=89-147 A reduction in longevity was observed when flies in the transitional and senescence stages were treated with RU486 to induce CYB5R (P=0.00375, \u03c72=8.4 and P=0.0413, \u03c72=4.2 for transitional and senescence stage, respectively).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=160-210 A fat body-specific expression of the CYB5R gene was sufficient to increase mean lifespan in male but not female flies (P=0.00045).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=120-220 Female CYB5R-OE flies exhibited a 17.47% increase in mean lifespan, 18.50% extension in 20% survival (P=2.27e\u221205, \u03c72=17.9) and 17.2% increase in 10% survival (P=0.0011, \u03c72=10.6).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=160-210 A fat body-specific expression of the CYB5R gene was sufficient to increase mean lifespan in male but not female flies (P=0.00045).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=140-150 The significant increase in survival of male transgenic flies exposed to 12uM tunicamycin for 140h, a known ER stress inducer, when compared with control flies ( rank P = 0.0028) was observed.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "n=140-150 No lifespan extension was observed in female transgenic flies when treated with 12uM tunicamycin for 140h, when compared with control flies was observed.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "Under the acute oxidative stress condition induced by paraquat (20 mM in 5% sucrose for the next 108 h), male and female CYB5R-OE flies exhibited significant increase in survival relative to gender-matched controls.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "CYB5R3",
+    "ncbiId": 1727,
+    "comment": "Under the acute oxidative stress condition induced by paraquat (20 mM in 5% sucrose for the next 108 h), male and female CYB5R-OE flies exhibited significant increase in survival relative to gender-matched controls.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "DHFR",
+    "ncbiId": 1719,
+    "comment": "dhfr-1 knockdown in worms led to increased lifespan. Age was counted from stage L4. Suppl table 7, figure 2a.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "DMD",
+    "ncbiId": 1756,
+    "comment": "Dystrophin-deficient female mice displayed progressively dystrophic muscle histopathology, shorter lifespan, and were susceptible to spontaneous rhabdomyosarcoma.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "DMD",
+    "ncbiId": 1756,
+    "comment": "Dystrophin-deficient male mice displayed progressively dystrophic muscle histopathology, shorter lifespan, and were susceptible to spontaneous rhabdomyosarcoma.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "DUSP10",
+    "ncbiId": 11221,
+    "comment": "Females show qualitatively similar lifespan data, even though the extension of lifespan in pucE69 females is less pronounced than in males. p<0.001",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce gene expression"
+    ]
+  },
+  {
+    "gene": "E2F1",
+    "ncbiId": 1869,
+    "comment": "Knockdown of efl-1 (E2F1 ortholog) prolonged the lifespan of worms.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "E2F1",
+    "ncbiId": 1869,
+    "comment": "Loss of function mutation of daf-16 (FOXO ortholog) canceled the life-extending effect of efl-1 (E2F1 ortholog) knockdown.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "no change",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EEF1A1",
+    "ncbiId": 1915,
+    "comment": "EF-1a transgenic flied lived longer than control transgenic flies, although none of them lived longer than wild-type flies. Although there is a clear difference in mean lifespan between the EF-1a transgenic flies and the control transgenic flies, EF-1a transgenic flies do not express more EF-1a protein or mRNA than control flies kept at the same experimental conditions. Authors conclude that the experimental flies examined here do not live longer because of overexpressing the EF-1a gene.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "EEF1A1",
+    "ncbiId": 1915,
+    "comment": "EF-1a transgenic flied lived longer than control transgenic flies, although none of them lived longer than wild-type flies. Although there is a clear difference in mean lifespan between the EF-1a transgenic flies and the control transgenic flies, EF-1a transgenic flies do not express more EF-1a protein or mRNA than control flies kept at the same experimental conditions. Authors conclude that the experimental flies examined here do not live longer because of overexpressing the EF-1a gene.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "EEF2",
+    "ncbiId": 1938,
+    "comment": "The age was counted from the first day of adulthood. 100 \u00b5g/ml of ampicillin, 20 \u00b5g/ml of tetracycline, and 1 mM IPTG were added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EFEMP1",
+    "ncbiId": 2202,
+    "comment": "Knockout of fibulin-3 (EFEMP1) in mice provoked an early-onset of aging phenotype. EFEMP1 -/- mice of C57BL/6 but not BALB/c background developed multiple hernias.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "EIF5A",
+    "ncbiId": 1984,
+    "comment": "0.05\u20130.1 mg/mL of FUDR was added to the culture media. Age was counted from the first day of adulthood.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EIF5A2",
+    "ncbiId": 56648,
+    "comment": "Strikingly, most of the transgenic mice died at 7-9 months without any apparent causes of death or visible changes observed by autopsy. The average lifespan of eIF-5A2 mice is 8 months. % of lifespan decrease cannot be calculated from the shown data.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "EPS8 knockout mice showed calorie-restricted phenotype, mediated by a morphogenetic defect in intestine microvilli, and increased lifespan, compared to control.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "Muscle-specific knockdown of eps-8 after development extends lifespan C. elegans. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "Neuronal-specific knockdown of eps-8 after development extends lifespan C. elegans. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "The ubiquitination of EPS-8 was blocked by generating lysine (K) to arginine (R) mutants. Ubiquitin-less mutations did not result in loss of EPS-8 function, as EPS-8(K524R/K583R/K621R) mutants did not exhibit embryonic lethality or developmental arrest. However, EPS-8(K524R/K583R/K621R) worms had upregulated EPS-8 protein levels at young adult stages, resulting in a short-lived phenotype. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "The ubiquitination of EPS-8 was blocked by generating lysine (K) to arginine (R) mutants. Ubiquitin-less mutations did not result in loss of EPS-8 function, as EPS-8(K524R/K583R/K621R) mutants did not exhibit embryonic lethality or developmental arrest. However, EPS-8(K524R/K583R/K621R) worms had upregulated EPS-8 protein levels at young adult stages, resulting in a short-lived phenotype. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "The ubiquitination of EPS-8 was blocked by generating lysine (K) to arginine (R) mutants. Ubiquitin-less mutations did not result in loss of EPS-8 function, as EPS-8(K524R/K583R/K621R) mutants did not exhibit embryonic lethality or developmental arrest. However, EPS-8(K524R/K583R/K621R) worms had upregulated EPS-8 protein levels at young adult stages, resulting in a short-lived phenotype. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to increase protein activity/stability"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "Muscle-specific knockdown of eps-8 after development extends lifespan C. elegans. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "Neuronal-specific knockdown of eps-8 after development extends lifespan C. elegans. 100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "EPS8",
+    "ncbiId": 2059,
+    "comment": "100 \u03bcg ml\u22121 5-fluoro-2\u2032deoxyuridine (FUdR) was added to prevent the development of progeny.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "ERBB2",
+    "ncbiId": 2064,
+    "comment": "Mice, overexpressing HER2 (ERBB2), started developing tumors earlier than control, had higher tumor burden, and died before one year of age. Age-associated changes of serum glucose, insulin, and IGF1 occurred in transgene mice earlier than in control.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERBB2",
+    "ncbiId": 2064,
+    "comment": "The rapamycin treatment of the cancer-prone HER2 -/- mice prevented age-related weight gain and increased mean and maximal lifespan. Rapamycin administration slowed down the tumor formation and decreased the number of tumors in mice.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout",
+      "treatment with a gene product inhibitor"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "C57Bl/6-background mice with carboxy-terminal truncation of ERCC1 gene (lacking last 7 aminoacids) had a life span of up to 6 months.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "C57Bl/6 mice with ERCC1 knockout had a maximal lifespan of 38 days.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "C57Bl/6-background mice with carboxy-terminal truncation of ERCC1 gene (lacking last 7 aminoacids) had a maximal lifespan of 78 days.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "Ercc-1 mutation (deletion of Rad10 domain) further extends, rather than decreases, the life span of long-lived daf-2 (IGF1R) knockout worms, likely through an adaptive activation of stress signaling.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "Mice, expressing ERCC1 version lacking 7 carboxyterminal aminoacids, had a shorter lifespan, compromised growth and organ weights, and symptoms of accelerated aging.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "Mice, expressing ERCC1 version lacking 7 carboxyterminal aminoacids, had a shorter lifespan, compromised growth and organ weights, and symptoms of accelerated aging.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC1",
+    "ncbiId": 2067,
+    "comment": "Ercc-1 mutation (deletion of Rad10 domain) didn't affect the lifespan of worms significantly.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "no change",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC2",
+    "ncbiId": 2068,
+    "comment": "Xpd (ERCC2) m/m mice exhibited increased mutation burden in liver and kidney, and reduced lifespan.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC2",
+    "ncbiId": 2068,
+    "comment": "Female mice, homozygous by R722W mutation in Xpd (ERCC2), had progeroid features, signs of a caloric restriction though been fed ad libitum, and shortened lifespan.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC2",
+    "ncbiId": 2068,
+    "comment": "Trichothiodystrophy model mice (XPD-null) with additional XPA knockout failed to grow after 2 weeks old, exhibited cachexia, and died at an extremely young age.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Xpf-1 (e1487) mutation further extend, rather than decrease, the life span of long-lived daf-2 animals likely through an adaptive activation of stress signaling.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Increase of the median lifespan in males by 40% (with overexpression of mei-9 (XPF homologue) was observed. The GAL4-UAS system were used to activate the expression of DNA repair genes.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Increase of the median lifespan in females by 10% (with overexpression of mei-9 (XPF homologue)) was observed. The expression level of DNA repair genes under the control of a ubiquitous constitutive driver da-GAL4 increased by 1.2\u20133.5 fold. This resulted in an increase of the median lifespan in males by 7\u201340% (with overexpression mei-9, ) and in females by 10\u201330%.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Under the control of constitutive neurospecific driver 1407-GAL4, the expression level of mei-9 increased 36.5\u201350.5 fold in males and 11.5\u201330.5 fold in females, respectively. This resulted in a reduction of the median lifespan of males by 4\u201364%",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Control: Elav-GS>UAS-mei-9, -RU486. The relative expression levels of DNA repair genes under the control of conditional neurospecific driver Elav-GS increased 1.3\u20138.2 fold in the nervous tissue of imago males and 1.4\u20137 fold in The Elav-GS-driven overexpression resulted in increased median lifespan in males overexpressing mei-9 (28%), and slightly in females overexpressing mei-9 (1.5%).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Under the control of the conditional ubiquitous driver Act5C-GS, the expression level of mei-9 was increased. Conditional ubiquitous activation of DNA repair genes resulted in a reduction of the median lifespan in male and female flies. Control: AS-mei-9/Act5C-GS, -RU486.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERCC4",
+    "ncbiId": 2072,
+    "comment": "Under the control of the conditional ubiquitous driver Act5C-GS, the expression level of mei-9 was increased. Conditional ubiquitous activation of DNA repair genes resulted in a reduction of the median lifespan in male and female flies. Control: AS-mei-9/Act5C-GS, -RU486. The median value in the table in the article is less than the 90th percentile - most likely an error - here the data is entered in ascending order.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "ERCC5",
+    "ncbiId": 2073,
+    "comment": "All the XPG (ERCC5) null C57BL/6 mice exhibited progeroid featureds and died before 4 weeks of age.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ERCC5",
+    "ncbiId": 2073,
+    "comment": "All the XPG (ERCC5) null FVB/N mice exhibited progeroid features and died before 16 weeks of age.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ERCC5",
+    "ncbiId": 2073,
+    "comment": "All the XPG (ERCC5) null C57BL/6 x FVB/N mice exhibited progeroid features and died before 18 weeks of age.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "ERCC5",
+    "ncbiId": 2073,
+    "comment": "Mice, expressing a version of XPG (ERCC5) lacking last 360 aminoacids, developed the Cockayne syndrome phenotype and died latest at 1 month of age.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "EZH2",
+    "ncbiId": 2146,
+    "comment": "Flies heterozygous for the protein null E(z)63 or the catalytically inactive E(z)731 mutation that were progeny of an out-cross to an Oregon-R (O- R) wild-type strain exhibited a substantially greater median life span than the O-R control.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "EZH2",
+    "ncbiId": 2146,
+    "comment": "Flies heterozygous for the protein null E(z)63 or the catalytically inactive E(z)731 mutation that were progeny of an out-cross to an Oregon-R (O- R) wild-type strain exhibited a substantially greater median life span than the O-R control.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "FBN1",
+    "ncbiId": 2200,
+    "comment": "Mice, heterozygous by FBN1 mutation, exhibited signs of accelerated vascular aging and preliminary death. At 18 months of age, survival was 80% for mutant and 97% for control. The minimum lifespan is estimated approximately from the Kaplan\u2013Meier survival curve (Fig. 1A).",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce protein activity/stability"
+    ]
+  },
+  {
+    "gene": "FEN1",
+    "ncbiId": 2237,
+    "comment": "The average lifespan of the control is 26.55 \u00b1 13.91 generations, the average lifespan of the rth1/rad27\u0394 mutants (inactivating mutation) is 11.6 \u00b1 7.0.",
+    "organism": "yeasts",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene modification to reduce gene expression"
+    ]
+  },
+  {
+    "gene": "FGF21",
+    "ncbiId": 26291,
+    "comment": "FGF21 overexpressing mice had smaller body weight, lower plasma IGF1 and insulin, and increased insulin sensitivity. They lived longer than control mice.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FGF21",
+    "ncbiId": 26291,
+    "comment": "FGF21 overexpressing mice had smaller body weight, lower plasma IGF1 and insulin, and increased insulin sensitivity. They lived longer than control mice.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FGF21",
+    "ncbiId": 26291,
+    "comment": "FGF21 overexpressing mice had smaller body weight, lower plasma IGF1 and insulin, and increased insulin sensitivity. They lived longer than control mice.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FN1",
+    "ncbiId": 2335,
+    "comment": "Mice were genetically modified so that alternatively spliced extra domain A (EDA) exon of FN1 became constitutively included in mRNA. This led to decreased levels of fibronectin 1 (FN1) after pubertal age and shortened lifespan.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "splicing modification"
+    ]
+  },
+  {
+    "gene": "FN1",
+    "ncbiId": 2335,
+    "comment": "Mice were genetically modified so that alternatively spliced extra domain A (EDA) exon of FN1 became constitutively spliced out. This led to abnormal wound healing, and shortened lifespan.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "splicing modification"
+    ]
+  },
+  {
+    "gene": "FOS",
+    "ncbiId": 2353,
+    "comment": "Intermittent fasting induced longevity was suppressed in fos-1 RNAi- and fos-1;jun-1 RNAi-treated worms with statistical significance. These results demonstrate that C. elegans AP-1 (JUN-1/FOS-1) is involved in IF-induced longevity and suggest that it exerts its longevity effect through inducing gene expression changes in response to fasting. Approximately 100 synchronized young adults worms raised on nematode growth media plates with live OP50-1 were picked to FUDR-containing plates with live OP50-1. At day 2 of adulthood, worms were divided into ad libitum (AL) and intermittent fasting (IF). Worms in AL were fed with kanamycin-killed OP50-1 throughout their life span. Worms in IF were on plate with (2 days) or without (2 days) kanamycin-killed OP50-1 as food alternately. All worms were transferred to new plates every other day.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan in animals with increased lifespans",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Integration of hif-1 extra copies to genome extended the lifespan of daf-16 (ortholog of FOXO genes) knockout worms.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan in animals with decreased lifespans",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Overexpressed dFOXO, a downstream effector of IIS, in the adult Drosophila fat body, which increased life-span and reduced fecundity of females but had no effect on male life-span. The role of FOXO transcription factors and the adipose tissue are therefore evolutionarily conserved in the regulation of aging, and reduction of insulin/insulin-like growth factor signaling in the adult is sufficient to mediate its effects on life-span and fecundity. Induced expression of dFOXO in the fat body from the onset of adulthood increased life-span and reduced fecundity of female flies by 20 to 50% and by 50%, respectively.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Total N=545, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Total N=258, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=548",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=505",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=539",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Total N=263, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=561",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=593",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Total N=694, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Total N=827, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). total N=526, one experiment",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "total N=572, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), total N=532",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "combined data, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "total N=321, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "total N=351, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), total N=428",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). total N=627",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO1",
+    "ncbiId": 2308,
+    "comment": "Loss of function mutation of daf-16 (FOXO ortholog) canceled the life-extending effect of efl-1 (E2F1 ortholog) knockdown.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "no change",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Double mutants daf-16(mu86);tdp-1(ok803) were compared with daf-16(mu86).",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Loss of function mutation of daf-16 (FOXO ortholog) canceled the life-extending effect of efl-1 (E2F1 ortholog) knockdown.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "no change",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "log rank p-value<0.0001 (daf-16(mu86) vs daf-16(mu86);tdp-1(ok803))",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "rank p-value=0.003. For RNAi experiments, animals were maintained on RNAi feeding strains. RNAi plates consisted of NGM supplemented with 1mM \u03b2-D-isothiogalactopyranoside (IPTG) and 25 \u03bcg/ml carbenicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout",
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "rank p-value=0,01. For RNAi experiments, animals were maintained on RNAi feeding strains. RNAi plates consisted of NGM supplemented with 1mM \u03b2-D-isothiogalactopyranoside (IPTG) and 25 \u03bcg/ml carbenicillin.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout",
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Inactivation of either mdl-1 or mxl-1 failed to confer longevity in daf-16(mgDf47) null mutant animals. Corroborates the conclusion that lifespan extension after loss of MDL-1:MXL-1 requires DAF-16.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Overexpressed dFOXO, a downstream effector of IIS, in the adult Drosophila fat body, which increased life-span and reduced fecundity of females but had no effect on male life-span. The role of FOXO transcription factors and the adipose tissue are therefore evolutionarily conserved in the regulation of aging, and reduction of insulin/insulin-like growth factor signaling in the adult is sufficient to mediate its effects on life-span and fecundity. Induced expression of dFOXO in the fat body from the onset of adulthood increased life-span and reduced fecundity of female flies by 20 to 50% and by 50%, respectively.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Total N=545, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Total N=258, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=548",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=505",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=539",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Total N=263, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=561",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=593",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Total N=694, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "Total N=827, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). total N=526, one experiment",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "total N=572, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), total N=532",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "combined data, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "total N=321, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "total N=351, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), total N=428",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). total N=627",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO3",
+    "ncbiId": 2309,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Overexpressed dFOXO, a downstream effector of IIS, in the adult Drosophila fat body, which increased life-span and reduced fecundity of females but had no effect on male life-span. The role of FOXO transcription factors and the adipose tissue are therefore evolutionarily conserved in the regulation of aging, and reduction of insulin/insulin-like growth factor signaling in the adult is sufficient to mediate its effects on life-span and fecundity. Induced expression of dFOXO in the fat body from the onset of adulthood increased life-span and reduced fecundity of female flies by 20 to 50% and by 50%, respectively.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Total N=545, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Total N=258, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=548",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=505",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=539",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Total N=263, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=561",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Total N=593",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Total N=694, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Total N=827, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). total N=526, one experiment",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "total N=572, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), combined data.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), total N=532",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "combined data, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "total N=321, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "total N=351, foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). Combined data",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM), total N=428",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM). total N=627",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "foxo was with the three protein kinase B (PKB) phosphorylation sites mutated (mutations T44A, S190A and S259A) to permit insulin- insensitive nuclear transport (UAS\u2013dFOXO-TM. Stress was induced by paraquat over 24 hours.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "no change under stress conditions",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "FOXO4",
+    "ncbiId": 4303,
+    "comment": "Loss of function mutation of daf-16 (FOXO ortholog) canceled the life-extending effect of efl-1 (E2F1 ortholog) knockdown.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "no change",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FST",
+    "ncbiId": 10468,
+    "comment": "The minimum and maximum life expectancy are determined by the survival curves (10th and 90th percentiles, respectively).",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "treatment with gene expressing vector"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "Liver-specific knockout of frataxin (FXN) caused preliminary deaths of animals (50% died till 30 weeks old) and promoted liver tumor formation. Various biological processes in the liver and hepatocytes of such mice were dysregulated.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "FXN",
+    "ncbiId": 2395,
+    "comment": "The age was counted from hatching. Ferric ammonium citrate (6.6 mg/ml) was added to the culture media.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "G6PD",
+    "ncbiId": 2539,
+    "comment": "G6PD overexpression in female mice improved their resistance to oxidative stress, protected them from aging-associated decline, and increased their lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "G6PD",
+    "ncbiId": 2539,
+    "comment": "G6PD overexpression in male mice improved their resistance to oxidative stress and protected them from aging-associated decline, but didn't affect their lifespan.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Neuronal overexpression of GCLc (Appl-GAL4 and D42-GAL4 neuronal drivers) in a long-lived background extended mean and maximum life spans up to 50%, without affecting the rate of oxygen consumption by the flies. Positive effects were also observed with the elav-GAL4 driver, but these effects were consistently significant (p < 0.05) only for the elav/GCLc5 genotype.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Overexpression of GCLc using the mushroom body driver (OK107-GAL4) had a small but significant beneficial effect on longevity (approximately 12%) while overexpression in serotonergic (MZ360-GAL4) neurons or dopaminergic and serotonergic neurons (Ddc-GAL4) had small, nonsignificant effects on longevity.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "A significant beneficial effect (12-13%) was also observed using the C23-GAL4 transverse muscle driver.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Global overexpression of GCLc was shown to increase life span significantly (15%).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Knockdown of GCLc by 30-70% using an RNAi-hairpin strategy had a significant effect, resulting in greater sensitivity to H2O2 and reduced survivorship under normal conditions varying from a 50% reduction in median life span to lethality.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Neuronal overexpression of GCLc (Appl-GAL4 and D42-GAL4 neuronal drivers) in a long-lived background extended mean and maximum life spans up to 50%, without affecting the rate of oxygen consumption by the flies. Positive effects were also observed with the elav-GAL4 driver, but these effects were consistently significant (p < 0.05) only for the elav/GCLc5 genotype.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Neuronal overexpression of GCLc (Appl-GAL4 and D42-GAL4 neuronal drivers) in a long-lived background extended mean and maximum life spans up to 50%, without affecting the rate of oxygen consumption by the flies. Positive effects were also observed with the elav-GAL4 driver, but these effects were consistently significant (p < 0.05) only for the elav/GCLc5 genotype.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Neuronal overexpression of GCLc (Appl-GAL4 and D42-GAL4 neuronal drivers) in a long-lived background extended mean and maximum life spans up to 50%, without affecting the rate of oxygen consumption by the flies. Positive effects were also observed with the elav-GAL4 driver, but these effects were consistently significant (p < 0.05) only for the elav/GCLc5 genotype.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Neuronal overexpression of GCLc (Appl-GAL4 and D42-GAL4 neuronal drivers) in a long-lived background extended mean and maximum life spans up to 50%, without affecting the rate of oxygen consumption by the flies. Positive effects were also observed with the elav-GAL4 driver, but these effects were consistently significant (p < 0.05) only for the elav/GCLc5 genotype.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLC",
+    "ncbiId": 2729,
+    "comment": "Expression of GCLc driven by Tub-GAL4 was increased by 4- to 6-fold , in comparison with controls, as revealed by immunoblot analysis (data not shown) and the GCL enzyme activity assay. The experimental groups overexpressing GCLc globally (UAS-GCLc with the Tub-GAL4 driver) exhibited no significant increases in life span, in comparison with their respective controls.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GCLM",
+    "ncbiId": 2730,
+    "comment": "Global overexpression of GCLm (Tub-GAL4 driver) extended the mean life span up to 24%.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "Late-onset administration of GDF11 extends life span and delays development of age-related markers in the annual fish Nothobranchius guentheri. Dietary intake of recombinant GDF11 had little influences on the body weight and length of aging fish N. guentheri, but it delayed the development of age-related biomarkers and extended both the median and maximum life span of the fish. It revealed that the maximum lifespans of the experimental and control fish were 56 \u00b1 1.1 and 52 \u00b1 1.4 weeks, respectively (p<0.05), and their mean lifespans were 51 \u00b1 1.4 and 47.1 \u00b1 1.2 weeks, separately (p <0.05). It was found that rGDF11 administration extended the mean and maximum lifespans of the fish by approximately 3.9 and 4 weeks, respectively.",
+    "organism": "fish nothobranchius guentheri",
+    "direction": "increases lifespan",
+    "method": [
+      "treatment with protein"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 20\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 15\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF11",
+    "ncbiId": 10220,
+    "comment": "50 \u00b5M FUDR was added to the culture media. The age was counted from the first day of adulthood. Worms were raised at 15\u00b0C until L4 stage.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GDF15",
+    "ncbiId": 9518,
+    "comment": "GDF15 overexpression in female mice improved their metabolism and extended lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GDF15",
+    "ncbiId": 9518,
+    "comment": "GDF15 overexpression in female mice improved their metabolism and extended lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GDF15",
+    "ncbiId": 9518,
+    "comment": "GDF15 overexpression in female mice improved their metabolism and extended lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GDF15",
+    "ncbiId": 9518,
+    "comment": "GDF15 overexpression in female mice improved their metabolism and extended lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GH1",
+    "ncbiId": 2688,
+    "comment": "Hemizygote knockdown of GH1 in rats caused increased lifespan.",
+    "organism": "rat",
+    "direction": "increases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GH1",
+    "ncbiId": 2688,
+    "comment": "Homozygote knockdown of GH1 in rats caused decreased lifespan.",
+    "organism": "rat",
+    "direction": "decreases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GH1",
+    "ncbiId": 2688,
+    "comment": "Ectopic expression of the bovine growth hormone gene in mice led to enhanced body growth, shortened lifespan, and reduced replicative potential of cells from different tissues.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GH1",
+    "ncbiId": 2688,
+    "comment": "Ectopic expression of the bovine growth hormone gene in mice led to enhanced body growth, shortened lifespan, and reduced replicative potential of cells from different tissues.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GH1",
+    "ncbiId": 2688,
+    "comment": "Hemizygote GH1 knockdown rats had a longer lifespan than the wild type.",
+    "organism": "rat",
+    "direction": "increases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GH1",
+    "ncbiId": 2688,
+    "comment": "GH1 hemizygote knockdown in rats enhanced the life-extending effect of diet restriction and abolished age-associated nephropathy.",
+    "organism": "rat",
+    "direction": "increases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "GHR deletion in mice caused dwarfism, enhanced insulin sensitivity, and significantly extended longevity. The average lifespan of GHR \u2212/\u2212 C57BL/6J male mice was significantly longer than their controls.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Knockout of GHR in adult mice resulted in growth retardation and higher adiposity. Knockout mice displayed improved insulin sensitivity but poor glucose tolerance. Female GHR knockout mice had increased maximal lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "GHR deletion in mice caused dwarfism, enhanced insulin sensitivity, and significantly extended longevity. The average lifespan of GHR \u2212/\u2212 Ola-BALB/cJ male mice was significantly longer than their controls.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "GHR deletion in mice caused dwarfism, enhanced insulin sensitivity, and significantly extended longevity. The average lifespan of GHR \u2212/\u2212 Ola-BALB/cJ female mice was significantly longer than their controls.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "GHR knockout mice had impaired growth and significantly lower levels of plasma IGF1 and IGFBP3. The mean lifespan of GHR knockout female mice was significantly longer than that of control mice.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "GHR deletion in mice caused dwarfism, enhanced insulin sensitivity, and significantly extended longevity. The average lifespan of GHR \u2212/\u2212 C57BL/6J female mice wasnt significantly different from their controls.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "GHR knockout mice had impaired growth and significantly lower levels of plasma IGF1 and IGFBP3. The mean lifespan of GHR knockout male mice was significantly longer than that of control mice.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Knockout of GHR in adult mice resulted in growth retardation and higher adiposity. Knockout mice displayed improved insulin sensitivity but poor glucose tolerance. Male knockout mice didn't exhibit a difference in lifespan.",
+    "organism": "mouse",
+    "direction": "no change",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Female mice with GHR knockout had improved lifespan. The maximum and minimum life expectancy are indicated by survival curves (90th and 10th percentile, respectively). The numbers of animals are approximate according to the survival curves, the article states that there were 23-43 animals in each group.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Male mice with muscle-specific GHR knockout had improved glucose metabolism, smaller body size, decreased lean mass, and lived longer than control.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Female mice with muscle-specific GHR knockout had improved glucose metabolism, bigger body size, and increased lean mass, but the same lifespan as control.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Male mice with GHR knockout had lower insulin and higher adiponectin levels in plasma and improved glucose tolerance, and improved lifespan. The maximum and minimum life expectancy are indicated by survival curves (90th and 10th percentile, respectively). The numbers of animals are approximate according to the survival curves, the article states that there were 23-43 animals in each group.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Ames dwarf mice with GHR knockout had improved lifespan compared with wild type. The maximum and minimum life expectancy are indicated by survival curves (90th and 10th percentile, respectively). The numbers of animals are approximate according to the survival curves, the article states that there were 23-43 animals in each group.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout",
+      "gene mutation"
+    ]
+  },
+  {
+    "gene": "GHR",
+    "ncbiId": 2690,
+    "comment": "Ames dwarf mice with GHR knockout had improved lifespan compared with wild type. The maximum and minimum life expectancy are indicated by survival curves (90th and 10th percentile, respectively). The numbers of animals are approximate according to the survival curves, the article states that there were 23-43 animals in each group.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout",
+      "gene mutation"
+    ]
+  },
+  {
+    "gene": "GHRH",
+    "ncbiId": 2691,
+    "comment": "GHRH knockout mice were smaller and had more adipose tissue than control. GHRH knockout mice exhibited major shifts in the expression of genes related to xenobiotic detoxification, stress resistance, and insulin signaling.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHRH",
+    "ncbiId": 2691,
+    "comment": "GHRH knockout mice were smaller and had more adipose tissue than control. GHRH knockout mice exhibited major shifts in the expression of genes related to xenobiotic detoxification, stress resistance, and insulin signaling.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHRH",
+    "ncbiId": 2691,
+    "comment": "GHRH knockout mice were smaller and had more adipose tissue than control. GHRH knockout mice exhibited major shifts in the expression of genes related to xenobiotic detoxification, stress resistance, and insulin signaling.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHRH",
+    "ncbiId": 2691,
+    "comment": "Calorie restriction diet enhanced the positive effect of GHRH knockout on the mice lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHRH",
+    "ncbiId": 2691,
+    "comment": "Calorie restriction diet enhanced the positive effect of GHRH knockout on the mice lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHRH",
+    "ncbiId": 2691,
+    "comment": "Calorie restriction diet enhanced the positive effect of GHRH knockout on the mice lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GHRHR",
+    "ncbiId": 2692,
+    "comment": "GHRHR lit/lit mice are deficient in pituitary growth hormone and lived longer than +/lit control on a low-fat diet, suggesting that the changes of GH/IGF-1 axis affect lifespan.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene modification"
+    ]
+  },
+  {
+    "gene": "GLO1",
+    "ncbiId": 2739,
+    "comment": "The minimum, maximum, and median life expectancy is plotted (10th, 50th, and 90th percentiles, respectively). Young adult C. elegans were transferred to NGM agar plates containing 300 \u00b5g mL\u22121 5-fluorodesoxyuridine (Sigma-Aldrich, M\u00fcnchen, Germany) to prevent eggs from hatching. In all experiments, the pre-fertile period of adulthood was used as t = 0 for lifespan analysis.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "decreases lifespan",
+    "method": [
+      "rna interferention"
+    ]
+  },
+  {
+    "gene": "GLO1",
+    "ncbiId": 2739,
+    "comment": "The minimum, maximum, and median life expectancy is plotted (10th, 50th, and 90th percentiles, respectively). Young adult C. elegans were transferred to NGM agar plates containing 300 \u00b5g mL\u22121 5-fluorodesoxyuridine (Sigma-Aldrich, M\u00fcnchen, Germany) to prevent eggs from hatching. In all experiments, the pre-fertile period of adulthood was used as t = 0 for lifespan analysis.",
+    "organism": "roundworm caenorhabditis elegans",
+    "direction": "increases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GPX4",
+    "ncbiId": 2879,
+    "comment": "Gpx4 +/- mice had increased median and mean lifespan and slowed the age-related formation of lymphomas. Gpx4 heterozygous knockout improved apoptotic response to oxidative stress.",
+    "organism": "mouse",
+    "direction": "increases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GPX4",
+    "ncbiId": 2879,
+    "comment": "4-month-old C57BL6/129SvJ mice with the single copy of GPX4 were more sensitive to gamma radiation than control mice.",
+    "organism": "mouse",
+    "direction": "decreases survival under stress conditions",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GRN",
+    "ncbiId": 2896,
+    "comment": "Granulin-absent mice exhibited shortened lifespan and behavioral alterations compared with control. They also had increased ubiquitination in brain tissue and increased microgliosis and astrocytosis.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GRN",
+    "ncbiId": 2896,
+    "comment": "Grn -/- mice started showing increased mortality after 10 months of age. Granulin deficiency leads to elevated ubiquitination in brain tissues and increased cellular aging, hyperphosphorylation of cellular proteins, including TDP-43, disrupted autophagy-lysosome activity, and IGF1 upregulation.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GSK3A",
+    "ncbiId": 2931,
+    "comment": "GSK3A knockout mice exhibited phenotypes of preliminary aging and premature death. At the age of 24 months, only 42% of knockout mice survived vs. 73% of wild-type.",
+    "organism": "mouse",
+    "direction": "decreases lifespan",
+    "method": [
+      "gene knockout"
+    ]
+  },
+  {
+    "gene": "GSK3A",
+    "ncbiId": 2931,
+    "comment": "Human GSK3 presents in two isoforms GSK3a and GSK3b, while the fly ortholog of GSK-3, is only Shaggy (Sgg). Ubiquitous overexpression of wild-type sgg significantly shortened lifespan \u0438\u043d 30%, Fig 2C.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GSK3A",
+    "ncbiId": 2931,
+    "comment": "Human GSK3 presents in two isoforms GSK3a and GSK3b, while the fly ortholog of GSK-3, is only Shaggy (Sgg). RNAi-mediated reduction in sgg expression using two independent dsRNA-expressing transgenes significantly increased lifespan (Figures 2D and S2F).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GSK3A",
+    "ncbiId": 2931,
+    "comment": "Ubiquitous overexpression of constitutively active Sgg (SggS9A) significantly reduced lifespan by 50% (fig. S2E).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GSK3A",
+    "ncbiId": 2931,
+    "comment": "RNAi-mediated reduction in sgg expression using two independent dsRNA-expressing transgenes significantly increased lifespan (Fig. S2F). RNAi-mediated knockdown of sgg resulted in resistance to phenobarbital and paraquat.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GSK3B",
+    "ncbiId": 2932,
+    "comment": "Human GSK3 presents in two isoforms GSK3a and GSK3b, while the fly ortholog of GSK-3, is only Shaggy (Sgg). Ubiquitous overexpression of wild-type sgg significantly shortened lifespan \u0438\u043d 30%, Fig 2C.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GSK3B",
+    "ncbiId": 2932,
+    "comment": "Human GSK3 presents in two isoforms GSK3a and GSK3b, while the fly ortholog of GSK-3, is only Shaggy (Sgg). RNAi-mediated reduction in sgg expression using two independent dsRNA-expressing transgenes significantly increased lifespan (Figures 2D and S2F).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "increases lifespan",
+    "method": [
+      "interfering rna transgene"
+    ]
+  },
+  {
+    "gene": "GSK3B",
+    "ncbiId": 2932,
+    "comment": "Ubiquitous overexpression of constitutively active Sgg (SggS9A) significantly reduced lifespan by 50% (fig. S2E).",
+    "organism": "fly drosophila melanogaster",
+    "direction": "decreases lifespan",
+    "method": [
+      "additional copies of a gene in the genome"
+    ]
+  },
+  {
+    "gene": "GSK3B",
+    "ncbiId": 2932,
+    "comment": "RNAi-mediated reduction in sgg expression using two independent dsRNA-expressing transgenes significantly increased lifespan (Fig. S2F). RNAi-mediated knockdown of sgg resulted in resistance to phenobarbital and paraquat.",
+    "organism": "fly drosophila melanogaster",
+    "direction": "improves survival under stress conditions",
+    "method": [
+      "interfering rna transgene"
+    ]
+  }
+]

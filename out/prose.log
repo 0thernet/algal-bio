@@ -1,0 +1,23 @@
+  fetched 20/90 genes, 46 entries
+  fetched 40/90 genes, 119 entries
+  fetched 60/90 genes, 189 entries
+  fetched 80/90 genes, 353 entries
+
+corpus: 395 lifespan experiments with prose, 78 genes
+comment length: median 186 chars, max 863
+
+model               organism   direction      method     calls
+--------------------------------------------------------------
+claude-sonnet-5        39/60       37/60        9/60         6
+qwen3.5-flash           2/60       36/60        8/60         6
+
+--------------------------------------------------------------
+DOES THE ERROR CHANGE THE CONCLUSION?
+--------------------------------------------------------------
+  claude-sonnet-5  contradicted genes: curated 7, extracted 3, agreeing 3
+    disagreements: ['ATP5PO', 'ATR', 'BRCA1', 'BUB1B']
+  qwen3.5-flash    contradicted genes: curated 7, extracted 3, agreeing 3
+    disagreements: ['ATP5PO', 'ATR', 'BRCA1', 'BUB1B']
+
+  A derivation is only as good as the facts under it, and these
+  facts came from a model reading prose rather than a curator.
