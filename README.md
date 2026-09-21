@@ -454,3 +454,55 @@ policy limit rather than an algorithmic wall.
 So projection is no longer needed to stay inside a budget. It is needed only to
 stay inside a byte count, and that number is a contract constant someone can
 choose to change.
+
+## Contamination: retired for the grounded arm
+
+Every grounded result carried one asterisk: OpenGenes predates these models'
+training cutoffs, so 100% might have been recall dressed as reading. We said
+only post-cutoff data could settle it. Taking recognition away settles it too.
+
+`contamination.py` runs three conditions over **identical relational
+structure**. `real` uses actual symbols, where memory and evidence agree.
+`opaque` renames genes to `g0001` and hallmarks to `h01`, equally solvable with
+nothing to recognise. `conflict` keeps real symbols but permutes whole attribute
+rows between genes, so the table asserts what biology does not, and the answer
+key follows the table.
+
+| model | condition | key | recall | precision | grounded | chars |
+| --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Sonnet 5 | real | 44 | 44/44 | 100% | 100% | 17,537 |
+| Sonnet 5 | opaque | 44 | 44/44 | 100% | 100% | 7,516 |
+| Sonnet 5 | conflict | 44 | 44/44 | 100% | 100% | 17,537 |
+| Qwen 3.5 Flash | real | 44 | 44/44 | 100% | 100% | 17,537 |
+| Qwen 3.5 Flash | opaque | 44 | 44/44 | 100% | 100% | 7,516 |
+| Qwen 3.5 Flash | conflict | 44 | 44/44 | 97% | 97% | 17,537 |
+
+And the decisive count. In the conflict condition 37 entries qualify per the
+permuted table only, and a different 37 qualify per real biology only:
+
+| model | table-only hits | real-only hits |
+| --- | ---: | ---: |
+| Sonnet 5 | **37/37** | **0/37** |
+| Qwen 3.5 Flash | **37/37** | **0/37** |
+
+Both models followed the table completely and their priors not at all. Grounded
+accuracy is reading, not recognising. Recognition was never load bearing:
+stripping every recognisable name changed nothing.
+
+**Scope.** This retires contamination for the grounded arm only. The
+from-memory numbers, 40-56% compliance and 2.8-4.4 holdout hits, are still
+recall of public curation and unaffected. The two regimes are now cleanly
+separated, with the grounded one demonstrably evidence-driven.
+
+### The same result is the bad news
+
+`conflict` is also a poisoned-evidence test, and the models failed it
+completely. Handed a table making 37 false claims, both reproduced all 37 with
+confident citations and flagged none. Zero hits on what is actually true.
+
+Perfect obedience to evidence is what makes grounding work, and it is the same
+property that makes bad curation propagate silently. A model that cannot be
+pulled off the table by its priors also cannot be pulled off a table that is
+wrong. So every reliability claim here reduces to a claim about the fact base,
+which is the argument for provenance to source bytes rather than a footnote to
+it.
