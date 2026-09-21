@@ -506,3 +506,52 @@ pulled off the table by its priors also cannot be pulled off a table that is
 wrong. So every reliability claim here reduces to a claim about the fact base,
 which is the argument for provenance to source bytes rather than a footnote to
 it.
+
+## Unknown versus false: the models pass
+
+The engine cannot mistake silence for "no", because positive Datalog emits only
+what is derivable and never asserts a negative. `unknown.py` tests whether a
+grounded model inherits that.
+
+For 40 genes that carry two or more attributes, druggability is **omitted**
+rather than set to false, so whether they qualify turns entirely on a field that
+is absent. The model sorts every gene into qualifies, does not qualify, or
+cannot be determined.
+
+| model | hint | undetermined → UNKNOWN | → NO | → YES | determinate |
+| --- | --- | ---: | ---: | ---: | ---: |
+| Sonnet 5 | given | **40/40** | 0/40 | 0/40 | 27/27 |
+| Sonnet 5 | withheld | **40/40** | 0/40 | 0/40 | 27/27 |
+| Qwen 3.5 Flash | given | **40/40** | 0/40 | 0/40 | 27/27 |
+| Qwen 3.5 Flash | withheld | **40/40** | 0/40 | 0/40 | 26/27 |
+
+Neither model treated an absent field as a negative, and withholding the hint
+that "not recorded" differs from "not druggable" changed nothing.
+
+**Remaining scaffolding.** Offering a "cannot be determined" bucket is itself a
+cue that the distinction is legitimate. This shows the models take that option
+correctly when it exists, not that they volunteer it under a forced two-way
+choice. The engine's version of the property needs no option and no prompt,
+because it is structural.
+
+## Summary of what is established
+
+| claim | status |
+| --- | --- |
+| Facts pin to source bytes; proofs re-derive; tampered results fail | measured |
+| From memory, models satisfy their own stated criterion 40-56% of the time | measured, 3 models |
+| Grounded, two of three models are exact, to 241 genes and depth-3 closure | measured |
+| Grounded accuracy is reading, not recognising | measured, opaque + conflict |
+| Models obey evidence completely, including when it is false | measured, 37/37 |
+| Models distinguish unknown from false when the option exists | measured |
+| Only the model reaches beyond the evidence, at ~50% precision | measured, 25 splits |
+| Work is linear after the hash join; the byte bound now binds | measured |
+| Approach generalises to a second domain | measured |
+| Proofs earn their keep where claims are contested, not merely derivable | argued |
+
+The thesis the evidence supports is narrow and load bearing. **The fact base
+used as an answer key is the product.** A rule and a model are both proposers;
+one is exact by construction and free, the other reaches further and is wrong
+about half the time. What makes either usable is a checkable evidence layer with
+provenance to bytes, and what makes that layer trustworthy is nothing in this
+repo. It is curation, which is exactly where the remaining risk lives.
