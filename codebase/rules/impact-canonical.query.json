@@ -1,0 +1,79 @@
+{
+  "contract": "algal.query.v1",
+  "rules": [
+    {
+      "id": "affects-base",
+      "head": {
+        "relation": "affects",
+        "terms": [
+          {
+            "var": "x"
+          },
+          {
+            "var": "y"
+          }
+        ]
+      },
+      "body": [
+        {
+          "relation": "depends",
+          "terms": [
+            {
+              "var": "x"
+            },
+            {
+              "var": "y"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "affects-step",
+      "head": {
+        "relation": "affects",
+        "terms": [
+          {
+            "var": "x"
+          },
+          {
+            "var": "z"
+          }
+        ]
+      },
+      "body": [
+        {
+          "relation": "affects",
+          "terms": [
+            {
+              "var": "x"
+            },
+            {
+              "var": "y"
+            }
+          ]
+        },
+        {
+          "relation": "depends",
+          "terms": [
+            {
+              "var": "y"
+            },
+            {
+              "var": "z"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "query": {
+    "relation": "affects",
+    "terms": [
+      {
+        "var": "x"
+      },
+      "canonical"
+    ]
+  }
+}

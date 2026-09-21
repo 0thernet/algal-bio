@@ -1,0 +1,1 @@
+{"path":"crates/algal/src/lib.rs","text":"pub mod acp;\npub mod bench;\npub mod canonical;\npub mod civilization;\npub mod context;\npub mod contract;\npub mod effects;\npub mod error;\npub mod graph;\npub mod memory;\npub mod registry;\npub mod runtime;\npub mod store;\n\npub use error::{Error, Result};\n"}

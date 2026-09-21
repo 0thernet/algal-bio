@@ -187,3 +187,53 @@ compliance against Sonnet 5's 93%, at a fraction of the cost.
   The grounded figure is a floor, not a ceiling.
 - **Arm A verification** is run separately by `run.sh`; the inline check in
   `experiment.py` passes the result on stdin, which the CLI does not accept.
+
+## Does it generalise? A second domain
+
+`codebase/` runs the identical pipeline over source code instead of genes:
+`depends(module, module)` facts extracted from the algal Rust kernel, each
+citing the CAS digest of the file it was read from, then transitive impact
+derived recursively. Independently re-verified numbers:
+
+| | |
+| --- | --- |
+| source files stored | 15 |
+| `depends` facts | 65, across 14 modules |
+| derived `affects` tuples | 92, of which 27 exist only transitively |
+| impact set of `memory` | 8 modules, only 2 of them direct importers |
+| work / rounds | 51,671 / 5, or 20.7% of ceiling |
+| verify | `ok:true` on all five queries; tampering a row gives `ok:false` |
+
+So the pipeline is not biology-specific. But the honest caveat matters more
+than the result: a dependency graph is cheap to recompute with `cargo tree`,
+so a proof buys little here. **Proof-carrying knowledge earns its keep where
+claims are contested or expensive to re-derive, not merely where they are
+derivable.** Aging-gene curation qualifies. An import graph does not.
+
+### A sharper engine finding
+
+Inert facts are not free. Padding the snapshot with facts no rule mentions
+cost **exactly 340 work units each**, and `BUDGET_EXHAUSTED` arrived between
+580 and 585 pads, at **32.6% of the byte ceiling**. This is the same finding as
+the biology demo's, measured precisely: the join charges one unit per tuple
+scanned *regardless of whether the relation could possibly match*, so every
+irrelevant fact in scope is paid for on every literal of every round.
+
+That makes relation bucketing the single highest-leverage change available to
+the knowledge layer. Skipping non-matching relations before charging would make
+inert facts nearly free and move the practical ceiling by an order of
+magnitude. It would also change recorded `work` counts, which appear in query
+results, so it is a contract-visible change and not ours to make unilaterally.
+
+It also corrects an overclaim in this README. Literal reordering bought 5.8x in
+the biology demo but only 12.4% here, because reordering helps only by shrinking
+the *leading* literal's binding count, and `depends` (65) and `affects` (92) are
+close in size. The gain depends on relative relation sizes, not on ordering
+alone.
+
+### Also measured
+
+`algal store put` parses its input as JSON, so a `.rs` file cannot be stored
+directly. Source files are wrapped as `{path, text}` records and the digest of
+that record is the fact's source. Inline `crate::foo::bar` paths are not
+parsed, so the fact base is a lower bound on real dependencies.

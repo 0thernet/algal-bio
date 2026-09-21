@@ -1,0 +1,655 @@
+{
+  "contract": "algal.memory.v1",
+  "facts": [
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "context"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "effects"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "graph"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "runtime"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:725dc8713c2bbb26bbc3ea6ab1e675919fdc09c5f6472f1385beffa57b27f3e3"
+      ],
+      "tuple": [
+        "acp",
+        "store"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "effects"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "graph"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "runtime"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:9ecb94350d01067f614dc7b953b1a2f3916a72698fb322c9ff164a42242679f0"
+      ],
+      "tuple": [
+        "bench",
+        "store"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:0ad90971ccb49f03ef316cc623bc0607fb434291248b2386fa73366860d1bbd1"
+      ],
+      "tuple": [
+        "canonical",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "effects"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "graph"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "runtime"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:80a1bb1403c09a23a2ec9c369f3ff0d2d2f7595439ed37c2537bb80ad819c5d8"
+      ],
+      "tuple": [
+        "civilization",
+        "store"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:f6a17f05dfb3a5ec6c7dd11587087e725ba7092d7a8610c164bedcd15ceacd64"
+      ],
+      "tuple": [
+        "context",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:f6a17f05dfb3a5ec6c7dd11587087e725ba7092d7a8610c164bedcd15ceacd64"
+      ],
+      "tuple": [
+        "context",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:f6a17f05dfb3a5ec6c7dd11587087e725ba7092d7a8610c164bedcd15ceacd64"
+      ],
+      "tuple": [
+        "context",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:51a99c6950c9f6e7bad9204fbc6b58b912b66f65b5332811b16567c992cbc28f"
+      ],
+      "tuple": [
+        "contract",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:51a99c6950c9f6e7bad9204fbc6b58b912b66f65b5332811b16567c992cbc28f"
+      ],
+      "tuple": [
+        "contract",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:b05eeb780b94ed1320cc5ab1e9f9004d897eda709596d21054a33f8d86ce6500"
+      ],
+      "tuple": [
+        "effects",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:b05eeb780b94ed1320cc5ab1e9f9004d897eda709596d21054a33f8d86ce6500"
+      ],
+      "tuple": [
+        "effects",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:b05eeb780b94ed1320cc5ab1e9f9004d897eda709596d21054a33f8d86ce6500"
+      ],
+      "tuple": [
+        "effects",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:b05eeb780b94ed1320cc5ab1e9f9004d897eda709596d21054a33f8d86ce6500"
+      ],
+      "tuple": [
+        "effects",
+        "graph"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:2a407c88d5d2ba0446644618edae7e7bfb3b45aec79f6741288a1930cc6c3ccb"
+      ],
+      "tuple": [
+        "graph",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:2a407c88d5d2ba0446644618edae7e7bfb3b45aec79f6741288a1930cc6c3ccb"
+      ],
+      "tuple": [
+        "graph",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:2a407c88d5d2ba0446644618edae7e7bfb3b45aec79f6741288a1930cc6c3ccb"
+      ],
+      "tuple": [
+        "graph",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:2a407c88d5d2ba0446644618edae7e7bfb3b45aec79f6741288a1930cc6c3ccb"
+      ],
+      "tuple": [
+        "graph",
+        "registry"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:2a407c88d5d2ba0446644618edae7e7bfb3b45aec79f6741288a1930cc6c3ccb"
+      ],
+      "tuple": [
+        "graph",
+        "store"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "context"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "effects"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "graph"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "memory"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "runtime"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:4dc6d889f95cee51ae7d96d69efe61eacd22a07e982a1380d901e41080d1966c"
+      ],
+      "tuple": [
+        "main",
+        "store"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:e4cc1012e1737e246a76e59567f34a48cbd43cc4142f6151ecdcbc21c2ceb52c"
+      ],
+      "tuple": [
+        "memory",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:e4cc1012e1737e246a76e59567f34a48cbd43cc4142f6151ecdcbc21c2ceb52c"
+      ],
+      "tuple": [
+        "memory",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:e4cc1012e1737e246a76e59567f34a48cbd43cc4142f6151ecdcbc21c2ceb52c"
+      ],
+      "tuple": [
+        "memory",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:6346c5737703728981372eac0f14cdbc60d9d81422c0c8c92161fede221bb70c"
+      ],
+      "tuple": [
+        "registry",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:6346c5737703728981372eac0f14cdbc60d9d81422c0c8c92161fede221bb70c"
+      ],
+      "tuple": [
+        "registry",
+        "context"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:6346c5737703728981372eac0f14cdbc60d9d81422c0c8c92161fede221bb70c"
+      ],
+      "tuple": [
+        "registry",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:6346c5737703728981372eac0f14cdbc60d9d81422c0c8c92161fede221bb70c"
+      ],
+      "tuple": [
+        "registry",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:6346c5737703728981372eac0f14cdbc60d9d81422c0c8c92161fede221bb70c"
+      ],
+      "tuple": [
+        "registry",
+        "memory"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:6346c5737703728981372eac0f14cdbc60d9d81422c0c8c92161fede221bb70c"
+      ],
+      "tuple": [
+        "registry",
+        "runtime"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "effects"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "error"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "graph"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "registry"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:18ad545510c0e47092d0116527b6f4d60f463e0d655c53885fa607f4e4020b05"
+      ],
+      "tuple": [
+        "runtime",
+        "store"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:604c7f660b7ebcf8ea57c0ffdacaf5e2aa8bdde7d201752d55e8445c97127e32"
+      ],
+      "tuple": [
+        "store",
+        "canonical"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:604c7f660b7ebcf8ea57c0ffdacaf5e2aa8bdde7d201752d55e8445c97127e32"
+      ],
+      "tuple": [
+        "store",
+        "contract"
+      ]
+    },
+    {
+      "relation": "depends",
+      "sources": [
+        "sha256:604c7f660b7ebcf8ea57c0ffdacaf5e2aa8bdde7d201752d55e8445c97127e32"
+      ],
+      "tuple": [
+        "store",
+        "error"
+      ]
+    }
+  ]
+}
