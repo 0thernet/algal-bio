@@ -1,0 +1,5 @@
+# live credential, never commit
+.env.local
+
+# refetchable with ./fetch.sh (3.8 MB)
+out/opengenes.json

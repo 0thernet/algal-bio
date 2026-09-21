@@ -1,0 +1,51 @@
+{
+  "contract": "algal.query.v1",
+  "rules": [
+    {
+      "id": "candidate",
+      "head": {
+        "relation": "candidate",
+        "terms": [
+          {
+            "var": "g"
+          }
+        ]
+      },
+      "body": [
+        {
+          "relation": "druggable",
+          "terms": [
+            {
+              "var": "g"
+            },
+            {
+              "var": "c"
+            }
+          ]
+        },
+        {
+          "relation": "hallmark-pair",
+          "terms": [
+            {
+              "var": "g"
+            },
+            {
+              "var": "a"
+            },
+            {
+              "var": "b"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "query": {
+    "relation": "candidate",
+    "terms": [
+      {
+        "var": "g"
+      }
+    ]
+  }
+}

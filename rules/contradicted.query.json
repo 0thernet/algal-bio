@@ -1,0 +1,48 @@
+{
+  "contract": "algal.query.v1",
+  "rules": [
+    {
+      "id": "contradicted",
+      "head": {
+        "relation": "contradicted",
+        "terms": [
+          {
+            "var": "g"
+          }
+        ]
+      },
+      "body": [
+        {
+          "relation": "reduces-lifespan",
+          "terms": [
+            {
+              "var": "g"
+            },
+            {
+              "var": "y"
+            }
+          ]
+        },
+        {
+          "relation": "extends-lifespan",
+          "terms": [
+            {
+              "var": "g"
+            },
+            {
+              "var": "x"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "query": {
+    "relation": "contradicted",
+    "terms": [
+      {
+        "var": "g"
+      }
+    ]
+  }
+}
