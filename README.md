@@ -184,6 +184,50 @@ bound is unreachable because 2,048 facts exceed the byte cap. With bounds
 raised in a throwaway build, 12,264 facts run in ~1.5 s at 15% of the work
 budget.
 
+## How much of this needs algal?
+
+`without_algal.py` reimplements the load-bearing core in plain Python with no
+dependencies: content digests, semi-naive evaluation with proof trees,
+verification. Same facts, same rules.
+
+| | rows | rounds | answers |
+| --- | ---: | ---: | --- |
+| algal | 44 | 2 | — |
+| plain Python, ~40 lines | 44 | 2 | **identical set** |
+
+The source digests agree byte-for-byte too, so a claim derived by one engine
+resolves to the same record through the other.
+
+**So the derivation layer is commodity**, and every finding about models above
+would have held with any fact base. That is a narrower claim for this runtime
+than "you need algal", and it is the true one.
+
+What the reimplementation does *not* reproduce, demonstrated rather than
+asserted:
+
+| value | plain Python | algal | agree |
+| --- | --- | --- | --- |
+| `{"a": 1}` | `015abd7f…` | `015abd7f…` | yes |
+| `{"a": 1.0}` | `c29a44ab…` | `015abd7f…` | **no** |
+| `{"a": -0.0}` | `952b7dc4…` | `45b619e9…` | **no** |
+| `{"a": {"10":1,"9":2}}` | `5140111b…` | `13a9db93…` | **no** |
+
+`1.0` and `1` are the same number and must hash alike. `-0.0` needs a pinned
+float format. And numeric-looking object keys order numerically in algal but
+lexicographically in Python, so `"9"` sorts after `"10"` for me. None of these
+occur in this dataset, which is why the digests matched. All three would
+silently fork a knowledge base the first time a record carried a float.
+
+Three more things the Python version lacks: any budget at all, so a truncated
+answer is indistinguishable from a complete one and "absence means unknown"
+stops being safe; a store, since it can read digests but not mint them; and
+receipts, so nothing it produces can be re-checked offline by someone who does
+not trust the author.
+
+**What algal supplies is portability of a claim, not the ability to derive
+one**: canonical identity two machines agree on, bounded evaluation that fails
+loudly, and replayable evidence.
+
 ## Does it generalise?
 
 `codebase/` runs the identical pipeline over source code: `depends` facts
