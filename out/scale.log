@@ -1,0 +1,31 @@
+storing 1258 gene records (every gene with a mechanism)
+  250/1258
+  500/1258
+  750/1258
+  1000/1258
+  1250/1258
+
+fact store: 3,520 facts, 1,533 relevant to the candidate rule, 635 genes
+
+  genes   facts     bytes  % byte      work  % work  outcome
+------------------------------------------------------------------
+    100     255    46,410     17%    23,439      9%  ok
+    200     451    81,528     31%    77,369     30%  ok
+Traceback (most recent call last):
+  File "/Users/bg/Documents/algal-bio/scale.py", line 148, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/Users/bg/Documents/algal-bio/scale.py", line 129, in main
+    status, nbytes, work = probe(subset)
+                           ~~~~~^^^^^^^^
+  File "/Users/bg/Documents/algal-bio/scale.py", line 102, in probe
+    body = json.loads(out.stdout)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/__init__.py", line 352, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)

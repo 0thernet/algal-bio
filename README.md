@@ -311,3 +311,38 @@ proofs, *not* capability. The unanswered question is where a model breaks as
 the fact base grows past what fits in context, which is exactly where the
 engine's own work ceiling bites too. Until that is measured, no claim here
 should be extended to corpus scale.
+
+## The scale answer: an index was not enough
+
+The relation-index change to the engine ([hraness/algal#37](https://github.com/hraness/algal/pull/37))
+makes irrelevant facts free: cost per inert fact went from 340 work units to
+**exactly 0**, rows and proof maps byte-identical, all 35 tests passing. The
+1,292-fact aging store that previously exhausted the budget by roughly 9x now
+answers **unprojected at 31% of ceiling**.
+
+Then `scale.py` grew the fact base to every OpenGenes gene carrying an aging
+mechanism, 635 genes and 3,520 facts, and asked where it stops.
+
+| genes | facts | druggable | pairs | work | drug x pairs x 2 | result |
+| ---: | ---: | ---: | ---: | ---: | ---: | --- |
+| 200 | 451 | 114 | 337 | 77,369 | 76,836 | 39 rows |
+| 250 | 576 | 145 | 431 | 125,652 | 124,990 | 48 rows |
+| 300 | 684 | 168 | 516 | 174,128 | 173,376 | 60 rows |
+| 350 | 800 | 198 | 602 | 239,289 | 238,392 | 77 rows |
+| 400 | 898 | 221 | 677 | — | 299,234 | **BUDGET_EXHAUSTED** |
+
+**Work is the product of the two relations' sizes, times rounds.** The predicted
+column matches measured work to within 0.5% at every size. The join is still
+nested-loop: for each binding from the first literal it walks every tuple of the
+second. Indexing by relation removed the constant overhead from facts no rule
+mentions. It did not remove the quadratic term.
+
+So the ceiling moved but did not lift. Usable scale roughly doubled, from about
+200 genes to about 350, and the byte ceiling would allow around 1,500 facts, so
+**work still binds first**. Corpus scale needs a hash or sort-merge join keyed on
+the shared variable, which would make this rule roughly linear in the larger
+relation instead of a product. That is a real engine change, not a tuning knob.
+
+What this means for the thesis: projection is still required above roughly 800
+relevant facts per question. But it is now a scale decision rather than a
+workaround for paying to scan facts that could never match.
