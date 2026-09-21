@@ -408,3 +408,49 @@ a $25 cap. The delegated run overran its instructed call budget: 41 calls total
 including a discarded first pass that failed to capture raw answers, and a smoke
 test. Pooled numbers from both passes agreed, so the discarded pass functions as
 a replication, but the overrun is an overrun.
+
+## The engineering: a hash join lifts the ceiling
+
+The scale section above concluded that corpus scale needed a hash join rather
+than an index. That is now built, as a second commit on
+[hraness/algal#37](https://github.com/hraness/algal/pull/37).
+
+The nested loop re-scanned every candidate tuple for every binding, so a
+two-literal rule cost `|bindings| x |candidates|`. The fix indexes candidates
+once on the positions the literal already has values for, then probes per
+binding, so cost is `|candidates| + |matches|`. The bound-variable set is
+uniform across bindings at a given literal, since they all arrived through the
+same earlier literals, so one probe shape serves them all. The index only
+narrows the scan and the term loop still checks every position, which keeps a
+repeated variable inside one literal correct.
+
+| query | nested loop | relation index | hash join |
+| --- | ---: | ---: | ---: |
+| aging candidates | 98,164 | 77,738 | **1,980** |
+| aging contradictions | 133,543 | 63,093 | **1,227** |
+| code impact closure | 51,671 | 23,421 | **3,261** |
+| cost per inert fact | 340 | 0 | 0 |
+
+Rows and proof maps are byte-identical at every step, `memory verify` returns
+`ok:true`, and all 35 tests pass with clippy and fmt clean. Only `work` falls,
+which is contract-visible in a query result and so documented as a deliberate
+accounting change.
+
+### Complexity, not constants
+
+| genes | facts | bytes | work before | work after |
+| ---: | ---: | ---: | ---: | ---: |
+| 200 | 451 | 31% | 77,369 | 1,473 |
+| 350 | 800 | 55% | 239,289 | 2,525 |
+| 400 | 898 | 62% | **EXHAUSTED** | 2,837 |
+| 600 | 1,429 | 99% | — | 4,628 |
+| 635 | 1,533 | 106% | — | **BYTE CEILING** |
+
+Work is now linear in fact count at about 3.25 units per fact, flat from 451 to
+1,429 facts, and 600 genes runs at **1% of the work ceiling**. The binding
+constraint has moved to the 262,144-byte snapshot bound, which is a declared
+policy limit rather than an algorithmic wall.
+
+So projection is no longer needed to stay inside a budget. It is needed only to
+stay inside a byte count, and that number is a contract constant someone can
+choose to change.
