@@ -197,14 +197,59 @@ that curator derived from it. So the prose is the input and the curator's own
 values are the answer key. 395 experiments across 78 genes, median comment 186
 characters. `prose.py` extracts, `prose_score.py` scores.
 
+All 395 rows, deduplicated to 243 unique passages, with intervals that
+resample whole genes rather than rows.
+
 | model | organism | direction | intervention | abstained |
 | --- | ---: | ---: | ---: | --- |
-| Sonnet 5 | 52/52 (100%) | 37/42 (88%) | 31/39 (79%) | 7 right, 1 wrong |
-| Qwen 3.5 Flash | 46/46 (100%) | 36/39 (92%) | 31/40 (77%) | 14 right, 0 wrong |
+| Sonnet 5 | 223/223 (100%) | 141/165 (85%) | 149/186 (80%) | 14 right, 1 wrong |
+| Qwen 3.5 Flash | 173/173 (100%) | 141/157 (89%) | 142/174 (81%) | 56 right, 6 wrong |
 
-**Extraction is good and not perfect.** Roughly 10% error on the direction of a
-lifespan effect and 22% on the intervention method. Unlike every earlier
-result, this one does not reach 100% at any setting.
+Gene-clustered 95% intervals: organism 100–100%, direction 79–91% and 84–94%,
+intervention **60–95% and 60–97%**. The two models are indistinguishable on
+every field, and the intervention figure is far less settled than a point
+estimate suggests.
+
+**Extraction is good and not perfect.** Model organism is solved: 396 claims,
+78 genes, zero errors. Direction carries ~12% error. Intervention is the field
+that does not resolve, and the reason is the schema, not the model.
+
+### Three faults found while retracting a result
+
+An earlier version of this section reported intervention accuracy of 79% and
+77% on the first 60 rows, and a companion triage heuristic that claimed 1.75x
+lift over reading a random sample. Both were wrong. `decompose.py` and
+`measurement.py` are the retraction.
+
+The triage flag scores **0.60x** on the full corpus — worse than random — on
+both models and on every decomposition of its two clauses. Resampling the full
+corpus at n=60 returns 0.60x at every sample size, so small n was not the
+cause. The corpus is ordered by gene symbol, and the first 60 rows carry a
+different mix of curator classes than the corpus does; the class that dominates
+later is the one models fail. A non-random slice, not bad luck.
+
+Three faults, each inflating a number already published here:
+
+- **38% of rows repeat an earlier row verbatim**, one of them 12 times, and 395
+  rows come from 78 genes. No row-level interval here was ever valid.
+- **Errors concentrate in one curator class.** Reading those cases shows the
+  curator and the model usually describing one experiment at different grain: a
+  transgene carrying a point mutation is filed by the curator under copy number
+  and by the model under mutation, and only one of them can score.
+- **Four curator method strings cannot be classified by this scorer at all**
+  (`gene modification` appears 14 times) and scored as automatic model errors,
+  about 20% of the error budget.
+
+The sharpest case: where the curator wrote *"reduced expression of one of the
+isoforms in transgenic animals"*, this scorer filed it under gain-of-function
+on the word `transgenic`, and the model's answer of knockout was closer to the
+biology than the answer key was.
+
+That is three consecutive times in this repo that a headline number about a
+model turned out to be a number about the measuring instrument. The lesson is
+not to write a fourth scorer. It is that **a lexical answer key cannot score a
+semantic task**, and small non-random slices of a sorted corpus will
+manufacture whichever finding you went looking for.
 
 ### The first scorer was measuring wording
 
