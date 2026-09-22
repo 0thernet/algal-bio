@@ -112,8 +112,8 @@ def main():
   Only inter-model disagreement beats random review on both models with an
   interval clear of 1.0 and enough firings to mean anything. That reverses the
   earlier result in this repo, which tested disagreement on OpenGenes, found it
-  fired 3 times in 120 and caught nothing, and concluded an ensemble buys
-  nothing. Both measurements stand; the difference is the corpus. On OpenGenes
+  almost never fired on a classifiable field value, and concluded an ensemble
+  buys nothing. Both measurements stand; the difference is the corpus. On OpenGenes
   the two models agreed almost everywhere, so disagreement had no room to carry
   information. Here they disagree on 14% of claims and those claims are
   error-rich. A triage signal is not a property of a model. It is a property of

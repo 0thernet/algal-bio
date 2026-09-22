@@ -209,3 +209,36 @@ def diagnose():
 
 if __name__ == "__main__" and "--diagnose" in sys.argv:
     diagnose()
+
+
+def resample_at_n():
+    """The claim that small n was not the fault, computed rather than asserted.
+
+    The retracted 1.75x came from the first 60 rows of a gene-sorted corpus. If
+    n=60 were merely noisy, resampling the full claim pool at that size would
+    straddle 1.0. It does not: the estimate is flat in n, so the fault was the
+    slice, not its size.
+    """
+    import random
+    corpus = fetch_corpus()
+    ext = json.loads((ROOT / "out" / "triage-extractions.json").read_text())
+    key = lambda c: c["absent"] or c["multi"]        # noqa: E731
+    rng = random.Random(3)
+    print("%-18s%8s%12s%12s" % ("model", "n", "mean lift", "full-corpus"))
+    for model, preds in ext.items():
+        full = build(corpus, preds, "method", METHOD)
+        ref = lift(full, key)["lift"]
+        for n in (20, 60, 150, len(full)):
+            vals = []
+            for _ in range(2000):
+                s = [rng.choice(full) for _ in range(n)]
+                r = lift(s, key)
+                if r:
+                    vals.append(r["lift"])
+            print("%-18s%8d%12s%12s" % (
+                model.split("/")[-1], n,
+                f"{sum(vals) / len(vals):.2f}x", f"{ref:.2f}x"))
+
+
+if __name__ == "__main__" and "--resample" in sys.argv:
+    resample_at_n()

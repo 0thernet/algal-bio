@@ -9,8 +9,13 @@ matter, and no proof over it can see the error, so somebody has to review. The
 question is who reads what.
 
 Two triage signals were tested. Inter-model disagreement, the obvious one, is
-worthless here: two models from different vendors agreed on 117 of 120 field
-values and were wrong together, so an ensemble buys nothing. What does work is
+worthless here: two models from different vendors almost never disagreed on a
+classifiable field value in this slice, so the signal had nothing to fire on.
+Reconstruction from the saved extractions puts agreement at 81 of 81 classifiable
+values, of which 79 were right, so the models were right together rather than
+wrong together; an ensemble buys nothing either way. On a different corpus the
+same pair disagrees on 14% of claims and disagreement is the best signal
+measured, so this is a fact about this slice, not about ensembles. What does work is
 deterministic and free: check whether the passage contains any vocabulary for
 the class the model asserted. A claim of "gene knockout" over a passage that
 only ever says "RNAi" is detectable without asking anyone.

@@ -573,7 +573,7 @@ four deterministic features of their own stated reasoning.
 | inter-model disagreement | **1.88x and 2.38x**, intervals clear of 1.0 | my extractions, CELLxGENE key |
 | model self-reported confidence | undemonstrated on two independent tests | mine, and scBaseCount's published label |
 | lexical passage-support check | **worse than random** on two corpora | OpenGenes and CELLxGENE |
-| ontology-hierarchy matching | fixed a 24-point scoring error | scBaseCount vs CELLxGENE |
+| ontology-hierarchy matching | ~14 of a 24-point scoring error (the rest was normal-only collections) | scBaseCount vs CELLxGENE |
 | scoring against a system's own prior output | the only design with no key to get wrong | release churn |
 
 One signal survived contact with intervals, and it is corpus-dependent: on
