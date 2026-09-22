@@ -1,0 +1,194 @@
+{
+  "anthropic/claude-sonnet-5/tissue/A  self-conf < high": {
+    "lift": 1.388888888888889,
+    "ci": [
+      1.0204081632653061,
+      1.811594202898551
+    ],
+    "verdict": "beats random"
+  },
+  "anthropic/claude-sonnet-5/tissue/A' self-conf == low": {
+    "lift": 2.644230769230769,
+    "ci": [
+      1.9138755980861244,
+      3.588516746411483
+    ],
+    "verdict": "beats random"
+  },
+  "anthropic/claude-sonnet-5/tissue/B  inter-model disagree": {
+    "lift": 1.9675925925925928,
+    "ci": [
+      1.4354066985645932,
+      2.6153846153846154
+    ],
+    "verdict": "beats random"
+  },
+  "anthropic/claude-sonnet-5/tissue/C  no support in text": {
+    "lift": 1.4423076923076923,
+    "ci": [
+      0.5802707930367504,
+      2.35042735042735
+    ],
+    "verdict": "undemonstrated"
+  },
+  "anthropic/claude-sonnet-5/disease/A  self-conf < high": {
+    "lift": 0.9375,
+    "ci": [
+      0.47953964194373405,
+      1.4285714285714286
+    ],
+    "verdict": "undemonstrated"
+  },
+  "anthropic/claude-sonnet-5/disease/A' self-conf == low": {
+    "lift": 1.0817307692307692,
+    "ci": [
+      0.0,
+      2.2727272727272725
+    ],
+    "verdict": "undemonstrated"
+  },
+  "anthropic/claude-sonnet-5/disease/B  inter-model disagree": {
+    "lift": 1.25,
+    "ci": [
+      0.3105590062111801,
+      2.380952380952381
+    ],
+    "verdict": "undemonstrated"
+  },
+  "anthropic/claude-sonnet-5/disease/C  no support in text": {
+    "lift": 0.2869897959183674,
+    "ci": [
+      0.0,
+      0.6176470588235294
+    ],
+    "verdict": "worse than random"
+  },
+  "anthropic/claude-sonnet-5/both pooled/A  self-conf < high": {
+    "lift": 1.2083333333333333,
+    "ci": [
+      0.9283819628647215,
+      1.5251196172248804
+    ],
+    "verdict": "undemonstrated"
+  },
+  "anthropic/claude-sonnet-5/both pooled/A' self-conf == low": {
+    "lift": 2.019230769230769,
+    "ci": [
+      1.510989010989011,
+      2.657004830917874
+    ],
+    "verdict": "beats random"
+  },
+  "anthropic/claude-sonnet-5/both pooled/B  inter-model disagree": {
+    "lift": 1.875,
+    "ci": [
+      1.3636363636363638,
+      2.4456521739130435
+    ],
+    "verdict": "beats random"
+  },
+  "anthropic/claude-sonnet-5/both pooled/C  no support in text": {
+    "lift": 0.5443548387096775,
+    "ci": [
+      0.24803637866887146,
+      0.8519269776876268
+    ],
+    "verdict": "worse than random"
+  },
+  "alibaba/qwen3.5-flash/tissue/A  self-conf < high": {
+    "lift": 1.153846153846154,
+    "ci": [
+      0.33333333333333337,
+      1.9811320754716981
+    ],
+    "verdict": "undemonstrated"
+  },
+  "alibaba/qwen3.5-flash/tissue/A' self-conf == low": {
+    "lift": 0.0,
+    "ci": [
+      0.0,
+      0.0
+    ],
+    "verdict": "too few fires"
+  },
+  "alibaba/qwen3.5-flash/tissue/B  inter-model disagree": {
+    "lift": 1.888888888888889,
+    "ci": [
+      1.3626834381551363,
+      2.493606138107417
+    ],
+    "verdict": "beats random"
+  },
+  "alibaba/qwen3.5-flash/tissue/C  no support in text": {
+    "lift": 1.3333333333333335,
+    "ci": [
+      0.30612244897959184,
+      2.3936170212765955
+    ],
+    "verdict": "too few fires"
+  },
+  "alibaba/qwen3.5-flash/disease/A  self-conf < high": {
+    "lift": 0.8653846153846153,
+    "ci": [
+      0.0,
+      1.7942583732057416
+    ],
+    "verdict": "undemonstrated"
+  },
+  "alibaba/qwen3.5-flash/disease/A' self-conf == low": {
+    "lift": 3.75,
+    "ci": [
+      2.941176470588235,
+      5.0
+    ],
+    "verdict": "too few fires"
+  },
+  "alibaba/qwen3.5-flash/disease/B  inter-model disagree": {
+    "lift": 3.25,
+    "ci": [
+      2.440550688360451,
+      4.466501240694789
+    ],
+    "verdict": "beats random"
+  },
+  "alibaba/qwen3.5-flash/disease/C  no support in text": {
+    "lift": 0.26162790697674415,
+    "ci": [
+      0.0,
+      0.5555555555555556
+    ],
+    "verdict": "worse than random"
+  },
+  "alibaba/qwen3.5-flash/both pooled/A  self-conf < high": {
+    "lift": 1.0256410256410255,
+    "ci": [
+      0.5555555555555556,
+      1.4945652173913044
+    ],
+    "verdict": "undemonstrated"
+  },
+  "alibaba/qwen3.5-flash/both pooled/A' self-conf == low": {
+    "lift": 1.6666666666666665,
+    "ci": [
+      1.4285714285714286,
+      2.0
+    ],
+    "verdict": "too few fires"
+  },
+  "alibaba/qwen3.5-flash/both pooled/B  inter-model disagree": {
+    "lift": 2.3809523809523805,
+    "ci": [
+      1.9246190858059342,
+      2.9487179487179485
+    ],
+    "verdict": "beats random"
+  },
+  "alibaba/qwen3.5-flash/both pooled/C  no support in text": {
+    "lift": 0.44871794871794873,
+    "ci": [
+      0.1567398119122257,
+      0.7509386733416771
+    ],
+    "verdict": "worse than random"
+  }
+}

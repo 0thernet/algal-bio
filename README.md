@@ -428,3 +428,56 @@ scale.py                                          engine scaling curve
 codebase/                                         the second domain
 out/                                              results; source data gitignored
 ```
+
+## Which triage signal actually works
+
+scBaseCount publishes a self-reported `confidence` label beside each extracted
+annotation, and does not report how accurate each confidence stratum is. That
+number decides whether a downstream user can trust the column, so `signals.py`
+measures it, against the same ground truth that project validated on: CZ
+CELLxGENE's curated labels, via its public API. 150 collections, study
+description as input, curated `tissue` and `disease` as the key, two models.
+
+Four signals, scored by lift — recall divided by flag rate, the only baseline
+that matters. `signals_ci.py` puts a bootstrap interval on each, resampling
+whole collections, and refuses any signal firing on fewer than 10 claims.
+
+| signal | Sonnet 5 | Qwen 3.5 Flash |
+| --- | --- | --- |
+| self-confidence below high | 1.21x (0.93–1.53) **undemonstrated** | 1.03x (0.56–1.49) **undemonstrated** |
+| self-confidence is low | 2.02x (1.51–2.66) beats random | fires 2× in 300, unusable |
+| inter-model disagreement | 1.88x (1.36–2.45) **beats random** | 2.38x (1.92–2.95) **beats random** |
+| no lexical support in text | 0.54x (0.25–0.85) **worse than random** | 0.45x (0.16–0.75) **worse than random** |
+
+Accuracy within each self-reported stratum, the number the paper omits:
+
+| stratum | Sonnet share | tissue | disease | Qwen share | tissue | disease |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| high | 70.0% | 73% | 78% | 91.3% | 67% | 73% |
+| medium | 21.3% | 72% | 81% | 8.0% | 58% | 83% |
+| low | 8.7% | 15% | 77% | 0.7% | — | — |
+
+**High and medium are indistinguishable.** Only the `low` bucket carries
+information, only on tissue, and only for the model that uses it — Qwen marks
+91% of its claims `high` and its scale conveys almost nothing. So the coarse
+split a published confidence column hands a user does not beat reading the same
+number of rows at random.
+
+**Inter-model disagreement is the signal that survives**, and that reverses an
+earlier result in this repo. Tested on OpenGenes, disagreement fired 3 times in
+120 and caught nothing, and this repo concluded an ensemble buys nothing. Both
+measurements stand. On OpenGenes the models agreed nearly everywhere, so
+disagreement had no room to carry information; here they disagree on 14% of
+claims and those claims are error-rich. **A triage signal is not a property of
+a model — it is a property of a model pair on a corpus, and must be
+re-measured per corpus.**
+
+The lexical support check is worse than random on both models, intervals wholly
+below 1.0 — a second, independent corpus agreeing with the retraction above.
+
+Two caveats. The input is a study description, prose written to be read, not
+raw SRA metadata; same shape of task, probably the easier one. And the answer
+key admits a match against any label in the collection, which for a collection
+curating 104 tissues is nearly free — so accuracy is an upper bound, though
+lift is unaffected because the rule is held fixed across all four signals.
+
