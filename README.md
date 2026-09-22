@@ -481,3 +481,57 @@ key admits a match against any label in the collection, which for a collection
 curating 104 tissues is nearly free — so accuracy is an upper bound, though
 lift is unaffected because the rule is held fixed across all four signals.
 
+## Testing a published confidence label without a ground-truth key
+
+The CELLxGENE comparison above could not measure scBaseCount's accuracy, and
+all four reasons came from the external key. This test removes the key.
+
+scBaseCount ships two releases, 2025-02-25 and 2026-01-12, and **15,394 SRX
+samples appear in both**. Where a disease call changed between releases, one of
+the two was wrong — no curator required. The newer release publishes
+`single_disease_confidence`, so their own data answers the question their paper
+leaves open: *does a `high` confidence label predict a more stable call?*
+
+Old-release strings are normalised to MONDO ids using **scBaseCount's own**
+string-to-id mapping, learned from 5,619 labelled rows of the new release, not
+a vocabulary of mine. 834 unmappable samples are excluded and counted.
+
+| their confidence | samples | churn | 95% CI (by collection) | 95% CI (study proxy) |
+| --- | ---: | ---: | --- | --- |
+| high | 5,453 | 8.8% | 6.7–11.4% | 7.2–10.8% |
+| medium | 1,087 | 11.0% | 9.2–13.0% | 7.9–14.7% |
+| low | 3,004 | 9.7% | 8.5–11.0% | 7.9–11.8% |
+| absent (healthy calls) | 5,016 | 4.2% | 1.8–7.1% | 3.3–5.3% |
+
+**A `high` label does not predict a more stable call.** 8.8% versus 9.7%,
+intervals overlapping under both clusterings, on 14,560 samples. Stability is a
+necessary condition for a useful confidence label — a call can be stably wrong,
+but a label that cannot even predict its own revision is not carrying the
+information a downstream user assumes it does.
+
+Direction of the 1,104 revisions is its own finding:
+
+| revision | n | share |
+| --- | ---: | ---: |
+| normal → disease | 723 | 65% |
+| disease → normal | 211 | 19% |
+| disease → disease | 170 | 15% |
+
+Two-thirds of revisions are diseases the earlier release missed and called
+healthy. That also qualifies the 97% healthy-call concordance found against
+CELLxGENE above: healthy calls agree with curation *and* are the calls
+scBaseCount itself most often revised.
+
+Churn is a lower bound on error, and the MONDO sibling problem that broke the
+CELLxGENE comparison can only touch the 15% of churn that is disease-to-disease
+— a normal-to-disease flip cannot be a granularity artifact — and it applies to
+both strata equally, so it cannot explain the high-versus-low result.
+
+### Why this is the design that worked
+
+Four comparisons in this repo tried to score extraction against an external
+key, and all four measured the key: `mice` versus `mouse`, `deletion` versus
+`knockout`, `transgenic` filed as gain-of-function, and `ovarian carcinoma`
+versus `malignant ovarian serous tumor`. The churn test scores a system against
+its own earlier output, through its own vocabulary, so there is no key to get
+wrong. That is the transferable lesson, and it cost four retractions to learn.
