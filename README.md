@@ -106,9 +106,15 @@ nothing, and when evidence and memory disagreed, evidence won completely.
 ### Which is also the bad news
 
 `conflict` is a poisoned-evidence test, and both models failed it absolutely.
-Handed a table making 37 false claims, both reproduced all 37 with confident
-citations and flagged none. Obedience to evidence is what makes grounding work
+Handed a table making 37 false claims, both reproduced all 37 with citations to
+the rows they were asserting. Obedience to evidence is what makes grounding work
 and what makes bad curation propagate silently.
+
+An earlier version of this section said the models "flagged none", which
+overreads the run. The prompt required one row per line and nothing else, so
+neither model had a channel in which to object; the absence of an objection is
+not evidence that neither noticed. What the run does establish is reproduction
+of all 37 false rows, which is the part that matters for propagation.
 
 ### They do distinguish unknown from false
 
