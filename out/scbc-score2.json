@@ -1,0 +1,10 @@
+{
+  "verdicts": {
+    "conflict": 388,
+    "agree": 1651,
+    "related": 63
+  },
+  "n_claims": 2102,
+  "n_disease": 644,
+  "n_normal_only": 137
+}

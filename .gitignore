@@ -3,3 +3,6 @@
 
 # refetchable with ./fetch.sh (3.8 MB)
 out/opengenes.json
+.venv/
+out/scbc/sample_metadata.parquet
+__pycache__/

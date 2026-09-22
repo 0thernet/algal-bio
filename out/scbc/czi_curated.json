@@ -1,0 +1,640 @@
+{
+  "0a77d4c0-d5d0-40f0-aa1a-5e1429bcbd7e": {
+    "name": "A transcriptional cross species map of pancreatic islet cells",
+    "n_datasets": 3,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000006"
+    ]
+  },
+  "126afc71-47fb-4e9d-8aaf-9d9f61e0ac77": {
+    "name": "Persistent T cell unresponsiveness associated with chronic visceral leishmaniasis in HIV-coinfected patients",
+    "n_datasets": 2,
+    "disease_ids": [
+      "MONDO:0005109",
+      "MONDO:0005109 || MONDO:0005445",
+      "MONDO:0005109 || MONDO:0011989",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178"
+    ]
+  },
+  "14dc301f-d4fb-4743-a590-aa88d5f1df1a": {
+    "name": "Integrative single-cell multi-omics of CD19-CARpos and CARneg T cells suggest drivers of immunotherapy response in B-ALL",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0004947"
+    ],
+    "tissue_ids": [
+      "CL:0000084",
+      "UBERON:0000178"
+    ]
+  },
+  "20eea6c8-9d64-42c9-9b6f-c11b5249e0e9": {
+    "name": "Single-cell genomics improves the discovery of risk variants and genes of atrial fibrillation",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002080",
+      "UBERON:0002084",
+      "UBERON:0002094",
+      "UBERON:0002098"
+    ]
+  },
+  "24d42e5e-ce6d-45ff-a66b-a3b3b715deaf": {
+    "name": "Single-cell transcriptomics of human T cells reveals tissue and activation signatures in health and disease",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002371",
+      "UBERON:0008953",
+      "UBERON:0013756",
+      "UBERON:0039167"
+    ]
+  },
+  "257ce7fb-ab27-4772-8a06-9fe8385816b2": {
+    "name": "Human Trophoblast Organoids",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001987"
+    ]
+  },
+  "2a79d190-a41e-4408-88c8-ac5c4d03c0fc": {
+    "name": "Single-cell longitudinal analysis of SARS-CoV-2 infection in human bronchial epithelial cells",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0100096",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "CL:0002328"
+    ]
+  },
+  "2a9a17c9-1f61-4877-b384-b8cd5ffa4085": {
+    "name": "A molecular cell atlas of COVID-19 initiation in human lung",
+    "n_datasets": 4,
+    "disease_ids": [
+      "MONDO:0100096"
+    ],
+    "tissue_ids": [
+      "UBERON:0008952",
+      "UBERON:0008953"
+    ]
+  },
+  "2b02dff7-e427-4cdc-96fb-c0f354c099aa": {
+    "name": "Single-Cell Analysis of Crohn\u2019s Disease Lesions Identifies a Pathogenic Cellular Module Associated with Resistance to Anti-TNF Therapy",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:8600035"
+    ]
+  },
+  "2d40e6a7-f2fd-49ba-9db9-6b97e4c6dad5": {
+    "name": "Human skeletal muscle ageing atlas",
+    "n_datasets": 8,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001111",
+      "UBERON:0003663"
+    ]
+  },
+  "348da6dc-5bf6-435d-adc5-37747b9ae38a": {
+    "name": "Single-cell multiome of the human retina and deep learning nominate causal variants in complex eye diseases",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000966"
+    ]
+  },
+  "34f12de7-c5e5-4813-a136-832677f98ac8": {
+    "name": "Multi-scale spatial mapping of cell populations across anatomical sites in healthy human skin and basal cell carcinoma",
+    "n_datasets": 32,
+    "disease_ids": [
+      "MONDO:0020804",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000403",
+      "UBERON:0001068",
+      "UBERON:0001275",
+      "UBERON:0001416",
+      "UBERON:0001459",
+      "UBERON:0002427",
+      "UBERON:0004262",
+      "UBERON:0008337",
+      "UBERON:0008803",
+      "UBERON:0015476",
+      "UBERON:0016475",
+      "UBERON:0034765",
+      "UBERON:8300000",
+      "UBERON:8480028",
+      "UBERON:8480030"
+    ]
+  },
+  "3db5617e-9f12-4eb4-8416-94893a0d7c46": {
+    "name": "Epithelial zonation along the mammalian small intestine defines five discrete metabolic domains",
+    "n_datasets": 2,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002108"
+    ]
+  },
+  "43b45a20-a969-49ac-a8e8-8c84b211bd01": {
+    "name": "Integrated adult and foetal heart single-cell RNA sequencing",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002078",
+      "UBERON:0002079",
+      "UBERON:0002080",
+      "UBERON:0002084",
+      "UBERON:0002094",
+      "UBERON:0002098",
+      "UBERON:0035213"
+    ]
+  },
+  "4796c91c-9d8f-4692-be43-347b1727f9d8": {
+    "name": "MSK SPECTRUM \u2013 Ovarian cancer mutational processes drive site-specific immune evasion",
+    "n_datasets": 5,
+    "disease_ids": [
+      "MONDO:0024885"
+    ],
+    "tissue_ids": [
+      "UBERON:0000029",
+      "UBERON:0000059",
+      "UBERON:0000160",
+      "UBERON:0000916",
+      "UBERON:0001103",
+      "UBERON:0001153",
+      "UBERON:0001157",
+      "UBERON:0001255",
+      "UBERON:0001366",
+      "UBERON:0002107",
+      "UBERON:0002118",
+      "UBERON:0002119",
+      "UBERON:0002358",
+      "UBERON:0003688",
+      "UBERON:0003697",
+      "UBERON:0003889",
+      "UBERON:0007795",
+      "UBERON:0035210",
+      "UBERON:0036292"
+    ]
+  },
+  "5900dda8-2dc3-4770-b604-084eac1c2c82": {
+    "name": "Single Cell Multiome Atlas of the Human Fetal Retina",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000053",
+      "UBERON:0000966",
+      "UBERON:0013682"
+    ]
+  },
+  "59cd85c5-3b22-4035-b628-2a20810ad54b": null,
+  "60358420-6055-411d-ba4f-e8ac80682a2e": {
+    "name": "Spatiotemporal analysis of human intestinal development at single-cell resolution",
+    "n_datasets": 17,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001046",
+      "UBERON:0001155",
+      "UBERON:0002116"
+    ]
+  },
+  "62ef75e4-cbea-454e-a0ce-998ec40223d3": {
+    "name": "Cross-tissue immune cell analysis reveals tissue-specific features in humans",
+    "n_datasets": 4,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178",
+      "UBERON:0000400",
+      "UBERON:0001134",
+      "UBERON:0001153",
+      "UBERON:0001157",
+      "UBERON:0001159",
+      "UBERON:0002048",
+      "UBERON:0002106",
+      "UBERON:0002107",
+      "UBERON:0002114",
+      "UBERON:0002116",
+      "UBERON:0002370",
+      "UBERON:0002371",
+      "UBERON:0002509",
+      "UBERON:0003688",
+      "UBERON:0007644",
+      "UBERON:8600034"
+    ]
+  },
+  "68e7e5b7-4dc9-4609-832e-7656aa6182ba": {
+    "name": "Sex-Specific Control of Human Heart Maturation by the Progesterone Receptor",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0035835"
+    ]
+  },
+  "6d203948-a779-4b69-9b3f-1ee1dadc3980": {
+    "name": "Differential cell composition and split epidermal differentiation in human palm, sole, and hip skin",
+    "n_datasets": 3,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001003",
+      "UBERON:0002067",
+      "UBERON:0002097"
+    ]
+  },
+  "71f4bccf-53d4-4c12-9e80-e73bfb89e398": {
+    "name": "An Integrated Single Cell Atlas of Human Periodontitis",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0002508",
+      "MONDO:0005076",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001828"
+    ]
+  },
+  "73f82ac8-15cc-4fcd-87f8-5683723fce7f": {
+    "name": "Developmental cell programs are co-opted in inflammatory skin disease",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001003",
+      "UBERON:0002067"
+    ]
+  },
+  "74e10dc4-cbb2-4605-a189-8a1cd8e44d8c": {
+    "name": "Spatial proteogenomics reveals distinct and evolutionarily conserved hepatic macrophage niches",
+    "n_datasets": 21,
+    "disease_ids": [
+      "MONDO:0013209",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002107",
+      "UBERON:0016479"
+    ]
+  },
+  "7d7cabfd-1d1f-40af-96b7-26a0825a306d": {
+    "name": "Type I interferon autoantibodies are associated with systemic immune alterations in patients with COVID-19",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0005087",
+      "MONDO:0100096",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178"
+    ]
+  },
+  "83ed3be8-4cb9-43e6-9aaa-3fbbf5d1bd3a": {
+    "name": "Integrated scRNA-Seq Identifies Human Postnatal Thymus Seeding Progenitors and Regulatory Dynamics of Differentiating Immature Thymocytes",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002370"
+    ]
+  },
+  "847fafc3-41a1-4a0d-9461-0328c88e9b13": {
+    "name": "Single-cell transcriptome profiling of the human developing spinal cord reveals a conserved genetic programme with human-specific features",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001049"
+    ]
+  },
+  "981b0c87-76d0-4edf-b201-58c52b5cd2f0": {
+    "name": "Single-cell transcriptomics reveals gene expression dynamics of human fetal kidney development",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002113"
+    ]
+  },
+  "999f2a15-3d7e-440b-96ae-2c806799c08c": {
+    "name": "Harmonized single-cell landscape, intercellular crosstalk and tumor architecture of glioblastoma",
+    "n_datasets": 2,
+    "disease_ids": [
+      "MONDO:0018177"
+    ],
+    "tissue_ids": [
+      "UBERON:0000955",
+      "UBERON:0001871",
+      "UBERON:0001872",
+      "UBERON:0001890",
+      "UBERON:0002021",
+      "UBERON:0002420",
+      "UBERON:0002802",
+      "UBERON:0002803",
+      "UBERON:0002807",
+      "UBERON:0002808",
+      "UBERON:0002809",
+      "UBERON:0002810",
+      "UBERON:0002811",
+      "UBERON:0016525",
+      "UBERON:0023852"
+    ]
+  },
+  "99be70c4-e534-4413-a607-ce40b3ff2c77": {
+    "name": "Cell-type specific analysis of physiological action of estrogen inmouse oviducts",
+    "n_datasets": 2,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000993",
+      "UBERON:0003889"
+    ]
+  },
+  "9b02383a-9358-4f0f-9795-a891ec523bcc": {
+    "name": "Single cell transcriptional and chromatin accessibility profiling redefine cellular heterogeneity in the adult human kidney",
+    "n_datasets": 2,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001225"
+    ]
+  },
+  "a261413d-835b-4f1e-ab0c-dada55ea6afd": {
+    "name": "Identification of distinct tumor cell populations and key genetic mechanisms through single cell sequencing in hepatoblastoma",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0005565",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002107"
+    ]
+  },
+  "b3e2c6e3-9b05-4da9-8f42-da38a664b45b": null,
+  "b52eb423-5d0d-4645-b217-e1c6d38b2e72": {
+    "name": "Cells of the adult human heart",
+    "n_datasets": 8,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002078",
+      "UBERON:0002079",
+      "UBERON:0002080",
+      "UBERON:0002084",
+      "UBERON:0002094",
+      "UBERON:0002098"
+    ]
+  },
+  "b953c942-f5d8-434f-9da7-e726ba7c1481": {
+    "name": "Single-soma transcriptomics of tangle-bearing neurons in Alzheimer\u2019s disease",
+    "n_datasets": 2,
+    "disease_ids": [
+      "MONDO:0004975",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000451"
+    ]
+  },
+  "bd3f7d45-43a0-4944-8327-62d6c89e2ae1": {
+    "name": "Single-Cell Transcriptomic Profiling of Human Dental Pulp in Sound and Carious Teeth: A Pilot Study",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0002233",
+      "MONDO:0006937",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001754"
+    ]
+  },
+  "c1241244-b22d-483d-875b-75699efb9f3c": {
+    "name": "A spatially resolved atlas of the human lung characterizes a gland-associated immune niche",
+    "n_datasets": 23,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002048",
+      "UBERON:0002185",
+      "UBERON:0003126",
+      "UBERON:0008946",
+      "UBERON:0008952",
+      "UBERON:0008953"
+    ]
+  },
+  "c9706a92-0e5f-46c1-96d8-20e42467f287": {
+    "name": "A single-cell atlas of the healthy breast tissues reveals clinically relevant clusters of breast epithelial cells",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0035328"
+    ]
+  },
+  "cdfb9ead-cb58-4a53-879d-5e4ed5329e73": {
+    "name": "Direct Exposure to SARS-CoV-2 and Cigarette Smoke Increases Infection Severity and Alters the Stem Cell-Derived Airway Repair Response",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "CL:0002633"
+    ]
+  },
+  "ceb895f4-ff9f-403a-b7c3-187a9657ac2c": {
+    "name": "Multi-omic profiling of the developing human cerebral cortex at the single cell level",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0005343",
+      "UBERON:0009834"
+    ]
+  },
+  "cec4ef8e-1e70-49a2-ae43-1e6bf1fd5978": {
+    "name": "Transcriptional responses of the human dorsal striatum in opioid use disorder implicates cell type-specifc programs",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0005530",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001873",
+      "UBERON:0001874"
+    ]
+  },
+  "ced320a1-29f3-47c1-a735-513c7084d508": {
+    "name": "Asian Immune Diversity Atlas (AIDA)",
+    "n_datasets": 2,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178"
+    ]
+  },
+  "db468083-041c-41ca-8f6f-bf991a070adf": {
+    "name": "Stress-induced RNA\u2013chromatin interactions promote endothelial dysfunction",
+    "n_datasets": 2,
+    "disease_ids": [
+      "MONDO:0005148",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "CL:0000115",
+      "UBERON:0005616"
+    ]
+  },
+  "dc3a5256-5c39-4a21-ac0c-4ede3e7b2323": {
+    "name": "Healthy living donor kidney",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001225"
+    ]
+  },
+  "dde06e0f-ab3b-46be-96a2-a8082383c4a1": {
+    "name": "Single-cell eQTL mapping identifies cell type specific genetic control of autoimmune disease",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178"
+    ]
+  },
+  "e9c73b68-e980-49c2-8d0d-1c9cab21507e": {
+    "name": "Human photoreceptor cells from different macular subregions have distinct transcriptional profiles",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0003004",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0001786",
+      "UBERON:0018105"
+    ]
+  },
+  "ec329aed-22bc-4d6e-8935-8282dcb1acac": {
+    "name": "Early human lung immune cell development and its role in epithelial cell fate",
+    "n_datasets": 3,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002048"
+    ]
+  },
+  "ecb739c5-fe0d-4b48-81c6-217c4d64eec4": {
+    "name": "COVID-19 mRNA vaccine elicits a potent adaptive immune response in the absence of persistent inflammation observed in SARS-CoV-2 infection",
+    "n_datasets": 5,
+    "disease_ids": [
+      "MONDO:0100096",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178"
+    ]
+  },
+  "ed9185e3-5b82-40c7-9824-b2141590c7f0": {
+    "name": "Time-resolved Systems Immunology Reveals a Late Juncture Linked to Fatal COVID-19",
+    "n_datasets": 2,
+    "disease_ids": [
+      "MONDO:0100096",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0000178"
+    ]
+  },
+  "f17b9205-f61f-4a0f-a65a-73ba91c50ade": {
+    "name": "Resolving cellular and molecular diversity along the hippocampal anterior-to-posterior axis in humans",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0005027"
+    ],
+    "tissue_ids": [
+      "UBERON:0002421"
+    ]
+  },
+  "f8057c47-fcd8-4fcf-88b0-e2f930080f6e": {
+    "name": "Single-cell transcriptomics of the human retinal pigment epithelium and choroid in health and macular degeneration",
+    "n_datasets": 1,
+    "disease_ids": [
+      "MONDO:0005129",
+      "MONDO:0007472",
+      "MONDO:0012419"
+    ],
+    "tissue_ids": [
+      "UBERON:0001786",
+      "UBERON:0013682"
+    ]
+  },
+  "f86d6317-7215-409e-bfda-3f4ded3dadaa": {
+    "name": "Human CellCards Multi-Study CellRef 1.0 Atlas",
+    "n_datasets": 1,
+    "disease_ids": [
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0002048"
+    ]
+  },
+  "fc77d2ae-247d-44d7-aa24-3f4859254c2c": {
+    "name": "Cellular heterogeneity of human fallopian tubes in normal and hydrosalpinx disease states identified by scRNA-seq",
+    "n_datasets": 5,
+    "disease_ids": [
+      "MONDO:0600025",
+      "PATO:0000461"
+    ],
+    "tissue_ids": [
+      "UBERON:0003889",
+      "UBERON:0012648",
+      "UBERON:0016632",
+      "UBERON:8410010"
+    ]
+  }
+}
