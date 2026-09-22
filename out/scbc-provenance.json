@@ -1,0 +1,66 @@
+{
+  "baseline_churn": 0.09356663872590108,
+  "n": 9544,
+  "signals": {
+    "reasoning: biosample disclosed disease": {
+      "fires": 1952,
+      "churn": 0.10758196721311475,
+      "lift": 1.1497898041231436,
+      "ci": [
+        0.8990267639902676,
+        1.3990746325964247
+      ],
+      "verdict": "undemonstrated"
+    },
+    "reasoning: biosample silent or false": {
+      "fires": 5642,
+      "churn": 0.08720311946118398,
+      "lift": 0.9319894424832474,
+      "ci": [
+        0.8324765134804342,
+        1.0403052504813481
+      ],
+      "verdict": "undemonstrated"
+    },
+    "reasoning: inferred from study summary": {
+      "fires": 5016,
+      "churn": 0.08373205741626795,
+      "lift": 0.8948922239427337,
+      "ci": [
+        0.8053395927931536,
+        0.9902062106300944
+      ],
+      "verdict": "predicts stability"
+    },
+    "reasoning: hedged wording": {
+      "fires": 769,
+      "churn": 0.09232769830949285,
+      "lift": 0.9867587375876817,
+      "ci": [
+        0.7581302180266236,
+        1.2436649789544318
+      ],
+      "verdict": "undemonstrated"
+    },
+    "their label: conf != high": {
+      "fires": 4091,
+      "churn": 0.10046443412368614,
+      "lift": 1.0737206710822627,
+      "ci": [
+        0.9592035037096779,
+        1.1930074070884111
+      ],
+      "verdict": "undemonstrated"
+    },
+    "their label: conf == low": {
+      "fires": 3004,
+      "churn": 0.09687083888149134,
+      "lift": 1.0353138704198805,
+      "ci": [
+        0.8931494395552282,
+        1.184744787922358
+      ],
+      "verdict": "undemonstrated"
+    }
+  }
+}

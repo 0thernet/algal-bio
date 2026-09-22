@@ -535,3 +535,48 @@ key, and all four measured the key: `mice` versus `mouse`, `deletion` versus
 versus `malignant ovarian serous tumor`. The churn test scores a system against
 its own earlier output, through its own vocabulary, so there is no key to get
 wrong. That is the transferable lesson, and it cost four retractions to learn.
+
+### The provenance hypothesis, which did not survive either
+
+If reliability is a property of what a fact cites, then a disease call backed by
+a per-sample `biosample_disclosed_disease=true` should be more stable than one
+inferred from a BioProject summary and applied to a sample — the same
+study-to-sample move that made the CELLxGENE comparison unmeasurable, occurring
+inside their pipeline. `scbc_provenance.py` tests that on 9,544 samples using
+deterministic string features over their own reasoning text.
+
+| signal | fires | churn | lift | 95% CI | verdict |
+| --- | ---: | ---: | ---: | --- | --- |
+| cites BioSample disease field | 1,952 | 10.8% | 1.15x | 0.90–1.40x | undemonstrated |
+| BioSample silent or false | 5,642 | 8.7% | 0.93x | 0.83–1.04x | undemonstrated |
+| inferred from study summary | 5,016 | 8.4% | 0.89x | 0.81–0.99x | marginal |
+| hedged wording | 769 | 9.2% | 0.99x | 0.76–1.24x | undemonstrated |
+| their `conf != high` | 4,091 | 10.0% | 1.07x | 0.96–1.19x | undemonstrated |
+| their `conf == low` | 3,004 | 9.7% | 1.04x | 0.89–1.18x | undemonstrated |
+
+**The hypothesis failed, and the one interval that clears 1.0 runs against it.**
+Calls inferred from study-level text are marginally *more* stable (0.89x, upper
+bound 0.99) than calls citing a per-sample field, which is the opposite of the
+prediction. Held directly, the split is 10.8% versus 8.4% churn with overlapping
+intervals. The appealing version of this repo's own thesis is not supported by
+this data, and it is recorded here rather than dropped.
+
+The standing conclusion is a negative one with a clear shape: **release-to-
+release revision in scBaseCount is not predictable from any published metadata
+field**, including the confidence label built for that purpose, and including
+four deterministic features of their own stated reasoning.
+
+## What actually works, across everything measured here
+
+| signal | result | where |
+| --- | --- | --- |
+| inter-model disagreement | **1.88x and 2.38x**, intervals clear of 1.0 | my extractions, CELLxGENE key |
+| model self-reported confidence | undemonstrated on two independent tests | mine, and scBaseCount's published label |
+| lexical passage-support check | **worse than random** on two corpora | OpenGenes and CELLxGENE |
+| ontology-hierarchy matching | fixed a 24-point scoring error | scBaseCount vs CELLxGENE |
+| scoring against a system's own prior output | the only design with no key to get wrong | release churn |
+
+One signal survived contact with intervals, and it is corpus-dependent: on
+OpenGenes the same two models agreed nearly everywhere and disagreement carried
+nothing. Anyone building an LLM-curated knowledge base should measure it on
+their own corpus rather than inherit the number.
