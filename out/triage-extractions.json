@@ -1,0 +1,3956 @@
+{
+  "anthropic/claude-sonnet-5": [
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "misexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "misexpression"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "worms",
+      "direction": "no change",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "no change",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "no change",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "haploinsufficiency"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "no change",
+      "method": "heterozygous gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "homozygous gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "homozygous gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression (transgenic)"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "gene replacement (knock-in)"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "gene replacement (knock-in)"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "gene knockout (uorf ablation)"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "gene knockout (uorf ablation)"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "gene inactivation (knockout)"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "unstated",
+      "method": "gene deletion (knockout)"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "gene deletion (knockout)"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "aphid",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "aphid",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "hamster",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "hamster",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "hamster",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "hamster",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "elegans",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "elegans",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "yeast",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "unstated",
+      "method": "knockdown"
+    },
+    {
+      "organism": "elegans",
+      "direction": "unstated",
+      "method": "knockdown"
+    },
+    {
+      "organism": "elegans",
+      "direction": "no change",
+      "method": "knockout"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation and overexpression"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fish",
+      "direction": "increases lifespan",
+      "method": "recombinant protein administration"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worm",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "rats",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "rats",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "rats",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "rats",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "elegans",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "elegans",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    }
+  ],
+  "alibaba/qwen3.5-flash": [
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "misexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "misexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "rnai"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "rnai"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "rnai"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "rnai"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "defect"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "activation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "heterozygous"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "heterozygous"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "heterozygous knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "deletion"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "haploinsufficiency"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "animals",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "animals",
+      "direction": "unstated",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "transgenic"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene replacement"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene replacement"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "genetic ablation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "genetic ablation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "inactivation"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "deletion"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "deletion"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c. elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "aphids",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "aphids",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "hamsters",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "animals",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "hamsters",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "hamsters",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "transgenic"
+    },
+    {
+      "organism": "fly",
+      "direction": "no change",
+      "method": "transgenic"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "deficiency"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "deficiency"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "transgenic"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "transgenic"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "transgenic"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worm",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "treatment"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "truncation"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "worms",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "animals",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "inactivating mutation"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "genetic modification"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "genetic modification"
+    },
+    {
+      "organism": "worms",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "worms",
+      "direction": "increases lifespan",
+      "method": "integration"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "inactivation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "drosophila",
+      "direction": "unstated",
+      "method": "mutation"
+    },
+    {
+      "organism": "worm",
+      "direction": "no change",
+      "method": "mutation"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mouse",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "unstated",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "flies",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "no change",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fish",
+      "direction": "increases lifespan",
+      "method": "administration"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "worms",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "rats",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "rats",
+      "direction": "decreases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "rats",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "rats",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "deletion"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene deletion"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene deletion"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene deletion"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "no change",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "gene knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "mutation"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "c_elegans",
+      "direction": "unstated",
+      "method": "unstated"
+    },
+    {
+      "organism": "mice",
+      "direction": "increases lifespan",
+      "method": "heterozygous knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "unstated",
+      "method": "single copy"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "mice",
+      "direction": "decreases lifespan",
+      "method": "knockout"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "rnai-mediated reduction"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "fly",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "fly",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    },
+    {
+      "organism": "unstated",
+      "direction": "decreases lifespan",
+      "method": "overexpression"
+    },
+    {
+      "organism": "unstated",
+      "direction": "increases lifespan",
+      "method": "knockdown"
+    }
+  ]
+}

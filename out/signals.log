@@ -1,0 +1,101 @@
+
+corpus: 150 CELLxGENE collections with a description >= 200 chars and non-empty curated tissue + disease
+description length: median 1106 chars, range 286-2430
+curated labels per collection: tissue median 2, disease median 1
+collections curated normal-only: 75; with 'normal' somewhere in the label set: 133 (89%)
+tissue labels per collection: median 2, mean 5.4, max 104
+
+  NOTE on the answer key: it is every label any dataset in the collection
+  carries, and a prediction counts if it matches ANY of them. That is the
+  prescribed rule and it is generous: a collection curating 104 tissues is
+  nearly impossible to get wrong, and "healthy" is admissible for the
+  89% of collections holding at least one normal dataset. Accuracy
+  below is therefore an upper bound. The signal comparison holds this rule
+  fixed across all three signals, so the lift column is unaffected by it.
+
+extraction: 2 models x 17 batches of 9
+
+===============================================================================================
+claude-sonnet-5: 300 claims from 150 items
+===============================================================================================
+
+  accuracy within each self-reported confidence stratum (the number the paper does not report)
+  stratum      claims    share      tissue acc     disease acc
+  high            210    70.0%    77/105 (73%)    82/105 (78%)
+  medium           64    21.3%     23/32 (72%)     26/32 (81%)
+  low              26     8.7%      2/13 (15%)     10/13 (77%)
+
+  tissue
+  signal                      claims     acc        flagged    errors caught     lift  kept acc
+  ---------------------------------------------------------------------------------------------
+  A  self-conf < high            150   68.0%     45 (30.0%)    20/48 (41.7%)    1.39x     73.3%
+  A' self-conf == low            150   68.0%      13 (8.7%)    11/48 (22.9%)    2.64x     73.0%
+  B  inter-model disagree        150   68.0%     27 (18.0%)    17/48 (35.4%)    1.97x     74.8%
+  C  no support in text          150   68.0%      13 (8.7%)     6/48 (12.5%)    1.44x     69.3%
+
+  disease
+  signal                      claims     acc        flagged    errors caught     lift  kept acc
+  ---------------------------------------------------------------------------------------------
+  A  self-conf < high            150   78.7%     45 (30.0%)     9/32 (28.1%)    0.94x     78.1%
+  A' self-conf == low            150   78.7%      13 (8.7%)      3/32 (9.4%)    1.08x     78.8%
+  B  inter-model disagree        150   78.7%     15 (10.0%)     4/32 (12.5%)    1.25x     79.3%
+  C  no support in text          150   78.7%     49 (32.7%)      3/32 (9.4%)    0.29x     71.3%
+
+  both fields pooled
+  signal                      claims     acc        flagged    errors caught     lift  kept acc
+  ---------------------------------------------------------------------------------------------
+  A  self-conf < high            300   73.3%     90 (30.0%)    29/80 (36.2%)    1.21x     75.7%
+  A' self-conf == low            300   73.3%      26 (8.7%)    14/80 (17.5%)    2.02x     75.9%
+  B  inter-model disagree        300   73.3%     42 (14.0%)    21/80 (26.2%)    1.88x     77.1%
+  C  no support in text          300   73.3%     62 (20.7%)     9/80 (11.2%)    0.54x     70.2%
+
+===============================================================================================
+qwen3.5-flash: 300 claims from 150 items
+===============================================================================================
+
+  accuracy within each self-reported confidence stratum (the number the paper does not report)
+  stratum      claims    share      tissue acc     disease acc
+  high            274    91.3%    92/137 (67%)   100/137 (73%)
+  medium           24     8.0%      7/12 (58%)     10/12 (83%)
+  low               2     0.7%      1/1 (100%)        0/1 (0%)
+
+  tissue
+  signal                      claims     acc        flagged    errors caught     lift  kept acc
+  ---------------------------------------------------------------------------------------------
+  A  self-conf < high            150   66.7%      13 (8.7%)     5/50 (10.0%)    1.15x     67.2%
+  A' self-conf == low            150   66.7%       1 (0.7%)      0/50 (0.0%)    0.00x     66.4%
+  B  inter-model disagree        150   66.7%     27 (18.0%)    17/50 (34.0%)    1.89x     73.2%
+  C  no support in text          150   66.7%       9 (6.0%)      4/50 (8.0%)    1.33x     67.4%
+
+  disease
+  signal                      claims     acc        flagged    errors caught     lift  kept acc
+  ---------------------------------------------------------------------------------------------
+  A  self-conf < high            150   73.3%      13 (8.7%)      3/40 (7.5%)    0.87x     73.0%
+  A' self-conf == low            150   73.3%       1 (0.7%)      1/40 (2.5%)    3.75x     73.8%
+  B  inter-model disagree        150   73.3%     15 (10.0%)    13/40 (32.5%)    3.25x     80.0%
+  C  no support in text          150   73.3%     43 (28.7%)      3/40 (7.5%)    0.26x     65.4%
+
+  both fields pooled
+  signal                      claims     acc        flagged    errors caught     lift  kept acc
+  ---------------------------------------------------------------------------------------------
+  A  self-conf < high            300   70.0%      26 (8.7%)      8/90 (8.9%)    1.03x     70.1%
+  A' self-conf == low            300   70.0%       2 (0.7%)      1/90 (1.1%)    1.67x     70.1%
+  B  inter-model disagree        300   70.0%     42 (14.0%)    30/90 (33.3%)    2.38x     76.7%
+  C  no support in text          300   70.0%     52 (17.3%)      7/90 (7.8%)    0.45x     66.5%
+
+===============================================================================================
+HOW TO READ THIS
+===============================================================================================
+
+  Lift is recall divided by flag rate. It is the only baseline that matters: a
+  signal that flags 30% of claims and finds 30% of the errors has found nothing
+  a coin could not, and reads 1.00x. Above 1.0 it beats random review of the
+  same size; at or below 1.0 it is worthless and should be reported as such.
+
+  'kept acc' is the accuracy of what you would accept unread. That residual,
+  not the headline accuracy, is what a downstream database inherits.
+
+  Caveat on the task: the input here is a study description, which is prose
+  written to explain a study, not raw SRA metadata, which is not. Same shape of
+  extraction, not the identical one, and a description is probably the easier
+  of the two.

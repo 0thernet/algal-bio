@@ -1,0 +1,43 @@
+corpus: 395 experiments, 78 genes
+
+  claude-sonnet-5: 10/40 batches
+  claude-sonnet-5: 20/40 batches
+  claude-sonnet-5: 30/40 batches
+  claude-sonnet-5: 40/40 batches
+  qwen3.5-flash: 10/40 batches
+  qwen3.5-flash: 20/40 batches
+  qwen3.5-flash: 30/40 batches
+  qwen3.5-flash: 40/40 batches
+============================================================================
+TRIAGE: WHAT A CURATOR MUST READ, AND WHAT THEY CAN SKIP
+============================================================================
+
+claude-sonnet-5
+  field       claims accuracy     flagged   errors in      lift
+  organism       359     100%   161 (45%)         0/0     0.00x
+  method         316      67%   112 (35%)      22/103     0.60x
+
+  Read 273 of 675 claims (40%) to catch 22 of 103 errors (21%).
+  The 402 you skip are 79.9% correct (81 residual errors).
+
+qwen3.5-flash
+  field       claims accuracy     flagged   errors in      lift
+  organism       259     100%    61 (24%)         0/0     0.00x
+  method         305      63%    90 (30%)      20/111     0.61x
+
+  Read 151 of 564 claims (26%) to catch 20 of 111 errors (18%).
+  The 413 you skip are 78.0% correct (91 residual errors).
+
+============================================================================
+HONEST READING
+============================================================================
+
+  This is a review-allocation tool, not an accuracy improvement. The extractor
+  is exactly as wrong as before; the flag only says where to look. Lift above
+  1.0x means the flag beats reading a random sample of the same size, which is
+  the only baseline that matters, and the organism field needs no triage at all
+  because it has no errors to find.
+
+  What the residual number means: accepting the unflagged claims still admits
+  errors into the fact base. That residual, not the headline accuracy, is what
+  a downstream derivation actually inherits.

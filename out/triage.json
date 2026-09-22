@@ -1,0 +1,42 @@
+{
+  "anthropic/claude-sonnet-5": {
+    "organism": {
+      "claims": 359,
+      "errors": 0,
+      "flagged": 161,
+      "caught": 0,
+      "accepted": 198,
+      "accepted_errors": 0,
+      "accepted_accuracy": 1.0
+    },
+    "method": {
+      "claims": 316,
+      "errors": 103,
+      "flagged": 112,
+      "caught": 22,
+      "accepted": 204,
+      "accepted_errors": 81,
+      "accepted_accuracy": 0.6029411764705882
+    }
+  },
+  "alibaba/qwen3.5-flash": {
+    "organism": {
+      "claims": 259,
+      "errors": 0,
+      "flagged": 61,
+      "caught": 0,
+      "accepted": 198,
+      "accepted_errors": 0,
+      "accepted_accuracy": 1.0
+    },
+    "method": {
+      "claims": 305,
+      "errors": 111,
+      "flagged": 90,
+      "caught": 20,
+      "accepted": 215,
+      "accepted_errors": 91,
+      "accepted_accuracy": 0.5767441860465117
+    }
+  }
+}

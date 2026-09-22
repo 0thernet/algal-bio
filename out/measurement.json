@@ -1,0 +1,32 @@
+{
+  "claude-sonnet-5": {
+    "row_accuracy": 0.6740506329113924,
+    "dedup_accuracy": 0.7676767676767676,
+    "gene_ci": [
+      0.49710982658959535,
+      0.8865979381443299
+    ],
+    "n_rows": 316,
+    "n_dedup": 198,
+    "worst_class": null,
+    "worst_share_of_errors": 0.1956521739130435,
+    "lift_first60": 1.5833333333333335,
+    "lift_all": 0.602635228848821,
+    "lift_dedup": 1.0023823704586063
+  },
+  "qwen3.5-flash": {
+    "row_accuracy": 0.6360655737704918,
+    "dedup_accuracy": 0.7771739130434783,
+    "gene_ci": [
+      0.4439140811455847,
+      0.8911290322580645
+    ],
+    "n_rows": 305,
+    "n_dedup": 184,
+    "worst_class": null,
+    "worst_share_of_errors": 0.21951219512195122,
+    "lift_first60": 1.8499999999999999,
+    "lift_all": 0.6106106106106106,
+    "lift_dedup": 0.8828468612554978
+  }
+}
