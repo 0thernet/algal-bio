@@ -1,0 +1,58 @@
+{
+  "schema": "bio.intake-receipt.v1",
+  "campaign_id": "lmna-acute-lamina-vs-chronic-compartment-2026-09-24",
+  "freeze_sha256": "c8729fc6028718b21abd0f6d6332d8d9d072238cd0db2a8379803680a411e331",
+  "intake_after_freeze": true,
+  "frozen_utc": "2026-09-24T20:13:55.322486+00:00",
+  "files": [
+    {
+      "gsm": "GSM3602088",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602088/suppl/GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+      "filename": "GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+      "bytes": 73528,
+      "sha256": "d55de07bb3d53f2dab18a1db91cecafabbcdbed8aca1894cd9e349fd8db90639",
+      "retrieved_utc": "2026-09-24T20:13:55.410310+00:00"
+    },
+    {
+      "gsm": "GSM3602089",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602089/suppl/GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+      "filename": "GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+      "bytes": 73677,
+      "sha256": "b1ef2fc4a34da0be0d4321d039d1449395ce9cd78d6d4a8bce10006feac36c62",
+      "retrieved_utc": "2026-09-24T20:13:56.227116+00:00"
+    },
+    {
+      "gsm": "GSM3602090",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602090/suppl/GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+      "filename": "GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+      "bytes": 73730,
+      "sha256": "00aa53fb8c2dc173f0a63e418ef5dc17644a1e5dd8c30aee9be26bf1eb822c38",
+      "retrieved_utc": "2026-09-24T20:13:58.779778+00:00"
+    },
+    {
+      "gsm": "GSM3602091",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602091/suppl/GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+      "filename": "GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+      "bytes": 73653,
+      "sha256": "49fac2772fcbb5953f14abae3dac5dfac4b761a5e3eb48cf70ba944d3ad27fc6",
+      "retrieved_utc": "2026-09-24T20:13:59.876931+00:00"
+    },
+    {
+      "gsm": "GSM3602092",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602092/suppl/GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+      "filename": "GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+      "bytes": 73514,
+      "sha256": "063dcacc409f58fbb358b830c862164da5004affa0b26ce3490e8f0862af916d",
+      "retrieved_utc": "2026-09-24T20:14:00.878675+00:00"
+    },
+    {
+      "gsm": "GSM3602093",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602093/suppl/GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz",
+      "filename": "GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz",
+      "bytes": 73511,
+      "sha256": "dec7df23367cddba61518cff4483332d0c8040c1ade1662225b5e9aba6fc2e15",
+      "retrieved_utc": "2026-09-24T20:14:01.944327+00:00"
+    }
+  ],
+  "paid_spend_usd": 0
+}

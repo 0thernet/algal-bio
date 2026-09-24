@@ -1,0 +1,1034 @@
+{
+  "reviewer": "compartment_pre_outcome_review",
+  "reviewed_utc": "2026-09-24T18:14:20Z",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2",
+    "note": "no GEO file downloaded; no outcome directory opened; all synthetic outcome sets written to a private scratchpad outside the campaign directory"
+  },
+  "reviewed_files": {
+    "design/protocol.md": "5ef952d039bd6141cc619ddbeaebc5c63bd59ebd1d59b6932dafa2cef99ccfea",
+    "registration/protocol.draft.json": "e738b61931c2b3702120e4582809ff3dc473f699139a8c69cf73a9ab722d3a52",
+    "code/compartment.py": "6702ad1786afb336f294854c7bf659d30b3149bfe72430cb0b86bc7cf62460ca",
+    "code/test_compartment.py": "b53c8d98bc2b148f983a01a229f1e6040d525f1a89ab511677d5fea7dcd6c69f",
+    "code/requirements.lock": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+    "results/predictor/predictor.tsv": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+    "results/predictor/predictor.manifest.json": "b123f8e0f57b9a5d84bf6a2f30c7f8cc19041965229cab0308976f01b2744203",
+    "data-audit/eligibility.md": "26c541a0773005dcc16fb910d4ab30e1dc959902a784efd783945da42aeea460",
+    "data-audit/GSE126459-outcome-audit.json": "c7b9917965528717e4a37168494e6ea1e5b0029ab94069b5dbb8e0856b7b7e82",
+    "prior-art/report.md": "227f9d27c2b83d6a4daf5daf88a9e3cd8d17f1419a919662e40959d6f2c7b28e"
+  },
+  "checks": [
+    {
+      "id": "1-statistic-correctness",
+      "result": "pass",
+      "evidence": "spearman() vs scipy.stats.spearmanr over 200 random vectors incl. tied/rounded inputs: max |diff| 1.1e-16. partial_spearman() vs an independently written residual-of-ranks implementation (scipy rankdata + pinv + pearsonr): max |diff| 1.4e-16; vs the inverse-rank-correlation-matrix (precision) formula: max |diff| 3.7e-16. circular_shift_index over 5000 draws (n=40 and n=5 chromosomes): every within-chromosome permutation is an exact np.roll of the index block (no non-cyclic result), offset 0 never drawn (rng.integers(1,len) excludes both 0 and len), singleton chromosomes left in place, all len-1 distinct offsets observed. permutation_test p = (1+#{null<=obs})/(1+N): with a constant statistic both one-sided p are exactly 1.0; floor is 1/(1+N), so p_max=0.01 is attainable at N=299/499/5000."
+    },
+    {
+      "id": "1b-adjusted-null-exchangeability",
+      "result": "warn",
+      "evidence": "evaluate_contrast shifts rank(dlam) and rank(base_lam) jointly and keeps rank(base_pc1) and rank(dpc1) fixed. This is the right choice: baseline lamina belongs to the exposed predictor block and shares its autocorrelation, so moving it with dlam keeps the covariate adjustment internally coherent under the null while destroying only the predictor-outcome association. Empirically calibrated: 0/12 false passes and adjusted p uniform-looking on null data, and adjusted p = 0.59/0.64 on the amplitude-confound set. Residual asymmetry (observed statistic residualises dPC1 on the TRUE base_lam, null statistics on a shifted one) was not detectable at this n but is unstated in the registration and should be recorded as a known approximation."
+    },
+    {
+      "id": "2-false-pass-risk",
+      "result": "warn",
+      "evidence": "None of four adversarial sets with zero dlam-dPC1 relationship produced a registered pass. BUT set 2a-amplitude defeated the entire unadjusted arm: a pure 1.25x amplitude difference between mutant and corrected PC1 gave unadjusted rho -0.1265/-0.1295 with p = 0.002 (the 499-permutation floor) and all four replicate pairs negative, i.e. 3 of 5 components satisfied for BOTH clones. The only thing blocking the false pass was the adjusted arm (rho +0.007/-0.000). The driver is real and measurable pre-outcome: Spearman(tss_count, dlam_mCh) = -0.302 genome-wide, and the orientation rule forces PC1 to align positively with tss_count, so ANY dPC1 component proportional to +baseline PC1 - which a library-scale or eigenvector-normalisation difference between mutant and corrected Hi-C produces exactly - lands in the hypothesised negative direction at roughly the registered effect size. 2c also shows the circular-shift null doing its job: a chromosome-scale dPC1 offset correlated with chromosome-mean dlam gave rho -0.099 with p = 0.78."
+    },
+    {
+      "id": "3-power",
+      "result": "warn",
+      "evidence": "See power block. ~50% detection at the registered minimum rho = -0.10; the permutation p is never binding. The registration's 'a non-pass retires the claim' therefore overstates what a non-pass establishes."
+    },
+    {
+      "id": "4-orientation-rule",
+      "result": "pass",
+      "evidence": "The rule reads only the four corrected-clone PC1 tracks and RefSeq TSS counts; the mutant tracks never enter the flip or exclusion decision, and flipping multiplies every sample on that chromosome by -1 so the contrast dPC1 = mutant - corrected is sign-consistent. It cannot be gamed toward a direction because the analyst cannot see the contrast. Selection bias is bounded and symmetric: the excluded set is fixed before permutation, so any structure it induces in dPC1 is preserved in the null. Set 2b (chr7 sign-inverted in all six tracks) was correctly detected and repaired (flipped_chromosomes=['chr7']) with rho +0.016/-0.013, no pass. Predictor-side floor check: |Spearman(tss_count, siScr_mCh)| per autosome ranges 0.257 (chr18) to 0.628 (chr16), genome -0.396; every autosome clears 0.2 but chr18 (0.257) and chr4 (0.265) sit within 0.07 of the floor, so which chromosomes drop out is noise-sensitive for those two. 0.2 is a reasonable floor - it is what stops a chromosome whose true |rho| is near zero from being sign-flipped on noise - but the exclusion list must be reported and a pre-registered sensitivity at floors 0.0 and 0.3 would remove the remaining discretion."
+    },
+    {
+      "id": "5-eligibility-and-ties",
+      "result": "pass",
+      "evidence": "predictor.tsv: 5760 rows, 0 duplicated tile ids, starts strictly increasing within each chromosome and all on the 500 kb grid, chromosome order exactly chr1..chr22 as registered. 524 rows carry the literal string 'nan' in every numeric column; read_predictor's float('nan') parses them to NaN correctly (verified float on row 0). Finite predictor rows = 5236, matching predictor.manifest.json n_tiles_predictor_finite. dlam_DNK is finite on all 5236 finite-mCh rows. 8 tied dlam_mCh values and 25.3% zero tss_count - both handled by scipy rankdata average ranks. min_coverage uses cov < 0.5 -> NaN, so exactly 50% coverage is retained, matching the registration's 'at least 50%'."
+    },
+    {
+      "id": "6-registration-completeness",
+      "result": "warn",
+      "evidence": "Present in the registration: tile size, chromosome list, min_coverage 0.5, permutations 5000, seed 20260924 (adjusted arm seed+1), min_abs_rho_gene_density 0.3, min_rho_per_chromosome 0.2, unadjusted_rho_max -0.10, adjusted_rho_max -0.05, p_max 0.01, min_eligible_tiles 3000, clone-to-GSM mapping, replicate-pair matching (rep1 with rep1 by sorted replicate label), predictor definition and input hashes. Not present: (i) the tile-grid origin and the chromosome-length source - tiles_for starts at coordinate 0 and build_predictor takes chrom sizes from the siScr_mCh bigWig header; bound only indirectly via predictor.tsv's hash; (ii) the per-chromosome minimum tile count of 10, hard-coded in compartment.py; (iii) no PC1 amplitude/scale normalisation is specified, which is the degree of freedom exploited by adversarial set 2a; (iv) no sha256 for the six outcome bedGraphs (unavoidable pre-intake, but the intake receipt is not machine-checked by the code). Claim ceiling: honest - it names the condition-merged predictor tracks, the absence of predictor replicates, cross-study/cross-stage (day 35 vs day 14)/cross-perturbation status, and restricts the claim to correlational genome-scale concordance. The one dishonest edge is 'a non-pass retires the claim' given ~50% power at the registered minimum."
+    },
+    {
+      "id": "7-freeze-integrity",
+      "result": "fail",
+      "evidence": "The guard itself is correct and fail-closed: corrupting registration_sha256, code_sha256 or predictor_tsv_sha256 in the receipt, or omitting the code_sha256 key entirely, each raises SystemExit before any outcome file is read. BUT `--freeze` is declared with default=None on the `run` subparser, so `main(['run','--registration',...,'--predictor',...,'--outcome-dir',...,'--out-dir',...])` with no --freeze runs to completion, writes summary.json and tiles.tsv, and records only freeze_sha256: null. Verified by execution. Because every threshold lives in the registration JSON, the hash guard is the only thing preventing post-hoc threshold editing, and it is opt-in. Separately, the receipt binds only three artefacts; design/protocol.md step 5 promises it also binds tests and requirements, and test_compartment.py and requirements.lock are not checked. run_registered also writes tiles.tsv containing every per-tile predictor and PC1 value, i.e. full material for a threshold search, which is only safe if the freeze check is mandatory."
+    },
+    {
+      "id": "8-code-bugs",
+      "result": "pass",
+      "evidence": "No functional defect found. tiles_for is half-open with a truncated final tile and matches its unit test; interval_tile_means rejects unsorted/overlapping input rather than silently mis-aggregating and excludes NaN-valued bases from both numerator and coverage; boolean-mask indexing in P = {g: pc1[g][finite]} returns copies, so the per-chromosome flip P[g][idx] = -P[g][idx] cannot mutate a shared buffer, and base_all is an independent np.mean result; the tiles.tsv id list is filtered by `finite` then by `keep` in the same order as the data arrays, so ids stay aligned; chromosome iteration order in the orientation loop follows reg['tiles']['chromosomes'] and the predictor table is in that same order (verified); dnk secondary correctly subsets both vectors by the finite mask; the circular shift never draws offset 0 or len. One structural caveat, not a bug: the shift is over the index of ELIGIBLE tiles, so the 524 dropped (centromeric/telomeric) tiles make the roll slightly non-genomic; effect is negligible at 500 kb but is unstated."
+    }
+  ],
+  "adversarial_runs": [
+    {
+      "id": "2a-amplitude",
+      "construction": "baseline PC1 = -baseline lamina (rho -0.88) + AR(0.9) noise; mutant PC1 = 1.25 x baseline + noise; NO dlam-dPC1 relation",
+      "permutations": 499,
+      "n_eligible": 5092,
+      "orientation_rho": 0.3465,
+      "flipped": [],
+      "excluded": [
+        "chr18"
+      ],
+      "registered_pass": false,
+      "per_clone": {
+        "corrected_1": {
+          "unadjusted_rho": -0.1265,
+          "unadjusted_p_neg": 0.002,
+          "adjusted_rho": 0.0065,
+          "adjusted_p_neg": 0.636,
+          "replicate_pairs_all_negative": true,
+          "components_satisfied": [
+            "unadjusted_effect",
+            "unadjusted_p",
+            "replicate_pairs"
+          ]
+        },
+        "corrected_2": {
+          "unadjusted_rho": -0.1295,
+          "unadjusted_p_neg": 0.002,
+          "adjusted_rho": -0.0004,
+          "adjusted_p_neg": 0.586,
+          "replicate_pairs_all_negative": true,
+          "components_satisfied": [
+            "unadjusted_effect",
+            "unadjusted_p",
+            "replicate_pairs"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2a-regression",
+      "construction": "same, mutant PC1 = 0.80 x baseline (regression to the mean)",
+      "permutations": 499,
+      "n_eligible": 5092,
+      "orientation_rho": 0.3404,
+      "flipped": [],
+      "excluded": [
+        "chr18"
+      ],
+      "registered_pass": false,
+      "per_clone": {
+        "corrected_1": {
+          "unadjusted_rho": 0.1072,
+          "unadjusted_p_neg": 1.0,
+          "adjusted_rho": -0.016,
+          "adjusted_p_neg": 0.31,
+          "replicate_pairs_all_negative": false,
+          "components_satisfied": []
+        },
+        "corrected_2": {
+          "unadjusted_rho": 0.1143,
+          "unadjusted_p_neg": 1.0,
+          "adjusted_rho": -0.0111,
+          "adjusted_p_neg": 0.426,
+          "replicate_pairs_all_negative": false,
+          "components_satisfied": []
+        }
+      }
+    },
+    {
+      "id": "2b-signflip",
+      "construction": "truly null mutant; chr7 PC1 sign inverted in all six tracks",
+      "permutations": 499,
+      "n_eligible": 5092,
+      "orientation_rho": 0.3391,
+      "flipped": [
+        "chr7"
+      ],
+      "excluded": [
+        "chr18"
+      ],
+      "registered_pass": false,
+      "per_clone": {
+        "corrected_1": {
+          "unadjusted_rho": 0.0164,
+          "unadjusted_p_neg": 0.756,
+          "adjusted_rho": 0.014,
+          "adjusted_p_neg": 0.738,
+          "replicate_pairs_all_negative": false,
+          "components_satisfied": []
+        },
+        "corrected_2": {
+          "unadjusted_rho": -0.0133,
+          "unadjusted_p_neg": 0.232,
+          "adjusted_rho": -0.0138,
+          "adjusted_p_neg": 0.276,
+          "replicate_pairs_all_negative": false,
+          "components_satisfied": []
+        }
+      }
+    },
+    {
+      "id": "2c-chromtrend",
+      "construction": "AR(0.97) heavy autocorrelation plus a per-chromosome constant dPC1 offset set to -0.45 x z(chromosome mean dlam)",
+      "permutations": 499,
+      "n_eligible": 5092,
+      "orientation_rho": 0.3388,
+      "flipped": [],
+      "excluded": [
+        "chr18"
+      ],
+      "registered_pass": false,
+      "per_clone": {
+        "corrected_1": {
+          "unadjusted_rho": -0.0992,
+          "unadjusted_p_neg": 0.78,
+          "adjusted_rho": -0.1054,
+          "adjusted_p_neg": 0.672,
+          "replicate_pairs_all_negative": true,
+          "components_satisfied": [
+            "adjusted_effect",
+            "replicate_pairs"
+          ]
+        },
+        "corrected_2": {
+          "unadjusted_rho": -0.0991,
+          "unadjusted_p_neg": 0.87,
+          "adjusted_rho": -0.104,
+          "adjusted_p_neg": 0.864,
+          "replicate_pairs_all_negative": true,
+          "components_satisfied": [
+            "adjusted_effect",
+            "replicate_pairs"
+          ]
+        }
+      }
+    },
+    {
+      "id": "2d-nonlinear",
+      "construction": "mutant PC1 = sign(base)*|base|^1.6 (monotone, non-affine amplitude distortion); no dlam-dPC1 relation",
+      "permutations": 499,
+      "n_eligible": 4724,
+      "registered_pass": false,
+      "per_clone": {
+        "corrected_1": {
+          "unadjusted_rho": -0.0284,
+          "unadjusted_p_neg": 0.108,
+          "adjusted_rho": 0.057,
+          "adjusted_p_neg": 0.994,
+          "replicate_pairs_all_negative": true
+        },
+        "corrected_2": {
+          "unadjusted_rho": -0.028,
+          "unadjusted_p_neg": 0.16,
+          "adjusted_rho": 0.0564,
+          "adjusted_p_neg": 1.0,
+          "replicate_pairs_all_negative": true
+        }
+      }
+    }
+  ],
+  "power": {
+    "design": "predictor.tsv dlam_mCh held fixed; synthetic PC1 = -z(siScr_mCh) + 0.55*AR(0.9); mutant additionally shifted by -k*z(dlam_mCh); 12 seeds per k; permutations=299; full conjunctive registered rule",
+    "n_eligible_tiles_per_run": 5092,
+    "levels": [
+      {
+        "k": 0.0,
+        "mean_unadjusted_rho": -0.0058,
+        "detection_rate": 0.0,
+        "note": "type-I of the full conjunctive rule: 0/12"
+      },
+      {
+        "k": 0.022,
+        "mean_unadjusted_rho": -0.0888,
+        "detection_rate": 0.16666666666666666
+      },
+      {
+        "k": 0.028,
+        "mean_unadjusted_rho": -0.1112,
+        "detection_rate": 0.5
+      },
+      {
+        "k": 0.035,
+        "mean_unadjusted_rho": -0.1371,
+        "detection_rate": 0.8333333333333334
+      },
+      {
+        "k": 0.05,
+        "mean_unadjusted_rho": -0.1915,
+        "detection_rate": 1.0
+      }
+    ],
+    "answer_at_registered_minimum": "At a planted true effect of unadjusted rho ~= -0.11 the registered rule passes in 6/12 seeds (~50%); at rho ~= -0.089 it passes in 2/12 (~17%). The permutation p is never the binding constraint (it sits at the 1/(1+N) floor in every seed with a real effect); the binding constraint is that BOTH clones must separately clear rho <= -0.10, and the per-clone sampling spread is ~ +/-0.025.",
+    "type_I_rate_full_rule": "0/12 at k=0; the replicate-pair sub-criterion alone fired for both clones in 1/12 null seeds (~8%), so it contributes little stringency."
+  },
+  "per_chromosome_tss_vs_baseline_lamina": {
+    "chr1": {
+      "n_eligible_predictor": 448,
+      "spearman_tss_vs_siScr_mCh": -0.4048,
+      "abs_rho": 0.4048,
+      "spearman_tss_vs_dlam_mCh": -0.2667
+    },
+    "chr2": {
+      "n_eligible_predictor": 462,
+      "spearman_tss_vs_siScr_mCh": -0.4502,
+      "abs_rho": 0.4502,
+      "spearman_tss_vs_dlam_mCh": -0.4169
+    },
+    "chr3": {
+      "n_eligible_predictor": 383,
+      "spearman_tss_vs_siScr_mCh": -0.3532,
+      "abs_rho": 0.3532,
+      "spearman_tss_vs_dlam_mCh": -0.3996
+    },
+    "chr4": {
+      "n_eligible_predictor": 368,
+      "spearman_tss_vs_siScr_mCh": -0.2649,
+      "abs_rho": 0.2649,
+      "spearman_tss_vs_dlam_mCh": -0.3352
+    },
+    "chr5": {
+      "n_eligible_predictor": 345,
+      "spearman_tss_vs_siScr_mCh": -0.428,
+      "abs_rho": 0.428,
+      "spearman_tss_vs_dlam_mCh": -0.3061
+    },
+    "chr6": {
+      "n_eligible_predictor": 333,
+      "spearman_tss_vs_siScr_mCh": -0.3449,
+      "abs_rho": 0.3449,
+      "spearman_tss_vs_dlam_mCh": -0.3166
+    },
+    "chr7": {
+      "n_eligible_predictor": 305,
+      "spearman_tss_vs_siScr_mCh": -0.3076,
+      "abs_rho": 0.3076,
+      "spearman_tss_vs_dlam_mCh": -0.3066
+    },
+    "chr8": {
+      "n_eligible_predictor": 277,
+      "spearman_tss_vs_siScr_mCh": -0.3642,
+      "abs_rho": 0.3642,
+      "spearman_tss_vs_dlam_mCh": -0.3376
+    },
+    "chr9": {
+      "n_eligible_predictor": 216,
+      "spearman_tss_vs_siScr_mCh": -0.5407,
+      "abs_rho": 0.5407,
+      "spearman_tss_vs_dlam_mCh": -0.3295
+    },
+    "chr10": {
+      "n_eligible_predictor": 256,
+      "spearman_tss_vs_siScr_mCh": -0.3158,
+      "abs_rho": 0.3158,
+      "spearman_tss_vs_dlam_mCh": -0.3239
+    },
+    "chr11": {
+      "n_eligible_predictor": 257,
+      "spearman_tss_vs_siScr_mCh": -0.2901,
+      "abs_rho": 0.2901,
+      "spearman_tss_vs_dlam_mCh": -0.2234
+    },
+    "chr12": {
+      "n_eligible_predictor": 255,
+      "spearman_tss_vs_siScr_mCh": -0.445,
+      "abs_rho": 0.445,
+      "spearman_tss_vs_dlam_mCh": -0.143
+    },
+    "chr13": {
+      "n_eligible_predictor": 193,
+      "spearman_tss_vs_siScr_mCh": -0.418,
+      "abs_rho": 0.418,
+      "spearman_tss_vs_dlam_mCh": -0.3081
+    },
+    "chr14": {
+      "n_eligible_predictor": 174,
+      "spearman_tss_vs_siScr_mCh": -0.4016,
+      "abs_rho": 0.4016,
+      "spearman_tss_vs_dlam_mCh": -0.3288
+    },
+    "chr15": {
+      "n_eligible_predictor": 157,
+      "spearman_tss_vs_siScr_mCh": -0.4743,
+      "abs_rho": 0.4743,
+      "spearman_tss_vs_dlam_mCh": -0.2065
+    },
+    "chr16": {
+      "n_eligible_predictor": 151,
+      "spearman_tss_vs_siScr_mCh": -0.6283,
+      "abs_rho": 0.6283,
+      "spearman_tss_vs_dlam_mCh": -0.2978
+    },
+    "chr17": {
+      "n_eligible_predictor": 152,
+      "spearman_tss_vs_siScr_mCh": -0.4975,
+      "abs_rho": 0.4975,
+      "spearman_tss_vs_dlam_mCh": 0.1003
+    },
+    "chr18": {
+      "n_eligible_predictor": 144,
+      "spearman_tss_vs_siScr_mCh": -0.257,
+      "abs_rho": 0.257,
+      "spearman_tss_vs_dlam_mCh": -0.2307
+    },
+    "chr19": {
+      "n_eligible_predictor": 105,
+      "spearman_tss_vs_siScr_mCh": -0.5775,
+      "abs_rho": 0.5775,
+      "spearman_tss_vs_dlam_mCh": -0.0438
+    },
+    "chr20": {
+      "n_eligible_predictor": 117,
+      "spearman_tss_vs_siScr_mCh": -0.5033,
+      "abs_rho": 0.5033,
+      "spearman_tss_vs_dlam_mCh": -0.2683
+    },
+    "chr21": {
+      "n_eligible_predictor": 69,
+      "spearman_tss_vs_siScr_mCh": -0.323,
+      "abs_rho": 0.323,
+      "spearman_tss_vs_dlam_mCh": -0.3896
+    },
+    "chr22": {
+      "n_eligible_predictor": 69,
+      "spearman_tss_vs_siScr_mCh": -0.59,
+      "abs_rho": 0.59,
+      "spearman_tss_vs_dlam_mCh": -0.074
+    },
+    "genome": {
+      "n_eligible_predictor": 5236,
+      "spearman_tss_vs_siScr_mCh": -0.3957,
+      "abs_rho": 0.3957,
+      "spearman_tss_vs_dlam_mCh": -0.3018
+    }
+  },
+  "required_repairs": [
+    "REQUIRED-1 (freeze): make --freeze mandatory on the `run` subparser (or make run_registered refuse to write summary.json when freeze_sha256 is None). Today an unfrozen run produces a complete, normal-looking result and the registration-hash guard - the only defence against post-hoc threshold editing - is skipped silently.",
+    "REQUIRED-2 (freeze scope): extend the freeze receipt and the guard in main() to test_compartment.py and code/requirements.lock, as design/protocol.md step 5 already promises.",
+    "REQUIRED-3 (outcome integrity): have `run` read intake.json and verify the six bedGraph sha256 against it, refusing to proceed on mismatch or on a missing intake receipt. Recording the hashes in summary.json after the fact does not prevent substitution or a silent second download.",
+    "REQUIRED-4 (amplitude confound): pre-register a PC1 scale diagnostic and a normalised sensitivity analysis before intake. A pure amplitude difference between mutant and corrected PC1 tracks satisfies the whole unadjusted arm at p = 0.002 with zero real signal (adversarial 2a). Minimum: report per-chromosome SD(mutant PC1)/SD(corrected PC1) and re-run the primary statistic on per-chromosome variance-standardised PC1 tracks; pre-commit that a pass must hold in BOTH the raw and the standardised form. Recommended additionally: require |adjusted_rho| >= 0.5 * |unadjusted_rho| so a pass cannot rest on an arm that a scale artefact alone can satisfy.",
+    "REQUIRED-5 (power honesty): replace 'a non-pass retires the claim' with the measured operating characteristic - at a true unadjusted rho of -0.10 the conjunctive rule passes about half the time, because both clones must separately clear -0.10 and the per-clone spread is about +/-0.025. Either state that a non-pass retires only effects appreciably larger than the registered minimum, or pre-register the clone-averaged rho as primary with the per-clone rule as a consistency check.",
+    "RECOMMENDED-6 (orientation): record the excluded-chromosome list in the public record and pre-register sensitivity runs at min_rho_per_chromosome = 0.0 and 0.3; chr18 (0.257) and chr4 (0.265) sit close enough to the 0.2 floor on the predictor side that their inclusion is noise-sensitive.",
+    "RECOMMENDED-7 (registration text): add the tile-grid origin (multiples of 500 kb from coordinate 0), the chromosome-length source (the siScr_mCh bigWig header), the hard-coded per-chromosome minimum of 10 eligible tiles, the fact that the circular shift is over eligible-tile index rather than genomic coordinate, and the note that the adjusted null shifts baseline lamina with the predictor while baseline PC1 stays fixed.",
+    "RECOMMENDED-8 (weak criterion): state that the four replicate-pair signs add little stringency - they share the two mutant replicates, and both clones came out all-negative in 1 of 12 pure-null simulations."
+  ],
+  "verdict": "PASS_WITH_REPAIRS",
+  "verdict_round_1": "PASS_WITH_REPAIRS",
+  "round_2": {
+    "reviewed_utc": "2026-09-24T18:27:03Z",
+    "scope": "verification of the eight round-1 repairs; no GEO file downloaded, no outcome directory opened; all synthetic outcome sets written to a private scratchpad outside the campaign directory",
+    "reviewed_files": {
+      "design/protocol.md": "d8a148340ea2ef957b3de9f5f53cd526ede55392ff68c49ff42cd5667904cf6b",
+      "registration/protocol.draft.json": "7de00c7738fb5f9f01f6124bc309b4d2bae262be272815a5e0e18420228ceeb1",
+      "code/compartment.py": "f11a64f733a4fe9b00a29b429475184fd5819d4d79bf3db2c9f9cb37c9b620d8",
+      "code/test_compartment.py": "3d6ee18f0f15c07f915affa5d4dd5c93627654ce0215400c87c751e2e492f94e",
+      "code/requirements.lock": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+      "results/predictor/predictor.tsv": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+      "results/predictor/predictor.manifest.json": "b123f8e0f57b9a5d84bf6a2f30c7f8cc19041965229cab0308976f01b2744203"
+    },
+    "repair_verification": [
+      {
+        "item": "REQUIRED-1 freeze mandatory",
+        "result": "pass",
+        "evidence": "`run` now declares --freeze and --intake as required=True; omitting either exits 2 at argparse. run_registered raises SystemExit('refusing to run without a freeze receipt (pass --freeze and --intake)') when freeze_sha256 is None and allow_unfrozen is not set; verified by direct call. allow_unfrozen=True is honoured only when passed explicitly and the resulting summary carries registered_run=false and unfrozen_synthetic_run=true (confirmed on all six synthetic runs); a fully valid run carries registered_run=true, unfrozen_synthetic_run=false."
+      },
+      {
+        "item": "REQUIRED-2 freeze scope",
+        "result": "pass",
+        "evidence": "main() builds a five-key check set (registration_sha256, code_sha256, test_sha256, requirements_lock_sha256, predictor_tsv_sha256) and rejects on the first mismatch. Each of the five was corrupted in turn and each was rejected with its own named message. test_compartment.py and requirements.lock are resolved relative to the module directory, so they cannot be pointed elsewhere by an argument."
+      },
+      {
+        "item": "REQUIRED-3 outcome integrity",
+        "result": "pass",
+        "evidence": "main() loads the intake receipt, rejects it unless intake['freeze_sha256'] equals the sha256 of the freeze file actually passed, and hands the filename->sha256 map to run_registered, which rejects the run if any of the six outcome files mismatches. Both failure modes verified: a non-binding intake receipt and a single corrupted outcome hash were each rejected before any statistic was computed. summary.json records outcome_hashes_verified_against_intake."
+      },
+      {
+        "item": "REQUIRED-4 amplitude confound",
+        "result": "pass",
+        "evidence": "Three independent defences now exist where round 1 had one. On the 1.25x amplitude set the raw unadjusted arm still fires (rho -0.1265/-0.1295, p 0.002) but the adjusted/unadjusted ratio is 0.051/0.003 (floor 0.5) and the per-chromosome variance-standardised unadjusted rho collapses to -0.0148/-0.0025 (floor -0.10). The scale diagnostic reports the artefact directly: genome_sd_ratio 1.248/1.248 for that set versus 0.999-1.003 on the honest sets. The standardised arm also happens to absorb the chromosome-scale trend set (standardised rho +0.021/+0.037 against raw -0.099), because per-chromosome centring removes the between-chromosome component."
+      },
+      {
+        "item": "REQUIRED-5 power honesty",
+        "result": "pass",
+        "evidence": "registration.operating_characteristics records the measured type-I (0/12) and power table with an explicit honest_reading that a non-pass retires the claim only for effects appreciably larger than the minimum, and states the recorded rates predate components 3-4. Re-measured under the strengthened rule (12 seeds, 299 shifts, 5,092 tiles): rho -0.111 -> 6/12 (unchanged), rho -0.137 -> 9/12 (was 10/12), rho -0.192 -> 12/12, null -> 0/12. So the added components cost little power; the registration's '~83% at |rho| 0.14' is now measured at 75% and is the one figure slightly optimistic."
+      },
+      {
+        "item": "RECOMMENDED-6 orientation floors",
+        "result": "pass",
+        "evidence": "registration.orientation.floor_sensitivity = [0.0, 0.3] and run_registered reports orientation_floor_sensitivity with n_tiles, excluded_chromosomes and per-clone unadjusted/adjusted rho at each floor, recomputed from the unmasked tracks by a fresh orient_tracks call. Present and populated in all six synthetic summaries. Reported only, with no permutation p, so it cannot become a second bite at the primary."
+      },
+      {
+        "item": "RECOMMENDED-7 hidden parameters",
+        "result": "pass",
+        "evidence": "registration.fixed_parameters_explicit now states the tile grid and its origin, the chromosome-length source, the per-chromosome minimum of 10 tiles, the eligible-index (not genomic-coordinate) domain of the circular shift, the adjusted-null asymmetry, replicate-pair matching, the clone-to-GSM labels, and the standardisation definition. Each matches the code."
+      },
+      {
+        "item": "RECOMMENDED-8 weak replicate criterion",
+        "result": "pass",
+        "evidence": "pass_criteria.rule labels component 5 weak and quotes the reviewer's 1-in-12 pure-null figure. Re-measured at 12 null seeds under the new code: the replicate-pair component failed 15 of 24 clone-evaluations, i.e. it was satisfied in 9, consistent with the weak-criterion label."
+      }
+    ],
+    "parameter_name_agreement": {
+      "result": "pass",
+      "checked": {
+        "adjusted_to_unadjusted_ratio_min": "registration pass_criteria = 0.5; code reads thr['adjusted_to_unadjusted_ratio_min']",
+        "standardised_unadjusted_rho_max": "registration pass_criteria = -0.1; code reads thr['standardised_unadjusted_rho_max']",
+        "floor_sensitivity": "registration orientation = [0.0, 0.3]; code reads reg['orientation']['floor_sensitivity']",
+        "min_rho_per_chromosome": "0.2 both",
+        "min_abs_rho_gene_density": "0.3 both",
+        "p_max": "0.01 both",
+        "unadjusted_rho_max": "-0.1 both",
+        "adjusted_rho_max": "-0.05 both",
+        "min_eligible_tiles": "3000 both",
+        "permutations": "5000 both",
+        "seed": "20260924 both; adjusted arm seed+1, standardised arm seed+2 and seed+3, documented in scale_artefact_control"
+      }
+    },
+    "new_code_review": {
+      "result": "pass_with_notes",
+      "evidence": "orient_tracks copies every input track before flipping, so none of its three calls (primary plus two sensitivity floors) can contaminate another; it returns the mask rather than applying it, and the caller applies keep consistently to chrom, dlam, base_lam, dlam_dnk, density, the track dict and the tile-id list in the same order. standardise_per_chromosome copies, guards sd == 0, and is applied after orientation and masking. scale_diagnostic is invariant to the sign flips, as it must be. clone_contrast is a faithful extraction of the round-1 inline code and additionally fixes a latent edge case in the DNK secondary (now guarded by dk.sum() > 10 instead of an all-finite branch). The standardised arm correctly keeps the raw predictor-side baseline lamina as covariate. Seeds do not collide across the four permutation loops. 24 of 24 unit tests pass in 5.6 s.",
+      "notes": [
+        "thr.get('adjusted_to_unadjusted_ratio_min', 0.0) and thr.get('standardised_unadjusted_rho_max', 0.0) fail OPEN if the key is absent: with both keys deleted the standardised_effect component flipped to satisfied on the 1.25x amplitude artefact (probe run). The registration is hash-bound at freeze so this is not reachable post-freeze, but subscript access would be strictly safer than a permissive default. Same for reg['orientation'].get('floor_sensitivity', []), which silently reports nothing if dropped.",
+        "Per-chromosome standardisation centres as well as scales, so component 4 additionally requires the concordance to be present WITHIN chromosomes; a real effect carried mainly by between-chromosome differences would fail it. This is a deliberate tightening and the planted effect survives it (-0.397/-0.402 standardised against -0.427/-0.420 raw), but the registration describes the arm only as a scale control and should say it also removes the chromosome-mean component.",
+        "design/protocol.md still carries 'Weak expected effect | minimum effect registered; a non-pass retires the claim' in the threats table, which the registration's operating_characteristics.honest_reading now supersedes; the round-1 section below it states the true power, so the record is not misleading, but the table line is stale."
+      ]
+    },
+    "adversarial_runs_round_2": [
+      {
+        "id": "a_amp_inflate",
+        "construction": "mutant PC1 = 1.25 x baseline; zero dlam-dPC1 relation",
+        "permutations": 499,
+        "registered_pass": false,
+        "unfrozen_synthetic_run_flag": true,
+        "n_eligible": 5092,
+        "genome_sd_ratio": {
+          "corrected_1": 1.238,
+          "corrected_2": 1.249
+        },
+        "per_clone": {
+          "corrected_1": {
+            "unadjusted_rho": -0.1265,
+            "unadjusted_p_neg": 0.002,
+            "adjusted_rho": 0.0065,
+            "adjusted_p_neg": 0.636,
+            "standardised_unadjusted_rho": -0.0148,
+            "standardised_p_neg": 0.232,
+            "adjusted_to_unadjusted_ratio": 0.051,
+            "failed_components": [
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p"
+            ],
+            "clone_pass": false
+          },
+          "corrected_2": {
+            "unadjusted_rho": -0.1295,
+            "unadjusted_p_neg": 0.002,
+            "adjusted_rho": -0.0004,
+            "adjusted_p_neg": 0.586,
+            "standardised_unadjusted_rho": -0.0025,
+            "standardised_p_neg": 0.466,
+            "adjusted_to_unadjusted_ratio": 0.003,
+            "failed_components": [
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p"
+            ],
+            "clone_pass": false
+          }
+        },
+        "floor_sensitivity_reported": {
+          "0.0": {
+            "n": 5236,
+            "excl": [],
+            "u_rho": {
+              "corrected_1": -0.13,
+              "corrected_2": -0.129
+            }
+          },
+          "0.3": {
+            "n": 3970,
+            "excl": [
+              "chr4",
+              "chr7",
+              "chr10",
+              "chr13",
+              "chr18"
+            ],
+            "u_rho": {
+              "corrected_1": -0.114,
+              "corrected_2": -0.136
+            }
+          }
+        }
+      },
+      {
+        "id": "a_regress_to_mean",
+        "construction": "mutant PC1 = 0.80 x baseline (regression to the mean)",
+        "permutations": 499,
+        "registered_pass": false,
+        "unfrozen_synthetic_run_flag": true,
+        "n_eligible": 5092,
+        "genome_sd_ratio": {
+          "corrected_1": 0.802,
+          "corrected_2": 0.799
+        },
+        "per_clone": {
+          "corrected_1": {
+            "unadjusted_rho": 0.1072,
+            "unadjusted_p_neg": 1.0,
+            "adjusted_rho": -0.016,
+            "adjusted_p_neg": 0.31,
+            "standardised_unadjusted_rho": 0.0066,
+            "standardised_p_neg": 0.652,
+            "adjusted_to_unadjusted_ratio": 0.149,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p",
+              "replicate_pairs"
+            ],
+            "clone_pass": false
+          },
+          "corrected_2": {
+            "unadjusted_rho": 0.1143,
+            "unadjusted_p_neg": 1.0,
+            "adjusted_rho": -0.0111,
+            "adjusted_p_neg": 0.426,
+            "standardised_unadjusted_rho": 0.0216,
+            "standardised_p_neg": 0.794,
+            "adjusted_to_unadjusted_ratio": 0.097,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p",
+              "replicate_pairs"
+            ],
+            "clone_pass": false
+          }
+        },
+        "floor_sensitivity_reported": {
+          "0.0": {
+            "n": 5236,
+            "excl": [],
+            "u_rho": {
+              "corrected_1": 0.105,
+              "corrected_2": 0.114
+            }
+          },
+          "0.3": {
+            "n": 3970,
+            "excl": [
+              "chr4",
+              "chr7",
+              "chr10",
+              "chr13",
+              "chr18"
+            ],
+            "u_rho": {
+              "corrected_1": 0.084,
+              "corrected_2": 0.095
+            }
+          }
+        }
+      },
+      {
+        "id": "b_chr7_signflip",
+        "construction": "null mutant; chr7 PC1 inverted in all six tracks",
+        "permutations": 499,
+        "registered_pass": false,
+        "unfrozen_synthetic_run_flag": true,
+        "n_eligible": 5092,
+        "genome_sd_ratio": {
+          "corrected_1": 0.997,
+          "corrected_2": 1.0
+        },
+        "per_clone": {
+          "corrected_1": {
+            "unadjusted_rho": 0.0164,
+            "unadjusted_p_neg": 0.756,
+            "adjusted_rho": 0.014,
+            "adjusted_p_neg": 0.738,
+            "standardised_unadjusted_rho": 0.0212,
+            "standardised_p_neg": 0.826,
+            "adjusted_to_unadjusted_ratio": 0.852,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p",
+              "replicate_pairs"
+            ],
+            "clone_pass": false
+          },
+          "corrected_2": {
+            "unadjusted_rho": -0.0133,
+            "unadjusted_p_neg": 0.232,
+            "adjusted_rho": -0.0138,
+            "adjusted_p_neg": 0.276,
+            "standardised_unadjusted_rho": -0.0065,
+            "standardised_p_neg": 0.352,
+            "adjusted_to_unadjusted_ratio": 1.038,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_effect",
+              "adjusted_p",
+              "standardised_effect",
+              "standardised_p",
+              "replicate_pairs"
+            ],
+            "clone_pass": false
+          }
+        },
+        "floor_sensitivity_reported": {
+          "0.0": {
+            "n": 5236,
+            "excl": [],
+            "u_rho": {
+              "corrected_1": 0.017,
+              "corrected_2": -0.016
+            }
+          },
+          "0.3": {
+            "n": 3970,
+            "excl": [
+              "chr4",
+              "chr7",
+              "chr10",
+              "chr13",
+              "chr18"
+            ],
+            "u_rho": {
+              "corrected_1": 0.023,
+              "corrected_2": -0.029
+            }
+          }
+        }
+      },
+      {
+        "id": "c_chrom_trend",
+        "construction": "AR(0.97) noise plus per-chromosome dPC1 offset = -0.45 x z(chromosome mean dlam)",
+        "permutations": 499,
+        "registered_pass": false,
+        "unfrozen_synthetic_run_flag": true,
+        "n_eligible": 5092,
+        "genome_sd_ratio": {
+          "corrected_1": 1.089,
+          "corrected_2": 1.082
+        },
+        "per_clone": {
+          "corrected_1": {
+            "unadjusted_rho": -0.0992,
+            "unadjusted_p_neg": 0.78,
+            "adjusted_rho": -0.1054,
+            "adjusted_p_neg": 0.672,
+            "standardised_unadjusted_rho": 0.0211,
+            "standardised_p_neg": 0.794,
+            "adjusted_to_unadjusted_ratio": 1.062,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_p",
+              "standardised_effect",
+              "standardised_p"
+            ],
+            "clone_pass": false
+          },
+          "corrected_2": {
+            "unadjusted_rho": -0.0991,
+            "unadjusted_p_neg": 0.87,
+            "adjusted_rho": -0.104,
+            "adjusted_p_neg": 0.864,
+            "standardised_unadjusted_rho": 0.0373,
+            "standardised_p_neg": 0.918,
+            "adjusted_to_unadjusted_ratio": 1.049,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_p",
+              "standardised_effect",
+              "standardised_p"
+            ],
+            "clone_pass": false
+          }
+        },
+        "floor_sensitivity_reported": {
+          "0.0": {
+            "n": 5236,
+            "excl": [],
+            "u_rho": {
+              "corrected_1": -0.096,
+              "corrected_2": -0.096
+            }
+          },
+          "0.3": {
+            "n": 3970,
+            "excl": [
+              "chr4",
+              "chr7",
+              "chr10",
+              "chr13",
+              "chr18"
+            ],
+            "u_rho": {
+              "corrected_1": -0.122,
+              "corrected_2": -0.129
+            }
+          }
+        }
+      },
+      {
+        "id": "d_nonlinear",
+        "construction": "mutant PC1 = sign(base)*|base|^1.6, monotone non-affine amplitude distortion",
+        "permutations": 499,
+        "registered_pass": false,
+        "unfrozen_synthetic_run_flag": true,
+        "n_eligible": 4724,
+        "genome_sd_ratio": {
+          "corrected_1": 1.344,
+          "corrected_2": 1.353
+        },
+        "per_clone": {
+          "corrected_1": {
+            "unadjusted_rho": -0.0284,
+            "unadjusted_p_neg": 0.108,
+            "adjusted_rho": 0.057,
+            "adjusted_p_neg": 0.994,
+            "standardised_unadjusted_rho": 0.1124,
+            "standardised_p_neg": 1.0,
+            "adjusted_to_unadjusted_ratio": 2.006,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p"
+            ],
+            "clone_pass": false
+          },
+          "corrected_2": {
+            "unadjusted_rho": -0.028,
+            "unadjusted_p_neg": 0.16,
+            "adjusted_rho": 0.0564,
+            "adjusted_p_neg": 1.0,
+            "standardised_unadjusted_rho": 0.1127,
+            "standardised_p_neg": 1.0,
+            "adjusted_to_unadjusted_ratio": 2.015,
+            "failed_components": [
+              "unadjusted_effect",
+              "unadjusted_p",
+              "adjusted_effect",
+              "adjusted_p",
+              "adjusted_to_unadjusted_ratio",
+              "standardised_effect",
+              "standardised_p"
+            ],
+            "clone_pass": false
+          }
+        },
+        "floor_sensitivity_reported": {
+          "0.0": {
+            "n": 5236,
+            "excl": [],
+            "u_rho": {
+              "corrected_1": -0.03,
+              "corrected_2": -0.025
+            }
+          },
+          "0.3": {
+            "n": 3112,
+            "excl": [
+              "chr1",
+              "chr4",
+              "chr7",
+              "chr8",
+              "chr10",
+              "chr11",
+              "chr18",
+              "chr21"
+            ],
+            "u_rho": {
+              "corrected_1": -0.043,
+              "corrected_2": -0.046
+            }
+          }
+        }
+      },
+      {
+        "id": "real_effect_-0.4",
+        "construction": "planted real effect: mutant PC1 additionally shifted by -0.12 x z(dlam_mCh)",
+        "permutations": 499,
+        "registered_pass": true,
+        "unfrozen_synthetic_run_flag": true,
+        "n_eligible": 4979,
+        "genome_sd_ratio": {
+          "corrected_1": 1.038,
+          "corrected_2": 1.028
+        },
+        "per_clone": {
+          "corrected_1": {
+            "unadjusted_rho": -0.4267,
+            "unadjusted_p_neg": 0.002,
+            "adjusted_rho": -0.421,
+            "adjusted_p_neg": 0.002,
+            "standardised_unadjusted_rho": -0.3973,
+            "standardised_p_neg": 0.002,
+            "adjusted_to_unadjusted_ratio": 0.987,
+            "failed_components": [],
+            "clone_pass": true
+          },
+          "corrected_2": {
+            "unadjusted_rho": -0.4202,
+            "unadjusted_p_neg": 0.002,
+            "adjusted_rho": -0.4221,
+            "adjusted_p_neg": 0.002,
+            "standardised_unadjusted_rho": -0.402,
+            "standardised_p_neg": 0.002,
+            "adjusted_to_unadjusted_ratio": 1.005,
+            "failed_components": [],
+            "clone_pass": true
+          }
+        },
+        "floor_sensitivity_reported": {
+          "0.0": {
+            "n": 5236,
+            "excl": [],
+            "u_rho": {
+              "corrected_1": -0.429,
+              "corrected_2": -0.425
+            }
+          },
+          "0.3": {
+            "n": 3906,
+            "excl": [
+              "chr4",
+              "chr7",
+              "chr10",
+              "chr11",
+              "chr18"
+            ],
+            "u_rho": {
+              "corrected_1": -0.419,
+              "corrected_2": -0.408
+            }
+          }
+        }
+      }
+    ],
+    "power_round_2": {
+      "design": "identical to round 1 (real predictor dlam_mCh, synthetic PC1 = -z(baseline lamina) + 0.55 AR(0.9), mutant shifted by -k z(dlam)), 12 seeds per level, 299 shifts, 5,092 tiles, full eight-component conjunctive rule",
+      "levels": [
+        {
+          "mean_unadjusted_rho": -0.0058,
+          "mean_standardised_rho": -0.007,
+          "detection_rate": 0.0
+        },
+        {
+          "mean_unadjusted_rho": -0.1112,
+          "mean_standardised_rho": -0.1094,
+          "detection_rate": 0.5
+        },
+        {
+          "mean_unadjusted_rho": -0.1371,
+          "mean_standardised_rho": -0.1344,
+          "detection_rate": 0.75
+        },
+        {
+          "mean_unadjusted_rho": -0.1915,
+          "mean_standardised_rho": -0.1868,
+          "detection_rate": 1.0
+        }
+      ],
+      "binding_components": "at the registered minimum the failures are unadjusted_effect (8 of 24 clone-evaluations) and standardised_effect (6 of 24); the permutation p components almost never bind",
+      "change_from_round_1": "components 3-4 cost no power at the registered minimum (6/12 before and after) and about 8 points at |rho| 0.14 (10/12 -> 9/12)"
+    },
+    "residual_items": [
+      "MINOR-1: replace thr.get(...) / reg['orientation'].get('floor_sensitivity', ...) permissive defaults with subscript access so a missing registration key fails closed rather than vacating two pass components.",
+      "MINOR-2: add to registration.scale_artefact_control that per-chromosome standardisation also removes the chromosome-mean component, so component 4 tests within-chromosome concordance specifically.",
+      "MINOR-3: update the 'Weak expected effect' row of design/protocol.md to match operating_characteristics.honest_reading, and correct '~83% at |rho| 0.14' to the re-measured 75%."
+    ],
+    "verdict": "PASS"
+  },
+  "verdict_round_2": "PASS",
+  "round_3": {
+    "reviewed_utc": "2026-09-24T20:18:33Z",
+    "scope": "post-failure amendment review (amend-001). Nothing under data/ was opened; results/run-001/FAILED.md and format-check.txt were read; no correlation, p-value, orientation statistic or per-tile outcome value was seen by the reviewer.",
+    "reviewed_files": {
+      "code/compartment.py": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+      "code/test_compartment.py": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e",
+      "registration/protocol.draft.json": "785e9b88107505d3b3590ec0cb18accbe6497ee6af579fd886b5a890314138cf",
+      "registration/protocol.frozen-001.json": "2d51b704f6a2b75b1f22db10dd9469f2758b9c85e37ef05d865f88f116c6f5a8",
+      "registration/freeze-001.json": "c8729fc6028718b21abd0f6d6332d8d9d072238cd0db2a8379803680a411e331",
+      "registration/intake-001.json": "4db2e1cba98c5a9b2d6b8c0b7668acc9c8d19f97213ae5533071b9e204ccad1c",
+      "registration/freeze.py": "91d01f83a760119388d1d6e387c86c28df6bae368614cf0bddbfdf6c5e63a6a8",
+      "design/protocol.md": "e3ec6d7578365e0116bd1231db86197fd3cb067a8e3ed7186625ddb78eee9183",
+      "results/run-001/FAILED.md": "02b7f8d316386ae14fd5f95ad4ea8db93caa92c9aa4b0330b8214bb2b39e733e",
+      "results/run-001/format-check.txt": "12a211b7740ac2c8677187dc4454bc9cdd14a2486b8f4721e282e0a856de399f"
+    },
+    "q1_code_diff": {
+      "result": "warn",
+      "verified": [
+        "code/compartment.py is now 776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019, freeze-001 recorded 9f58860fb683d087f1363f1b399e152ef0e56ad294d40268b959fd8671a937c9, so the file did change.",
+        "The adapter is three lines inside read_bedgraph only: `if not c.startswith('chr'): c = 'chr' + c` with a comment. It is applied at parse time to the chromosome name column and touches no coordinate, value, tile, threshold or statistic.",
+        "Behavioural check: bedgraph_tile_means returns identical arrays for chr-prefixed and unprefixed input; read_bedgraph maps '1'->'chr1'. Unprefixed X/Y would map to chrX/chrY, which remain absent from the registered chromosome list, so no sex chromosome can enter the grid.",
+        "Functional equivalence to the code reviewed in round 2: four adversarial sets re-run at 499 shifts reproduce round-2 unadjusted rho, negative-direction p, adjusted rho and standardised rho to four decimal places, and the same pass/fail verdict, for both clones (amplitude artefact, chromosome trend, non-linear distortion, planted real effect). Nothing in the statistical path moved.",
+        "25 of 25 unit tests pass, including the new test_bedgraph_reader_normalises_ensembl_chromosome_names."
+      ],
+      "cannot_verify": "The freeze receipt stores hashes but no bytes, and registration/freeze.py copies only the registration; no archived copy of the frozen compartment.py exists anywhere in the campaign, and the working file has been overwritten. The claim 'the only change is the name adapter' therefore cannot be checked cryptographically or by textual diff. It is supported by the behavioural and numerical evidence above, which is strong but not equivalent to a diff.",
+      "additional_finding": "freeze-001's code hash 9f58860f does not match the bytes this reviewer read line by line in round 2 (f11a64f733a4fe9b00a29b429475184fd5819d4d79bf3db2c9f9cb37c9b620d8). The current file shows MINOR-1 from the round-2 review applied (thr['adjusted_to_unadjusted_ratio_min'], thr['standardised_unadjusted_rho_max'] and reg['orientation']['floor_sensitivity'] are subscripts, no longer permissive .get defaults), which accounts for the delta, but the exact bytes that were frozen as freeze-001 were never independently reviewed."
+    },
+    "q2_amendment_record": {
+      "result": "fail",
+      "honest": [
+        "amend-001 states plainly what changed, why, and that the outcome files were on disk when it was written; it names the failure artefact and records code_sha256_before.",
+        "It asserts no threshold, statistic, eligibility rule, seed or permutation count changed, and this reviewer confirmed it independently: every one of pass_criteria, orientation, null, tiles, statistics and scale_artefact_control in protocol.draft.json is byte-identical to protocol.frozen-001.json. The draft differs from the frozen registration only by the added `amendments` array (and the frozen-only `frozen_utc`).",
+        "post_freeze_changes_allowed correctly says any change beyond status/frozen_utc/predictor binding requires a new registration and a new freeze receipt, which is the procedure being followed."
+      ],
+      "defects": [
+        "The disclosure states in the past tense that the files 'were re-downloaded for intake-002 so the new intake receipt binds freeze-002'. No freeze-002 and no intake-002 exist in registration/, and data/ contains only GSE126459.intake-001. The record asserts as completed a step that has not happened.",
+        "The amendment records code_sha256_before but not code_sha256_after (776ccede...), and records no test_sha256 before or after although the test file also changed and is a freeze-bound artefact.",
+        "The amendment does not disclose that the frozen code bytes were not retained, so its own 'no other change' claim cannot be audited by a third party."
+      ]
+    },
+    "q3_pre_intake_exposure": {
+      "result": "acceptable_with_conditions",
+      "reasoning": [
+        "The amendment carries no tunable degree of freedom. There is exactly one way to map '1' to 'chr1'; the change cannot be steered toward a direction, a clone or an effect size, and it cannot encode anything learned from the values.",
+        "The facts used to diagnose it - track header text, chromosome-name counts, interval width 500000, starts on the grid - are format geometry and carry no information about PC1 values or their relation to the predictor.",
+        "run-001 produced nothing to see: zero eligible tiles meant the correlation helpers returned NaN on empty inputs and the run crashed in decile_contrast before any summary was written. No orientation statistic, rho, p-value or per-tile value existed to be observed.",
+        "The decisive check is that the pass rule did not move while the files sat on disk: all six threshold-bearing sections of the draft registration are byte-identical to the pre-intake frozen registration. The freeze-001 registration hash 2d51b704 remains the binding record of the thresholds, and the predictor table hash 680ba998 is unchanged since before intake.",
+        "Residual risk that cannot be excluded from artefacts alone: whether anyone looked at values while the files were on disk. The mitigation is structural rather than evidential - the thresholds are hash-bound and unchanged, and the code delta is numerically inert on chr-prefixed data."
+      ],
+      "conditions": [
+        "freeze-002 and intake-002 must exist before run-002 and must bind the current code, test, requirements lock, predictor table and registration.",
+        "The re-downloaded files' sha256 must be compared against the intake-001 hashes and any mismatch reported loudly rather than silently resolved.",
+        "protocol.frozen-002 must be confirmed byte-identical to protocol.frozen-001 apart from the amendments array and frozen_utc.",
+        "The public record must carry results/run-001/FAILED.md, format-check.txt, intake-001, freeze-001 and amend-001 verbatim, so a reader can see that a run was attempted, failed on format, and was repaired without touching the rule."
+      ]
+    },
+    "required_repairs_round_3": [
+      "R3-1: correct amend-001.disclosure so it distinguishes what has happened from what is planned; the re-download, freeze-002 and intake-002 do not yet exist. Add code_sha256_after, test_sha256_before/after, and the name of the added test.",
+      "R3-2: make registration/freeze.py archive the exact bytes it hashes (a copy of compartment.py and test_compartment.py beside protocol.frozen-NNN.json). A receipt that stores only hashes can prove that something changed but never that only one thing changed; this round is the first time that mattered and it will matter again.",
+      "R3-3: before run-002, produce freeze-002 and intake-002, verify re-downloaded hashes against intake-001, and confirm the frozen thresholds are unchanged.",
+      "R3-4: record in the public account that freeze-001's code bytes (9f58860f) differ from the bytes reviewed in round 2 (f11a64f7) because round-2 repair MINOR-1 was applied between the review and the freeze, and that the frozen bytes themselves were never independently reviewed."
+    ],
+    "verdict": "PASS_WITH_REPAIRS"
+  }
+}

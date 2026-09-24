@@ -1,0 +1,47 @@
+{
+  "v": 1,
+  "audit_date_utc": "2026-09-24",
+  "databases": [
+    {"name": "Europe PMC REST search", "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/search", "coverage": "MED (PubMed), PMC, PPR (preprints incl. bioRxiv), AGR etc."},
+    {"name": "Europe PMC full text", "endpoint": "https://www.ebi.ac.uk/europepmc/webservices/rest/{PMCID}/fullTextXML"},
+    {"name": "NCBI GEO DataSets (esearch/esummary, db=gds)", "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/"},
+    {"name": "NCBI GEO accession SOFT metadata", "endpoint": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?...&form=text"},
+    {"name": "WebSearch (general web)", "endpoint": "claude-code WebSearch"},
+    {"name": "local retained capture", "endpoint": "<retained local capture of Shen 2026 full text (Ghostget capture, not tracked)>"}
+  ],
+  "queries": [
+    {"id": "q1", "db": "europepmc", "ts_utc": "2026-09-24T17:52:20Z", "query": "LMNA AND \"Hi-C\" AND \"lamina-associated\" AND cardiomyocyte", "hits": 14},
+    {"id": "q2", "db": "europepmc", "ts_utc": "2026-09-24T17:52:26Z", "query": "R225X AND (compartment OR \"Hi-C\")", "hits": 15},
+    {"id": "q3", "db": "europepmc", "ts_utc": "2026-09-24T17:52:27Z", "query": "GSE126459 OR GSE126460 OR GSE300197", "hits": 1},
+    {"id": "q4", "db": "europepmc", "ts_utc": "2026-09-24T17:52:28Z", "query": "\"lamin A/C\" AND depletion AND compartment AND \"Hi-C\" AND human", "hits": 120},
+    {"id": "q5", "db": "europepmc", "ts_utc": "2026-09-24T17:52:41Z", "query": "CITES:31395619_MED AND (LAD OR \"lamina-associated\" OR LMNB1 OR DamID)", "hits": 28},
+    {"id": "q6", "db": "europepmc", "ts_utc": "2026-09-24T17:52:45Z", "query": "CITES:41891953_MED", "hits": 1},
+    {"id": "q7", "db": "europepmc", "ts_utc": "2026-09-24T17:52:47Z", "query": "\"Hi-C\" AND (\"lamin B1\" OR LMNB1) AND (LMNA) AND (hiPSC OR \"iPSC\") AND compartment", "hits": 21},
+    {"id": "q8", "db": "europepmc", "ts_utc": "2026-09-24T17:52:49Z", "query": "Shah AND \"lamina-chromatin\" AND LMNA", "hits": 15},
+    {"id": "q9", "db": "europepmc", "ts_utc": "2026-09-24T17:52:50Z", "query": "(\"acute\" OR \"knockdown\" OR \"degron\") AND \"lamin\" AND \"LAD\" AND \"compartment\" AND (\"Hi-C\") AND (\"comparison\" OR \"correlat*\")", "hits": 71},
+    {"id": "q10", "db": "europepmc", "ts_utc": "2026-09-24T17:54:25Z", "query": "(\"lamina-associated domain\" OR LAD) AND (\"A/B compartment\" OR \"compartment switch*\") AND (\"lamin A/C\" OR LMNA) AND (correlat* OR \"anti-correlat*\") AND (SRC:PPR OR SRC:MED OR SRC:PMC)", "hits": 68},
+    {"id": "q11", "db": "europepmc", "ts_utc": "2026-09-24T17:54:27Z", "query": "\"gain\" AND \"lamina association\" AND \"compartment B\" AND LMNA", "hits": 2},
+    {"id": "q12", "db": "europepmc", "ts_utc": "2026-09-24T17:54:28Z", "query": "ABSTRACT:\"cardiac laminopathy\" AND (\"Hi-C\" OR compartment) AND (\"LAD\" OR lamina)", "hits": 0},
+    {"id": "epmc_abs1", "db": "europepmc", "ts_utc": "2026-09-24T17:54:08Z", "query": "DOI:\"10.1016/j.molcel.2018.05.017\" (Zheng 2018 Mol Cell)", "hits": 1},
+    {"id": "epmc_abs2", "db": "europepmc", "ts_utc": "2026-09-24T17:54:09Z", "query": "TITLE:\"Differential contributions of nuclear lamina association and genome compartmentalization to gene regulation\"", "hits": 2},
+    {"id": "epmc_abs3", "db": "europepmc", "ts_utc": "2026-09-24T17:54:10Z", "query": "PMID:23152449 (McCord 2013; EPMC PMID: syntax returned 0 — record retrieved instead via GEO GSE41763 summary)", "hits": 0},
+    {"id": "geo_lmna_hic", "db": "geo_gds", "ts_utc": "2026-09-24T17:53:25Z", "query": "LMNA[All Fields] AND (\"Homo sapiens\"[Organism]) AND (hi-c[All Fields] OR \"chromosome conformation\"[All Fields])", "hits": 13},
+    {"id": "geo_lmnb_lmna", "db": "geo_gds", "ts_utc": "2026-09-24T17:53:26Z", "query": "LMNA[All Fields] AND \"Homo sapiens\"[Organism] AND (lamin B1[All Fields] OR LMNB1[All Fields] OR DamID[All Fields]) AND (cardiomyocyte[All Fields] OR iPSC[All Fields])", "hits": 14},
+    {"id": "geo_progerin", "db": "geo_gds", "ts_utc": "2026-09-24T17:53:27Z", "query": "progeria[All Fields] AND \"Homo sapiens\"[Organism] AND (hi-c[All Fields] OR \"chromosome conformation\"[All Fields])", "hits": 18},
+    {"id": "geo_shah", "db": "geo_gds", "ts_utc": "2026-09-24T17:53:51Z", "query": "lamina[All Fields] AND LMNA[All Fields] AND \"Homo sapiens\"[Organism] AND (cardiomyocyte[All Fields]) AND gse[Filter]", "hits": 5},
+    {"id": "geo_lmnaKD", "db": "geo_gds", "ts_utc": "2026-09-24T17:53:52Z", "query": "LMNA[All Fields] AND (knockdown OR siRNA OR degron OR knockout) AND \"Homo sapiens\"[Organism] AND (hi-c[All Fields] OR \"compartment\"[All Fields]) AND gse[Filter]", "hits": 0},
+    {"id": "ws1", "db": "websearch", "ts_utc": "2026-09-24T17:52:30Z", "query": "lamin A/C knockdown lamina-associated domains Hi-C compartment comparison LMNA mutant cardiomyocytes \"Bertero\" LMNB1 CUT&RUN", "hits": 9},
+    {"id": "ws2", "db": "websearch", "ts_utc": "2026-09-24T17:52:30Z", "query": "LMNA mutation Hi-C A/B compartment human iPSC cardiomyocytes lamin B1 DamID LADs compartment switching laminopathy", "hits": 9},
+    {"id": "ws3", "db": "websearch", "ts_utc": "2026-09-24T17:52:31Z", "query": "Zheng 2018 Mol Cell lamins organize chromatin compartments mESC Lmna Lmnb1 Lmnb2 triple knockout Hi-C LAD compartment B to A GSE89520", "hits": 9},
+    {"id": "ws4", "db": "websearch", "ts_utc": "2026-09-24T17:52:32Z", "query": "progeria HGPS Hi-C compartment loss lamin B1 LAD McCord 2013 Genome Research; LMNA knockdown Hi-C human cells compartment change lamin B1 ChIP-seq", "hits": 18},
+    {"id": "ft1", "db": "europepmc_fulltext", "ts_utc": "2026-09-24T17:50:29Z", "query": "PMC6719452/fullTextXML (Bertero 2019)", "hits": 1},
+    {"id": "ft2", "db": "europepmc_fulltext", "ts_utc": "2026-09-24T17:53:08Z", "query": "PMC8106635/fullTextXML (Shah 2021 Cell Stem Cell)", "hits": 0, "note": "not open access on Europe PMC; metadata used instead (GEO GSE136252)"},
+    {"id": "geo_meta", "db": "geo_soft", "ts_utc": "2026-09-24T17:51:22Z", "query": "GSE126458, GSE126459, GSE126460, GSE300197, GSM3602088, GSM9055530 SOFT metadata", "hits": 6},
+    {"id": "geo_meta2", "db": "geo_soft", "ts_utc": "2026-09-24T17:53:48Z", "query": "GSE314556, GSE221288, GSE312029, GSE41763, GSE136252 SOFT metadata", "hits": 5},
+    {"id": "local1", "db": "local_capture", "ts_utc": "2026-09-24T17:49:00Z", "query": "grep -i 'Hi-C|compartment|PC1|A/B|Bertero|vulnerable|gain' over jcb-2026-lmna.md (Shen 2026 full text)", "hits": 0, "note": "0 hits for Hi-C / compartment / PC1 / A/B in body text; 3 Bertero citation mentions"}
+  ],
+  "failed_or_blocked": [
+    {"target": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6719452/ via WebFetch", "ts_utc": "2026-09-24T17:48:40Z", "reason": "reCAPTCHA interstitial; substituted Europe PMC JATS XML"},
+    {"target": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126459 via WebFetch", "ts_utc": "2026-09-24T17:48:40Z", "reason": "reCAPTCHA interstitial; substituted SOFT text view"}
+  ]
+}

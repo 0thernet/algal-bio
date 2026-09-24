@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE eSummaryResult PUBLIC "-//NLM//DTD esummary v1 20041029//EN" "https://eutils.ncbi.nlm.nih.gov/eutils/dtd/20041029/esummary-v1.dtd">
+<eSummaryResult>
+<DocSum>
+	<Id>200305237</Id>
+	<Item Name="Accession" Type="String">GSE305237</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Mutation-Agnostic Base Editing of the Progerin Farnesylation Site Rescues Hutchinson-Gilford Progeria Syndrome Phenotypes in Neuromuscular Organoids</Item>
+	<Item Name="summary" Type="String">Hutchinson-Gilford Progeria Syndrome (HGPS) is a rare, fatal premature aging disorder caused by a de novo mutation in the LMNA gene that leads to the production of progerin, a farnesylated, pathogenic form of lamin A. Treatment with farnesyltransferase inhibitors achieves significant yet limited life extension, highlighting progerin farnesylation as a key pathogenic driver of HGPS. In this study, rather than correcting the single pathogenic point mutation, we introduce Farnesylation Amino acid Targeted Editing (FATE), a novel, mutation-agnostic precision genome editing strategy that selectively disrupts the farnesylation site of LMNA. Next-generation sequencing confirmed that FATE exclusively edits the LMNA locus without inducing off-target mutations or affecting other genes encoding farnesylated proteins. Using neuromuscular organoids (NMOs) derived from two isogenic pairs of human pluripotent stem cells (hPSCs) carrying the HGPS mutation (HGPS-hPSCs), we found perinuclear progerin accumulation exclusive to the muscular compartment to be associated with defective formation of DNA damage foci and loss of perinuclear heterochromatin. Notably, applying FATE to HGPS-hPSCs successfully abolished these muscle-specific pathologies in subsequently-derived NMOs. Direct delivery of FATE mRNA into HGPS-NMOs likewise effectively inhibited perinuclear accumulation of progerin and rescued the formation of DNA damage repair foci. These findings demonstrate FATE as a broadly applicable, mutation-agnostic editing approach that targets a fundamental pathogenic mechanism in HGPS and therefore has feasible utility in clinical application.</Item>
+	<Item Name="GPL" Type="String">24676</Item>
+	<Item Name="GSE" Type="String">305237</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2026/07/13</Item>
+	<Item Name="suppFile" Type="String">MTX, TSV</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9166521</Item>
+			<Item Name="Title" Type="String">Human Neuromuscular Organoid, HGPS</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9166522</Item>
+			<Item Name="Title" Type="String">Human Neuromuscular Organoid, EDIT</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9166523</Item>
+			<Item Name="Title" Type="String">Human Neuromuscular Organoid, FATE</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List"></Item>
+	<Item Name="n_samples" Type="Integer">3</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List"></Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE305nnn/GSE305237/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200314556</Id>
+	<Item Name="Accession" Type="String">GSE314556</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Lamin A/C maintains genome topology and regulates transcriptional programs essential for virus-driven B cell activation. [Hi-C]</Item>
+	<Item Name="summary" Type="String">Lamin A/C is a crucial structural component of the nuclear lamina that influences chromatin organization and gene regulation. In this study, we demonstrate that lamin A/C is vital for maintaining higher-order genome organization and transcriptional programs that support EBV-driven B-cell activation. Loss of lamin A/C in a B-lymphoblastoid cell line caused significant three-dimensional reorganization of the genome, evidenced by the loss of long-range chromatin loops, an increase in short-range contacts, and redistribution of H3K9me2- marked heterochromatin. These structural disruptions were linked to widespread changes in gene expression affecting metabolic, signaling, and differentiation pathways. Mechanistically, lamin A/C influences the nuclear positioning and transcription of CTCF-bound loci by preventing their relocation to the periphery and their association with lamin B1. Blocking H3K9me2 deposition mimicked the transcriptional effects of lamin A/C depletion and revealed increased sensitivity to PI3K inhibitors. Overall, our results identify lamin A/C as a key organizer of genome structure and epigenetic regulation in EBV-infected B cells, uncovering a lamin-dependent pathway that connects nuclear architecture, metabolism, and viral disease processes.</Item>
+	<Item Name="GPL" Type="String">16791</Item>
+	<Item Name="GSE" Type="String">314556</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Other</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2026/02/11</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9401861</Item>
+			<Item Name="Title" Type="String">HiC of LMNAC WT, replicate 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9401863</Item>
+			<Item Name="Title" Type="String">HiC of LMNAC KO, replicate 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9401860</Item>
+			<Item Name="Title" Type="String">HiC of LMNAC WT, replicate 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9401862</Item>
+			<Item Name="Title" Type="String">HiC of LMNAC KO, replicate 1</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List"></Item>
+	<Item Name="n_samples" Type="Integer">4</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">41648489</Item>
+	</Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE314nnn/GSE314556/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200306294</Id>
+	<Item Name="Accession" Type="String">GSE306294</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">An RNA polymerase III tissue and tumor atlas uncovers context-specific activities linked to 3D epigenome regulatory mechanisms</Item>
+	<Item Name="summary" Type="String">RNA polymerase III (Pol III) produces a plethora of small noncoding RNA species involved in diverse cellular processes, from transcription regulation and splicing to RNA stability, translation, and proteostasis. Though Pol III activity is broadly coupled with cellular demands for protein synthesis and growth, a more precise understanding of gene-level dynamics and context-specific expression patterns remains missing, in part due to multiple challenges related to sequencing and mapping Pol III-derived small ncRNAs. Here, we establish a predictive multi-tissue map of Pol III activity across 19 tissues and 22 primary cancers by comprehensively profiling the chromatin accessibility of canonical Pol III-transcribed gene classes. Our framework relies on the unique relationship between gene accessibility and Pol III transcription, inferring activity through uniform binary classification of ATAC-seq enrichment at Pol III-transcribed genes. By characterizing multi-context gene uniformity, we provide a definition of the core Pol III transcriptome, broadly active across specialized tissues, and catalog genes with varied levels of context specificity. Our genomic Pol III atlas uncovers variable levels of activity across tissues, including sharp contraction of the Pol III transcriptome in heart and brain tissues and frequent expansion across diverse cancers. We show that both tissue- and tumor-specific genes are significantly enriched within lamina-associated domains (LADs), and that aberrant expression of nuclear lamin proteins is sufficient to induce Pol III- emergent patterns at tumor-specific genes. Together, these findings link Pol III dynamics to subnuclear compartment- alization and provide a resource for better understanding Pol III expansion and small RNA biogenesis in cancer.</Item>
+	<Item Name="GPL" Type="String">34284</Item>
+	<Item Name="GSE" Type="String">306294</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Genome binding/occupancy profiling by high throughput sequencing; Non-coding RNA profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2026/01/30</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196915</Item>
+			<Item Name="Title" Type="String">HEK293 , GFP , Rep1 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196918</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNA , Rep1 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196906</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNA , Rep1 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196909</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB1 , Rep1 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196926</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB2 , Rep3 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196912</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB2 , Rep1 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196924</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB2 , Rep1 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196910</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB1 , Rep2 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196913</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB2 , Rep2 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196907</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNA , Rep2 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196921</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB1 , Rep1 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196925</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB2 , Rep2 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196905</Item>
+			<Item Name="Title" Type="String">HEK293 , GFP , Rep3 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196908</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNA , Rep3 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196904</Item>
+			<Item Name="Title" Type="String">HEK293 , GFP , Rep2 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196916</Item>
+			<Item Name="Title" Type="String">HEK293 , GFP , Rep2 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196919</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNA , Rep2 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196922</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB1 , Rep2 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196903</Item>
+			<Item Name="Title" Type="String">HEK293 , GFP , Rep1 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196914</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB2 , Rep3 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196923</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB1 , Rep3 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196917</Item>
+			<Item Name="Title" Type="String">HEK293 , GFP , Rep3 , ATAC</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196911</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNB1 , Rep3 , smallRNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM9196920</Item>
+			<Item Name="Title" Type="String">HEK293 , LMNA , Rep3 , ATAC</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List"></Item>
+	<Item Name="n_samples" Type="Integer">24</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">40949979</Item>
+	</Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE306nnn/GSE306294/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200221288</Id>
+	<Item Name="Accession" Type="String">GSE221288</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Gene regulatory loops at lamina-associated domains</Item>
+	<Item Name="summary" Type="String">The nuclear lamina provides a repressive chromatin environment at the nuclear periphery. However, whereas most genes in lamina-associated domains (LADs) are repressed, approximately ten percent reside in local euchromatic contexts and are expressed. How these genes are regulated and whether they are able to contact regulatory elements in LADs or outside LADs remains unclear. Here, we integrate transcriptomic, chromatin states, microscopy and publicly available enhancer-capture Hi-C data to show that expressed genes in LADs are able to connect to enhancers in LADs and inter-LADs. Our data favor a model where the spatial topology of chromatin at the nuclear lamina is compatible with transcriptional regulation in this dynamic nuclear compartment.</Item>
+	<Item Name="GPL" Type="String">20301;18573;24676</Item>
+	<Item Name="GSE" Type="String">221288</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Genome binding/occupancy profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2023/01/01</Item>
+	<Item Name="suppFile" Type="String">BED, BEDGRAPH, BROADPEAK, BW, NARROWPEAK</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857884</Item>
+			<Item Name="Title" Type="String">D0_LMNA_Rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857893</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_INPUT</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857887</Item>
+			<Item Name="Title" Type="String">D3_LMNA_Rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857890</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_H3K27me3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857886</Item>
+			<Item Name="Title" Type="String">D1_LMNA_Rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857889</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_H3K4me3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857892</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_H3K4me1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857895</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_H3K9me3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857891</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_H3K27ac</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857894</Item>
+			<Item Name="Title" Type="String">ChIPseq_PROLIF_G_H3K36me3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857883</Item>
+			<Item Name="Title" Type="String">D0_LMNA_Rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857885</Item>
+			<Item Name="Title" Type="String">D1_LMNA_Rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM6857888</Item>
+			<Item Name="Title" Type="String">D3_LMNA_Rep2</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List"></Item>
+	<Item Name="n_samples" Type="Integer">13</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">36833261</Item>
+	</Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE221nnn/GSE221288/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200198412</Id>
+	<Item Name="Accession" Type="String">GSE198412</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Nuclear lamina binds the EBV genome during latency and regulates viral gene expression [Hi-C]</Item>
+	<Item Name="summary" Type="String">Approximately 90% of the world population is infected with EBV and carries the virus in a silent, asymptomatic state for life. In immunocompromised individuals, EBV infection can cause B-cell transformation and malignancies. One approach to control EBV infectivity is by changing the expression of viral genes. We are interested in how epigenetics contributes to regulating the gene expression patterns adopted by EBV during latency. The host’s hijacking is a well know strategy adopted by viruses to modify the epigenome, the transcriptome and the proteome of the host with the aim to survive and remain silent in the host. We observed that in B cells, EBV infection mimics antigen-mediated activation, resulting in the induction of specific proteins named Lamin A/C. Lamins have multiple and central roles: they provide nuclear physical support, anchor the heterochromatin to the nuclear periphery and seem to play a role in several nuclear functions requiring the chromatin structure rearrangement. The interaction with lamins has already been studied in the context of EBV lytic reactivation, but their role in the control of the EBV latency states and as epigenetic regulators of different EBV genes expression profiles has not been investigated. The binding of the Lamin AC to important regulatory regions of EBV genome was assessed through ChIP-Seq, and gene expression (RNA-Seq) profiles were evaluated in wild type and Lamin AC KO cell lines. Differences in protein and RNA expressions in B cells activated by using both EBV and a simulation of the immune response were analyzed. Our data suggest two main conclusions: lamins might contribute to the epigenetic control of EBV genes expression during latency changing the interaction of the host structural proteins with key regulatory regions in the viral genome and a possible mechanism with who EBV modifies the nucleus and hijacks cellular mechanisms.</Item>
+	<Item Name="GPL" Type="String">30446</Item>
+	<Item Name="GSE" Type="String">198412</Item>
+	<Item Name="taxon" Type="String">Homo sapiens; human gammaherpesvirus 4</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Other</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2022/04/08</Item>
+	<Item Name="suppFile" Type="String">BED, MATRIX</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM5946398</Item>
+			<Item Name="Title" Type="String">Lamin AC WT cells, replicate 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM5946399</Item>
+			<Item Name="Title" Type="String">Lamin AC KO cells, replicate 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM5946397</Item>
+			<Item Name="Title" Type="String">Lamin AC WT cells, replicate 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM5946400</Item>
+			<Item Name="Title" Type="String">Lamin AC KO cells, replicate 2</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List"></Item>
+	<Item Name="n_samples" Type="Integer">4</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">35421198</Item>
+	</Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE198nnn/GSE198412/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200124409</Id>
+	<Item Name="Accession" Type="String">GSE124409</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Nuclear peripheral chromatin-lamin B1 interaction is required for global integrity of chromatin architecture and dynamics in human cells</Item>
+	<Item Name="summary" Type="String">Background: The eukaryotic genome is folded into higher-order conformation accompanied with constrained dynamics for coordinated genome functions. However, the molecular machinery underlying these hierarchically organized three-dimensional (3D) chromatin architecture and dynamics remains poorly understood. Results: Here by combining imaging and sequencing, we studied the role of lamin B1 in chromatin architecture and dynamics. We found that lamin B1 depletion leads to chromatin redistribution and decompaction. Consequently, lamina-associated domains (LADs) are detached from the nuclear periphery. The inter-chromosomal interactions and overlap between chromosome territories are increased. Moreover, Hi-C data revealed that lamin B1 is required for the integrity and segregation of chromatin compartments but not for the topologically associating domains (TADs). Using live cell single molecule tracking, we further proved that depletion of lamin B1 leads to increased chromatin dynamics, owing to chromatin decompaction and redistribution toward nucleoplasm. Conclusions: Taken together, our data suggest that lamin B1 and chromatin interactions at the nuclear periphery promote LAD maintenance, genomic compartmentalization into chromosome territories and A/B compartments and confine chromatin dynamics, supporting its crucial role in chromatin higher-order structure and chromatin dynamics.</Item>
+	<Item Name="GPL" Type="String">20795;24676</Item>
+	<Item Name="GSE" Type="String">124409</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by high throughput sequencing; Other; Genome binding/occupancy profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2020/11/08</Item>
+	<Item Name="suppFile" Type="String">BED, BW, MATRIX, TAR, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557164</Item>
+			<Item Name="Title" Type="String">ChIP-seq LMNB1-KO laminA rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557167</Item>
+			<Item Name="Title" Type="String">ChIP-seq LMNB1-KO input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532137</Item>
+			<Item Name="Title" Type="String">RNA-seq LMNB1-KO rep3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532129</Item>
+			<Item Name="Title" Type="String">Hi-C WT rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557169</Item>
+			<Item Name="Title" Type="String">ATAC-seq LMNB1-KO</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532128</Item>
+			<Item Name="Title" Type="String">Hi-C WT rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532131</Item>
+			<Item Name="Title" Type="String">Hi-C LMNB1-KO rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532134</Item>
+			<Item Name="Title" Type="String">RNA-seq WT rep3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557161</Item>
+			<Item Name="Title" Type="String">ChIP-seq WT laminA rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532130</Item>
+			<Item Name="Title" Type="String">Hi-C LMNB1-KO rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557160</Item>
+			<Item Name="Title" Type="String">ChIP-seq WT laminA rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532133</Item>
+			<Item Name="Title" Type="String">RNA-seq WT rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557166</Item>
+			<Item Name="Title" Type="String">ChIP-seq LMNB1-KO laminA rep3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557163</Item>
+			<Item Name="Title" Type="String">ChIP-seq WT input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532136</Item>
+			<Item Name="Title" Type="String">RNA-seq LMNB1-KO rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532132</Item>
+			<Item Name="Title" Type="String">RNA-seq WT rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557165</Item>
+			<Item Name="Title" Type="String">ChIP-seq LMNB1-KO laminA rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3532135</Item>
+			<Item Name="Title" Type="String">RNA-seq LMNB1-KO rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557162</Item>
+			<Item Name="Title" Type="String">ChIP-seq WT laminA rep3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4557168</Item>
+			<Item Name="Title" Type="String">ATAC-seq WT</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List">
+		<Item Name="ExtRelation" Type="Structure">
+			<Item Name="RelationType" Type="String">SRA</Item>
+			<Item Name="TargetObject" Type="String">SRP174547</Item>
+			<Item Name="TargetFTPLink" Type="String">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP174/SRP174547/</Item>
+		</Item>
+	</Item>
+	<Item Name="n_samples" Type="Integer">20</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">33155082</Item>
+	</Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE124nnn/GSE124409/</Item>
+	<Item Name="GEO2R" Type="String">yes</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200126460</Id>
+	<Item Name="Accession" Type="String">GSE126460</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Gene expression and chromatin organization changes in lamin A/C haploinsufficient human induced pluripotent stem cell-derived cardiomyocytes</Item>
+	<Item Name="summary" Type="String">This SuperSeries is composed of the SubSeries listed below.</Item>
+	<Item Name="GPL" Type="String">18573</Item>
+	<Item Name="GSE" Type="String">126460</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by high throughput sequencing; Other</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2019/02/13</Item>
+	<Item Name="suppFile" Type="String">BEDGRAPH, MATRIX, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602084</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 2 rep 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602081</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 1 rep 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602087</Item>
+			<Item Name="Title" Type="String">RNA-seq library mutant rep 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602083</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 2 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602092</Item>
+			<Item Name="Title" Type="String">Hi-C library mutant rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602080</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 1 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602089</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 1 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602086</Item>
+			<Item Name="Title" Type="String">RNA-seq library mutant rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602088</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 1 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602085</Item>
+			<Item Name="Title" Type="String">RNA-seq library mutant rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602091</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 2 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602082</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 2 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602093</Item>
+			<Item Name="Title" Type="String">Hi-C library mutant rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602090</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 2 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602079</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 1 rep 1</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List"></Item>
+	<Item Name="n_samples" Type="Integer">15</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List"></Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126460/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200126459</Id>
+	<Item Name="Accession" Type="String">GSE126459</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Gene expression and chromatin organization changes in lamin A/C haploinsufficient human induced pluripotent stem cell-derived cardiomyocytes [Hi-C]</Item>
+	<Item Name="summary" Type="String">Pathogenic mutations in A-type nuclear lamins may dysregulate gene expression due to changes in chromatin organization into active (A) and inactive (B) compartments. To test this, we performed genome-wide chromosome conformation analyses (Hi-C) and transcriptome profiling (RNA-seq) in human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM) with a haploinsufficient mutation for Lamin A/C that causes cardiac laminopathy. Mutant hiPSC-CM have marked electrophysiological, contractile, and gene expression alterations. While large-scale changes in chromatin topology are evident, differences in chromatin compartmentalization are limited to a few hotspots. These regions normally transition from A to B during cardiogenesis, but remain in A in mutant hiPSC-CM. Non-cardiac genes located within such aberrant domains are ectopically expressed, including the neuronal P/Q-type calcium channel CACNA1A. Pharmacological inhibition of the resulting currents partially mitigates elongation of field potential duration in mutant hiPSC-CM. On the other hand, A/B compartment changes do not explain most gene expression alterations observed in mutant hiPSC-CM, putting in perspective the role of chromatin organization dysregulation in cardiac laminopathy.</Item>
+	<Item Name="GPL" Type="String">18573</Item>
+	<Item Name="GSE" Type="String">126459</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Other</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2019/02/13</Item>
+	<Item Name="suppFile" Type="String">BEDGRAPH, MATRIX, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602088</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 1 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602091</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 2 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602093</Item>
+			<Item Name="Title" Type="String">Hi-C library mutant rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602090</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 2 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602089</Item>
+			<Item Name="Title" Type="String">Hi-C library corrected 1 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602092</Item>
+			<Item Name="Title" Type="String">Hi-C library mutant rep 1</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List">
+		<Item Name="ExtRelation" Type="Structure">
+			<Item Name="RelationType" Type="String">SRA</Item>
+			<Item Name="TargetObject" Type="String">SRP185715</Item>
+			<Item Name="TargetFTPLink" Type="String">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP185/SRP185715/</Item>
+		</Item>
+	</Item>
+	<Item Name="n_samples" Type="Integer">6</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List"></Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126459/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200126458</Id>
+	<Item Name="Accession" Type="String">GSE126458</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Gene expression and chromatin organization changes in lamin A/C haploinsufficient human induced pluripotent stem cell-derived cardiomyocytes [RNA-seq]</Item>
+	<Item Name="summary" Type="String">Pathogenic mutations in A-type nuclear lamins may dysregulate gene expression due to changes in chromatin organization into active (A) and inactive (B) compartments. To test this, we performed genome-wide chromosome conformation analyses (Hi-C) and transcriptome profiling (RNA-seq) in human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM) with a haploinsufficient mutation for Lamin A/C that causes cardiac laminopathy. Mutant hiPSC-CM have marked electrophysiological, contractile, and gene expression alterations. While large-scale changes in chromatin topology are evident, differences in chromatin compartmentalization are limited to a few hotspots. These regions normally transition from A to B during cardiogenesis, but remain in A in mutant hiPSC-CM. Non-cardiac genes located within such aberrant domains are ectopically expressed, including the neuronal P/Q-type calcium channel CACNA1A. Pharmacological inhibition of the resulting currents partially mitigates elongation of field potential duration in mutant hiPSC-CM. On the other hand, A/B compartment changes do not explain most gene expression alterations observed in mutant hiPSC-CM, putting in perspective the role of chromatin organization dysregulation in cardiac laminopathy.</Item>
+	<Item Name="GPL" Type="String">18573</Item>
+	<Item Name="GSE" Type="String">126458</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2019/02/13</Item>
+	<Item Name="suppFile" Type="String">DIFF, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602084</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 2 rep 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602087</Item>
+			<Item Name="Title" Type="String">RNA-seq library mutant rep 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602081</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 1 rep 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602086</Item>
+			<Item Name="Title" Type="String">RNA-seq library mutant rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602083</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 2 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602080</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 1 rep 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602079</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 1 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602082</Item>
+			<Item Name="Title" Type="String">RNA-seq library corrected 2 rep 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3602085</Item>
+			<Item Name="Title" Type="String">RNA-seq library mutant rep 1</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List">
+		<Item Name="ExtRelation" Type="Structure">
+			<Item Name="RelationType" Type="String">SRA</Item>
+			<Item Name="TargetObject" Type="String">SRP185716</Item>
+			<Item Name="TargetFTPLink" Type="String">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP185/SRP185716/</Item>
+		</Item>
+	</Item>
+	<Item Name="n_samples" Type="Integer">9</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List"></Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200081671</Id>
+	<Item Name="Accession" Type="String">GSE81671</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Genome models integrating chromatin contacts and nuclear lamin-genome interactions reveal implications of laminopathy-causing lamin mutations on genome architecture</Item>
+	<Item Name="summary" Type="String">Processes shaping the 3-dimensional (3D) human genome remain elusive. We present Chrom3D, a user-friendly 3D whole-genome modeling software that dynamically simulates the radial positioning of topological domains (TADs) in the nucleus. We integrate Hi-C and lamin-associated domain (LAD) information to generate high-resolution ensembles of models that recapitulate single-cell TAD distribution. Chrom3D reveals dynamic TADs and TADs constitutively placed at the nuclear periphery or nuclear interior. TAD stability in these compartments is consistent with differences in TAD gene density and expression level. A- and B-type lamins as radial constraints differentially skew LAD distribution towards the nuclear interior or periphery. Predictions of radial LAD placement in model ensembles are validated by quantitative imaging. Chrom3D models reveal unexpected features of LAD regulation in the nuclear interior in cells from laminopathy patients with a LMNA mutation. Integration of radial positioning constraints in 3D genome models enables the study spatial gene regulation in disease contexts.</Item>
+	<Item Name="GPL" Type="String">16791</Item>
+	<Item Name="GSE" Type="String">81671</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by high throughput sequencing; Genome binding/occupancy profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2016/12/22</Item>
+	<Item Name="suppFile" Type="String">BED, FPKM_TRACKING</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166099</Item>
+			<Item Name="Title" Type="String">HSF_CTL-2_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166079</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p3_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166096</Item>
+			<Item Name="Title" Type="String">HSF_CTL-3_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166076</Item>
+			<Item Name="Title" Type="String">HSF_CTL-1_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166090</Item>
+			<Item Name="Title" Type="String">HeLa_flagLMNA_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166087</Item>
+			<Item Name="Title" Type="String">HSF_CTL-2_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166093</Item>
+			<Item Name="Title" Type="String">HeLa_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166094</Item>
+			<Item Name="Title" Type="String">HSF_CTL-1_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166091</Item>
+			<Item Name="Title" Type="String">HeLa_L647R_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166088</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p2_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166085</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p1_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166086</Item>
+			<Item Name="Title" Type="String">HSF_CTL-2_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166082</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p4_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166089</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p2_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166080</Item>
+			<Item Name="Title" Type="String">HSF_CTL-3_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166077</Item>
+			<Item Name="Title" Type="String">HSF_CTL-1_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166097</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p4_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166083</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p4_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166100</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p2_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166081</Item>
+			<Item Name="Title" Type="String">HSF_CTL-3_Input</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166084</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p1_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166098</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p1_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166078</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p3_LMNA</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166095</Item>
+			<Item Name="Title" Type="String">HSF_FPLD-p3_expression</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2166092</Item>
+			<Item Name="Title" Type="String">HeLa_R388P_LMNA</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List">
+		<Item Name="ExtRelation" Type="Structure">
+			<Item Name="RelationType" Type="String">SRA</Item>
+			<Item Name="TargetObject" Type="String">SRP075466</Item>
+			<Item Name="TargetFTPLink" Type="String">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP075/SRP075466/</Item>
+		</Item>
+	</Item>
+	<Item Name="n_samples" Type="Integer">25</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List"></Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE81nnn/GSE81671/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+<DocSum>
+	<Id>200041763</Id>
+	<Item Name="Accession" Type="String">GSE41763</Item>
+	<Item Name="GDS" Type="String"></Item>
+	<Item Name="title" Type="String">Correlated alterations in genome organization, histone methylation, and DNA-lamina interactions in Hutchinson-Gilford progeria syndrome (Hi-C)</Item>
+	<Item Name="summary" Type="String">Hutchinson-Gilford progeria syndrome (HGPS) is a premature aging disease that is frequently caused by a de novo point mutation at position 1824 in LMNA. This mutation activates a cryptic splice donor site in exon 11, and leads to an in-frame deletion within the prelamin A mRNA and the production of a dominant negative lamin A protein, known as progerin. Here we show that HGPS cells experience genome-wide alterations in patterns of H3K27me3 deposition, changes in the associations of genomic loci with nuclear lamin A/C, and, at late passages, genome-wide loss of spatial compartmentalization of active and inactive chromatin domains that characterizes chromosome folding in normal cells. We further demonstrate that the H3K27me3 changes associate with gene expression alterations in HGPS cells. Our results support a model that the accumulation of progerin in the nuclear lamina leads to altered H3K27me3 marks in heterochromatin, possibly through the down-regulation of EZH2, and disrupts heterochromatin-lamina interactions. These changes may then lead to the genomic disorganization and changes in transcriptional regulation we observe in HGPS fibroblasts.</Item>
+	<Item Name="GPL" Type="String">9115</Item>
+	<Item Name="GSE" Type="String">41763</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Genome binding/occupancy profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String"></Item>
+	<Item Name="valType" Type="String"></Item>
+	<Item Name="SSInfo" Type="String"></Item>
+	<Item Name="subsetInfo" Type="String"></Item>
+	<Item Name="PDAT" Type="String">2012/10/30</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM1023733</Item>
+			<Item Name="Title" Type="String">Hi-C Normal Age-Control Fibroblasts p20</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM1023734</Item>
+			<Item Name="Title" Type="String">Hi-C Progeria (HGPS) Fibroblasts p17</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM1023732</Item>
+			<Item Name="Title" Type="String">Hi-C Normal Father Fibroblasts p18</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM1023735</Item>
+			<Item Name="Title" Type="String">Hi-C Progeria (HGPS) Fibroblasts p19</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List"></Item>
+	<Item Name="ExtRelations" Type="List">
+		<Item Name="ExtRelation" Type="Structure">
+			<Item Name="RelationType" Type="String">SRA</Item>
+			<Item Name="TargetObject" Type="String">SRP016586</Item>
+			<Item Name="TargetFTPLink" Type="String">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP016/SRP016586/</Item>
+		</Item>
+	</Item>
+	<Item Name="n_samples" Type="Integer">4</Item>
+	<Item Name="SeriesTitle" Type="String"></Item>
+	<Item Name="PlatformTitle" Type="String"></Item>
+	<Item Name="PlatformTaxa" Type="String"></Item>
+	<Item Name="SamplesTaxa" Type="String"></Item>
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">23152449</Item>
+	</Item>
+	<Item Name="Projects" Type="List"></Item>
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE41nnn/GSE41763/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+</eSummaryResult>

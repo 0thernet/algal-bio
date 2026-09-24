@@ -1,0 +1,363 @@
+{
+  "campaign_id": "lmna-acute-lamina-vs-chronic-compartment-2026-09-24",
+  "code_sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+  "contrasts": {
+    "corrected_1": {
+      "adjusted_p_negative": 0.0001999600079984003,
+      "adjusted_p_positive": 1.0,
+      "adjusted_rho": -0.14988541949822756,
+      "clone_pass": true,
+      "component_pass": {
+        "adjusted_effect": true,
+        "adjusted_p": true,
+        "adjusted_to_unadjusted_ratio": true,
+        "replicate_pairs": true,
+        "standardised_effect": true,
+        "standardised_p": true,
+        "unadjusted_effect": true,
+        "unadjusted_p": true
+      },
+      "replicate_pair_rho": {
+        "GSM3602092-GSM3602088": -0.09609404658510401,
+        "GSM3602093-GSM3602089": -0.10107251055375674
+      },
+      "replicate_pairs_all_negative": true,
+      "secondary": {
+        "baseline_pc1_vs_baseline_lamina_rho": -0.5581335852437693,
+        "decile_contrast": {
+          "mean_dpc1_bottom_decile_dlam": 0.03932326977998345,
+          "mean_dpc1_top_decile_dlam": -0.061150203034847125,
+          "n_bottom_decile": 513,
+          "n_top_decile": 513,
+          "top_minus_bottom": -0.10047347281483057
+        },
+        "dnk_arm_unadjusted_rho": -0.12568969579007816,
+        "stratum_A_baseline": {
+          "n": 2508,
+          "unadjusted_rho": -0.08146198260409668
+        },
+        "stratum_B_baseline": {
+          "n": 2613,
+          "unadjusted_rho": -0.17779346526141637
+        }
+      },
+      "standardised": {
+        "adjusted_p_negative": 0.0001999600079984003,
+        "adjusted_p_positive": 1.0,
+        "adjusted_rho": -0.1498707268668317,
+        "replicate_pairs_all_negative": true,
+        "unadjusted_p_negative": 0.0001999600079984003,
+        "unadjusted_p_positive": 1.0,
+        "unadjusted_rho": -0.11685524940086223
+      },
+      "unadjusted_p_negative": 0.0001999600079984003,
+      "unadjusted_p_positive": 1.0,
+      "unadjusted_rho": -0.12204679336242526
+    },
+    "corrected_2": {
+      "adjusted_p_negative": 0.0001999600079984003,
+      "adjusted_p_positive": 1.0,
+      "adjusted_rho": -0.1123862514635804,
+      "clone_pass": false,
+      "component_pass": {
+        "adjusted_effect": true,
+        "adjusted_p": true,
+        "adjusted_to_unadjusted_ratio": true,
+        "replicate_pairs": true,
+        "standardised_effect": false,
+        "standardised_p": true,
+        "unadjusted_effect": false,
+        "unadjusted_p": true
+      },
+      "replicate_pair_rho": {
+        "GSM3602092-GSM3602090": -0.0899166574756372,
+        "GSM3602093-GSM3602091": -0.05248428031851833
+      },
+      "replicate_pairs_all_negative": true,
+      "secondary": {
+        "baseline_pc1_vs_baseline_lamina_rho": -0.5498288234015982,
+        "decile_contrast": {
+          "mean_dpc1_bottom_decile_dlam": 0.028233115436357002,
+          "mean_dpc1_top_decile_dlam": -0.044619792565404576,
+          "n_bottom_decile": 513,
+          "n_top_decile": 513,
+          "top_minus_bottom": -0.07285290800176158
+        },
+        "dnk_arm_unadjusted_rho": -0.07540461755080911,
+        "stratum_A_baseline": {
+          "n": 2514,
+          "unadjusted_rho": -0.07694629437873374
+        },
+        "stratum_B_baseline": {
+          "n": 2607,
+          "unadjusted_rho": -0.10815338690002997
+        }
+      },
+      "standardised": {
+        "adjusted_p_negative": 0.0001999600079984003,
+        "adjusted_p_positive": 1.0,
+        "adjusted_rho": -0.11205401287014924,
+        "replicate_pairs_all_negative": true,
+        "unadjusted_p_negative": 0.0001999600079984003,
+        "unadjusted_p_positive": 1.0,
+        "unadjusted_rho": -0.07560663199515139
+      },
+      "unadjusted_p_negative": 0.0001999600079984003,
+      "unadjusted_p_positive": 1.0,
+      "unadjusted_rho": -0.07977431511586217
+    }
+  },
+  "freeze_sha256": "0f0a2d01c674da587822af3b1ed8ce59e166827b2b56c1a54b00a09bcb797f34",
+  "n_tiles_eligible": 5121,
+  "n_tiles_total": 5760,
+  "numpy": "2.3.3",
+  "orientation": {
+    "excluded_chromosomes": [
+      "chr22"
+    ],
+    "flipped": false,
+    "flipped_chromosomes": [],
+    "gene_density_rho_after_orientation": 0.48766768188131243,
+    "ok": true,
+    "per_chromosome": {
+      "chr1": {
+        "excluded": false,
+        "flipped": false,
+        "n": 438,
+        "rho": 0.56224577986696
+      },
+      "chr10": {
+        "excluded": false,
+        "flipped": false,
+        "n": 253,
+        "rho": 0.43257878407045397
+      },
+      "chr11": {
+        "excluded": false,
+        "flipped": false,
+        "n": 256,
+        "rho": 0.39784168824961036
+      },
+      "chr12": {
+        "excluded": false,
+        "flipped": false,
+        "n": 254,
+        "rho": 0.5498396111945988
+      },
+      "chr13": {
+        "excluded": false,
+        "flipped": false,
+        "n": 191,
+        "rho": 0.6208117866848153
+      },
+      "chr14": {
+        "excluded": false,
+        "flipped": false,
+        "n": 173,
+        "rho": 0.6876899693226549
+      },
+      "chr15": {
+        "excluded": false,
+        "flipped": false,
+        "n": 156,
+        "rho": 0.44104745894678327
+      },
+      "chr16": {
+        "excluded": false,
+        "flipped": false,
+        "n": 146,
+        "rho": 0.6648785928507468
+      },
+      "chr17": {
+        "excluded": false,
+        "flipped": false,
+        "n": 151,
+        "rho": 0.7159969358735643
+      },
+      "chr18": {
+        "excluded": false,
+        "flipped": false,
+        "n": 142,
+        "rho": 0.5632037260623197
+      },
+      "chr19": {
+        "excluded": false,
+        "flipped": false,
+        "n": 105,
+        "rho": 0.40885273755562646
+      },
+      "chr2": {
+        "excluded": false,
+        "flipped": false,
+        "n": 460,
+        "rho": 0.5375630084171017
+      },
+      "chr20": {
+        "excluded": false,
+        "flipped": false,
+        "n": 116,
+        "rho": 0.5848490463874919
+      },
+      "chr21": {
+        "excluded": false,
+        "flipped": false,
+        "n": 67,
+        "rho": 0.4730509419295679
+      },
+      "chr22": {
+        "excluded": true,
+        "flipped": false,
+        "n": 66,
+        "rho": 0.1262304033111138
+      },
+      "chr3": {
+        "excluded": false,
+        "flipped": false,
+        "n": 382,
+        "rho": 0.54184132373808
+      },
+      "chr4": {
+        "excluded": false,
+        "flipped": false,
+        "n": 366,
+        "rho": 0.3962394084723043
+      },
+      "chr5": {
+        "excluded": false,
+        "flipped": false,
+        "n": 345,
+        "rho": 0.5560811190920402
+      },
+      "chr6": {
+        "excluded": false,
+        "flipped": false,
+        "n": 331,
+        "rho": 0.4914682597404807
+      },
+      "chr7": {
+        "excluded": false,
+        "flipped": false,
+        "n": 302,
+        "rho": 0.4204612310553953
+      },
+      "chr8": {
+        "excluded": false,
+        "flipped": false,
+        "n": 276,
+        "rho": 0.5055575826307177
+      },
+      "chr9": {
+        "excluded": false,
+        "flipped": false,
+        "n": 211,
+        "rho": 0.5192332778122877
+      }
+    }
+  },
+  "orientation_floor_sensitivity": {
+    "0.0": {
+      "clones": {
+        "corrected_1": {
+          "adjusted_rho": -0.1473863385537958,
+          "unadjusted_rho": -0.12005103321562037
+        },
+        "corrected_2": {
+          "adjusted_rho": -0.1101489152468253,
+          "unadjusted_rho": -0.0781736042495249
+        }
+      },
+      "excluded_chromosomes": [],
+      "n_tiles": 5187
+    },
+    "0.3": {
+      "clones": {
+        "corrected_1": {
+          "adjusted_rho": -0.14988541949822756,
+          "unadjusted_rho": -0.12204679336242526
+        },
+        "corrected_2": {
+          "adjusted_rho": -0.1123862514635804,
+          "unadjusted_rho": -0.07977431511586217
+        }
+      },
+      "excluded_chromosomes": [
+        "chr22"
+      ],
+      "n_tiles": 5121
+    }
+  },
+  "outcome_hashes_verified_against_intake": true,
+  "outcome_sha256": {
+    "GSM3602088": "d55de07bb3d53f2dab18a1db91cecafabbcdbed8aca1894cd9e349fd8db90639",
+    "GSM3602089": "b1ef2fc4a34da0be0d4321d039d1449395ce9cd78d6d4a8bce10006feac36c62",
+    "GSM3602090": "00aa53fb8c2dc173f0a63e418ef5dc17644a1e5dd8c30aee9be26bf1eb822c38",
+    "GSM3602091": "49fac2772fcbb5953f14abae3dac5dfac4b761a5e3eb48cf70ba944d3ad27fc6",
+    "GSM3602092": "063dcacc409f58fbb358b830c862164da5004affa0b26ce3490e8f0862af916d",
+    "GSM3602093": "dec7df23367cddba61518cff4483332d0c8040c1ade1662225b5e9aba6fc2e15"
+  },
+  "predictor_tsv_sha256": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+  "python": "3.12.14",
+  "registered_opposite_direction": false,
+  "registered_pass": false,
+  "registered_run": true,
+  "registration_sha256": "80c668a2599bc9c3a45d01b8e3a6526cf8dd15308daf952eccfebae83dae6ab6",
+  "scale_diagnostic": {
+    "corrected_1": {
+      "genome_sd_ratio": 1.0059674424357934,
+      "median_chromosome_sd_ratio": 1.0046186158034187,
+      "per_chromosome": {
+        "chr1": 1.0053057222041237,
+        "chr10": 1.000197696876247,
+        "chr11": 1.0071206779411552,
+        "chr12": 1.0026386341240316,
+        "chr13": 1.002323342462033,
+        "chr14": 1.0042390139081996,
+        "chr15": 1.014810907552127,
+        "chr16": 1.0091237737623164,
+        "chr17": 1.0126388147421104,
+        "chr18": 1.0027976202816502,
+        "chr19": 1.0098181624356466,
+        "chr2": 1.0044357349947748,
+        "chr20": 1.0046186158034187,
+        "chr21": 1.0470699395232093,
+        "chr3": 1.0013201622026557,
+        "chr4": 1.0175832778155585,
+        "chr5": 1.009173892586489,
+        "chr6": 1.0005035948247938,
+        "chr7": 1.0041871992453726,
+        "chr8": 1.0004164368768196,
+        "chr9": 1.0048518896372802
+      }
+    },
+    "corrected_2": {
+      "genome_sd_ratio": 1.0043618544709052,
+      "median_chromosome_sd_ratio": 1.0042319829965192,
+      "per_chromosome": {
+        "chr1": 1.0042319829965192,
+        "chr10": 0.9980232988069029,
+        "chr11": 1.0057165057466149,
+        "chr12": 1.0022247611130528,
+        "chr13": 1.0044797764941993,
+        "chr14": 1.0024175355055254,
+        "chr15": 1.03603078365846,
+        "chr16": 1.0101448528592016,
+        "chr17": 1.0167933832751856,
+        "chr18": 1.00214702066053,
+        "chr19": 1.0077713033574651,
+        "chr2": 1.0034425130203954,
+        "chr20": 1.0050623209517517,
+        "chr21": 1.0621914200582891,
+        "chr3": 1.0017277736187318,
+        "chr4": 0.9963137678692403,
+        "chr5": 1.0075302133144952,
+        "chr6": 0.9975685469843566,
+        "chr7": 1.001731974186853,
+        "chr8": 0.9991769693338334,
+        "chr9": 1.0043651157191005
+      }
+    }
+  },
+  "schema": "bio.compartment-concordance-result.v2",
+  "scipy": "1.16.2",
+  "unfrozen_synthetic_run": false
+}

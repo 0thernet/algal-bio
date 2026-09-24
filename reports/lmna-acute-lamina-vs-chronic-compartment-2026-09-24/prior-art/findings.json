@@ -1,0 +1,117 @@
+{
+  "v": 1,
+  "items": [
+    {
+      "id": "F1",
+      "assertion": "Shen et al. 2026 (Study A) never mentions Hi-C, A/B compartments, PC1 or eigenvectors anywhere in its text; it therefore did not perform the planned cross-study comparison against Bertero 2019 or any other compartment dataset.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13040498/",
+      "quote": "Multiple models of patient-derived LMNA variants leveraging hiPSCs have established that LMNA mutations affect genome organization (Briand et al., 2018, Bertero et al., 2019, Lee et al., 2019, Shah et al., 2021). Our findings extends this by suggesting that peripheral chromatin organization can be affected at multiple stages of differentiation, including after cellular identity has been established.",
+      "implication": "The registered test is not a replication of an analysis already in Study A; Bertero 2019 is cited only as background, with no data-level comparison.",
+      "confidence": "high"
+    },
+    {
+      "id": "F2",
+      "assertion": "Bertero et al. 2019 (Study B) reported 42 B-to-A and 27 A-to-B switching 500 kb bins between mutant and corrected lines, totalling ~1.2% of the genome, with hotspots on chromosomes 5, 19 and X.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6719452/",
+      "quote": "We noticed that the vast majority of compartment transitions were observed for mutant hiPSC-CMs versus each corrected control (Fig. 6 A), and that B to A inversions were more common than A to B ones (42 and 27, respectively; Table S5). ... Overall, compartment changes involved \u223c1.2% of the genome, indicating that chromatin compartment dysregulation in mutant cells is not widespread but is actually highly restricted.",
+      "implication": "Sign-switch events are rare (69 bins genome-wide); the planned test must use continuous delta-PC1 across all ~5,700 500 kb bins rather than the published switch list, and is powered by small continuous shifts, not by these 69 hotspots.",
+      "confidence": "high"
+    },
+    {
+      "id": "F3",
+      "assertion": "Bertero 2019 called compartments with HOMER eigenvalue decomposition at 500 kb on hg38, with two Hi-C biological replicates per line (3 lines), and set the PC1 sign explicitly so positive = A/active.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6719452/",
+      "quote": "A/B compartmentalization was computed by eigenvalue decomposition of the contact maps using HOMER (Heinz et al., 2010) with 500-kb resolution and no additional windowing (super-resolution was also set at 500 kb). The sign of the first eigenvector (PC1) was selected based on the expression of \u223c5,000 genes constitutively expressed across hESC-CM differentiation (Bertero et al., 2019), so that positive and negative values indicate A and B compartmentalization, respectively.",
+      "implication": "The registered assumption (positive Active.PC1 = A) is correct for this dataset and was set by the authors, not by HOMER default; hg38 and 500 kb match Study A's hg38 bigWigs, so no liftOver is required. Replicate-level PC1 bedGraphs exist per GSM (n=2 per line), permitting a replicate-aware delta.",
+      "confidence": "high"
+    },
+    {
+      "id": "F4",
+      "assertion": "GEO confirms the Bertero PC1 files are named 'Active.PC1', produced by HOMER v4.7 at 500 kb on hg38, one bedGraph per Hi-C library.",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602088",
+      "quote": "validPair files were used as input for HOMER version 4.7 at 500KB resolution to generate PC1 values (A/B compartment calls). ... Genome_build: hg38 ... PC1.bedGraph files are the ouput from HOMER on the processed Hi-C data, representing the A/B compartment calls, in bedGraph format (coordinates and score)",
+      "implication": "Per-replicate PC1 is available as metadata-described processed files; the 'Active' in the filename encodes the authors' A-positive orientation.",
+      "confidence": "high"
+    },
+    {
+      "id": "F5",
+      "assertion": "Bertero 2019 compared compartment changes to lamina association only by 3D immunoFISH at five loci; no genome-wide LAD, DamID or LMNB1 dataset was compared to the PC1 changes.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6719452/",
+      "quote": "We tested this by combined immunofluorescence for the nuclear lamina and 3D-DNA FISH for three loci contained within genomic locations showing aberrant compartmentalization in mutant hiPSC-CMs: CACNA1A, LRRC4B, and PCDHGB4 (Fig. 6 E).",
+      "implication": "A genome-wide lamina-vs-compartment comparison for this mutant line is genuinely absent from Study B; the registered test would be the first genome-wide version of the hypothesis Bertero states qualitatively.",
+      "confidence": "high"
+    },
+    {
+      "id": "F6",
+      "assertion": "Study A's public LMNB1 signal is condition-level and heavily smoothed (10 kb bins, rolling mean of 5 flanking windows each side), with no per-replicate supplementary bigWigs.",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300197",
+      "quote": "zscore bws: bigwig signal files containing zscores called in 10kb window and smoothed using a rolling mean of the flanking 5 windows to each side",
+      "implication": "Smoothing induces ~110 kb autocorrelation; the within-chromosome circular-shift null is appropriate, but no replicate-level uncertainty is available on the exposure side, so the test is effectively n=1 per condition for Study A.",
+      "confidence": "high"
+    },
+    {
+      "id": "F7",
+      "assertion": "Study A's 'vulnerable' LADs are the LMNA-sensitive class defined by loss of LMNB1 (204 of 641 siScr LADs, mean 55% loss), and gained lamina association was quantified only as 13% of siLMNA LAD coverage and then explicitly excluded from analysis.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13040498/",
+      "quote": "Approximately 82% of siScr LAD coverage was shared with siLMNA, with 18% of siScr LAD coverage lost and 13% of siLMNA LAD coverage gained upon LMNA-knockdown (Fig. S1 H). Given the established role of the nuclear lamina in scaffolding peripheral heterochromatin, subsequent analyses focused on LAD regions that lost LMNB1 occupancy upon LMNA-knockdown (Guelen et al., 2008).",
+      "implication": "The gain arm of the registered hypothesis (regions gaining lamina association shifting toward B) is unexamined in Study A, which is a genuine novelty margin; conversely the loss arm has published LAD-level characterization that the test should not simply re-describe.",
+      "confidence": "high"
+    },
+    {
+      "id": "F8",
+      "assertion": "No publication found (2012-2026, including preprints) directly compares acute lamin A/C depletion lamina changes with chronic LMNA-mutant compartment/Hi-C changes in cardiomyocytes or other human cells.",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=GSE126459%20OR%20GSE126460%20OR%20GSE300197",
+      "quote": "hitCount: 1 (Bertero et al. 2019 itself); CITES:41891953_MED hitCount: 1 (a mechanobiology review, no reanalysis)",
+      "implication": "Cross-study exact comparison appears unreported. Absence of a search hit is not proof of novelty: Europe PMC full-text indexing of very recent papers, supplementary-only analyses, and non-indexed theses/preprints are all blind spots.",
+      "confidence": "medium"
+    },
+    {
+      "id": "F9",
+      "assertion": "The class of result is established: lamin loss causes LAD detachment coupled to changes in active/inactive domain interactions (Zheng 2018, mESC), and HGPS shows correlated lamin A/C association and compartmentalization changes (McCord 2013).",
+      "source_url": "https://europepmc.org/article/MED/30201095",
+      "quote": "Combining Hi-C with fluorescence in situ hybridization (FISH) and analyses of lamina-associated domains (LADs), we reveal that lamin loss causes expansion or detachment of specific LADs in mouse ESCs. The detached LADs disrupt 3D interactions of both LADs and interior chromatin.",
+      "implication": "A positive result would confirm a known class in a new (human cardiomyocyte, acute-vs-chronic, cross-study) setting; the exact comparison is new, the biological class is not.",
+      "confidence": "high"
+    },
+    {
+      "id": "F10",
+      "assertion": "Bertero 2019 itself predicts a weak effect, citing lamin-depletion studies where compartmentalization barely changes.",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6719452/",
+      "quote": "On the other hand, our results agree with previous findings from mouse embryonic stem cells, in which depletion of B-type nuclear lamins results in minimal changes in A/B compartmentalization (Amendola and van Steensel, 2015; Zheng et al., 2015, 2018).",
+      "implication": "Prior art sets a low prior on a strong negative correlation; the registered analysis should pre-commit to an effect size that would be interpretable given ~1.2% of the genome changing compartment.",
+      "confidence": "high"
+    },
+    {
+      "id": "F11",
+      "assertion": "GSE136252 (Shah et al. 2021, Cell Stem Cell) is an untouched human chronic-LMNA-variant lamina cohort: LMNB1 and H3K9me2 domains plus RNA-seq in LMNA T10I and R541C iPSC-cardiomyocytes, hepatocytes and adipocytes.",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE136252",
+      "quote": "Mapping of LB1 and H3K9me2 domains in control and LMNA T10I iPSC-derived cardiac myocytes at day 25 and 45 post-differentiation; mapping of LB1 and H3K9me2 domain in control and LMNA R541C iPSC-derived cardiac myocytes; ...",
+      "implication": "Serves as an independent chronic lamina-side replication cohort (does the acute siLMNA LMNB1 delta predict the chronic-mutant LMNB1 delta?), but it carries no Hi-C, so it cannot replicate the compartment outcome itself.",
+      "confidence": "high"
+    },
+    {
+      "id": "F12",
+      "assertion": "GSE314556 is the only other human LMNA-depletion dataset with Hi-C found in GEO: 'HiC of WT and LMNA/C depleted cells' in a B-lymphoblastoid line.",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE314556",
+      "quote": "Loss of lamin A/C in a B-lymphoblastoid cell line caused significant three-dimensional reorganization of the genome, evidenced by the loss of long-range chromatin loops, an increase in short-range contacts, and redistribution of H3K9me2- marked heterochromatin.",
+      "implication": "Best available additional compartment-outcome cohort for the same exposure (LMNA loss), though non-cardiac and EBV-transformed; useful as a cell-type-generality check rather than a strict replication.",
+      "confidence": "medium"
+    },
+    {
+      "id": "F13",
+      "assertion": "HGPS datasets pairing Hi-C with lamina/heterochromatin data exist as further outcome cohorts: GSE41763/GSE41764 (McCord 2013 fibroblasts, Hi-C + lamin A/C DamID) and GSE312029/GSE312031 (HGPS iPSC-VSMC Hi-C + CUT&Tag).",
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE41763",
+      "quote": "Hi-C was performed on three primary fibroblast cell lines: an HGPS patient (passage 17 and 19; HGPS), normal cells from the father of the HGPS patient (passage 18; Father), and age-matched normal cells (passage 20; Age Control).",
+      "implication": "Chronic progerin models, different lesion (dominant-negative, not haploinsufficiency) and older genome build; usable as a directional generality check, weak as a replication of an LMNA-loss effect.",
+      "confidence": "medium"
+    },
+    {
+      "id": "shah-2021-abstract-no-hic",
+      "assertion": "Shah et al. 2021 Cell Stem Cell (PMC8106635; LMNA T10I/R541C iPSC-CMs, LMNB1 lamina mapping) reports no Hi-C, chromosome conformation, compartment, or PC1 analysis in its abstract; a cross-study lamina-vs-compartment comparison there is unlikely but the full text remains unread.",
+      "source_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=PMCID:PMC8106635&resultType=core&format=json",
+      "quote": "Disrupted regions were enriched for transcriptionally active genes and showed lower LAMIN B1 contact frequency.",
+      "implication": "partial closure of prior-art gap 1 (abstract-level only)",
+      "confidence": "medium"
+    }
+  ]
+}

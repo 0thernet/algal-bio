@@ -1,0 +1,119 @@
+{
+  "schema": "bio.outcome-cohort-audit.v1",
+  "series": "GSE126459",
+  "superseries": "GSE126460",
+  "scope": "metadata and file-name only; no PC1, matrix or pair values opened",
+  "created_utc": "2026-09-24T17:57:43.795191+00:00",
+  "soft_file": {
+    "name": "GSE126459-full.soft.txt",
+    "bytes": 13756813,
+    "sha256": "6258f93d8a340ab722c9c75901ae04f55eeb23794a88e436163b21d6e396e0be",
+    "note": "GEO full SOFT export; Hi-C samples carry no data table, only supplementary file links"
+  },
+  "genome_build": "hg38 (per !Sample_data_processing)",
+  "pc1_pipeline": "BWA-MEM 0.7.13 -> HiC-Pro 2.7.6 (MAPQ>=30, >1 kb) -> HOMER 4.7 500KB PC1",
+  "samples": {
+    "GSM3602088": {
+      "title": "Hi-C library corrected 1 rep 1",
+      "line": "corrected_1",
+      "replicate": "rep1",
+      "characteristics": [
+        "cell type: human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM)",
+        "cell line: R225R LMNA corrected 1 hiPSCs",
+        "time point: Day 14 of cardiac differentiation"
+      ],
+      "pc1_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602088/suppl/GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+      "pc1_filename": "GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+      "other_files": [
+        "GSM3602088_HiC_corrected.1_rep1_500000_iced.matrix.gz",
+        "GSM3602088_HiC_corrected.1_rep1_allValidPairs.pairs.txt.gz"
+      ]
+    },
+    "GSM3602089": {
+      "title": "Hi-C library corrected 1 rep 2",
+      "line": "corrected_1",
+      "replicate": "rep2",
+      "characteristics": [
+        "cell type: human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM)",
+        "cell line: R225R LMNA corrected 1 hiPSCs",
+        "time point: Day 14 of cardiac differentiation"
+      ],
+      "pc1_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602089/suppl/GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+      "pc1_filename": "GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+      "other_files": [
+        "GSM3602089_HiC_corrected.1_rep2_500000_iced.matrix.gz",
+        "GSM3602089_HiC_corrected.1_rep2_allValidPairs.pairs.txt.gz"
+      ]
+    },
+    "GSM3602090": {
+      "title": "Hi-C library corrected 2 rep 1",
+      "line": "corrected_2",
+      "replicate": "rep1",
+      "characteristics": [
+        "cell type: human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM)",
+        "cell line: R225R LMNA corrected 2 hiPSCs",
+        "time point: Day 14 of cardiac differentiation"
+      ],
+      "pc1_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602090/suppl/GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+      "pc1_filename": "GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+      "other_files": [
+        "GSM3602090_HiC_corrected.2_rep1_500000_iced.matrix.gz",
+        "GSM3602090_HiC_corrected.2_rep1_allValidPairs.pairs.txt.gz"
+      ]
+    },
+    "GSM3602091": {
+      "title": "Hi-C library corrected 2 rep 2",
+      "line": "corrected_2",
+      "replicate": "rep2",
+      "characteristics": [
+        "cell type: human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM)",
+        "cell line: R225R LMNA corrected 2 hiPSCs",
+        "time point: Day 14 of cardiac differentiation"
+      ],
+      "pc1_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602091/suppl/GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+      "pc1_filename": "GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+      "other_files": [
+        "GSM3602091_HiC_corrected.2_rep2_500000_iced.matrix.gz",
+        "GSM3602091_HiC_corrected.2_rep2_allValidPairs.pairs.txt.gz"
+      ]
+    },
+    "GSM3602092": {
+      "title": "Hi-C library mutant rep 1",
+      "line": "mutant",
+      "replicate": "rep1",
+      "characteristics": [
+        "cell type: human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM)",
+        "cell line: R225X LMNA mutant hiPSCs",
+        "time point: Day 14 of cardiac differentiation"
+      ],
+      "pc1_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602092/suppl/GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+      "pc1_filename": "GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+      "other_files": [
+        "GSM3602092_HiC_mutant_rep1_500000_iced.matrix.gz",
+        "GSM3602092_HiC_mutant_rep1_allValidPairs.pairs.txt.gz"
+      ]
+    },
+    "GSM3602093": {
+      "title": "Hi-C library mutant rep 2",
+      "line": "mutant",
+      "replicate": "rep2",
+      "characteristics": [
+        "cell type: human induced pluripotent stem cell-derived cardiomyocytes (hiPSC-CM)",
+        "cell line: R225X LMNA mutant hiPSCs",
+        "time point: Day 14 of cardiac differentiation"
+      ],
+      "pc1_url": "ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602093/suppl/GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz",
+      "pc1_filename": "GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz",
+      "other_files": [
+        "GSM3602093_HiC_mutant_rep2_500000_iced.matrix.gz",
+        "GSM3602093_HiC_mutant_rep2_allValidPairs.pairs.txt.gz"
+      ]
+    }
+  },
+  "checks": {
+    "six_samples": true,
+    "titles_match_roles": true,
+    "one_pc1_per_sample": true,
+    "sex_metadata": "not stated in GEO characteristics; sex chromosomes excluded by design"
+  }
+}

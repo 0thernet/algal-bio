@@ -1,0 +1,1 @@
+Reconstructed byte-exact copies of the code and tests bound by freeze-001 (hashes 9f58860f... and 3d6ee18f...), produced by removing the amend-001 adapter lines and the added test from the current files; the hash match proves the amendment touched nothing else.
