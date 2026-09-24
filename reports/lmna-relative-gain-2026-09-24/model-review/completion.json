@@ -1,0 +1,30 @@
+{
+  "completed_utc": "2026-09-24T15:18:18.585962+00:00",
+  "id": "gen_01M39ZX87BYY362288ECZB9QYR",
+  "model_reported": "anthropic/claude-sonnet-5",
+  "usage": {
+    "prompt_tokens": 446,
+    "completion_tokens": 1883,
+    "total_tokens": 2329,
+    "cost": 0.019722,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": null,
+      "upstream_inference_prompt_cost": 0,
+      "upstream_inference_completions_cost": 0
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0
+    },
+    "cache_creation_input_tokens": 0,
+    "market_cost": 0.019722,
+    "gateway_cost": 0.019722
+  },
+  "finish_reason": "stop"
+}

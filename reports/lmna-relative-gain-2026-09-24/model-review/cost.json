@@ -1,0 +1,27 @@
+{
+  "data": {
+    "id": "gen_01M39ZX87BYY362288ECZB9QYR",
+    "total_cost": 0.019722,
+    "market_cost": 0.019722,
+    "surcharge_cost": 0,
+    "gateway_cost": 0.019722,
+    "upstream_inference_cost": 0,
+    "usage": 0.019722,
+    "created_at": "2026-09-24T15:17:55.000Z",
+    "model": "anthropic/claude-sonnet-5",
+    "is_byok": false,
+    "provider_name": "anthropic",
+    "streamed": false,
+    "finish_reason": "stop",
+    "latency": 23390,
+    "generation_time": 23390,
+    "tokens_prompt": 446,
+    "tokens_completion": 1883,
+    "native_tokens_prompt": 446,
+    "native_tokens_completion": 1883,
+    "native_tokens_reasoning": 0,
+    "native_tokens_cached": 0,
+    "native_tokens_cache_creation": 0,
+    "billable_web_search_calls": 0
+  }
+}

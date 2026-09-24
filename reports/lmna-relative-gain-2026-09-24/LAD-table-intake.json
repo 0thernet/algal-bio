@@ -1,0 +1,31 @@
+{
+  "contract": "bio.source-intake-note.v1",
+  "recorded_utc": "2026-09-24T15:10:33.481174+00:00",
+  "target": "PMC13040498 Table S2 hg38 LAD coordinates",
+  "requested_asset_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/13040498/bin/NIHMS2150295-supplement-Supp__Table_2.xlsx",
+  "status": "not_admitted_no_verified_xlsx",
+  "evidence": [
+    {
+      "route": "direct PMC supplement",
+      "result": "Root reports HTML challenge response; rejected because not a ZIP/XLSX. No table bytes inspected."
+    },
+    {
+      "route": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC13040498/supplementaryFiles",
+      "result": "XML error: Article with id PMC13040498 is not open access one"
+    },
+    {
+      "route": "https://pmc-oa-opendata.s3.amazonaws.com/?list-type=2&prefix=PMC13040498&max-keys=100",
+      "result": "Complete official current inventory: only PMC13040498.1.json, PMC13040498.1.txt and PMC13040498.1.xml; no media/supplement keys."
+    },
+    {
+      "route": "https://doi.org/10.1083/jcb.202506137",
+      "result": "HTTP 403"
+    },
+    {
+      "route": "https://pmc.ncbi.nlm.nih.gov/tools/pmcaws/",
+      "result": "Official documentation states legacy FTP/OA services removed August 2026; current cloud is the supported route."
+    }
+  ],
+  "scientific_limit": "No author-defined LAD coordinates have been obtained or measured. The published approximately 13% gain statement is prior literature, not a recomputed interval result.",
+  "proposed_alternative": "Register relative local LMNB1 signal gains from deposited condition-aggregate z-score bigWigs around fixed hg38 RefSeq Select TSSs. These are exploratory signal changes, not EDD LAD calls or absolute LMNB1 abundance."
+}

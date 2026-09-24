@@ -1,0 +1,21 @@
+{
+  "frozen_utc": "2026-09-24T15:31:17.869504+00:00",
+  "candidate_freeze_sha256": "b09d1eeb9c8de5fff5a8653ded43e7fd13b78d8496243d770daa2db2b43acb1c",
+  "registration_sha256": "201e24b9870349bd5a2234fd40f52dbfd7a618fb37b700feb0eb474c0b128efa",
+  "analysis_sha256": "575e21b471111eb61d84ed2339b0ac9b68865595bfdc79b4322d0f09705b0a88",
+  "ordered_symbols": [
+    "CMTM5",
+    "SLC2A14",
+    "NID2",
+    "DCAF8",
+    "PIANP",
+    "MEX3B",
+    "ANKRD52",
+    "ZFTA",
+    "FYCO1",
+    "LYSMD3"
+  ],
+  "external_count_matrix_downloaded_or_opened": false,
+  "external_metadata_read": true,
+  "anchoring_limit": "Local-session record, not independent external timestamping; public-data/model-pretraining exposure cannot be excluded."
+}

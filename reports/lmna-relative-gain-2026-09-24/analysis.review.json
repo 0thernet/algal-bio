@@ -1,0 +1,30 @@
+{
+  "schema": "bio.analysis-independent-review.v1",
+  "reviewed_at_utc": "2026-09-24T15:29:06.609065+00:00",
+  "registration_sha256": "201e24b9870349bd5a2234fd40f52dbfd7a618fb37b700feb0eb474c0b128efa",
+  "analysis_sha256": "575e21b471111eb61d84ed2339b0ac9b68865595bfdc79b4322d0f09705b0a88",
+  "test_analysis_sha256": "bb032e6fa707b1f200c428eea0eb54aceb5d0a59abcc16e20438c4ac7cfc3f27",
+  "verdict": "pass",
+  "scope": [
+    "count validation and full-matrix denominators",
+    "relative RNA contrast and seven leave-one-column-out contrasts",
+    "common finite-base interval intersection, half-open clipping and weighted means",
+    "candidate thresholds, tie ordering and chromosome spacing",
+    "response-independent control matching",
+    "anchor-block descriptive bootstrap",
+    "circular null restricted observed statistic and valid shifts"
+  ],
+  "independent_synthetic_checks": {
+    "interval_oracle_windows": 250,
+    "circular_null_draws": 1999,
+    "circular_null_gene_count": 41,
+    "expected_lower_tail": 0.0005,
+    "passed": true
+  },
+  "real_rna_matrices_opened": false,
+  "external_study_counts_opened": false,
+  "limitations": [
+    "Manual bounded analyst workflow; not an autonomous campaign API qualification.",
+    "Exploratory compositional and aggregate-profile results only; biological replicate uncertainty remains unresolved."
+  ]
+}

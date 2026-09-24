@@ -1,0 +1,10 @@
+{
+  "created_utc": "2026-09-24T15:17:54.678797+00:00",
+  "reserve_usd": "0.50",
+  "request_sha256": "61f3899d7aaa36616b1ea9080b651c1fcb954defc755dfa7284f5090b99c8d00",
+  "model": "anthropic/claude-sonnet-5",
+  "provider_only": "anthropic",
+  "max_tokens": 8000,
+  "request_bytes": 1538,
+  "retry": false
+}

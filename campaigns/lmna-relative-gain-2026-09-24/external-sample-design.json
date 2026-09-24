@@ -1,0 +1,83 @@
+{
+  "frozen_before_count_download_utc": "2026-09-24T15:21:44.161603+00:00",
+  "accession": "GSE304575",
+  "metadata_sha256": "d57e8c6344ec4ceeea084995b92c48519d38c59517af5ca709e20cbe7ccd9c2f",
+  "control": "Corrected Isogenic control",
+  "case": "LMNAH222P",
+  "samples": [
+    {
+      "accession": "GSM9153134",
+      "title": "hiPSC-CMs, Corrected Isogenic control, rep1",
+      "group": "Corrected Isogenic control",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153135",
+      "title": "hiPSC-CMs, Corrected Isogenic control, rep2",
+      "group": "Corrected Isogenic control",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153136",
+      "title": "hiPSC-CMs, Corrected Isogenic control, rep3",
+      "group": "Corrected Isogenic control",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153137",
+      "title": "hiPSC-CMs, Corrected Isogenic control, rep4",
+      "group": "Corrected Isogenic control",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153138",
+      "title": "hiPSC-CMs, Corrected Isogenic control, rep5",
+      "group": "Corrected Isogenic control",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153139",
+      "title": "hiPSC-CMs, Corrected Isogenic control, rep6",
+      "group": "Corrected Isogenic control",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153140",
+      "title": "hiPSC-CMs, LMNAH222P, rep1",
+      "group": "LMNAH222P",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153141",
+      "title": "hiPSC-CMs, LMNAH222P, rep2",
+      "group": "LMNAH222P",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153142",
+      "title": "hiPSC-CMs, LMNAH222P, rep3",
+      "group": "LMNAH222P",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153143",
+      "title": "hiPSC-CMs, LMNAH222P, rep4",
+      "group": "LMNAH222P",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153144",
+      "title": "hiPSC-CMs, LMNAH222P, rep5",
+      "group": "LMNAH222P",
+      "batch": "6/15/2023"
+    },
+    {
+      "accession": "GSM9153145",
+      "title": "hiPSC-CMs, LMNAH222P, rep6",
+      "group": "LMNAH222P",
+      "batch": "6/15/2023"
+    }
+  ],
+  "count_column_mapping": "Require count headers or unambiguous public metadata mapping to these12samples; stop on ambiguity. No outcome-directed mapping.",
+  "unit_caveat": "Six deposited libraries per genotype, same nominalbatch, onepatientbackground; independent culture status not established."
+}

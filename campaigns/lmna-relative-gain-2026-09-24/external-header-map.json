@@ -1,0 +1,41 @@
+{
+  "created_before_numerical_evaluation_utc": "2026-09-24T15:32:53.559576+00:00",
+  "matrix_sha256": "bfd75fd16c8eeb222eb20d9da622fd00a53f125cddfc2106a328320386763ef3",
+  "candidate_freeze_sha256": "b09d1eeb9c8de5fff5a8653ded43e7fd13b78d8496243d770daa2db2b43acb1c",
+  "library_metadata_sha256": "808835815000d4474e18f86e0587749655bbb70510785cf656330283b6a1bb44",
+  "header": [
+    "\ufeffGene",
+    "CM_C1-3_DC126",
+    "CM_C1-3_DC130",
+    "CM_C1-3_DC133",
+    "CM_C1-3_DC142",
+    "CM_C1-3_DC143",
+    "CM_C1-3_DC145",
+    "CM_LMNA_H222P_DC27",
+    "CM_LMNA_H222P_DC31",
+    "CM_LMNA_H222P_DC38",
+    "CM_LMNA_H222P_DC40",
+    "CM_LMNA_H222P_DC74",
+    "CM_LMNA_H222P_DC75"
+  ],
+  "delimiter": ";",
+  "gene_symbol_column": "\ufeffGene",
+  "identifier_kind": "provided_exact_gene_symbol",
+  "control_columns": [
+    "CM_C1-3_DC126",
+    "CM_C1-3_DC130",
+    "CM_C1-3_DC133",
+    "CM_C1-3_DC142",
+    "CM_C1-3_DC143",
+    "CM_C1-3_DC145"
+  ],
+  "case_columns": [
+    "CM_LMNA_H222P_DC27",
+    "CM_LMNA_H222P_DC31",
+    "CM_LMNA_H222P_DC38",
+    "CM_LMNA_H222P_DC40",
+    "CM_LMNA_H222P_DC74",
+    "CM_LMNA_H222P_DC75"
+  ],
+  "mapping_evidence": "All12headers exactly equal GEO Sample_description Library name values, frozen before downloading counts. Firstidentifier-only rows are named gene symbols (DDX11L1,WASH7P,etc). UTF-8 BOM retained in Gene header; no expression-directed mapping or selection."
+}
