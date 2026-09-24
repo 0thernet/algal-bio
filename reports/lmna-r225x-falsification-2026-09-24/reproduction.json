@@ -1,0 +1,19 @@
+{
+  "schema": "bio.fresh-computation-reproduction.v1",
+  "runs": [
+    {
+      "name": "r225x-001",
+      "role": "first execution after freeze",
+      "outcomes_sha256": "c166aa89c2c016769ee9b1a609e79e4d1018849c9ea0153b1cd059205e10617c",
+      "summary_sha256": "300a3b2da58f4c4e7b53ba351ccc2550e554d5af36aa00ccb52078d7d9cd4cb6"
+    },
+    {
+      "name": "r225x-002",
+      "role": "independent rerun from the same frozen inputs, 2026-09-24",
+      "outcomes_sha256": "c166aa89c2c016769ee9b1a609e79e4d1018849c9ea0153b1cd059205e10617c",
+      "summary_sha256": "300a3b2da58f4c4e7b53ba351ccc2550e554d5af36aa00ccb52078d7d9cd4cb6"
+    }
+  ],
+  "identical": true,
+  "note": "Both runs used the pinned numpy 2.3.3 / scipy 1.16.2 environment on Python 3.12.14 and the hash-bound public matrix. Determinism is a software property, not evidence of biological truth."
+}

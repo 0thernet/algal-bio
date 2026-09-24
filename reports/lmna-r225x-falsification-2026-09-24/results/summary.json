@@ -1,0 +1,848 @@
+{
+  "schema": "bio.r225x-falsification.v1",
+  "registration_sha256": "4501c0a26b4accab301fc447aff4e0fc5aabf8760984a061583a20e2b7e091ae",
+  "code_sha256": "c89c28484061c3f063eb377f085a0225598fd80672044835c46d5b12c831c977",
+  "mapping_sha256": "8406cee3cc65eceaa22493ced1cd508130e12d002ec07db66b1ff83c3e14046e",
+  "freeze_sha256": "63223df4077e2f32c4fcd2044a71fcd7f33c20d0759bed5211b1d9a6b17dc876",
+  "intake_sha256": "9316ea75c73f86bca9bdb250eb2e7b0660735dde4ad1b28c970055ac8ca296f1",
+  "matrix_sha256": "3d398d6d9d8b9b130c91ece7169a06c3c88a0b9dbdb51b87c8f79b7df5d28f9b",
+  "source_rows": 19851,
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2"
+  },
+  "fixed_panel_size": 10,
+  "passed": 0,
+  "outcomes": [
+    {
+      "gene": "CMTM5",
+      "tracking_ids": [
+        "ENSG00000166091"
+      ],
+      "family_p": 1.0,
+      "status": "expression_or_variance_ineligible",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": 0.053316266115690736,
+          "standard_error": 0.2253620912525763,
+          "df": 3.469785603810199,
+          "t": 2.4552322133697158,
+          "p_lower": 0.9601322566753043,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 0.41129466666666664,
+          "control_mean_fpkm": 0.38653899999999997,
+          "case_fpkm": [
+            0.275711,
+            0.412959,
+            0.545214
+          ],
+          "control_fpkm": [
+            0.585652,
+            0.382268,
+            0.191697
+          ],
+          "control_expression_eligible": false,
+          "loo_deltas": [
+            0.16418926622024488,
+            0.04667386031580659,
+            -0.05091432818897926,
+            0.2115866810148825,
+            0.06195024863603488,
+            -0.11358813130384518
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.12215415130035212,
+            "1.0": 0.03089893066657745
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.4475392750198569,
+          "standard_error": 0.44125282404204424,
+          "df": 2.342630072923343,
+          "t": 0.1188904005181946,
+          "p_lower": 0.5426038076331111,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 0.41129466666666664,
+          "control_mean_fpkm": 0.8327253333333333,
+          "case_fpkm": [
+            0.275711,
+            0.412959,
+            0.545214
+          ],
+          "control_fpkm": [
+            1.28711,
+            1.01997,
+            0.191096
+          ],
+          "control_expression_eligible": false,
+          "loo_deltas": [
+            -0.33666627491530277,
+            -0.4541816808197411,
+            -0.551769869324527,
+            -0.18016327632219778,
+            -0.29695607061058205,
+            -0.8654984781267909
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.6208829589805467,
+            "1.0": -0.3274405076204706
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "SLC2A14",
+      "tracking_ids": [
+        "ENSG00000173262"
+      ],
+      "family_p": 1.0,
+      "status": "expression_or_variance_ineligible",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": 0.60264122091305,
+          "standard_error": 0.26402292797511756,
+          "df": 3.972482854329318,
+          "t": 4.17630858565801,
+          "p_lower": 0.9929188068144987,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 1.2372366666666668,
+          "control_mean_fpkm": 0.641597,
+          "case_fpkm": [
+            1.64301,
+            1.22422,
+            0.84448
+          ],
+          "control_fpkm": [
+            0.932938,
+            0.454557,
+            0.537296
+          ],
+          "control_expression_eligible": false,
+          "loo_deltas": [
+            0.43826038681338264,
+            0.5951077452284087,
+            0.7745555306973585,
+            0.7780114687984753,
+            0.4849750012938174,
+            0.5449371926468571
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.8593729968599927,
+            "1.0": 0.44230845011628184
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": 0.8652392732924961,
+          "standard_error": 0.21125038362021525,
+          "df": 2.7047010358896437,
+          "t": 6.462659380287401,
+          "p_lower": 0.9948844827616541,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 1.2372366666666668,
+          "control_mean_fpkm": 0.43983666666666665,
+          "case_fpkm": [
+            1.64301,
+            1.22422,
+            0.84448
+          ],
+          "control_fpkm": [
+            0.374174,
+            0.395463,
+            0.549873
+          ],
+          "control_expression_eligible": false,
+          "loo_deltas": [
+            0.7008584391928288,
+            0.8577057976078548,
+            1.0371535830768046,
+            0.8154166403327238,
+            0.8327733166010418,
+            0.9475278629437227
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 1.278582804909383,
+            "1.0": 0.6224123185406993
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "NID2",
+      "tracking_ids": [
+        "ENSG00000087303"
+      ],
+      "family_p": 0.9716804527382558,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": 0.7562142978016206,
+          "standard_error": 0.35226438113374603,
+          "df": 2.3133709634823805,
+          "t": 3.5661121733584165,
+          "p_lower": 0.9716804527382558,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 112.46306666666668,
+          "control_mean_fpkm": 63.36026666666666,
+          "case_fpkm": [
+            141.377,
+            129.211,
+            66.8012
+          ],
+          "control_fpkm": [
+            71.2515,
+            62.1633,
+            56.666
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            0.5553348819992632,
+            0.6200048314258044,
+            1.0933031799797952,
+            0.8434209463278828,
+            0.7457268239044792,
+            0.679495123172499
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.7596493091749332,
+            "1.0": 0.7519664649770696
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": 0.45169448794966804,
+          "standard_error": 0.35985341702310336,
+          "df": 2.495413956413944,
+          "t": 2.644672644274397,
+          "p_lower": 0.9530692880954514,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 112.46306666666668,
+          "control_mean_fpkm": 78.58393333333333,
+          "case_fpkm": [
+            141.377,
+            129.211,
+            66.8012
+          ],
+          "control_fpkm": [
+            73.1895,
+            92.1373,
+            70.425
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            0.2508150721473106,
+            0.31548502157385183,
+            0.7887833701278426,
+            0.40586626771662093,
+            0.5709333380051111,
+            0.3782838581272747
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.4534030834591736,
+            "1.0": 0.4495770756236368
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "DCAF8",
+      "tracking_ids": [
+        "ENSG00000132716"
+      ],
+      "family_p": 0.9899999018615446,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": 0.14952904233370568,
+          "standard_error": 0.1352074916731582,
+          "df": 2.804363856554513,
+          "t": 4.803942697967025,
+          "p_lower": 0.9899999018615446,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 94.8095,
+          "control_mean_fpkm": 85.904,
+          "case_fpkm": [
+            97.4163,
+            99.4166,
+            87.5956
+          ],
+          "control_fpkm": [
+            94.6337,
+            91.1233,
+            71.955
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            0.12897841947981092,
+            0.1143907485771658,
+            0.20521795894414208,
+            0.2240479093846437,
+            0.1969269273517007,
+            0.027612290264770856
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.15023546854311576,
+            "1.0": 0.14865538823655022
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.05933331259725172,
+          "standard_error": 0.11011961459808425,
+          "df": 3.259060651189048,
+          "t": 4.0017093141044695,
+          "p_lower": 0.9880276095544227,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 94.8095,
+          "control_mean_fpkm": 99.09253333333334,
+          "case_fpkm": [
+            97.4163,
+            99.4166,
+            87.5956
+          ],
+          "control_fpkm": [
+            96.8134,
+            111.51,
+            88.9542
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.07988393545114647,
+            -0.09447160635379159,
+            -0.0036443959868153186,
+            -0.07290462925545782,
+            0.02855394899603514,
+            -0.13364925753233248
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": -0.05956305264294137,
+            "1.0": -0.059048629184703216
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "PIANP",
+      "tracking_ids": [
+        "ENSG00000139200"
+      ],
+      "family_p": 1.0,
+      "status": "expression_or_variance_ineligible",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": -0.6946404667846748,
+          "standard_error": 0.38695717052016304,
+          "df": 3.9833498538556333,
+          "t": -0.5030026101416637,
+          "p_lower": 0.32075050079327483,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 0.40723916666666665,
+          "control_mean_fpkm": 0.9634776666666668,
+          "case_fpkm": [
+            0.0924785,
+            0.588359,
+            0.54088
+          ],
+          "control_fpkm": [
+            1.36511,
+            1.02464,
+            0.500683
+          ],
+          "control_expression_eligible": false,
+          "loo_deltas": [
+            -0.4129256577663123,
+            -0.8515855613548733,
+            -0.8194101812328389,
+            -0.49646250285061944,
+            -0.6418585468835256,
+            -0.9456003506198792
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -1.181006517397384,
+            "1.0": -0.47543184056950893
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.05120392197063123,
+          "standard_error": 0.2896740602464874,
+          "df": 2.210321382130583,
+          "t": 1.5493140036338855,
+          "p_lower": 0.8751097544913413,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 0.40723916666666665,
+          "control_mean_fpkm": 0.40899,
+          "case_fpkm": [
+            0.0924785,
+            0.588359,
+            0.54088
+          ],
+          "control_fpkm": [
+            0.329211,
+            0.448823,
+            0.448936
+          ],
+          "control_expression_eligible": false,
+          "loo_deltas": [
+            0.23051088704773132,
+            -0.2081490165408297,
+            -0.1759736364187953,
+            -0.11603246561424163,
+            -0.0188326020040967,
+            -0.01874669829355538
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": -0.2022510756370941,
+            "1.0": -0.020516312262187142
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "MEX3B",
+      "tracking_ids": [
+        "ENSG00000183496"
+      ],
+      "family_p": 0.7028946341211657,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": -0.31784975791729053,
+          "standard_error": 0.30146659956326666,
+          "df": 2.605090739784974,
+          "t": 0.604213675234967,
+          "p_lower": 0.7028946341211657,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 6.184243333333332,
+          "control_mean_fpkm": 7.577793333333333,
+          "case_fpkm": [
+            8.35841,
+            6.16583,
+            4.02849
+          ],
+          "control_fpkm": [
+            7.42735,
+            8.72363,
+            6.5824
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.5475632492065778,
+            -0.3424316254774493,
+            -0.0635543990678431,
+            -0.3271656945281656,
+            -0.21791771092167656,
+            -0.40846586830202947
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.34012478711490646,
+            "1.0": -0.2939020379540658
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.3825702815473413,
+          "standard_error": 0.3800560670187335,
+          "df": 3.968141929645303,
+          "t": 0.3089799864893893,
+          "p_lower": 0.6135604784295896,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 6.184243333333332,
+          "control_mean_fpkm": 8.17138,
+          "case_fpkm": [
+            8.35841,
+            6.16583,
+            4.02849
+          ],
+          "control_fpkm": [
+            5.80615,
+            11.1293,
+            7.57869
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.6122837728366286,
+            -0.4071521491075001,
+            -0.12827492269789387,
+            -0.5892860736429699,
+            -0.1478196398120093,
+            -0.4106051311870442
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.40625598769583915,
+            "1.0": -0.3568327335463546
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "ANKRD52",
+      "tracking_ids": [
+        "ENSG00000139645"
+      ],
+      "family_p": 0.9923722407828305,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": 0.04455988769007524,
+          "standard_error": 0.19920975391048917,
+          "df": 3.5005483482616175,
+          "t": 2.7336005240725414,
+          "p_lower": 0.9697598953267353,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 11.291433333333332,
+          "control_mean_fpkm": 11.019426666666666,
+          "case_fpkm": [
+            10.0059,
+            10.7699,
+            13.0985
+          ],
+          "control_fpkm": [
+            9.77634,
+            13.7837,
+            9.49824
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            0.12348034124179996,
+            0.07284286283127539,
+            -0.06264354100285008,
+            -0.028017236368619525,
+            0.20950436850962584,
+            -0.04780746907078104
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.04654271914961017,
+            "1.0": 0.04229957319189381
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": 0.0921941381657172,
+          "standard_error": 0.1370419773802059,
+          "df": 3.6391246097965935,
+          "t": 4.321260897474854,
+          "p_lower": 0.9923722407828305,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 11.291433333333332,
+          "control_mean_fpkm": 10.528386666666668,
+          "case_fpkm": [
+            10.0059,
+            10.7699,
+            13.0985
+          ],
+          "control_fpkm": [
+            9.34086,
+            11.0408,
+            11.2035
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            0.17111459171744192,
+            0.12047711330691735,
+            -0.015009290527208119,
+            0.01219902716392518,
+            0.12714249199877914,
+            0.13724089533444728
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": 0.09543262495194194,
+            "1.0": 0.08844615551644708
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "ZFTA",
+      "tracking_ids": [
+        "ENSG00000188070"
+      ],
+      "family_p": 0.9675142278040959,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": -0.1362736027558622,
+          "standard_error": 0.12678051863468195,
+          "df": 2.9663599168881123,
+          "t": 2.868945490688639,
+          "p_lower": 0.9675142278040959,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 18.366466666666664,
+          "control_mean_fpkm": 20.3278,
+          "case_fpkm": [
+            17.3647,
+            17.8727,
+            19.862
+          ],
+          "control_fpkm": [
+            17.3491,
+            20.8377,
+            22.7966
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.09807034355126554,
+            -0.1182963282048215,
+            -0.19245413651149956,
+            -0.24324384114274622,
+            -0.11446716898252962,
+            -0.05110979814230898
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.13896122983249093,
+            "1.0": -0.13305734706109984
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.2949758303611194,
+          "standard_error": 0.11823497933615128,
+          "df": 3.1255513031889914,
+          "t": 1.7340398821907084,
+          "p_lower": 0.9111831212058467,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 18.366466666666664,
+          "control_mean_fpkm": 22.7263,
+          "case_fpkm": [
+            17.3647,
+            17.8727,
+            19.862
+          ],
+          "control_fpkm": [
+            19.606,
+            25.0151,
+            23.5578
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.25677257115652274,
+            -0.2769985558100787,
+            -0.35115636411675677,
+            -0.3954098021095822,
+            -0.22354720029120845,
+            -0.26597048868256756
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.3006668701400059,
+            "1.0": -0.2881604726682596
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "FYCO1",
+      "tracking_ids": [
+        "ENSG00000163820"
+      ],
+      "family_p": 0.8185909876619925,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": -0.41641185640843137,
+          "standard_error": 0.20233094172987628,
+          "df": 3.97692691975824,
+          "t": 0.4131258564652149,
+          "p_lower": 0.6495913655545487,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 5.67307,
+          "control_mean_fpkm": 7.7513700000000005,
+          "case_fpkm": [
+            5.41183,
+            6.81876,
+            4.78862
+          ],
+          "control_fpkm": [
+            6.49782,
+            7.33408,
+            9.42221
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.39186502529372813,
+            -0.5458622516735572,
+            -0.3115082922580088,
+            -0.527514229956711,
+            -0.44608507733631786,
+            -0.27563626193226387
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.4416559742642834,
+            "1.0": -0.38872933744511773
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.3180109416184953,
+          "standard_error": 0.17630547291237098,
+          "df": 3.820580586525721,
+          "t": 1.0322371471245173,
+          "p_lower": 0.8185909876619925,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 5.67307,
+          "control_mean_fpkm": 7.168376666666667,
+          "case_fpkm": [
+            5.41183,
+            6.81876,
+            4.78862
+          ],
+          "control_fpkm": [
+            6.04343,
+            7.72174,
+            7.73996
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.29346411050379206,
+            -0.4474613368836211,
+            -0.21310737746807273,
+            -0.42834209549041224,
+            -0.26364376078921703,
+            -0.26204696857585574
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.33830269482713016,
+            "1.0": -0.2958751233775807
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    },
+    {
+      "gene": "LYSMD3",
+      "tracking_ids": [
+        "ENSG00000176018"
+      ],
+      "family_p": 0.9516394524119297,
+      "status": "evaluable",
+      "pass": false,
+      "pairs": {
+        "corrected_1": {
+          "delta": -0.10919851684474668,
+          "standard_error": 0.1913404743806126,
+          "df": 3.713212141352091,
+          "t": 2.042440233412795,
+          "p_lower": 0.9419828831487512,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 9.382706666666667,
+          "control_mean_fpkm": 10.208710000000002,
+          "case_fpkm": [
+            10.5362,
+            9.67886,
+            7.93306
+          ],
+          "control_fpkm": [
+            11.3463,
+            11.2094,
+            8.07043
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.19332899955926353,
+            -0.13499524274812336,
+            0.0007286917731454956,
+            -0.028570782441926568,
+            -0.0369554695800387,
+            -0.26206929851227523
+          ],
+          "loo_all_negative": false,
+          "sensitivity_deltas": {
+            "0.1": -0.11338168920923408,
+            "1.0": -0.10438727540657666
+          },
+          "sensitivity_large_decrease": false
+        },
+        "corrected_2": {
+          "delta": -0.15178998693002832,
+          "standard_error": 0.16107596247881525,
+          "df": 3.9985675975737855,
+          "t": 2.161775150750804,
+          "p_lower": 0.9516394524119297,
+          "status": "model_evaluated",
+          "case_mean_fpkm": 9.382706666666667,
+          "control_mean_fpkm": 10.479460000000001,
+          "case_fpkm": [
+            10.5362,
+            9.67886,
+            7.93306
+          ],
+          "control_fpkm": [
+            12.2554,
+            9.52172,
+            9.66126
+          ],
+          "control_expression_eligible": true,
+          "loo_deltas": [
+            -0.23592046964454516,
+            -0.177586712833405,
+            -0.04186277831213614,
+            -0.03912218033560233,
+            -0.21311118332488332,
+            -0.20313659712959842
+          ],
+          "loo_all_negative": true,
+          "sensitivity_deltas": {
+            "0.1": -0.15796838947489045,
+            "1.0": -0.14472554681852046
+          },
+          "sensitivity_large_decrease": false
+        }
+      },
+      "holm_p": 1.0
+    }
+  ],
+  "claim_ceiling": "Model-dependent cultured-line expression association or failed large-effect prediction. No universal LMNA signature, absolute abundance change, newly discovered lamin target, causal mechanism or biological validation.",
+  "limitations": [
+    "Welch t is approximate; n=3 per line prevents credible normality diagnostics.",
+    "FPKM is processed relative abundance, not raw counts; threshold refers to transformed abundance rather than exact raw-FPKM percentage.",
+    "One patient-derived mutant clone and two corrected clones: genotype/clone effects remain inseparable.",
+    "Independent differentiations are distinct culture units, not independent donors; no population-level precision.",
+    "R225X mutation and day14 differentiation differ from acute day35 LMNA depletion and H222P.",
+    "No candidate selection or backfill after this outcome; significance is not novelty."
+  ]
+}

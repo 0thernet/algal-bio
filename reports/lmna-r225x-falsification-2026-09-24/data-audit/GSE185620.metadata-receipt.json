@@ -1,0 +1,9 @@
+{
+  "accession": "GSE185620",
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE185nnn/GSE185620/soft/GSE185620_family.soft.gz",
+  "compressed_bytes": 2471,
+  "compressed_sha256": "e1240580678e366a09d0cd58bcd63e741f5bd79fde83001e59b83fcf5e48d860",
+  "metadata_sha256": "291b7d13fd667c2ac8e2a32f43f9b371896ccfd4b9ed2e4dfd40cdf5d9e4f9f1",
+  "retained_fields": "series/sample metadata only; no sample table or values",
+  "expression_files_opened": false
+}

@@ -1,0 +1,42 @@
+{
+  "read_at_utc": "2026-09-24T16:55:26.059983+00:00",
+  "scope": "Only first line, no gene/outcome rows read or retained",
+  "artifacts": [
+    {
+      "filename": "GSE136252_raw_count_matrix.csv.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE136nnn/GSE136252/suppl/GSE136252_raw_count_matrix.csv.gz",
+      "header": "gene,Ctrl_d25_299,Ctrl_d25_300,Ctrl_d25_301,Ctrl_d25_302,T10I_d25_303,T10I_d25_304,T10I_d25_305,T10I_d25_306",
+      "header_sha256": "f7995c051b60ec8c5f5253b4e00fc1d68dccaf1bd7101603b24c43dd9ae8c5f2",
+      "content_length": "548107",
+      "last_modified": "Fri, 23 Aug 2019 15:21:01 GMT",
+      "expression_rows_opened": 0
+    },
+    {
+      "filename": "GSE136252_RNAseq.log2cpmmatrix.unfiltered.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE136nnn/GSE136252/suppl/GSE136252_RNAseq.log2cpmmatrix.unfiltered.txt.gz",
+      "header": "CM_R541C_431\tCM_R541C_432\tCM_R541C_433\tCM_R541C_434\tCtrl_d25_299\tCtrl_d25_300\tCtrl_d25_301\tCtrl_d25_302\tT10I_d25_304\tT10I_d25_305\tT10I_d25_306",
+      "header_sha256": "7fc30ea96018aef8b03605765cf6199bfd84b7b50cfc857d9d9b79a9186b9364",
+      "content_length": "1444800",
+      "last_modified": "Thu, 23 Jul 2020 19:26:46 GMT",
+      "expression_rows_opened": 0
+    },
+    {
+      "filename": "GSE126458_genes.fpkm_table.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/suppl/GSE126458_genes.fpkm_table.txt.gz",
+      "header": "tracking_id\tR225X_1_0\tR225X_2_0\tR225X_3_0\tR225R_15_1_0\tR225R_15_2_0\tR225R_15_3_0\tR225R_38_1_0\tR225R_38_2_0\tR225R_38_3_0",
+      "header_sha256": "a8983b0307d0f698fffcdb430aafc8e55f668166432a2965f0b7da39c32a21b6",
+      "content_length": "616733",
+      "last_modified": "Tue, 12 Feb 2019 19:07:38 GMT",
+      "expression_rows_opened": 0
+    },
+    {
+      "filename": "GSE185620_Choi_RNAseq_counts.txt.gz",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE185nnn/GSE185620/suppl/GSE185620_Choi_RNAseq_counts.txt.gz",
+      "header": "gene\tctr.1\tctr.2\tctr.3\ttrt.1\ttrt.2\ttrt.3",
+      "header_sha256": "53b66ea48f936fe4628dacac0eb6e24add2472b710944a86a85789e48aa07df5",
+      "content_length": "235935",
+      "last_modified": "Sun, 10 Oct 2021 22:21:40 GMT",
+      "expression_rows_opened": 0
+    }
+  ]
+}

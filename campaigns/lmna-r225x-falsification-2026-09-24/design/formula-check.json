@@ -1,0 +1,107 @@
+{
+  "status": "pass",
+  "scope": "synthetic formula checks only; no expression outcomes",
+  "numpy": "2.3.3",
+  "scipy": "1.16.2",
+  "welch_oracle_examples": [
+    {
+      "synthetic_mutant": [
+        0.4,
+        0.8,
+        1.2
+      ],
+      "synthetic_corrected": [
+        2.3,
+        2.0,
+        2.1
+      ],
+      "delta": -1.333333333333333,
+      "threshold_t": -3.37099931231621,
+      "df": 2.5711857203569903,
+      "p_lower_tail": 0.02724357008870078,
+      "scipy_oracle_agreement": true
+    },
+    {
+      "synthetic_mutant": [
+        0.2,
+        0.5,
+        0.8
+      ],
+      "synthetic_corrected": [
+        0.7,
+        1.0,
+        1.3
+      ],
+      "delta": -0.5,
+      "threshold_t": 0.0,
+      "df": 3.9999999999999996,
+      "p_lower_tail": 0.5,
+      "scipy_oracle_agreement": true
+    },
+    {
+      "synthetic_mutant": [
+        2.0,
+        3.0,
+        4.0
+      ],
+      "synthetic_corrected": [
+        1.0,
+        1.2,
+        1.4
+      ],
+      "delta": 1.8,
+      "threshold_t": 3.9063557677988556,
+      "df": 2.1597444089456865,
+      "p_lower_tail": 0.9736632132746351,
+      "scipy_oracle_agreement": true
+    },
+    {
+      "synthetic_mutant": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "synthetic_corrected": [
+        2.0,
+        2.5,
+        3.0
+      ],
+      "delta": -1.5,
+      "threshold_t": -3.464101615137755,
+      "df": 2.0,
+      "p_lower_tail": 0.03708995011372426,
+      "scipy_oracle_agreement": true
+    }
+  ],
+  "holm_ten_example": {
+    "p": [
+      0.001,
+      0.002,
+      0.003,
+      0.4,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "adjusted": [
+      0.01,
+      0.018000000000000002,
+      0.024,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "exact_3v3_minimum_one_sided_permutation_p": 0.05,
+  "files": {
+    "skeptical-review.md": "a4c40ce443efdd08cb196218a3e9bcaebcb9e2d9458da56824e57f8341247e92",
+    "fixed-panel-falsification-protocol.md": "6359be6d006e6b309cc2a7ec70be94df9cbbbc06dfaebe7db2622658cab86f63"
+  }
+}

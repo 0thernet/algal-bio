@@ -1,0 +1,26 @@
+{
+  "schema": "bio.prior-art.query-ledger.v1",
+  "date": "2026-09-24",
+  "retriever": "web.run search_query",
+  "queries": [
+    "LYSMD3 site:ncbi.nlm.nih.gov/gene",
+    "\"LYSMD3\" \"lamin\"",
+    "\"PMC3443488\" supplementary",
+    "\"LYSMD3\" (\"LMNA\" OR \"lamin\" OR \"cardiomyopathy\" OR \"progeria\")",
+    "\"FLJ13542\" (\"lamin\" OR \"LMNA\" OR \"cardiomyopathy\")",
+    "\"1110030H10Rik\" (\"lamin\" OR \"progerin\")",
+    "\"DKFZp686F0735\" (\"lamin\" OR \"LMNA\")",
+    "\"LYSMD3\" \"cardiomyopathy\"",
+    "\"LYSMD3\" \"LMNA\"",
+    "\"LYSMD3\" \"progerin\"",
+    "\"LYSMD3\" \"cardiac\"",
+    "\"Lysmd3\" \"cardiomyocyte\"",
+    "\"FLJ13542\" \"cardiomyopathy\"",
+    "\"1110030H10Rik\" \"LMNA\"",
+    "\"LYSMD3\" (\"LMNA\" OR \"progerin\" OR \"lamin\") site:pmc.ncbi.nlm.nih.gov",
+    "\"FLJ13542\" (\"LMNA\" OR \"progerin\" OR \"lamin\")",
+    "\"DKFZp686F0735\" (\"LMNA\" OR \"progerin\" OR \"lamin\")",
+    "\"1110030H10Rik\" (\"LMNA\" OR \"progerin\" OR \"lamin\")"
+  ],
+  "boundary": "A bounded public-web search, not a systematic-review completeness guarantee. Results that merely co-list genes were not accepted as mechanistic evidence. No absence-as-proof claim."
+}

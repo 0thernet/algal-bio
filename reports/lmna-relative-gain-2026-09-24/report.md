@@ -3,8 +3,9 @@
 The campaign ran on public data after its candidate-selection rules were frozen.
 It did **not** establish a novel biological discovery. It produced two useful
 follow-up leads, one of which is weakened by low counts and known lamin-interactor
-prior art; the other has a small independent RNA-direction signal but unresolved
-lamina prior art.
+prior art; the other has a small independent RNA-direction signal and established
+lamin/progerin prior art. A later table-aware review corrected the initial LYSMD3
+literature assessment, as recorded below.
 
 The discovery question was whether expressed loci with increased relative LMNB1
 signal after acute LMNA depletion in differentiated human cardiomyocytes also
@@ -71,7 +72,7 @@ lexicographic ranking.
 | 7 | ANKRD52 | −0.8537 | 0.4173 | fail | External direction reverses |
 | 8 | ZFTA | −0.8383 | 0.3147 | missing | No exact external symbol |
 | 9 | FYCO1 | −0.8017 | 0.2917 | fail | Known cardiac autophagy/pressure-overload biology |
-| 10 | LYSMD3 | −0.7338 | 0.6419 | pass | Small external decrease; lamina prior-art supplement unresolved |
+| 10 | LYSMD3 | −0.7338 | 0.6419 | pass | Small external decrease; known lamin/progerin target in mouse fibroblasts |
 
 Nine candidates were evaluable in GSE304575. Only CMTM5 and LYSMD3 passed the
 predeclared requirement of negative CPM and median-ratio contrasts plus negative
@@ -93,10 +94,14 @@ claim.
 The bounded literature audit rules out several easy novelty claims. CMTM5 is
 already reported as a lamin-A interactor; FYCO1 already has cardiac autophagy
 and pressure-overload evidence; PIANP appears in an LMNA cardiomyopathy
-transcriptomic study; and the 2012 lamin-A/progerin promoter-mapping paper is
-directly relevant to LYSMD3, although its supplementary gene table was not
-rechecked. The audit therefore treats LYSMD3 as a hypothesis lead, not a novel
-lamina-associated gene. The other candidates remain unresolved after a bounded
+transcriptomic study; and the 2012 lamin-A/progerin promoter-mapping paper's
+**main Table 1 explicitly lists mouse Lysmd3** as a shared lamin-A/progerin
+target in embryonic fibroblasts, with a small progerin-associated expression
+increase. The original audit incorrectly reported no main-text symbol hit;
+the retained table already contained the mixed-case mouse symbol. The exact
+error cause is unresolved; an uppercase-only scan would miss that spelling.
+This correction retires any new lamin-target claim. It does not establish the
+same effect in human cardiomyocytes. The other candidates remain unresolved after a bounded
 search, which is not evidence of novelty. Details and source links are in
 [`novelty-audit.json`](novelty-audit.json).
 
@@ -120,13 +125,20 @@ credential or remote document write was used.
 - Sponge was used as a local literature packet. No hosted Sponge token was
   available, and no private remote write occurred.
 
+## Registered follow-up outcome
+
+The fixed ten-gene panel was subsequently tested, unchanged, in the independent
+R225X hiPSC-cardiomyocyte dataset GSE126458 under a protocol frozen before any
+outcome was opened. **0 of 10 passed** the registered 0.5 log2 decrease against
+both corrected isogenic clones. The cross-context large-repression claim is
+retired; see
+[`reports/lmna-r225x-falsification-2026-09-24/report.md`](../lmna-r225x-falsification-2026-09-24/report.md).
+
 ## Decision
 
 Do not call these genes discoveries or begin a mechanistic wet-lab claim from
-this run. If the lab wants one next computational target, prioritize **LYSMD3**
-for independent replicate-level reanalysis and a predeclared orthogonal lamina
-measurement. Treat **CMTM5** as a lower-priority control because it is already a
-lamin-A interactor and is low-count in the independent RNA study. Before any
-wet-lab spend, check the 2012 lamin-mapping supplement, obtain a genuinely
-independent cardiomyocyte dataset, and repeat candidate selection without using
-the outcome of either check.
+this run. Both leading genes already have lamin-related prior art. A registered
+follow-up must test the original fixed panel against independent cardiomyocyte
+cultures with meaningful effect thresholds and retain all failures. No candidate
+should be replaced to obtain a positive result. An orthogonal lamina assay and
+domain review remain necessary before mechanistic follow-up.

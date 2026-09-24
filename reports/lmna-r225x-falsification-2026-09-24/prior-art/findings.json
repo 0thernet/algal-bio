@@ -1,0 +1,86 @@
+{
+  "schema": "bio.prior-art.findings.v1",
+  "as_of": "2026-09-24",
+  "topic": "LYSMD3 lamina/LMNA/cardiac prior art",
+  "verdict": "retire_broad_novel_lamin_connection_claim",
+  "gene_identity": {
+    "human": {
+      "symbol": "LYSMD3",
+      "NCBI": "116068",
+      "HGNC": "26969",
+      "Ensembl": "ENSG00000176018",
+      "clone_names": [
+        "FLJ13542",
+        "DKFZp686F0735"
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/gene/116068"
+    },
+    "mouse": {
+      "symbol": "Lysmd3",
+      "NCBI": "80289",
+      "MGI": "1915906",
+      "Ensembl": "ENSMUSG00000035840",
+      "alias": [
+        "1110030H10Rik"
+      ],
+      "source_url": "https://www.ncbi.nlm.nih.gov/gene/80289",
+      "human_orthology": "NCBI summary explicitly states orthologous to human LYSMD3"
+    },
+    "search_case_policy": "Case-insensitive symbols and fixed clone/alias strings; retain organism identity."
+  },
+  "established": [
+    {
+      "id": "lamin_prior_art",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3443488/#Tab1",
+      "year": 2012,
+      "locator": "Table 1; Entrez 80289, Lysmd3 row",
+      "finding": "Mouse Lysmd3 promoter is a common lamin-A/progerin ChIP target in MEFs, with a small progerin/control expression increase reported. It was not classified as an HGPS candidate.",
+      "limits": [
+        "Does not establish direct LYSMD3 protein-lamin interaction.",
+        "Does not establish the human LMNA-knockdown cardiomyocyte observation.",
+        "The exact row is MEF-specific.",
+        "The significance mark uses p<0.05 ANOVA and no fold-change cutoff; not a modern multi-study validation."
+      ]
+    },
+    {
+      "id": "development_prior_art",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5647121/",
+      "year": 2017,
+      "locator": "Figure 3 and adjoining Results paragraphs",
+      "finding": "Lysmd3 expression was examined in E9.5/E10.5 mouse embryos in a congenital-heart-disease locus study and described as ubiquitous. LYSMD3 lies in the reported 5q14.3 TAD.",
+      "limits": [
+        "No LYSMD3-specific causation of congenital heart disease was established.",
+        "No LMNA perturbation experiment."
+      ]
+    },
+    {
+      "id": "hypertension_prior_art",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11761172/",
+      "year": 2025,
+      "locator": "Biomarker tables, external-validation paragraph/Figure 9",
+      "finding": "LYSMD3 and CMTM5 were previously selected together among computational hypertension biomarkers; authors report differential expression in external pulmonary-hypertension dataset GSE113439.",
+      "limits": [
+        "Computational biomarker evidence, not a mechanism.",
+        "Systemic-hypertension training and pulmonary-hypertension validation differ.",
+        "Does not establish LMNA cardiomyopathy."
+      ]
+    }
+  ],
+  "reading_queue_only": [
+    {
+      "source_url": "https://www.nature.com/articles/s41392-024-01804-5",
+      "year": 2024,
+      "status": "Figure label seen in indexed PDF search, not admitted as verified figure evidence",
+      "possible_evidence": "Lysmd3 among cardiac fibroblast Pknox2-siRNA heatmap rows. Main HTML did not contain exact symbol; PDF acquisition through web tool failed.",
+      "interpretation": "Do not cite this as established without checking figure bytes."
+    }
+  ],
+  "correction": {
+    "prior_claim": "LYSMD3 absent from retained 2012 main text; supplement unchecked.",
+    "corrected_claim": "The exact mixed-case Lysmd3 row is present once in retained Markdown Table 1 and source HTML.",
+    "same_markdown_sha256": "f3365bdaa00bc580ae72bcd0d1bc25c026ab79b57ffb67f3c39cd279d091fb26",
+    "cause": "Not proven. Case-sensitive all-uppercase scanning would miss the row; the exact prior scan implementation was not recovered."
+  },
+  "novelty_boundary": "No verified primary source in this bounded follow-up establishes the exact human LMNA-depletion plus LMNB1-relative-gain and LYSMD3 downregulation pattern. That search boundary does not prove novelty. Broad lamin association and cardiovascular transcriptomic association already have prior art.",
+  "recommendation": "Retire LYSMD3 as a novel gene-lamina connection. Preserve it only as a known-lamina-linked locus with a context-specific, exploratory human cardiomyocyte observation requiring independent replicate-level and orthogonal validation. Correct the public audit before prioritizing it for a novelty pitch."
+}

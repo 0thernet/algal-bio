@@ -1,0 +1,51 @@
+{
+  "schema": "bio.independent-preoutcome-review.v1",
+  "verdict": "PASS",
+  "reviewed_utc": "2026-09-24T17:04:23.588685+00:00",
+  "reviewer": "falsification_design",
+  "reviewed_code_sha256": "c89c28484061c3f063eb377f085a0225598fd80672044835c46d5b12c831c977",
+  "reviewed_test_sha256": "595d15311cfea8c963e18853eed965996a0f6173d8e4c29ed93105ab1091a47d",
+  "reviewed_protocol_draft_sha256": "7d16aca3bded0d8aecec3a97c2b63d3f284663f95f46f23b10d7f8f57152f672",
+  "reviewed_mapping_sha256": "8406cee3cc65eceaa22493ced1cd508130e12d002ec07db66b1ff83c3e14046e",
+  "reviewed_mapping_source_sha256": "7a32b0e1a50ed53c5c19cb29985e4e3b98c06d30673e1cae3822c986a06a1edd",
+  "reviewed_requirements_sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+  "permitted_freeze_only_changes": [
+    "status becomes frozen_before_numerical_outcome_access",
+    "add frozen_utc timestamp"
+  ],
+  "new_expression_outcomes_opened": false,
+  "test_command": "<python> -m unittest -v test_falsify.py",
+  "test_workdir": "campaigns/lmna-r225x-falsification-2026-09-24 (public copy; original was a private local research directory)",
+  "tests_passed": 12,
+  "independent_oracle_checks": 250,
+  "checks": [
+    "Welch threshold sign, degrees of freedom and lower-tail p agree with independent SciPy ttest_ind(case+0.5,control,equal_var=False,alternative=less)",
+    "Holm family remains10 with missing/ineligible p=1; unsorted and tied oracle examples pass",
+    "max-p intersection across both corrected-clone comparisons rejects single-clone agreement",
+    "primary significance cannot rescue pseudocount instability",
+    "zero group variance, low expression, missingness and malformed intake cannot pass",
+    "leave-one-culture-out contrasts agree with explicit independent-combination oracle",
+    "FPKM decimals preserved, not rounded to counts",
+    "input size rejected before matrix read; complete synthetic replay and no-overwrite checks pass",
+    "draft protocol and source-provenance mismatch rejected",
+    "exact original10 candidates and all source sample/identifier mappings checked"
+  ],
+  "repaired_before_freeze": [
+    "reject draft protocol status",
+    "bind mapping source SHA to registration",
+    "enforce compressed-byte bound before hash/read"
+  ],
+  "scientific_decision": "Admit one bounded model-dependent cultured-line falsification; no claim of unconditional FWER, mechanistic novelty, new lamin binding or biological validation. All prior H222P outcomes retained.",
+  "remaining_limitations": [
+    "Welch t is approximate; n=3 per line prevents credible normality diagnostics.",
+    "FPKM is processed relative abundance, not raw counts; threshold refers to transformed abundance rather than exact raw-FPKM percentage.",
+    "One patient-derived mutant clone and two corrected clones: genotype/clone effects remain inseparable.",
+    "Independent differentiations are distinct culture units, not independent donors; no population-level precision.",
+    "R225X mutation and day14 differentiation differ from acute day35 LMNA depletion and H222P.",
+    "No candidate selection or backfill after this outcome; significance is not novelty."
+  ],
+  "public_copy_note": {
+    "original_sha256": "b950a3c7cad4a9f902204277f9c20211a72f3ec54b10761031ea5fa927e59596",
+    "redaction": "Two private local filesystem paths (test_command interpreter and test_workdir) were replaced; no other field changed. freeze.json binds the original hash."
+  }
+}

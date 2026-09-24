@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-09-24T17:00:20.077467+00:00",
+  "scope": "metadata and identifier-only intake",
+  "numerical_outcomes_observed": false,
+  "paid_spend_usd": 0,
+  "files": [
+    {
+      "name": "GSE120836.metadata-only.txt",
+      "bytes": 9234,
+      "sha256": "e44fb9dae822f5f6b1970e48d58545ddf2b24ab54a7f43a49102fdad49455622"
+    },
+    {
+      "name": "GSE120836.metadata-receipt.json",
+      "bytes": 332,
+      "sha256": "aa7f4c8b37b2f46639cd2bf83c5e2eea1e337e14e507cb0f3c6a3c50d6be1bbb"
+    },
+    {
+      "name": "GSE126458.frozen-input-map.json",
+      "bytes": 6740,
+      "sha256": "7a32b0e1a50ed53c5c19cb29985e4e3b98c06d30673e1cae3822c986a06a1edd"
+    },
+    {
+      "name": "GSE126458.gene-crosswalk-only.json",
+      "bytes": 2909274,
+      "sha256": "92d7b4a7eff7fee4f0fe421e0eaf378802bc0f6247104d7ce2c098006557f33e"
+    },
+    {
+      "name": "GSE126458.metadata-only.txt",
+      "bytes": 29569,
+      "sha256": "754434145fcbdea168980eb4fd633c4fe668590f0fed8a1eb9fb272053e199df"
+    },
+    {
+      "name": "GSE126458.metadata-receipt.json",
+      "bytes": 463,
+      "sha256": "42ae241b5dd37ce10589210f9ce416543f38e475f0179b2b24066103ae994495"
+    },
+    {
+      "name": "GSE126458.tracking-ids-only.json",
+      "bytes": 456664,
+      "sha256": "c4c5e73fa54ecab82def9bfbcb5f16b8dd2c23684cd192f1a15973ab2fd4a1dd"
+    },
+    {
+      "name": "GSE136252.metadata-only.txt",
+      "bytes": 1512416,
+      "sha256": "b9b0d819c0bcc08239f062278d3f201a60d677e64cc405d5be06f6b85f94ee7a"
+    },
+    {
+      "name": "GSE136252.metadata-receipt.json",
+      "bytes": 464,
+      "sha256": "946bb45f04bb86711e35c1b8b21f78281e8b24c5166af95b29bd24d570fd7340"
+    },
+    {
+      "name": "GSE164065.metadata-only.txt",
+      "bytes": 18352,
+      "sha256": "57fb7cafe5d46f4c866089c742a25939cc5a03154cfb5447fd59165bfd5ca91a"
+    },
+    {
+      "name": "GSE164065.metadata-receipt.json",
+      "bytes": 463,
+      "sha256": "9bd0827d0e7013894a9e34dfac113260ea9bfc1cde195f5df46e54d1fb2c0a4e"
+    },
+    {
+      "name": "GSE185620.metadata-only.txt",
+      "bytes": 8020,
+      "sha256": "291b7d13fd667c2ac8e2a32f43f9b371896ccfd4b9ed2e4dfd40cdf5d9e4f9f1"
+    },
+    {
+      "name": "GSE185620.metadata-receipt.json",
+      "bytes": 463,
+      "sha256": "552ccbc5206118aba0e451b996265519466ac333e9f6c2e8d34960d270ef2060"
+    },
+    {
+      "name": "eligibility.md",
+      "bytes": 6638,
+      "sha256": "9877a7c809bf4f9b00fb516da36650e05a3e4524db65c0033093575cc38f679a"
+    },
+    {
+      "name": "matrix-headers-only.json",
+      "bytes": 2291,
+      "sha256": "e1977873d8f3fa76034853ba75da6ba670d9f722c36bfaf0b11b0f8d628cd201"
+    }
+  ]
+}

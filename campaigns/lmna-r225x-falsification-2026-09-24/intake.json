@@ -1,0 +1,16 @@
+{
+  "schema": "bio.r225x-intake.v1",
+  "retrieved_utc": "2026-09-24T17:06:46.175184+00:00",
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/suppl/GSE126458_genes.fpkm_table.txt.gz",
+  "path": "GSE126458_genes.fpkm_table.txt.gz",
+  "matrix_sha256": "3d398d6d9d8b9b130c91ece7169a06c3c88a0b9dbdb51b87c8f79b7df5d28f9b",
+  "matrix_bytes": 616733,
+  "headers": {
+    "Content-Type": "application/x-gzip",
+    "Content-Length": "616733",
+    "Last-Modified": "Tue, 12 Feb 2019 19:07:38 GMT"
+  },
+  "registration_sha256": "4501c0a26b4accab301fc447aff4e0fc5aabf8760984a061583a20e2b7e091ae",
+  "freeze_sha256": "63223df4077e2f32c4fcd2044a71fcd7f33c20d0759bed5211b1d9a6b17dc876",
+  "values_opened_before_download": false
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "bio.public-inputs.v1",
+  "files": [
+    {
+      "path": "GSE126458_genes.fpkm_table.txt.gz",
+      "phase": "falsification",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/suppl/GSE126458_genes.fpkm_table.txt.gz",
+      "bytes": 616733,
+      "sha256": "3d398d6d9d8b9b130c91ece7169a06c3c88a0b9dbdb51b87c8f79b7df5d28f9b",
+      "retrieved_utc": "2026-09-24T17:06:46.175184+00:00",
+      "accession": "GSE126458",
+      "note": "Nine-sample Cuffnorm FPKM matrix; kept outside Git, bound by hash. Not raw counts."
+    }
+  ]
+}

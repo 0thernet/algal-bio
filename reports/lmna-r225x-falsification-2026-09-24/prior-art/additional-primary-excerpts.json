@@ -1,0 +1,24 @@
+[
+  {
+    "id": "lysmd3-cardiac-development-2017",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5647121/",
+    "capture_file": "lysmd3-cardiac-development-2017/lysmd3-cardiac-development-2017.md",
+    "sha256": "8b1740ddc2ae23161b89ada3a17a4c0d642ae4bb5f253e3552724a435bd5a38e",
+    "char_range": [
+      34974,
+      35986
+    ],
+    "exact_excerpt": "We next determined whether any of the genes are expressed in the pharyngeal apparatus or heart in embryos. Probes were generated, and in situ hybridization was successfully performed for *Gpr98, Cetn3*, *Lysmd3*, and *Mef2c* in mouse embryos at E9.5 and E10.5, when the cardiac OFT is expanding (Figure [3](#F3)). Although *Gpr98* is weakly expressed at E9.5, it is strongly expressed in the neural tube region, particularly the hindbrain [^29] (Figure [3](#F3)). *Cetn3*, important in the cilia [^30] for centrosome reproduction,[^31] and *Lysmd3*, of unknown function, are ubiquitously expressed, although *Cetn3* has lower expression levels in the heart itself (Figure [3](#F3)). *Mef2c* encodes a MADS box transcription factor, and it is expressed in the pharyngeal apparatus including the second heart field mesoderm,[^32] as indicated in Figure [3](#F3). Among the genes in the TAD, *MEF2C* is the only one specifically expressed in cardiac progenitor cells known to be required for heart development.[^33]"
+  },
+  {
+    "id": "lysmd3-hypertension-2025",
+    "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11761172/",
+    "capture_file": "lysmd3-hypertension-2025/lysmd3-hypertension-2025.md",
+    "sha256": "0f317377f63fe84c05b3c07bbbbc3bf2d4c92c88c5b7e8b3384a3cca759163d7",
+    "char_range": [
+      49559,
+      49892
+    ],
+    "exact_excerpt": "The gene biomarkers were tested using the Wilcoxon rank-sum test on the [GSE113439](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE113439) dataset, as shown in [Fig 9](#pone.0314319.g009). Seven genes (PTGS2, TBXA2R, GPR171, KLC3, MSRA, LYSMD3, and CMTM5) showed significant differences between the disease and control groups."
+  }
+]

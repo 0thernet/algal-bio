@@ -1,0 +1,99 @@
+{
+  "schema": "bio.r225x-falsification-registration.v1",
+  "status": "frozen_before_numerical_outcome_access",
+  "created_utc": "2026-09-24T16:59:19.015761+00:00",
+  "question": "Do the original ten acute-LMNA relative-gain candidates show a decrease exceeding0.5 in mean log2(FPKM+0.5) in R225X cardiomyocytes against each of two corrected isogenic clones?",
+  "candidate_origin": {
+    "accession": "GSE300197",
+    "frozen_candidate_sha256": "b09d1eeb9c8de5fff5a8653ded43e7fd13b78d8496243d770daa2db2b43acb1c",
+    "original_panel_preserved": true
+  },
+  "candidates": [
+    "CMTM5",
+    "SLC2A14",
+    "NID2",
+    "DCAF8",
+    "PIANP",
+    "MEX3B",
+    "ANKRD52",
+    "ZFTA",
+    "FYCO1",
+    "LYSMD3"
+  ],
+  "input": {
+    "accession": "GSE126458",
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/suppl/GSE126458_genes.fpkm_table.txt.gz",
+    "header": [
+      "tracking_id",
+      "R225X_1_0",
+      "R225X_2_0",
+      "R225X_3_0",
+      "R225R_15_1_0",
+      "R225R_15_2_0",
+      "R225R_15_3_0",
+      "R225R_38_1_0",
+      "R225R_38_2_0",
+      "R225R_38_3_0"
+    ],
+    "max_compressed_bytes": 2000000
+  },
+  "samples": {
+    "mutant": [
+      "R225X_1_0",
+      "R225X_2_0",
+      "R225X_3_0"
+    ],
+    "corrected_clones": {
+      "corrected_1": [
+        "R225R_15_1_0",
+        "R225R_15_2_0",
+        "R225R_15_3_0"
+      ],
+      "corrected_2": [
+        "R225R_38_1_0",
+        "R225R_38_2_0",
+        "R225R_38_3_0"
+      ]
+    }
+  },
+  "mapping_source_sha256": "7a32b0e1a50ed53c5c19cb29985e4e3b98c06d30673e1cae3822c986a06a1edd",
+  "units": "Three independently differentiated cultures per line per GEO. No invented pairing; same mutant samples used in each separate corrected-clone comparison.",
+  "analysis": {
+    "minimum_log2_decrease": 0.5,
+    "family_alpha": 0.05,
+    "pseudocount_primary": 0.5,
+    "pseudocount_sensitivity": [
+      0.1,
+      1.0
+    ],
+    "test": "one-sided Welch threshold t-test; union maximum over two corrected-clone comparisons; Holm10",
+    "ineligible_policy": "p=1, preserve family10",
+    "promotion": "both primary delta<=-0.5, Holm<=0.05, all leave-one-culture-out contrasts<0, both sensitivities<=-0.5"
+  },
+  "eligibility": "FPKM>=1 in at least2/3 cultures and meanFPKM>=1 in EACH corrected clone; every group must have nonzero logFPKM variance. Unmapped, ambiguous or missing genes remain p=1.",
+  "mapping": "Exact pre-outcome Ensembl ID from deposited Cuffdiff identifier columns; ZFTA prior symbol C11orf95 is admitted from HGNC before outcomes. No post-outcome mapping repairs.",
+  "access_disclosure": [
+    "No GSE126458 numerical FPKM or differential outcomes opened by investigator/design/data-audit workers before freeze.",
+    "Header and identifier columns inspected only. Primary article and GEO metadata read.",
+    "All GSE300197/GSE304575 outcomes were already exposed; H222P failures retained and never renamed as independent holdout.",
+    "Within-session freeze has no independent timestamp authority; public-data/model-training exposure cannot be ruled out."
+  ],
+  "claim_ceiling": "Model-dependent cultured-line expression association or failed large-effect prediction. No universal LMNA signature, absolute abundance change, newly discovered lamin target, causal mechanism or biological validation.",
+  "limitations": [
+    "Welch t is approximate; n=3 per line prevents credible normality diagnostics.",
+    "FPKM is processed relative abundance, not raw counts; threshold refers to transformed abundance rather than exact raw-FPKM percentage.",
+    "One patient-derived mutant clone and two corrected clones: genotype/clone effects remain inseparable.",
+    "Independent differentiations are distinct culture units, not independent donors; no population-level precision.",
+    "R225X mutation and day14 differentiation differ from acute day35 LMNA depletion and H222P.",
+    "No candidate selection or backfill after this outcome; significance is not novelty."
+  ],
+  "failure_policy": "Retire the specific cross-context large-repression claim for any failing gene; keep context-specific original observations. All outcomes retained, no retries with looser thresholds.",
+  "other_datasets": "GSE136252 is excluded from this formal test due raw-versus-normalized sample discrepancies and missing clone/differentiation map. Any later descriptive use gets a separate predeclared analysis; no confirmatory significance.",
+  "budget": {
+    "new_provider_usd": 0,
+    "new_compute_usd": 0,
+    "prior_total_usd": 0.019722,
+    "total_ceiling_usd": 25
+  },
+  "frozen_utc": "2026-09-24T17:05:31.567627+00:00"
+}

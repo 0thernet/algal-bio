@@ -1,0 +1,11 @@
+{
+  "schema": "bio.r225x-freeze-receipt.v1",
+  "frozen_utc": "2026-09-24T17:05:31.567627+00:00",
+  "registration_sha256": "4501c0a26b4accab301fc447aff4e0fc5aabf8760984a061583a20e2b7e091ae",
+  "mapping_sha256": "8406cee3cc65eceaa22493ced1cd508130e12d002ec07db66b1ff83c3e14046e",
+  "code_sha256": "c89c28484061c3f063eb377f085a0225598fd80672044835c46d5b12c831c977",
+  "requirements_sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+  "independent_review_sha256": "b950a3c7cad4a9f902204277f9c20211a72f3ec54b10761031ea5fa927e59596",
+  "status": "frozen_before_numerical_outcome_access",
+  "timing_limit": "Within-session record, not independent preregistration timestamp authority."
+}

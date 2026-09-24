@@ -1,0 +1,25 @@
+{
+  "schema": "bio.prior-art.gaps.v1",
+  "items": [
+    {
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/3443488/bin/412_2012_376_MOESM8_ESM.docx",
+      "status": "not_downloaded",
+      "reason": "Observed supplement link; web click returned internal error. Main Table 1 decisively resolves broad linkage, so further download not necessary for this bounded audit. Supplement-specific cardiac membership remains unchecked."
+    },
+    {
+      "source_url": "https://www.ncbi.nlm.nih.gov/gene/116068",
+      "status": "web_read_admitted_local_capture_rejected",
+      "reason": "web.run returned readable primary gene entry and aliases; Ghostget returned Checking your browser challenge HTML mislabeled complete. Challenge bytes retained only as acquisition gap."
+    },
+    {
+      "source_url": "https://www.ncbi.nlm.nih.gov/gene/80289",
+      "status": "web_read_admitted_local_capture_rejected",
+      "reason": "web.run returned readable primary mouse gene entry and orthology; Ghostget returned Checking your browser challenge HTML mislabeled complete."
+    },
+    {
+      "source_url": "https://www.nature.com/articles/s41392-024-01804-5.pdf",
+      "status": "not_admitted",
+      "reason": "web tool PDF retrieval failed; no direct figure verification."
+    }
+  ]
+}
