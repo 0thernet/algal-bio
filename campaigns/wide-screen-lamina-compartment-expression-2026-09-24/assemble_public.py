@@ -13,7 +13,7 @@ SKIP_DIRS = {"data", "panel/data", "damid/data", "__pycache__"}
 SKIP_FILES = {"features/tiles.base.tsv"}
 REPORT_PREFIXES = ("report.md", "results/", "design/", "logs/", "control/result.json", "control/robust_explore.json", "panel/results/", "damid/results/")
 HOME = "/" + "Users/" + "bg"
-SUBS = [(HOME + "/Documents/research/", "<research-root>/"), (HOME + "/", "<home>/"), ("/private/t" + "mp/", "<tmp>/")]
+SUBS = [(HOME + "/Documents/research/", "<research-root>/"), (HOME + "/Documents/research", "<research-root>"), (HOME + "/", "<home>/"), ("/private/t" + "mp/", "<tmp>/"), ("/Use" + "rs/", "<home-prefix>/"), ("/ho" + "me/", "<home-root>/")]
 PRIV = re.compile("/Use" + "rs/|/ho" + "me/|/private/t" + "mp")
 def skip(rel):
     parts = rel.split("/")
@@ -35,7 +35,7 @@ for src in sorted(ROOT.rglob("*")):
         sys.exit(f"binary file not expected: {rel}")
     dst = (rep if rel.startswith(REPORT_PREFIXES) else camp) / rel
     dst.parent.mkdir(parents=True, exist_ok=True); dst.write_bytes(out)
-    manifest.append({"source": rel, "published": str(dst.relative_to(repo)), "bytes": len(data), "sha256_original": orig,
+    manifest.append({"source": rel, "published": str(dst.relative_to(repo)), "bytes": len(data), "bytes_published": len(out), "sha256_original": orig,
                      "sha256_published": hashlib.sha256(out).hexdigest(), "path_prefix_redacted": redacted})
 (rep / "assembly.manifest.json").write_text(json.dumps({"schema": "bio.assembly-manifest.v2", "slug": SLUG,
     "excluded": sorted(SKIP_DIRS | SKIP_FILES), "note": "frozen hashes refer to sha256_original; redaction replaces personal path prefixes only",

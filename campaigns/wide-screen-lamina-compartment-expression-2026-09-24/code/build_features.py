@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from pyliftover import LiftOver
 
-R = Path("<home>/Documents/research")
+R = Path("<research-root>")
 LIVE = R / "biology-live-2026-09-24/data"
 COMP = R / "biology-compartment-2026-09-24"
 REPL = R / "biology-replication-2026-09-24"
