@@ -32,6 +32,12 @@
       "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/per_chromosome_table.py"
     },
     {
+      "source": "code/run_tests.py",
+      "bytes": 1365,
+      "sha256": "a46e93c7b5e8070ccbbf3fe45af3f51d8dcb09176d0e07547674b007f00388a7",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/run_tests.py"
+    },
+    {
       "source": "results/run-001/per-chromosome-validation-vs-outcome.json",
       "bytes": 5857,
       "sha256": "1abe521fcc83aa51580bcf858d23b709ebe25ab6538daf671a77b3caba9effd5",
@@ -105,8 +111,8 @@
     },
     {
       "source": "registration/assemble_public.py",
-      "bytes": 6311,
-      "sha256": "102bf95d72e58199fe99eabf71b677ee0fee1daf2e37dd878a59ea53b660e66e",
+      "bytes": 6359,
+      "sha256": "46bb05853e3f6fd139700ae6d003049961118e91f3e0b7429ce2aeaf01e61fda",
       "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/assemble_public.py"
     },
     {
@@ -234,14 +240,14 @@
     },
     {
       "source": "report.md",
-      "bytes": 13893,
-      "sha256": "3192ae19bd9dc59454663048f82ec341cbc070d1a715bfb178cefc98b32d6faa",
+      "bytes": 14034,
+      "sha256": "4da2704ff2d71bea6d2e7270563d86eea335503eaf41c8472d0376e0d205107f",
       "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/report.md"
     },
     {
       "source": "README.campaign.md",
-      "bytes": 6342,
-      "sha256": "3225c8dd420d7ac97a2bb69b74965c4446452f97b783353a5d2671bd6e59adf5",
+      "bytes": 7021,
+      "sha256": "91ffe1628b5977b717a0fca1292b6016b13dcc586ef635ee0a2afd4f778024d1",
       "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/README.md"
     },
     {

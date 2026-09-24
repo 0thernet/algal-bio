@@ -33,7 +33,7 @@ registration, matches.
 ## What is in this directory
 
 - `registration.reviewed-draft.json` — the draft as reviewed (round 1 PASS_WITH_REPAIRS, round 2 PASS, round-2 minor repairs verified); differs from the frozen file only by status, `frozen_utc` and the method-validation record binding.
-- `registration.frozen.json`, `freeze.json`, `intake.json`, `archive-001/` — the single freeze; `archive-001/` holds the bytes of every bound file.
+- `registration.frozen.json`, `freeze.json`, `intake.json`, `archive-001/` — the single freeze; `archive-001/` holds the bytes of every bound file except the UCSC RefSeq table and chain noted below (21 hashes bound, 20 files archived).
 - `design/` — fixed protocol, skeptical review (items 1–12), independent pre-outcome review, null SD estimate, and the method validation of `pc1.py` against the deposited GSE126459 HOMER PC1 tracks (every attempt retained in `design/method-validation-attempts.md`, including the failed first attempt and the second attempt whose script carried a personal path).
 - `lift_predictor.py`, `predictor_hg19.tsv`, `predictor_hg19.manifest.json` — the hg19 predictor and how it was produced from the compartment campaign's frozen predictor.
 - `tools.SHA256SUMS`, `tools.FETCHED_UTC`, `hg19.chrom.sizes` — the UCSC inputs (chain and RefSeq table are not copied; their hashes are bound).
@@ -44,6 +44,7 @@ registration, matches.
 - `design/independent-review.redacted.json` and `archive-001/independent-review.redacted.json`: the bound file (sha `630582f9…`, in `freeze.json`) contains, inside the round-1 reviewer's advice text, a quoted seven-character macOS home-directory prefix literal (slash, the word Users, slash: a grep pattern the reviewer suggested, not a real path). The repository forbids personal path prefixes, so the published copy replaces that one quoted string with `'<home-prefix>/'`; the substitution and both hashes are recorded in `reports/…/assembly.manifest.json`.
 - The registration's `secondary_reported_only` entry for the per-chromosome table cites "the evaluator's per-chromosome output"; the evaluator records per-chromosome orientation ρ only, so the outcome column was computed from `core/tiles.tsv` by `per_chromosome_table.py` after the outcome was known (a secondary with no threshold; see the report).
 - The first intake attempt was stopped by the operator at ≈ 0.8 GB to move it out of a capped shell; no receipt was written and the partial file was deleted. The first run launch failed at argument parsing before any binding check (`reports/…/results/run-001-argv-error.log`).
+- `test_replicate.py` (hash-bound) loads the registration draft from the private working layout (`<root>/registration/protocol.draft.json`), so `python -m unittest test_replicate` from this flat directory errors on 11 of 12 tests with a missing file; `test_pc1` is unaffected. The unbound helper `run_tests.py` recreates that layout in a temporary directory from the published bytes (the draft is `registration.reviewed-draft.json`, byte-identical) and runs both suites (39 tests). Found by the post-outcome PR review; the bound file was not edited.
 - The UCSC chain and RefSeq Select table are not copied (size); their hashes and fetch time are in `tools.SHA256SUMS` / `tools.FETCHED_UTC` and in the registration.
 
 ## Reproduce
@@ -52,7 +53,7 @@ Inputs: the four GSE314556 pairs files (URLs, byte counts and hashes in `registr
 
 ```
 python -m venv .venv && .venv/bin/pip install -r requirements.lock
-cd <this directory> && .venv/bin/python -m unittest -v test_pc1 test_replicate
+cd <this directory> && .venv/bin/python run_tests.py -v   # recreates the private layout in a temp dir; see Record gaps
 .venv/bin/python replicate.py --registration registration.frozen.json --freeze freeze.json --intake intake.json \
   --predictor predictor_hg19.tsv --outcome-dir <four pairs files> --tools-dir <hg19 tools> --out-dir run-check --python .venv/bin/python
 ```

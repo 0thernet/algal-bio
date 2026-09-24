@@ -24,6 +24,7 @@ COPY = {
     "code/pc1.py": camp / "pc1.py",
     "code/lift_predictor.py": camp / "lift_predictor.py",
     "code/per_chromosome_table.py": camp / "per_chromosome_table.py",
+    "code/run_tests.py": camp / "run_tests.py",
     "results/run-001/per-chromosome-validation-vs-outcome.json": rep / "results" / "per-chromosome-validation-vs-outcome.json",
     "logs/run-001.argv-error.log": rep / "results" / "run-001-argv-error.log",
     "code/test_replicate.py": camp / "test_replicate.py",

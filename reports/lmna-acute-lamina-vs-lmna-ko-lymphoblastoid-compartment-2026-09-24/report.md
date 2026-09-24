@@ -74,7 +74,7 @@ arm reaches p ≤ 0.01). Not `PIPELINE_FAILURE` (no chromosome excluded).
 
 Pipeline: all four samples oriented on all 22 autosomes with no flip needed by the evaluator
 (genome-wide orientation ρ = 0.637 on the WT mean); leave-one-out concordance with the WT
-reference ≥ 0.966 on every chromosome and sample; eligible tiles 5,225 of 5,776 (every
+reference ≥ 0.965 on every chromosome and sample; eligible tiles 5,225 of 5,776 (every
 tile with a finite predictor). Cis pairs kept: WT.1 53.5 M, WT.2 52.8 M, KO.1 63.0 M,
 KO.2 26.2 M (the half-depth replicate, as disclosed before freeze). Compartment-strength
 ratio KO/WT (PC1 eigenvalue share) 0.902, inside [0.7, 1.4]:
@@ -113,7 +113,8 @@ standard deviations (≈ 0.019 each) of zero.
 Per-chromosome table (registered at report time; `results/per-chromosome-validation-vs-outcome.json`):
 the unadjusted ρ per chromosome ranges from -0.244 (chr19, 105 tiles) to +0.124 (chr5) with both signs common;
 the three chromosomes where `pc1.py` agreed least with the deposited GSE126459 PC1 during
-validation (chr22 0.21, chr4 0.40 in one sample, chr9 0.68–0.73) contribute +0.073, +0.056
+validation (chr22 0.21, chr4 0.40 in one sample, chr9 0.68–0.73; chr21 has no validation
+value because the deposited GSE126459 tracks contain no chr21 rows) contribute +0.073, +0.056
 and -0.031 (together 650 of 5,225 tiles). The
 registration's wording "the evaluator's per-chromosome output" was imprecise: the evaluator
 records per-chromosome orientation ρ only, so the outcome column was computed from
@@ -131,9 +132,9 @@ secondary with no threshold and is disclosed as such.
 - What the data show, within the frozen analysis: the acute cardiomyocyte lamina-sensitivity
   map has essentially no rank relationship with compartment change in *LMNA*-KO GM12878
   cells (|ρ| ≤ 0.032 in every arm). The sanity correlation between baseline lamina (siScr
-  LMNB1 in cardiomyocytes) and baseline PC1 (WT lymphoblastoid) is −0.49, so the predictor
-  and outcome grids are aligned and the lamina map still tracks the B compartment across
-  lineages; what is absent is any relationship between *change* in one and *change* in the
+  LMNB1 in cardiomyocytes) and baseline PC1 (WT lymphoblastoid) is −0.49 (an exploratory
+  secondary with no threshold), consistent with the predictor and outcome grids being
+  aligned; what is absent is any relationship between *change* in one and *change* in the
   other.
 - Power: the registered rule had ≈ 94% single-arm power at a true effect of −0.08 and
   12/12 in the reviewer's full-rule simulation at −0.085, and the pipeline reproduced the
@@ -185,8 +186,8 @@ of a known class across three independent human studies, not a new mechanism.
   on the 4DN column layout with no PC1 produced; attempt 2 passed but its script carried a
   personal path; attempt 3 (bound script, identical pipeline bytes) passed at 21:02:48Z.
   All three retained in `design/method-validation-attempts.md`.
-- Freeze-001 2026-09-24T21:14:10Z with `data/GSE314556` empty; 22 artefacts bound and
-  archived in `archive-001/`.
+- Freeze-001 2026-09-24T21:14:10Z with `data/GSE314556` empty; 21 hashes bound, 20 files
+  archived in `archive-001/` (the RefSeq table and chain are bound by hash only).
 - Intake: a first download attempt was stopped by the operator after ≈ 0.8 GB of the first
   file to move it out of a shell with a 10-minute cap; its partial file was deleted and no
   receipt was written. The second attempt (21:17:09Z–21:36:37Z) streamed all four files
