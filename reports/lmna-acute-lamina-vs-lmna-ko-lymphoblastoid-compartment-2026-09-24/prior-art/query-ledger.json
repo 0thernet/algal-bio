@@ -1,0 +1,52 @@
+[
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12871105/",
+    "utc": "2026-09-24T20:36:30Z",
+    "note": "PMC full text, fetch 1 of 3: perturbation, Hi-C methods, compartments, lamin B1, CTCF. HTTP 200."
+  },
+  {
+    "url": "https://www.google.com/search?q=Caruso+%22Lamin+A%2FC+maintains+genome+topology%22+GSE314556+bioRxiv",
+    "utc": "2026-09-24T20:36:30Z",
+    "note": "Web search (engine-mediated) to confirm identity of the preprint and locate canonical URLs. No data files retrieved."
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12871105/",
+    "utc": "2026-09-24T20:36:55Z",
+    "note": "PMC full text, fetch 2 of 3: verbatim Hi-C methods subsections, CRISPR subsection, data availability. HTTP 200 (cached)."
+  },
+  {
+    "url": "https://www.biorxiv.org/content/10.64898/2026.01.12.699161v1.full",
+    "utc": "2026-09-24T20:36:55Z",
+    "note": "bioRxiv full text HTML. FAILED: HTTP 429 Too Many Requests."
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12871105/",
+    "utc": "2026-09-24T20:37:10Z",
+    "note": "PMC full text, fetch 3 of 3: compartment/saddle/segregation/LAD/periphery sentences and ChIP-seq antibody list. HTTP 200 (cached)."
+  },
+  {
+    "url": "https://europepmc.org/article/MED/41648489",
+    "utc": "2026-09-24T20:37:25Z",
+    "note": "Europe PMC article page. FAILED: HTTP 403 Forbidden."
+  },
+  {
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE314556",
+    "utc": "2026-09-24T20:37:25Z",
+    "note": "GEO series metadata page (sample/replicate counts). FAILED: reCAPTCHA interstitial, no content. No data files requested or downloaded."
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12871105/fullTextXML",
+    "utc": "2026-09-24T20:37:45Z",
+    "note": "Europe PMC REST full-text XML, fetch 1 of 2: compartment tool, bin size, replicates, enzyme, abstract, lamin B1 sentences. HTTP 200."
+  },
+  {
+    "url": "https://www.biorxiv.org/content/10.64898/2026.01.12.699161v1.full",
+    "utc": "2026-09-24T20:37:45Z",
+    "note": "bioRxiv full text HTML, retry. FAILED: HTTP 429 Too Many Requests."
+  },
+  {
+    "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12871105/fullTextXML",
+    "utc": "2026-09-24T20:38:15Z",
+    "note": "Europe PMC REST full-text XML, fetch 2 of 2: presence/absence checks for 'saddle', compartment strength, genome fraction, Discussion LAD sentences, prior lamina-vs-compartment comparison. HTTP 200 (cached)."
+  }
+]

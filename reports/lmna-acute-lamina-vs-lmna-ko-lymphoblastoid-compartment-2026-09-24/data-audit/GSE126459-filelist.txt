@@ -1,0 +1,20 @@
+#Archive/File	Name	Time	Size	Type
+Archive	GSE126459_RAW.tar	02/14/2019 13:16:04	7000924160	TAR
+File	GSM3602088_HiC_corrected.1_rep1_500000_iced.matrix.gz	02/09/2019 02:05:09	91221376	MATRIX
+File	GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz	02/12/2019 13:35:29	73528	BEDGRAPH
+File	GSM3602088_HiC_corrected.1_rep1_allValidPairs.pairs.txt.gz	02/12/2019 13:39:31	1061328171	TXT
+File	GSM3602089_HiC_corrected.1_rep2_500000_iced.matrix.gz	02/09/2019 06:24:29	96252260	MATRIX
+File	GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz	02/12/2019 13:39:31	73677	BEDGRAPH
+File	GSM3602089_HiC_corrected.1_rep2_allValidPairs.pairs.txt.gz	02/12/2019 13:43:48	1121030001	TXT
+File	GSM3602090_HiC_corrected.2_rep1_500000_iced.matrix.gz	02/09/2019 11:22:30	91676719	MATRIX
+File	GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz	02/12/2019 13:43:48	73730	BEDGRAPH
+File	GSM3602090_HiC_corrected.2_rep1_allValidPairs.pairs.txt.gz	02/12/2019 13:47:40	1034985229	TXT
+File	GSM3602091_HiC_corrected.2_rep2_500000_iced.matrix.gz	02/09/2019 17:30:27	99599478	MATRIX
+File	GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz	02/12/2019 13:47:40	73653	BEDGRAPH
+File	GSM3602091_HiC_corrected.2_rep2_allValidPairs.pairs.txt.gz	02/12/2019 13:52:07	1207107953	TXT
+File	GSM3602092_HiC_mutant_rep1_500000_iced.matrix.gz	02/09/2019 23:42:20	88130726	MATRIX
+File	GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz	02/12/2019 13:52:07	73514	BEDGRAPH
+File	GSM3602092_HiC_mutant_rep1_allValidPairs.pairs.txt.gz	02/12/2019 13:55:54	1045608093	TXT
+File	GSM3602093_HiC_mutant_rep2_500000_iced.matrix.gz	02/10/2019 05:33:57	81489133	MATRIX
+File	GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz	02/12/2019 13:55:54	73511	BEDGRAPH
+File	GSM3602093_HiC_mutant_rep2_allValidPairs.pairs.txt.gz	02/12/2019 13:59:31	982035544	TXT

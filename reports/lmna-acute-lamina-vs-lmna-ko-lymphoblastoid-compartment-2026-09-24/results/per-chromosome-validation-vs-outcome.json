@@ -1,0 +1,182 @@
+{
+  "schema": "bio.per-chromosome-validation-vs-outcome.v1",
+  "note": "report-time join of two mechanically produced records; exploratory; no p-values; no threshold depends on it",
+  "per_chromosome": {
+    "chr1": {
+      "n_eligible_tiles": 446,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.979723669858199,
+        "GSM3602088": 0.9441575348714967
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.05749750693476234
+    },
+    "chr2": {
+      "n_eligible_tiles": 464,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9668632617602364,
+        "GSM3602088": 0.9786721437052247
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.07433097009636337
+    },
+    "chr3": {
+      "n_eligible_tiles": 384,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9837781768655739,
+        "GSM3602088": 0.9824183338078893
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.06553186064879234
+    },
+    "chr4": {
+      "n_eligible_tiles": 368,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.902222018322318,
+        "GSM3602088": 0.4006738254648679
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.05623442681530239
+    },
+    "chr5": {
+      "n_eligible_tiles": 346,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9824731846686521,
+        "GSM3602088": 0.987840378067007
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.12375359687349942
+    },
+    "chr6": {
+      "n_eligible_tiles": 330,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9640082298436555,
+        "GSM3602088": 0.9720019765671444
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.008157183178074096
+    },
+    "chr7": {
+      "n_eligible_tiles": 304,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9753580732772554,
+        "GSM3602088": 0.9715990465477637
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.005390871270043312
+    },
+    "chr8": {
+      "n_eligible_tiles": 277,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9606981789995669,
+        "GSM3602088": 0.9763599263425073
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.04002341997066293
+    },
+    "chr9": {
+      "n_eligible_tiles": 216,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.6838712625818318,
+        "GSM3602088": 0.731450866589738
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.030838662046464
+    },
+    "chr10": {
+      "n_eligible_tiles": 256,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9669181170016391,
+        "GSM3602088": 0.9591380694873008
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.02432550354772259
+    },
+    "chr11": {
+      "n_eligible_tiles": 258,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9571710386063172,
+        "GSM3602088": 0.9501823406933517
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.08175818048227784
+    },
+    "chr12": {
+      "n_eligible_tiles": 256,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9717429474970233,
+        "GSM3602088": 0.9810036061120747
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.027137216754406043
+    },
+    "chr13": {
+      "n_eligible_tiles": 192,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9910960319647286,
+        "GSM3602088": 0.9837300220446404
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.0279735100236009
+    },
+    "chr14": {
+      "n_eligible_tiles": 175,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9849266778666819,
+        "GSM3602088": 0.9853503801361087
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.053508732646663684
+    },
+    "chr15": {
+      "n_eligible_tiles": 156,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9692172762824937,
+        "GSM3602088": 0.9645962732919254
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.0408275513268322
+    },
+    "chr16": {
+      "n_eligible_tiles": 151,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9072181568174993,
+        "GSM3602088": 0.8503548229046483
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.08376786336702684
+    },
+    "chr17": {
+      "n_eligible_tiles": 149,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9332457606878434,
+        "GSM3602088": 0.9303170527824218
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.10815164157446036
+    },
+    "chr18": {
+      "n_eligible_tiles": 144,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9890981242850849,
+        "GSM3602088": 0.9838008121804862
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.09188971947592638
+    },
+    "chr19": {
+      "n_eligible_tiles": 105,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9669337479071992,
+        "GSM3602088": 0.9797724399494311
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.24398714493054116
+    },
+    "chr20": {
+      "n_eligible_tiles": 114,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.9614099134539732,
+        "GSM3602088": 0.9879087332808812
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.09857637552904963
+    },
+    "chr21": {
+      "n_eligible_tiles": 68,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": null,
+        "GSM3602088": null
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": -0.023208764362331564
+    },
+    "chr22": {
+      "n_eligible_tiles": 66,
+      "validation_spearman_vs_deposited_pc1": {
+        "GSM3602092": 0.2062038900067069,
+        "GSM3602088": 0.2158618376928236
+      },
+      "outcome_unadjusted_rho_dlam_vs_dpc1": 0.0734578853981839
+    }
+  }
+}

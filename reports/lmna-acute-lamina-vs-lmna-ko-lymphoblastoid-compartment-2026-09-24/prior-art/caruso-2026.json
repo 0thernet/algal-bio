@@ -1,0 +1,118 @@
+{
+  "paper": {
+    "title": "Lamin A/C maintains genome topology and regulates transcriptional programs essential for virus-driven B cell activation",
+    "first_author": "Caruso LB",
+    "preprint": "bioRxiv 2026-01-12",
+    "doi": "10.64898/2026.01.12.699161",
+    "pmid": "41648489",
+    "pmcid": "PMC12871105",
+    "geo_series": "GSE314556",
+    "geo_superseries": "GSE314558"
+  },
+  "perturbation": {
+    "type": "stable_crispr_cas9_knockout",
+    "is_degron": false,
+    "is_rnai": false,
+    "clones": null,
+    "clone_note": "No single-cell cloning or clone identifiers described; lentiviral sgRNA-transduced pool.",
+    "quote": "sgRNA sequences used were as follows: Control: ATTTCGCAGATCATCGACAT, LMNA: AGTTTAAGGAGCTGAAAGCG",
+    "quote_section": "Methods - CRISPR/Cas9"
+  },
+  "control": {
+    "type": "non_targeting_control_sgRNA_same_background",
+    "isogenic_parental": false,
+    "quote": "B cells were transduced with lentiviruses expressing sgRNAs as previously described",
+    "quote_section": "Methods - CRISPR/Cas9",
+    "note": "Control is the same LCL transduced with a control sgRNA, referred to as 'WT' in Results; not an untransduced parental line."
+  },
+  "cell_line": "GM12878 EBV-positive lymphoblastoid cell line (LCL)",
+  "replicates_per_condition": null,
+  "replicates_note": "No 'n =' or replicate count stated for Hi-C anywhere in Methods or figure legends. Methods state only '5 x 10^6 cells per condition were collected for in-situ Hi-C'. GEO page was CAPTCHA-blocked so sample counts were not confirmed.",
+  "depth": null,
+  "depth_note": "No read counts or valid-pair counts reported. Only: 'Libraries were sequenced using the Illumina HiSeq 2500 sequencing platform with paired-end 75 bp read length.' (Methods - Hi-C assay)",
+  "enzyme": null,
+  "enzyme_note": "No restriction enzyme named. Protocol given by reference only: 'Hi-C assay was performed as previously described'.",
+  "pipeline": {
+    "name": "HiC-Pro",
+    "version": "2.10.0",
+    "quote": "HiC data were preprocessed using HiC-Pro v2.10.0 pipeline with default settings using the human genome at 1 kb resolution.",
+    "quote_section": "Methods - Hi-C data analysis",
+    "differential_contacts": "DESeq2 on raw count matrix files; significant interactions summed by cell type and filtered by CTCF binding"
+  },
+  "compartment_method": {
+    "tool": null,
+    "bin_size": null,
+    "processing_resolution": "1 kb (HiC-Pro preprocessing resolution; no separate compartment bin size given)",
+    "orientation_method": null,
+    "quote": "Eigenvector in WT versus lamin A/C KO cells from Hi-C data sets showing significant (p < 0.01) changes in open (A) and closed chromatin (B) compartments",
+    "quote_section": "Figure legend",
+    "note": "No compartment/eigenvector caller named (no cooltools, HOMER, Juicer, FAN-C or dcHiC). No PC1 sign-orientation rule (GC content or gene density) described."
+  },
+  "compartment_findings": {
+    "switching_reported": true,
+    "b_to_a_count": 39,
+    "a_to_b_count": 23,
+    "units": "counts of compartments/regions; no genome fraction or percentage given",
+    "genome_fraction_reported": false,
+    "compartment_strength_reported": false,
+    "saddle_plots": false,
+    "saddle_note": "The word 'saddle' does not appear in the full text.",
+    "quote": "the depletion of lamin A/C had a significant effect on global genome organization, with 39 compartments switching from B (inactive chromatin) to A (active chromatin) compartments and 23 from A to B in lamin A/C KO cells",
+    "quote_section": "Results - Hi-C / genome organization",
+    "linked_to_lamin_b1_or_lads": false,
+    "link_note": "Compartment changes are never related to LADs or lamin B1. The lamin B1 link is made for CTCF only.",
+    "loop_findings": {
+      "quote": "increased frequency of smaller chromatin loops (occurring between nearby regions) and a decreased occurrence of larger loops",
+      "quote_section": "Results"
+    },
+    "ctcf_periphery_lamin_b1_claim": {
+      "present": true,
+      "quote": "lamin A/C influences the nuclear positioning and transcription of CTCF-bound loci by preventing their relocation to the periphery and their association with lamin B1",
+      "quote_section": "Abstract",
+      "supporting_quotes": [
+        {"quote": "In absence of lamin A/C, CTCF became repositioned towards the nuclear periphery", "section": "Results"},
+        {"quote": "We observed increased interaction of CTCF with both lamin B1 and H3K9me2 in the absence of lamin A/C (Fig. 4A).", "section": "Results"}
+      ],
+      "evidence_type": "proximity ligation assay (PLA) / imaging, not a genome-wide lamin B1 map"
+    }
+  },
+  "global_effect_reported": {
+    "reported": true,
+    "confounds_tile_level_test": true,
+    "quotes": [
+      {"quote": "the depletion of lamin A/C had a significant effect on global genome organization", "section": "Results"},
+      {"quote": "significant three-dimensional reorganization of the genome, evidenced by the loss of long-range chromatin loops, an increase in short-range contacts, and redistribution of H3K9me2-marked heterochromatin", "section": "Abstract"},
+      {"quote": "loss of lamin A/C causes the heterochromatin to be untethered to the nuclear periphery, disrupting its supporting role", "section": "Discussion"}
+    ],
+    "note": "Genome-wide contact-scaling shift (short-range up, long-range down) requires distance-matched or quantile-normalized comparison in any tile-level compartment test.",
+    "compartment_segregation_metric_reported": false
+  },
+  "lmnb1_data_in_same_cells": {
+    "generated": false,
+    "assays_present": ["western blot (lamin B1 expression unchanged)", "PLA (CTCF-lamin B1 proximity)"],
+    "chipseq_targets_in_study": ["CTCF", "H3K9me2"],
+    "geo_accession": null,
+    "quote": "These cells show no differences compared to WT cells in terms of lamin B1 expression or the number of EBV genomes per cell (Fig. S1A and S1B).",
+    "quote_section": "Results",
+    "data_availability_quote": "The RNA-seq, the ChIP-seq and Hi-C datasets generate during this study are available in the Gene Expression Omnibus (GEO) repository, under accession number GSE314558.",
+    "note": "No LMNB1 ChIP-seq, CUT&RUN or DamID track exists for these cells; an external LAD/LMNB1 reference would be required."
+  },
+  "prior_comparison_found": {
+    "found": false,
+    "closest_quote": "Lamin A/C is associated with maintaining nuclear structure and organizing chromatin by forming lamina-associated domains (LADs).",
+    "closest_quote_section": "Introduction/Discussion",
+    "note": "No statement in the paper compares acute lamina-sensitivity (rate or magnitude of LMNB1 loss) with compartment shift toward B. The hypothesis appears unclaimed by this paper."
+  },
+  "sources": [
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC12871105/",
+    "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12871105/fullTextXML",
+    "https://www.biorxiv.org/content/10.64898/2026.01.12.699161v1",
+    "https://pubmed.ncbi.nlm.nih.gov/41648489/"
+  ],
+  "sources_unavailable": [
+    {"url": "https://www.biorxiv.org/content/10.64898/2026.01.12.699161v1.full", "reason": "HTTP 429 (two attempts)"},
+    {"url": "https://europepmc.org/article/MED/41648489", "reason": "HTTP 403"},
+    {"url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE314556", "reason": "reCAPTCHA interstitial; sample/replicate metadata not retrieved"}
+  ],
+  "retrieved_utc": "2026-09-24T20:38Z"
+}

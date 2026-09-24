@@ -1,0 +1,248 @@
+{
+  "schema": "bio.registered-protocol.v3",
+  "campaign_id": "lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24",
+  "status": "frozen",
+  "purpose": "Pre-registered replication, in an outcome cohort never opened by this program, of the association tested (and not passed) in lmna-acute-lamina-vs-chronic-compartment-2026-09-24: 500 kb regions whose LMNB1 association rises most after acute LMNA depletion (GSE300197) shift toward compartment B under chronic LMNA loss.",
+  "hypothesis": {
+    "direction": "negative Spearman correlation between dlam_mCh (siLMNA - siScr LMNB1 z-score, per hg19 500 kb tile) and dPC1 = mean(KO PC1) - mean(WT PC1) in GSE314556",
+    "primary_statistic": "rank-partial Spearman adjusted for baseline PC1 (mean WT) and baseline lamina (siScr_mCh)",
+    "claim_ceiling": "computational association across two independent public studies of different lineage and perturbation class; no mechanism; no wet-lab confirmation"
+  },
+  "predictor": {
+    "source": "GSE300197 condition-merged LMNB1 CUT&RUN z-score bigWigs (hg38), lifted to hg19",
+    "build_script": "code/lift_predictor.py",
+    "tsv": "results/predictor/predictor_hg19.tsv",
+    "predictor_tsv_sha256": "1670a3c99c296b455d17a79a7143fc7fb06cb3e5b1d18c5ed7031b65843c0e53",
+    "manifest": "results/predictor/predictor_hg19.manifest.json",
+    "exposed_before_freeze": true,
+    "columns_used": {
+      "primary": "dlam_mCh",
+      "baseline_lamina": "siScr_mCh",
+      "secondary_arm": "dlam_DNK",
+      "orientation": "tss_count"
+    }
+  },
+  "outcome": {
+    "gse": "GSE314556",
+    "cell": "GM12878 B-lymphoblastoid; LMNA/C CRISPR-KO transduced pool vs control-sgRNA pool (labelled WT by the depositors)",
+    "build": "hg19",
+    "downloaded_before_freeze": false,
+    "samples": {
+      "GSM9401860": {
+        "condition": "WT",
+        "replicate": 1,
+        "filename": "GSM9401860_HIC.WT.1_allValidPairs.txt.gz",
+        "bytes_expected": 2033547121,
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401860/suppl/GSM9401860_HIC.WT.1_allValidPairs.txt.gz"
+      },
+      "GSM9401861": {
+        "condition": "WT",
+        "replicate": 2,
+        "filename": "GSM9401861_HIC.WT.2_allValidPairs.txt.gz",
+        "bytes_expected": 1997529377,
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401861/suppl/GSM9401861_HIC.WT.2_allValidPairs.txt.gz"
+      },
+      "GSM9401862": {
+        "condition": "KO",
+        "replicate": 1,
+        "filename": "GSM9401862_HIC.KO.1_allValidPairs.txt.gz",
+        "bytes_expected": 2321735949,
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401862/suppl/GSM9401862_HIC.KO.1_allValidPairs.txt.gz"
+      },
+      "GSM9401863": {
+        "condition": "KO",
+        "replicate": 2,
+        "filename": "GSM9401863_HIC.KO.2_allValidPairs.txt.gz",
+        "bytes_expected": 1018354190,
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401863/suppl/GSM9401863_HIC.KO.2_allValidPairs.txt.gz"
+      }
+    },
+    "pc1_pipeline": {
+      "script": "code/pc1.py",
+      "method": "HiC-Pro allValidPairs or 4DN-style pairs (layout auto-detected from the first data line, recorded in stats) -> cis autosomal (chr1-22) 500 kb count matrices (bin=(pos-1)//500000, symmetric) -> ICE (Imakaev; W <- W/(s s^T), s = rowsum/mean(rowsum); stop at max|s-1|<1e-5 or 200 iterations; bins masked if raw row has <10 nonzeros or zero row sum, mask enlarged iteratively; zero-variance O/E columns masked) -> observed/expected (each diagonal divided by its mean over unmasked pairs; zero-expected diagonals set to 1) -> Pearson correlation of the unmasked submatrix -> numpy eigh leading eigenvector, unit variance, provisional sign sum>=0 -> per-chromosome flip so Spearman with hg19 RefSeq Select TSS count per bin is positive; chromosomes with |rho|<0.2 or <3 usable bins emitted all-NaN. Masked bins omitted from the bedGraph. The evaluator (compartment.orient_tracks) re-applies its own orientation and exclusion rule on the WT mean.",
+      "bin_size": 500000,
+      "code_pc1_sha256": "137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650",
+      "test_pc1_sha256": "e8e0a0666a89c2eaf8ac61e55a5f4b16911dcf56c7a96e93a19ef0b82609f6af",
+      "runtime_expectation": "~0.5 M lines/s single core; ~4-6 min per 2 GB gz; flat ~200 MB RSS"
+    },
+    "method_validation": {
+      "dataset": "GSE126459 valid pairs GSM3602092 (mutant rep1) and GSM3602088 (corrected.1 rep1), hg38, already observed in the compartment campaign",
+      "criteria": {
+        "V1_per_sample_spearman_vs_deposited_pc1_min": 0.8,
+        "V2_delta_spearman_min": 0.5
+      },
+      "status": "passed 2026-09-24T21:02:48Z (attempt 3, bound script): V1 0.9225/0.8804, V2 0.5471, n 5,262; every attempt retained in design/method-validation-attempts.md; no threshold of this registration depends on it; record bound at freeze (design/method-validation.json)",
+      "script": "design/validate_pc1.py (bound at freeze; deposited-PC1 directory passed as an argument)",
+      "record_sha256": "50e63f26e221e56810fb8282b638193990dc85263176c741d4ffbe3614e14973"
+    }
+  },
+  "tiles": {
+    "size": 500000,
+    "chromosomes": [
+      "chr1",
+      "chr2",
+      "chr3",
+      "chr4",
+      "chr5",
+      "chr6",
+      "chr7",
+      "chr8",
+      "chr9",
+      "chr10",
+      "chr11",
+      "chr12",
+      "chr13",
+      "chr14",
+      "chr15",
+      "chr16",
+      "chr17",
+      "chr18",
+      "chr19",
+      "chr20",
+      "chr21",
+      "chr22"
+    ],
+    "min_coverage": 0.5,
+    "chrom_sizes_file": "hg19.chrom.sizes",
+    "chrom_sizes_sha256": "b404927655a4aada254ea94ad4da0c8901ed0737e67a0dcabedf673354b1f505"
+  },
+  "orientation": {
+    "refseq_file": "hg19.ncbiRefSeqSelect.txt.gz",
+    "refseq_sha256": "efe060c0c623c9f9286120e251158b9cabf47e3ae91220f1ad77d6c7654a65c9",
+    "min_abs_rho_gene_density": 0.3,
+    "min_rho_per_chromosome": 0.2,
+    "floor_sensitivity": [
+      0.0,
+      0.3
+    ]
+  },
+  "null": {
+    "type": "within-chromosome circular shift of the predictor block",
+    "permutations": 5000,
+    "seed": 20260925,
+    "seed_offsets": {
+      "adjusted": 1,
+      "standardised_unadjusted": 2,
+      "standardised_adjusted": 3
+    },
+    "p_side": "one-sided negative; (1 + #null <= observed) / (1 + N)"
+  },
+  "evaluator": {
+    "script": "code/replicate.py",
+    "frozen_dependency": "code/compartment.py (byte-identical to the compartment campaign freeze-002, sha256 776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019)",
+    "adapter": "KO samples take the 'mutant' role and WT the single corrected line; tier_a thresholds are copied into the v2 pass_criteria keys by replicate.adapter_registration"
+  },
+  "pass_criteria": {
+    "rule": "conjunctive; every component below must hold",
+    "tier_a": {
+      "name": "direction replicates with a non-trivial effect",
+      "unadjusted_rho_max": -0.05,
+      "adjusted_rho_max": -0.05,
+      "standardised_unadjusted_rho_max": -0.05,
+      "p_max": 0.01,
+      "min_eligible_tiles": 3000,
+      "adjusted_to_unadjusted_ratio_min": 0.5,
+      "replicate_pairs": "all four KO-WT pairwise Spearman correlations negative",
+      "orientation_ok_required": true
+    },
+    "tier_b": {
+      "name": "effect size comparable to the cardiomyocyte cohort",
+      "requires": "tier_a",
+      "adjusted_rho_max": -0.1,
+      "anchoring": "-0.10 equals the prior campaign's unadjusted floor and lies in its observed adjusted range (-0.150/-0.112); it is an effect-size replication claim, not a discovery threshold; only tier B makes the adjusted statistic operative beyond tier A's -0.05"
+    },
+    "opposite_direction": {
+      "unadjusted_rho_min": 0.05,
+      "p_positive_max": 0.01
+    },
+    "verdict_labels": {
+      "mechanical": "replicate.verdict; labels are exactly the keys of interpretation_precommitted",
+      "NOT_PASSED_DIRECTION_CONSISTENT": "orientation ok, and unadjusted, adjusted and standardised-unadjusted rho all < 0 with p <= p_max, and all four replicate pairs negative, but at least one effect floor, the ratio criterion or the tile minimum fails",
+      "no_spin_rule": "a NOT_PASSED* result is reported as 'not passed' in the first sentence of every summary; direction-consistency may be stated only after that sentence and only with the sub-label's definition"
+    }
+  },
+  "confound_flags": {
+    "global_strength_ratio_range": [
+      0.7,
+      1.4
+    ],
+    "statistic": "mean over oriented chromosomes of eigenvalue/(n unmasked bins) of the O/E Pearson matrix (PC1 variance share), KO mean over WT mean; invariant to the per-chromosome unit scaling of the eigenvector",
+    "sd_ratio_note": "the evaluator's SD ratio is reported only as a replicate-concordance diagnostic; it cannot measure compartment strength because pc1.py scales each chromosome's eigenvector to unit variance",
+    "note": "reported only; if flagged the claim ceiling adds 'global compartment-strength change present'; KO rep2 depth (~half) disclosed regardless"
+  },
+  "operating_characteristics": {
+    "source": "design/null-sd-estimate.json",
+    "null_sd_unadjusted": 0.0191,
+    "null_sd_adjusted": 0.0191,
+    "null_q01": -0.042,
+    "single_arm_power_floor_-0.05": {
+      "true_-0.05": 0.5,
+      "true_-0.08": 0.94,
+      "true_-0.10": 0.996
+    },
+    "tier_b_power_true_-0.10": 0.5,
+    "note": "conjunctive rule over three correlated arms and four pairs is below the single-arm figure",
+    "full_rule_simulation_by_reviewer": {
+      "source": "design/independent-review.json round_1 (reviewer's scratch simulation on the real hg19 predictor with unit-scaled synthetic PC1, noisier KO rep2, 299 shifts, 12 seeds per level)",
+      "type_I_tier_a": "0/12 at true rho 0",
+      "tier_a_power": {
+        "true_-0.048": "5/12",
+        "true_-0.085": "12/12"
+      },
+      "tier_b_power_true_-0.10": "5/12"
+    }
+  },
+  "secondary_reported_only": [
+    "stratum A/B baseline",
+    "DNK-arm unadjusted rho",
+    "decile contrast",
+    "baseline PC1 vs baseline lamina rho",
+    "orientation floor sensitivity",
+    "per-replicate PC1 orientation and cis-pair counts",
+    "per-chromosome table pairing the method-validation agreement with the deposited GSE126459 PC1 (design/method-validation.json per_chromosome_spearman; chr22 ~0.21, chr4 0.40 in one sample, chr21 absent from the deposited track) with the per-chromosome outcome correlation from results/run-001/core (the evaluator's per-chromosome output); compiled at report time by joining those two mechanically produced records, not by replicate.py; no threshold depends on it"
+  ],
+  "interpretation_precommitted": {
+    "TIER_B_PASS": "association generalises across lineage and perturbation class with effect size in the cardiomyocyte range; computational association only",
+    "TIER_A_PASS": "association generalises across lineage and perturbation class; effect smaller than in cardiomyocytes or below the tier-B floor",
+    "NOT_PASSED_DIRECTION_CONSISTENT": "not passed; direction consistent with the hypothesis in every arm but the effect is below the registered floor; no threshold change; not evidence of generalisation",
+    "NOT_PASSED": "not passed; no evidence of generalisation to this lineage; ambiguous between refutation and cardiac specificity",
+    "OPPOSITE": "evidence against generalisation",
+    "PIPELINE_FAILURE": "outcome PC1 did not meet the pre-stated quality rule in more than 3 autosomes; no claim in either direction; repair only in a new registration"
+  },
+  "fixed_parameters_explicit": {
+    "tile": 500000,
+    "min_coverage": 0.5,
+    "min_lifted_fraction": 0.5,
+    "ice_min_nnz": 10,
+    "orientation_min_tiles_per_chromosome": 10,
+    "decile": 0.1,
+    "pc1_min_abs_rho_per_chromosome": 0.2,
+    "ice_tolerance": 1e-05,
+    "ice_max_iterations": 200,
+    "extra_mapq_filter": null
+  },
+  "prior_art": {
+    "report": "prior-art/caruso-2026.md",
+    "exact_comparison_found": false,
+    "class_known": "LAD-compartment coupling (Zheng 2018 mESC; Bertero 2019 restricted compartment change); GSE314556 preprint reports 39 B->A and 23 A->B switches and global loop loss, no lamin B1 genomic data"
+  },
+  "budget": {
+    "paid_spend_usd": 0,
+    "prior_program_spend_usd": 0.019722,
+    "cap_usd": 25
+  },
+  "policy": {
+    "no_contact": "unsent material only; no attribution of endorsement",
+    "no_threshold_change_after_outcome": true,
+    "retain_failures": true
+  },
+  "amendments": [],
+  "pipeline_qc": {
+    "min_cross_sample_concordance": 0.5,
+    "min_tiles_per_chromosome": 10,
+    "max_excluded_autosomes": 3,
+    "rule": "per chromosome and sample: pc1.py orientation must succeed and Spearman(sample PC1, WT-reference PC1) >= 0.5 over finite tiles, where the WT reference is the mean of the WT samples other than the sample itself (leave-one-out for WT samples; KO samples use the full WT mean); otherwise the chromosome is excluded genome-wide (recorded with reason). More than 3 excluded autosomes = PIPELINE_FAILURE (statistics still computed and reported; not a pass, not a refutation).",
+    "exclusion_cap_scope": "max_excluded_autosomes counts only chromosomes dropped by this pipeline QC (unoriented in pc1.py, too few tiles, or concordance < 0.5). Chromosomes the evaluator (compartment.orient_tracks) later drops by its own orientation rule on the WT mean are reported separately and do not count toward the cap."
+  },
+  "frozen_utc": "2026-09-24T21:14:10.175061+00:00"
+}

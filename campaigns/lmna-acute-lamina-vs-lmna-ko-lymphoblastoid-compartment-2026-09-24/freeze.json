@@ -1,0 +1,47 @@
+{
+  "schema": "bio.freeze-receipt.v2",
+  "campaign_id": "lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24",
+  "frozen_utc": "2026-09-24T21:14:10.175061+00:00",
+  "freeze_number": 1,
+  "registration_sha256": "8d6cd76cb4bcb80b35ea4e34fd64fd55b359e5f4ae81ff8aea60b6be17151465",
+  "code_replicate_sha256": "a084a245bab2b1935e12ada74127de31ee69535ea25d403fa4c5ebf74aef9ee1",
+  "code_compartment_sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+  "code_pc1_sha256": "137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650",
+  "test_replicate_sha256": "a6568d079179b0cdcfcb9a725d59d606c6ef8b158443ee00f8fd7fbcaf6e5289",
+  "test_pc1_sha256": "e8e0a0666a89c2eaf8ac61e55a5f4b16911dcf56c7a96e93a19ef0b82609f6af",
+  "requirements_lock_sha256": "d7d4cab0a8090d4c616efdc49fe58905c22a6b5453e404c73465f0ea961c59aa",
+  "predictor_tsv_sha256": "1670a3c99c296b455d17a79a7143fc7fb06cb3e5b1d18c5ed7031b65843c0e53",
+  "chrom_sizes_sha256": "b404927655a4aada254ea94ad4da0c8901ed0737e67a0dcabedf673354b1f505",
+  "refseq_sha256": "efe060c0c623c9f9286120e251158b9cabf47e3ae91220f1ad77d6c7654a65c9",
+  "predictor_manifest_sha256": "733647e83b7a1e44f8c3df2fa3fe6587d77ba4de054454407921d8b81da96215",
+  "lift_predictor_sha256": "5cf88b69a944ca182e8be7a4d1c17c82ee514c5ce986c09197934a89cfb2e9b9",
+  "independent_review_sha256": "630582f9931c937af9fa497b368f319b8acf60fe37ef1e70bfa8c37fcf841587",
+  "skeptical_review_sha256": "488db9a3146d83aed43176c24921274c937981de636eea79959a8ac31ab09faa",
+  "protocol_design_sha256": "f031f14493f31a334698e6d821e38712cda28cb60b13c4e068f8c063c750ed8e",
+  "method_validation_sha256": "50e63f26e221e56810fb8282b638193990dc85263176c741d4ffbe3614e14973",
+  "method_validation_script_sha256": "3449aa15b10eaf12f2a9b4fba4ec7052c5de8625f2aab87cbd33bbeffe27b896",
+  "method_validation_attempts_sha256": "cc814e874f858151e2c66847d5012332eba3a7f7749fb8558e0ca8d06601ed89",
+  "prior_art_caruso_sha256": "15b092375874078c701d30d3aaaaa3d9402e097711c48fe16bf0ab26f63246d9",
+  "null_sd_estimate_sha256": "2037c828f497a14ae7ac2c52ae9d901be379b56b7aef28397a36a7a225633e41",
+  "registration_draft_sha256": "ad3d9f75cc53c484763dd4a901b7bdb337365ae7f797fce3392ec56061764eb4",
+  "archived_bytes": "registration/archive-001/ (every bound file; predictor tsv included)",
+  "outcome_files_present_at_freeze": false,
+  "outcome_expected": {
+    "GSM9401860": {
+      "filename": "GSM9401860_HIC.WT.1_allValidPairs.txt.gz",
+      "bytes_expected": 2033547121
+    },
+    "GSM9401861": {
+      "filename": "GSM9401861_HIC.WT.2_allValidPairs.txt.gz",
+      "bytes_expected": 1997529377
+    },
+    "GSM9401862": {
+      "filename": "GSM9401862_HIC.KO.1_allValidPairs.txt.gz",
+      "bytes_expected": 2321735949
+    },
+    "GSM9401863": {
+      "filename": "GSM9401863_HIC.KO.2_allValidPairs.txt.gz",
+      "bytes_expected": 1018354190
+    }
+  }
+}

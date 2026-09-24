@@ -1,0 +1,252 @@
+{
+  "schema": "bio.independent-review.v1",
+  "reviewer": "replication_pre_outcome_review",
+  "round_1": {
+    "utc": "2026-09-24T20:57:00Z",
+    "files_reviewed": [
+      "design/fixed-protocol.md",
+      "registration/protocol.draft.json",
+      "design/null-sd-estimate.json",
+      "prior-art/caruso-2026.md",
+      "prior-art/query-ledger.json",
+      "code/replicate.py",
+      "code/test_replicate.py",
+      "code/compartment.py (sha256 776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019 verified with shasum; byte-identical to the compartment campaign freeze-002 evaluator)",
+      "code/pc1.py",
+      "code/test_pc1.py",
+      "code/lift_predictor.py",
+      "code/requirements.in",
+      "code/requirements.lock",
+      "results/predictor/predictor_hg19.manifest.json",
+      "results/predictor/predictor_hg19.tsv (exposed predictor; column statistics only)",
+      "registration/freeze.py",
+      "registration/intake.py",
+      "design/validate_pc1.py (appeared during the review; read as found)",
+      "tools/SHA256SUMS",
+      "data-audit/GSE126459-filelist.txt",
+      "prior campaign: reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/report.md",
+      "prior campaign: campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.frozen.json"
+    ],
+    "not_opened": "nothing under data/; no GSE314556 file exists in the tree",
+    "tests": {
+      "replicate": "python -m unittest test_replicate -v: 6/6 OK (ResourceWarnings for unclosed files, non-fatal)",
+      "pc1": "python -m unittest test_pc1 -v: 26/26 OK; pc1.py and test_pc1.py present and complete at review time; registration still carries code_pc1_sha256/test_pc1_sha256 = null (freeze.py refuses until filled, correct)"
+    },
+    "reviewer_evidence": {
+      "full_rule_simulation": "Scratchpad only; no project file touched. Real hg19 predictor (5,225 finite tiles); synthetic PC1 per sample = -z(baseline lamina) + 0.55*AR(0.9) shared structure + per-replicate noise (SD 0.15; KO rep2 SD 0.30 for the half-depth sample) + KO shift -beta*z(dlam); each track unit-scaled per chromosome exactly as pc1.compartment_eigenvector does; frozen evaluator through replicate.adapter_registration with 299 shifts; all four cross pairs; 12 seeds per level. Results: eligible tiles ~4,600 (chr4, chr10 excluded by the 0.2 orientation floor in this synthetic model; genome orientation rho 0.40). beta=0: tier A 0/12, tier B 0/12, four-pairs-all-negative 2/12, ratio component 3/12, no effect or p component passed. Realised unadjusted rho -0.048 (SD 0.014): tier A 5/12 (unadjusted effect 5, standardised effect 5, adjusted effect 11, pairs 11). rho -0.085: tier A 12/12, tier B 5/12 (adjusted mean -0.101). rho -0.107: tier A 12/12, tier B 12/12. rho -0.156 and -0.212: 12/12.",
+      "amplitude_adversarial": "No effect, KO amplitude x1.25 before unit scaling, 6 seeds: unadjusted rho -0.011..+0.021, no component passed; genome SD ratio 0.996-0.998 (the scaling in pc1.py neutralises the amplitude artefact that the prior campaign's ratio rule was written for).",
+      "sd_ratio_meaning": "No strength change, KO rep2 noise SD 0.15/0.5/1.0/2.0: genome SD ratio 1.00/0.98/0.935/0.86. After unit scaling the ratio measures replicate concordance (sqrt((1+r_KO)/(1+r_WT))), not compartment strength.",
+      "predictor_liftover": "260,534 intervals per track, 984 dropped (0.38%); 551 of 5,776 tiles NaN (480 with zero lifted intervals, 71 with 0 < cov_min < 0.5); NaN tiles are gene-poorer (mean TSS 1.52 vs 3.35) and concentrate on chr9/13/14/15/21/22 (pericentromeric and acrocentric arms); Spearman(cov_min, dlam) = 0.046 and Spearman(cov_min, tss) = 0.15 among all tiles; 27 tiles have cov_min > 1 (max 2.48; multiple hg38 intervals collapsing into one hg19 tile); SD(dlam_mCh) 0.1947; Spearman(tss, dlam) -0.302 as in the hg38 predictor."
+    },
+    "blocking": [
+      {
+        "id": "R1-1",
+        "issue": "The global confound flag (genome SD(KO PC1)/SD(WT PC1) outside [0.7, 1.4], 'global compartment-strength change present') cannot fire for its stated reason. pc1.compartment_eigenvector scales every chromosome's eigenvector to unit variance per sample, so the evaluator's scale_diagnostic and the standardised arm see tracks whose amplitude carries no strength information. Reviewer simulation: a 1.25x KO amplitude gives ratio 0.997; the ratio drops to 0.86 from KO rep2 noise alone. The flag as written would silently mislabel a replicate-concordance deficit (the half-depth KO rep2 is the likely cause) as a structural change, or miss a real one. The fixed-protocol and registration describe this diagnostic as done and meaningful; it is neither.",
+        "required_repair": "Before freeze: (a) add to pc1.py per-chromosome, per-sample compartment-strength statistics that survive scaling, e.g. leading-eigenvalue share lambda1/trace(corr) and lambda1/lambda2, and a saddle-type ratio mean O/E(top-quintile x top-quintile, bottom x bottom) / mean O/E(top x bottom) on the oriented eigenvector; write them to the stats JSON (they are already exposed via pc1_stats in summary.json); (b) pre-state the confound flag on the median per-chromosome KO/WT ratio of one named strength statistic (choose one now; [0.7, 1.4] may be retained) and compute it in replicate.py; (c) relabel the existing genome_sd_ratio as a replicate-concordance diagnostic (reported only) or drop it from the flag; (d) state in the registration that the standardised arm is near-redundant with the unadjusted arm under unit scaling (it adds centring only); (e) add a unit test that the strength statistic detects a planted amplitude change on the block model. No threshold of the pass rule changes."
+      },
+      {
+        "id": "R1-2",
+        "issue": "Hidden parameters: replicate.run_pc1 invokes pc1.py without --min-abs-rho, --min-nnz or --min-mapq, so pc1.py's argparse defaults (0.2, 10, None) decide per-sample orientation exclusion and ICE masking rather than the registration (orientation.min_rho_per_chromosome, fixed_parameters_explicit.ice_min_nnz). ICE tol=1e-5 and max_iter=200 and the absence of any additional MAPQ filter are not recorded in the registration at all. This is the 'every threshold read fail-closed from the registration' requirement and it is not met for the PC1 stage.",
+        "required_repair": "Pass --min-abs-rho reg['orientation']['min_rho_per_chromosome'], --min-nnz reg['fixed_parameters_explicit']['ice_min_nnz'] explicitly in run_pc1 (subscript access, no .get); add fixed_parameters_explicit entries pc1_min_mapq: null ('no filter beyond HiC-Pro valid-pair filtering'), ice_tol: 1e-5, ice_max_iter: 200, eigenvector_scaling: 'unit population SD per chromosome per sample'; add a test asserting the constructed command line contains those values."
+      },
+      {
+        "id": "R1-3",
+        "issue": "Per-sample orientation failure and cross-sample eigenvector discordance are handled silently. pc1.py orients each sample independently (including KO samples) and writes a chromosome as absent when |rho| < 0.2 in that sample; run_registered's 'finite &=' then removes that chromosome from every statistic without listing it in excluded_chromosomes (orient_tracks records nothing when len(idx) == 0). Nothing checks that a KO sample's leading eigenvector is the same structure as the WT eigenvector; at 500 kb the leading eigenvector can capture arm or centromere structure, and the preprint reports global loop loss and short-range gain in the KO, so a KO chromosome whose eigenvector flips to a non-compartment structure while still clearing |rho| >= 0.2 with TSS density would enter dPC1 as a large structured term. The protocol sentence 'if its PC1 fails orientation on > 2 chromosomes the run still proceeds' is the only pre-statement and it does not say what happens to those chromosomes.",
+        "required_repair": "Before freeze: (a) replicate.py reads each sample's stats JSON and lists chromosomes with oriented == false per sample in summary.json as 'dropped_by_per_sample_orientation' (these are dropped from all statistics by construction; say so in the registration); (b) pre-state a per-chromosome concordance rule in the registration and implement it in replicate.py before the evaluator runs: for every sample and chromosome, Spearman(sample PC1, mean WT PC1) over tiles finite in both must be >= 0.5 (WT reps against the other WT rep); a failing chromosome is removed from all four bedGraphs and recorded; (c) pre-state that if more than 3 autosomes are dropped for any reason (orientation, concordance, coverage) the run is reported as PIPELINE_FAILURE and is not a NOT_PASSED outcome; (d) report per-sample genome-wide orientation rho and require >= 0.3 for each WT sample as part of orientation_ok (KO samples reported only); (e) unit tests for (a)-(c) on synthetic bedGraphs."
+      },
+      {
+        "id": "R1-4",
+        "issue": "The five pre-committed outcomes are not exhaustive in code. replicate.py emits TIER_B_PASS / TIER_A_PASS / OPPOSITE / NOT_PASSED only; the split between 'NOT_PASSED_all_arms_negative_at_floor' and 'NOT_PASSED_otherwise' would be made by hand after outcome access, and the phrase 'p at floor' is ambiguous (p = 1/5001 or p <= 0.01) and 'all arms' does not say whether the four replicate pairs are arms. The prior campaign's report already headlined 'direction as hypothesised in every arm' on a non-pass; without a mechanical definition and a wording rule the same spin is available here.",
+        "required_repair": "Define mechanically in the registration and implement in replicate.py with a test: NOT_PASSED_DIRECTION_CONSISTENT iff orientation ok, eligible tiles >= 3000, unadjusted, adjusted and standardised-unadjusted rho all < 0, their three negative-direction p all <= p_max, all four cross replicate pairs negative, and at least one effect floor or the ratio rule unmet; otherwise NOT_PASSED_OTHERWISE. Add to interpretation_precommitted: 'NOT_PASSED_DIRECTION_CONSISTENT carries no evidential weight for the registered claim; the report headline states NOT PASSED; the direction statement may appear only in the body with the effect estimate and the pre-registered power at the floor.' Also state that OPPOSITE is evaluated only when tier A fails (already the code order) so the five labels are disjoint and exhaustive."
+      },
+      {
+        "id": "R1-5",
+        "issue": "Intake integrity is weaker than described. fixed-protocol.md says 'run refuses on any mismatch', but replicate.check_bindings compares outcome file hashes to intake.json only; intake.py records bytes_match_metadata but nothing refuses on a size mismatch, so a truncated or partial download (intake.py does not clean up partial files) would be hashed as-is and run. GEO publishes no checksums, so bytes_expected is the only external integrity anchor.",
+        "required_repair": "In check_bindings, refuse if any intake entry has bytes != reg['outcome']['samples'][gsm]['bytes_expected'] or bytes_match_metadata is not true; in intake.py, delete the partial file and exit non-zero on any exception; add a test for the refusal."
+      },
+      {
+        "id": "R1-6",
+        "issue": "design/validate_pc1.py hard-codes an absolute personal path (line 24) to the deposited HOMER PC1 files, and validate_pc1.py is not in freeze.py's bound list even though method-validation.json (which freeze.py requires and binds) is produced by it and freeze.py checks mv['code_pc1_sha256'] but not the validator's own bytes. The record of the validation gate would therefore be unreproducible and would carry a personal path into the public record.",
+        "required_repair": "Take the deposited-PC1 directory from a command-line argument or copy the two deposited bedGraphs into data/GSE126459-validation with their sha256 recorded (they are outcome data of the prior campaign, already observed, not of this one); bind design/validate_pc1.py in freeze.py; grep the tree for '<home-prefix>/' before freeze and keep it clean; record in method-validation.json the per-chromosome Spearman(pipeline, deposited) for both samples (reported only; V1 >= 0.80 and V2 >= 0.50 remain the gate)."
+      }
+    ],
+    "minor": [
+      {
+        "id": "R1-m1",
+        "issue": "Tier B's -0.10 adjusted floor is anchored to the prior cohort's observed adjusted values (-0.112 / -0.150), not to operating characteristics; that is acceptable for a descriptive effect-size band on top of a tier A pass, but the operating-characteristics section presents it alongside OC-derived numbers. Also 'adjusted statistic is primary' is only operative in tier B; tier A is symmetric across the three arms at -0.05 (the unadjusted floor is a genuine conjunctive constraint, as it was in the prior campaign).",
+        "suggested_repair": "State both facts explicitly in the registration."
+      },
+      {
+        "id": "R1-m2",
+        "issue": "The power statement ('somewhat below the single-arm figure') is unquantified. Reviewer's full-rule simulation (see reviewer_evidence; model assumptions are the reviewer's) gives tier A 5/12 at realised rho -0.048, 12/12 at -0.085; tier B 5/12 at adjusted -0.10; type I 0/12; the four-pairs component alone passes 2/12 under the null. The null-SD file was computed on the hg38 compartment geometry with 2,000 shifts; the KO cohort's null could be wider if the KO dPC1 has arm-level structure, in which case p <= 0.01 becomes the binding constraint (fail-safe).",
+        "suggested_repair": "Record these figures (with the model caveat) in operating_characteristics and note that the tier A floor -0.05 sits at the null's 0.5th percentile (-0.045 to -0.048), so the effect floor, not p, is binding."
+      },
+      {
+        "id": "R1-m3",
+        "issue": "registration pass_criteria.opposite_direction keys are never read; replicate.py relies on the frozen evaluator's derived rule (rho >= -unadjusted_rho_max with p_positive <= p_max). Numerically equal today.",
+        "suggested_repair": "Assert at run start that opposite_direction.unadjusted_rho_min == -tier_a.unadjusted_rho_max and p_positive_max == tier_a.p_max; abort otherwise."
+      },
+      {
+        "id": "R1-m4",
+        "issue": "core summary will show outcome_hashes_verified_against_intake = false (intake_hashes=None is passed because the evaluator consumes derived bedGraphs) while the top-level summary says true; the two files disagree on their face.",
+        "suggested_repair": "Document in replicate.py's docstring and summary.json that pairs files are verified by replicate.py and bedGraphs are derived artefacts; record the bedGraph hashes in summary.json."
+      },
+      {
+        "id": "R1-m5",
+        "issue": "Liftover: no evidence of compartment-linked bias (cov_min vs dlam rho 0.046); losses are pericentromeric/acrocentric and gene-poor, which reduces range in B (power loss, not inflation). 27 tiles have cov_min > 1 (collapsed duplications) and 71 tiles fall in (0, 0.5). The manifest does not report these. TSS off-by-one on minus strand between lift_predictor.tss_density (txEnd) and pc1.tss_density (txEnd-1) is harmless but the two densities are not identical.",
+        "suggested_repair": "Add the per-tile count distribution, the count of tiles with cov_min > 1 and the coverage-vs-predictor correlations to the manifest; optionally cap contributions per tile at 50; note the off-by-one."
+      },
+      {
+        "id": "R1-m6",
+        "issue": "No distance-decay diagnostic. The preprint's short-range gain / long-range loss is normalised away by per-diagonal O/E within each sample, so it is not a direct eigenvector confound, but the campaign has no evidence of it either way; ICE convergence (iterations, final max|s-1|) is not recorded.",
+        "suggested_repair": "Add to pc1 stats: cis-pair counts by log2 distance bin (P(s)), cis fraction, and per-chromosome ICE iteration count / convergence flag; reported only."
+      },
+      {
+        "id": "R1-m7",
+        "issue": "Validation gate V1/V2 is pre-stated and reasonable given that HOMER's PC1 uses its own normalisation (0.80 genome-wide Spearman is a fair bar), but genome-wide Spearman can hide one arm-capturing chromosome; V2 uses single-replicate deltas which is a strict, honest test.",
+        "suggested_repair": "Covered by R1-6's per-chromosome table; additionally record the eigenvalue share per chromosome for the two validation samples as a reference range for the KO cohort."
+      },
+      {
+        "id": "R1-m8",
+        "issue": "freeze.py overwrites protocol.frozen.json, freeze.json and archive-<n> silently if rerun; it requires design/skeptical-review.md (now present) and design/method-validation.json (pending).",
+        "suggested_repair": "Refuse if freeze.json or archive-<n> exists unless n is incremented."
+      },
+      {
+        "id": "R1-m9",
+        "issue": "Hygiene: replicate.py and test_replicate.py open files without context managers (ResourceWarnings); fixed-protocol.md states the run 'refuses on any mismatch' (see R1-5) and describes the SD-ratio flag as a strength diagnostic (see R1-1); both sentences need correcting after repair.",
+        "suggested_repair": "Use with-blocks; update the protocol text with the repairs."
+      },
+      {
+        "id": "R1-m10",
+        "issue": "Resources: intake is ~7.4 GB plus ~2 GB for the validation pairs; 273 GB free at review time. Budget $0 new spend; cap $25; prior $0.019722 — consistent across files.",
+        "suggested_repair": "None."
+      }
+    ],
+    "strengths": [
+      "compartment.py is byte-identical to the compartment campaign's freeze-002 evaluator (hash verified); the adapter maps KO -> 'mutant' and WT -> single corrected line faithfully, copies every tier A threshold by subscript (fail-closed test present), preserves seed 20260925 with the +1/+2/+3 offsets, and replaces the evaluator's two same-index pairs with all four KO-WT cross pairs.",
+      "Freeze discipline is sound: freeze.py refuses if any outcome file exists, if this review is not PASS/PASS_WITH_REPAIRS, if method validation is absent or was run on different pc1.py bytes, or if the draft's pc1/test hashes are null or stale; every bound file's bytes are archived; intake happens only after freeze and binds the freeze hash; the run refuses on any hash mismatch.",
+      "Unit-variance scaling of the eigenvector per chromosome neutralises the PC1-amplitude artefact that defeated the prior campaign's unadjusted arm in adversarial testing (reviewer: 1.25x KO amplitude gives rho ~0, no component passes).",
+      "Full-rule type I error 0/12 in the reviewer's simulation at zero effect; the tier A floor sits at the null's 0.5th percentile so p is never the loophole.",
+      "The predictor was built and hash-bound before any outcome access, with a different seed and a different genome build from the prior campaign; liftover loss is small and uncorrelated with the predictor.",
+      "Prior-art read is verbatim-quoted, records failed fetches, states the absence of lamin B1 genomic data and of the specific hypothesis, and names the contact-scaling confound before freeze; interpretation of a null as ambiguous between refutation and cardiac specificity is pre-committed.",
+      "No contact or endorsement language anywhere; budget and spend consistent; pc1.py is deterministic, documented step by step, and its 26 tests cover binning conventions, ICE masking, O/E, orientation and the pairs/matrix equivalence."
+    ],
+    "verdict": "PASS_WITH_REPAIRS"
+  },
+  "round_2": {
+    "utc": "2026-09-24T21:06:02Z",
+    "files_reviewed": [
+      "code/replicate.py (sha256 e59c2c72b94b7b41d46406e98336ccbb7010ec181b01614e4ccf35abad2cc5d0)",
+      "code/test_replicate.py (74dc0464…)",
+      "code/pc1.py (137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650; diffed against the round-1 bytes: only the pairs-layout auto-detection, the bounded name cache and stats['format'] changed)",
+      "code/test_pc1.py (e8e0a066…)",
+      "code/compartment.py (776ccede… unchanged, verified)",
+      "registration/protocol.draft.json",
+      "registration/freeze.py",
+      "design/validate_pc1.py (3449aa15…)",
+      "design/method-validation-attempts.md",
+      "design/method-validation.json (attempt-3 record, re-read after it landed)",
+      "design/method-validation.attempt2-unbound-script.json",
+      "design/fixed-protocol.md"
+    ],
+    "not_opened": "nothing under data/",
+    "tests": {
+      "replicate": "11/11 OK (VerdictTests, EigenShareAndQcTests, BytesEnforcementTests added)",
+      "pc1": "27/27 OK (PairsLayoutDetectionTests added)"
+    },
+    "repairs_verified": {
+      "R1-1": "VERIFIED. replicate.eigen_share = mean over pc1-oriented chromosomes of eigenvalue/(n_bins - n_masked), i.e. the PC1 variance share of the O/E Pearson matrix (trace = n), invariant to the unit scaling; confound flag computed on mean KO share / mean WT share against confound_flags.global_strength_ratio_range read by subscript; genome SD ratio relabelled replicate_concordance_sd_ratio_reported_only; registration and protocol text corrected; unit test present.",
+      "R1-2": "VERIFIED. run_pc1 passes --min-abs-rho and --min-nnz from fixed_parameters_explicit by subscript; extra_mapq_filter null means no --min-mapq; ice_tolerance 1e-05 and ice_max_iterations 200 recorded and match pc1.py defaults (hash-bound). Gap: no unit test asserts the constructed command line (minor R2-m1).",
+      "R1-3": "VERIFIED with two minor caveats. pipeline_qc records per-sample per-chromosome orientation rho, excludes a chromosome genome-wide when any sample is unoriented there or Spearman(sample, WT mean) < 0.5 (reason recorded), writes filtered bedGraphs to pc1-qc/ that feed the frozen evaluator, and sets pipeline_failure when > 3 chromosomes are excluded; verdict maps it to PIPELINE_FAILURE with a pre-committed interpretation; unit test exercises discordant, unoriented and the cap. Caveats: WT samples are compared with a WT mean that contains themselves (floor 0.5 cannot fire for a WT sample; minor R2-m2); the cap counts QC exclusions only, not the evaluator's own < 0.2 orientation exclusions (minor R2-m3).",
+      "R1-4": "VERIFIED. replicate.verdict assigns exactly one of the six keys of interpretation_precommitted in the order PIPELINE_FAILURE > TIER_B > TIER_A > OPPOSITE > NOT_PASSED_DIRECTION_CONSISTENT > NOT_PASSED (disjoint and exhaustive); opposite_direction keys are now read; NOT_PASSED_DIRECTION_CONSISTENT is defined mechanically in pass_criteria.verdict_labels with a no-spin rule and a 'not evidence of generalisation' interpretation; test covers all six labels and the positive-pair and orientation-fail branches.",
+      "R1-5": "VERIFIED. check_bindings refuses when the on-disk byte count or the intake byte count differs from bytes_expected, before hashing; BytesEnforcementTests passes with a truncated file. intake.py still leaves a partial file on an exception (minor R2-m4; the run would refuse anyway).",
+      "R1-6": "VERIFIED. validate_pc1.py takes the deposited-PC1 directory as argv[1], records script_sha256 and a per-chromosome Spearman table; freeze.py binds validate_pc1.py, method-validation-attempts.md and prior-art/caruso-2026.md, refuses if protocol.frozen.json or freeze.json exists, and refuses unless method-validation.json carries the current validate_pc1.py hash. No personal absolute path remains in design, registration, prior-art, code, results or tools. design/method-validation.json is now the attempt-3 record: script_sha256 3449aa15… equals the on-disk validate_pc1.py hash, code_pc1_sha256 137b18c8… equals the on-disk pc1.py hash, per-chromosome table present, passed true; freeze.py's method-validation guards are satisfiable on the current bytes."
+    },
+    "method_validation_status": "Attempt 3 (attempt_utc 2026-09-24T21:02:48Z, same pc1.py bytes 137b18c8…, repaired validate_pc1.py 3449aa15…) reproduces attempt 2 exactly: V1 0.9225 (GSM3602092) / 0.8804 (GSM3602088) against floor 0.80, V2 0.5471 against floor 0.50, n 5,262 tiles, no chromosome flipped or excluded in either track, passed true. Per-chromosome table: 18 of 21 finite autosomes >= 0.85 in both samples; chr9 0.68/0.73; chr4 0.40 in GSM3602088 only; chr22 0.21/0.22 in both; chr21 has no finite tiles (null). The registration has no per-chromosome floor and none should be added now (that would be post-validation tuning); the weak chr22/chr4 agreement is reported as a diagnostic and is consistent with a pipeline that tracks deposited PC1 genome-wide. V2 clears its floor by 0.047: delta concordance with HOMER is moderate, which costs power, not validity. Attempt 1's failure (4DN column order read as HiC-Pro, every pair counted trans, 8 GB RSS) is recorded verbatim in the attempt log and the auto-detection fix is the only pc1.py change.",
+    "new_blocking": [],
+    "blocking": [],
+    "minor": [
+      {
+        "id": "R2-m1",
+        "issue": "No test asserts that run_pc1's command line carries --min-abs-rho 0.2 and --min-nnz 10 from the registration and omits --min-mapq when extra_mapq_filter is null.",
+        "suggested_repair": "Add a test that patches subprocess.run and inspects argv."
+      },
+      {
+        "id": "R2-m2",
+        "issue": "In pipeline_qc a WT sample's concordance is computed against the WT mean that includes itself, so the 0.5 floor is unreachable for WT samples (Spearman of x with (x+noise)/2 is about 0.7 even for pure noise).",
+        "suggested_repair": "Compare each WT sample with the other WT replicate; KO samples with the WT mean as now."
+      },
+      {
+        "id": "R2-m3",
+        "issue": "max_excluded_autosomes counts only pipeline_qc exclusions; chromosomes the frozen evaluator drops for WT-mean orientation rho < 0.2 are not counted toward PIPELINE_FAILURE, and eigen_share averages over pc1-oriented chromosomes rather than the QC-kept set.",
+        "suggested_repair": "State this scope in pipeline_qc.rule (or count core.orientation.excluded_chromosomes too) before freeze; either is acceptable if stated."
+      },
+      {
+        "id": "R2-m4",
+        "issue": "intake.py does not remove a partial file on a failed transfer.",
+        "suggested_repair": "Wrap the transfer in try/except, unlink dest and exit non-zero."
+      },
+      {
+        "id": "R2-m5",
+        "issue": "design/fixed-protocol.md (bound at freeze) still carries round-1 wording that contradicts the registration: the Cohort section says the confound is what 'the standardised arm and the SD-ratio flag were designed for'; the Statistics section lists 'Scale diagnostic SD ratio'; the Pre-committed interpretation list uses 'all arms negative and p at floor' and says a KO rep2 orientation failure on > 2 chromosomes 'still proceeds', whereas pipeline_qc now excludes every unoriented chromosome and fails the pipeline above 3.",
+        "suggested_repair": "Rewrite those four sentences to match pass_criteria.verdict_labels, confound_flags and pipeline_qc before freeze; the registration JSON is authoritative either way."
+      },
+      {
+        "id": "R2-m6",
+        "issue": "R1-3(d) (each WT sample's genome-wide orientation rho >= 0.3 as part of orientation_ok) was not adopted; per-chromosome rho is recorded and the evaluator's WT-mean rule stands.",
+        "suggested_repair": "None required; record as a reported diagnostic only."
+      },
+      {
+        "id": "R2-m7",
+        "issue": "design/method-validation-attempts.md gives approximate wall-clock times (attempt 1 ~20:55Z, attempt 2 ~21:20Z) that disagree with the records' attempt_utc values (attempt 2 20:58:22Z, attempt 3 21:02:48Z); attempt 2 is logged as later than attempt 3.",
+        "suggested_repair": "Replace the approximate times with the attempt_utc values from the two JSON records before freeze binds the log."
+      },
+      {
+        "id": "R2-m8",
+        "issue": "chr22 agrees with the deposited PC1 at only rho 0.21 in both validation samples and chr4 at 0.40 in one; the frozen evaluator will keep these chromosomes if their TSS orientation clears 0.2, so a small share of tiles enters the primary from chromosomes where the pipeline and HOMER disagree.",
+        "suggested_repair": "No threshold change (thresholds are pre-stated and passed). Report per-chromosome validation rho next to the per-chromosome primary arm in the outcome so a reader can see whether any effect is carried by weakly validated chromosomes."
+      }
+    ],
+    "strengths": [
+      "Every round-1 blocking item is repaired in code with a passing test rather than in prose, and the frozen evaluator is untouched.",
+      "The strength flag is now scale-invariant by construction and the SD ratio is honestly relabelled.",
+      "Verdict assignment is mechanical over a closed label set, closing the post-hoc classification route.",
+      "freeze.py is fail-closed on the validation script hash, on an existing freeze, and on the pc1/test hashes; the attempt log retains the failed first attempt verbatim."
+    ],
+    "verdict": "PASS"
+  },
+  "verdict": "PASS",
+  "round_2_repairs_verified": {
+    "utc": "2026-09-24T21:40:00Z",
+    "hashes": {
+      "code/replicate.py": "a084a245bab2b1935e12ada74127de31ee69535ea25d403fa4c5ebf74aef9ee1",
+      "code/test_replicate.py": "a6568d079179b0cdcfcb9a725d59d606c6ef8b158443ee00f8fd7fbcaf6e5289",
+      "code/pc1.py": "137b18c8… unchanged",
+      "code/test_pc1.py": "e8e0a066… unchanged",
+      "code/compartment.py": "776ccede… unchanged",
+      "design/validate_pc1.py": "3449aa15… unchanged (method-validation.json script_sha256 still matches)"
+    },
+    "tests": "python -m unittest test_replicate test_pc1: Ran 39 tests, OK (12 + 27)",
+    "not_opened": "nothing under data/",
+    "items": {
+      "R2-m1": "VERIFIED. pc1_command(reg, m, …) builds argv solely from the registration; Pc1CommandTests asserts --min-abs-rho and --min-nnz values and that --min-mapq is present iff extra_mapq_filter is not null (both branches).",
+      "R2-m2": "VERIFIED. pipeline_qc computes reference[g] = nanmean of WT samples other than g; per-sample record carries 'reference' and 'concordance_with_wt_reference'; test asserts the reference lists for a WT and a KO sample. Registration pipeline_qc.rule and fixed-protocol.md line 32 describe the same rule.",
+      "R2-m3": "VERIFIED. pipeline_qc.exclusion_cap_scope states the cap counts QC drops only and evaluator orientation drops are reported separately; code matches (pipeline_failure = len(excluded) > max_excluded_autosomes over QC exclusions).",
+      "R2-m4": "VERIFIED. intake.py streams to <file>.part and part.replace(dest) only after the transfer completes; a failed transfer never leaves bytes under the registered filename (the .part remains, which is fine because check_bindings only reads registered filenames).",
+      "R2-m5": "VERIFIED. 'SD-ratio flag', 'Scale diagnostic SD ratio', 'p at floor' and 'still proceeds' no longer appear in design/fixed-protocol.md; the confound, pipeline-QC, verdict-label and KO-rep2 paragraphs now match the registration.",
+      "R2-m7": "VERIFIED. Attempt log headers now read attempt 2 = 2026-09-24T20:58:22Z and attempt 3 = 2026-09-24T21:02:48Z (from the receipts); attempt 1 is marked approximate with no receipt, which is honest. Attempt 3 entry discloses chr9/chr22/chr4 agreement and the chr21 absence before freeze without changing a threshold.",
+      "R2-m8": "VERIFIED AS REGISTERED, NOT YET IMPLEMENTED. secondary_reported_only now lists the per-chromosome validation-vs-outcome table, but code/replicate.py contains no code that reads design/method-validation.json or assembles that table (grep for method-validation/per_chromosome_spearman returns nothing). Both inputs are mechanically produced (method-validation.json per_chromosome_spearman; evaluator core 'per_chromosome'), so this is a reporting gap, not an evidentiary one.",
+      "R2-m6": "Correctly not applied (it recommended no action).",
+      "skeptical-review": "Item 12 lists every repair above accurately."
+    },
+    "new_blocking": [],
+    "minor": [
+      {
+        "id": "R2-r1",
+        "issue": "The per-chromosome validation-vs-outcome table promised in secondary_reported_only is not emitted by replicate.py.",
+        "suggested_repair": "Either add the ~10 lines to replicate.run that join method-validation.json per_chromosome_spearman with core per_chromosome into results, or amend the registration entry to say the table is compiled at report time from those two named records. Either is acceptable before freeze; must not be added after the outcome exists."
+      }
+    ],
+    "verdict": "PASS"
+  }
+}
