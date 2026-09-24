@@ -1,0 +1,24 @@
+{
+  "contract": "bio.offline-qualification.v1",
+  "status": "registered",
+  "endpoint": "repeatable processed-data calibration with retained failure and rejection evidence",
+  "repetitions": [0, 1, 2],
+  "executor": "scripted fixture; no model inference",
+  "arms": ["conventional independent arithmetic", "scripted lab integration"],
+  "expected": {
+    "rna_genes": 128,
+    "rna_passing": 28,
+    "chromatin_intervals": 64,
+    "chromatin_mean_delta": "0.04620996875"
+  },
+  "attempts_per_repetition": ["known-control", "unadmitted-analysis", "malformed-proposal"],
+  "success_rule": "3/3 controls reproduce, 0 failed/rejected attempts enter selection, receipts replay and fresh computations agree",
+  "cost": {"currency": "USD", "external_spend_micros": 0},
+  "evaluation": "same exposed calibration fixture, repeated after freeze; not a biological holdout",
+  "live_agent_comparison": {
+    "status": "not_run",
+    "requires": ["verified account and exact model/provider", "current prices and explicit funded envelope", "qualified execution isolation", "frozen identical access/memory/model/tool configuration across agent arms", "separate eligible independent biological corpus"]
+  },
+  "prospective_decision": "no_go",
+  "limits": ["Software repetitions are not biological replicates.", "No agent organization or intelligence effect is estimated.", "Reference results are supplied to the scripted control, so recovery does not measure discovery ability."]
+}

@@ -1,0 +1,861 @@
+{
+  "schema_version": "1",
+  "accession": "GSE330298",
+  "retrieved_on": "2026-09-23",
+  "source": {
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298&targ=gsm&view=full&form=text",
+    "sha256": "f025b3f26e647020e0518ad4d787f3b7d9fbed18142e351fc7480f85175a32c2",
+    "bytes": 187023,
+    "local_filename": "GSE330298-samples.soft",
+    "retained_in_repository": false
+  },
+  "projection": {
+    "path": "campaigns/lamina-context-pilot/metadata/GSE330298.json",
+    "sha256": "0bab02ef7fd8caa99265aaebabf5bf1eaa6caa120b83c3f4390ba0fb760e7111",
+    "bytes": 82211
+  },
+  "sample_count": 35,
+  "samples": [
+    {
+      "id": "GSM9715171",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep1",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58750518",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715172",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep2",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58750517",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715173",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep3",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 3,
+      "biosample_id": "SAMN58750515",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715174",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep4",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 4,
+      "biosample_id": "SAMN58750514",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715175",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep1",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/-",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58750513",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715176",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep2",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/-",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58750512",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715177",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep3",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/-",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 3,
+      "biosample_id": "SAMN58750511",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9715178",
+      "series": [
+        "GSE330013",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep4",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/-",
+      "age_reported": "P7.5",
+      "age_in_title": "P7.5",
+      "replicate_label": 4,
+      "biosample_id": "SAMN58750510",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9717986",
+      "series": [
+        "GSE330099",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, ATAC Rep1",
+      "organism": "Mus musculus",
+      "assay": "atac",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990898",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9717987",
+      "series": [
+        "GSE330099",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, ATAC, Rep2",
+      "organism": "Mus musculus",
+      "assay": "atac",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990896",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9717988",
+      "series": [
+        "GSE330100",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, scRNA, Rep1",
+      "organism": "Mus musculus",
+      "assay": "scrna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/-",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58989180",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "three_geo_libraries_vs_four_in_processing_text",
+        "one_control_library"
+      ]
+    },
+    {
+      "id": "GSM9717989",
+      "series": [
+        "GSE330100",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, scRNA, Rep2",
+      "organism": "Mus musculus",
+      "assay": "scrna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/-",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58989179",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "three_geo_libraries_vs_four_in_processing_text",
+        "one_control_library"
+      ]
+    },
+    {
+      "id": "GSM9717990",
+      "series": [
+        "GSE330100",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, scRNA, Rep1",
+      "organism": "Mus musculus",
+      "assay": "scrna",
+      "cell_preparation": "All heart cells",
+      "genotype_reported": "Nkx2-5Cre; Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58989178",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "three_geo_libraries_vs_four_in_processing_text",
+        "one_control_library"
+      ]
+    },
+    {
+      "id": "GSM9718003",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, H3K9me2 CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990335",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718004",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, H3K9me2 CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990334",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718005",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, H3K9me3 CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990333",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718006",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, H3K9me3 CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990332",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718007",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, H3K27ac CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990331",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718008",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, H3K27ac CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990330",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718009",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Lamin-A CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990329",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718010",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Lamin-A CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990328",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718011",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Lamin-A CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/-",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990326",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718012",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Lamin-A CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/-",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990325",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718013",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, IgG CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990324",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718014",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, IgG CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990323",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718015",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, IgG CUT&RUN, Rep3",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 3,
+      "biosample_id": "SAMN58990322",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718016",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "WT, P0.5 Heart, IgG CUT&RUN, Rep4",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 4,
+      "biosample_id": "SAMN58990321",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM9718017",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, IgG CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.6",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990320",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "age_title_characteristics_conflict",
+        "genotype_title_characteristics_conflict"
+      ]
+    },
+    {
+      "id": "GSM9718018",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, IgG CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.7",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990319",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "age_title_characteristics_conflict",
+        "genotype_title_characteristics_conflict"
+      ]
+    },
+    {
+      "id": "GSM9718019",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, IgG CUT&RUN, Rep1",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.8",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58990318",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "age_title_characteristics_conflict",
+        "genotype_title_characteristics_conflict"
+      ]
+    },
+    {
+      "id": "GSM9718020",
+      "series": [
+        "GSE330102",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, IgG CUT&RUN, Rep2",
+      "organism": "Mus musculus",
+      "assay": "cutandrun",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Wildtype",
+      "age_reported": "P0.9",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58990317",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "age_title_characteristics_conflict",
+        "genotype_title_characteristics_conflict"
+      ]
+    },
+    {
+      "id": "GSM9718021",
+      "series": [
+        "GSE330103",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Hi-C, Rep1",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58992477",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "processed_cscore_is_genotype_aggregate"
+      ]
+    },
+    {
+      "id": "GSM9718022",
+      "series": [
+        "GSE330103",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Hi-C, Rep2",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/+",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58992476",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "processed_cscore_is_genotype_aggregate"
+      ]
+    },
+    {
+      "id": "GSM9718023",
+      "series": [
+        "GSE330103",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Hi-C, Rep1",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/-",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 1,
+      "biosample_id": "SAMN58992475",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "processed_cscore_is_genotype_aggregate"
+      ]
+    },
+    {
+      "id": "GSM9718024",
+      "series": [
+        "GSE330103",
+        "GSE330298"
+      ],
+      "title": "Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Hi-C, Rep2",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "Isolated Cardiomyocyte",
+      "genotype_reported": "Nkx2-5Cre;Lmnb1 Flox/-",
+      "age_reported": "P0.5",
+      "age_in_title": "P0.5",
+      "replicate_label": 2,
+      "biosample_id": "SAMN58992473",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "GRCm38",
+      "issues": [
+        "biological_unit_and_pooling_not_identified",
+        "processed_cscore_is_genotype_aggregate"
+      ]
+    }
+  ],
+  "annotation": {
+    "reported": "GRCm38/mm10; bulk RNA annotation release unspecified; ATAC iGenomes UCSC release unspecified",
+    "annotation_file_qualified": false,
+    "source_line_numbers": [
+      350,
+      393
+    ]
+  },
+  "rights": {
+    "basis": "public_molecular_metadata",
+    "policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#data",
+    "notice": "Factual public mouse molecular-data metadata only. NCBI imposes no reuse/distribution restriction on these databases and accepts no submitter restriction, but does not transfer third-party intellectual-property rights. Acknowledge GEO and the depositors. Author scripts and publication full text are not redistributed."
+  },
+  "limitations": [
+    "GSM/BioSample accessions and Rep labels identify submitted libraries, not proven independent animals or cultures.",
+    "Pooling, litter/culture relatedness, sample reuse, and batches remain unresolved. No biological power estimate is available.",
+    "This intake corpus is public reproduction material; none of it is a reserved independent holdout."
+  ]
+}

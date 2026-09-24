@@ -1,0 +1,13 @@
+{
+  "contract": "bio.public-calibration.v1",
+  "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE330nnn/GSE330013/suppl/GSE330013_P7_5_Bulk_RNAseq_Counts.txt.gz",
+  "source_sha256": "4b20553eff75f70049f2e6526a7f6af965dcd4873cb479dc342f0e61ddd504fb",
+  "source_rows": 55335,
+  "libraries": 8,
+  "passing_genes": 16336,
+  "passing_gene_ids_sha256": "3efe2108f20e91ccbc6bf37b024880030d6b20a72fc26f41d256d48ce3971c70",
+  "method": "raw CPM > 0.26 in at least 4 libraries; before TMM",
+  "independent_arithmetic": "passed",
+  "fixture_projection": "verified against full source",
+  "scientific_status": "preprocessing calibration; no new biological finding or differential expression"
+}

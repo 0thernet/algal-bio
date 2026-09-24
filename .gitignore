@@ -1,8 +1,29 @@
-# live credential, never commit
-.env.local
+# Credentials, local environments, and downloaded dependencies.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.venv/
+node_modules/
+.cache/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+
+# New runtime output belongs outside the retained historical evidence trees.
+/runs/
+/artifacts/
+/downloads/
+/datasets/raw/
+/datasets/processed/
+/coverage/
+
+# Existing tracked .algal* evidence remains tracked and is hash-manifested.
+# Ignore new local native runs; do not add more legacy receipts incidentally.
+/.algal*/
 
 # refetchable with ./fetch.sh (3.8 MB)
 out/opengenes.json
-.venv/
 out/scbc/sample_metadata.parquet
-__pycache__/

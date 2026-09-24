@@ -1,0 +1,576 @@
+{
+  "schema_version": "1",
+  "study_id": "lamina-context-pilot-v1",
+  "registered_on": "2026-09-23",
+  "mode": "descriptive_qualification",
+  "question": "Can a bounded offline instrument reproduce source-bound bulk RNA filtering and descriptive chromatin summaries without confusing libraries, cells, genomic windows, and independent biological units?",
+  "planned_question": "With a qualified independent matched/crossed cohort, do unperturbed reference chromatin features improve out-of-study expression-response direction prediction over an expression-only baseline?",
+  "decision": {
+    "status": "data_limited",
+    "reasons": [
+      "No admissible independent cohort is selected.",
+      "The initial studies confound cell context, perturbation, and study; metadata do not establish independent animal/culture identities.",
+      "Source assays differ in age, preparation, genome build, and annotation qualification."
+    ],
+    "domain_review": "pending",
+    "reviewer": null,
+    "wet_lab": "not_scheduled"
+  },
+  "dataset_manifests": [
+    {
+      "path": "datasets/manifests/GSE330298.json",
+      "sha256": "ab63baaf32bcce85b23b651e1aa4c8bcaf5039144b34b46af1c4e2b1fc67354e",
+      "bytes": 25831
+    },
+    {
+      "path": "datasets/manifests/GSE89520.json",
+      "sha256": "30a0a647bc7c6751f7a75560f8070f516b066cc1e78e8b24cb32b3f8084148b9",
+      "bytes": 25847
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "cm_bulk_rna_reproduction",
+      "dataset_ids": [
+        "GSE330298"
+      ],
+      "sample_ids": [
+        "GSM9715171",
+        "GSM9715172",
+        "GSM9715173",
+        "GSM9715174",
+        "GSM9715175",
+        "GSM9715176",
+        "GSM9715177",
+        "GSM9715178"
+      ],
+      "assays": [
+        "bulk_rna"
+      ],
+      "status": "descriptive_only",
+      "estimand": "Reproduce the published pre-TMM count-per-million filter on a fixed source-order subset using full-library denominators; no differential-expression inference.",
+      "reason_codes": [
+        "library_identity_known",
+        "animal_pooling_independence_unknown",
+        "annotation_release_unknown"
+      ],
+      "genome_compatible": true,
+      "age_compatible": true,
+      "preparation_compatible": true,
+      "perturbation_matched": true,
+      "biological_units_known": false
+    },
+    {
+      "id": "cm_hic_reproduction",
+      "dataset_ids": [
+        "GSE330298"
+      ],
+      "sample_ids": [
+        "GSM9718021",
+        "GSM9718022",
+        "GSM9718023",
+        "GSM9718024"
+      ],
+      "assays": [
+        "hic"
+      ],
+      "status": "descriptive_only",
+      "estimand": "Coordinate-matched descriptive C-score difference between genotype aggregates on a fixed subset.",
+      "reason_codes": [
+        "genotype_aggregate_not_replicates",
+        "animal_pooling_independence_unknown"
+      ],
+      "genome_compatible": true,
+      "age_compatible": true,
+      "preparation_compatible": true,
+      "perturbation_matched": true,
+      "biological_units_known": false
+    },
+    {
+      "id": "cm_rna_hic_context_prediction",
+      "dataset_ids": [
+        "GSE330298"
+      ],
+      "sample_ids": [
+        "GSM9715171",
+        "GSM9715172",
+        "GSM9715173",
+        "GSM9715174",
+        "GSM9715175",
+        "GSM9715176",
+        "GSM9715177",
+        "GSM9715178",
+        "GSM9718021",
+        "GSM9718022",
+        "GSM9718023",
+        "GSM9718024"
+      ],
+      "assays": [
+        "bulk_rna",
+        "hic"
+      ],
+      "status": "excluded",
+      "estimand": "Prediction of a matched cell population response from its own unperturbed chromatin is not identifiable from this age/preparation pair.",
+      "reason_codes": [
+        "P7_5_whole_heart_vs_P0_5_purified_cardiomyocyte",
+        "no_matched_biological_units",
+        "post_perturbation_features_forbidden"
+      ],
+      "genome_compatible": true,
+      "age_compatible": false,
+      "preparation_compatible": false,
+      "perturbation_matched": true,
+      "biological_units_known": false
+    },
+    {
+      "id": "cm_scrna_genotype_effect",
+      "dataset_ids": [
+        "GSE330298"
+      ],
+      "sample_ids": [
+        "GSM9717988",
+        "GSM9717989",
+        "GSM9717990"
+      ],
+      "assays": [
+        "scrna"
+      ],
+      "status": "excluded",
+      "estimand": "Replicated between-genotype biological inference is not admitted; cell counts do not replace animals.",
+      "reason_codes": [
+        "one_control_library",
+        "three_geo_libraries_vs_four_in_processing_text",
+        "animal_pooling_independence_unknown"
+      ],
+      "genome_compatible": true,
+      "age_compatible": true,
+      "preparation_compatible": true,
+      "perturbation_matched": true,
+      "biological_units_known": false
+    },
+    {
+      "id": "cm_cutandrun_predictive_join",
+      "dataset_ids": [
+        "GSE330298"
+      ],
+      "sample_ids": [
+        "GSM9718003",
+        "GSM9718004",
+        "GSM9718005",
+        "GSM9718006",
+        "GSM9718007",
+        "GSM9718008",
+        "GSM9718009",
+        "GSM9718010",
+        "GSM9718011",
+        "GSM9718012",
+        "GSM9718013",
+        "GSM9718014",
+        "GSM9718015",
+        "GSM9718016",
+        "GSM9718017",
+        "GSM9718018",
+        "GSM9718019",
+        "GSM9718020"
+      ],
+      "assays": [
+        "cutandrun"
+      ],
+      "status": "excluded",
+      "estimand": "Predictive joins needing genotype-matched IgG normalization require resolution of conflicting IgG metadata.",
+      "reason_codes": [
+        "GSM9718017_to_GSM9718020_age_genotype_conflicts",
+        "unknown_normalization_control_identity"
+      ],
+      "genome_compatible": true,
+      "age_compatible": false,
+      "preparation_compatible": true,
+      "perturbation_matched": false,
+      "biological_units_known": false
+    },
+    {
+      "id": "esc_known_result_context",
+      "dataset_ids": [
+        "GSE89520"
+      ],
+      "sample_ids": [
+        "GSM2375116",
+        "GSM2375117",
+        "GSM2375118",
+        "GSM2375119",
+        "GSM2375120",
+        "GSM2375121",
+        "GSM2375122",
+        "GSM2375123"
+      ],
+      "assays": [
+        "bulk_rna",
+        "hic"
+      ],
+      "status": "descriptive_only",
+      "estimand": "Second published context for future reproduction; measurement files have not been admitted to this fixture.",
+      "reason_codes": [
+        "two_reported_replicates_per_genotype_per_assay",
+        "culture_identity_independence_unknown",
+        "measurement_files_not_qualified"
+      ],
+      "genome_compatible": true,
+      "age_compatible": false,
+      "preparation_compatible": true,
+      "perturbation_matched": true,
+      "biological_units_known": false
+    },
+    {
+      "id": "cross_context_confirmation",
+      "dataset_ids": [
+        "GSE330298",
+        "GSE89520"
+      ],
+      "sample_ids": [
+        "GSM9715171",
+        "GSM9715172",
+        "GSM9715173",
+        "GSM9715174",
+        "GSM9715175",
+        "GSM9715176",
+        "GSM9715177",
+        "GSM9715178",
+        "GSM2375116",
+        "GSM2375117",
+        "GSM2375118",
+        "GSM2375119"
+      ],
+      "assays": [
+        "bulk_rna"
+      ],
+      "status": "excluded",
+      "estimand": "An isolated cell-context effect or independently confirmed generalization cannot be estimated from these two confounded studies.",
+      "reason_codes": [
+        "study_context_perturbation_confounded",
+        "Lmnb1_conditional_vs_lamin_triple_knockout",
+        "mm10_vs_mm9_unqualified_mapping",
+        "no_reserved_independent_cohort"
+      ],
+      "genome_compatible": false,
+      "age_compatible": false,
+      "preparation_compatible": false,
+      "perturbation_matched": false,
+      "biological_units_known": false
+    }
+  ],
+  "features": [
+    {
+      "id": "cm_control_atac",
+      "kind": "metadata",
+      "source_sample_ids": [
+        "GSM9717986",
+        "GSM9717987"
+      ],
+      "availability": "unknown",
+      "use": "quality_control",
+      "eligible": false,
+      "reason": "Flox/+ is a genetic reference control, not verified unperturbed wildtype. Reference is P0.5 isolated cardiomyocytes; current bulk response is P7.5 whole heart. No predictive admission."
+    },
+    {
+      "id": "cm_wildtype_histone_reference",
+      "kind": "unperturbed_reference",
+      "source_sample_ids": [
+        "GSM9718003",
+        "GSM9718004",
+        "GSM9718005",
+        "GSM9718006",
+        "GSM9718007",
+        "GSM9718008"
+      ],
+      "availability": "unperturbed",
+      "use": "prediction",
+      "eligible": false,
+      "reason": "Wildtype P0.5 histone profiles are reference-feature leads only; acquisition, assay normalization, independent units, and matched age/preparation response are not qualified."
+    },
+    {
+      "id": "cm_mutant_cscore_change",
+      "kind": "post_perturbation",
+      "source_sample_ids": [
+        "GSM9718021",
+        "GSM9718022",
+        "GSM9718023",
+        "GSM9718024"
+      ],
+      "availability": "post_perturbation",
+      "use": "explanation",
+      "eligible": true,
+      "reason": "Permitted only as a descriptive genotype-aggregate observation; unavailable before perturbation and forbidden as a predictive feature."
+    },
+    {
+      "id": "cm_library_counts",
+      "kind": "metadata",
+      "source_sample_ids": [
+        "GSM9715171",
+        "GSM9715172",
+        "GSM9715173",
+        "GSM9715174",
+        "GSM9715175",
+        "GSM9715176",
+        "GSM9715177",
+        "GSM9715178"
+      ],
+      "availability": "post_perturbation",
+      "use": "quality_control",
+      "eligible": true,
+      "reason": "Source-order count subset and full-source denominators test a deterministic analysis step, not a response predictor."
+    }
+  ],
+  "splits": {
+    "reproduction_sample_ids": [
+      "GSM9715171",
+      "GSM9715172",
+      "GSM9715173",
+      "GSM9715174",
+      "GSM9715175",
+      "GSM9715176",
+      "GSM9715177",
+      "GSM9715178",
+      "GSM9717986",
+      "GSM9717987",
+      "GSM9717988",
+      "GSM9717989",
+      "GSM9717990",
+      "GSM9718003",
+      "GSM9718004",
+      "GSM9718005",
+      "GSM9718006",
+      "GSM9718007",
+      "GSM9718008",
+      "GSM9718009",
+      "GSM9718010",
+      "GSM9718011",
+      "GSM9718012",
+      "GSM9718013",
+      "GSM9718014",
+      "GSM9718015",
+      "GSM9718016",
+      "GSM9718017",
+      "GSM9718018",
+      "GSM9718019",
+      "GSM9718020",
+      "GSM9718021",
+      "GSM9718022",
+      "GSM9718023",
+      "GSM9718024",
+      "GSM2375116",
+      "GSM2375117",
+      "GSM2375118",
+      "GSM2375119",
+      "GSM2375120",
+      "GSM2375121",
+      "GSM2375122",
+      "GSM2375123",
+      "GSM2375124",
+      "GSM2375125",
+      "GSM2375126",
+      "GSM2375127",
+      "GSM2375128",
+      "GSM2375129",
+      "GSM2375130",
+      "GSM2375131",
+      "GSM2375132",
+      "GSM2375133",
+      "GSM2375134",
+      "GSM2375135",
+      "GSM2375136",
+      "GSM2375137",
+      "GSM2375138",
+      "GSM2375139",
+      "GSM2375140",
+      "GSM2375141",
+      "GSM2375142",
+      "GSM2375143",
+      "GSM2375144",
+      "GSM2375145",
+      "GSM2375146",
+      "GSM2375147",
+      "GSM2375148",
+      "GSM2375149",
+      "GSM2375150",
+      "GSM2375151",
+      "GSM2375152",
+      "GSM2375153",
+      "GSM2375154",
+      "GSM2375155"
+    ],
+    "discovery_sample_ids": [],
+    "holdout": {
+      "status": "unselected",
+      "identity_commitment": null,
+      "public_sample_ids": [],
+      "access_role": "evaluator_only",
+      "public_training_exposure": "unknown"
+    },
+    "leakage_policy": "All named GEO samples are public known-result intake, never holdout. No independent-data evaluation is enabled. A future evaluator keeps the manifest and artifact identities outside investigator mounts, checks duplicate GSM/BioSample/animal/culture and reused studies, freezes candidates, and logs access. A hash is not access control.",
+    "genomic_block_policy": "No genomic p-values or train/test split in this qualification. A new admitted predictive study must freeze held-out chromosomes/contiguous genomic blocks before feature selection, fit transforms in training only, and repeat a leave-chromosome-out sensitivity analysis. Blocks are not biological replicates."
+  },
+  "controls": [
+    {
+      "id": "source_filter_agreement",
+      "kind": "positive_software",
+      "synthetic": false,
+      "endpoint_id": "processed_source_reproduction",
+      "expected": "All source-order fixture rows reproduce the fixed CPM>0.26 in at least four libraries pre-TMM filter with full-library totals; independent arithmetic agrees.",
+      "eligible_for_novelty": false
+    },
+    {
+      "id": "malformed_or_corrupt_input",
+      "kind": "negative_software",
+      "synthetic": true,
+      "endpoint_id": "processed_source_reproduction",
+      "expected": "Corrupted hash, missing library labels, negative counts, duplicate coordinates, or assembly mismatch is rejected.",
+      "eligible_for_novelty": false
+    },
+    {
+      "id": "published_lamin_context",
+      "kind": "biological_known",
+      "synthetic": false,
+      "endpoint_id": "prospective_transfer",
+      "expected": "Previously published lamina/chromatin/expression relationships count as prior art and are not novel candidates.",
+      "eligible_for_novelty": false
+    },
+    {
+      "id": "matched_null_future",
+      "kind": "negative_software",
+      "synthetic": true,
+      "endpoint_id": "prospective_transfer",
+      "expected": "Future registered analysis uses permutations within verified biological strata and genomic blocks plus expression/length/chromosome-matched nulls; no biological null p-value is computed in v1.",
+      "eligible_for_novelty": false
+    }
+  ],
+  "endpoints": [
+    {
+      "id": "processed_source_reproduction",
+      "kind": "software_reproduction",
+      "status": "active",
+      "metric": "source/filter agreement fraction and independent numeric agreement",
+      "unit": "source_row",
+      "success_rule": "Agreement fraction = 1 for every retained RNA row and finite coordinate-matched C-score summary; decisive independent arithmetic agrees within the registered numeric tolerance.",
+      "practical_margin": 0,
+      "absolute_tolerance": 1e-12,
+      "failure_rule": "Any mismatching hash, source row, sample label, filter decision, nonfinite summary, or independently recomputed numeric disagreement fails qualification.",
+      "data_limited_rule": "Passing demonstrates an instrument step only; no new biology, effect size, statistical replication, or agent superiority is established.",
+      "confirmatory": false
+    },
+    {
+      "id": "prospective_transfer",
+      "kind": "biological_prediction",
+      "status": "blocked",
+      "metric": "balanced accuracy gain over expression-only prediction, evaluated by independent biological cohorts and genomic blocks",
+      "unit": "independent_biological_sample",
+      "success_rule": "Proposed criterion for a separately reviewed future registration: gain >= 0.05 and biological-unit 95% lower confidence bound > 0, with frozen direction threshold and matched/cohort design.",
+      "practical_margin": 0.05,
+      "absolute_tolerance": 0,
+      "failure_rule": "After a qualified prospective design, a gain below margin or uncertainty spanning zero is a negative result, not permission to revise the endpoint.",
+      "data_limited_rule": "Current result is data_limited: no qualified independent matched/crossed cohort, unidentified biological units, no precision estimate, and no domain endpoint review.",
+      "confirmatory": false
+    }
+  ],
+  "precision": {
+    "biological_replicates": null,
+    "status": "not_estimable",
+    "analysis": "Library labels: CM bulk RNA 4+4; CM scRNA 1 control+2 mutant; CM Hi-C 2+2; ESC RNA and Hi-C each 2+2. Independence/pooling are unresolved and C-score outputs are genotype aggregates. Do not use genes, reads, cells, or windows as n. A future study needs independently identified groups and a registered biological-unit confidence/precision calculation; no numerical power is claimed."
+  },
+  "multiple_testing": {
+    "inference_enabled": false,
+    "method": "none",
+    "alpha": 0.05,
+    "family": "No inferential hypothesis family in software qualification. Future gene/module candidate family and BH correction must be registered before evaluation."
+  },
+  "resources": {
+    "live_inference": false,
+    "paid_compute": false,
+    "funded_budget_usd": 0,
+    "assay_access": "Public processed mouse data only. No wet-lab assay, private cohort, external compute, or funded model run has been scheduled."
+  },
+  "prior_art": {
+    "review_status": "bounded_intake_only",
+    "searched_on": "2026-09-23",
+    "queries": [
+      "GSE330298 GSE330013 lamin cardiomyocyte chromatin maturation",
+      "GSE89520 lamins three dimensional genome ES cells",
+      "katherinebossone Lamin_CM_Paper"
+    ],
+    "sources": [
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+        "finding": "Published CM study is known-result calibration, with assays at distinct ages and preparations."
+      },
+      {
+        "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89520",
+        "finding": "WT versus lamin-B1/B2/A triple knockout mESC measurements are established prior art; not an independent matching perturbation."
+      },
+      {
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13228526/",
+        "finding": "Associated CM study motivates reproduction; mechanisms and cross-context narrative are not new claims here."
+      },
+      {
+        "url": "https://github.com/katherinebossone/Lamin_CM_Paper/tree/f85db2b7b5ae4e542bb74bd7d06fadf258bc04bd",
+        "finding": "Public author scripts exist at the recorded immutable revision; no LICENSE file in inspected complete tree."
+      }
+    ],
+    "novelty_claim": false
+  },
+  "author_code": {
+    "url": "https://github.com/katherinebossone/Lamin_CM_Paper",
+    "revision": "f85db2b7b5ae4e542bb74bd7d06fadf258bc04bd",
+    "license_status": "not_found_in_inspected_tree",
+    "reused_code": false,
+    "audit_artifact": {
+      "path": "campaigns/lamina-context-pilot/author-code-audit.json",
+      "sha256": "6dc83c6da28edbd1cffde9b1ad63172a499cf22294a81e46125470e817060abc",
+      "bytes": 2415
+    }
+  },
+  "qualification_fixture": {
+    "expected": {
+      "path": "tests/fixtures/bio/expected.json",
+      "sha256": "cb474a822979e63a3e9e01ecb5dd54b0f7a7edf81d1f1fdaa78315284cd7b15f",
+      "bytes": 116
+    },
+    "inputs": [
+      {
+        "path": "tests/fixtures/bio/rna-counts.tsv",
+        "sha256": "ac86dce61df06b417e6f6db42bc1c433462573778dcc080b3c79270c0a7decbb",
+        "bytes": 5395
+      },
+      {
+        "path": "tests/fixtures/bio/rna-provenance.json",
+        "sha256": "e93a04537ba35dd08ba6ef17e7b73cf49d1ded56254cc088bf7c8c6fe48af87f",
+        "bytes": 2006
+      },
+      {
+        "path": "tests/fixtures/bio/cscore-plus.bedgraph",
+        "sha256": "097f20950677671243e5e48406414e22579bd9ea4af09a303decf86643826139",
+        "bytes": 1912
+      },
+      {
+        "path": "tests/fixtures/bio/cscore-minus.bedgraph",
+        "sha256": "340c41277b01f43a254463437148ecec566006ad599a9f608112fa9e3da052b0",
+        "bytes": 1909
+      },
+      {
+        "path": "tests/fixtures/bio/cscore-plus-provenance.json",
+        "sha256": "5f27ccdc6fc60006719d955fe1803b71fb510ca1ec6856a54f6f9f6a0d6a39ac",
+        "bytes": 463
+      },
+      {
+        "path": "tests/fixtures/bio/cscore-minus-provenance.json",
+        "sha256": "341d9ad9947b95c4399545f0d2a8e6aee36d36d871cb4af6e0ec279570c86a1b",
+        "bytes": 464
+      }
+    ]
+  },
+  "registration_limits": [
+    "The exact registration, schema, and source projection hashes are frozen for review; repository version history supplies the dated immutable publication anchor. Local hashes prove consistency, not trusted time or authenticity.",
+    "No separately selected holdout exists. Evaluator-only labels document the required future access policy; no public JSON file can enforce isolation.",
+    "Initial question is narrowed to descriptive software qualification because the available intake does not identify the planned cross-context estimand.",
+    "Yixian Zheng/Hraness is user-supplied research context, not an asserted institutional partnership, author approval, domain review, or affiliation.",
+    "Public data may have been seen during model training. Even reserved public data cannot establish training-data novelty."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "contract": "bio.prospective-readiness.v1",
+  "campaign": "prospective-001",
+  "status": "not_run",
+  "decision": "no_go",
+  "source_registration": "campaigns/lamina-context-pilot/registration.json",
+  "source_registration_sha256": "71090e6ab5b3094a151438e34a64b5587cab9a9c3c7c135e6c5f52947599a8d4",
+  "question": "Whether unperturbed chromatin features improve independent expression-response prediction beyond an expression-only baseline",
+  "new_registration_required": true,
+  "missing": [
+    "An independent matched or crossed cohort with resolved biological replication and compatible assays",
+    "Domain review of the estimand, precision, controls and empirical follow-up endpoint",
+    "A frozen search/evaluation split with qualified evaluator isolation and a contamination audit",
+    "Measured live investigator qualification with verified model, price and funded resource envelope"
+  ],
+  "candidate_selection": "not_performed",
+  "holdout_opened": false,
+  "interpretation": "This is a documented readiness decision, not a search with zero surviving candidates and not a biological negative finding."
+}
