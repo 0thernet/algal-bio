@@ -212,12 +212,14 @@ def test_archive_requires_qualified_pins_and_final_summary(subset, tmp_path):
         write_archive(subset, subset / RELEASE, tmp_path / "blocked.tar.gz")
 
 
-def test_archive_is_deterministic_selected_only_and_never_overwrites(subset, tmp_path):
+def test_archive_is_deterministic_selected_only_and_never_overwrites(subset, tmp_path, monkeypatch):
     prepare_synthetic_archive_test(subset)
     first = tmp_path / "first.tar.gz"
     second = tmp_path / "second.tar.gz"
     a = write_archive(subset, subset / RELEASE, first)
-    b = write_archive(subset, subset / RELEASE, second)
+    # The documented CLI uses a relative control directory and output path.
+    monkeypatch.chdir(subset)
+    b = write_archive(subset, RELEASE, Path(second.name))
     assert a["archive_sha256"] == b["archive_sha256"]
     assert first.read_bytes() == second.read_bytes()
     with tarfile.open(first, "r:gz") as bundle:

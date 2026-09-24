@@ -343,8 +343,8 @@ def write_archive(root: Path, release_directory: Path, output: Path) -> dict:
     # identity remains an external operator record to avoid self-hashing assets.
     files = [(item["path"], item["sha256"], item["bytes"]) for item in manifest["artifacts"]]
     for filename in ("selection.json", "manifest.json"):
-        path = release_directory / filename
-        relative = path.relative_to(root).as_posix()
+        path = control_path(root, release_directory, filename)
+        relative = path.absolute().relative_to(root.absolute()).as_posix()
         payload = bounded_bytes(path)
         files.append((relative, sha(payload), len(payload)))
     require(not output.is_symlink() and not output.exists(), "Never overwrite an existing release asset")
