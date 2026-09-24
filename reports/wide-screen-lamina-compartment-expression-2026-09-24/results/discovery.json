@@ -1,0 +1,59 @@
+{
+ "schema": "bio.wide-screen-discovery.v2",
+ "config_sha256": "f58ae1a8a35bafeac90ad40a1c26824bb9e961f447509d3990fcf0a0073eeb25",
+ "features_sha256": "5a5c981a6fe7fba852cd08c2496ec09c2ea27f5c3605af5676a741709eb74cf5",
+ "all_sha256": "9bf91a2c42f11afbbcf7fd172c01d8cb4c910e0ffb18ee60df4ba277fca75f57",
+ "n_pairs": 47,
+ "survivors": [
+  {
+   "predictor": "gc",
+   "outcome": "dlam_mCh",
+   "sign": -1
+  },
+  {
+   "predictor": "siScr_mCh",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1
+  },
+  {
+   "predictor": "tss_count",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1
+  },
+  {
+   "predictor": "pc1_lcl_base",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1
+  },
+  {
+   "predictor": "arm_pos",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1
+  },
+  {
+   "predictor": "gc",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1
+  },
+  {
+   "predictor": "siScr_mCh",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1
+  },
+  {
+   "predictor": "tss_count",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": 1
+  },
+  {
+   "predictor": "tss_count",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1
+  },
+  {
+   "predictor": "gc",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1
+  }
+ ]
+}

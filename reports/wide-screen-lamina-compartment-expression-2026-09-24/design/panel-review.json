@@ -1,0 +1,27 @@
+{
+ "schema": "bio.design-review.v1",
+ "target": "panel/protocol.json + panel/panel.py + panel/test_panel.py (pre-freeze)",
+ "date": "2026-09-24",
+ "reviewer": "independent agent review, read-only; unit tests run (2/2 OK); no ENCODE download",
+ "verdict": "PASS_WITH_REPAIRS",
+ "blocking": [
+  "Fail-closed guard on reference coverage: if a bigWig's chromosome names do not match tiles.tsv ('1' vs 'chr1'), tile_track silently returns all-NaN; test_pair then returns rho NaN with p_pos = p_neg = 1/5001 (NaN null compares false), and label() quietly scores it as a failure (e.g. a dead heart_LV yields P1_ONLY/NOT_SUPPORTED instead of an error). Repair before freeze: normalise the chr prefix (try c and c without 'chr'), and assert each reference's n_finite after orientation meets a registered minimum (e.g. >= 50% of the 5,672 autosomal tiles) and every test_pair n >= a registered min_n, else abort with no label."
+ ],
+ "minor": [
+  "Consensus rank scale: rk() ranks each reference over its own finite set, so rank ranges differ by n_finite (orientation can drop whole chromosomes per reference), and np.nanmean averages over different reference subsets per tile. Use normalised ranks (rank/(n_finite+1)) and require >= 4 of 6 finite references per tile (or all 6); state it in the protocol. The effect is conservative (incomplete removal of the shared component pushes LV_specific toward positive / LEAK), so this is not blocking.",
+  "pyBigWig stats default exact=False reads zoom-level summaries for 500 kb intervals, so 'coverage' and 'mean' are approximate. Pass exact=True to both calls. Coverage semantics are otherwise right: type='coverage' is the fraction of bases in [s, e) with data, and the last-tile clamp e = min(s+500000, L[c]) computes that fraction over the clamped length, which is correct.",
+  "Replicate averaging: panel uses (r1+r2)/2 (NaN if either replicate is missing), while control/control.py used np.nanmean. Both fit 'mean of its two replicates'; pick one and state it. Plain mean is the stricter choice.",
+  "Seed index: names = 8 references + LV_specific, so LV_specific uses index 8 and GM12878_encode uses index 7. Deterministic, but the protocol says 'reference index'. Add the explicit ordering to the protocol.",
+  "fetch(): urlretrieve writes directly to dest, so an interrupted download leaves a partial file that is then skipped and hashed. Download to a .part file and rename it, and check the ENCODE md5sum when one is available. Close bw handles.",
+  "Interpretation: under the independent-baseline swaps, the null (delta = replicate noise) is independent of every reference. A global compartment-strength leak (mut = aT, a > 1) predicts LV_specific >= 0, and noise cannot produce a significant negative LV_specific. EROSION_SUPPORTED therefore needs evidence that neither leak nor noise yields, so the design is not biased toward it. One alternative is not separated, though: a negative adult-LV-specific component also fits a maturation delay (mutant less adult-cardiac), not only a shift toward non-cardiac states. Add this to disclosed_limits / claim_ceiling. Leak criterion 1 is weakened if the heart_LV tissue track is noisier than the cell-line tracks, because attenuation lowers heart_LV rho. That criterion is not the main discriminator (P2 is), but it should be disclosed.",
+  "Tests cover only label() at clear-cut values and orient(). Add cases for P1 at exactly 4 vs 5 of 6, NaN results, p at the threshold boundary, the consensus construction, and a tile_track check against a tiny synthetic bigWig (including the last-tile clamp and chromosome-name mismatch)."
+ ],
+ "checked_ok": [
+  "tiles.tsv is autosomes chr1-22 only (5,672 tiles), which matches 'all autosomes'",
+  "HOMER bedGraphs are 500 kb bins aligned to the tile grid, so the //500000 mapping is exact",
+  "orientation: per chromosome, sign-flip if rho < 0, NaN if |rho| < 0.2 or < 10 finite tiles",
+  "swaps A/B and their covariates (gc, tss_count, siScr_mCh + independent baseline); the consensus is added only for LV_specific",
+  "seed formula 20261001 + 10*i + j",
+  "P1 (>= 5 of 6, rho >= 0.05, p_pos <= 0.05/6, both swaps); P2 (rho <= -0.05, p_neg <= 0.01, both swaps); leak (either arm); precedence LEAK > EROSION > P1_ONLY > NOT_SUPPORTED, as registered"
+ ]
+}

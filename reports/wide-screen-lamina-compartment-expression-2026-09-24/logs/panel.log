@@ -1,0 +1,19 @@
+IMR-90          swapA rho +0.004 n 5187 p+ 0.5893 p- 0.4109
+IMR-90          swapB rho +0.015 n 5187 p+ 0.3047 p- 0.6955
+K562            swapA rho +0.072 n 5187 p+ 0.0002 p- 1.0000
+K562            swapB rho +0.091 n 5187 p+ 0.0002 p- 1.0000
+HepG2           swapA rho +0.088 n 5187 p+ 0.0002 p- 1.0000
+HepG2           swapB rho +0.098 n 5187 p+ 0.0002 p- 1.0000
+HCT116          swapA rho +0.090 n 4821 p+ 0.0002 p- 1.0000
+HCT116          swapB rho +0.104 n 4821 p+ 0.0002 p- 1.0000
+A549            swapA rho +0.046 n 4996 p+ 0.0010 p- 0.9992
+A549            swapB rho +0.059 n 4996 p+ 0.0004 p- 0.9998
+MCF-7           swapA rho +0.088 n 4360 p+ 0.0002 p- 1.0000
+MCF-7           swapB rho +0.085 n 4360 p+ 0.0002 p- 1.0000
+heart_LV        swapA rho +0.109 n 4805 p+ 0.0002 p- 1.0000
+heart_LV        swapB rho +0.112 n 4805 p+ 0.0002 p- 1.0000
+GM12878_encode  swapA rho +0.155 n 5187 p+ 0.0002 p- 1.0000
+GM12878_encode  swapB rho +0.131 n 5187 p+ 0.0002 p- 1.0000
+LV_specific     swapA rho +0.077 n 4805 p+ 0.0002 p- 1.0000
+LV_specific     swapB rho +0.075 n 4805 p+ 0.0004 p- 0.9998
+{"label": "LEAK_PATTERN", "P1": false, "P1_passing": ["K562", "HepG2", "HCT116", "MCF-7"], "P2": false, "leak": true}

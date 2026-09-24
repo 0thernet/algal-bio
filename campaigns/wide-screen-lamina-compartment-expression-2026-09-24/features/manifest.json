@@ -1,0 +1,71 @@
+{
+ "schema": "bio.wide-screen-features.v1",
+ "n_tiles": 5760,
+ "columns": [
+  "siScr_mCh",
+  "dlam_mCh",
+  "siScr_DNK",
+  "dlam_DNK",
+  "tss_count",
+  "pc1_cm_base",
+  "dpc1_cm_r225x",
+  "pc1_lcl_base",
+  "dpc1_lcl_ko",
+  "lfc_ipsc_silmna",
+  "n_genes_ipsc",
+  "lfc_cm_h222p",
+  "n_genes_cm",
+  "cpg_n",
+  "gap_frac",
+  "giemsa",
+  "arm_pos",
+  "gc"
+ ],
+ "inputs_sha256": {
+  "biology-compartment-2026-09-24/results/predictor/predictor.tsv": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+  "biology-compartment-2026-09-24/data/GSE126459/GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz": "d55de07bb3d53f2dab18a1db91cecafabbcdbed8aca1894cd9e349fd8db90639",
+  "biology-compartment-2026-09-24/data/GSE126459/GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz": "b1ef2fc4a34da0be0d4321d039d1449395ce9cd78d6d4a8bce10006feac36c62",
+  "biology-compartment-2026-09-24/data/GSE126459/GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz": "00aa53fb8c2dc173f0a63e418ef5dc17644a1e5dd8c30aee9be26bf1eb822c38",
+  "biology-compartment-2026-09-24/data/GSE126459/GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz": "49fac2772fcbb5953f14abae3dac5dfac4b761a5e3eb48cf70ba944d3ad27fc6",
+  "biology-compartment-2026-09-24/data/GSE126459/GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz": "063dcacc409f58fbb358b830c862164da5004affa0b26ce3490e8f0862af916d",
+  "biology-compartment-2026-09-24/data/GSE126459/GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz": "dec7df23367cddba61518cff4483332d0c8040c1ade1662225b5e9aba6fc2e15",
+  "biology-replication-2026-09-24/tools/hg38ToHg19.over.chain.gz": "14a712e8e147d9fc8e9d87d51977b46f6f8ddb93efbe5d0843d86b6205f587b1",
+  "biology-replication-2026-09-24/results/run-001/pc1/GSM9401860.pc1.bedGraph": "5a512e40aa50e40a4b01a6ce773b966f6ef7859d920c3e8a6ba90c3e9b22c79c",
+  "biology-replication-2026-09-24/results/run-001/pc1/GSM9401861.pc1.bedGraph": "76283aa299884c81a2336e2f4935edd8c0ac9d1b3893d0b108d1a61af8acb38a",
+  "biology-replication-2026-09-24/results/run-001/pc1/GSM9401862.pc1.bedGraph": "a43b2e1f9307ba49a765bd9e55134f59dcea210f11f095484fb244bde3586135",
+  "biology-replication-2026-09-24/results/run-001/pc1/GSM9401863.pc1.bedGraph": "18bf518ef85941fc63b508cea221710eb7247a29aa280e42b9399ba8c53c709a",
+  "biology-live-2026-09-24/data/hg38-ncbiRefSeqSelect.txt.gz": "c57ad06a75bf02c48a69ea233fa814e9f7d653b9b586d7f81435729cc1f49828",
+  "biology-live-2026-09-24/data/GSE300197_RNA.counts.txt.gz": "44652a669623089ae1600af79e917bd1bd706a163a589736de507b1bb377d02f",
+  "biology-live-2026-09-24/data/GSE304575_Raw_Counts_table.csv.gz": "bfd75fd16c8eeb222eb20d9da622fd00a53f125cddfc2106a328320386763ef3"
+ },
+ "finite_per_column": {
+  "siScr_mCh": 5236,
+  "dlam_mCh": 5236,
+  "siScr_DNK": 5236,
+  "dlam_DNK": 5236,
+  "tss_count": 5760,
+  "pc1_cm_base": 5337,
+  "dpc1_cm_r225x": 5336,
+  "pc1_lcl_base": 5362,
+  "dpc1_lcl_ko": 5362,
+  "lfc_ipsc_silmna": 2662,
+  "n_genes_ipsc": 5760,
+  "lfc_cm_h222p": 2532,
+  "n_genes_cm": 5760,
+  "cpg_n": 5760,
+  "gap_frac": 5760,
+  "giemsa": 5316,
+  "arm_pos": 5760,
+  "gc": 5544
+ },
+ "code_sha256": "018f74e52f3218a239ff365c9835338b436d664eff432647fc5265a5adf1aa9f",
+ "external": {
+  "code_sha256": "abb6c3a301a9c0747e3cecb68fc18a5d5dedef2b3d8e39914eee46525d47dd40",
+  "inputs_sha256": {
+   "cpgIslandExt.txt.gz": "2339f8bad0ec9993211287b319b8d59ddeff30a5010505f649817332ed8222f8",
+   "cytoBand.txt.gz": "e514e48b0a12a516fd5231b44241a20a282f290bdd6131cadcddc6276ee26082",
+   "gap.txt.gz": "c466135bf8553f007960b3bd7d747343d014143a0415c127d1452bbe484bf1c1"
+  },
+  "gc5Base_bytes": 1737853837
+ }
+}

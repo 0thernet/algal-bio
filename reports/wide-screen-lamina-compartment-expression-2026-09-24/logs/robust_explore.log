@@ -1,0 +1,20 @@
+H4 lcl mut1-c1 | c2                          rho +0.118 n  5171 p+ 0.001 p- 1.000
+H4 lcl mut1-c2 | c1                          rho +0.103 n  5171 p+ 0.001 p- 1.000
+H4 lcl mut2-c1 | c2                          rho +0.111 n  5171 p+ 0.001 p- 1.000
+H4 lcl mut2-c2 | c1                          rho +0.097 n  5171 p+ 0.001 p- 1.000
+H4 lcl placebo m1-m2 | c1                    rho +0.009 n  5170 p+ 0.300 p- 0.701
+H4 lcl (m-c1)|c2 cubic                       rho +0.136 n  5170 p+ 0.001 p- 1.000
+H4 lcl (m-c1)|c2 + other survivor            rho +0.128 n  5170 p+ 0.001 p- 1.000
+H4 lcl (m-c1)|c2 tertile1                    rho +0.125 n  1733 p+ 0.001 p- 1.000
+H4 lcl (m-c1)|c2 tertile2                    rho +0.160 n  1735 p+ 0.001 p- 1.000
+H4 lcl (m-c1)|c2 tertile3                    rho +0.096 n  1702 p+ 0.001 p- 1.000
+H5 gc mut1-c1 | c2                           rho +0.186 n  5188 p+ 0.001 p- 1.000
+H5 gc mut1-c2 | c1                           rho +0.166 n  5188 p+ 0.001 p- 1.000
+H5 gc mut2-c1 | c2                           rho +0.152 n  5188 p+ 0.001 p- 1.000
+H5 gc mut2-c2 | c1                           rho +0.146 n  5188 p+ 0.001 p- 1.000
+H5 gc placebo m1-m2 | c1                     rho +0.035 n  5187 p+ 0.019 p- 0.982
+H5 gc (m-c1)|c2 cubic                        rho +0.186 n  5187 p+ 0.001 p- 1.000
+H5 gc (m-c1)|c2 + other survivor             rho +0.151 n  5170 p+ 0.001 p- 1.000
+H5 gc (m-c1)|c2 tertile1                     rho +0.267 n  1742 p+ 0.001 p- 1.000
+H5 gc (m-c1)|c2 tertile2                     rho +0.199 n  1738 p+ 0.001 p- 1.000
+H5 gc (m-c1)|c2 tertile3                     rho +0.080 n  1707 p+ 0.001 p- 1.000

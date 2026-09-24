@@ -1,0 +1,14 @@
+raw        P_batch    rho -0.249 n 5320 p- 0.0002 p+ 1.0000 slope +0.041
+raw        P_all      rho -0.272 n 5164 p- 0.0002 p+ 1.0000 slope +0.031
+raw        PL_within  rho -0.061 n 5323 p- 0.1120 p+ 0.8882 slope +0.001
+raw        PL_cross   rho +0.035 n 5323 p- 0.3569 p+ 0.6433 slope -0.022
+raw        LBR_batch  rho +0.316 n 5300 p- 1.0000 p+ 0.0002 slope -0.400
+raw        DKO_batch  rho +0.267 n 5298 p- 1.0000 p+ 0.0002 slope -0.440
+scale_free P_batch    rho -0.253 n 5320 p- 0.0002 p+ 1.0000 slope -0.006
+scale_free P_all      rho -0.266 n 5164 p- 0.0002 p+ 1.0000 slope -0.008
+scale_free PL_within  rho -0.062 n 5323 p- 0.1050 p+ 0.8952 slope -0.003
+scale_free PL_cross   rho +0.036 n 5323 p- 0.3255 p+ 0.6747 slope +0.003
+scale_free LBR_batch  rho +0.326 n 5300 p- 1.0000 p+ 0.0002 slope -0.166
+scale_free DKO_batch  rho +0.280 n 5298 p- 1.0000 p+ 0.0002 slope -0.202
+diagnostics {"sd": {"WT_r1": 2.5139892293072834, "WT_r2": 2.5042931370296198, "WT_r3": 2.4510246658312886, "LMNAKO_r1": 2.642081542280208, "LMNAKO_r2": 2.571802454125895, "LBRKO_r3": 1.7326291035028176, "DKO_r2": 1.6851181109753879}, "replicate_spearman": {"WT_r1~WT_r2": 0.9890767078925788, "WT_r1~WT_r3": 0.9886805536402923, "WT_r2~WT_r3": 0.9915603628825063, "LMNAKO_r1~LMNAKO_r2": 0.982287728571329}}
+LABEL REPLICATED (raw REPLICATED / scale-free REPLICATED)

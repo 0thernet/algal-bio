@@ -1,0 +1,51 @@
+{
+ "schema": "bio.fresh-cohort-replication.v1",
+ "campaign_id": "gc-lamina-change-after-lmna-loss-k562-damid-2026-09-24",
+ "status": "registered before any GSE263012 file was downloaded or opened by this program",
+ "origin": "wide-screen pair gc ~ dlam_mCh (GSE300197 acute siLMNA, iPSC): confirmed on held-out even autosomes (rho -0.236) and survived the exploratory independent-baseline control (rho -0.242 / -0.248)",
+ "hypothesis": "after loss of lamin A/C, the change in lamin B1 contact is negatively related to GC content beyond baseline lamina contact and gene density: GC-rich regions lose lamina contact relative to AT-rich regions",
+ "cohort": "GSE263012, K562, LMNB1 pA-DamID log2(LMNB1 / Dam control) bigWigs at 25 kb, hg38 (per GEO; verified at run time: chr1 length must equal 248956422)",
+ "samples": {
+  "WT_r1": "GSM8183055_K562_r1_17_LMNB1-25kb.bw",
+  "WT_r2": "GSM8183056_K562_r2_17_LMNB1-25kb.bw",
+  "WT_r3": "GSM8183057_K562_r8_WT_1_LMNB1-25kb.bw",
+  "LMNAKO_r1": "GSM8183061_K562_r7_LMNA_14_LMNB1-25kb.bw",
+  "LMNAKO_r2": "GSM8183062_K562_r8_LMNA_14_LMNB1-25kb.bw",
+  "LBRKO_r3": "GSM8183060_K562_r8_LBR_1_LMNB1-25kb.bw",
+  "DKO_r2": "GSM8183064_K562_r8_LMNALBR_14_LMNB1-25kb.bw"
+ },
+ "url_template": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8183nnn/{gsm}/suppl/{file}",
+ "batches": "file names are K562_r{batch}_{clone}: WT is parental clone 17 (batches r1, r2, r8), LMNA KO is clone 14 (batches r7, r8); r8 holds WT_r3, LMNAKO_r2, LBRKO_r3 and DKO_r2; both placebos are cross-batch and calibrate cross-batch GC bias; no within-batch WT placebo exists",
+ "tiling": "hg38 500 kb tiles of features/tiles.tsv (autosomes); value = pyBigWig exact mean; NaN if exact coverage < 50%",
+ "predictor": "gc (features/tiles.tsv, UCSC gc5Base)",
+ "primary_contrasts": {
+  "P_batch": "delta = LMNAKO_r2 - WT_r3 (same batch r8); covariates tss_count and mean(WT_r1, WT_r2) as independent baseline",
+  "P_all": "delta = mean(LMNAKO_r1, LMNAKO_r2) - mean(WT_r1, WT_r2); covariates tss_count and WT_r3 as independent baseline"
+ },
+ "placebos": {
+  "PL_within": "delta = WT_r1 - WT_r2; covariates tss_count and WT_r3",
+  "PL_cross": "delta = WT_r3 - WT_r1; covariates tss_count and WT_r2"
+ },
+ "secondary_reported_only": {
+  "LBR_batch": "delta = LBRKO_r3 - WT_r3; covariates tss_count and mean(WT_r1, WT_r2)",
+  "DKO_batch": "delta = DKO_r2 - WT_r3; covariates tss_count and mean(WT_r1, WT_r2)"
+ },
+ "statistic": "rank-partial Spearman via code/screen.py test_pair, all autosomes, within-chromosome circular shift of gc (min shift 10 tiles), 5000 shifts, seed 20261010 + index in the order P_batch, P_all, PL_within, PL_cross, LBR_batch, DKO_batch",
+ "min_n_per_test": 3000,
+ "abort_rule": "any test with n < 3000 or non-finite rho, or a chr1 length mismatch, aborts with no label",
+ "labels": {
+  "REPLICATED": "both primaries rho <= -0.05 with one-sided negative p <= 0.01, and both placebos |rho| < 0.5 * mean |primary rho|",
+  "DIRECTION_ONLY": "both primaries pass but a placebo fails the size bound",
+  "OPPOSITE": "both primaries rho >= +0.05 with positive p <= 0.01",
+  "NOT_REPLICATED": "otherwise",
+  "final_rule": "the reported label is REPLICATED only if both the raw and the scale-free arms are REPLICATED; if raw is REPLICATED and scale-free is not, the label is NOT_ROBUST_TO_SCALE (reported as not replicated); otherwise the raw label, with the scale-free label reported beside it"
+ },
+ "no_spin": "any label other than REPLICATED is reported as not replicated in the first sentence",
+ "disclosed_limits": "different cell type (K562 leukaemia vs iPSC), chronic knockout vs acute siRNA, pA-DamID vs the GSE300197 assay; both LMNA KO replicates come from one KO clone (14) against one WT clone (17), so clonal drift cannot be separated from lamin A/C loss; GC-dependent bias between batches is addressed by the batch-matched primary and two cross-batch placebos; copy number largely cancels in log2(target/Dam control) from the same cells",
+ "claim_ceiling": "REPLICATED supports a cross-cohort, cross-assay association between GC content and lamina-contact change after lamin A/C loss, with a single KO clone; mechanism is not addressed; prior-art check follows",
+ "scale_free_arm": "every test is also run after z-scoring each tile track genome-wide (autosomal tiles, mean 0, SD 1) before differencing and averaging; seeds +100; guards against a KO-vs-WT dynamic-range difference, which would put (b-1) x true lamina into the delta and let GC predict it in the registered direction",
+ "diagnostics_reported": "per delta: OLS slope on its independent baseline; per track: autosomal SD; Spearman between replicate tracks",
+ "amendments": [
+  "pre-freeze review design/damid-review.json PASS_WITH_REPAIRS: batch description corrected, scale-free arm and diagnostics added, single-clone limit disclosed, freeze binds code"
+ ]
+}

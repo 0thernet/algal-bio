@@ -1,0 +1,14 @@
+{
+ "schema": "bio.damid-freeze.v1",
+ "frozen_utc": "2026-09-24T23:28:05.119559+00:00",
+ "before_any_GSE263012_download": true,
+ "sha256": {
+  "damid/protocol.json": "97c6e9c9e429e55044fb0c0f63c8fba04197fd6d057229858af4e0af41a60dfd",
+  "damid/damid.py": "a4f93599d1a0b545e402475b8354dbe7a82b2bf2560d4b3f2f6ee1cbd7103269",
+  "damid/test_damid.py": "f017b7965330a04bfbe89a4ba464b99064abd9ca8422cc4347825c7d41a206a2",
+  "design/damid-review.json": "078c9ad4605fe17f31d9511ccc2aa0cf73193a76f181a36813fce70db8d68164",
+  "panel/panel.py": "e9642096bd29c311b16774f58d343fec1d0310d7db57a34baeea21fa2951e7fb",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "features/tiles.tsv": "5a5c981a6fe7fba852cd08c2496ec09c2ea27f5c3605af5676a741709eb74cf5"
+ }
+}

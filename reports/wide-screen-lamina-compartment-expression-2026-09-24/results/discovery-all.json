@@ -1,0 +1,798 @@
+{
+ "schema": "bio.wide-screen-discovery-all.v1",
+ "all": [
+  {
+   "n": 2606,
+   "rho": 0.001212077140905475,
+   "p_neg": 0.16783216783216784,
+   "p_pos": 0.8331668331668332,
+   "null_sd": 0.023848883017964808,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "dlam_mCh",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2606,
+   "rho": 0.010503256899098272,
+   "p_neg": 0.6833166833166833,
+   "p_pos": 0.3176823176823177,
+   "null_sd": 0.028998516783342174,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_cm_base",
+   "outcome": "dlam_mCh",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2596,
+   "rho": -0.02995923295866171,
+   "p_neg": 0.061938061938061936,
+   "p_pos": 0.939060939060939,
+   "null_sd": 0.028213938785941972,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_lcl_base",
+   "outcome": "dlam_mCh",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": 0.020638745317731078,
+   "p_neg": 0.8021978021978022,
+   "p_pos": 0.19880119880119881,
+   "null_sd": 0.02785406167342336,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "lfc_cm_h222p",
+   "outcome": "dlam_mCh",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2606,
+   "rho": -0.03416552348692542,
+   "p_neg": 0.01898101898101898,
+   "p_pos": 0.9820179820179821,
+   "null_sd": 0.02522696565045606,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "cpg_n",
+   "outcome": "dlam_mCh",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 2563,
+   "rho": 0.027643190070762547,
+   "p_neg": 0.906093906093906,
+   "p_pos": 0.09490509490509491,
+   "null_sd": 0.02707219434187701,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "giemsa",
+   "outcome": "dlam_mCh",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2606,
+   "rho": 0.0726551321483054,
+   "p_neg": 0.955044955044955,
+   "p_pos": 0.04595404595404595,
+   "null_sd": 0.043465471444570705,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "arm_pos",
+   "outcome": "dlam_mCh",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2606,
+   "rho": -0.2506686893361972,
+   "p_neg": 0.000999000999000999,
+   "p_pos": 1.0,
+   "null_sd": 0.028696774241778546,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "dlam_mCh",
+   "sign": -1,
+   "selected": true
+  },
+  {
+   "n": 2605,
+   "rho": -0.09251002797101422,
+   "p_neg": 0.000999000999000999,
+   "p_pos": 1.0,
+   "null_sd": 0.03441142491956291,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base"
+   ],
+   "predictor": "siScr_mCh",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1,
+   "selected": true
+  },
+  {
+   "n": 2605,
+   "rho": 0.011163861254907958,
+   "p_neg": 0.09090909090909091,
+   "p_pos": 0.9100899100899101,
+   "null_sd": 0.03237668433512371,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "siScr_DNK",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2605,
+   "rho": 0.0840020546458984,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.03177306241661156,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 2595,
+   "rho": 0.1741752692579739,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.0356663699113579,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_lcl_base",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 2595,
+   "rho": -0.024672721744352526,
+   "p_neg": 0.3626373626373626,
+   "p_pos": 0.6383616383616384,
+   "null_sd": 0.02409273541964335,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "dpc1_lcl_ko",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1365,
+   "rho": -0.030182157363606136,
+   "p_neg": 0.3646353646353646,
+   "p_pos": 0.6363636363636364,
+   "null_sd": 0.025247215906826482,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "lfc_ipsc_silmna",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1307,
+   "rho": -0.048864319866652364,
+   "p_neg": 0.4085914085914086,
+   "p_pos": 0.5924075924075924,
+   "null_sd": 0.029050623989937862,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "lfc_cm_h222p",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 2605,
+   "rho": 0.03693729285597026,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.03145673389553286,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "cpg_n",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2562,
+   "rho": -0.06179018351125478,
+   "p_neg": 0.001998001998001998,
+   "p_pos": 0.999000999000999,
+   "null_sd": 0.031877338919856626,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "giemsa",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 2605,
+   "rho": 0.1300591492654777,
+   "p_neg": 0.998001998001998,
+   "p_pos": 0.002997002997002997,
+   "null_sd": 0.05623149734472307,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "arm_pos",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 2605,
+   "rho": 0.20486992770928672,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.03752196468021377,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 2596,
+   "rho": 0.0874629970976581,
+   "p_neg": 0.997002997002997,
+   "p_pos": 0.003996003996003996,
+   "null_sd": 0.024701388191406548,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "pc1_lcl_base"
+   ],
+   "predictor": "siScr_mCh",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 2596,
+   "rho": 0.04019724417895354,
+   "p_neg": 0.8681318681318682,
+   "p_pos": 0.13286713286713286,
+   "null_sd": 0.02488063414795869,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "siScr_DNK",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2596,
+   "rho": 0.047442222869791446,
+   "p_neg": 0.9180819180819181,
+   "p_pos": 0.08291708291708291,
+   "null_sd": 0.022939036250427425,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "tss_count",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2596,
+   "rho": 0.07555599603216841,
+   "p_neg": 0.998001998001998,
+   "p_pos": 0.002997002997002997,
+   "null_sd": 0.02700245151737718,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "pc1_cm_base",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1360,
+   "rho": 0.0033841418047251674,
+   "p_neg": 0.3966033966033966,
+   "p_pos": 0.6043956043956044,
+   "null_sd": 0.027070237513477934,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "lfc_ipsc_silmna",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1303,
+   "rho": 0.05228842167155774,
+   "p_neg": 0.9410589410589411,
+   "p_pos": 0.059940059940059943,
+   "null_sd": 0.026004835881700935,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "lfc_cm_h222p",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2596,
+   "rho": 0.03299303192412495,
+   "p_neg": 0.9040959040959041,
+   "p_pos": 0.0969030969030969,
+   "null_sd": 0.023837049272299914,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "cpg_n",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 2555,
+   "rho": -0.019349868781291312,
+   "p_neg": 0.20279720279720279,
+   "p_pos": 0.7982017982017982,
+   "null_sd": 0.02372976059561663,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "giemsa",
+   "outcome": "dpc1_lcl_ko",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 2596,
+   "rho": -0.039292948762360044,
+   "p_neg": 0.08391608391608392,
+   "p_pos": 0.9170829170829171,
+   "null_sd": 0.029161714269050024,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "arm_pos",
+   "outcome": "dpc1_lcl_ko",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 2596,
+   "rho": 0.046925300627495885,
+   "p_neg": 0.9050949050949051,
+   "p_pos": 0.0959040959040959,
+   "null_sd": 0.02715716468211935,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh",
+    "pc1_lcl_base"
+   ],
+   "predictor": "gc",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1366,
+   "rho": 0.16151833008009273,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.026150123812355007,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 1366,
+   "rho": -0.015147329835778198,
+   "p_neg": 0.2897102897102897,
+   "p_pos": 0.7112887112887113,
+   "null_sd": 0.02916827488190798,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_cm_base",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1360,
+   "rho": 0.026471238116970358,
+   "p_neg": 0.7922077922077922,
+   "p_pos": 0.2087912087912088,
+   "null_sd": 0.029027220796425817,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_lcl_base",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1289,
+   "rho": 0.034345204294334436,
+   "p_neg": 0.8801198801198801,
+   "p_pos": 0.12087912087912088,
+   "null_sd": 0.02838321665909813,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "lfc_cm_h222p",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1366,
+   "rho": -0.04652310783843769,
+   "p_neg": 0.04295704295704296,
+   "p_pos": 0.958041958041958,
+   "null_sd": 0.0274723380909415,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "cpg_n",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1354,
+   "rho": 0.005803568481212947,
+   "p_neg": 0.5904095904095904,
+   "p_pos": 0.41058941058941056,
+   "null_sd": 0.028489689582581496,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "giemsa",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1366,
+   "rho": -0.033899463565238395,
+   "p_neg": 0.08091908091908091,
+   "p_pos": 0.9200799200799201,
+   "null_sd": 0.030259281091636038,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "arm_pos",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1366,
+   "rho": -0.005524516011365407,
+   "p_neg": 0.3516483516483517,
+   "p_pos": 0.6493506493506493,
+   "null_sd": 0.028768723456376374,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": 0.0530951554122784,
+   "p_neg": 0.929070929070929,
+   "p_pos": 0.07192807192807193,
+   "null_sd": 0.02891489116924693,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base"
+   ],
+   "predictor": "siScr_mCh",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": -0.02840434376837866,
+   "p_neg": 0.0999000999000999,
+   "p_pos": 0.9010989010989011,
+   "null_sd": 0.028837659170803203,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "siScr_DNK",
+   "outcome": "lfc_cm_h222p",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": -0.007993665615005962,
+   "p_neg": 0.23876123876123875,
+   "p_pos": 0.7622377622377622,
+   "null_sd": 0.027213795091293114,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "dlam_DNK",
+   "outcome": "lfc_cm_h222p",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": 0.09759306058428974,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.026510531017144057,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "selected": true
+  },
+  {
+   "n": 1308,
+   "rho": -0.013861803514978613,
+   "p_neg": 0.4125874125874126,
+   "p_pos": 0.5884115884115884,
+   "null_sd": 0.028353940255030893,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_cm_base",
+   "outcome": "lfc_cm_h222p",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1303,
+   "rho": -0.02597350570095431,
+   "p_neg": 0.15984015984015984,
+   "p_pos": 0.8411588411588412,
+   "null_sd": 0.02859122514530434,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_lcl_base",
+   "outcome": "lfc_cm_h222p",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": 0.017672258260413767,
+   "p_neg": 0.4935064935064935,
+   "p_pos": 0.5074925074925075,
+   "null_sd": 0.02659748234524894,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "cpg_n",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1296,
+   "rho": 0.016328289995073533,
+   "p_neg": 0.7992007992007992,
+   "p_pos": 0.2017982017982018,
+   "null_sd": 0.028319027272021683,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "giemsa",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": -0.01279791875433996,
+   "p_neg": 0.27372627372627373,
+   "p_pos": 0.7272727272727273,
+   "null_sd": 0.026941517673361517,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "arm_pos",
+   "outcome": "lfc_cm_h222p",
+   "sign": -1,
+   "selected": false
+  },
+  {
+   "n": 1308,
+   "rho": 0.1599676587175294,
+   "p_neg": 1.0,
+   "p_pos": 0.000999000999000999,
+   "null_sd": 0.028238766766313605,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "selected": true
+  }
+ ]
+}

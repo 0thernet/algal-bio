@@ -1,0 +1,180 @@
+{
+ "schema": "bio.wide-screen-confirmation.v1",
+ "survivors_sha256": "de59a3dba3185b3767ae1bda97eb22ecadf78c8daa923203facc21a0b6ea711d",
+ "bonferroni_k": 10,
+ "results": [
+  {
+   "n": 2585,
+   "rho": -0.23604435077641284,
+   "p_neg": 0.0001999600079984003,
+   "p_pos": 1.0,
+   "null_sd": 0.025729758924643204,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "dlam_mCh",
+   "sign": -1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  },
+  {
+   "n": 2585,
+   "rho": -0.20230175661050176,
+   "p_neg": 0.0001999600079984003,
+   "p_pos": 1.0,
+   "null_sd": 0.030630819725830122,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base"
+   ],
+   "predictor": "siScr_mCh",
+   "outcome": "dpc1_cm_r225x",
+   "sign": -1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  },
+  {
+   "n": 2585,
+   "rho": 0.11565304733847687,
+   "p_neg": 1.0,
+   "p_pos": 0.0001999600079984003,
+   "null_sd": 0.024865809527882664,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  },
+  {
+   "n": 2578,
+   "rho": 0.11060863276349442,
+   "p_neg": 1.0,
+   "p_pos": 0.0001999600079984003,
+   "null_sd": 0.03306824891129272,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "pc1_lcl_base",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  },
+  {
+   "n": 2585,
+   "rho": 0.030187375197764325,
+   "p_neg": 0.6922615476904619,
+   "p_pos": 0.3079384123175365,
+   "null_sd": 0.06652101003736265,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "arm_pos",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "p_directional": 0.3079384123175365,
+   "confirmed": false
+  },
+  {
+   "n": 2585,
+   "rho": 0.24454689013265746,
+   "p_neg": 1.0,
+   "p_pos": 0.0001999600079984003,
+   "null_sd": 0.03806397930016845,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "dpc1_cm_r225x",
+   "sign": 1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  },
+  {
+   "n": 2578,
+   "rho": -0.013902988591677191,
+   "p_neg": 0.17236552689462106,
+   "p_pos": 0.8278344331133773,
+   "null_sd": 0.023955157697712535,
+   "covariates": [
+    "gc",
+    "tss_count",
+    "pc1_cm_base",
+    "pc1_lcl_base"
+   ],
+   "predictor": "siScr_mCh",
+   "outcome": "dpc1_lcl_ko",
+   "sign": 1,
+   "p_directional": 0.8278344331133773,
+   "confirmed": false
+  },
+  {
+   "n": 1189,
+   "rho": 0.13660011899657493,
+   "p_neg": 1.0,
+   "p_pos": 0.0001999600079984003,
+   "null_sd": 0.027272991053994944,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "lfc_ipsc_silmna",
+   "sign": 1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  },
+  {
+   "n": 1131,
+   "rho": 0.08364108751676363,
+   "p_neg": 0.9912017596480703,
+   "p_pos": 0.008998200359928014,
+   "null_sd": 0.03176192802245608,
+   "covariates": [
+    "gc",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "tss_count",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "p_directional": 0.008998200359928014,
+   "confirmed": false
+  },
+  {
+   "n": 1131,
+   "rho": 0.27311413610164814,
+   "p_neg": 1.0,
+   "p_pos": 0.0001999600079984003,
+   "null_sd": 0.03474309144373006,
+   "covariates": [
+    "tss_count",
+    "pc1_cm_base",
+    "siScr_mCh"
+   ],
+   "predictor": "gc",
+   "outcome": "lfc_cm_h222p",
+   "sign": 1,
+   "p_directional": 0.0001999600079984003,
+   "confirmed": true
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "freeze_sha256": "ff3a86f6a4fcfda9dc1ae31d907a6560b402a4451ece878f25db8eea3959bf7c",
+ "files": {
+  "IMR-90": {
+   "acc": "ENCFF547NRM",
+   "bytes": 1341582,
+   "sha256": "e0cd7024d3e8f3c0ee6af604763d8bf4dbc35dd0d54998f175d4fc70f3f8e53f"
+  },
+  "K562": {
+   "acc": "ENCFF456BBV",
+   "bytes": 1377911,
+   "sha256": "d408c376645dcdf7a319a018199111e1a824c6a802fed3b1fe772d873049482f"
+  },
+  "HepG2": {
+   "acc": "ENCFF299NFD",
+   "bytes": 1346947,
+   "sha256": "3ea4f808253784eb71a7f102a939d73b2521b24fbc0332ca8d789cdbab540102"
+  },
+  "HCT116": {
+   "acc": "ENCFF442FIA",
+   "bytes": 2544185,
+   "sha256": "b05d9304d19e09d79f5a87a9274b0b4fd165d208899d1ac4864bd78ccee5b09c"
+  },
+  "A549": {
+   "acc": "ENCFF575RNT",
+   "bytes": 1265427,
+   "sha256": "0dfbd3d8092c9439a55b646a352ad185e0d7d15788b3c220436b02c22b34fb92"
+  },
+  "MCF-7": {
+   "acc": "ENCFF922MKI",
+   "bytes": 2378136,
+   "sha256": "8e5dcef6e77c9c46b19ed2bb1d8f1eeb1be6809756a4969a0322df1666e8e2ff"
+  },
+  "heart_LV": {
+   "acc": "ENCFF835JWK",
+   "bytes": 1358529,
+   "sha256": "acd08a638290244bcccb9aedd4e97f6add8b2dcebd5a416bae8df22bdecdc46c"
+  },
+  "GM12878_encode": {
+   "acc": "ENCFF661LPK",
+   "bytes": 2638237,
+   "sha256": "0058e1b299f747181434a2058cb56fda86fedf4c95d823ff574f650a4c511205"
+  }
+ }
+}
