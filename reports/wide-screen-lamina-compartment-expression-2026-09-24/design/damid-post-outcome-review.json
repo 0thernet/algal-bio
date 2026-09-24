@@ -1,0 +1,312 @@
+{
+ "schema": "bio.post-outcome-review.v1",
+ "target": "damid/ (GSE263012 replication)",
+ "reviewed": "2026-09-24",
+ "verdict": "CONFIRMED_WITH_CAVEATS",
+ "findings": [
+  "Integrity: all 7 sha256 values in damid/freeze.json match the current files; intake.json freeze_sha256 (cc86684b...) matches the current freeze.json; all 7 data-file hashes and byte counts match intake.json.",
+  "Ordering: frozen_utc 2026-09-24T23:28:05Z = 19:28:05 EDT; every damid/data/*.bw has birth time 19:28:07-19:28:12 and mtime 19:28:08-19:28:12, i.e. after the freeze. Evidence is local filesystem timestamps only (no external timestamp), a 2-7 s gap consistent with freeze-then-fetch in one session.",
+  "Label: raw primaries rho -0.249/-0.272, p_neg 0.0002 each; bound 0.5*mean|rho| = 0.130; placebos |rho| 0.061 and 0.035 < bound -> REPLICATED. Scale-free: -0.253/-0.266, bound 0.130, placebos 0.062/0.036 -> REPLICATED. final_rule: both arms REPLICATED -> REPLICATED. label() and final_rule in damid.py implement the protocol text exactly.",
+  "Reproduction: damid.py run executed in a scratch copy of the tree (original result.json untouched, sha256 efa3b8a6... unchanged); stdout is identical to logs/damid.log and the regenerated result.json is byte-identical to damid/results/result.json.",
+  "Caveat (design, already disclosed): P_batch and P_all are not independent replications; both rest on the same LMNA KO clone 14 vs WT clone 17 and share LMNAKO_r2. Clonal drift cannot be excluded; the claim is one clone pair in one cell line.",
+  "Caveat (null): the within-chromosome shift null is not centred at zero for the placebos (null means -0.038 PL_within, +0.042 PL_cross) because chromosome-level GC/delta structure survives the shift. Primaries' null means are ~0 (-0.010, +0.009), so primary p-values and the label are unaffected, but placebo p-values should not be read against zero.",
+  "Caveat (interpretation): LBR KO and DKO vs WT give the opposite sign (+0.27 to +0.33) together with compressed dynamic range (SD 1.69-1.73 vs 2.45-2.51) and baseline slopes of -0.40/-0.44, showing that GC~delta is very sensitive to range differences. LMNA KO SD is ~3-8% above WT, the direction that would push GC rho negative; the scale-free arm (rho unchanged) and near-zero baseline slopes argue against this driving the result, but z-scoring removes only a global linear scale difference, not GC-dependent (e.g. LAD-strength-nonlinear) range changes.",
+  "Supporting (exploratory): DKO_r2 - LBRKO_r3 (same batch r8, i.e. LMNA loss on an LBR-null background) gives rho -0.145 (p 0.001), same sign as the registered primaries, although the lineage of the LBR KO clone relative to clone 14 is not established.",
+  "No flaw found that should change the label. The report's REPLICATED statement and disclosed limits are accurate; recommend adding the shared-clone non-independence of the two primaries and the placebo null offset to the report."
+ ],
+ "probes": {
+  "note": "exploratory, 1000 shifts, seeds 777+index (per-chrom 900+j); do not change the label",
+  "a_exclude_chr22_15-25Mb_chr9_125-138Mb": {
+   "P_batch": {
+    "n": 5278,
+    "rho": -0.253,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0204
+   },
+   "P_all": {
+    "n": 5124,
+    "rho": -0.2774,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0218
+   },
+   "PL_within": {
+    "n": 5281,
+    "rho": -0.056,
+    "p_neg": 0.1628,
+    "p_pos": 0.8382,
+    "null_sd": 0.0181
+   },
+   "PL_cross": {
+    "n": 5281,
+    "rho": 0.0277,
+    "p_neg": 0.2398,
+    "p_pos": 0.7612,
+    "null_sd": 0.0199
+   },
+   "tiles_excluded": 46
+  },
+  "a_note": "tiles are autosomes only (chrX already absent); 46 amplicon-overlapping tiles removed; primaries -0.253/-0.277, placebos -0.056/+0.028",
+  "b_cpg_n_covariate": {
+   "P_batch": {
+    "n": 5320,
+    "rho": -0.2507,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0202
+   },
+   "P_all": {
+    "n": 5164,
+    "rho": -0.2999,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0221
+   },
+   "PL_within": {
+    "n": 5323,
+    "rho": 0.0008,
+    "p_neg": 0.972,
+    "p_pos": 0.029,
+    "null_sd": 0.0183
+   },
+   "PL_cross": {
+    "n": 5323,
+    "rho": -0.0282,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.02
+   }
+  },
+  "b_note": "primaries -0.251/-0.300; placebos +0.001/-0.028 (placebo p-values reflect the off-centre null)",
+  "c_gc_median_split": {
+   "P_batch": {
+    "n": 5320,
+    "rho": -0.2373,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0197
+   },
+   "P_all": {
+    "n": 5164,
+    "rho": -0.2495,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0217
+   },
+   "PL_within": {
+    "n": 5323,
+    "rho": 0.0119,
+    "p_neg": 0.982,
+    "p_pos": 0.019,
+    "null_sd": 0.0181
+   },
+   "PL_cross": {
+    "n": 5323,
+    "rho": 0.0212,
+    "p_neg": 0.3047,
+    "p_pos": 0.6963,
+    "null_sd": 0.0195
+   }
+  },
+  "c_note": "binary GC-rich vs AT-rich: primaries -0.237/-0.250, placebos +0.012/+0.021",
+  "d_per_chrom_P_all": {
+   "per_chrom": {
+    "chr1": {
+     "n": 438,
+     "rho": -0.352,
+     "p_neg": 0.001
+    },
+    "chr2": {
+     "n": 465,
+     "rho": -0.385,
+     "p_neg": 0.001
+    },
+    "chr3": {
+     "n": 368,
+     "rho": -0.382,
+     "p_neg": 0.001
+    },
+    "chr4": {
+     "n": 364,
+     "rho": -0.422,
+     "p_neg": 0.001
+    },
+    "chr5": {
+     "n": 349,
+     "rho": -0.461,
+     "p_neg": 0.001
+    },
+    "chr6": {
+     "n": 335,
+     "rho": -0.43,
+     "p_neg": 0.001
+    },
+    "chr7": {
+     "n": 305,
+     "rho": -0.227,
+     "p_neg": 0.009
+    },
+    "chr8": {
+     "n": 280,
+     "rho": -0.245,
+     "p_neg": 0.001
+    },
+    "chr9": {
+     "n": 191,
+     "rho": -0.149,
+     "p_neg": 0.1249
+    },
+    "chr10": {
+     "n": 255,
+     "rho": -0.269,
+     "p_neg": 0.001
+    },
+    "chr11": {
+     "n": 258,
+     "rho": -0.246,
+     "p_neg": 0.001
+    },
+    "chr12": {
+     "n": 259,
+     "rho": -0.245,
+     "p_neg": 0.003
+    },
+    "chr13": {
+     "n": 168,
+     "rho": -0.36,
+     "p_neg": 0.001
+    },
+    "chr14": {
+     "n": 158,
+     "rho": -0.388,
+     "p_neg": 0.001
+    },
+    "chr15": {
+     "n": 154,
+     "rho": -0.071,
+     "p_neg": 0.2817
+    },
+    "chr16": {
+     "n": 151,
+     "rho": -0.027,
+     "p_neg": 0.4835
+    },
+    "chr17": {
+     "n": 157,
+     "rho": 0.161,
+     "p_neg": 0.965
+    },
+    "chr18": {
+     "n": 147,
+     "rho": -0.255,
+     "p_neg": 0.001
+    },
+    "chr19": {
+     "n": 111,
+     "rho": 0.094,
+     "p_neg": 0.8442
+    },
+    "chr20": {
+     "n": 122,
+     "rho": -0.037,
+     "p_neg": 0.3546
+    },
+    "chr21": {
+     "n": 65,
+     "rho": 0.051,
+     "p_neg": 0.3277
+    },
+    "chr22": {
+     "n": 64,
+     "rho": 0.082,
+     "p_neg": 0.7752
+    }
+   },
+   "n_negative": 18,
+   "n_negative_p_le_0.05": 14,
+   "n_chrom": 22
+  },
+  "d_note": "18 of 22 autosomes negative, 14 with one-sided p <= 0.05",
+  "e_cubic_rank_baseline_extra": {
+   "P_batch": {
+    "n": 5320,
+    "rho": -0.303,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0217
+   },
+   "P_all": {
+    "n": 5164,
+    "rho": -0.2805,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0226
+   },
+   "PL_within": {
+    "n": 5323,
+    "rho": -0.0911,
+    "p_neg": 0.001,
+    "p_pos": 1.0,
+    "null_sd": 0.0191
+   },
+   "PL_cross": {
+    "n": 5323,
+    "rho": 0.0415,
+    "p_neg": 0.7023,
+    "p_pos": 0.2987,
+    "null_sd": 0.0205
+   }
+  },
+  "e_note": "quadratic+cubic rank-baseline terms added: primaries -0.303/-0.281; PL_within -0.091 (still < 0.13 bound)",
+  "f_DKO_minus_LBRKO_extra": {
+   "n": 5292,
+   "rho": -0.1449,
+   "p_neg": 0.001,
+   "p_pos": 1.0,
+   "null_sd": 0.0258
+  },
+  "shift_null_means": {
+   "registered:P_batch": {
+    "obs": -0.2486,
+    "null_mean": -0.0095,
+    "null_sd": 0.0205
+   },
+   "registered:P_all": {
+    "obs": -0.2715,
+    "null_mean": 0.0092,
+    "null_sd": 0.0231
+   },
+   "registered:PL_within": {
+    "obs": -0.0615,
+    "null_mean": -0.038,
+    "null_sd": 0.0183
+   },
+   "registered:PL_cross": {
+    "obs": 0.0345,
+    "null_mean": 0.0419,
+    "null_sd": 0.0205
+   },
+   "cpg:P_batch": {
+    "obs": -0.2507,
+    "null_mean": -0.0083,
+    "null_sd": 0.0203
+   },
+   "cpg:P_all": {
+    "obs": -0.2999,
+    "null_mean": 0.0092,
+    "null_sd": 0.0231
+   },
+   "cpg:PL_within": {
+    "obs": 0.0008,
+    "null_mean": -0.0341,
+    "null_sd": 0.0182
+   },
+   "cpg:PL_cross": {
+    "obs": -0.0282,
+    "null_mean": 0.0384,
+    "null_sd": 0.0206
+   }
+  }
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "schema": "bio.wide-screen-freeze.v2",
+ "stage": "pre-discovery",
+ "frozen_utc": "2026-09-24T22:54:12.760393+00:00",
+ "sha256": {
+  "registration/config.json": "f58ae1a8a35bafeac90ad40a1c26824bb9e961f447509d3990fcf0a0073eeb25",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "code/test_screen.py": "05a6309f338d408844d7c8c116640d654fcca4cd2206888a105259302978b48c",
+  "code/build_features.py": "018f74e52f3218a239ff365c9835338b436d664eff432647fc5265a5adf1aa9f",
+  "code/add_external.py": "abb6c3a301a9c0747e3cecb68fc18a5d5dedef2b3d8e39914eee46525d47dd40",
+  "features/tiles.tsv": "5a5c981a6fe7fba852cd08c2496ec09c2ea27f5c3605af5676a741709eb74cf5",
+  "features/tiles.base.tsv": "81a7d34c9668260015a0f14a7d50b4c95450359cc2784c76a927e331afdc64eb",
+  "features/manifest.json": "c17bd6b1e50f5660ef88d37c3ab6939c57a26bdac9654d4ae2110380d6e04bc1",
+  "design/plan.md": "a37fd3b6b590272da4922733214cbf3d935c65ebc08d1513901cc14a8d160636",
+  "design/pre-discovery-review.json": "8bec25aa401faea3f2ad209b6e384f514cbc0d337fd23e077ddfaa9ece1f26fb",
+  "design/repair-review.json": "00800fe98a2405018717bf7addbdb771a120eb2eab1e047b925b03c9f0f0f830",
+  "registration/freeze.py": "292df28e71e08612ff214aaa4bfb45df2d25589932489e964c979077e5082c93",
+  "data/external/cpgIslandExt.sql": "09dc04a0e26089eb1a0ff8244b7c62d0a4d8ef3b04d8b859de38335dcd44f469",
+  "data/external/cpgIslandExt.txt.gz": "2339f8bad0ec9993211287b319b8d59ddeff30a5010505f649817332ed8222f8",
+  "data/external/cytoBand.sql": "8edeae3ddd512cf99f9200093cc986c247d264b90692bfb2ef2f1842b20dfa85",
+  "data/external/cytoBand.txt.gz": "e514e48b0a12a516fd5231b44241a20a282f290bdd6131cadcddc6276ee26082",
+  "data/external/gap.sql": "b4b5908a8b23c616161ab69f6110f58fc0bba8ab9bb0ea704da74cb6eca6548b",
+  "data/external/gap.txt.gz": "c466135bf8553f007960b3bd7d747343d014143a0415c127d1452bbe484bf1c1",
+  "data/external/hg38.gc5Base.bw": "698f443e6959cb354570faee5782d4b33aa8a9e052701cda838a91079818be7c"
+ },
+ "python": "3.12.14",
+ "numpy": "2.3.3",
+ "scipy": "1.16.2",
+ "repairs_after_review": "blocker (baseline PC1 covariate for each KO-minus-WT delta) and minors (unordered exclusions, 10-tile minimum shift, all-pairs stats in a separate file, confirm hash checks, wider freeze binding, 6 new tests) applied after the review and verified by the 11-test suite; an independent repair review (design/repair-review.json) returned PASS with no blocking items; its minors (confirm re-checks the screen.py hash; freeze binds itself and the repair review) were applied before this freeze"
+}

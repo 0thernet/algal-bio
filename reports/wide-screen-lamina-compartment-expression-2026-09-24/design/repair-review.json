@@ -1,0 +1,15 @@
+{
+ "schema": "bio.wide-screen-repair-review.v1",
+ "reviewed_utc": "2026-09-24",
+ "verdict": "PASS",
+ "blocking": [],
+ "minor": [
+  "confirm checks the config, features and survivor hashes but not code/screen.py. freeze.py survivors re-checks the pre-discovery hashes, but only when it runs. A code edit between the survivor freeze and confirm would go undetected. Consider re-checking freeze-pre-discovery.json's code hashes inside confirm, or make that re-check an explicit run step.",
+  "freeze.py pre-discovery does not hash registration/freeze.py itself or design/repair-review.json. Add both to the file list if this review should be bound.",
+  "freeze.py's repairs_after_review string says the repairs 'are not re-reviewed before discovery'. That is stale now that this review exists; update it before freezing.",
+  "The confirm freeze check compares the --survivors file against the key 'results/discovery.json' in <config dir>/freeze-survivors.json. It is correct for the registered layout (registration/config.json, results/discovery.json). If the file is missing, the run fails closed with FileNotFoundError rather than a clear message.",
+  "No synthetic test targets the blocker scenario directly (Y = s*Z + noise, X correlated with Z, extra covariate). Coverage comes from test_pair_covariates_extra_and_self_drop plus test_covariate_removes_confounded_pair. That is adequate, but a direct test would be cleaner."
+ ],
+ "pair_covariates_checked": 47,
+ "notes": "11/11 tests pass. All 47 pairs from pairs_from(config) were listed with pair_covariates. All 11 pairs with dpc1_lcl_ko carry pc1_lcl_base, and all 11 pairs with dpc1_cm_r225x carry pc1_cm_base; pc1_cm_base/dpc1_cm_r225x and pc1_lcl_base/dpc1_lcl_ko are same-source excluded. No excluded pair appears in the pair list (frozenset match). Every referenced column exists in the tiles.tsv header; only the header was read. shift_within draws offsets in [10, L-10] when L > 20 and in [1, L-1] when 2 < L <= 20, so it never returns the identity. The discovery -all file is written next to --out as discovery-all.json, which matches freeze.py survivors. Stdout prints counts only. Leakage: discovery masks to odd autosomes; confirm reads only the hash-verified survivor list and masks to even autosomes. The -all file holds only odd-half statistics. freeze.py fails closed when results exist and when freeze outputs already exist. No discovery or confirm run was made on real features, and no feature values were read."
+}

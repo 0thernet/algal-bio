@@ -1,0 +1,27 @@
+{
+ "schema": "bio.pr-review.v1",
+ "target": "0thernet/algal-bio#7 research/wide-screen-gc-lamina-20260924",
+ "reviewed": "2026-09-24",
+ "reviewer": "independent agent review, read-only",
+ "verdict": "APPROVE_WITH_REPAIRS",
+ "blocking": [],
+ "repairs": [
+  "Report, post-outcome review paragraph: '(so the gradient is not the CpG-density signal already reported)' overclaims. The probe adjusted for CpG-island COUNT, whereas Shen et al. 2026 report CpG DENSITY across LAD bodies. Reword to e.g. 'the gradient survives adjustment for CpG-island count; CpG density itself was not tested as a covariate'.",
+  "Report and PR body: the cubic-baseline probe is cited as support (-0.303 / -0.281) but its within-batch placebo also rose to -0.091 (p_neg 0.001 against the off-centre null), still under the 0.13 bound. Disclose this next to the cubic figure."
+ ],
+ "minor": [
+  "PR body omits two caveats from the post-outcome review that the report carries: the two primaries share KO replicate LMNAKO_r2 and are not independent evidence, and GC-versus-change is sensitive to GC-dependent dynamic-range differences, which z-scoring does not remove. Add one line to the Limits bullet.",
+  "Prior-art framing is fair and matches design/prior-art-gc-lamina.md, which is published byte-identical to the private copy. It should stay published. The report does not mention the note's open gaps: Solovei 2013 body text and the Cell Reports 2025 lamin-KO paper were paywalled, T1/T2 is unverified, and GEO pages were not read directly. Add 'prior-art search incomplete; see open gaps'.",
+  "The quote 'little change' refers to overall magnitude. A rank gradient of about -0.25 is compatible with a small absolute change, and the report gives no absolute delta size. Consider saying 'contrasts in emphasis' rather than implying contradiction.",
+  "Report structure: '## Record, in the order it happened' is an empty heading followed by sibling ## sections. The 'Current reading' (erosion candidate) section precedes its rejection with no 'superseded, see panel test' marker.",
+  "code/build_features.py redaction leaves '<home>/Documents/research' (the path had no trailing slash, so the <research-root> rule did not match). This is harmless but inconsistent.",
+  "Manifest 'bytes' records the original size, so the 5 redacted files differ in size from their published copies (sha256_published matches). Consider adding bytes_published."
+ ],
+ "checks_performed": {
+  "claims": "Every number in the PR body and report summary matches damid/results/result.json, results/confirmation.json and discovery-all.json (10 survivors), control/result.json (H1-H5), panel/results/result.json (LEAK_PATTERN, P1 4/6, LV +0.109/+0.112, LV_specific +0.077/+0.075) and the post-outcome probes (amplicon -0.253/-0.277, CpG -0.251/-0.300, cubic -0.303/-0.281, 18/22 negative with 14 at p<=0.05, DKO-LBR -0.145). Placebo bound 0.130 is correct, as is the label REPLICATED in both arms. Negative results are disclosed, and LEAK_PATTERN is stated as not supported first.",
+  "personal_data": "Grep for <home-prefix>/, <home-root>/, @, token, key, secret and pm.me is clean. Hits are ENCODE @@download URLs, matrix '@' operators and code variable names. The only email is benzguo@gmail.com in commit metadata.",
+  "manifest": "All 49 entries match sha256_published, not just a sample of 5. Every file in the PR is in the manifest except the manifest itself. Redacted originals match the frozen hashes, e.g. panel.py e9642096.",
+  "freezes": "damid/freeze.json sha256 cc86684b equals intake.freeze_sha256. All 7 bound hashes match (panel.py via the original). frozen_utc 23:28:05 precedes data births at 23:28:07-12 (local timestamps only). The panel freeze report.md hash e1aba0f2 equals sha256 of panel/report.at-panel-freeze.md. The panel freeze at 23:16:53 precedes the damid freeze.",
+  "required_checks": "'offline' passes (make check, make reproduce-fixture). main has no branch protection. CI does not run the campaign's own tests."
+ }
+}

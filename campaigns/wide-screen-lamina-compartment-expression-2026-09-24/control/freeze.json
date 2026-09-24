@@ -1,0 +1,10 @@
+{
+ "frozen_utc": "2026-09-24T22:56:57.640015+00:00",
+ "before_any_control_statistic": true,
+ "sha256": {
+  "control/protocol.json": "02410fa4bf37aaab88563a5834c4756983621514b1a6f2b07dd9e1e25c616dc4",
+  "control/control.py": "06982cf20e33fbbfae6f6a987cd44863d52a1b5cc2a846d7ad2ac8df20ae59fb",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "features/tiles.tsv": "5a5c981a6fe7fba852cd08c2496ec09c2ea27f5c3605af5676a741709eb74cf5"
+ }
+}

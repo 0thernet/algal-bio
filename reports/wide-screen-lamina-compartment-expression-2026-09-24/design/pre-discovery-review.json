@@ -1,0 +1,23 @@
+{
+ "schema": "bio.wide-screen-pre-discovery-review.v1",
+ "reviewed_utc": "2026-09-24",
+ "verdict": "PASS_WITH_REPAIRS",
+ "blocking": [
+  "Covariate set does not include the LCL outcome's own baseline. dpc1_lcl_ko = ko - wt with wt = pc1_lcl_base, but pc1_lcl_base is not a covariate, and pc1_cm_base is dropped when it is X. Any global change in compartment strength (KO eigenvector amplitude != WT) makes dpc1_lcl_ko track -wt, so every architecture-linked predictor (pc1_cm_base, cpg_n, giemsa, tss_count, lamina) can 'confirm' on even chromosomes for a trivial scaling reason. That contradicts covariate_note ('change beyond baseline genome architecture'). Repair: add pc1_lcl_base as a covariate for pairs whose Y (or X) is dpc1_lcl_ko, in config and in screen.py, and add a synthetic test where Y = s*Z + noise and X correlates with Z, asserting that the partial rho is near 0. dpc1_cm_r225x is already adjusted for pc1_cm_base, except in pairs where pc1_cm_base is X (excluded same-source) and in the dlam_mCh/siScr_mCh pairs, which are fine."
+ ],
+ "minor": [
+  "discovery.json 'all' holds rho and p for every pair; stdout prints counts only. Run discovery and 'freeze.py survivors' back to back without opening discovery.json, or write 'all' to a separate file opened only after the survivor freeze.",
+  "confirm mode does not check that config, features, code and survivors match freeze-pre-discovery.json and freeze-survivors.json. Add a sha check, or make it an explicit run step, before confirm.",
+  "freeze.py pre-discovery does not bind this review, features/tiles.base.tsv, data/external/* (gc5Base.bw is recorded only by size) or the Python/numpy/scipy versions. The survivors stage does not re-verify that the pre-discovery hashes still match.",
+  "Discovery p = min(p_neg, p_pos) with no doubling, so the effective two-sided selection alpha is 0.02. That is acceptable for selection, but record it as intended.",
+  "The circular shift allows offsets of 1 tile. Near-identity shifts make the null conservative (they cost power; they do not inflate false positives). Consider a minimum offset of about 10 tiles.",
+  "Complete-case filtering collapses NaN gaps before the shift. The shift is over the remaining tiles, not the genomic ring. This is acceptable, but document it.",
+  "The (lfc_cm_h222p, lfc_ipsc_silmna) pair and other lfc pairs may fall below min_n=800 in one half (each lfc has about 2.6k finite tiles genome-wide). That fails silently. Per-pair n is recorded, so no change is needed; note it in the report.",
+  "lfc outcomes have no baseline-expression covariate. A pseudocount of 1 CPM makes the tile LFC depend on expression level. This is partly absorbed by tss_count, gc and pc1_cm_base. Note it as a residual confound.",
+  "GSE126459 HOMER PC1 is assumed to be hg38. The chr1 last bin end (248.5 Mb) cannot distinguish the builds. Cite the GEO or prior-campaign record for the build.",
+  "Liftover is in the correct direction (hg38 tile midpoint to hg19, same chromosome required). Several hg38 tiles can map to one hg19 bin, which duplicates values; this is minor.",
+  "excluded_pairs matching is order-sensitive. It is correct for the current lists, but it is safer to compare unordered pairs (frozenset).",
+  "The synthetic tests never exercise covariates. The null test uses 4 seeds with 200 shifts."
+ ],
+ "notes": "Tests pass (5/5). The config yields 47 unordered pairs, so k <= 47 and alpha/k >= 0.00106 > 1/5001. Confirmation is always reachable; it would become impossible only if k > 250. Selection (|rho| >= 0.08, p <= 0.01, n >= 800) and confirmation (same sign, sign*rho >= 0.05, one-sided p <= 0.05/k with 5000 shifts) are coherent, and the lower confirm threshold allows for winner's-curse shrinkage. Rank-partial Spearman is correct: ranks are taken within the half on complete cases, X and Y are regressed on an intercept plus covariate ranks, residuals are correlated, and X is re-residualized after each shift. The null shifts X within chromosome with Y and Z fixed, so chromosome-level confounding is preserved. Directional p uses (1+count)/(1+n). No path lets even-chromosome values reach selection; confirmation reads only the survivor list. Feature code checks: HOMER 500 kb bin keys, genePred TSS by strand, CPM log2((b+1)/(a+1)) with mutant/knockdown over control, and correct control/mutant column selection by header. Own-pc1 LCL tracks are oriented by gene density. Reviewer did not read feature values or compute any correlations."
+}

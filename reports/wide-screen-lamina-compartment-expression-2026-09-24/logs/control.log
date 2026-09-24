@@ -1,0 +1,37 @@
+<research-root>/biology-wide-screen-2026-09-24/control/control.py:22: RuntimeWarning: Mean of empty slice
+  corr1 = np.nanmean([bg("GSM3602088"), bg("GSM3602089")], axis=0)
+<research-root>/biology-wide-screen-2026-09-24/control/control.py:23: RuntimeWarning: Mean of empty slice
+  corr2 = np.nanmean([bg("GSM3602090"), bg("GSM3602091")], axis=0)
+<research-root>/biology-wide-screen-2026-09-24/control/control.py:24: RuntimeWarning: Mean of empty slice
+  mut = np.nanmean([bg("GSM3602092"), bg("GSM3602093")], axis=0)
+H1            gc~dlam_mCh  indep_baseline even rho -0.242 n 2585 p 0.0002 nullsd 0.026
+H1            gc~dlam_mCh  indep_baseline  odd rho -0.248 n 2606 p 0.0002 nullsd 0.028
+H1 SURVIVES_ARTIFACT_CONTROL
+H2     siScr_mCh~dpc1_cm            swapA even rho -0.123 n 2584 p 0.0002 nullsd 0.029
+H2     siScr_mCh~dpc1_cm            swapA  odd rho -0.029 n 2605 p 0.0670 nullsd 0.030
+H2     siScr_mCh~dpc1_cm            swapB even rho -0.213 n 2584 p 0.0002 nullsd 0.031
+H2     siScr_mCh~dpc1_cm            swapB  odd rho -0.078 n 2605 p 0.0016 nullsd 0.035
+H2     siScr_mCh~dpc1_cm          placebo even rho +0.082 n 2584 p 1.0000 nullsd 0.024
+H2     siScr_mCh~dpc1_cm          placebo  odd rho +0.072 n 2605 p 0.9986 nullsd 0.027
+H2 FAILS_ARTIFACT_CONTROL
+H3     tss_count~dpc1_cm            swapA even rho +0.125 n 2584 p 0.0002 nullsd 0.024
+H3     tss_count~dpc1_cm            swapA  odd rho +0.097 n 2605 p 0.0002 nullsd 0.031
+H3     tss_count~dpc1_cm            swapB even rho +0.088 n 2584 p 0.0002 nullsd 0.024
+H3     tss_count~dpc1_cm            swapB  odd rho +0.070 n 2605 p 0.0002 nullsd 0.030
+H3     tss_count~dpc1_cm          placebo even rho +0.060 n 2584 p 0.0026 nullsd 0.022
+H3     tss_count~dpc1_cm          placebo  odd rho +0.021 n 2605 p 0.1642 nullsd 0.024
+H3 FAILS_ARTIFACT_CONTROL
+H4  pc1_lcl_base~dpc1_cm            swapA even rho +0.104 n 2577 p 0.0002 nullsd 0.032
+H4  pc1_lcl_base~dpc1_cm            swapA  odd rho +0.148 n 2595 p 0.0002 nullsd 0.033
+H4  pc1_lcl_base~dpc1_cm            swapB even rho +0.075 n 2577 p 0.0022 nullsd 0.032
+H4  pc1_lcl_base~dpc1_cm            swapB  odd rho +0.135 n 2595 p 0.0002 nullsd 0.036
+H4  pc1_lcl_base~dpc1_cm          placebo even rho +0.026 n 2577 p 0.1614 nullsd 0.025
+H4  pc1_lcl_base~dpc1_cm          placebo  odd rho +0.007 n 2595 p 0.4051 nullsd 0.027
+H4 SURVIVES_ARTIFACT_CONTROL
+H5            gc~dpc1_cm            swapA even rho +0.198 n 2584 p 0.0002 nullsd 0.036
+H5            gc~dpc1_cm            swapA  odd rho +0.178 n 2605 p 0.0002 nullsd 0.036
+H5            gc~dpc1_cm            swapB even rho +0.211 n 2584 p 0.0002 nullsd 0.036
+H5            gc~dpc1_cm            swapB  odd rho +0.138 n 2605 p 0.0002 nullsd 0.038
+H5            gc~dpc1_cm          placebo even rho +0.002 n 2584 p 0.2701 nullsd 0.025
+H5            gc~dpc1_cm          placebo  odd rho +0.028 n 2605 p 0.2306 nullsd 0.028
+H5 SURVIVES_ARTIFACT_CONTROL

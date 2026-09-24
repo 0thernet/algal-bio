@@ -1,0 +1,40 @@
+{
+ "freeze_sha256": "cc86684bfce0cb1d42cb2c67326b71f30b77e8446f7fff8b6f6513bbe576ed9b",
+ "files": {
+  "WT_r1": {
+   "file": "GSM8183055_K562_r1_17_LMNB1-25kb.bw",
+   "bytes": 1778799,
+   "sha256": "f071b9d76f23724e9836969928080de3092bb5d46b69aea7a7b63fa94bda47e5"
+  },
+  "WT_r2": {
+   "file": "GSM8183056_K562_r2_17_LMNB1-25kb.bw",
+   "bytes": 1166000,
+   "sha256": "d3b1177598d0f0acbc22ca424f72019e45f469de6791df6f1e0419532e3d72e0"
+  },
+  "WT_r3": {
+   "file": "GSM8183057_K562_r8_WT_1_LMNB1-25kb.bw",
+   "bytes": 1780546,
+   "sha256": "3bc81dd31ce278bf17dfd604257683f6c8bba052239c51c5ea9f0f85ef87a642"
+  },
+  "LMNAKO_r1": {
+   "file": "GSM8183061_K562_r7_LMNA_14_LMNB1-25kb.bw",
+   "bytes": 1021727,
+   "sha256": "52eb969f7d767c2cb0270f1d327b18d929f2e1a1244fb8c081ef0a3114ac5ebd"
+  },
+  "LMNAKO_r2": {
+   "file": "GSM8183062_K562_r8_LMNA_14_LMNB1-25kb.bw",
+   "bytes": 1156555,
+   "sha256": "1934abd38861b2bca48c71de542538d408397873995284e2120019ccbca080bf"
+  },
+  "LBRKO_r3": {
+   "file": "GSM8183060_K562_r8_LBR_1_LMNB1-25kb.bw",
+   "bytes": 1160450,
+   "sha256": "2b75e5efbfa8c4edb8bccef9e9ad162f64918b86f2e4d6412ac2b92d3bd01e56"
+  },
+  "DKO_r2": {
+   "file": "GSM8183064_K562_r8_LMNALBR_14_LMNB1-25kb.bw",
+   "bytes": 1158197,
+   "sha256": "35bafcc547d0b51107ee1991f9affc73ce9a59ddc796edf539f89e03726b5add"
+  }
+ }
+}

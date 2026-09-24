@@ -1,0 +1,22 @@
+{
+ "schema": "bio.design-review.v1",
+ "target": "damid/protocol.json, damid/damid.py, damid/test_damid.py (pre-freeze)",
+ "reviewed": "2026-09-24",
+ "verdict": "PASS_WITH_REPAIRS",
+ "blocking": [],
+ "repairs_required_before_freeze": [
+  "Batch description is wrong. GEO names are K562_r{batch}_{clone}: '17' is the parental WT clone (DD-Cas9 c17) and '14' is the LMNA KO clone, not a batch. WT_r1 and WT_r2 are batches r1 and r2, which differ. PL_within is therefore a cross-batch WT-WT placebo, not a within-batch one. There is only one WT in r8, so no within-batch placebo is possible. Correct the 'batches' text and rename or re-describe PL_within. The logic can stay: both placebos then calibrate cross-batch GC bias, which is what P_all needs.",
+  "Dynamic-range artifact biases toward REPLICATED. If KO_r2 (or the KO mean) has a larger signal-to-noise ratio or dynamic range than the WT comparator (KO = b*T + e with b > 1), then delta carries (b-1)*T. Adjusting for a noisy baseline removes only part of T. GC predicts the remainder, and it enters with a negative sign, which is the registered direction. This is the same data-quality failure mode that sank H4/H5. The WT-WT placebos do not test it, because they share no KO-vs-WT scale difference. Register a scale-free sensitivity (for example, rank- or z-transform each track across autosomes before differencing) and require the label to hold there too. Also report, descriptively, the slope of each delta on its independent baseline and the between-replicate correlation of each track.",
+  "Disclose that both LMNAKO replicates come from a single clone (14) against WT clone 17. Clonal drift, including clone-specific CNV or karyotype, cannot be separated from LMNA loss. Add this to disclosed_limits and the claim_ceiling."
+ ],
+ "minor": [
+  "Code matches the protocol: sample-to-GSM mapping and file names match the GEO supplementary_file fields exactly. The URL template (https form of ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8183nnn/{gsm}/suppl/{file}) is correct, and f.split('_')[0] yields the GSM. Contrasts, covariates, seeds 20261010+index in dict order, the min_n 3000 abort, the non-finite rho abort, the chr1 248956422 abort and the label rules are all implemented as written. Unit test passes (1 test).",
+  "Independent-baseline logic is correct against regression to the mean. Each baseline replicate's noise is absent from its delta: P_batch uses mean(WT_r1,WT_r2), P_all uses WT_r3, PL_within uses WT_r3 and PL_cross uses WT_r2. Residual confounding from baseline measurement error remains (see the dynamic-range repair). Lamina 'flattening' after perturbation would push toward positive GC rho, which is conservative.",
+  "In P_all, the baseline WT_r3 shares batch r8 with LMNAKO_r2 inside the delta, so batch-shared noise enters the delta positively and is partly regressed out. This is not a regression-to-the-mean direction. Note it.",
+  "Copy number: GEO says the values are log2 pA-DamID LMNB1 over a Dam control from the same cells, so K562 aneuploidy largely cancels. The disclosed limit is adequate but should say 'largely cancels in the target/Dam ratio; clone-specific CNVs could add heteroscedastic noise'. An optional descriptive sensitivity is to exclude the known K562 amplicons (22q11 BCR, 9q34 ABL1).",
+  "Assay wording: GEO describes pA-DamID (antibody plus protein A-Dam), not Dam-fusion DamID. Update the cohort text. Note also that the GEO 'condition: wildtype' field is wrong for the KO DamID samples; the genotype field is correct.",
+  "GEO data_processing says 50 kb counting, but the files are 25 kb bigWigs. This is harmless at 500 kb tiles. Also treat +/-inf log2 bins: exact mean over inf gives a non-finite tile, which is dropped. That is acceptable, but record n_finite per track.",
+  "The freeze should hash damid/damid.py, panel/panel.py, code/screen.py and features/tiles.tsv as well as the protocol. run() verifies every frozen file; fetch() checks only the protocol.",
+  "Optional: DKO_r1 (GSM8183063, r7) shares batch r7 with LMNAKO_r1 and could serve as a reported-only context track. No change needed."
+ ]
+}

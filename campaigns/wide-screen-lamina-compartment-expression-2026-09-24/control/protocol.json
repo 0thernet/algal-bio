@@ -1,0 +1,20 @@
+{
+ "schema": "bio.wide-screen-artifact-control.v1",
+ "status": "EXPLORATORY: designed after confirmation outcomes were seen; frozen before any statistic below was computed",
+ "motivation": "all five confirmed pairs whose outcome is a delta adjusted for its own baseline have the sign predicted by regression to the mean: adjusting a (mutant - baseline) delta for a noisy baseline leaves the delta positively related to the true baseline state, so any independent proxy of that state (GC, gene density, another cell type's PC1, lamina with opposite sign) predicts the delta without any mutation effect",
+ "pairs": {
+  "H1": {"predictor": "gc", "outcome": "dlam_mCh", "sign": -1, "control": "replace covariate siScr_mCh by siScr_DNK (independent lamina baseline measurement)"},
+  "H2": {"predictor": "siScr_mCh", "outcome": "dpc1_cm", "sign": -1},
+  "H3": {"predictor": "tss_count", "outcome": "dpc1_cm", "sign": 1},
+  "H4": {"predictor": "pc1_lcl_base", "outcome": "dpc1_cm", "sign": 1},
+  "H5": {"predictor": "gc", "outcome": "dpc1_cm", "sign": 1}
+ },
+ "dpc1_control": "swap A: delta = mut - corr1, baseline covariate = corr2; swap B: delta = mut - corr2, covariate = corr1; clone = mean of its two replicate HOMER PC1 tracks (GSE126459); other covariates as in the screen (gc, tss_count, siScr_mCh minus the pair's own); pc1_cm_base not used",
+ "placebo": "delta = corr2 - corr1, covariate = mut (independent), same predictor and other covariates; measures clone-to-clone variation in the same statistic",
+ "null": "within-chromosome circular shift of the predictor, min shift 10 tiles, 5000 shifts, seed 20260928 + pair index * 10 + arm index",
+ "halves": "even autosomes primary; odd autosomes reported and required for sign and size",
+ "pass_rule": "a pair SURVIVES_ARTIFACT_CONTROL if in every control arm (H1: one arm; H2-H5: swaps A and B): even half sign-consistent with |rho| >= 0.05 and one-sided p <= 0.01 (0.05/5); odd half sign-consistent with |rho| >= 0.05 and p <= 0.01; and for H2-H5 the placebo |rho| on the even half is below half the mean |rho| of swaps A and B on the even half",
+ "labels": "SURVIVES_ARTIFACT_CONTROL, FAILS_ARTIFACT_CONTROL; no other label; no-spin rule applies",
+ "not_covered": "the two confirmed expression pairs (tss_count ~ lfc_ipsc_silmna, gc ~ lfc_cm_h222p) are not tested here; they remain susceptible to RNA-seq GC and pseudocount bias and carry no discovery claim",
+ "claim_ceiling": "exploratory; a surviving pair needs a fresh registered test in an unopened cohort before it can be called a finding"
+}

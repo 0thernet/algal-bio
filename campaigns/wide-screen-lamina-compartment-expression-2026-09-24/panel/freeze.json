@@ -1,0 +1,14 @@
+{
+ "schema": "bio.panel-freeze.v1",
+ "frozen_utc": "2026-09-24T23:16:53.581514+00:00",
+ "before_reference_download": true,
+ "sha256": {
+  "panel/protocol.json": "ded8fed82397d290bf8bac6dd23eaccc5bd249f1a01feae30334ed5e8f4a7165",
+  "panel/panel.py": "e9642096bd29c311b16774f58d343fec1d0310d7db57a34baeea21fa2951e7fb",
+  "panel/test_panel.py": "5388076cdde83c7a45ba435d5fce9847d5c569605275a48e2320fdf18e911100",
+  "design/panel-review.json": "1c3ec77eb5037f06314af7c17c9da2f7fd22546b94976f37a59913ba1a7219e9",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "features/tiles.tsv": "5a5c981a6fe7fba852cd08c2496ec09c2ea27f5c3605af5676a741709eb74cf5",
+  "report.md": "e1aba0f27b8ce8646dd0430f7db9e5e8c263eeefd0561c0a4aba3e7489e422a6"
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "schema": "bio.wide-screen-config.v1",
+ "campaign_id": "wide-screen-lamina-compartment-expression-2026-09-24",
+ "unit": "hg38 autosomal 500 kb tile",
+ "split": "discovery = odd autosomes; confirmation = even autosomes; confirmation touches only the frozen survivor list",
+ "predictors": [
+  "siScr_mCh",
+  "dlam_mCh",
+  "siScr_DNK",
+  "dlam_DNK",
+  "tss_count",
+  "pc1_cm_base",
+  "dpc1_cm_r225x",
+  "pc1_lcl_base",
+  "dpc1_lcl_ko",
+  "lfc_ipsc_silmna",
+  "lfc_cm_h222p",
+  "cpg_n",
+  "giemsa",
+  "arm_pos",
+  "gc"
+ ],
+ "outcomes": [
+  "dlam_mCh",
+  "dpc1_cm_r225x",
+  "dpc1_lcl_ko",
+  "lfc_ipsc_silmna",
+  "lfc_cm_h222p"
+ ],
+ "covariates": [
+  "gc",
+  "tss_count",
+  "pc1_cm_base",
+  "siScr_mCh"
+ ],
+ "covariate_note": "every pair is adjusted (rank-partial) for GC, gene density, baseline cardiomyocyte compartment and baseline lamina, except a covariate that is the pair's own X or Y; the screen asks what predicts change beyond baseline genome architecture",
+ "same_source_groups": [
+  [
+   "siScr_mCh",
+   "dlam_mCh",
+   "siScr_DNK",
+   "dlam_DNK",
+   "lfc_ipsc_silmna"
+  ],
+  [
+   "pc1_cm_base",
+   "dpc1_cm_r225x"
+  ],
+  [
+   "pc1_lcl_base",
+   "dpc1_lcl_ko"
+  ]
+ ],
+ "same_source_note": "pairs inside one study (Shen 2026 lamina and RNA; one Hi-C series) are excluded: the screen targets cross-study relationships no single paper could report",
+ "excluded_pairs": [
+  [
+   "dlam_mCh",
+   "dpc1_cm_r225x"
+  ],
+  [
+   "dlam_DNK",
+   "dpc1_cm_r225x"
+  ],
+  [
+   "dlam_mCh",
+   "dpc1_lcl_ko"
+  ],
+  [
+   "dlam_DNK",
+   "dpc1_lcl_ko"
+  ],
+  [
+   "dpc1_cm_r225x",
+   "dlam_mCh"
+  ],
+  [
+   "dpc1_lcl_ko",
+   "dlam_mCh"
+  ]
+ ],
+ "excluded_note": "already tested by registered campaigns (PRs #5, #6); matched as unordered pairs",
+ "selection": {
+  "n_shift": 1000,
+  "seed": 20260926,
+  "min_n": 800,
+  "min_abs_rho": 0.08,
+  "p_max": 0.01
+ },
+ "confirmation": {
+  "n_shift": 5000,
+  "seed": 20260927,
+  "min_n": 800,
+  "min_abs_rho": 0.05,
+  "alpha": 0.05,
+  "rule": "same sign as discovery, sign*rho >= 0.05, one-sided circular-shift p <= 0.05 / (number of survivors)"
+ },
+ "prior_exposure_disclosure": "all inputs were opened by earlier campaigns; the correlations of every non-excluded pair have never been computed by this program; the confirmation half is untouched only at the level of these pairings",
+ "claim_ceiling": "a confirmed pair is a pre-registered cross-study association between public datasets; prior-art review decides whether it is known or new; no mechanism",
+ "feature_extra_covariates": {
+  "dpc1_lcl_ko": [
+   "pc1_lcl_base"
+  ],
+  "dpc1_cm_r225x": [
+   "pc1_cm_base"
+  ]
+ },
+ "feature_extra_covariates_note": "pre-discovery review blocker: a KO-minus-WT compartment delta is adjusted for its own WT baseline PC1 whenever it is in a pair, so a global compartment-strength change cannot pass as a predictor association",
+ "method_notes": [
+  "discovery selection uses min(p_neg, p_pos) without doubling: effectively two-sided at 0.02",
+  "tiles with any missing value in X, Y or a covariate are dropped before shifting, so each chromosome's retained tiles are shifted as a contiguous ring",
+  "circular shifts are at least 10 tiles from identity where the chromosome half has more than 20 retained tiles",
+  "expression log2 fold changes use +1 CPM pseudocounts and carry no baseline-expression covariate; a partial expression-level confound remains and is disclosed",
+  "GSE126459 HOMER PC1 build taken as hg38: our hg38 pipeline on the same samples reproduced the deposited PC1 at genome-wide Spearman 0.92 and 0.88 (replication campaign method validation), which a build mismatch would not allow"
+ ]
+}

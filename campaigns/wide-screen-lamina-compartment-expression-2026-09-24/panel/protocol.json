@@ -1,0 +1,48 @@
+{
+ "schema": "bio.panel-shape-test.v1",
+ "campaign_id": "lmna-r225x-compartment-erosion-panel-2026-09-24",
+ "status": "registered before any reference track below was downloaded; the outcome (GSE126459 R225X delta) was opened by earlier campaigns and by the wide screen; the predictors are new",
+ "hypothesis": "in LMNA R225X iPSC cardiomyocytes, compartments shift toward non-cardiac configurations beyond the cardiac baseline (erosion of cardiac-specific compartmentalisation)",
+ "alternative": "residual leak of the true cardiac compartment state through a noisy baseline: predicts a cardiac reference predicts the shift at least as strongly as non-cardiac references, and a positive cardiac-specific component",
+ "references": {
+  "IMR-90": "ENCFF547NRM",
+  "K562": "ENCFF456BBV",
+  "HepG2": "ENCFF299NFD",
+  "HCT116": "ENCFF442FIA",
+  "A549": "ENCFF575RNT",
+  "MCF-7": "ENCFF922MKI",
+  "heart_LV": "ENCFF835JWK",
+  "GM12878_encode": "ENCFF661LPK"
+ },
+ "non_cardiac": [
+  "IMR-90",
+  "K562",
+  "HepG2",
+  "HCT116",
+  "A549",
+  "MCF-7"
+ ],
+ "cardiac": "heart_LV",
+ "secondary": "GM12878_encode: pipeline-independent re-measure of the wide-screen predictor; reported only",
+ "url_template": "https://www.encodeproject.org/files/{acc}/@@download/{acc}.bigWig",
+ "tiling": "hg38 500 kb tiles of features/tiles.tsv; chromosome names normalised to the chr prefix; value = pyBigWig exact mean over the tile; NaN if exact coverage < 50% of tile bases",
+ "orientation": "per chromosome, multiply by -1 if Spearman(track, tss_count) < 0 over finite tiles; chromosomes with |rho| < 0.2 set to NaN for that reference",
+ "outcome": "GSE126459 HOMER PC1 per clone = mean of its two replicates; swap A: delta = mut - corr1 with covariate corr2; swap B: delta = mut - corr2 with covariate corr1",
+ "covariates": "gc, tss_count, siScr_mCh, plus the swap's independent baseline",
+ "statistic": "rank-partial Spearman (code/screen.py test_pair), all autosomes, within-chromosome circular shift of the predictor, min shift 10 tiles, 5000 shifts, seed 20261001 + 10*reference index + swap index",
+ "P1": "for a non-cardiac reference, both swaps rho >= 0.05 with one-sided positive p <= 0.05/6; P1 holds if at least 5 of the 6 non-cardiac references pass",
+ "P2": "cardiac-specific component: heart_LV tested with the non-cardiac consensus (mean of the six oriented non-cardiac tracks, rank-transformed) added as a covariate; P2 holds if both swaps rho <= -0.05 with one-sided negative p <= 0.01",
+ "leak_pattern": "LEAK_PATTERN if in both swaps the heart_LV rho (without consensus covariate) exceeds the median non-cardiac rho by at least 0.05, or the cardiac-specific component rho >= +0.05 with positive p <= 0.01 in both swaps",
+ "labels": "EROSION_SUPPORTED (P1 and P2, not LEAK_PATTERN); P1_ONLY (P1, not P2, not LEAK_PATTERN); LEAK_PATTERN; NOT_SUPPORTED (otherwise); evaluated mechanically by panel.py; no-spin rule",
+ "disclosed_limits": "adult left ventricle is a mixed tissue and adult, whereas iPSC cardiomyocytes are fetal-like; ENCODE compartment pipelines differ from HOMER; GC-based orientation conventions may entangle GC with PC1 sign (orientation here is by gene density); a negative adult-LV-specific component is also consistent with delayed maturation of the mutant cardiomyocytes rather than a shift toward non-cardiac states; if the LV tissue track is noisier than the cell-line tracks, the first leak criterion loses power",
+ "claim_ceiling": "EROSION_SUPPORTED would make the erosion reading the registered interpretation of a single cohort; generalisation needs a second LMNA cohort; EROSION_SUPPORTED cannot distinguish erosion toward non-cardiac states from delayed cardiac maturation",
+ "min_finite_tiles": 3000,
+ "min_n_per_test": 2500,
+ "abort_rule": "if any reference has fewer than min_finite_tiles oriented finite tiles, or any test has n < min_n_per_test or non-finite rho, the run aborts with no label; the cause is reported and repaired under a recorded amendment",
+ "consensus": "per non-cardiac reference, rank/(n_finite+1) over its finite tiles; consensus = mean over references with a finite value, NaN where fewer than 4 of 6 are finite",
+ "replicate_mean": "plain mean of the two replicate tracks (NaN if either is NaN)",
+ "seed_order": "reference index i follows the order of 'references' (0..7), then LV_specific = 8; swap index j: A = 0, B = 1",
+ "amendments": [
+  "pre-freeze review design/panel-review.json PASS_WITH_REPAIRS: blocker (silent all-NaN reference) and minors applied before freeze"
+ ]
+}
