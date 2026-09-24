@@ -59,6 +59,11 @@ published receipt archive. These are separate byte-retention, replay and fresh
 measurement checks. Extracted assets correctly report publication identity as
 `not_recorded`; this later operator record is excluded from the self-hashed archive.
 
+The post-publication commit also makes the pending/published test fixtures
+independent of the repository's current publication state. The manifest on `main`
+tracks those newer test bytes. Use the tag's manifest for the original immutable
+release; its runtime, measurements, and published archives remain unchanged.
+
 ## Local verification limitations
 
 Two isolated unexpected biology measurement failures occurred during macOS
