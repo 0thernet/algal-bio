@@ -15,8 +15,8 @@ negative result, retained in full, not a partial or exploratory one.
   patient line, two separately corrected isogenic clones (R225R clone 15 and
   clone 38), three independent differentiations per line. The deposited
   Cuffnorm FPKM matrix has nine sample columns.
-- **Selection before data access:** a metadata-only audit of five candidate
-  datasets ([`data-audit/eligibility.md`](data-audit/eligibility.md)) chose
+- **Selection before data access:** a metadata-only audit of seven candidate
+  datasets (five with metadata receipts) ([`data-audit/eligibility.md`](data-audit/eligibility.md)) chose
   GSE126458 as the only cohort with explicit independent culture units, a
   per-sample matrix, and two separate corrected-clone contrasts. GSE136252 was
   excluded for unresolved clone/batch mapping; GSE164065 for contradictory
@@ -31,8 +31,11 @@ negative result, retained in full, not a partial or exploratory one.
   H0: Δ ≥ −0.5. Family p is the maximum over the two clone comparisons. Holm
   correction over all ten genes. Passing also required negative contrasts in
   every leave-one-culture-out combination and Δ ≤ −0.5 at pseudocounts 0.1 and
-  1.0. Genes with FPKM < 1 in a corrected clone kept p = 1 and family membership.
-- **Independent pre-outcome review:** a separate reviewer verified the code
+  1.0. Genes failing the frozen expression rule (FPKM ≥ 1 in at least two of three
+  cultures and mean FPKM ≥ 1 in each corrected clone) kept p = 1 and family
+  membership.
+- **Independent pre-outcome review:** a pre-outcome review lane (recorded as
+  `falsification_design`) verified the code
   against SciPy on 250 synthetic cases, checked the Holm oracle, the intersection
   rule, and the intake guards, and required three repairs before freeze
   ([`design/independent-review.json`](../../campaigns/lmna-r225x-falsification-2026-09-24/design/independent-review.json),
@@ -95,8 +98,9 @@ expression outcome above.
 
 ## Execution record
 
-- Registration frozen 2026-09-24T17:05:31Z; matrix downloaded 17:06:46Z;
-  outcomes computed 17:08Z. All within one session; not an external timestamp.
+- Registration frozen 2026-09-24T17:05:31Z (`freeze.json`); matrix downloaded
+  17:06:46Z (`intake.json`); outcomes computed in the same session immediately
+  afterwards (no artifact records the outcome time). Not an external timestamp.
 - Public input: one 616,733-byte gzip matrix from NCBI GEO, hash-bound in the
   campaign `sources.json`; kept outside Git.
 - Spend: $0 new provider or compute spend. Cumulative campaign spend remains

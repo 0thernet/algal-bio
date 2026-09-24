@@ -20,7 +20,7 @@
 
 The paper's methods define the common A&P set as promoters enriched in both lamin-A and progerin ChIP compared with control, with comparable A/P signals. The footnote defines mark a as ANOVA p < 0.05 without a fold-change threshold. It therefore reports a modest progerin/control expression increase at a previously mapped lamina-associated locus. The authors did **not** select Lysmd3 as an HGPS candidate. The row is from mouse embryonic fibroblasts. The article also studies mouse cardiac myocytes, but that does not turn this row into a Lysmd3-specific cardiac experiment. These distinctions matter: promoter association does not show binding between the LYSMD3 protein and lamins, causation of cardiomyopathy, or replication of the new human LMNA-depletion observation.
 
-Exact retained DOM evidence is in `pmc3443488-table1-source-fragment.html`, with a compact row/header/footnote in `pmc3443488-lysmd3-row.html` and machine-readable cells, column mapping, source offsets, and hashes in `pmc3443488-lysmd3-table1-row.json`.
+Machine-readable cells, column mapping, source offsets, and hashes are in `pmc3443488-lysmd3-table1-row.json`. The retained DOM evidence (`pmc3443488-table1-source-fragment.html`, with a compact row/header/footnote in `pmc3443488-lysmd3-row.html`) is hash-bound in `provenance.manifest.json` but not tracked in Git because it is raw article HTML.
 
 ## Correction to the earlier audit
 

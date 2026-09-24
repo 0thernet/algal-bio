@@ -136,6 +136,8 @@ retired; see
 
 ## Decision
 
+_Revised 2026-09-24 after the LYSMD3 prior-art table correction; the numerical results above are unchanged._
+
 Do not call these genes discoveries or begin a mechanistic wet-lab claim from
 this run. Both leading genes already have lamin-related prior art. A registered
 follow-up must test the original fixed panel against independent cardiomyocyte
