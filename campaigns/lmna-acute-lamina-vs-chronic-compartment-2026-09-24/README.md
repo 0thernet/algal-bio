@@ -1,7 +1,7 @@
 # Campaign: acute lamina change vs chronic compartment change (2026-09-24)
 
 Registered cross-study test. Report and outcome: [`reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/report.md`](../../reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/report.md).
-**Registered outcome: not passed** (direction as hypothesised in every arm; one raw effect below the frozen floor).
+**Registered outcome: not passed** (direction as hypothesised in every arm; clone 2's raw and standardised raw effects below the frozen floor).
 
 ## Frozen identities (freeze-002, the run that produced the outcome)
 
@@ -22,6 +22,7 @@ Six outcome files (GSE126459 HOMER 500 kb Active.PC1 bedGraphs) are hash-bound i
 - `registration.reviewed-draft.json` — the draft as reviewed; differs from the frozen file only by status, `frozen_utc` and the predictor hash binding.
 - `registration.frozen-001.json`, `freeze-001.json`, `intake-001.json`, `archive-001/` — the first freeze. Its run failed with zero eligible tiles (chromosome naming); no outcome value was observed. `archive-001/` holds byte-exact reconstructions of the freeze-001 code and tests (hash-verified) so the amendment can be diffed.
 - `registration.frozen.json` (freeze-002) — identical to freeze-001 except `amendments`, `code.tests` count and `frozen_utc`.
+- Record gaps, disclosed: (1) `freeze-001.json` binds the registration draft, independent review and skeptical review as they stood at 20:13:55Z (`8f6bd8…`, `e5ec93…`, `7af9f6…`); those bytes were superseded by the round-3 versions before freeze-002 and were not archived, so they are not recoverable from this record. From freeze-002 onward `freeze.py` archives every bound file. (2) The frozen registration says a clone-averaged rho is reported; `compartment.py` never computed it and `results/summary.json` has no such field. It was not added after outcome access. (3) Public result paths are flattened: the registration's `results/run-001/FAILED.md` and `format-check.txt` are `results/run-001-FAILED.md` and `results/run-001-format-check.txt` here.
 - `design/` — fixed protocol, three rounds of independent pre-outcome review (`independent-review.json`, `skeptical-review.md`).
 - `freeze.py`, `intake.py`, `assemble_public.py` — the helpers that produced the receipts and this directory.
 

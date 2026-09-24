@@ -1,233 +1,291 @@
 {
-  "schema": "bio.public-assembly.v1",
+  "schema": "bio.public-assembly.v2",
+  "note": "Every tracked file of the campaign and report directories, hashed after the PR #5 review fixes; supersedes the v1 copy map.",
   "files": [
     {
-      "source": "code/compartment.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/compartment.py",
-      "bytes": 27919,
-      "sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019"
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/README.md",
+      "bytes": 4058,
+      "sha256": "9355ddc3812a4d9cdd2f70fd55e8c37338e1fa3da9df602dab1e325d6f9d4467"
     },
     {
-      "source": "code/test_compartment.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/test_compartment.py",
-      "bytes": 20842,
-      "sha256": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e"
-    },
-    {
-      "source": "code/requirements.in",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/requirements.in",
-      "bytes": 44,
-      "sha256": "dce35501266c29b51177d4ab50cb43bdb6c2430166f030c5965bdd7ef22564bb"
-    },
-    {
-      "source": "code/requirements.lock",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/requirements.lock",
-      "bytes": 12301,
-      "sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865"
-    },
-    {
-      "source": "registration/protocol.frozen.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.frozen.json",
-      "bytes": 18302,
-      "sha256": "80c668a2599bc9c3a45d01b8e3a6526cf8dd15308daf952eccfebae83dae6ab6"
-    },
-    {
-      "source": "registration/protocol.draft.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.reviewed-draft.json",
-      "bytes": 18202,
-      "sha256": "924975b5118a1c98c1a03cf736dcca4e464ad78d0046a4604df7c8cd1021e13d"
-    },
-    {
-      "source": "registration/freeze.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/freeze.json",
-      "bytes": 2173,
-      "sha256": "0f0a2d01c674da587822af3b1ed8ce59e166827b2b56c1a54b00a09bcb797f34"
-    },
-    {
-      "source": "registration/intake.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/intake.json",
-      "bytes": 3385,
-      "sha256": "c81d2fe1ca93c64e3023f61d0255022563eba5a4c4ac62198213a3ae56398649"
-    },
-    {
-      "source": "registration/freeze.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/freeze.py",
-      "bytes": 3323,
-      "sha256": "82433fa64dc5dd2f7d3e5c8fc7732a12677a13fb17555f5ed7d3ef28b82500a6"
-    },
-    {
-      "source": "registration/intake.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/intake.py",
-      "bytes": 1924,
-      "sha256": "4998b69e785dc40ca51f52283f7118e1e4dfce01b3cce3dff85dd133b6d51b56"
-    },
-    {
-      "source": "design/protocol.md",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/design/fixed-protocol.md",
-      "bytes": 4161,
-      "sha256": "e3ec6d7578365e0116bd1231db86197fd3cb067a8e3ed7186625ddb78eee9183"
-    },
-    {
-      "source": "design/skeptical-review.md",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/design/skeptical-review.md",
-      "bytes": 18578,
-      "sha256": "68d496c4bc65b4ed4a7d44efd641eb342aba9c375550f6c7e240c631da43ab75"
-    },
-    {
-      "source": "design/independent-review.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/design/independent-review.json",
-      "bytes": 55898,
-      "sha256": "e8012085765460ee810e71db36c41a8ef6f6117ee1640c47a54461a45e52ac28"
-    },
-    {
-      "source": "results/predictor/predictor.manifest.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/predictor.manifest.json",
-      "bytes": 783,
-      "sha256": "b123f8e0f57b9a5d84bf6a2f30c7f8cc19041965229cab0308976f01b2744203"
-    },
-    {
-      "source": "results/predictor/predictor.tsv",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/predictor.tsv",
-      "bytes": 637655,
-      "sha256": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817"
-    },
-    {
-      "source": "data-audit/eligibility.md",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/eligibility.md",
-      "bytes": 2294,
-      "sha256": "26c541a0773005dcc16fb910d4ab30e1dc959902a784efd783945da42aeea460"
-    },
-    {
-      "source": "data-audit/GSE126459-outcome-audit.json",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/GSE126459-outcome-audit.json",
-      "bytes": 5401,
-      "sha256": "c7b9917965528717e4a37168494e6ea1e5b0029ab94069b5dbb8e0856b7b7e82"
-    },
-    {
-      "source": "prior-art/report.md",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/report.md",
-      "bytes": 20065,
-      "sha256": "227f9d27c2b83d6a4daf5daf88a9e3cd8d17f1419a919662e40959d6f2c7b28e"
-    },
-    {
-      "source": "prior-art/findings.json",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/findings.json",
-      "bytes": 12395,
-      "sha256": "3621e279110081ac4a6d994f41c98853d20bcb2b6fec080807cd73aa71b4c46c"
-    },
-    {
-      "source": "prior-art/query-ledger.json",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/query-ledger.json",
-      "bytes": 7024,
-      "sha256": "c46af5b3d52a303f5fcfda60d5906a3f26add2c4ffab1c2ad999a84e72806a70"
-    },
-    {
-      "source": "results/run-002/summary.json",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/summary.json",
-      "bytes": 10800,
-      "sha256": "b49a589b6a4f314ca359c61ce501b6fe204816eb9afb0be9554e2751e901a8fb"
-    },
-    {
-      "source": "results/run-002/tiles.tsv",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/tiles.tsv",
-      "bytes": 586365,
-      "sha256": "68eeb25ca2d235f821de7d7672dbc628e02093b9ee3486f99ea1cc521b6eb86e"
-    },
-    {
-      "source": "results/run-001/FAILED.md",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/run-001-FAILED.md",
-      "bytes": 579,
-      "sha256": "02b7f8d316386ae14fd5f95ad4ea8db93caa92c9aa4b0330b8214bb2b39e733e"
-    },
-    {
-      "source": "results/run-001/format-check.txt",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/run-001-format-check.txt",
-      "bytes": 275,
-      "sha256": "12a211b7740ac2c8677187dc4454bc9cdd14a2486b8f4721e282e0a856de399f"
-    },
-    {
-      "source": "report.md",
-      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/report.md",
-      "bytes": 8554,
-      "sha256": "8460f92c024eafedb8b3cb97500e7983235b46030f8f950db2d22772f7fe14ad"
-    },
-    {
-      "source": "registration/protocol.frozen-001.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.frozen-001.json",
-      "bytes": 15774,
-      "sha256": "2d51b704f6a2b75b1f22db10dd9469f2758b9c85e37ef05d865f88f116c6f5a8"
-    },
-    {
-      "source": "registration/freeze-001.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/freeze-001.json",
-      "bytes": 1663,
-      "sha256": "c8729fc6028718b21abd0f6d6332d8d9d072238cd0db2a8379803680a411e331"
-    },
-    {
-      "source": "registration/intake-001.json",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/intake-001.json",
-      "bytes": 2894,
-      "sha256": "4db2e1cba98c5a9b2d6b8c0b7668acc9c8d19f97213ae5533071b9e204ccad1c"
-    },
-    {
-      "source": "registration/archive-001/compartment.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-001/compartment.py",
-      "bytes": 27787,
-      "sha256": "9f58860fb683d087f1363f1b399e152ef0e56ad294d40268b959fd8671a937c9"
-    },
-    {
-      "source": "registration/archive-001/test_compartment.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-001/test_compartment.py",
-      "bytes": 20002,
-      "sha256": "3d6ee18f0f15c07f915affa5d4dd5c93627654ce0215400c87c751e2e492f94e"
-    },
-    {
-      "source": "registration/archive-001/README.md",
       "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-001/README.md",
       "bytes": 262,
       "sha256": "a3ef1083db6088bdd1a499fa16869c8d45dc01ab84b1aee0622b81b4cc056b6c"
     },
     {
-      "source": "registration/archive-002/compartment.py",
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-001/compartment.py",
+      "bytes": 27787,
+      "sha256": "9f58860fb683d087f1363f1b399e152ef0e56ad294d40268b959fd8671a937c9"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-001/test_compartment.py",
+      "bytes": 20002,
+      "sha256": "3d6ee18f0f15c07f915affa5d4dd5c93627654ce0215400c87c751e2e492f94e"
+    },
+    {
       "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-002/compartment.py",
       "bytes": 27919,
       "sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019"
     },
     {
-      "source": "registration/archive-002/test_compartment.py",
-      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-002/test_compartment.py",
-      "bytes": 20842,
-      "sha256": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e"
-    },
-    {
-      "source": "registration/archive-002/requirements.lock",
       "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-002/requirements.lock",
       "bytes": 12301,
       "sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865"
     },
     {
-      "source": "prior-art/sources/bertero-2019-jcb.md",
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/archive-002/test_compartment.py",
+      "bytes": 20842,
+      "sha256": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/assemble_public.py",
+      "bytes": 4122,
+      "sha256": "18d823c940b11895bcfe6ff5fb6a15e928da2a2182815ad2211ff256b3e268e3"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/compartment.py",
+      "bytes": 27919,
+      "sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/design/fixed-protocol.md",
+      "bytes": 4161,
+      "sha256": "e3ec6d7578365e0116bd1231db86197fd3cb067a8e3ed7186625ddb78eee9183"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/design/independent-review.json",
+      "bytes": 55898,
+      "sha256": "e8012085765460ee810e71db36c41a8ef6f6117ee1640c47a54461a45e52ac28"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/design/skeptical-review.md",
+      "bytes": 18578,
+      "sha256": "68d496c4bc65b4ed4a7d44efd641eb342aba9c375550f6c7e240c631da43ab75"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/freeze-001.json",
+      "bytes": 1663,
+      "sha256": "c8729fc6028718b21abd0f6d6332d8d9d072238cd0db2a8379803680a411e331"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/freeze.json",
+      "bytes": 2173,
+      "sha256": "0f0a2d01c674da587822af3b1ed8ce59e166827b2b56c1a54b00a09bcb797f34"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/freeze.py",
+      "bytes": 3323,
+      "sha256": "82433fa64dc5dd2f7d3e5c8fc7732a12677a13fb17555f5ed7d3ef28b82500a6"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/intake-001.json",
+      "bytes": 2894,
+      "sha256": "4db2e1cba98c5a9b2d6b8c0b7668acc9c8d19f97213ae5533071b9e204ccad1c"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/intake.json",
+      "bytes": 3385,
+      "sha256": "c81d2fe1ca93c64e3023f61d0255022563eba5a4c4ac62198213a3ae56398649"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/intake.py",
+      "bytes": 1924,
+      "sha256": "4998b69e785dc40ca51f52283f7118e1e4dfce01b3cce3dff85dd133b6d51b56"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/predictor.manifest.json",
+      "bytes": 783,
+      "sha256": "b123f8e0f57b9a5d84bf6a2f30c7f8cc19041965229cab0308976f01b2744203"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/predictor.tsv",
+      "bytes": 637655,
+      "sha256": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.frozen-001.json",
+      "bytes": 15774,
+      "sha256": "2d51b704f6a2b75b1f22db10dd9469f2758b9c85e37ef05d865f88f116c6f5a8"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.frozen.json",
+      "bytes": 18302,
+      "sha256": "80c668a2599bc9c3a45d01b8e3a6526cf8dd15308daf952eccfebae83dae6ab6"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/registration.reviewed-draft.json",
+      "bytes": 18202,
+      "sha256": "924975b5118a1c98c1a03cf736dcca4e464ad78d0046a4604df7c8cd1021e13d"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/requirements.in",
+      "bytes": 44,
+      "sha256": "dce35501266c29b51177d4ab50cb43bdb6c2430166f030c5965bdd7ef22564bb"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/requirements.lock",
+      "bytes": 12301,
+      "sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865"
+    },
+    {
+      "published": "campaigns/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/test_compartment.py",
+      "bytes": 20842,
+      "sha256": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/GSE126459-outcome-audit.json",
+      "bytes": 5401,
+      "sha256": "c7b9917965528717e4a37168494e6ea1e5b0029ab94069b5dbb8e0856b7b7e82"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/eligibility.md",
+      "bytes": 2294,
+      "sha256": "26c541a0773005dcc16fb910d4ab30e1dc959902a784efd783945da42aeea460"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/cohorts.json",
+      "bytes": 28948,
+      "sha256": "8ba7ba2201491fca4115cd80afbb19941ecda962919350544fcd59e3746887d2"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/query-ledger.json",
+      "bytes": 9603,
+      "sha256": "0e236537930699cd9ecd75af836d3311a2ede3f3c13864b663ec71116e2c61fa"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE136252.gsm.txt",
+      "bytes": 1603081,
+      "sha256": "204ac2f387a4519554c8a606894105afcf6e968431c97031d26c81c2d756cd1d"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE136252.soft.txt",
+      "bytes": 13835,
+      "sha256": "903c77b0049ecb01d9427459af7fc2bd172b6809a01a6ae48ff8ee7def028a75"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE312029.soft.txt",
+      "bytes": 6238,
+      "sha256": "37777cadc8ea584d4d1091602899529f02ccb3076d6edaed0c3d78cd74da886b"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE312031.gsm.txt",
+      "bytes": 31976,
+      "sha256": "5f93ffa3aef4680f435eac2b3ffc14021e133c0a00c6da092b04162b05d274d6"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE312031.soft.txt",
+      "bytes": 4836,
+      "sha256": "d8432d1910e16cafcbb26aa22172908885fd697c4d040b795c587acc9758b979"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE314556.gsm.txt",
+      "bytes": 9216,
+      "sha256": "923845da69bc6a78c2c8f1ab9bc72d25bbd0b2d60dcc08777086922a415747f5"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE314556.soft.txt",
+      "bytes": 2797,
+      "sha256": "303f3806ad98b616e574fc5e02d90fd32872fb5924112f4c0abb3aed93b8013f"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE41763.gsm.txt",
+      "bytes": 23030,
+      "sha256": "f5ae3bd9fd3cfacbe55df2c504715cade42d8bfc184d3ff450a7507c6a6bc209"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE41763.soft.txt",
+      "bytes": 3341,
+      "sha256": "26775052dbae3ccfdec9dc30912c558a6b43d8c964b4fbe023e780acee5f0e94"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/GSE41764.soft.txt",
+      "bytes": 2584,
+      "sha256": "22a8ed3d7b579d38a9f0652ad6dd3affdd02b1229b2318df43bfe4734a2d6a35"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/search1.summ.xml",
+      "bytes": 55258,
+      "sha256": "d513b317a0d97972c1ca1e149e211c2a99cfcf2e89b942853cb465e6c56ed02c"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/search1.xml",
+      "bytes": 1877,
+      "sha256": "0ebe24500c461c6147d5fe29d95ff52598583f737a4de3adfa0418cf0dd5286b"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/search2.summ.xml",
+      "bytes": 185162,
+      "sha256": "feaf7b4aa1afa51588c470623cfc3fe7b8337d68a6ca7509f96715343d873539"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/raw/search2.xml",
+      "bytes": 3322,
+      "sha256": "a182695773c91e5460b2e9675901d886850194ef9b11d713679860bd7cfe2da7"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/data-audit/replication-cohorts/report.md",
+      "bytes": 24639,
+      "sha256": "4fc935f7b8ba5b7bfa4246ffdaf6b420c3d9acdcb57331de198dd81d281f3354"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/findings.json",
+      "bytes": 12395,
+      "sha256": "3621e279110081ac4a6d994f41c98853d20bcb2b6fec080807cd73aa71b4c46c"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/query-ledger.json",
+      "bytes": 7024,
+      "sha256": "c46af5b3d52a303f5fcfda60d5906a3f26add2c4ffab1c2ad999a84e72806a70"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/report.md",
+      "bytes": 20065,
+      "sha256": "227f9d27c2b83d6a4daf5daf88a9e3cd8d17f1419a919662e40959d6f2c7b28e"
+    },
+    {
       "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/sources/bertero-2019-jcb.md",
       "bytes": 6747,
       "sha256": "4e4bdea637f1804d985a2c0ef44eb43a09e7e51438a6f89e0c626693da027c22"
     },
     {
-      "source": "prior-art/sources/geo-metadata.md",
       "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/sources/geo-metadata.md",
       "bytes": 6918,
       "sha256": "3b593b02d99319c0895626335211d99829b4a35aa87c27556413370979847d3c"
     },
     {
-      "source": "prior-art/sources/prior-art-class.md",
       "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/sources/prior-art-class.md",
       "bytes": 4323,
       "sha256": "95937af869c04d23e5b86e2366f11e23666563c9192ecff948561e14454b5804"
     },
     {
-      "source": "prior-art/sources/shen-2026-jcb.md",
       "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/prior-art/sources/shen-2026-jcb.md",
       "bytes": 5829,
       "sha256": "bd96f066214d856804304df8fb84f1f0af7888ab4278742e6ec309179dbfe247"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/report.md",
+      "bytes": 8971,
+      "sha256": "671f25ca770742030a654e5f72d6f30499c05b6ee7c15e5422364d06eef01632"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/run-001-FAILED.md",
+      "bytes": 579,
+      "sha256": "02b7f8d316386ae14fd5f95ad4ea8db93caa92c9aa4b0330b8214bb2b39e733e"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/run-001-format-check.txt",
+      "bytes": 275,
+      "sha256": "12a211b7740ac2c8677187dc4454bc9cdd14a2486b8f4721e282e0a856de399f"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/summary.json",
+      "bytes": 10800,
+      "sha256": "b49a589b6a4f314ca359c61ce501b6fe204816eb9afb0be9554e2751e901a8fb"
+    },
+    {
+      "published": "reports/lmna-acute-lamina-vs-chronic-compartment-2026-09-24/results/tiles.tsv",
+      "bytes": 586365,
+      "sha256": "68eeb25ca2d235f821de7d7672dbc628e02093b9ee3486f99ea1cc521b6eb86e"
     }
   ]
 }

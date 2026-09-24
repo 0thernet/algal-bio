@@ -1,8 +1,8 @@
 # Acute lamina change versus chronic compartment change in LMNA-deficient hiPSC-cardiomyocytes: a registered cross-study test
 
 Date: 2026-09-24. Campaign `lmna-acute-lamina-vs-chronic-compartment-2026-09-24`.
-Registered outcome: **not passed** (conjunctive rule; one of sixteen components
-failed). Direction as hypothesised in every arm of both contrasts.
+Registered outcome: **not passed** (conjunctive rule; two of sixteen components
+failed: clone 2 raw and standardised raw effect). Direction as hypothesised in every arm of both contrasts.
 
 ## Question
 
@@ -84,7 +84,7 @@ Registered pass: **false**. Registered opposite direction: false.
   baseline lamina are controlled (−0.150, −0.112), survives per-chromosome
   standardisation, has the same sign in all four replicate pairs, and no
   within-chromosome circular shift of the predictor reproduces it (p at the
-  floor in all twelve permutation arms). The effect is stronger in tiles that
+  floor in all eight permutation arms, six of which are in the pass rule). The effect is stronger in tiles that
   start in compartment B and is reproduced with the DNKASH-arm predictor.
   Tiles in the top decile of acute lamina gain sit about 0.1 PC1 units lower
   in the mutant than tiles in the bottom decile (clone 1).
@@ -121,7 +121,11 @@ program, with the adjusted statistic as primary and an effect floor set from
 the operating characteristics rather than from these observed values. The only
 other human LMNA-loss Hi-C series found is GSE314556 (B-lymphoblastoid); a
 metadata audit of it and of HGPS Hi-C series is in
-`data-audit/replication-cohorts/`. Any such registration will be frozen and
+`data-audit/replication-cohorts/` (metadata only; no outcome file was
+retrieved). Its main findings: GSE314556 deposits only HiC-Pro valid-pair
+files on hg19, so PC1 would have to be computed and the tile grid lifted over,
+and its lineage is lymphoblastoid, so a null would be ambiguous between
+refutation and cardiac specificity. Any such registration will be frozen and
 independently reviewed before the files are downloaded, as here.
 
 ## Execution record
@@ -132,9 +136,9 @@ independently reviewed before the files are downloaded, as here.
 - Freeze-001 2026-09-24T20:13:55Z; intake-001 downloaded; **run-001 failed
   with zero eligible tiles** because the HOMER bedGraphs name chromosomes
   without the `chr` prefix; the crash occurred on empty arrays before any
-  correlation or per-tile value was produced (`results/run-001/FAILED.md`).
+  correlation or per-tile value was produced (`results/run-001-FAILED.md`, the registration's `results/run-001/FAILED.md`).
   Only coordinate columns and chromosome-name counts were inspected.
-- Amendment amend-001: a three-line name adapter and one test. Byte-exact
+- Amendment amend-001: a two-line name adapter and one test. Byte-exact
   copies of the freeze-001 code and tests were reconstructed and hash-match,
   proving nothing else changed (`archive-001/`). Disclosed: the freeze-001
   code bytes differed from the round-2-reviewed bytes by the round-2 minor

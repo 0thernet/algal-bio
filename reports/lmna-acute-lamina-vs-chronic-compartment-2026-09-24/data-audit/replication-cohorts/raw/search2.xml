@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE eSearchResult PUBLIC "-//NLM//DTD esearch 20060628//EN" "https://eutils.ncbi.nlm.nih.gov/eutils/dtd/20060628/esearch.dtd">
+<eSearchResult><Count>18</Count><RetMax>18</RetMax><RetStart>0</RetStart><IdList>
+<Id>200305237</Id>
+<Id>200306294</Id>
+<Id>200312031</Id>
+<Id>200312029</Id>
+<Id>200206707</Id>
+<Id>200206704</Id>
+<Id>200165303</Id>
+<Id>200192739</Id>
+<Id>200186206</Id>
+<Id>200163641</Id>
+<Id>200124409</Id>
+<Id>200124197</Id>
+<Id>200126459</Id>
+<Id>200126458</Id>
+<Id>200080795</Id>
+<Id>200081671</Id>
+<Id>200041764</Id>
+<Id>200041763</Id>
+</IdList><TranslationSet><Translation>     <From>progeria[All Fields]</From>     <To>"progeria"[MeSH Terms] OR progeria[All Fields]</To>    </Translation><Translation>     <From>laminopathy[All Fields]</From>     <To>"laminopathies"[MeSH Terms] OR laminopathy[All Fields]</To>    </Translation><Translation>     <From>LMNB1[All Fields]</From>     <To>LMNB1[All Fields]</To>    </Translation></TranslationSet><TranslationStack>   <TermSet>    <Term>"progeria"[MeSH Terms]</Term>    <Field>MeSH Terms</Field>    <Count>733</Count>    <Explode>Y</Explode>   </TermSet>   <TermSet>    <Term>progeria[All Fields]</Term>    <Field>All Fields</Field>    <Count>733</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <OP>GROUP</OP>   <TermSet>    <Term>HGPS[All Fields]</Term>    <Field>All Fields</Field>    <Count>2689</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <TermSet>    <Term>"laminopathies"[MeSH Terms]</Term>    <Field>MeSH Terms</Field>    <Count>2783</Count>    <Explode>Y</Explode>   </TermSet>   <TermSet>    <Term>laminopathy[All Fields]</Term>    <Field>All Fields</Field>    <Count>18</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <OP>GROUP</OP>   <OP>OR</OP>   <TermSet>    <Term>progerin[All Fields]</Term>    <Field>All Fields</Field>    <Count>281</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <TermSet>    <Term>LMNB1[All Fields]</Term>    <Field>All Fields</Field>    <Count>4979</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <OP>GROUP</OP>   <TermSet>    <Term>"Hi-C"[All Fields]</Term>    <Field>All Fields</Field>    <Count>11885</Count>    <Explode>N</Explode>   </TermSet>   <TermSet>    <Term>"chromosome conformation"[All Fields]</Term>    <Field>All Fields</Field>    <Count>1030</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <TermSet>    <Term>compartment[All Fields]</Term>    <Field>All Fields</Field>    <Count>37045</Count>    <Explode>N</Explode>   </TermSet>   <OP>OR</OP>   <OP>GROUP</OP>   <OP>AND</OP>   <TermSet>    <Term>"Homo sapiens"[Organism]</Term>    <Field>Organism</Field>    <Count>4725276</Count>    <Explode>Y</Explode>   </TermSet>   <OP>AND</OP>   <TermSet>    <Term>"gse"[Entry Type]</Term>    <Field>Entry Type</Field>    <Count>296654</Count>    <Explode>N</Explode>   </TermSet>   <OP>AND</OP>  </TranslationStack><QueryTranslation>(("progeria"[MeSH Terms] OR progeria[All Fields]) OR HGPS[All Fields] OR ("laminopathies"[MeSH Terms] OR laminopathy[All Fields]) OR progerin[All Fields] OR LMNB1[All Fields]) AND ("Hi-C"[All Fields] OR "chromosome conformation"[All Fields] OR compartment[All Fields]) AND "Homo sapiens"[Organism] AND "gse"[Entry Type]</QueryTranslation></eSearchResult>
