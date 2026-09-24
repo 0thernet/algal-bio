@@ -1,0 +1,26 @@
+{
+  "schema": "bio.corroboration-independent-review.v1",
+  "reviewed_at_utc": "2026-09-24T15:31:42.761157+00:00",
+  "registration_sha256": "201e24b9870349bd5a2234fd40f52dbfd7a618fb37b700feb0eb474c0b128efa",
+  "corroborate_sha256": "c81156aa63e243deb1314a32c18a70bb84522af96230e786c874ec5330cdb0f4",
+  "test_corroborate_sha256": "24c4a9853a0e59c5b098124b213e5df19a8a8aa82f8a9b5ab33b237742890f60",
+  "verdict": "pass",
+  "scope": [
+    "frozen candidate order and identities",
+    "discovery source, scientific dependency lock and installed versions",
+    "unique header mapping and gene/sample column separation",
+    "fail-closed explicit symbol mapping",
+    "all-row RNA normalization and corrected-vs-H222P direction",
+    "both-normalization and all-LOO success rule",
+    "missing and ambiguous outcomes retained in original list"
+  ],
+  "review_fixes_accepted": [
+    "Exact requirements.lock and installed dependency-version validation",
+    "Duplicate header and gene/sample overlap rejection",
+    "Explicit admitted gene-symbol mapping kind with identifier-like data refusal"
+  ],
+  "remaining_run_requirement": "Before numerical evaluation retain metadata-derived sample assignment and exact provided symbol-column evidence; otherwise separately review a pinned crosswalk.",
+  "real_rna_matrices_opened": false,
+  "external_study_counts_opened": false,
+  "candidate_outcomes_opened": false
+}

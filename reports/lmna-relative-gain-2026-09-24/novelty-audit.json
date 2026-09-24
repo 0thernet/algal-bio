@@ -1,0 +1,83 @@
+{
+  "schema": "bio.candidate-novelty-audit.v1",
+  "as_of": "2026-09-24",
+  "scope": "Bounded primary-source and Europe PMC candidate searches after the discovery candidate list was frozen. Search absence is not a novelty certificate.",
+  "queries": "sponge/candidate-audit/candidates.json in the private local research packet; six primary captures are retained there with hashes and URLs.",
+  "candidates": [
+    {
+      "gene": "CMTM5",
+      "status": "known_lamin_interactor; exact_live_pattern_unresolved",
+      "evidence": "A primary lamin-A-interactor screen reports CMTM5 among interactors found in all four screens and validated on retest.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4004598/",
+      "implication": "Do not claim CMTM5 as a newly discovered lamin-binding protein. The acute relative-LMNB1/RNA pattern was not established by that paper."
+    },
+    {
+      "gene": "SLC2A14",
+      "status": "no_candidate_specific_primary_hit_in_bounded_search",
+      "evidence": "The retained query returned unrelated or broad disease-expression papers; no primary paper was retained that establishes this exact LMNA/lamina/cardiomyocyte pattern.",
+      "source": "https://europepmc.org/search?query=SLC2A14%20AND%20%28LMNA%20OR%20lamin%20OR%20lamina%20OR%20cardiomyocyte%20OR%20cardiomyopathy%29",
+      "implication": "Candidate-level prior art remains unresolved; absence from this search is not novelty."
+    },
+    {
+      "gene": "NID2",
+      "status": "provisional_progeria_context; exact_live_pattern_unresolved",
+      "evidence": "The bounded search surfaced a 2026 HGPS fibroblast extracellular-matrix paper, but the captured search result does not establish this candidate's acute cardiomyocyte LMNB1/RNA pattern.",
+      "source": "https://europepmc.org/article/MED/42500603",
+      "implication": "Treat as prior-art lead requiring full primary-text and supplement review before any novelty wording."
+    },
+    {
+      "gene": "DCAF8",
+      "status": "no_candidate_specific_primary_hit_in_bounded_search",
+      "evidence": "No retained primary source established the exact LMNA/lamina/cardiomyocyte pattern in the bounded search.",
+      "source": "https://europepmc.org/search?query=DCAF8%20AND%20%28LMNA%20OR%20lamin%20OR%20lamina%20OR%20cardiomyocyte%20OR%20cardiomyopathy%29",
+      "implication": "Not a novelty claim."
+    },
+    {
+      "gene": "PIANP",
+      "status": "known_LMNA_cardiomyopathy_transcriptomic_association",
+      "evidence": "A human myocardial transcriptomic study stratified by cardiomyopathy genotype lists PIANP among the LMNA-group regulated secretory genes.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7768427/",
+      "implication": "Do not claim PIANP as a new LMNA-cardiomyopathy expression association. The relative-LMNB1 signal pattern remains untested there."
+    },
+    {
+      "gene": "MEX3B",
+      "status": "no_candidate_specific_primary_hit_in_bounded_search",
+      "evidence": "Retained hits concerned other tissues or general expression models; no primary paper established this exact lamina/cardiomyocyte pattern.",
+      "source": "https://europepmc.org/search?query=MEX3B%20AND%20%28LMNA%20OR%20lamin%20OR%20lamina%20OR%20cardiomyocyte%20OR%20cardiomyopathy%29",
+      "implication": "Not a novelty claim."
+    },
+    {
+      "gene": "ANKRD52",
+      "status": "no_candidate_specific_primary_hit_in_bounded_search",
+      "evidence": "Retained hits included broad cardiovascular biomarker work but no primary lamina mechanism or exact candidate pattern.",
+      "source": "https://europepmc.org/search?query=ANKRD52%20AND%20%28LMNA%20OR%20lamin%20OR%20lamina%20OR%20cardiomyocyte%20OR%20cardiomyopathy%29",
+      "implication": "Not a novelty claim."
+    },
+    {
+      "gene": "ZFTA",
+      "status": "known_nonlamina_cancer_gene; exact_live_pattern_unresolved",
+      "evidence": "The bounded search returned ZFTA-RELA ependymoma work, not an LMNA cardiomyocyte mechanism.",
+      "source": "https://europepmc.org/article/MED/33741710",
+      "implication": "Do not describe the gene itself as novel; keep any lamina-pattern lead exploratory."
+    },
+    {
+      "gene": "FYCO1",
+      "status": "known_cardiac_autophagy_and_pressure_overload_gene",
+      "evidence": "A primary study reports FYCO1 control of cardiomyocyte autophagy and cardiac function under pressure overload.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8093479/",
+      "implication": "Do not claim a new FYCO1 cardiac-function or autophagy discovery. The LMNB1/RNA pattern was not validated by that study."
+    },
+    {
+      "gene": "LYSMD3",
+      "status": "lamina_prior_art_relevant; exact_candidate_status_unresolved",
+      "evidence": "A primary genome-wide lamin-A/progerin promoter-mapping paper is directly relevant to the candidate search, but its captured main text does not mention LYSMD3 by symbol and its supplementary gene tables were not rechecked here.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3443488/",
+      "implication": "LYSMD3 is the most useful follow-up lead after filtering, but cannot be called a novel lamina-associated gene until that supplement and independent data are checked."
+    }
+  ],
+  "known_class_boundaries": [
+    "Gained LADs, LAD-boundary behavior, and LINC/DNKASH-dependent chromatin preservation are established prior-art classes in the retained packet.",
+    "DNKASH tracks in this campaign are chromatin context only; no DNKASH RNA rescue measurement exists.",
+    "The independent H222P comparison tests RNA direction only and is not matched biological replication or mechanistic validation."
+  ]
+}

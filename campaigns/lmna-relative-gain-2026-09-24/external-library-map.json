@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-09-24T15:23:02.109118+00:00",
+  "metadata_sha256": "d57e8c6344ec4ceeea084995b92c48519d38c59517af5ca709e20cbe7ccd9c2f",
+  "rows": [
+    {
+      "accession": "GSM9153134",
+      "group": "Corrected Isogenic control",
+      "library": "CM_C1-3_DC126"
+    },
+    {
+      "accession": "GSM9153135",
+      "group": "Corrected Isogenic control",
+      "library": "CM_C1-3_DC130"
+    },
+    {
+      "accession": "GSM9153136",
+      "group": "Corrected Isogenic control",
+      "library": "CM_C1-3_DC133"
+    },
+    {
+      "accession": "GSM9153137",
+      "group": "Corrected Isogenic control",
+      "library": "CM_C1-3_DC142"
+    },
+    {
+      "accession": "GSM9153138",
+      "group": "Corrected Isogenic control",
+      "library": "CM_C1-3_DC143"
+    },
+    {
+      "accession": "GSM9153139",
+      "group": "Corrected Isogenic control",
+      "library": "CM_C1-3_DC145"
+    },
+    {
+      "accession": "GSM9153140",
+      "group": "LMNAH222P",
+      "library": "CM_LMNA_H222P_DC27"
+    },
+    {
+      "accession": "GSM9153141",
+      "group": "LMNAH222P",
+      "library": "CM_LMNA_H222P_DC31"
+    },
+    {
+      "accession": "GSM9153142",
+      "group": "LMNAH222P",
+      "library": "CM_LMNA_H222P_DC38"
+    },
+    {
+      "accession": "GSM9153143",
+      "group": "LMNAH222P",
+      "library": "CM_LMNA_H222P_DC40"
+    },
+    {
+      "accession": "GSM9153144",
+      "group": "LMNAH222P",
+      "library": "CM_LMNA_H222P_DC74"
+    },
+    {
+      "accession": "GSM9153145",
+      "group": "LMNAH222P",
+      "library": "CM_LMNA_H222P_DC75"
+    }
+  ],
+  "header_mapping_rule": "Match exact library names or casefolded alphanumeric-equivalent identifiers (to allow punctuation-only formatting by R). Any ambiguous/nonunique mapping stops analysis; any additional prefix or suffix needs explicit metadata-only intake record before value inspection."
+}

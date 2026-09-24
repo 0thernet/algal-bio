@@ -1,0 +1,45 @@
+{
+  "analysis_sha256": "575e21b471111eb61d84ed2339b0ac9b68865595bfdc79b4322d0f09705b0a88",
+  "campaign_id": "lmna-relative-lamina-gain-2026-09-24",
+  "inputs": {
+    "files": [
+      {
+        "bytes": 281182,
+        "path": "GSE300197_RNA.counts.txt.gz",
+        "sha256": "44652a669623089ae1600af79e917bd1bd706a163a589736de507b1bb377d02f"
+      },
+      {
+        "bytes": 2723178,
+        "path": "GSE300197_siScr.mCh.CR.zscore.bw",
+        "sha256": "9f215ce03c0a40c3717b27b36bc7ace22c686dceefb24a86096d573eebb12a2f"
+      },
+      {
+        "bytes": 2720745,
+        "path": "GSE300197_siLMNA.mCh.CR.zscore.bw",
+        "sha256": "cb4332fa4b49d98ac025851504fd15c6ac6f1f0e093adc0fd4a84e7100ed0af6"
+      },
+      {
+        "bytes": 2721577,
+        "path": "GSE300197_siScr.DNK.CR.zscore.bw",
+        "sha256": "f4b82fe37a7fee74c81428a5560bd80e1c4ae18c9864d239627113d5cd06e854"
+      },
+      {
+        "bytes": 2718951,
+        "path": "GSE300197_siLMNA.DNK.CR.zscore.bw",
+        "sha256": "fdb9a7659947c5be543017df1d1f3e45f9a9522400177f18b718df533e045c2e"
+      },
+      {
+        "bytes": 2521395,
+        "path": "hg38-ncbiRefSeqSelect.txt.gz",
+        "sha256": "c57ad06a75bf02c48a69ea233fa814e9f7d653b9b586d7f81435729cc1f49828"
+      }
+    ]
+  },
+  "inputs_manifest_sha256": "0eb7d5c82a3f0419ea7cac24e59119c89ef173cf8c45eafc6329b2c12cdbc775",
+  "numpy": "2.3.3",
+  "pybigwig": "0.3.24",
+  "python": "3.12.14",
+  "registration_sha256": "201e24b9870349bd5a2234fd40f52dbfd7a618fb37b700feb0eb474c0b128efa",
+  "requirements_lock_sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+  "scipy": "1.16.2"
+}

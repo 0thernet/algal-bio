@@ -1,0 +1,13 @@
+{
+  "schema": "bio.sponge-local-evidence-receipt.v1",
+  "recorded_utc": "2026-09-24T15:46:13.002127+00:00",
+  "status": "ready",
+  "evidence_count": 10,
+  "finding_count": 13,
+  "export_name": "packet-with-results-20260924.json",
+  "export_sha256": "1074f74f36d22089268079e8d56c76df9146d42da262c5c66a87e9882311c6db",
+  "packet_report_sha256": "caeb9a9d910f5f6bebe65f967590ac1ce06f619d3b9a70df076fa257a889c873",
+  "hosted_auth_used": false,
+  "remote_write": false,
+  "claim_boundary": "Local Sponge packet supports prior-art and interpretation boundaries; it is not a hosted Sponge attestation or novelty certificate."
+}

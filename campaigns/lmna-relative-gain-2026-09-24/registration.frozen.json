@@ -1,0 +1,122 @@
+{
+  "campaign_id": "lmna-relative-lamina-gain-2026-09-24",
+  "status": "frozen_before_full_expression_measurement",
+  "created_utc": "2026-09-24T15:16:47.480432+00:00",
+  "question": "Do specific expressed loci with increased relative LMNB1 signal after acute LMNA depletion show early RNA repression, attenuation of the chromatin change by DNKASH, and the same RNA direction in an independent LMNA H222P study?",
+  "claim_ceiling": "Exploratory computational association and candidate prioritization; no novel mechanism, causal repression, absolute lamina recruitment, gene-expression rescue, or wet-lab validation.",
+  "access_disclosure": [
+    "Discovery matrix header and first four gene rows A1BG/A1CF/A2M/A2ML1 inspected for intake only; no complete matrix or candidate ranking inspected before draft.",
+    "Paper, study metadata, bigWig format and annotation inspected.",
+    "External GSE304575 expression values not downloaded or opened. Literature and sample metadata may have been inspected.",
+    "Within-session freezing is not independently timestamped preregistration. External public data and model pretraining contamination cannot be ruled out."
+  ],
+  "discovery": {
+    "accession": "GSE300197",
+    "rna_columns": {
+      "control": [
+        "siScr.mCh.e1b1",
+        "siScr.mCh.e1b2",
+        "siScr.mCh.e1b3"
+      ],
+      "case": [
+        "siLMNA.mCh.e1b1",
+        "siLMNA.mCh.e1b2",
+        "siLMNA.mCh.e1b3",
+        "siLMNA.mCh.e1b4"
+      ]
+    },
+    "unit_caveat": "7 processed expression columns (3+4); GEO has14 technical RNA libraries and manuscript caption says4+4. Do not infer independent cultures or14 biological replicates.",
+    "chromatin": "Four deposited condition-aggregate smoothed z-score bigWigs; no replicate uncertainty. Table S2 unavailable; no EDD LAD calls reconstructed."
+  },
+  "annotation": {
+    "source": "UCSC hg38 ncbiRefSeqSelect 2025-08-13 dump",
+    "chromosomes": "chr1-22",
+    "symbol_join": "exact case-sensitive gene symbol; exclude ambiguous symbols and unmatched rows; duplicate RNA symbols abort",
+    "tss": "0-based txStart for +, txEnd-1 for -",
+    "window_half_width_bp": 50000,
+    "sensitivity_half_width_bp": [
+      25000,
+      100000
+    ],
+    "coverage_minimum": 0.9,
+    "average": "base-weighted mean over finite covered intervals, common covered bases across four tracks; clip to chromosome bounds. No missing-to-zero imputation.",
+    "window_coordinates": "half-open [max(0,TSS-h),min(chrLen,TSS+h)); common finite covered bases across all four tracks"
+  },
+  "rna": {
+    "normalization_primary": "CPM using full deposited library totals; log2(CPM+0.5). Case mean log2CPM minus control mean log2CPM.",
+    "normalization_sensitivity": "Median-ratio size factors on genes positive in all columns, scale geometric mean size factor to1; convert normalized counts to common CPM scale using mean library size; same log2 pseudocount.",
+    "expression_filter": "Control-only: CPM>=1 in>=2 of3 control columns AND mean control CPM>=1",
+    "robustness": "All7 leave-one-column-out contrasts must be negative for candidate selection. No transcript-level DE p-values reported.",
+    "validation": "Require finite nonnegative integer gene counts, nonzero column sums and exact7column order; duplicate symbols abort. Library totals are sums of all rows in the deposited gene-count matrix, not sequenced reads.",
+    "absolute_expression_caveat": "All RNA contrasts are compositional relative expression. No spike-in/absolute RNA loss claim."
+  },
+  "screen": {
+    "universe": "RNA expressed genes with unique autosomal TSS and>=90% common finite coverage in primary window",
+    "baseline": "mean siScr.mCh z-score<=0",
+    "gain": "siLMNA.mCh minus siScr.mCh; positive and at least90th percentile among baseline-eligible genes",
+    "rna_candidate_threshold": "case-control mean log2(CPM+0.5)<=-0.5",
+    "dnk_interaction": "(siLMNA.DNK-siScr.DNK)-(siLMNA.mCh-siScr.mCh); candidate requires<0; explicitly retain siScr.DNK-siScr.mCh main effect",
+    "ranking": "ascending RNA contrast, descending LMNB1 gain, lexicographic symbol; retain<=10 with TSS at least500kb from an earlier retained gene on same chromosome",
+    "known_exclusions": [
+      "LMNA",
+      "MCU",
+      "MICU1",
+      "SPATA18",
+      "FDXR",
+      "NDUFAF7"
+    ],
+    "no_backfill": "If fewer than10 pass, retain fewer; if none pass, record negative result without changing thresholds.",
+    "known_exclusions_scope": "Only exclude named genes from novel-candidate selection; retain in percentile universe, class controls and measurements.",
+    "sensitivities": "CPM vs median-ratio and25/100kb half-width measurements cannot add/backfill candidates; insufficient coverage is unevaluable.",
+    "dnk_interpretation": "Negative interaction is mathematically coupled to selection of large mCh gain; descriptive prioritization only, not independent rescue evidence. Retain all4means, both DNK main effects and residual LMNA contrast in DNK; distinguish attenuation from reversal."
+  },
+  "association_controls": {
+    "matched_controls": "Screen=baseline<=0 and gain>0 and>=90th percentile among baseline-eligible genes, before RNA-direction/LOO/DNK selection and known-gene exclusion. Controls from baseline-eligible nonscreen genes on same chromosome and>1Mb from screen TSS; choose5nearest by squared Euclidean distance of covariates standardized across baseline-eligible universe: log2(mean control CPM+0.5),log10 transcript span,baseline LMNB1,log1p annotated TSS count within1Mb. With replacement across screen genes. Zero-SD covariate=0; ties break gene symbol; if<5 eligible controls exclude anchor from matched statistic and report. Report standardized covariate balance.",
+    "class_effect": "Mean screen-minus-matched-control RNA contrast. Descriptive1Mb anchor-TSS-block bootstrap95% percentile interval,seed20260924,2000draws; retain all anchors in sampled blocks with their existing controls. Shared/distant reused controls violate simple independent-block interpretation; not biological CI. Also report leave-one-chromosome-out point effects.",
+    "continuous": "Spearman correlation LMNB1 gain versus RNA contrast in eligible universe.",
+    "spatial_null": "Diagnostic1999 independently chromosome-wise circular shifts of RNA-contrast vectors ordered by TSS, shift sampled uniformly20..n-20 inclusive. Restrict null and its matched observed statistic to chromosomes with>=41 eligible genes; separately retain full-universe Spearman and list omitted chromosomes. Fixed eligibility. Lower-tail=(1+count(null<=observed))/2000. Preserves gene order but not exact distances, not biological-replicate or locus-level significance."
+  },
+  "corroboration": {
+    "accession": "GSE304575",
+    "freeze": "Write hash-bound ordered candidate list, analysis source, locked dependencies, registration and all discovery input hashes BEFORE fetching external counts. No replacement after external outcomes.",
+    "analysis": "Use available exact unique gene symbols first. Otherwise version-stripped Ensembl with pinned authoritative Gencode v31/Ensembl crosswalk, or documented RefSeq/Entrez crosswalk as appropriate; exclude ambiguous mappings. Same CPM log2(CPM+0.5) and median-ratio sensitivity; compare H222P vs corrected isogenic control.",
+    "pass": "Candidate RNA contrast<0 under both normalizations and all leave-one-column-out CPM contrasts<0. Count successes among all frozen evaluable candidates; retain missing/discordant outcomes.",
+    "limitations": "Different LMNA perturbation and time context, one patient genetic background; library/culture independence unresolved. Corroborates RNA direction only, not chromatin mechanism."
+  },
+  "novelty": "Search candidate symbols and aliases with LMNA/lamin/cardiomyocyte/LAD/DNKASH/SUN1/SUN2/repression, read primary sources where accessible; no-hit is not proof of novelty. Known gained-LAD class, boundary behavior and mitochondrial MCU/MICU1 findings cannot be claimed novel.",
+  "execution": {
+    "authority": "User explicitly authorized live Sponge/XCB or Vercel Gateway with <=25USD additional spend.",
+    "sponge": "Local source/evidence packet; hosted token absent.",
+    "provider": "Preferred XCB/Devin SWE-2 unavailable due expired qualification/source-build mismatch. Vercel Gateway anthropic/claude-sonnet-5 with anthropic-only routing, tool-free critique/interpretation.",
+    "limits": {
+      "user_total_usd": 25,
+      "gateway_key_usd": 5,
+      "max_requests": 6,
+      "max_prompt_utf8_bytes_per_request": 48000,
+      "max_completion_tokens": 8000,
+      "reservation_usd_per_request": 0.5,
+      "max_response_bytes": 262144
+    },
+    "compute": "Trusted local analyst Python only; no cloud compute purchased or model-generated executable admitted.",
+    "isolation_scope": "Manual bounded analyst campaign, not activation or qualification of the repository offline-only Campaign API. No claim of autonomous sandbox/evaluator isolation."
+  },
+  "frozen_utc": "2026-09-24T15:19:30.300356+00:00",
+  "model_review": {
+    "route": "Vercel Gateway / anthropic / anthropic/claude-sonnet-5",
+    "record": "gateway/runs/public-methods",
+    "reported_cost_usd": 0.019722,
+    "scope": "Public dataset facts and generic methodology only; full unpublished design was not transmitted.",
+    "accepted": [
+      "Use explicit genomic aggregation.",
+      "Z-score profile differences have no replicate significance.",
+      "Match baseline state.",
+      "Separate-study RNA direction is weak corroboration, not mechanism validation."
+    ],
+    "rejected": [
+      "Select controls using no significant RNA change: conditions controls on response.",
+      "DNKASH LMNB1-RNA concordance/rescue: no DNKASH RNA data supplied.",
+      "Require significant RNA DE with7assumed biological replicates: actual culture independence unresolved."
+    ],
+    "authority": "Advice only; no model-generated code executed; trusted analyst owns frozen protocol."
+  }
+}

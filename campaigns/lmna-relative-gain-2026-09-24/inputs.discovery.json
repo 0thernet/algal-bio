@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "GSE300197_RNA.counts.txt.gz",
+      "bytes": 281182,
+      "sha256": "44652a669623089ae1600af79e917bd1bd706a163a589736de507b1bb377d02f"
+    },
+    {
+      "path": "GSE300197_siScr.mCh.CR.zscore.bw",
+      "bytes": 2723178,
+      "sha256": "9f215ce03c0a40c3717b27b36bc7ace22c686dceefb24a86096d573eebb12a2f"
+    },
+    {
+      "path": "GSE300197_siLMNA.mCh.CR.zscore.bw",
+      "bytes": 2720745,
+      "sha256": "cb4332fa4b49d98ac025851504fd15c6ac6f1f0e093adc0fd4a84e7100ed0af6"
+    },
+    {
+      "path": "GSE300197_siScr.DNK.CR.zscore.bw",
+      "bytes": 2721577,
+      "sha256": "f4b82fe37a7fee74c81428a5560bd80e1c4ae18c9864d239627113d5cd06e854"
+    },
+    {
+      "path": "GSE300197_siLMNA.DNK.CR.zscore.bw",
+      "bytes": 2718951,
+      "sha256": "fdb9a7659947c5be543017df1d1f3e45f9a9522400177f18b718df533e045c2e"
+    },
+    {
+      "path": "hg38-ncbiRefSeqSelect.txt.gz",
+      "bytes": 2521395,
+      "sha256": "c57ad06a75bf02c48a69ea233fa814e9f7d653b9b586d7f81435729cc1f49828"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "bytes": 41775,
+      "path": "candidates.frozen.json",
+      "sha256": "b09d1eeb9c8de5fff5a8653ded43e7fd13b78d8496243d770daa2db2b43acb1c"
+    },
+    {
+      "bytes": 52419,
+      "path": "circular-null.tsv",
+      "sha256": "94219a5b9c69bcad6b6446cc215f4c011adf1c4fe89b5864f202a5464031fdf3"
+    },
+    {
+      "bytes": 21889293,
+      "path": "gene-measurements.tsv",
+      "sha256": "2059c734a7e3b4a25183217f984ec43521962fd33452968931b8bc059959a157"
+    },
+    {
+      "bytes": 1635,
+      "path": "intent.json",
+      "sha256": "c4bb1780efb132506a8bf155dc0807c1836e20d80d56f9108bd8ef7f454410ef"
+    },
+    {
+      "bytes": 223554,
+      "path": "matched-controls.tsv",
+      "sha256": "9a60056bbf27347ff837a64eb53b4a82fdc8542d4d7d9d9eb8d1f78a4950c31b"
+    },
+    {
+      "bytes": 27234,
+      "path": "summary.json",
+      "sha256": "ae78a3fc66779a03037eb532e5e47adca110b9dd4cffdd7044eb6c8d596ca680"
+    }
+  ]
+}
