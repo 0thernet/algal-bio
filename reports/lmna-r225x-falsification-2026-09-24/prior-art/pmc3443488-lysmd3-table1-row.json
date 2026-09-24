@@ -1,0 +1,55 @@
+{
+  "schema": "bio.prior-art.table-row.v1",
+  "extracted_at": "2026-09-24T16:57:14.000903+00:00",
+  "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3443488/#Tab1",
+  "doi": "10.1007/s00412-012-0376-7",
+  "source_html_sha256": "c6092449b7886ed536004493861cd69a449ed86914589c56782320ec932b5a59",
+  "source_char_range": [
+    104449,
+    104975
+  ],
+  "retained_markdown_sha256": "f3365bdaa00bc580ae72bcd0d1bc25c026ab79b57ffb67f3c39cd279d091fb26",
+  "table_caption": "A-type lamin-associated genes that change expression upon introduction of lamin A or progerin",
+  "row_html": "<tr>\n<td colspan=\"1\" rowspan=\"1\">80289</td>\n<td colspan=\"1\" rowspan=\"1\">Lysmd3</td>\n<td colspan=\"1\" rowspan=\"1\">MEF A&amp;P Common</td>\n<td colspan=\"1\" rowspan=\"1\">2.24</td>\n<td colspan=\"1\" rowspan=\"1\">2.37</td>\n<td colspan=\"1\" rowspan=\"1\">2.41</td>\n<td colspan=\"1\" rowspan=\"1\">1.09</td>\n<td colspan=\"1\" rowspan=\"1\">1.13<sup>a</sup>\n</td>\n<td colspan=\"1\" rowspan=\"1\">1.03</td>\n<td colspan=\"1\" rowspan=\"1\">A-</td>\n<td colspan=\"1\" rowspan=\"1\">P↑</td>\n<td colspan=\"1\" rowspan=\"1\">No</td>\n<td colspan=\"1\" rowspan=\"1\">No</td>\n</tr>",
+  "header_html": "<thead><tr>\n<th colspan=\"1\" rowspan=\"1\">Entrez gene ID</th>\n<th colspan=\"1\" rowspan=\"1\">Gene abbreviation</th>\n<th colspan=\"1\" rowspan=\"1\">Target type</th>\n<th colspan=\"1\" rowspan=\"1\">Expression WT+Ctrl</th>\n<th colspan=\"1\" rowspan=\"1\">Expression WT+OST-A</th>\n<th colspan=\"1\" rowspan=\"1\">Expression WT+OST-P</th>\n<th colspan=\"1\" rowspan=\"1\">FC A/Ctrl</th>\n<th colspan=\"1\" rowspan=\"1\">FC P/Ctrl</th>\n<th colspan=\"1\" rowspan=\"1\">FC P/A</th>\n<th colspan=\"2\" rowspan=\"1\">Expression change</th>\n<th colspan=\"1\" rowspan=\"1\">Regulator of transcription?</th>\n<th colspan=\"1\" rowspan=\"1\">HGPS candidate?</th>\n</tr></thead>",
+  "row_cells": [
+    "80289",
+    "Lysmd3",
+    "MEF A&P Common",
+    "2.24",
+    "2.37",
+    "2.41",
+    "1.09",
+    "1.13 a",
+    "1.03",
+    "A-",
+    "P↑",
+    "No",
+    "No"
+  ],
+  "column_values": {
+    "Entrez gene ID": "80289",
+    "Gene abbreviation": "Lysmd3",
+    "Target type": "MEF A&P Common",
+    "Expression WT+Ctrl": "2.24",
+    "Expression WT+OST-A": "2.37",
+    "Expression WT+OST-P": "2.41",
+    "FC A/Ctrl": "1.09",
+    "FC P/Ctrl": "1.13 (superscript a)",
+    "FC P/A": "1.03",
+    "Expression change lamin A": "A-",
+    "Expression change progerin": "P↑",
+    "Regulator of transcription?": "No",
+    "HGPS candidate?": "No"
+  },
+  "interpretation": {
+    "organism": "Mus musculus",
+    "cell_model": "mouse embryonic fibroblasts",
+    "binding": "Gene promoter was in common lamin-A/progerin ChIP target set; not a demonstrated protein-protein interaction.",
+    "expression": "Published linear progerin/control fold change 1.13 carries a p<0.05 ANOVA mark; no fold-change threshold. Lamin-A/control and progerin/lamin-A values have no mark.",
+    "hgps": "Authors did not designate Lysmd3 an HGPS candidate.",
+    "cardiac": "This row is MEF-specific; article-wide use of NklTAg myocytes does not establish a Lysmd3-specific cardiac effect."
+  },
+  "table_footnote_html": "<div class=\"tw-foot p\"><div class=\"fn\" id=\"_fn_p34\"><p>\n<sup>a</sup>mRNA expression level linear fold changes differ significantly (<em>p</em> &lt; 0.05, no fold change criterion; ANOVA) in MEF OST-A vs. empty control cells, in MEF OST-P vs. empty control cells, or in MEF OST-P vs. MEF OST-A. HGPS candidates are indicated (yes/no) based on significantly changing expression levels upon the introduction of OST-P as compared to both empty control cells and MEF OST-A expression levels. When both MEF OST-P and MEF OST-A expression levels changed significantly compared to empty control cells, only those genes in which expression changes were opposite or in similar direction, but more pronounced upon the introduction of OST-P, were selected as HGPS candidates. Genes involved in “regulation of transcription,” as based on the gene ontology annotation, are indicated within the second last column.</p></div></div>",
+  "table_footnote_text": "a mRNA expression level linear fold changes differ significantly ( p < 0.05, no fold change criterion; ANOVA) in MEF OST-A vs. empty control cells, in MEF OST-P vs. empty control cells, or in MEF OST-P vs. MEF OST-A. HGPS candidates are indicated (yes/no) based on significantly changing expression levels upon the introduction of OST-P as compared to both empty control cells and MEF OST-A expression levels. When both MEF OST-P and MEF OST-A expression levels changed significantly compared to empty control cells, only those genes in which expression changes were opposite or in similar direction, but more pronounced upon the introduction of OST-P, were selected as HGPS candidates. Genes involved in “regulation of transcription,” as based on the gene ontology annotation, are indicated within the second last column."
+}

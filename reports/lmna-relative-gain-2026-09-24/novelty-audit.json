@@ -69,15 +69,25 @@
     },
     {
       "gene": "LYSMD3",
-      "status": "lamina_prior_art_relevant; exact_candidate_status_unresolved",
-      "evidence": "A primary genome-wide lamin-A/progerin promoter-mapping paper is directly relevant to the candidate search, but its captured main text does not mention LYSMD3 by symbol and its supplementary gene tables were not rechecked here.",
+      "status": "known_lamin_A_and_progerin_target_in_mouse_embryonic_fibroblasts; human_cardiomyocyte_pattern_unresolved",
+      "evidence": "Kubben et al. (2012), main Table 1, explicitly lists mouse Lysmd3 (Entrez80289) as MEF A&P Common, with progerin/control fold change1.13 and P-up classification. The original audit missed the mixed-case symbol in an already-retained table; exact error cause is unresolved, although uppercase-only matching would miss it.",
       "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3443488/",
-      "implication": "LYSMD3 is the most useful follow-up lead after filtering, but cannot be called a novel lamina-associated gene until that supplement and independent data are checked."
+      "implication": "Retire new lamin-target or new lamin/progerin relation claims. Any human cardiomyocyte expression pattern remains a context-specific hypothesis requiring independent data."
     }
   ],
   "known_class_boundaries": [
     "Gained LADs, LAD-boundary behavior, and LINC/DNKASH-dependent chromatin preservation are established prior-art classes in the retained packet.",
     "DNKASH tracks in this campaign are chromatin context only; no DNKASH RNA rescue measurement exists.",
     "The independent H222P comparison tests RNA direction only and is not matched biological replication or mechanistic validation."
+  ],
+  "corrections": [
+    {
+      "recorded_utc": "2026-09-24T17:01:58.145393+00:00",
+      "gene": "LYSMD3",
+      "previous_status": "main text did not mention exact symbol; supplementary table unresolved",
+      "corrected_status": "Main Table1 contains Lysmd3; prior artifact already contained this table. Exact error cause is unresolved; uppercase-only matching would miss the spelling.",
+      "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3443488/",
+      "scientific_effect": "Broad novelty claim retired; original numerical results unchanged."
+    }
   ]
 }

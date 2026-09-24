@@ -1,0 +1,37 @@
+{
+  "schema": "bio.r225x-preoutcome-candidate-map.v1",
+  "source_sha256": "7a32b0e1a50ed53c5c19cb29985e4e3b98c06d30673e1cae3822c986a06a1edd",
+  "candidate_tracking_ids": {
+    "CMTM5": [
+      "ENSG00000166091"
+    ],
+    "SLC2A14": [
+      "ENSG00000173262"
+    ],
+    "NID2": [
+      "ENSG00000087303"
+    ],
+    "DCAF8": [
+      "ENSG00000132716"
+    ],
+    "PIANP": [
+      "ENSG00000139200"
+    ],
+    "MEX3B": [
+      "ENSG00000183496"
+    ],
+    "ANKRD52": [
+      "ENSG00000139645"
+    ],
+    "ZFTA": [
+      "ENSG00000188070"
+    ],
+    "FYCO1": [
+      "ENSG00000163820"
+    ],
+    "LYSMD3": [
+      "ENSG00000176018"
+    ]
+  },
+  "source_metadata": "GSE126458.frozen-input-map.json"
+}

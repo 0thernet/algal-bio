@@ -1,0 +1,175 @@
+{
+  "schema": "bio.prior-art.local-manifest.v1",
+  "date": "2026-09-24",
+  "files": [
+    {
+      "path": "additional-primary-excerpts.json",
+      "bytes": 2074,
+      "sha256": "f85885f809d9089b067398350ae9a2e86919dd93eeac3921e86c77d9fb33efbb",
+      "in_git": true
+    },
+    {
+      "path": "findings.json",
+      "bytes": 4480,
+      "sha256": "cfb106703dd288cccb1535ee6afdc284ee8547439bf838f9320a5c9eed41bbc2",
+      "in_git": true
+    },
+    {
+      "path": "gaps.json",
+      "bytes": 1296,
+      "sha256": "0f074db5d401551559261b2cafca455dd00c4805fcf3906c218f112d3355e040",
+      "in_git": true
+    },
+    {
+      "path": "lysmd3-2012-complete/capture.json",
+      "bytes": 1699,
+      "sha256": "705fd6b9ce2045350183c29e7b07df81522d14f11d0042a732040159253ad910",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-2012-complete/evidence/source.html",
+      "bytes": 230257,
+      "sha256": "c6092449b7886ed536004493861cd69a449ed86914589c56782320ec932b5a59",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-2012-complete/lysmd3-2012-complete.md",
+      "bytes": 122701,
+      "sha256": "f3365bdaa00bc580ae72bcd0d1bc25c026ab79b57ffb67f3c39cd279d091fb26",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-cardiac-development-2017/capture.json",
+      "bytes": 1707,
+      "sha256": "7db87c135f81c3156797fc2a4b61309aae5c2b0be3386f211d6836945e4b46ce",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-cardiac-development-2017/evidence/source.html",
+      "bytes": 309762,
+      "sha256": "c9a9d06305cc7be8f74697cb04f71670d04884b18dd7f43c01c41cff731ff550",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-cardiac-development-2017/lysmd3-cardiac-development-2017.md",
+      "bytes": 89918,
+      "sha256": "8b1740ddc2ae23161b89ada3a17a4c0d642ae4bb5f253e3552724a435bd5a38e",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-human-gene/capture.json",
+      "bytes": 1659,
+      "sha256": "39c4489b6599a06ef3ed776d8323cfa9ab1492d4fe9e73055569fff82b5273d8",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-human-gene/evidence/source.html",
+      "bytes": 958,
+      "sha256": "e801f03a5e64d1b1a4a32b77fc3ddf066459cc45b88a8180f781b1b734ccb557",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-human-gene/lysmd3-human-gene.md",
+      "bytes": 366,
+      "sha256": "446925ef3e7f5c1f392c50a0601b4ad1687cd5145ca666198a71bed276a00cc0",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-hypertension-2025/capture.json",
+      "bytes": 1707,
+      "sha256": "758e1e3e0fbac662d593e0d8c1835e36f9aa456cc58018420256852a9b2d2e9f",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-hypertension-2025/evidence/source.html",
+      "bytes": 197405,
+      "sha256": "d3b8337438f81869bfeded70309748861aae61d8a7f0fe0fd8ef71440b4baa7e",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-hypertension-2025/lysmd3-hypertension-2025.md",
+      "bytes": 131066,
+      "sha256": "0f317377f63fe84c05b3c07bbbbc3bf2d4c92c88c5b7e8b3384a3cca759163d7",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-mouse-gene/capture.json",
+      "bytes": 1656,
+      "sha256": "238ad340f23ad0268040720038dd8f26a43683e586c5e68a287d7623daa037f7",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-mouse-gene/evidence/source.html",
+      "bytes": 958,
+      "sha256": "e801f03a5e64d1b1a4a32b77fc3ddf066459cc45b88a8180f781b1b734ccb557",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "lysmd3-mouse-gene/lysmd3-mouse-gene.md",
+      "bytes": 365,
+      "sha256": "f1af8b656c42cc50e48d41fef8c3e97c46077426bb2704b50dfbd934f2b26945",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "ncbi-gene-web-evidence.json",
+      "bytes": 27792,
+      "sha256": "1a28f6a41a8b33307401695cfdda6cee16b3952a9bf56de24c29230976fff0c3",
+      "in_git": true
+    },
+    {
+      "path": "pmc3443488-lysmd3-row.html",
+      "bytes": 2258,
+      "sha256": "19f349934c34bc44bfd71ed30c7fff21ac89f673b73a85c54428667217e24b85",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "pmc3443488-lysmd3-table1-row.json",
+      "bytes": 4970,
+      "sha256": "4c9d7ba55731c648a5032cf3f9da9c951d462166cea1b3f53a78a0f29c047020",
+      "in_git": true
+    },
+    {
+      "path": "pmc3443488-table1-source-fragment.html",
+      "bytes": 103672,
+      "sha256": "c8acdf24f25160442444450eab73edf8e8cd934473439697066c28a861d7f6f3",
+      "in_git": false,
+      "retention": "retained locally, hash-bound, not tracked in Git (full-text capture or raw HTML fragment excluded by repository policy)"
+    },
+    {
+      "path": "query-ledger.json",
+      "bytes": 1189,
+      "sha256": "6e54876c307138aa8768867f360e10dedbc5a4c418de63b032199532860f2c55",
+      "in_git": true
+    },
+    {
+      "path": "report.md",
+      "bytes": 5635,
+      "sha256": "8027f14c24d705ec91bb320f32e59efa44a13ec7462ecb4fc534526209361575",
+      "in_git": true
+    }
+  ],
+  "validation": {
+    "json_parse": "passed",
+    "table_row_matches_source_offset": "passed",
+    "additional_excerpts_match_source_offsets": "passed"
+  },
+  "no_paid_calls": true,
+  "no_remote_writes": true,
+  "git_tracking_note": "17 of 24 listed files are retained outside Git; each carries in_git=false and a retention note. Hashes were computed on the retained copies."
+}

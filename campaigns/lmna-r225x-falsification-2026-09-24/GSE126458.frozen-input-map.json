@@ -1,0 +1,186 @@
+{
+  "schema": "bio.preoutcome-mapping.v1",
+  "accession": "GSE126458",
+  "created_utc": "2026-09-24T16:57:47.652069+00:00",
+  "numerical_outcomes_observed": false,
+  "matrix_source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/suppl/GSE126458_genes.fpkm_table.txt.gz",
+  "identifier_source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126458/suppl/GSE126458_gene_exp.diff.gz",
+  "metadata_sha256": "754434145fcbdea168980eb4fd633c4fe668590f0fed8a1eb9fb272053e199df",
+  "header_receipt": "matrix-headers-only.json",
+  "gene_crosswalk_sha256": "92d7b4a7eff7fee4f0fe421e0eaf378802bc0f6247104d7ce2c098006557f33e",
+  "samples": [
+    {
+      "accession": "GSM3602079",
+      "title": "RNA-seq library corrected 1 rep 1",
+      "matrix_column": "R225R_15_1_0",
+      "group": "corrected_clone_15",
+      "biological_unit": "independent differentiation",
+      "replicate": 1,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602079"
+    },
+    {
+      "accession": "GSM3602080",
+      "title": "RNA-seq library corrected 1 rep 2",
+      "matrix_column": "R225R_15_2_0",
+      "group": "corrected_clone_15",
+      "biological_unit": "independent differentiation",
+      "replicate": 2,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602080"
+    },
+    {
+      "accession": "GSM3602081",
+      "title": "RNA-seq library corrected 1 rep 3",
+      "matrix_column": "R225R_15_3_0",
+      "group": "corrected_clone_15",
+      "biological_unit": "independent differentiation",
+      "replicate": 3,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602081"
+    },
+    {
+      "accession": "GSM3602082",
+      "title": "RNA-seq library corrected 2 rep 1",
+      "matrix_column": "R225R_38_1_0",
+      "group": "corrected_clone_38",
+      "biological_unit": "independent differentiation",
+      "replicate": 1,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602082"
+    },
+    {
+      "accession": "GSM3602083",
+      "title": "RNA-seq library corrected 2 rep 2",
+      "matrix_column": "R225R_38_2_0",
+      "group": "corrected_clone_38",
+      "biological_unit": "independent differentiation",
+      "replicate": 2,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602083"
+    },
+    {
+      "accession": "GSM3602084",
+      "title": "RNA-seq library corrected 2 rep 3",
+      "matrix_column": "R225R_38_3_0",
+      "group": "corrected_clone_38",
+      "biological_unit": "independent differentiation",
+      "replicate": 3,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602084"
+    },
+    {
+      "accession": "GSM3602085",
+      "title": "RNA-seq library mutant rep 1",
+      "matrix_column": "R225X_1_0",
+      "group": "mutant",
+      "biological_unit": "independent differentiation",
+      "replicate": 1,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602085"
+    },
+    {
+      "accession": "GSM3602086",
+      "title": "RNA-seq library mutant rep 2",
+      "matrix_column": "R225X_2_0",
+      "group": "mutant",
+      "biological_unit": "independent differentiation",
+      "replicate": 2,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602086"
+    },
+    {
+      "accession": "GSM3602087",
+      "title": "RNA-seq library mutant rep 3",
+      "matrix_column": "R225X_3_0",
+      "group": "mutant",
+      "biological_unit": "independent differentiation",
+      "replicate": 3,
+      "source_url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3602087"
+    }
+  ],
+  "candidates": [
+    {
+      "frozen_symbol": "CMTM5",
+      "deposited_symbol": "CMTM5",
+      "tracking_id": "ENSG00000166091",
+      "deposited_locus": "14:23376807-23379772",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "SLC2A14",
+      "deposited_symbol": "SLC2A14",
+      "tracking_id": "ENSG00000173262",
+      "deposited_locus": "12:7812511-7891148",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "NID2",
+      "deposited_symbol": "NID2",
+      "tracking_id": "ENSG00000087303",
+      "deposited_locus": "14:51989474-52069228",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "DCAF8",
+      "deposited_symbol": "DCAF8",
+      "tracking_id": "ENSG00000132716",
+      "deposited_locus": "1:160215714-160286348",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "PIANP",
+      "deposited_symbol": "PIANP",
+      "tracking_id": "ENSG00000139200",
+      "deposited_locus": "12:6693791-6700800",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "MEX3B",
+      "deposited_symbol": "MEX3B",
+      "tracking_id": "ENSG00000183496",
+      "deposited_locus": "15:82041777-82046141",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "ANKRD52",
+      "deposited_symbol": "ANKRD52",
+      "tracking_id": "ENSG00000139645",
+      "deposited_locus": "12:56230048-56258391",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "ZFTA",
+      "deposited_symbol": "C11orf95",
+      "tracking_id": "ENSG00000188070",
+      "deposited_locus": "11:63759891-63768775",
+      "mapping_kind": "authoritative_prior_symbol",
+      "alias_sources": [
+        "https://blog.genenames.org/newsletters/2021/02/25/Winter_newsletter",
+        "https://www.ncbi.nlm.nih.gov/gene/65998"
+      ]
+    },
+    {
+      "frozen_symbol": "FYCO1",
+      "deposited_symbol": "FYCO1",
+      "tracking_id": "ENSG00000163820",
+      "deposited_locus": "3:45917898-45995824",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    },
+    {
+      "frozen_symbol": "LYSMD3",
+      "deposited_symbol": "LYSMD3",
+      "tracking_id": "ENSG00000176018",
+      "deposited_locus": "5:90515610-91164221",
+      "mapping_kind": "exact_deposited_symbol",
+      "alias_sources": []
+    }
+  ],
+  "independence_source": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE126458",
+  "design": "Three independent differentiations per line; one R225X patient-derived mutant line and two CRISPR-corrected isogenic clones. Lines are not independent patients. Both corrected-clone contrasts share the same mutant samples.",
+  "not_established": [
+    "Pairing of differentiation rep numbers between lines",
+    "Population-level donor replication",
+    "Raw-count statistical adequacy from processed FPKM"
+  ]
+}
