@@ -1,0 +1,220 @@
+{
+  "schema": "bio.registered-protocol.v2",
+  "campaign_id": "lmna-acute-lamina-vs-chronic-compartment-2026-09-24",
+  "status": "draft",
+  "question": "Across autosomal 500 kb tiles of hg38, is the change in LMNB1 CUT&RUN z-score after 48 h acute LMNA siRNA in day-35 hiPSC-cardiomyocytes (GSE300197, siLMNA.mCh minus siScr.mCh, condition-merged tracks) negatively correlated with the change in Hi-C compartment score (HOMER 500 kb Active.PC1, mutant minus corrected) in day-14 LMNA R225X hiPSC-cardiomyocytes versus each of two isogenic corrected clones (GSE126459)?",
+  "directional_hypothesis": "Negative correlation: tiles that gain relative LMNB1 signal after acute LMNA depletion shift toward compartment B (lower PC1) under chronic LMNA haploinsufficiency; tiles that lose LMNB1 shift toward A.",
+  "predictor": {
+    "series": "GSE300197",
+    "build": "hg38",
+    "exposure": "previously opened and analysed in this program (campaign lmna-relative-lamina-gain-2026-09-24 and its falsification); condition-merged z-score bigWigs, 10 kb bins smoothed by rolling mean of 5 flanking windows per the authors' methods",
+    "definition": "dlam_mCh = coverage-weighted mean(siLMNA_mCh z) minus mean(siScr_mCh z) over each tile; baseline lamina = mean(siScr_mCh z). The DNK arm (siLMNA_DNK minus siScr_DNK) is a secondary consistency predictor only.",
+    "files": {
+      "siScr_mCh": {
+        "name": "GSE300197_siScr.mCh.CR.zscore.bw",
+        "sha256": "9f215ce03c0a40c3717b27b36bc7ace22c686dceefb24a86096d573eebb12a2f"
+      },
+      "siLMNA_mCh": {
+        "name": "GSE300197_siLMNA.mCh.CR.zscore.bw",
+        "sha256": "cb4332fa4b49d98ac025851504fd15c6ac6f1f0e093adc0fd4a84e7100ed0af6"
+      },
+      "siScr_DNK": {
+        "name": "GSE300197_siScr.DNK.CR.zscore.bw",
+        "sha256": "f4b82fe37a7fee74c81428a5560bd80e1c4ae18c9864d239627113d5cd06e854"
+      },
+      "siLMNA_DNK": {
+        "name": "GSE300197_siLMNA.DNK.CR.zscore.bw",
+        "sha256": "fdb9a7659947c5be543017df1d1f3e45f9a9522400177f18b718df533e045c2e"
+      },
+      "refseq": {
+        "name": "hg38-ncbiRefSeqSelect.txt.gz",
+        "sha256": "c57ad06a75bf02c48a69ea233fa814e9f7d653b9b586d7f81435729cc1f49828"
+      }
+    },
+    "predictor_tsv_sha256": "<bound at freeze>"
+  },
+  "outcome": {
+    "series": "GSE126459",
+    "superseries": "GSE126460",
+    "build": "hg38",
+    "status_at_registration": "untouched: no PC1, matrix, or pair values downloaded or opened before the freeze receipt",
+    "definition": "Per replicate, coverage-weighted mean of HOMER Active.PC1 bedGraph values over each tile. dPC1_c = mean(mutant rep1, rep2) minus mean(corrected_c rep1, rep2), separately for corrected_1 (GSM3602088/89) and corrected_2 (GSM3602090/91). Baseline PC1 for clone c = mean of that clone's two replicates.",
+    "samples": {
+      "GSM3602088": {
+        "line": "corrected_1",
+        "replicate": "rep1",
+        "filename": "GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602088/suppl/GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz"
+      },
+      "GSM3602089": {
+        "line": "corrected_1",
+        "replicate": "rep2",
+        "filename": "GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602089/suppl/GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz"
+      },
+      "GSM3602090": {
+        "line": "corrected_2",
+        "replicate": "rep1",
+        "filename": "GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602090/suppl/GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz"
+      },
+      "GSM3602091": {
+        "line": "corrected_2",
+        "replicate": "rep2",
+        "filename": "GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602091/suppl/GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz"
+      },
+      "GSM3602092": {
+        "line": "mutant",
+        "replicate": "rep1",
+        "filename": "GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602092/suppl/GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz"
+      },
+      "GSM3602093": {
+        "line": "mutant",
+        "replicate": "rep2",
+        "filename": "GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz",
+        "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM3602nnn/GSM3602093/suppl/GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz"
+      }
+    },
+    "corrected_lines": [
+      "corrected_1",
+      "corrected_2"
+    ],
+    "intake_rule": "Download the six PC1 bedGraph files only after freeze.json exists; record URL, bytes, sha256, retrieval time in intake.json before running."
+  },
+  "tiles": {
+    "size": 500000,
+    "chromosomes": [
+      "chr1",
+      "chr2",
+      "chr3",
+      "chr4",
+      "chr5",
+      "chr6",
+      "chr7",
+      "chr8",
+      "chr9",
+      "chr10",
+      "chr11",
+      "chr12",
+      "chr13",
+      "chr14",
+      "chr15",
+      "chr16",
+      "chr17",
+      "chr18",
+      "chr19",
+      "chr20",
+      "chr21",
+      "chr22"
+    ],
+    "min_coverage": 0.5,
+    "eligibility": "A tile is eligible when all four predictor tracks and all six PC1 tracks have finite coverage-weighted means with at least 50% of tile bases covered. Tiles ineligible in any track are dropped from every statistic; the count is reported. chrX and chrY excluded (sex not stated in GEO). Chromosomes excluded by the orientation rule are dropped from every statistic."
+  },
+  "orientation": {
+    "rule": "PC1 is a per-chromosome eigenvector, so orientation is checked per chromosome before any contrast. For each autosome, compute Spearman rho between RefSeq Select TSS count per tile and the mean of the four corrected-clone PC1 tracks over that chromosome's eligible tiles. If rho < 0, multiply every PC1 track on that chromosome by -1 and record it. Chromosomes with rho < 0.2 after flipping (or fewer than 10 eligible tiles) are excluded and recorded. After per-chromosome orientation the genome-wide rho must be >= 0.3; otherwise the analysis is an orientation failure and cannot pass. Sensitivity: the unadjusted and adjusted rho per clone are also reported with the per-chromosome floor set to 0.0 (no exclusion) and 0.3 (stricter), without permutation p-values; the pre-outcome review found the predictor-side TSS-vs-baseline-lamina |rho| ranges 0.257 (chr18) to 0.628 (chr16), so chr18 and chr4 sit near the 0.2 floor and their inclusion is noise-sensitive.",
+    "min_abs_rho_gene_density": 0.3,
+    "min_rho_per_chromosome": 0.2,
+    "rationale": "Bertero et al. set the PC1 sign so that positive = A using ~5,000 constitutively expressed genes, and GEO file names say 'Active.PC1'. This rule uses corrected baselines and gene density only, never the mutant contrast, and protects against a single mis-oriented chromosome producing a spurious genome-wide correlation.",
+    "floor_sensitivity": [
+      0.0,
+      0.3
+    ]
+  },
+  "statistics": {
+    "unadjusted": "Spearman rho between dlam_mCh and dPC1_c over eligible tiles.",
+    "adjusted": "Rank-based partial correlation: Pearson correlation of residuals after ordinary least squares of rank(dlam_mCh) and rank(dPC1_c) on [1, rank(baseline PC1_c), rank(baseline lamina)].",
+    "null": "Within-chromosome circular shift of the predictor block (dlam_mCh and baseline lamina jointly, same random non-zero offset per chromosome), outcome block fixed. One-sided p for the negative direction = (1 + #{rho_perm <= rho_obs}) / (1 + N). The positive-direction p is also recorded.",
+    "replicate_pairs": "Spearman rho between dlam_mCh and (mutant rep_i minus corrected_c rep_i) for i = 1, 2; all four pair correlations must be negative."
+  },
+  "null": {
+    "permutations": 5000,
+    "seed": 20260924,
+    "note": "adjusted statistic uses seed+1"
+  },
+  "pass_criteria": {
+    "unadjusted_rho_max": -0.1,
+    "adjusted_rho_max": -0.05,
+    "p_max": 0.01,
+    "min_eligible_tiles": 3000,
+    "rule": "Registered pass requires ALL of: orientation ok; eligible tiles >= 3000; for each corrected clone separately: (1) unadjusted rho <= -0.10 with negative-direction circular-shift p <= 0.01; (2) adjusted rho <= -0.05 with p <= 0.01; (3) |adjusted rho| >= 0.5 x |unadjusted rho| with both negative, so a pass cannot rest on an arm that a PC1 amplitude artefact alone satisfies; (4) on per-chromosome variance-standardised PC1 tracks, unadjusted rho <= -0.10 with p <= 0.01; (5) all four replicate-pair correlations negative (weak: the pairs share the two mutant replicates; both clones were all-negative in 1 of 12 pure-null simulations in the pre-outcome review). This is a single conjunctive claim; the p <= 0.01 components are stricter than Bonferroni over the six p-values at alpha 0.05.",
+    "opposite_direction": "Recorded (not a pass) when both clones show unadjusted rho >= +0.10 with positive-direction p <= 0.01.",
+    "adjusted_to_unadjusted_ratio_min": 0.5,
+    "standardised_unadjusted_rho_max": -0.1
+  },
+  "secondary_exploratory": [
+    "Stratified unadjusted rho within baseline-A (corrected PC1 > 0) and baseline-B (< 0) tiles per clone",
+    "DNK-arm predictor rho per clone",
+    "Mean dPC1 in top vs bottom decile of dlam_mCh",
+    "Baseline lamina vs baseline PC1 rho (sanity: expected strongly negative)"
+  ],
+  "claim_ceiling": "A pass supports only: across the genome at 500 kb, regions whose lamina association is most sensitive to acute lamin A/C loss are the regions whose compartment state shifts under chronic LMNA haploinsufficiency, in the direction gain-lamina -> toward B. It is correlational, cross-study, cross-stage (day 35 vs day 14), and cross-perturbation; it says nothing about causation or individual loci. The predictor has no replicate-level tracks. A non-pass retires the registered claim for effects at or above roughly |rho| = 0.14 (see operating_characteristics) and leaves smaller effects undetermined; exploratory secondaries can only motivate a new registration in an unobserved cohort.",
+  "code": {
+    "file": "compartment.py",
+    "tests": "test_compartment.py (25 synthetic tests incl. mandatory freeze/intake guards, outcome substitution refusal, amplitude-artefact non-pass, single-chromosome flip repair, uninformative-chromosome exclusion)",
+    "python": "3.12.14",
+    "numpy": "2.3.3",
+    "scipy": "1.16.2",
+    "pybigwig": "0.3.24",
+    "run_guards": "run requires --freeze and --intake; refuses on any mismatch of registration, code, test, requirements-lock, or predictor hash; refuses if the intake receipt does not bind the freeze hash or any outcome file hash differs from the intake receipt; run_registered refuses without a freeze receipt unless allow_unfrozen=True is passed explicitly (tests only) and then labels the summary unfrozen_synthetic_run",
+    "fail_closed": "All pass-criteria and orientation parameters are read by subscript; a registration missing any of them aborts rather than defaulting."
+  },
+  "post_freeze_changes_allowed": "status, frozen_utc and predictor_tsv_sha256 fields only; any other change requires a new registration and a new freeze receipt",
+  "spend": {
+    "budget_usd_total": 25,
+    "prior_spend_usd": 0.019722,
+    "planned_new_spend_usd": 0,
+    "note": "six small public downloads and local CPU only"
+  },
+  "prior_art_summary": {
+    "exact_comparison_previously_reported": "no (searched 2026-09-24; see prior-art/report.md); absence of a hit is not proof of novelty",
+    "class_known": "LAD gain/loss coupling to B/A compartment switching is established in mESC lamin TKO (Zheng 2018) and HGPS (McCord 2013)",
+    "expected_effect_is_weak": "Bertero 2019 reports only ~1.2% of the genome switching compartment (69 bins, 63% of A->B on chrX, which is excluded here) and predicts minimal A/B change from lamin depletion; the registered minimum effect (rho <= -0.10) is therefore a modest bar and a non-pass is the likely outcome",
+    "interpretation_hazard": "the predictor tracks are condition-merged z-scores, so 'gain' is relative to genome-wide loss; the claim is about relative lamina change"
+  },
+  "scale_artefact_control": {
+    "why": "Pre-outcome, Spearman(tss_count, dlam_mCh) = -0.302 on the predictor side and the orientation rule aligns PC1 positively with TSS density, so any mutant-vs-corrected PC1 amplitude difference (library normalisation, eigenvector scale) projects onto the hypothesised direction. The reviewer's adversarial set with a 1.25x mutant amplitude and zero real signal satisfied the whole unadjusted arm at the p floor.",
+    "diagnostic": "Per-chromosome SD(mean mutant PC1) / SD(mean corrected-clone PC1) and the genome-wide ratio are reported for each clone.",
+    "sensitivity_arm": "Each PC1 track is centred (chromosome mean subtracted) and scaled to unit SD within each chromosome over eligible tiles; the unadjusted and adjusted statistics and circular-shift p-values are recomputed (seed + 2). Because it centres as well as scales, this arm also requires within-chromosome concordance, which is a deliberate tightening. Pass requires the standardised unadjusted rho <= -0.10 with p <= 0.01 (component 4).",
+    "ratio_rule": "component 3 above"
+  },
+  "operating_characteristics": {
+    "source": "design/independent-review.json (pre-outcome simulation on the real predictor table, synthetic PC1 = -z(baseline lamina) + 0.55 AR(0.9), 12 seeds per level, 299 shifts, 5,092 tiles; measured before components 3-4 were added, which can only lower these rates)",
+    "type_I_full_rule": "0/12 at zero effect",
+    "power": {
+      "rho -0.089": "2/12 (round 1)",
+      "rho -0.111": "6/12 (rounds 1 and 2)",
+      "rho -0.137": "10/12 (round 1), 9/12 (round 2, full eight-component rule)",
+      "rho -0.192": "12/12"
+    },
+    "honest_reading": "The permutation p is never the binding constraint; the per-clone effect floor is. A registered non-pass retires the claim only for effects appreciably larger than the minimum (roughly |rho| >= 0.14 at ~75-80% power); it does not establish the absence of a smaller genome-wide concordance. The clone-averaged rho is reported but is not the primary."
+  },
+  "fixed_parameters_explicit": {
+    "tile_grid": "tiles are [k*500000, min((k+1)*500000, L)) from coordinate 0 for k = 0.. on each autosome; the last tile may be short",
+    "chromosome_lengths": "taken from the siScr_mCh bigWig header (GSE300197, hg38); the six PC1 bedGraphs are mapped onto this grid by coverage-weighted overlap",
+    "per_chromosome_minimum_tiles": 10,
+    "circular_shift_domain": "the roll is over the ordered index of eligible tiles within each chromosome, not over genomic coordinate; tiles removed by eligibility are absent from the ring",
+    "adjusted_null_asymmetry": "the observed adjusted statistic residualises rank(dPC1) on the observed baseline lamina, while each null statistic residualises on the shifted baseline lamina (predictor block moves jointly, baseline PC1 fixed); recorded as a known asymmetry, judged immaterial at this n by the reviewer",
+    "replicate_pair_matching": "mutant rep_i is paired with corrected_c rep_i by replicate label (rep1 with rep1, rep2 with rep2)",
+    "clone_labels": "corrected_1 = GSM3602088/89 (GEO 'corrected 1'), corrected_2 = GSM3602090/91 (GEO 'corrected 2')",
+    "standardisation": "per track, per chromosome: subtract the chromosome mean and divide by the chromosome SD over eligible tiles"
+  },
+  "amendments": [
+    {
+      "id": "amend-001",
+      "utc": "2026-09-24",
+      "after": "freeze-001 (registration sha 2d51b704..., frozen 2026-09-24T20:13:55Z) and intake-001 (six files downloaded)",
+      "what": "read_bedgraph now prefixes 'chr' to Ensembl-style chromosome names; one unit test added. No threshold, statistic, eligibility rule, seed or permutation count changed.",
+      "why": "run-001 produced zero eligible tiles because the HOMER bedGraphs name chromosomes 1..22, X, Y while the tile grid uses chr1..chr22; the run crashed in decile_contrast on empty arrays before any correlation, p-value, orientation statistic or per-tile outcome was observed (results/run-001/FAILED.md).",
+      "disclosure": "What happened: the six outcome files were downloaded under intake-001 and were on disk when this amendment was written. Only their first three coordinate columns and chromosome-name counts were inspected (results/run-001/format-check.txt). What is planned: retain intake-001 files unopened under data/GSE126459.intake-001; produce freeze-002 from this registration; re-download the six files as intake-002 bound to freeze-002 and compare hashes with intake-001; then run-002.",
+      "code_sha256_before": "9f58860fb683d087f1363f1b399e152ef0e56ad294d40268b959fd8671a937c9",
+      "code_sha256_after": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+      "test_sha256_before": "3d6ee18f0f15c07f915affa5d4dd5c93627654ce0215400c87c751e2e492f94e",
+      "test_sha256_after": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e",
+      "test_added": "test_bedgraph_reader_normalises_ensembl_chromosome_names",
+      "frozen_bytes_retention": "freeze-001 recorded hashes only and did not archive code bytes. Byte-exact copies were reconstructed under registration/archive-001 by removing the adapter lines and the added test; both reconstructed files hash to the freeze-001 values, which proves the amendment changed nothing else. freeze-002 onward archives the bound code and test bytes.",
+      "review_gap_disclosure": "The code bytes bound by freeze-001 (9f58860f) differ from the bytes the reviewer examined in round 2 (f11a64f7) because round-2 minor item 1 (fail-closed subscript access for threshold parameters) was applied after that review and before freeze-001; those exact bytes were not independently reviewed before freeze-001. The reviewer confirmed in round 3 that the current code reproduces every round-2 adversarial statistic to four decimals."
+    }
+  ]
+}

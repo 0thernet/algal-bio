@@ -1,0 +1,17 @@
+{
+  "campaign_id": "lmna-acute-lamina-vs-chronic-compartment-2026-09-24",
+  "input_sha256": {
+    "refseq": "c57ad06a75bf02c48a69ea233fa814e9f7d653b9b586d7f81435729cc1f49828",
+    "siLMNA_DNK": "fdb9a7659947c5be543017df1d1f3e45f9a9522400177f18b718df533e045c2e",
+    "siLMNA_mCh": "cb4332fa4b49d98ac025851504fd15c6ac6f1f0e093adc0fd4a84e7100ed0af6",
+    "siScr_DNK": "f4b82fe37a7fee74c81428a5560bd80e1c4ae18c9864d239627113d5cd06e854",
+    "siScr_mCh": "9f215ce03c0a40c3717b27b36bc7ace22c686dceefb24a86096d573eebb12a2f"
+  },
+  "n_tiles": 5760,
+  "n_tiles_predictor_finite": 5236,
+  "numpy": "2.3.3",
+  "predictor_tsv_sha256": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+  "pybigwig": "0.3.24",
+  "python": "3.12.14",
+  "schema": "bio.compartment-predictor.v1"
+}

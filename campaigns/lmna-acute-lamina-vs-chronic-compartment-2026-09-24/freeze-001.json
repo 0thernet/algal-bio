@@ -1,0 +1,24 @@
+{
+  "schema": "bio.freeze-receipt.v1",
+  "campaign_id": "lmna-acute-lamina-vs-chronic-compartment-2026-09-24",
+  "frozen_utc": "2026-09-24T20:13:55.322486+00:00",
+  "registration_sha256": "2d51b704f6a2b75b1f22db10dd9469f2758b9c85e37ef05d865f88f116c6f5a8",
+  "registration_draft_sha256": "8f6bd8fcfe576b3c5648e4f81ab0e38a7b869bcb465ec35c10424e6f88f0d19b",
+  "code_sha256": "9f58860fb683d087f1363f1b399e152ef0e56ad294d40268b959fd8671a937c9",
+  "test_sha256": "3d6ee18f0f15c07f915affa5d4dd5c93627654ce0215400c87c751e2e492f94e",
+  "requirements_lock_sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+  "predictor_tsv_sha256": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+  "predictor_manifest_sha256": "b123f8e0f57b9a5d84bf6a2f30c7f8cc19041965229cab0308976f01b2744203",
+  "independent_review_sha256": "e5ec93be788dbdc334d72e9d24972df8a8d65b6484f3ae47e8c93d33c3bf4be9",
+  "skeptical_review_sha256": "7af9f6db7c3b817181e4d2e306882e05f1d4d21e43ea2d1e88eba786e9ccf931",
+  "protocol_design_sha256": "e3ec6d7578365e0116bd1231db86197fd3cb067a8e3ed7186625ddb78eee9183",
+  "outcome_files_present_at_freeze": false,
+  "outcome_expected": {
+    "GSM3602088": "GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602089": "GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602090": "GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602091": "GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602092": "GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602093": "GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz"
+  }
+}

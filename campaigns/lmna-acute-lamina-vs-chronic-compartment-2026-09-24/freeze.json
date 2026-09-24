@@ -1,0 +1,29 @@
+{
+  "schema": "bio.freeze-receipt.v1",
+  "campaign_id": "lmna-acute-lamina-vs-chronic-compartment-2026-09-24",
+  "frozen_utc": "2026-09-24T20:19:49.242851+00:00",
+  "registration_sha256": "80c668a2599bc9c3a45d01b8e3a6526cf8dd15308daf952eccfebae83dae6ab6",
+  "registration_draft_sha256": "924975b5118a1c98c1a03cf736dcca4e464ad78d0046a4604df7c8cd1021e13d",
+  "code_sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+  "test_sha256": "65dbccdf2d63fc6879d38398106cdcd5fabfcbb249e769e69bb2f613cb29f46e",
+  "requirements_lock_sha256": "b3b8f376548d81e1ab9f8a430112e1e84f13ac7de0cc064dac2340e44c2b0865",
+  "predictor_tsv_sha256": "680ba99815b9fd79cca7b5d566987bccaeba60bcef4fee3315d74f47d8cf0817",
+  "predictor_manifest_sha256": "b123f8e0f57b9a5d84bf6a2f30c7f8cc19041965229cab0308976f01b2744203",
+  "independent_review_sha256": "e8012085765460ee810e71db36c41a8ef6f6117ee1640c47a54461a45e52ac28",
+  "skeptical_review_sha256": "68d496c4bc65b4ed4a7d44efd641eb342aba9c375550f6c7e240c631da43ab75",
+  "protocol_design_sha256": "e3ec6d7578365e0116bd1231db86197fd3cb067a8e3ed7186625ddb78eee9183",
+  "outcome_files_present_at_freeze": false,
+  "freeze_number": 2,
+  "archived_bytes": "registration/archive-002/{compartment.py,test_compartment.py,requirements.lock}",
+  "retired_freeze_001_sha256": "c8729fc6028718b21abd0f6d6332d8d9d072238cd0db2a8379803680a411e331",
+  "retired_intake_001_sha256": "4db2e1cba98c5a9b2d6b8c0b7668acc9c8d19f97213ae5533071b9e204ccad1c",
+  "amendment": "amend-001 (chromosome-name adapter after run-001 zero-tile failure); intake-001 files retained unopened under data/GSE126459.intake-001 and re-downloaded for intake-002",
+  "outcome_expected": {
+    "GSM3602088": "GSM3602088_HiC_corrected.1_rep1_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602089": "GSM3602089_HiC_corrected.1_rep2_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602090": "GSM3602090_HiC_corrected.2_rep1_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602091": "GSM3602091_HiC_corrected.2_rep2_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602092": "GSM3602092_HiC_mutant_rep1_500KB_Active.PC1.bedGraph.gz",
+    "GSM3602093": "GSM3602093_HiC_mutant_rep2_500KB_Active.PC1.bedGraph.gz"
+  }
+}

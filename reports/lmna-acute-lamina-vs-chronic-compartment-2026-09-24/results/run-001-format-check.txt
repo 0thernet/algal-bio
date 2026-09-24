@@ -1,0 +1,2 @@
+track name="R225R_15_1_HiC_500KB_Active PC1"  yLineMark="0.0" alwaysZero=on maxHeightPixels=100:75:11 visibility=full viewLimits=-1:1 autoScale=on type=bedGraph
+chromosome names: 1..22, X, Y (no chr prefix); 5672 intervals of width 500000 per file; starts on the 500 kb grid
