@@ -1,0 +1,6 @@
+{
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE330nnn/GSE330103/suppl/GSE330103_Nkx2_5Cre_LB1Fplus_modified_cscore.bedgraph.gz",
+  "compressed_sha256": "a306d86e5823d74a4a1afa21b54b03e04c375bc86c0e24c79d6f6c28573097dc",
+  "selection": "First 64 records in source order; bytes preserved after gzip decompression; coordinates are source-reported and not normalized.",
+  "fixture_sha256": "097f20950677671243e5e48406414e22579bd9ea4af09a303decf86643826139"
+}

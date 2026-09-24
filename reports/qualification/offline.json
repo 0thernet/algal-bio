@@ -1,0 +1,82 @@
+{
+  "contract": "bio.qualification-report.v1",
+  "registrationDigest": "sha256:021c3a7672aa4057f75b8c97f43e5c171ccd59481fe25c8e8abd97f5e6f46576",
+  "status": "offline_passed",
+  "repetitions": [
+    {
+      "repetition": 0,
+      "scriptedProposalCalls": 3,
+      "providerCalls": 0,
+      "controlValues": {
+        "chromatin_intervals": 64,
+        "chromatin_mean_delta": "0.04620996875",
+        "rna_genes": 128,
+        "rna_passing": 28
+      },
+      "successfulControls": 1,
+      "failedMeasurements": 1,
+      "rejectedProposals": 1,
+      "selected": [
+        "known-control"
+      ],
+      "receiptReplay": true,
+      "freshComputation": "passed"
+    },
+    {
+      "repetition": 1,
+      "scriptedProposalCalls": 3,
+      "providerCalls": 0,
+      "controlValues": {
+        "chromatin_intervals": 64,
+        "chromatin_mean_delta": "0.04620996875",
+        "rna_genes": 128,
+        "rna_passing": 28
+      },
+      "successfulControls": 1,
+      "failedMeasurements": 1,
+      "rejectedProposals": 1,
+      "selected": [
+        "known-control"
+      ],
+      "receiptReplay": true,
+      "freshComputation": "passed"
+    },
+    {
+      "repetition": 2,
+      "scriptedProposalCalls": 3,
+      "providerCalls": 0,
+      "controlValues": {
+        "chromatin_intervals": 64,
+        "chromatin_mean_delta": "0.04620996875",
+        "rna_genes": 128,
+        "rna_passing": 28
+      },
+      "successfulControls": 1,
+      "failedMeasurements": 1,
+      "rejectedProposals": 1,
+      "selected": [
+        "known-control"
+      ],
+      "receiptReplay": true,
+      "freshComputation": "passed"
+    }
+  ],
+  "externalSpendMicros": 0,
+  "wallTimeMs": 6637,
+  "inputBytes": 12265,
+  "coordinator": {
+    "headSha256": "02a73945f1ca94e8b121d5d3a9648d960bf193e19666976708276606b478c4b3",
+    "eventCount": 34,
+    "spentMicros": 0,
+    "reservedMicros": 0,
+    "mode": "offline transport and scripted review of retained lab observations"
+  },
+  "prospectiveDecision": "no_go",
+  "liveAgentComparison": "not_run",
+  "independentBiologicalHoldout": "not_available",
+  "limitations": [
+    "Software repetitions are not biological replicates.",
+    "No agent organization or intelligence effect is estimated.",
+    "Reference results are supplied to the scripted control, so recovery does not measure discovery ability."
+  ]
+}

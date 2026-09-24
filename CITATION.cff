@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this repository for the software and calibration protocol. Cite the original GEO datasets and their authors separately when using biological data."
+type: software
+title: "Algal Bio: public-data calibration and bounded biology research infrastructure"
+authors:
+  - name: "Hraness contributors"
+repository-code: "https://github.com/0thernet/algal-bio"
+url: "https://github.com/0thernet/algal-bio"
+license: MIT
+abstract: "Reproducible software for registered biology observations, public-data calibration, and explicit research admission limits. The initial lamina pilot is data-limited; prospective research and experimental validation have not been performed. The software license does not relicense third-party research data."

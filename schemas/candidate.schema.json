@@ -1,0 +1,278 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "candidate_id",
+    "study_id",
+    "classification",
+    "provenance",
+    "observation",
+    "inference",
+    "novelty",
+    "validation"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "study_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "software_control",
+        "known_biology",
+        "unknown_association"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registration_sha256",
+        "instrument_sha256",
+        "input_artifacts",
+        "source_sample_ids"
+      ],
+      "properties": {
+        "registration_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "instrument_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "input_artifacts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "minItems": 1
+        },
+        "source_sample_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "description",
+        "measurement",
+        "unit",
+        "uncertainty",
+        "biological_replicates"
+      ],
+      "properties": {
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "measurement": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uncertainty": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        },
+        "biological_replicates": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
+      }
+    },
+    "inference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "claim",
+        "scope",
+        "alternatives",
+        "mechanism_established"
+      ],
+      "properties": {
+        "claim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "enum": [
+            "software_reproduction",
+            "descriptive_association",
+            "independent_association"
+          ]
+        },
+        "alternatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        },
+        "mechanism_established": {
+          "const": false
+        }
+      }
+    },
+    "novelty": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "reviewed_on",
+        "search_queries",
+        "sources"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "not_applicable_control",
+            "unreviewed",
+            "known",
+            "candidate_unreported"
+          ]
+        },
+        "reviewed_on": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "search_queries": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 0
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^https://[^ ]+$"
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "independent_recomputation",
+        "holdout_opened",
+        "evidence",
+        "wet_lab",
+        "limitations"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "unassessed",
+            "reproduced_software",
+            "data_limited",
+            "independent_support",
+            "rejected"
+          ]
+        },
+        "independent_recomputation": {
+          "type": "boolean"
+        },
+        "holdout_opened": {
+          "type": "boolean"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "path",
+              "sha256",
+              "bytes"
+            ],
+            "properties": {
+              "path": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "bytes": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          },
+          "minItems": 0
+        },
+        "wet_lab": {
+          "const": "not_performed"
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/0thernet/algal-bio/schemas/candidate.schema.json",
+  "title": "Biology candidate dossier v1"
+}

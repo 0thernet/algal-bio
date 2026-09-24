@@ -1,0 +1,10 @@
+{
+  "contract": "bio.publication-identity.v1",
+  "status": "pending",
+  "source_revision": null,
+  "tag": null,
+  "release_url": null,
+  "selected_archive_sha256": null,
+  "qualification_archive_sha256": null,
+  "verification": "pending"
+}

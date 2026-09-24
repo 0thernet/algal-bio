@@ -1,0 +1,16 @@
+{
+  "contract": "bio.prospective-decision.v1",
+  "campaign": "prospective-001",
+  "registration_sha256": "dacf72b07f8aa1eaf211f3f69dd9669a2149afc32d4bcc488605282d80c2224c",
+  "status": "not_run",
+  "decision": "no_go",
+  "candidates_assessed": 0,
+  "holdout_opened": false,
+  "reasons": [
+    "An independent matched or crossed cohort with resolved biological replication and compatible assays",
+    "Domain review of the estimand, precision, controls and empirical follow-up endpoint",
+    "A frozen search/evaluation split with qualified evaluator isolation and a contamination audit",
+    "Measured live investigator qualification with verified model, price and funded resource envelope"
+  ],
+  "interpretation": "This is a documented readiness decision, not a search with zero surviving candidates and not a biological negative finding."
+}

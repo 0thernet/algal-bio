@@ -1,0 +1,2455 @@
+{
+  "schema_version": "1",
+  "source_sha256": "a2a150541072253f34ce87025cee58d3b1660e004bfc3fbfb590e75271c5d4b8",
+  "selection": "sample_metadata_facts_v1",
+  "records": [
+    {
+      "sample_id": "GSM2375116",
+      "lines": [
+        {
+          "line_number": 546817,
+          "text": "^SAMPLE = GSM2375116"
+        },
+        {
+          "line_number": 546818,
+          "text": "!Sample_title = ESC_RNASeq_TKO_Rep1"
+        },
+        {
+          "line_number": 546819,
+          "text": "!Sample_geo_accession = GSM2375116"
+        },
+        {
+          "line_number": 546820,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 546825,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 546826,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 546828,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 546829,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 546837,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 546855,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 546856,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981535"
+        },
+        {
+          "line_number": 546857,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327373"
+        },
+        {
+          "line_number": 546859,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375117",
+      "lines": [
+        {
+          "line_number": 546861,
+          "text": "^SAMPLE = GSM2375117"
+        },
+        {
+          "line_number": 546862,
+          "text": "!Sample_title = ESC_RNASeq_TKO_Rep2"
+        },
+        {
+          "line_number": 546863,
+          "text": "!Sample_geo_accession = GSM2375117"
+        },
+        {
+          "line_number": 546864,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 546869,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 546870,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 546872,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 546873,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 546881,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 546899,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 546900,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981534"
+        },
+        {
+          "line_number": 546901,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327374"
+        },
+        {
+          "line_number": 546903,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375118",
+      "lines": [
+        {
+          "line_number": 546905,
+          "text": "^SAMPLE = GSM2375118"
+        },
+        {
+          "line_number": 546906,
+          "text": "!Sample_title = ESC_RNASeq_WT_Rep1"
+        },
+        {
+          "line_number": 546907,
+          "text": "!Sample_geo_accession = GSM2375118"
+        },
+        {
+          "line_number": 546908,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 546913,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 546914,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 546916,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 546917,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 546925,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 546943,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 546944,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981533"
+        },
+        {
+          "line_number": 546945,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327375"
+        },
+        {
+          "line_number": 546947,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375119",
+      "lines": [
+        {
+          "line_number": 546949,
+          "text": "^SAMPLE = GSM2375119"
+        },
+        {
+          "line_number": 546950,
+          "text": "!Sample_title = ESC_RNASeq_WT_Rep2"
+        },
+        {
+          "line_number": 546951,
+          "text": "!Sample_geo_accession = GSM2375119"
+        },
+        {
+          "line_number": 546952,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 546957,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 546958,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 546960,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 546961,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 546969,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 546987,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 546988,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981532"
+        },
+        {
+          "line_number": 546989,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327376"
+        },
+        {
+          "line_number": 546991,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375120",
+      "lines": [
+        {
+          "line_number": 546993,
+          "text": "^SAMPLE = GSM2375120"
+        },
+        {
+          "line_number": 546994,
+          "text": "!Sample_title = ESC_HiC_TKO_Rep1"
+        },
+        {
+          "line_number": 546995,
+          "text": "!Sample_geo_accession = GSM2375120"
+        },
+        {
+          "line_number": 546996,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547001,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547002,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547004,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547005,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547013,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547031,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 547032,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981571"
+        },
+        {
+          "line_number": 547033,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327377"
+        },
+        {
+          "line_number": 547035,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375121",
+      "lines": [
+        {
+          "line_number": 547037,
+          "text": "^SAMPLE = GSM2375121"
+        },
+        {
+          "line_number": 547038,
+          "text": "!Sample_title = ESC_HiC_TKO_Rep2"
+        },
+        {
+          "line_number": 547039,
+          "text": "!Sample_geo_accession = GSM2375121"
+        },
+        {
+          "line_number": 547040,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547045,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547046,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547048,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547049,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547057,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547075,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 547076,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981570"
+        },
+        {
+          "line_number": 547077,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327378"
+        },
+        {
+          "line_number": 547079,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375122",
+      "lines": [
+        {
+          "line_number": 547081,
+          "text": "^SAMPLE = GSM2375122"
+        },
+        {
+          "line_number": 547082,
+          "text": "!Sample_title = ESC_HiC_WT_Rep1"
+        },
+        {
+          "line_number": 547083,
+          "text": "!Sample_geo_accession = GSM2375122"
+        },
+        {
+          "line_number": 547084,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547089,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547090,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547092,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547093,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547101,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547119,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 547120,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981564"
+        },
+        {
+          "line_number": 547121,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327379"
+        },
+        {
+          "line_number": 547123,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375123",
+      "lines": [
+        {
+          "line_number": 547125,
+          "text": "^SAMPLE = GSM2375123"
+        },
+        {
+          "line_number": 547126,
+          "text": "!Sample_title = ESC_HiC_WT_Rep2"
+        },
+        {
+          "line_number": 547127,
+          "text": "!Sample_geo_accession = GSM2375123"
+        },
+        {
+          "line_number": 547128,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547133,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547134,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547136,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547137,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547145,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547163,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 547164,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981569"
+        },
+        {
+          "line_number": 547165,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327380"
+        },
+        {
+          "line_number": 547167,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375124",
+      "lines": [
+        {
+          "line_number": 547169,
+          "text": "^SAMPLE = GSM2375124"
+        },
+        {
+          "line_number": 547170,
+          "text": "!Sample_title = ESC_H3K27Ac_TKO_Rep1"
+        },
+        {
+          "line_number": 547171,
+          "text": "!Sample_geo_accession = GSM2375124"
+        },
+        {
+          "line_number": 547172,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547177,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547178,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547180,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547181,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547182,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab4729"
+        },
+        {
+          "line_number": 547190,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547208,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547209,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981568"
+        },
+        {
+          "line_number": 547210,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327381"
+        },
+        {
+          "line_number": 547212,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375125",
+      "lines": [
+        {
+          "line_number": 547214,
+          "text": "^SAMPLE = GSM2375125"
+        },
+        {
+          "line_number": 547215,
+          "text": "!Sample_title = ESC_H3K27Ac_TKO_Rep2"
+        },
+        {
+          "line_number": 547216,
+          "text": "!Sample_geo_accession = GSM2375125"
+        },
+        {
+          "line_number": 547217,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547222,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547223,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547225,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547226,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547227,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab4729"
+        },
+        {
+          "line_number": 547235,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547253,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547254,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981567"
+        },
+        {
+          "line_number": 547255,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327382"
+        },
+        {
+          "line_number": 547257,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375126",
+      "lines": [
+        {
+          "line_number": 547259,
+          "text": "^SAMPLE = GSM2375126"
+        },
+        {
+          "line_number": 547260,
+          "text": "!Sample_title = ESC_H3K27Ac_TKO_Rep3"
+        },
+        {
+          "line_number": 547261,
+          "text": "!Sample_geo_accession = GSM2375126"
+        },
+        {
+          "line_number": 547262,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547267,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547268,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547270,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547271,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547272,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab4729"
+        },
+        {
+          "line_number": 547280,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547298,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547299,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981566"
+        },
+        {
+          "line_number": 547300,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327383"
+        },
+        {
+          "line_number": 547302,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375127",
+      "lines": [
+        {
+          "line_number": 547304,
+          "text": "^SAMPLE = GSM2375127"
+        },
+        {
+          "line_number": 547305,
+          "text": "!Sample_title = ESC_H3K27Ac_WT_Rep1"
+        },
+        {
+          "line_number": 547306,
+          "text": "!Sample_geo_accession = GSM2375127"
+        },
+        {
+          "line_number": 547307,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547312,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547313,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547315,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547316,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547317,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab4729"
+        },
+        {
+          "line_number": 547325,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547343,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547344,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981565"
+        },
+        {
+          "line_number": 547345,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327384"
+        },
+        {
+          "line_number": 547347,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375128",
+      "lines": [
+        {
+          "line_number": 547349,
+          "text": "^SAMPLE = GSM2375128"
+        },
+        {
+          "line_number": 547350,
+          "text": "!Sample_title = ESC_H3K27Ac_WT_Rep2"
+        },
+        {
+          "line_number": 547351,
+          "text": "!Sample_geo_accession = GSM2375128"
+        },
+        {
+          "line_number": 547352,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547357,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547358,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547360,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547361,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547362,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab4729"
+        },
+        {
+          "line_number": 547370,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547388,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547389,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981563"
+        },
+        {
+          "line_number": 547390,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327385"
+        },
+        {
+          "line_number": 547392,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375129",
+      "lines": [
+        {
+          "line_number": 547394,
+          "text": "^SAMPLE = GSM2375129"
+        },
+        {
+          "line_number": 547395,
+          "text": "!Sample_title = ESC_H3K27Ac_WT_Rep3"
+        },
+        {
+          "line_number": 547396,
+          "text": "!Sample_geo_accession = GSM2375129"
+        },
+        {
+          "line_number": 547397,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547402,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547403,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547405,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547406,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547407,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab4729"
+        },
+        {
+          "line_number": 547415,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547433,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547434,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981562"
+        },
+        {
+          "line_number": 547435,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327386"
+        },
+        {
+          "line_number": 547437,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375130",
+      "lines": [
+        {
+          "line_number": 547439,
+          "text": "^SAMPLE = GSM2375130"
+        },
+        {
+          "line_number": 547440,
+          "text": "!Sample_title = ESC_H3K27me3_TKO_Rep1"
+        },
+        {
+          "line_number": 547441,
+          "text": "!Sample_geo_accession = GSM2375130"
+        },
+        {
+          "line_number": 547442,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547447,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547448,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547450,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547451,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547452,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547460,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547478,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547479,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981561"
+        },
+        {
+          "line_number": 547480,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327387"
+        },
+        {
+          "line_number": 547482,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375131",
+      "lines": [
+        {
+          "line_number": 547484,
+          "text": "^SAMPLE = GSM2375131"
+        },
+        {
+          "line_number": 547485,
+          "text": "!Sample_title = ESC_H3K27me3_TKO_Rep2"
+        },
+        {
+          "line_number": 547486,
+          "text": "!Sample_geo_accession = GSM2375131"
+        },
+        {
+          "line_number": 547487,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547492,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547493,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547495,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547496,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547497,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547505,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547523,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547524,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981560"
+        },
+        {
+          "line_number": 547525,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327388"
+        },
+        {
+          "line_number": 547527,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375132",
+      "lines": [
+        {
+          "line_number": 547529,
+          "text": "^SAMPLE = GSM2375132"
+        },
+        {
+          "line_number": 547530,
+          "text": "!Sample_title = ESC_H3K27me3_TKO_Rep3"
+        },
+        {
+          "line_number": 547531,
+          "text": "!Sample_geo_accession = GSM2375132"
+        },
+        {
+          "line_number": 547532,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547537,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547538,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547540,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547541,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547542,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547550,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547568,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547569,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981559"
+        },
+        {
+          "line_number": 547570,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327389"
+        },
+        {
+          "line_number": 547572,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375133",
+      "lines": [
+        {
+          "line_number": 547574,
+          "text": "^SAMPLE = GSM2375133"
+        },
+        {
+          "line_number": 547575,
+          "text": "!Sample_title = ESC_H3K27me3_TKO_Rep4"
+        },
+        {
+          "line_number": 547576,
+          "text": "!Sample_geo_accession = GSM2375133"
+        },
+        {
+          "line_number": 547577,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547582,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547583,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547585,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547586,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547587,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547595,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547613,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547614,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981558"
+        },
+        {
+          "line_number": 547615,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327390"
+        },
+        {
+          "line_number": 547617,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375134",
+      "lines": [
+        {
+          "line_number": 547619,
+          "text": "^SAMPLE = GSM2375134"
+        },
+        {
+          "line_number": 547620,
+          "text": "!Sample_title = ESC_H3K27me3_WT_Rep1"
+        },
+        {
+          "line_number": 547621,
+          "text": "!Sample_geo_accession = GSM2375134"
+        },
+        {
+          "line_number": 547622,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547627,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547628,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547630,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547631,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547632,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547640,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547658,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547659,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981557"
+        },
+        {
+          "line_number": 547660,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327391"
+        },
+        {
+          "line_number": 547662,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375135",
+      "lines": [
+        {
+          "line_number": 547664,
+          "text": "^SAMPLE = GSM2375135"
+        },
+        {
+          "line_number": 547665,
+          "text": "!Sample_title = ESC_H3K27me3_WT_Rep2"
+        },
+        {
+          "line_number": 547666,
+          "text": "!Sample_geo_accession = GSM2375135"
+        },
+        {
+          "line_number": 547667,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547672,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547673,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547675,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547676,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547677,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547685,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547703,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547704,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981556"
+        },
+        {
+          "line_number": 547705,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327392"
+        },
+        {
+          "line_number": 547707,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375136",
+      "lines": [
+        {
+          "line_number": 547709,
+          "text": "^SAMPLE = GSM2375136"
+        },
+        {
+          "line_number": 547710,
+          "text": "!Sample_title = ESC_H3K27me3_WT_Rep3"
+        },
+        {
+          "line_number": 547711,
+          "text": "!Sample_geo_accession = GSM2375136"
+        },
+        {
+          "line_number": 547712,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547717,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547718,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547720,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547721,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547722,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547730,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547748,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547749,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981555"
+        },
+        {
+          "line_number": 547750,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327393"
+        },
+        {
+          "line_number": 547752,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375137",
+      "lines": [
+        {
+          "line_number": 547754,
+          "text": "^SAMPLE = GSM2375137"
+        },
+        {
+          "line_number": 547755,
+          "text": "!Sample_title = ESC_H3K27me3_WT_Rep4"
+        },
+        {
+          "line_number": 547756,
+          "text": "!Sample_geo_accession = GSM2375137"
+        },
+        {
+          "line_number": 547757,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547762,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547763,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547765,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547766,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547767,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Millipore, 07-449"
+        },
+        {
+          "line_number": 547775,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547793,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547794,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981554"
+        },
+        {
+          "line_number": 547795,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327394"
+        },
+        {
+          "line_number": 547797,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375138",
+      "lines": [
+        {
+          "line_number": 547799,
+          "text": "^SAMPLE = GSM2375138"
+        },
+        {
+          "line_number": 547800,
+          "text": "!Sample_title = ESC_H3K4me1_TKO_Rep1"
+        },
+        {
+          "line_number": 547801,
+          "text": "!Sample_geo_accession = GSM2375138"
+        },
+        {
+          "line_number": 547802,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547807,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547808,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547810,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547811,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547812,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8895"
+        },
+        {
+          "line_number": 547820,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547838,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547839,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981553"
+        },
+        {
+          "line_number": 547840,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327395"
+        },
+        {
+          "line_number": 547842,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375139",
+      "lines": [
+        {
+          "line_number": 547844,
+          "text": "^SAMPLE = GSM2375139"
+        },
+        {
+          "line_number": 547845,
+          "text": "!Sample_title = ESC_H3K4me1_TKO_Rep2"
+        },
+        {
+          "line_number": 547846,
+          "text": "!Sample_geo_accession = GSM2375139"
+        },
+        {
+          "line_number": 547847,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547852,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547853,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547855,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547856,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547857,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8895"
+        },
+        {
+          "line_number": 547865,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547883,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547884,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981552"
+        },
+        {
+          "line_number": 547885,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327396"
+        },
+        {
+          "line_number": 547887,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375140",
+      "lines": [
+        {
+          "line_number": 547889,
+          "text": "^SAMPLE = GSM2375140"
+        },
+        {
+          "line_number": 547890,
+          "text": "!Sample_title = ESC_H3K4me1_TKO_Rep3"
+        },
+        {
+          "line_number": 547891,
+          "text": "!Sample_geo_accession = GSM2375140"
+        },
+        {
+          "line_number": 547892,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547897,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547898,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547900,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547901,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 547902,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8895"
+        },
+        {
+          "line_number": 547910,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547928,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547929,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981551"
+        },
+        {
+          "line_number": 547930,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327397"
+        },
+        {
+          "line_number": 547932,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375141",
+      "lines": [
+        {
+          "line_number": 547934,
+          "text": "^SAMPLE = GSM2375141"
+        },
+        {
+          "line_number": 547935,
+          "text": "!Sample_title = ESC_H3K4me1_WT_Rep1"
+        },
+        {
+          "line_number": 547936,
+          "text": "!Sample_geo_accession = GSM2375141"
+        },
+        {
+          "line_number": 547937,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547942,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547943,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547945,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547946,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547947,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8895"
+        },
+        {
+          "line_number": 547955,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 547973,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 547974,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981550"
+        },
+        {
+          "line_number": 547975,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327398"
+        },
+        {
+          "line_number": 547977,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375142",
+      "lines": [
+        {
+          "line_number": 547979,
+          "text": "^SAMPLE = GSM2375142"
+        },
+        {
+          "line_number": 547980,
+          "text": "!Sample_title = ESC_H3K4me1_WT_Rep2"
+        },
+        {
+          "line_number": 547981,
+          "text": "!Sample_geo_accession = GSM2375142"
+        },
+        {
+          "line_number": 547982,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 547987,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 547988,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 547990,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 547991,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 547992,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8895"
+        },
+        {
+          "line_number": 548000,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548018,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548019,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981549"
+        },
+        {
+          "line_number": 548020,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327399"
+        },
+        {
+          "line_number": 548022,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375143",
+      "lines": [
+        {
+          "line_number": 548024,
+          "text": "^SAMPLE = GSM2375143"
+        },
+        {
+          "line_number": 548025,
+          "text": "!Sample_title = ESC_H3K4me1_WT_Rep3"
+        },
+        {
+          "line_number": 548026,
+          "text": "!Sample_geo_accession = GSM2375143"
+        },
+        {
+          "line_number": 548027,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548032,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548033,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548035,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548036,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548037,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8895"
+        },
+        {
+          "line_number": 548045,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548063,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548064,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981548"
+        },
+        {
+          "line_number": 548065,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327400"
+        },
+        {
+          "line_number": 548067,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375144",
+      "lines": [
+        {
+          "line_number": 548069,
+          "text": "^SAMPLE = GSM2375144"
+        },
+        {
+          "line_number": 548070,
+          "text": "!Sample_title = ESC_H3K4me3_TKO_Rep1"
+        },
+        {
+          "line_number": 548071,
+          "text": "!Sample_geo_accession = GSM2375144"
+        },
+        {
+          "line_number": 548072,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548077,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548078,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548080,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548081,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 548082,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Cell Signaling, 9751"
+        },
+        {
+          "line_number": 548090,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548108,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548109,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981547"
+        },
+        {
+          "line_number": 548110,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327401"
+        },
+        {
+          "line_number": 548112,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375145",
+      "lines": [
+        {
+          "line_number": 548114,
+          "text": "^SAMPLE = GSM2375145"
+        },
+        {
+          "line_number": 548115,
+          "text": "!Sample_title = ESC_H3K4me3_TKO_Rep2"
+        },
+        {
+          "line_number": 548116,
+          "text": "!Sample_geo_accession = GSM2375145"
+        },
+        {
+          "line_number": 548117,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548122,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548123,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548125,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548126,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 548127,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Cell Signaling, 9751"
+        },
+        {
+          "line_number": 548135,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548153,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548154,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981546"
+        },
+        {
+          "line_number": 548155,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327402"
+        },
+        {
+          "line_number": 548157,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375146",
+      "lines": [
+        {
+          "line_number": 548159,
+          "text": "^SAMPLE = GSM2375146"
+        },
+        {
+          "line_number": 548160,
+          "text": "!Sample_title = ESC_H3K4me3_TKO_Rep3"
+        },
+        {
+          "line_number": 548161,
+          "text": "!Sample_geo_accession = GSM2375146"
+        },
+        {
+          "line_number": 548162,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548167,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548168,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548170,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548171,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 548172,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Cell Signaling, 9751"
+        },
+        {
+          "line_number": 548180,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548198,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548199,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981545"
+        },
+        {
+          "line_number": 548200,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327403"
+        },
+        {
+          "line_number": 548202,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375147",
+      "lines": [
+        {
+          "line_number": 548204,
+          "text": "^SAMPLE = GSM2375147"
+        },
+        {
+          "line_number": 548205,
+          "text": "!Sample_title = ESC_H3K4me3_WT_Rep1"
+        },
+        {
+          "line_number": 548206,
+          "text": "!Sample_geo_accession = GSM2375147"
+        },
+        {
+          "line_number": 548207,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548212,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548213,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548215,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548216,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548217,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Cell Signaling, 9751"
+        },
+        {
+          "line_number": 548225,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548243,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548244,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981542"
+        },
+        {
+          "line_number": 548245,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327404"
+        },
+        {
+          "line_number": 548247,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375148",
+      "lines": [
+        {
+          "line_number": 548249,
+          "text": "^SAMPLE = GSM2375148"
+        },
+        {
+          "line_number": 548250,
+          "text": "!Sample_title = ESC_H3K4me3_WT_Rep2"
+        },
+        {
+          "line_number": 548251,
+          "text": "!Sample_geo_accession = GSM2375148"
+        },
+        {
+          "line_number": 548252,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548257,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548258,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548260,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548261,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548262,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Cell Signaling, 9751"
+        },
+        {
+          "line_number": 548270,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548288,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548289,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981541"
+        },
+        {
+          "line_number": 548290,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327405"
+        },
+        {
+          "line_number": 548292,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375149",
+      "lines": [
+        {
+          "line_number": 548294,
+          "text": "^SAMPLE = GSM2375149"
+        },
+        {
+          "line_number": 548295,
+          "text": "!Sample_title = ESC_H3K4me3_WT_Rep3"
+        },
+        {
+          "line_number": 548296,
+          "text": "!Sample_geo_accession = GSM2375149"
+        },
+        {
+          "line_number": 548297,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548302,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548303,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548305,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548306,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548307,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Cell Signaling, 9751"
+        },
+        {
+          "line_number": 548315,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548333,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548334,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981540"
+        },
+        {
+          "line_number": 548335,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327406"
+        },
+        {
+          "line_number": 548337,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375150",
+      "lines": [
+        {
+          "line_number": 548339,
+          "text": "^SAMPLE = GSM2375150"
+        },
+        {
+          "line_number": 548340,
+          "text": "!Sample_title = ESC_H3K9me3_TKO_Rep1"
+        },
+        {
+          "line_number": 548341,
+          "text": "!Sample_geo_accession = GSM2375150"
+        },
+        {
+          "line_number": 548342,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548347,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548348,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548350,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548351,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 548352,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8898"
+        },
+        {
+          "line_number": 548360,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548378,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548379,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981539"
+        },
+        {
+          "line_number": 548380,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327407"
+        },
+        {
+          "line_number": 548382,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375151",
+      "lines": [
+        {
+          "line_number": 548384,
+          "text": "^SAMPLE = GSM2375151"
+        },
+        {
+          "line_number": 548385,
+          "text": "!Sample_title = ESC_H3K9me3_TKO_Rep2"
+        },
+        {
+          "line_number": 548386,
+          "text": "!Sample_geo_accession = GSM2375151"
+        },
+        {
+          "line_number": 548387,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548392,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548393,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548395,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548396,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 548397,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8898"
+        },
+        {
+          "line_number": 548405,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548423,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548424,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981538"
+        },
+        {
+          "line_number": 548425,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327408"
+        },
+        {
+          "line_number": 548427,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375152",
+      "lines": [
+        {
+          "line_number": 548429,
+          "text": "^SAMPLE = GSM2375152"
+        },
+        {
+          "line_number": 548430,
+          "text": "!Sample_title = ESC_H3K9me3_TKO_Rep3"
+        },
+        {
+          "line_number": 548431,
+          "text": "!Sample_geo_accession = GSM2375152"
+        },
+        {
+          "line_number": 548432,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548437,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548438,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548440,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548441,
+          "text": "!Sample_characteristics_ch1 = genotype: lamin-B1/B2/A triple knockout"
+        },
+        {
+          "line_number": 548442,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8898"
+        },
+        {
+          "line_number": 548450,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548468,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548469,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981537"
+        },
+        {
+          "line_number": 548470,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327409"
+        },
+        {
+          "line_number": 548472,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375153",
+      "lines": [
+        {
+          "line_number": 548474,
+          "text": "^SAMPLE = GSM2375153"
+        },
+        {
+          "line_number": 548475,
+          "text": "!Sample_title = ESC_H3K9me3_WT_Rep1"
+        },
+        {
+          "line_number": 548476,
+          "text": "!Sample_geo_accession = GSM2375153"
+        },
+        {
+          "line_number": 548477,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548482,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548483,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548485,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548486,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548487,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8898"
+        },
+        {
+          "line_number": 548495,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548513,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548514,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981544"
+        },
+        {
+          "line_number": 548515,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327410"
+        },
+        {
+          "line_number": 548517,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375154",
+      "lines": [
+        {
+          "line_number": 548519,
+          "text": "^SAMPLE = GSM2375154"
+        },
+        {
+          "line_number": 548520,
+          "text": "!Sample_title = ESC_H3K9me3_WT_Rep2"
+        },
+        {
+          "line_number": 548521,
+          "text": "!Sample_geo_accession = GSM2375154"
+        },
+        {
+          "line_number": 548522,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548527,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548528,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548530,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548531,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548532,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8898"
+        },
+        {
+          "line_number": 548540,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548558,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548559,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981543"
+        },
+        {
+          "line_number": 548560,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327411"
+        },
+        {
+          "line_number": 548562,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM2375155",
+      "lines": [
+        {
+          "line_number": 548564,
+          "text": "^SAMPLE = GSM2375155"
+        },
+        {
+          "line_number": 548565,
+          "text": "!Sample_title = ESC_H3K9me3_WT_Rep3"
+        },
+        {
+          "line_number": 548566,
+          "text": "!Sample_geo_accession = GSM2375155"
+        },
+        {
+          "line_number": 548567,
+          "text": "!Sample_status = Public on Nov 01 2017"
+        },
+        {
+          "line_number": 548572,
+          "text": "!Sample_source_name_ch1 = embryonic stem cells"
+        },
+        {
+          "line_number": 548573,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 548575,
+          "text": "!Sample_characteristics_ch1 = cell type: ESC"
+        },
+        {
+          "line_number": 548576,
+          "text": "!Sample_characteristics_ch1 = genotype: wildtpye"
+        },
+        {
+          "line_number": 548577,
+          "text": "!Sample_characteristics_ch1 = chip antibody: Abcam, ab8898"
+        },
+        {
+          "line_number": 548585,
+          "text": "!Sample_data_processing = Genome_build: mm9"
+        },
+        {
+          "line_number": 548603,
+          "text": "!Sample_library_strategy = ChIP-Seq"
+        },
+        {
+          "line_number": 548604,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN05981536"
+        },
+        {
+          "line_number": 548605,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX2327412"
+        },
+        {
+          "line_number": 548607,
+          "text": "!Sample_series_id = GSE89520"
+        }
+      ],
+      "source_notes": []
+    }
+  ]
+}

@@ -1,0 +1,956 @@
+{
+  "schema_version": "1",
+  "accession": "GSE89520",
+  "retrieved_on": "2026-09-23",
+  "source": {
+    "url": "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89520&targ=all&view=full&form=text",
+    "sha256": "a2a150541072253f34ce87025cee58d3b1660e004bfc3fbfb590e75271c5d4b8",
+    "bytes": 18825497,
+    "local_filename": "GSE89520-full.soft",
+    "retained_in_repository": false
+  },
+  "projection": {
+    "path": "campaigns/lamina-context-pilot/metadata/GSE89520.json",
+    "sha256": "0df5a034b1acd793deeea171943ac90051ce1f1e1d902350c7e54bec2623f7c1",
+    "bytes": 70115
+  },
+  "sample_count": 40,
+  "samples": [
+    {
+      "id": "GSM2375116",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_RNASeq_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981535",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375117",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_RNASeq_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981534",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375118",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_RNASeq_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981533",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375119",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_RNASeq_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "bulk_rna",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981532",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375120",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_HiC_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981571",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375121",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_HiC_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981570",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375122",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_HiC_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981564",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375123",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_HiC_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "hic",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981569",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375124",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27Ac_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981568",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375125",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27Ac_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981567",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375126",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27Ac_TKO_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981566",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375127",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27Ac_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981565",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375128",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27Ac_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981563",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375129",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27Ac_WT_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981562",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375130",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981561",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375131",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981560",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375132",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_TKO_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981559",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375133",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_TKO_Rep4",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 4,
+      "biosample_id": "SAMN05981558",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375134",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981557",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375135",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981556",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375136",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_WT_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981555",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375137",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K27me3_WT_Rep4",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 4,
+      "biosample_id": "SAMN05981554",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375138",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me1_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981553",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375139",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me1_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981552",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375140",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me1_TKO_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981551",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375141",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me1_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981550",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375142",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me1_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981549",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375143",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me1_WT_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981548",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375144",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me3_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981547",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375145",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me3_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981546",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375146",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me3_TKO_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981545",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375147",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me3_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981542",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375148",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me3_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981541",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375149",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K4me3_WT_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981540",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375150",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K9me3_TKO_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981539",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375151",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K9me3_TKO_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981538",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375152",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K9me3_TKO_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "lamin-B1/B2/A triple knockout",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981537",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375153",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K9me3_WT_Rep1",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 1,
+      "biosample_id": "SAMN05981544",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375154",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K9me3_WT_Rep2",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 2,
+      "biosample_id": "SAMN05981543",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    },
+    {
+      "id": "GSM2375155",
+      "series": [
+        "GSE89520"
+      ],
+      "title": "ESC_H3K9me3_WT_Rep3",
+      "organism": "Mus musculus",
+      "assay": "chip",
+      "cell_preparation": "ESC",
+      "genotype_reported": "wildtpye",
+      "age_reported": null,
+      "age_in_title": null,
+      "replicate_label": 3,
+      "biosample_id": "SAMN05981536",
+      "biological_unit_id": null,
+      "independence": "unresolved",
+      "pooling": "unknown",
+      "genome_build": "mm9",
+      "issues": [
+        "biological_unit_and_pooling_not_identified"
+      ]
+    }
+  ],
+  "annotation": {
+    "reported": "Gencode vM1 for mm9 RNA; source file not acquired",
+    "annotation_file_qualified": false,
+    "source_line_numbers": [
+      546834,
+      546878,
+      546922,
+      546966,
+      547010,
+      547054,
+      547098,
+      547142,
+      547187,
+      547232,
+      547277,
+      547322,
+      547367,
+      547412,
+      547457,
+      547502,
+      547547,
+      547592,
+      547637,
+      547682,
+      547727,
+      547772,
+      547817,
+      547862,
+      547907,
+      547952,
+      547997,
+      548042,
+      548087,
+      548132,
+      548177,
+      548222,
+      548267,
+      548312,
+      548357,
+      548402,
+      548447,
+      548492,
+      548537,
+      548582
+    ]
+  },
+  "rights": {
+    "basis": "public_molecular_metadata",
+    "policy_url": "https://www.ncbi.nlm.nih.gov/home/about/policies/#data",
+    "notice": "Factual public mouse molecular-data metadata only. NCBI imposes no reuse/distribution restriction on these databases and accepts no submitter restriction, but does not transfer third-party intellectual-property rights. Acknowledge GEO and the depositors. Author scripts and publication full text are not redistributed."
+  },
+  "limitations": [
+    "GSM/BioSample accessions and Rep labels identify submitted libraries, not proven independent animals or cultures.",
+    "Pooling, litter/culture relatedness, sample reuse, and batches remain unresolved. No biological power estimate is available.",
+    "This intake corpus is public reproduction material; none of it is a reserved independent holdout."
+  ]
+}

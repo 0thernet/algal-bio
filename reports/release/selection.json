@@ -1,0 +1,905 @@
+{
+  "contract": "bio.release-selection.v1",
+  "release_id": "public-calibration-v1",
+  "scope": "software_and_public_calibration",
+  "scientific_status": "data_limited",
+  "prospective_status": "not_run",
+  "review_status": "independently_reviewed",
+  "artifacts": [
+    {
+      "path": ".gitignore",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": ".python-version",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "AGENTS.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "CITATION.cff",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "LICENSE",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "Makefile",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "README.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "bun.lock",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/lamina-context-pilot/README.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/lamina-context-pilot/author-code-audit.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "factual_source_inventory",
+        "license": "facts-only",
+        "attribution": "Factual inventory of katherinebossone/Lamin_CM_Paper at f85db2b7b5ae4e542bb74bd7d06fadf258bc04bd; author executable code not copied.",
+        "sources": [
+          "https://github.com/katherinebossone/Lamin_CM_Paper/tree/f85db2b7b5ae4e542bb74bd7d06fadf258bc04bd"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/lamina-context-pilot/freeze.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/lamina-context-pilot/metadata/GSE330298.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "public_molecular_metadata",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Factual source metadata; no contact details or article full text.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/lamina-context-pilot/metadata/GSE89520.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "public_molecular_metadata",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Xiaobin Zheng, Jiabiao Hu, Youngjo Kim, and Yixian Zheng; GEO GSE89520. Factual source metadata; no contact details or article full text.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89520",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/lamina-context-pilot/registration.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/prospective-001/registration.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "campaigns/qualification/registration.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "datasets/manifests/GSE330298.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "public_molecular_metadata",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Factual source metadata; no contact details or article full text.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "datasets/manifests/GSE89520.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "public_molecular_metadata",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Xiaobin Zheng, Jiabiao Hu, Youngjo Kim, and Yixian Zheng; GEO GSE89520. Factual source metadata; no contact details or article full text.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89520",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "docs/bio-instrument.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "docs/campaign-operations.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "docs/contributions.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "docs/environment.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "docs/implementation-status.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "docs/study-report.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "orchestrator/check-journal.ts",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "orchestrator/fixtures.ts",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "orchestrator/index.ts",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "package.json",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "pyproject.toml",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "reports/calibration/full-rna-filter.json",
+      "role": "report",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "reports/prospective-001/decision.json",
+      "role": "report",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "reports/qualification/offline.json",
+      "role": "report",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "reports/release/README.md",
+      "role": "documentation",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "schemas/bio-study.schema.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "schemas/campaign-event.schema.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "schemas/candidate.schema.json",
+      "role": "protocol",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/calibrate_public_data.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/check_budget.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/check_registration.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/check_release.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/check_repository.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/evaluate_candidates.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/qualify_campaign.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/reproduce_bio_fixture.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "scripts/run_bio_qualification.ts",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "src/bio_lab/__init__.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "src/bio_lab/instrument.ts",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "src/bio_lab/measurements.py",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "src/bio_lab/qualification.ts",
+      "role": "source",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/bio/test_measurements.py",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/README.md",
+      "role": "fixture",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/cscore-minus-provenance.json",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/cscore-minus.bedgraph",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/cscore-plus-provenance.json",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/cscore-plus.bedgraph",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/expected.json",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/rna-counts.tsv",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/fixtures/bio/rna-provenance.json",
+      "role": "fixture",
+      "rights": {
+        "basis": "public_molecular_measurement",
+        "license": "NCBI-molecular-data-policy",
+        "attribution": "Katherine A. Bossone, Xiaobin Zheng, Lidya Kristiani, Reni Marsela, Youngjo Kim, and Yixian Zheng; GEO GSE330298; DOI 10.64898/2026.05.20.726565. Bounded processed-data projection or its provenance/derived expectation; no biological novelty claim.",
+        "sources": [
+          "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE330298",
+          "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/foundation/artifact.test.ts",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/foundation/fixtures/artifact.json",
+      "role": "fixture",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/integration/qualification.test.ts",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/integration/test_prospective_gate.py",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/orchestrator/campaign.test.ts",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/orchestrator/test_budget.py",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/registration/test_registration.py",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tests/release/test_release.py",
+      "role": "test",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "tsconfig.json",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    },
+    {
+      "path": "uv.lock",
+      "role": "environment",
+      "rights": {
+        "basis": "project_mit",
+        "license": "MIT",
+        "attribution": "Hraness contributors; original repository software/documentation and derived calibration reports. Third-party molecular data is credited separately.",
+        "sources": [
+          "https://github.com/0thernet/algal-bio/blob/main/LICENSE"
+        ],
+        "redistribution": "admitted"
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "algal-bio.portability-fixture.v1",
+  "license": "MIT",
+  "source": "algal-bio portable fixture\nSynthetic UTF-8 evidence: α → β\n",
+  "expected": {
+    "sha256": "d8143cd5f44d89261b665520b4ba7573b478626ddaefd0e7fdf0e031f725eae9",
+    "bytes": 63
+  }
+}

@@ -1,0 +1,2876 @@
+{
+  "schema_version": "1",
+  "source_sha256": "f025b3f26e647020e0518ad4d787f3b7d9fbed18142e351fc7480f85175a32c2",
+  "selection": "sample_metadata_facts_v1",
+  "records": [
+    {
+      "sample_id": "GSM9715171",
+      "lines": [
+        {
+          "line_number": 1,
+          "text": "^SAMPLE = GSM9715171"
+        },
+        {
+          "line_number": 2,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep1"
+        },
+        {
+          "line_number": 3,
+          "text": "!Sample_geo_accession = GSM9715171"
+        },
+        {
+          "line_number": 4,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 9,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 10,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 12,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 13,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 14,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 15,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 19,
+          "text": "!Sample_description = Library name: P7.5_LB1Fplus_Nkx2_5Cre_bulk_RNA_rep1"
+        },
+        {
+          "line_number": 21,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 35,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 36,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750518"
+        },
+        {
+          "line_number": 37,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226005"
+        },
+        {
+          "line_number": 39,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 40,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715172",
+      "lines": [
+        {
+          "line_number": 42,
+          "text": "^SAMPLE = GSM9715172"
+        },
+        {
+          "line_number": 43,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep2"
+        },
+        {
+          "line_number": 44,
+          "text": "!Sample_geo_accession = GSM9715172"
+        },
+        {
+          "line_number": 45,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 50,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 51,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 53,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 54,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 55,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 56,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 60,
+          "text": "!Sample_description = Library name: P7.5_LB1Fplus_Nkx2_5Cre_bulk_RNA_rep2"
+        },
+        {
+          "line_number": 62,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 76,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 77,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750517"
+        },
+        {
+          "line_number": 78,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226006"
+        },
+        {
+          "line_number": 80,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 81,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715173",
+      "lines": [
+        {
+          "line_number": 83,
+          "text": "^SAMPLE = GSM9715173"
+        },
+        {
+          "line_number": 84,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep3"
+        },
+        {
+          "line_number": 85,
+          "text": "!Sample_geo_accession = GSM9715173"
+        },
+        {
+          "line_number": 86,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 91,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 92,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 94,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 95,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 96,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 97,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 101,
+          "text": "!Sample_description = Library name: P7.5_LB1Fplus_Nkx2_5Cre_bulk_RNA_rep3"
+        },
+        {
+          "line_number": 103,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 117,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 118,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750515"
+        },
+        {
+          "line_number": 119,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226007"
+        },
+        {
+          "line_number": 121,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 122,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715174",
+      "lines": [
+        {
+          "line_number": 124,
+          "text": "^SAMPLE = GSM9715174"
+        },
+        {
+          "line_number": 125,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/+, P7.5 Heart, bulk RNA-seq, Rep4"
+        },
+        {
+          "line_number": 126,
+          "text": "!Sample_geo_accession = GSM9715174"
+        },
+        {
+          "line_number": 127,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 132,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 133,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 135,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 136,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 137,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 138,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 142,
+          "text": "!Sample_description = Library name: P7.5_LB1Fplus_Nkx2_5Cre_bulk_RNA_rep4"
+        },
+        {
+          "line_number": 144,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 158,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 159,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750514"
+        },
+        {
+          "line_number": 160,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226008"
+        },
+        {
+          "line_number": 162,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 163,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715175",
+      "lines": [
+        {
+          "line_number": 165,
+          "text": "^SAMPLE = GSM9715175"
+        },
+        {
+          "line_number": 166,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep1"
+        },
+        {
+          "line_number": 167,
+          "text": "!Sample_geo_accession = GSM9715175"
+        },
+        {
+          "line_number": 168,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 173,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 174,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 176,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 177,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 178,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 179,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 183,
+          "text": "!Sample_description = Library name: P7.5_LB1Fminus_Nkx2_5Cre_bulk_RNA_rep1"
+        },
+        {
+          "line_number": 185,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 199,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 200,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750513"
+        },
+        {
+          "line_number": 201,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226009"
+        },
+        {
+          "line_number": 203,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 204,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715176",
+      "lines": [
+        {
+          "line_number": 206,
+          "text": "^SAMPLE = GSM9715176"
+        },
+        {
+          "line_number": 207,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep2"
+        },
+        {
+          "line_number": 208,
+          "text": "!Sample_geo_accession = GSM9715176"
+        },
+        {
+          "line_number": 209,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 214,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 215,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 217,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 218,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 219,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 220,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 224,
+          "text": "!Sample_description = Library name: P7.5_LB1Fminus_Nkx2_5Cre_bulk_RNA_rep2"
+        },
+        {
+          "line_number": 226,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 240,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 241,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750512"
+        },
+        {
+          "line_number": 242,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226010"
+        },
+        {
+          "line_number": 244,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 245,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715177",
+      "lines": [
+        {
+          "line_number": 247,
+          "text": "^SAMPLE = GSM9715177"
+        },
+        {
+          "line_number": 248,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep3"
+        },
+        {
+          "line_number": 249,
+          "text": "!Sample_geo_accession = GSM9715177"
+        },
+        {
+          "line_number": 250,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 255,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 256,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 258,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 259,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 260,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 261,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 265,
+          "text": "!Sample_description = Library name: P7.5_LB1Fminus_Nkx2_5Cre_bulk_RNA_rep3"
+        },
+        {
+          "line_number": 267,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 281,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 282,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750511"
+        },
+        {
+          "line_number": 283,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226011"
+        },
+        {
+          "line_number": 285,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 286,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9715178",
+      "lines": [
+        {
+          "line_number": 288,
+          "text": "^SAMPLE = GSM9715178"
+        },
+        {
+          "line_number": 289,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1F/-, P7.5 Heart, bulk RNA-seq, Rep4"
+        },
+        {
+          "line_number": 290,
+          "text": "!Sample_geo_accession = GSM9715178"
+        },
+        {
+          "line_number": 291,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 296,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 297,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 299,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 300,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 301,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 302,
+          "text": "!Sample_characteristics_ch1 = timepoint: P7.5"
+        },
+        {
+          "line_number": 306,
+          "text": "!Sample_description = Library name: P7.5_LB1Fminus_Nkx2_5Cre_bulk_RNA_rep4"
+        },
+        {
+          "line_number": 308,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 322,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 323,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58750510"
+        },
+        {
+          "line_number": 324,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33226012"
+        },
+        {
+          "line_number": 326,
+          "text": "!Sample_series_id = GSE330013"
+        },
+        {
+          "line_number": 327,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9717986",
+      "lines": [
+        {
+          "line_number": 329,
+          "text": "^SAMPLE = GSM9717986"
+        },
+        {
+          "line_number": 330,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, ATAC Rep1"
+        },
+        {
+          "line_number": 331,
+          "text": "!Sample_geo_accession = GSM9717986"
+        },
+        {
+          "line_number": 332,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 337,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 338,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 340,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 341,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 342,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 343,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 347,
+          "text": "!Sample_description = Library name: P0_5_ATAC_LB1Fplus_rep1"
+        },
+        {
+          "line_number": 348,
+          "text": "!Sample_description = Nkx2_5Cre_LB1Fplus_merged_ATAC_5kb.bedgraph"
+        },
+        {
+          "line_number": 349,
+          "text": "!Sample_description = Nkx2_5Cre_LB1Fplus_consensus_peaks.bed"
+        },
+        {
+          "line_number": 351,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 365,
+          "text": "!Sample_library_strategy = ATAC-seq"
+        },
+        {
+          "line_number": 366,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990898"
+        },
+        {
+          "line_number": 367,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237304"
+        },
+        {
+          "line_number": 369,
+          "text": "!Sample_series_id = GSE330099"
+        },
+        {
+          "line_number": 370,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9717987",
+      "lines": [
+        {
+          "line_number": 372,
+          "text": "^SAMPLE = GSM9717987"
+        },
+        {
+          "line_number": 373,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, ATAC, Rep2"
+        },
+        {
+          "line_number": 374,
+          "text": "!Sample_geo_accession = GSM9717987"
+        },
+        {
+          "line_number": 375,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 380,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 381,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 383,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 384,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 385,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 386,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 390,
+          "text": "!Sample_description = Library name: P0_5_ATAC_LB1Fplus_rep2"
+        },
+        {
+          "line_number": 391,
+          "text": "!Sample_description = Nkx2_5Cre_LB1Fplus_merged_ATAC_5kb.bedgraph"
+        },
+        {
+          "line_number": 392,
+          "text": "!Sample_description = Nkx2_5Cre_LB1Fplus_consensus_peaks.bed"
+        },
+        {
+          "line_number": 394,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 408,
+          "text": "!Sample_library_strategy = ATAC-seq"
+        },
+        {
+          "line_number": 409,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990896"
+        },
+        {
+          "line_number": 410,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237305"
+        },
+        {
+          "line_number": 412,
+          "text": "!Sample_series_id = GSE330099"
+        },
+        {
+          "line_number": 413,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9717988",
+      "lines": [
+        {
+          "line_number": 415,
+          "text": "^SAMPLE = GSM9717988"
+        },
+        {
+          "line_number": 416,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, scRNA, Rep1"
+        },
+        {
+          "line_number": 417,
+          "text": "!Sample_geo_accession = GSM9717988"
+        },
+        {
+          "line_number": 418,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 423,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 424,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 426,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 427,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 428,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 429,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 433,
+          "text": "!Sample_description = Library name: KB2_LB1Fminus_P0_5_scRNA_rep1"
+        },
+        {
+          "line_number": 435,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 449,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 450,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58989180"
+        },
+        {
+          "line_number": 451,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237445"
+        },
+        {
+          "line_number": 455,
+          "text": "!Sample_series_id = GSE330100"
+        },
+        {
+          "line_number": 456,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 434,
+          "excerpt": "Gene–cell count matrices from four samples were imported"
+        },
+        {
+          "line_number": 434,
+          "excerpt": "across the three datasets"
+        }
+      ]
+    },
+    {
+      "sample_id": "GSM9717989",
+      "lines": [
+        {
+          "line_number": 458,
+          "text": "^SAMPLE = GSM9717989"
+        },
+        {
+          "line_number": 459,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, scRNA, Rep2"
+        },
+        {
+          "line_number": 460,
+          "text": "!Sample_geo_accession = GSM9717989"
+        },
+        {
+          "line_number": 461,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 466,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 467,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 469,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 470,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 471,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 472,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 476,
+          "text": "!Sample_description = Library name: KB3_LB1Fminus_P0_5_scRNA_rep2"
+        },
+        {
+          "line_number": 478,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 492,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 493,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58989179"
+        },
+        {
+          "line_number": 494,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237446"
+        },
+        {
+          "line_number": 498,
+          "text": "!Sample_series_id = GSE330100"
+        },
+        {
+          "line_number": 499,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 477,
+          "excerpt": "Gene–cell count matrices from four samples were imported"
+        },
+        {
+          "line_number": 477,
+          "excerpt": "across the three datasets"
+        }
+      ]
+    },
+    {
+      "sample_id": "GSM9717990",
+      "lines": [
+        {
+          "line_number": 501,
+          "text": "^SAMPLE = GSM9717990"
+        },
+        {
+          "line_number": 502,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, scRNA, Rep1"
+        },
+        {
+          "line_number": 503,
+          "text": "!Sample_geo_accession = GSM9717990"
+        },
+        {
+          "line_number": 504,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 509,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 510,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 512,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 513,
+          "text": "!Sample_characteristics_ch1 = cell type: All heart cells"
+        },
+        {
+          "line_number": 514,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre; Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 515,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 519,
+          "text": "!Sample_description = Library name: KB4_LB1Fplus_P0_5_scRNA_rep1"
+        },
+        {
+          "line_number": 521,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 535,
+          "text": "!Sample_library_strategy = RNA-Seq"
+        },
+        {
+          "line_number": 536,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58989178"
+        },
+        {
+          "line_number": 537,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237447"
+        },
+        {
+          "line_number": 541,
+          "text": "!Sample_series_id = GSE330100"
+        },
+        {
+          "line_number": 542,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 520,
+          "excerpt": "Gene–cell count matrices from four samples were imported"
+        },
+        {
+          "line_number": 520,
+          "excerpt": "across the three datasets"
+        }
+      ]
+    },
+    {
+      "sample_id": "GSM9718003",
+      "lines": [
+        {
+          "line_number": 544,
+          "text": "^SAMPLE = GSM9718003"
+        },
+        {
+          "line_number": 545,
+          "text": "!Sample_title = WT, P0.5 Heart, H3K9me2 CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 546,
+          "text": "!Sample_geo_accession = GSM9718003"
+        },
+        {
+          "line_number": 547,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 552,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 553,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 555,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 556,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 557,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 558,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 559,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: H3K9me2"
+        },
+        {
+          "line_number": 563,
+          "text": "!Sample_description = Library name: WT_P0_5_H3K9me2_Rep1"
+        },
+        {
+          "line_number": 564,
+          "text": "!Sample_description = Corresponding IgG is WT Rep3"
+        },
+        {
+          "line_number": 565,
+          "text": "!Sample_description = WT_H3K9me2_log2fc.bw"
+        },
+        {
+          "line_number": 566,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 568,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 583,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 584,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990335"
+        },
+        {
+          "line_number": 585,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237286"
+        },
+        {
+          "line_number": 587,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 588,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718004",
+      "lines": [
+        {
+          "line_number": 590,
+          "text": "^SAMPLE = GSM9718004"
+        },
+        {
+          "line_number": 591,
+          "text": "!Sample_title = WT, P0.5 Heart, H3K9me2 CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 592,
+          "text": "!Sample_geo_accession = GSM9718004"
+        },
+        {
+          "line_number": 593,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 598,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 599,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 601,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 602,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 603,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 604,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 605,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: H3K9me2"
+        },
+        {
+          "line_number": 609,
+          "text": "!Sample_description = Library name: WT_P0_5_H3K9me2_Rep2"
+        },
+        {
+          "line_number": 610,
+          "text": "!Sample_description = Corresponding IgG is WT Rep4"
+        },
+        {
+          "line_number": 611,
+          "text": "!Sample_description = WT_H3K9me2_log2fc.bw"
+        },
+        {
+          "line_number": 612,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 614,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 629,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 630,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990334"
+        },
+        {
+          "line_number": 631,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237287"
+        },
+        {
+          "line_number": 633,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 634,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718005",
+      "lines": [
+        {
+          "line_number": 636,
+          "text": "^SAMPLE = GSM9718005"
+        },
+        {
+          "line_number": 637,
+          "text": "!Sample_title = WT, P0.5 Heart, H3K9me3 CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 638,
+          "text": "!Sample_geo_accession = GSM9718005"
+        },
+        {
+          "line_number": 639,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 644,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 645,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 647,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 648,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 649,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 650,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 651,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: H3K9me3"
+        },
+        {
+          "line_number": 655,
+          "text": "!Sample_description = Library name: WT_P0_5_H3K9me3_Rep1"
+        },
+        {
+          "line_number": 656,
+          "text": "!Sample_description = Corresponding IgG is WT Rep1"
+        },
+        {
+          "line_number": 657,
+          "text": "!Sample_description = WT_H3K9me3_merged.bw"
+        },
+        {
+          "line_number": 658,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 660,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 675,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 676,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990333"
+        },
+        {
+          "line_number": 677,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237288"
+        },
+        {
+          "line_number": 679,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 680,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718006",
+      "lines": [
+        {
+          "line_number": 682,
+          "text": "^SAMPLE = GSM9718006"
+        },
+        {
+          "line_number": 683,
+          "text": "!Sample_title = WT, P0.5 Heart, H3K9me3 CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 684,
+          "text": "!Sample_geo_accession = GSM9718006"
+        },
+        {
+          "line_number": 685,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 690,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 691,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 693,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 694,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 695,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 696,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 697,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: H3K9me3"
+        },
+        {
+          "line_number": 701,
+          "text": "!Sample_description = Library name: WT_P0_5_H3K9me3_Rep2"
+        },
+        {
+          "line_number": 702,
+          "text": "!Sample_description = Corresponding IgG is WT Rep2"
+        },
+        {
+          "line_number": 703,
+          "text": "!Sample_description = WT_H3K9me3_merged.bw"
+        },
+        {
+          "line_number": 704,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 706,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 721,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 722,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990332"
+        },
+        {
+          "line_number": 723,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237289"
+        },
+        {
+          "line_number": 725,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 726,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718007",
+      "lines": [
+        {
+          "line_number": 728,
+          "text": "^SAMPLE = GSM9718007"
+        },
+        {
+          "line_number": 729,
+          "text": "!Sample_title = WT, P0.5 Heart, H3K27ac CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 730,
+          "text": "!Sample_geo_accession = GSM9718007"
+        },
+        {
+          "line_number": 731,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 736,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 737,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 739,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 740,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 741,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 742,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 743,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: H3K27ac"
+        },
+        {
+          "line_number": 747,
+          "text": "!Sample_description = Library name: WT_P0_5_H3K27ac_Rep1"
+        },
+        {
+          "line_number": 748,
+          "text": "!Sample_description = Corresponding IgG is WT Rep3"
+        },
+        {
+          "line_number": 749,
+          "text": "!Sample_description = WT_H3K27ac_log2fc.bw"
+        },
+        {
+          "line_number": 750,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 752,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 767,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 768,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990331"
+        },
+        {
+          "line_number": 769,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237290"
+        },
+        {
+          "line_number": 771,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 772,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718008",
+      "lines": [
+        {
+          "line_number": 774,
+          "text": "^SAMPLE = GSM9718008"
+        },
+        {
+          "line_number": 775,
+          "text": "!Sample_title = WT, P0.5 Heart, H3K27ac CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 776,
+          "text": "!Sample_geo_accession = GSM9718008"
+        },
+        {
+          "line_number": 777,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 782,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 783,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 785,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 786,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 787,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 788,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 789,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: H3K27ac"
+        },
+        {
+          "line_number": 793,
+          "text": "!Sample_description = Library name: WT_P0_5_H3K27ac_Rep2"
+        },
+        {
+          "line_number": 794,
+          "text": "!Sample_description = Corresponding IgG is WT Rep4"
+        },
+        {
+          "line_number": 795,
+          "text": "!Sample_description = WT_H3K27ac_log2fc.bw"
+        },
+        {
+          "line_number": 796,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 798,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 813,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 814,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990330"
+        },
+        {
+          "line_number": 815,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237291"
+        },
+        {
+          "line_number": 817,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 818,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718009",
+      "lines": [
+        {
+          "line_number": 820,
+          "text": "^SAMPLE = GSM9718009"
+        },
+        {
+          "line_number": 821,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Lamin-A CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 822,
+          "text": "!Sample_geo_accession = GSM9718009"
+        },
+        {
+          "line_number": 823,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 828,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 829,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 831,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 832,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 833,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 834,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 835,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: Lamin-A/C"
+        },
+        {
+          "line_number": 839,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/plus_P0_5_lamin_A_Rep1"
+        },
+        {
+          "line_number": 840,
+          "text": "!Sample_description = Corresponding IgG is Nkx2-5Cre;Lmnb1Flox/+ Rep1"
+        },
+        {
+          "line_number": 841,
+          "text": "!Sample_description = Nkx2_5Cre_Lmnb1Fplus_lamin-A_zscore.bw"
+        },
+        {
+          "line_number": 842,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 844,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 859,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 860,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990329"
+        },
+        {
+          "line_number": 861,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237292"
+        },
+        {
+          "line_number": 863,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 864,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718010",
+      "lines": [
+        {
+          "line_number": 866,
+          "text": "^SAMPLE = GSM9718010"
+        },
+        {
+          "line_number": 867,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Lamin-A CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 868,
+          "text": "!Sample_geo_accession = GSM9718010"
+        },
+        {
+          "line_number": 869,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 874,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 875,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 877,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 878,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 879,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 880,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 881,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: Lamin-A/C"
+        },
+        {
+          "line_number": 885,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/plus_P0_5_lamin_A_Rep2"
+        },
+        {
+          "line_number": 886,
+          "text": "!Sample_description = Corresponding IgG is Nkx2-5Cre;Lmnb1Flox/+ Rep2"
+        },
+        {
+          "line_number": 887,
+          "text": "!Sample_description = Nkx2_5Cre_Lmnb1Fplus_lamin-A_zscore.bw"
+        },
+        {
+          "line_number": 888,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 890,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 905,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 906,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990328"
+        },
+        {
+          "line_number": 907,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237293"
+        },
+        {
+          "line_number": 909,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 910,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718011",
+      "lines": [
+        {
+          "line_number": 912,
+          "text": "^SAMPLE = GSM9718011"
+        },
+        {
+          "line_number": 913,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Lamin-A CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 914,
+          "text": "!Sample_geo_accession = GSM9718011"
+        },
+        {
+          "line_number": 915,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 920,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 921,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 923,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 924,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 925,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 926,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 927,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: Lamin-A/C"
+        },
+        {
+          "line_number": 931,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/minus_P0_5_lamin_A_Rep1"
+        },
+        {
+          "line_number": 932,
+          "text": "!Sample_description = Corresponding IgG is Nkx2-5Cre;Lmnb1Flox/- Rep1"
+        },
+        {
+          "line_number": 933,
+          "text": "!Sample_description = Nkx2_5Cre_Lmnb1Fminus_lamin-A_zscore.bw"
+        },
+        {
+          "line_number": 934,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 936,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 951,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 952,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990326"
+        },
+        {
+          "line_number": 953,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237294"
+        },
+        {
+          "line_number": 955,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 956,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718012",
+      "lines": [
+        {
+          "line_number": 958,
+          "text": "^SAMPLE = GSM9718012"
+        },
+        {
+          "line_number": 959,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Lamin-A CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 960,
+          "text": "!Sample_geo_accession = GSM9718012"
+        },
+        {
+          "line_number": 961,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 966,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 967,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 969,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 970,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 971,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 972,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 973,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: Lamin-A/C"
+        },
+        {
+          "line_number": 977,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/minus_P0_5_lamin_A_Rep2"
+        },
+        {
+          "line_number": 978,
+          "text": "!Sample_description = Corresponding IgG is Nkx2-5Cre;Lmnb1Flox/- Rep2"
+        },
+        {
+          "line_number": 979,
+          "text": "!Sample_description = Nkx2_5Cre_Lmnb1Fminus_lamin-A_zscore.bw"
+        },
+        {
+          "line_number": 980,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 982,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 997,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 998,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990325"
+        },
+        {
+          "line_number": 999,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237295"
+        },
+        {
+          "line_number": 1001,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1002,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718013",
+      "lines": [
+        {
+          "line_number": 1004,
+          "text": "^SAMPLE = GSM9718013"
+        },
+        {
+          "line_number": 1005,
+          "text": "!Sample_title = WT, P0.5 Heart, IgG CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 1006,
+          "text": "!Sample_geo_accession = GSM9718013"
+        },
+        {
+          "line_number": 1007,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1012,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1013,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1015,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1016,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1017,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1018,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1019,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1023,
+          "text": "!Sample_description = Library name: WT_P0_5_IgG_chrom_Rep1"
+        },
+        {
+          "line_number": 1024,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 1026,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1041,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1042,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990324"
+        },
+        {
+          "line_number": 1043,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237296"
+        },
+        {
+          "line_number": 1045,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1046,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718014",
+      "lines": [
+        {
+          "line_number": 1048,
+          "text": "^SAMPLE = GSM9718014"
+        },
+        {
+          "line_number": 1049,
+          "text": "!Sample_title = WT, P0.5 Heart, IgG CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 1050,
+          "text": "!Sample_geo_accession = GSM9718014"
+        },
+        {
+          "line_number": 1051,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1056,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1057,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1059,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1060,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1061,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1062,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1063,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1067,
+          "text": "!Sample_description = Library name: WT_P0_5_IgG_chrom_Rep2"
+        },
+        {
+          "line_number": 1068,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 1070,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1085,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1086,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990323"
+        },
+        {
+          "line_number": 1087,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237297"
+        },
+        {
+          "line_number": 1089,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1090,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718015",
+      "lines": [
+        {
+          "line_number": 1092,
+          "text": "^SAMPLE = GSM9718015"
+        },
+        {
+          "line_number": 1093,
+          "text": "!Sample_title = WT, P0.5 Heart, IgG CUT&RUN, Rep3"
+        },
+        {
+          "line_number": 1094,
+          "text": "!Sample_geo_accession = GSM9718015"
+        },
+        {
+          "line_number": 1095,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1100,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1101,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1103,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1104,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1105,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1106,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1107,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1111,
+          "text": "!Sample_description = Library name: WT_P0_5_IgG_chrom_Rep3"
+        },
+        {
+          "line_number": 1112,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 1114,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1129,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1130,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990322"
+        },
+        {
+          "line_number": 1131,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237298"
+        },
+        {
+          "line_number": 1133,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1134,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718016",
+      "lines": [
+        {
+          "line_number": 1136,
+          "text": "^SAMPLE = GSM9718016"
+        },
+        {
+          "line_number": 1137,
+          "text": "!Sample_title = WT, P0.5 Heart, IgG CUT&RUN, Rep4"
+        },
+        {
+          "line_number": 1138,
+          "text": "!Sample_geo_accession = GSM9718016"
+        },
+        {
+          "line_number": 1139,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1144,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1145,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1147,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1148,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1149,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1150,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1151,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1155,
+          "text": "!Sample_description = Library name: WT_P0_5_IgG_chrom_Rep4"
+        },
+        {
+          "line_number": 1156,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 1158,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1173,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1174,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990321"
+        },
+        {
+          "line_number": 1175,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237299"
+        },
+        {
+          "line_number": 1177,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1178,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718017",
+      "lines": [
+        {
+          "line_number": 1180,
+          "text": "^SAMPLE = GSM9718017"
+        },
+        {
+          "line_number": 1181,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, IgG CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 1182,
+          "text": "!Sample_geo_accession = GSM9718017"
+        },
+        {
+          "line_number": 1183,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1188,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1189,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1191,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1192,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1193,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1194,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.6"
+        },
+        {
+          "line_number": 1195,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1199,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/plus_P0_5_IgG_Rep1"
+        },
+        {
+          "line_number": 1200,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 1202,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1217,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1218,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990320"
+        },
+        {
+          "line_number": 1219,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237300"
+        },
+        {
+          "line_number": 1221,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1222,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718018",
+      "lines": [
+        {
+          "line_number": 1224,
+          "text": "^SAMPLE = GSM9718018"
+        },
+        {
+          "line_number": 1225,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, IgG CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 1226,
+          "text": "!Sample_geo_accession = GSM9718018"
+        },
+        {
+          "line_number": 1227,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1232,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1233,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1235,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1236,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1237,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1238,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.7"
+        },
+        {
+          "line_number": 1239,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1243,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/plus_P0_5_IgG_Rep2"
+        },
+        {
+          "line_number": 1244,
+          "text": "!Sample_description = P0_5_6_state_Hilands.bed"
+        },
+        {
+          "line_number": 1246,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1261,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1262,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990319"
+        },
+        {
+          "line_number": 1263,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237301"
+        },
+        {
+          "line_number": 1265,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1266,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718019",
+      "lines": [
+        {
+          "line_number": 1268,
+          "text": "^SAMPLE = GSM9718019"
+        },
+        {
+          "line_number": 1269,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, IgG CUT&RUN, Rep1"
+        },
+        {
+          "line_number": 1270,
+          "text": "!Sample_geo_accession = GSM9718019"
+        },
+        {
+          "line_number": 1271,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1276,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1277,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1279,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1280,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1281,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1282,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.8"
+        },
+        {
+          "line_number": 1283,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1287,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/minus_P0_5_IgG_Rep1"
+        },
+        {
+          "line_number": 1289,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1304,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1305,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990318"
+        },
+        {
+          "line_number": 1306,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237302"
+        },
+        {
+          "line_number": 1308,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1309,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718020",
+      "lines": [
+        {
+          "line_number": 1311,
+          "text": "^SAMPLE = GSM9718020"
+        },
+        {
+          "line_number": 1312,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, IgG CUT&RUN, Rep2"
+        },
+        {
+          "line_number": 1313,
+          "text": "!Sample_geo_accession = GSM9718020"
+        },
+        {
+          "line_number": 1314,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1319,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1320,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1322,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1323,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1324,
+          "text": "!Sample_characteristics_ch1 = genotype: Wildtype"
+        },
+        {
+          "line_number": 1325,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.9"
+        },
+        {
+          "line_number": 1326,
+          "text": "!Sample_characteristics_ch1 = cut&run antibody: IgG"
+        },
+        {
+          "line_number": 1330,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/minus_P0_5_IgG_Rep2"
+        },
+        {
+          "line_number": 1332,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1347,
+          "text": "!Sample_library_strategy = OTHER"
+        },
+        {
+          "line_number": 1348,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58990317"
+        },
+        {
+          "line_number": 1349,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237303"
+        },
+        {
+          "line_number": 1351,
+          "text": "!Sample_series_id = GSE330102"
+        },
+        {
+          "line_number": 1352,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": []
+    },
+    {
+      "sample_id": "GSM9718021",
+      "lines": [
+        {
+          "line_number": 1354,
+          "text": "^SAMPLE = GSM9718021"
+        },
+        {
+          "line_number": 1355,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Hi-C, Rep1"
+        },
+        {
+          "line_number": 1356,
+          "text": "!Sample_geo_accession = GSM9718021"
+        },
+        {
+          "line_number": 1357,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1362,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1363,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1365,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1366,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1367,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 1368,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1372,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/+_P0_5_HiC_Rep1"
+        },
+        {
+          "line_number": 1374,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1388,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 1389,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58992477"
+        },
+        {
+          "line_number": 1390,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237311"
+        },
+        {
+          "line_number": 1392,
+          "text": "!Sample_series_id = GSE330103"
+        },
+        {
+          "line_number": 1393,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 1373,
+          "excerpt": "for each genotype were used as input"
+        }
+      ]
+    },
+    {
+      "sample_id": "GSM9718022",
+      "lines": [
+        {
+          "line_number": 1395,
+          "text": "^SAMPLE = GSM9718022"
+        },
+        {
+          "line_number": 1396,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/+, P0.5 Heart, Hi-C, Rep2"
+        },
+        {
+          "line_number": 1397,
+          "text": "!Sample_geo_accession = GSM9718022"
+        },
+        {
+          "line_number": 1398,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1403,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1404,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1406,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1407,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1408,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/+"
+        },
+        {
+          "line_number": 1409,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1413,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/+_P0_5_HiC_Rep2"
+        },
+        {
+          "line_number": 1415,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1429,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 1430,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58992476"
+        },
+        {
+          "line_number": 1431,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237312"
+        },
+        {
+          "line_number": 1433,
+          "text": "!Sample_series_id = GSE330103"
+        },
+        {
+          "line_number": 1434,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 1414,
+          "excerpt": "for each genotype were used as input"
+        }
+      ]
+    },
+    {
+      "sample_id": "GSM9718023",
+      "lines": [
+        {
+          "line_number": 1436,
+          "text": "^SAMPLE = GSM9718023"
+        },
+        {
+          "line_number": 1437,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Hi-C, Rep1"
+        },
+        {
+          "line_number": 1438,
+          "text": "!Sample_geo_accession = GSM9718023"
+        },
+        {
+          "line_number": 1439,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1444,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1445,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1447,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1448,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1449,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 1450,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1454,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/-_P0_5_HiC_Rep1"
+        },
+        {
+          "line_number": 1456,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1470,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 1471,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58992475"
+        },
+        {
+          "line_number": 1472,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237313"
+        },
+        {
+          "line_number": 1474,
+          "text": "!Sample_series_id = GSE330103"
+        },
+        {
+          "line_number": 1475,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 1455,
+          "excerpt": "for each genotype were used as input"
+        }
+      ]
+    },
+    {
+      "sample_id": "GSM9718024",
+      "lines": [
+        {
+          "line_number": 1477,
+          "text": "^SAMPLE = GSM9718024"
+        },
+        {
+          "line_number": 1478,
+          "text": "!Sample_title = Nkx2-5Cre;Lmnb1Flox/-, P0.5 Heart, Hi-C, Rep2"
+        },
+        {
+          "line_number": 1479,
+          "text": "!Sample_geo_accession = GSM9718024"
+        },
+        {
+          "line_number": 1480,
+          "text": "!Sample_status = Public on Aug 05 2026"
+        },
+        {
+          "line_number": 1485,
+          "text": "!Sample_source_name_ch1 = Heart"
+        },
+        {
+          "line_number": 1486,
+          "text": "!Sample_organism_ch1 = Mus musculus"
+        },
+        {
+          "line_number": 1488,
+          "text": "!Sample_characteristics_ch1 = tissue: Heart"
+        },
+        {
+          "line_number": 1489,
+          "text": "!Sample_characteristics_ch1 = cell type: Isolated Cardiomyocyte"
+        },
+        {
+          "line_number": 1490,
+          "text": "!Sample_characteristics_ch1 = genotype: Nkx2-5Cre;Lmnb1 Flox/-"
+        },
+        {
+          "line_number": 1491,
+          "text": "!Sample_characteristics_ch1 = timepoint: P0.5"
+        },
+        {
+          "line_number": 1495,
+          "text": "!Sample_description = Library name: Nkx2-5Cre_Lmnb1Flox/-_P0_5_HiC_Rep2"
+        },
+        {
+          "line_number": 1497,
+          "text": "!Sample_data_processing = Assembly: GRCm38"
+        },
+        {
+          "line_number": 1511,
+          "text": "!Sample_library_strategy = Hi-C"
+        },
+        {
+          "line_number": 1512,
+          "text": "!Sample_relation = BioSample: https://www.ncbi.nlm.nih.gov/biosample/SAMN58992473"
+        },
+        {
+          "line_number": 1513,
+          "text": "!Sample_relation = SRA: https://www.ncbi.nlm.nih.gov/sra?term=SRX33237314"
+        },
+        {
+          "line_number": 1515,
+          "text": "!Sample_series_id = GSE330103"
+        },
+        {
+          "line_number": 1516,
+          "text": "!Sample_series_id = GSE330298"
+        }
+      ],
+      "source_notes": [
+        {
+          "line_number": 1496,
+          "excerpt": "for each genotype were used as input"
+        }
+      ]
+    }
+  ]
+}
