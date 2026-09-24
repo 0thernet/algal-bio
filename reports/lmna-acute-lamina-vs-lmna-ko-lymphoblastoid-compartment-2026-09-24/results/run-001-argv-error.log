@@ -1,0 +1,4 @@
+usage: replicate.py [-h] --registration REGISTRATION --freeze FREEZE --intake
+                    INTAKE --predictor PREDICTOR --outcome-dir OUTCOME_DIR
+                    --tools-dir TOOLS_DIR --out-dir OUT_DIR [--python PYTHON]
+replicate.py: error: unrecognized arguments: run

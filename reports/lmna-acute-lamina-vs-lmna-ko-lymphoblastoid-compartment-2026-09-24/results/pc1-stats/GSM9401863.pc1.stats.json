@@ -1,0 +1,198 @@
+{
+  "bin_size": 500000,
+  "command": "pairs",
+  "min_mapq": null,
+  "n_written": 5429,
+  "pairs": {
+    "cis": 26185341,
+    "format": "hicpro",
+    "kept": 26185341,
+    "malformed": 0,
+    "mapq_filtered": 0,
+    "mapq_missing": 0,
+    "non_autosomal": 1249007,
+    "out_of_range": 0,
+    "per_chrom": {
+      "chr1": 2304909,
+      "chr10": 1280651,
+      "chr11": 1227784,
+      "chr12": 1337233,
+      "chr13": 836045,
+      "chr14": 843260,
+      "chr15": 794131,
+      "chr16": 760069,
+      "chr17": 770915,
+      "chr18": 665316,
+      "chr19": 616326,
+      "chr2": 2403162,
+      "chr20": 586244,
+      "chr21": 278912,
+      "chr22": 332765,
+      "chr3": 1969279,
+      "chr4": 1630744,
+      "chr5": 1714633,
+      "chr6": 1682478,
+      "chr7": 1456315,
+      "chr8": 1683990,
+      "chr9": 1010180
+    },
+    "total": 37277961,
+    "trans": 9843613
+  },
+  "per_chrom": {
+    "chr1": {
+      "eigenvalue": 81.89034035270247,
+      "n_bins": 499,
+      "n_masked": 42,
+      "oriented": true,
+      "rho": -0.7105029973654124
+    },
+    "chr10": {
+      "eigenvalue": 56.63244246526701,
+      "n_bins": 272,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": -0.627823317725605
+    },
+    "chr11": {
+      "eigenvalue": 74.19287432508189,
+      "n_bins": 271,
+      "n_masked": 6,
+      "oriented": true,
+      "rho": -0.6768068812276067
+    },
+    "chr12": {
+      "eigenvalue": 66.08310222475349,
+      "n_bins": 268,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": -0.6591113939572485
+    },
+    "chr13": {
+      "eigenvalue": 51.54401783479339,
+      "n_bins": 231,
+      "n_masked": 38,
+      "oriented": true,
+      "rho": -0.6792286389305052
+    },
+    "chr14": {
+      "eigenvalue": 59.098161333733664,
+      "n_bins": 215,
+      "n_masked": 38,
+      "oriented": true,
+      "rho": -0.6611910174618275
+    },
+    "chr15": {
+      "eigenvalue": 42.86921708738215,
+      "n_bins": 206,
+      "n_masked": 40,
+      "oriented": true,
+      "rho": -0.6623302582640554
+    },
+    "chr16": {
+      "eigenvalue": 50.98407153300236,
+      "n_bins": 181,
+      "n_masked": 21,
+      "oriented": true,
+      "rho": -0.780512296468983
+    },
+    "chr17": {
+      "eigenvalue": 47.09275001190167,
+      "n_bins": 163,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": 0.748916919671048
+    },
+    "chr18": {
+      "eigenvalue": 43.913361200732204,
+      "n_bins": 157,
+      "n_masked": 6,
+      "oriented": true,
+      "rho": -0.6811974662103744
+    },
+    "chr19": {
+      "eigenvalue": 36.737460841823385,
+      "n_bins": 119,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": 0.6280954256358633
+    },
+    "chr2": {
+      "eigenvalue": 96.22386032659571,
+      "n_bins": 487,
+      "n_masked": 7,
+      "oriented": true,
+      "rho": -0.7050720754910647
+    },
+    "chr20": {
+      "eigenvalue": 42.03074289822606,
+      "n_bins": 127,
+      "n_masked": 6,
+      "oriented": true,
+      "rho": -0.6971576989426332
+    },
+    "chr21": {
+      "eigenvalue": 17.530189592908094,
+      "n_bins": 97,
+      "n_masked": 23,
+      "oriented": true,
+      "rho": -0.5572678623258648
+    },
+    "chr22": {
+      "eigenvalue": 24.119399113224162,
+      "n_bins": 103,
+      "n_masked": 32,
+      "oriented": true,
+      "rho": -0.7526220584312745
+    },
+    "chr3": {
+      "eigenvalue": 83.71401000835931,
+      "n_bins": 397,
+      "n_masked": 6,
+      "oriented": true,
+      "rho": -0.700436008158538
+    },
+    "chr4": {
+      "eigenvalue": 52.590509869170454,
+      "n_bins": 383,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": -0.5700922910820446
+    },
+    "chr5": {
+      "eigenvalue": 62.714010338153564,
+      "n_bins": 362,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": -0.6253805275006888
+    },
+    "chr6": {
+      "eigenvalue": 88.2619173813137,
+      "n_bins": 343,
+      "n_masked": 6,
+      "oriented": true,
+      "rho": -0.6105039093013251
+    },
+    "chr7": {
+      "eigenvalue": 62.316994213728684,
+      "n_bins": 319,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": -0.5903446533285658
+    },
+    "chr8": {
+      "eigenvalue": 66.39185657692926,
+      "n_bins": 293,
+      "n_masked": 5,
+      "oriented": true,
+      "rho": -0.5872161040278199
+    },
+    "chr9": {
+      "eigenvalue": 37.18930595225845,
+      "n_bins": 283,
+      "n_masked": 36,
+      "oriented": true,
+      "rho": -0.6809396140570304
+    }
+  }
+}

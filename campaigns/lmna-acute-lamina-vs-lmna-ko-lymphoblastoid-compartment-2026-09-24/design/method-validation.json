@@ -1,0 +1,96 @@
+{
+  "schema": "bio.method-validation.v1",
+  "code_pc1_sha256": "137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650",
+  "script_sha256": "3449aa15b10eaf12f2a9b4fba4ec7052c5de8625f2aab87cbd33bbeffe27b896",
+  "criteria": {
+    "V1_per_sample_spearman_vs_deposited_pc1_min": 0.8,
+    "V2_delta_spearman_min": 0.5
+  },
+  "inputs": {
+    "GSM3602092": {
+      "pairs_sha256": "a7b883007b607abb64324c3a18731ee91e165435c0bce93740f2a2742b4a7354",
+      "deposited_pc1_sha256": "063dcacc409f58fbb358b830c862164da5004affa0b26ce3490e8f0862af916d",
+      "pipeline_seconds": 86.4
+    },
+    "GSM3602088": {
+      "pairs_sha256": "25bbe65b3111a7bcee384fca78dd29e7f08b9517288831faca105391e39df8e7",
+      "deposited_pc1_sha256": "d55de07bb3d53f2dab18a1db91cecafabbcdbed8aca1894cd9e349fd8db90639",
+      "pipeline_seconds": 219.2
+    }
+  },
+  "samples": {
+    "GSM3602092": {
+      "n_tiles": 5262,
+      "spearman_pipeline_vs_deposited": 0.9225323424225147,
+      "per_chromosome_spearman": {
+        "chr1": 0.979723669858199,
+        "chr2": 0.9668632617602364,
+        "chr3": 0.9837781768655739,
+        "chr4": 0.902222018322318,
+        "chr5": 0.9824731846686521,
+        "chr6": 0.9640082298436555,
+        "chr7": 0.9753580732772554,
+        "chr8": 0.9606981789995669,
+        "chr9": 0.6838712625818318,
+        "chr10": 0.9669181170016391,
+        "chr11": 0.9571710386063172,
+        "chr12": 0.9717429474970233,
+        "chr13": 0.9910960319647286,
+        "chr14": 0.9849266778666819,
+        "chr15": 0.9692172762824937,
+        "chr16": 0.9072181568174993,
+        "chr17": 0.9332457606878434,
+        "chr18": 0.9890981242850849,
+        "chr19": 0.9669337479071992,
+        "chr20": 0.9614099134539732,
+        "chr21": null,
+        "chr22": 0.2062038900067069
+      },
+      "pipeline_flipped": [],
+      "pipeline_excluded": [],
+      "deposited_flipped": [],
+      "deposited_excluded": [],
+      "V1_pass": true
+    },
+    "GSM3602088": {
+      "n_tiles": 5262,
+      "spearman_pipeline_vs_deposited": 0.880441752084357,
+      "per_chromosome_spearman": {
+        "chr1": 0.9441575348714967,
+        "chr2": 0.9786721437052247,
+        "chr3": 0.9824183338078893,
+        "chr4": 0.4006738254648679,
+        "chr5": 0.987840378067007,
+        "chr6": 0.9720019765671444,
+        "chr7": 0.9715990465477637,
+        "chr8": 0.9763599263425073,
+        "chr9": 0.731450866589738,
+        "chr10": 0.9591380694873008,
+        "chr11": 0.9501823406933517,
+        "chr12": 0.9810036061120747,
+        "chr13": 0.9837300220446404,
+        "chr14": 0.9853503801361087,
+        "chr15": 0.9645962732919254,
+        "chr16": 0.8503548229046483,
+        "chr17": 0.9303170527824218,
+        "chr18": 0.9838008121804862,
+        "chr19": 0.9797724399494311,
+        "chr20": 0.9879087332808812,
+        "chr21": null,
+        "chr22": 0.2158618376928236
+      },
+      "pipeline_flipped": [],
+      "pipeline_excluded": [],
+      "deposited_flipped": [],
+      "deposited_excluded": [],
+      "V1_pass": true
+    }
+  },
+  "attempt_utc": "2026-09-24T21:02:48Z",
+  "delta": {
+    "n_tiles": 5262,
+    "spearman_delta_pipeline_vs_deposited": 0.5470636121362842,
+    "V2_pass": true
+  },
+  "passed": true
+}

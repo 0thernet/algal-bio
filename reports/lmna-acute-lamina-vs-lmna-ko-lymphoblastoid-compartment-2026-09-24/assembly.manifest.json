@@ -1,0 +1,437 @@
+{
+  "schema": "bio.public-assembly.v1",
+  "files": [
+    {
+      "source": "code/replicate.py",
+      "bytes": 15162,
+      "sha256": "a084a245bab2b1935e12ada74127de31ee69535ea25d403fa4c5ebf74aef9ee1",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/replicate.py"
+    },
+    {
+      "source": "code/compartment.py",
+      "bytes": 27919,
+      "sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/compartment.py"
+    },
+    {
+      "source": "code/pc1.py",
+      "bytes": 31577,
+      "sha256": "137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/pc1.py"
+    },
+    {
+      "source": "code/lift_predictor.py",
+      "bytes": 5395,
+      "sha256": "5cf88b69a944ca182e8be7a4d1c17c82ee514c5ce986c09197934a89cfb2e9b9",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/lift_predictor.py"
+    },
+    {
+      "source": "code/per_chromosome_table.py",
+      "bytes": 2198,
+      "sha256": "e3ef59e7874ea95fe9ebaac176f1299121759d596d1b55a346cd321e36d74d90",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/per_chromosome_table.py"
+    },
+    {
+      "source": "results/run-001/per-chromosome-validation-vs-outcome.json",
+      "bytes": 5857,
+      "sha256": "1abe521fcc83aa51580bcf858d23b709ebe25ab6538daf671a77b3caba9effd5",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/per-chromosome-validation-vs-outcome.json"
+    },
+    {
+      "source": "logs/run-001.argv-error.log",
+      "bytes": 280,
+      "sha256": "51a2162a2c5f88858f140cd3806e9792a5226086fa6856fdd1cde633d212daec",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/run-001-argv-error.log"
+    },
+    {
+      "source": "code/test_replicate.py",
+      "bytes": 14540,
+      "sha256": "a6568d079179b0cdcfcb9a725d59d606c6ef8b158443ee00f8fd7fbcaf6e5289",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/test_replicate.py"
+    },
+    {
+      "source": "code/test_pc1.py",
+      "bytes": 20392,
+      "sha256": "e8e0a0666a89c2eaf8ac61e55a5f4b16911dcf56c7a96e93a19ef0b82609f6af",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/test_pc1.py"
+    },
+    {
+      "source": "code/requirements.in",
+      "bytes": 32,
+      "sha256": "09c6319c2a2d74b022ec0eb4c57e6d63f03d2c988766459857f7d6a1aa45f08a",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/requirements.in"
+    },
+    {
+      "source": "code/requirements.lock",
+      "bytes": 62,
+      "sha256": "d7d4cab0a8090d4c616efdc49fe58905c22a6b5453e404c73465f0ea961c59aa",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/requirements.lock"
+    },
+    {
+      "source": "registration/protocol.frozen.json",
+      "bytes": 13483,
+      "sha256": "8d6cd76cb4bcb80b35ea4e34fd64fd55b359e5f4ae81ff8aea60b6be17151465",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/registration.frozen.json"
+    },
+    {
+      "source": "registration/protocol.draft.json",
+      "bytes": 12708,
+      "sha256": "ad3d9f75cc53c484763dd4a901b7bdb337365ae7f797fce3392ec56061764eb4",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/registration.reviewed-draft.json"
+    },
+    {
+      "source": "registration/freeze.json",
+      "bytes": 2879,
+      "sha256": "738266a86e8b1d59dd73790eda97481338c4e5526024324c25105d424f2c1c6f",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/freeze.json"
+    },
+    {
+      "source": "registration/intake.json",
+      "bytes": 2551,
+      "sha256": "3ce11ad4001bab008b35ecfb2271d49e1abdb9e6527e29ce62099ef92edde2c0",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/intake.json"
+    },
+    {
+      "source": "registration/freeze.py",
+      "bytes": 4958,
+      "sha256": "1c8e7ac4acbde4dffc40ac8e44d9ab461d2c59cf17e4c4fc2fb299e39592e24e",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/freeze.py"
+    },
+    {
+      "source": "registration/intake.py",
+      "bytes": 2509,
+      "sha256": "528cd0b2552c96af1c97f853495d0a6707f66b7c822e707c6c3bec5c9fd0338f",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/intake.py"
+    },
+    {
+      "source": "registration/assemble_public.py",
+      "bytes": 6311,
+      "sha256": "102bf95d72e58199fe99eabf71b677ee0fee1daf2e37dd878a59ea53b660e66e",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/assemble_public.py"
+    },
+    {
+      "source": "design/fixed-protocol.md",
+      "bytes": 9354,
+      "sha256": "f031f14493f31a334698e6d821e38712cda28cb60b13c4e068f8c063c750ed8e",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/fixed-protocol.md"
+    },
+    {
+      "source": "design/skeptical-review.md",
+      "bytes": 4729,
+      "sha256": "488db9a3146d83aed43176c24921274c937981de636eea79959a8ac31ab09faa",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/skeptical-review.md"
+    },
+    {
+      "source": "design/independent-review.json",
+      "bytes": 32670,
+      "sha256": "61bf10459ebe7dba790ba0497a81f72fbd9020ec187e206e4870d71483edac55",
+      "redacted": true,
+      "original_sha256": "630582f9931c937af9fa497b368f319b8acf60fe37ef1e70bfa8c37fcf841587",
+      "substitutions": [
+        {
+          "replaced": "the quoted 7-character macOS home-directory prefix literal that appears in the round-1 advice text",
+          "with": "'<home-prefix>/'",
+          "occurrences": 1
+        }
+      ],
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/independent-review.redacted.json"
+    },
+    {
+      "source": "design/null-sd-estimate.json",
+      "bytes": 1151,
+      "sha256": "2037c828f497a14ae7ac2c52ae9d901be379b56b7aef28397a36a7a225633e41",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/null-sd-estimate.json"
+    },
+    {
+      "source": "design/method-validation.json",
+      "bytes": 3215,
+      "sha256": "50e63f26e221e56810fb8282b638193990dc85263176c741d4ffbe3614e14973",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/method-validation.json"
+    },
+    {
+      "source": "design/method-validation.attempt2-unbound-script.json",
+      "bytes": 1463,
+      "sha256": "8f20c26544615aa6e2461f178977f0a5af280dce70b550307828ec8d4971eac6",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/method-validation.attempt2-unbound-script.json"
+    },
+    {
+      "source": "design/method-validation-attempts.md",
+      "bytes": 2572,
+      "sha256": "cc814e874f858151e2c66847d5012332eba3a7f7749fb8558e0ca8d06601ed89",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/method-validation-attempts.md"
+    },
+    {
+      "source": "design/validate_pc1.py",
+      "bytes": 4587,
+      "sha256": "3449aa15b10eaf12f2a9b4fba4ec7052c5de8625f2aab87cbd33bbeffe27b896",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/design/validate_pc1.py"
+    },
+    {
+      "source": "results/predictor/predictor_hg19.manifest.json",
+      "bytes": 2244,
+      "sha256": "733647e83b7a1e44f8c3df2fa3fe6587d77ba4de054454407921d8b81da96215",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/predictor_hg19.manifest.json"
+    },
+    {
+      "source": "results/predictor/predictor_hg19.tsv",
+      "bytes": 640036,
+      "sha256": "1670a3c99c296b455d17a79a7143fc7fb06cb3e5b1d18c5ed7031b65843c0e53",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/predictor_hg19.tsv"
+    },
+    {
+      "source": "tools/SHA256SUMS",
+      "bytes": 447,
+      "sha256": "77aee16d781d83bbad8eed587e4d8ed1f8637664284d46ca569e497486fe177f",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/tools.SHA256SUMS"
+    },
+    {
+      "source": "tools/FETCHED_UTC",
+      "bytes": 21,
+      "sha256": "89d27e35a2d3f419137637e52dd8e5c436bc7113d6a0fd09a22f56b18b763c82",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/tools.FETCHED_UTC"
+    },
+    {
+      "source": "tools/hg19.chrom.sizes",
+      "bytes": 1971,
+      "sha256": "b404927655a4aada254ea94ad4da0c8901ed0737e67a0dcabedf673354b1f505",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/hg19.chrom.sizes"
+    },
+    {
+      "source": "prior-art/caruso-2026.md",
+      "bytes": 6039,
+      "sha256": "15b092375874078c701d30d3aaaaa3d9402e097711c48fe16bf0ab26f63246d9",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/prior-art/caruso-2026.md"
+    },
+    {
+      "source": "prior-art/caruso-2026.json",
+      "bytes": 7469,
+      "sha256": "756f0056806a55218f2585ba676e22489cfd67a506e9d9549b2a41d72e08d6b9",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/prior-art/caruso-2026.json"
+    },
+    {
+      "source": "prior-art/query-ledger.json",
+      "bytes": 2480,
+      "sha256": "75f3a77baf14f40b6fb5b42b69a11704baf408bcb58db054ab9c6a7625482d87",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/prior-art/query-ledger.json"
+    },
+    {
+      "source": "data-audit/GSE126459-filelist.txt",
+      "bytes": 1834,
+      "sha256": "c888ebcdfbb7c9f89b0974088daace2edc73078d4c1285730ebf9a868099a46e",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/data-audit/GSE126459-filelist.txt"
+    },
+    {
+      "source": "data-audit/GSE126459-validation-SHA256SUMS",
+      "bytes": 360,
+      "sha256": "877a23c220784b29451b3be294c21bdfc8b2447f0600eb46aa91c8d5ad339061",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/data-audit/GSE126459-validation-SHA256SUMS"
+    },
+    {
+      "source": "results/run-001/summary.json",
+      "bytes": 41626,
+      "sha256": "0e70d9f4365cdc8a1a94a6978645449811640364a63d945ea67f1cbfd465b9db",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/summary.json"
+    },
+    {
+      "source": "report.md",
+      "bytes": 13893,
+      "sha256": "3192ae19bd9dc59454663048f82ec341cbc070d1a715bfb178cefc98b32d6faa",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/report.md"
+    },
+    {
+      "source": "README.campaign.md",
+      "bytes": 6342,
+      "sha256": "3225c8dd420d7ac97a2bb69b74965c4446452f97b783353a5d2671bd6e59adf5",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/README.md"
+    },
+    {
+      "source": "registration/archive-001/caruso-2026.md",
+      "bytes": 6039,
+      "sha256": "15b092375874078c701d30d3aaaaa3d9402e097711c48fe16bf0ab26f63246d9",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/caruso-2026.md"
+    },
+    {
+      "source": "registration/archive-001/compartment.py",
+      "bytes": 27919,
+      "sha256": "776ccedec155bfe2c45ed0a8092b38f6c7558c585fdcf8366f1d6be643fd4019",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/compartment.py"
+    },
+    {
+      "source": "registration/archive-001/fixed-protocol.md",
+      "bytes": 9354,
+      "sha256": "f031f14493f31a334698e6d821e38712cda28cb60b13c4e068f8c063c750ed8e",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/fixed-protocol.md"
+    },
+    {
+      "source": "registration/archive-001/hg19.chrom.sizes",
+      "bytes": 1971,
+      "sha256": "b404927655a4aada254ea94ad4da0c8901ed0737e67a0dcabedf673354b1f505",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/hg19.chrom.sizes"
+    },
+    {
+      "source": "registration/archive-001/independent-review.json",
+      "bytes": 32670,
+      "sha256": "61bf10459ebe7dba790ba0497a81f72fbd9020ec187e206e4870d71483edac55",
+      "redacted": true,
+      "original_sha256": "630582f9931c937af9fa497b368f319b8acf60fe37ef1e70bfa8c37fcf841587",
+      "substitutions": [
+        {
+          "replaced": "the quoted 7-character macOS home-directory prefix literal that appears in the round-1 advice text",
+          "with": "'<home-prefix>/'",
+          "occurrences": 1
+        }
+      ],
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/independent-review.redacted.json"
+    },
+    {
+      "source": "registration/archive-001/lift_predictor.py",
+      "bytes": 5395,
+      "sha256": "5cf88b69a944ca182e8be7a4d1c17c82ee514c5ce986c09197934a89cfb2e9b9",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/lift_predictor.py"
+    },
+    {
+      "source": "registration/archive-001/method-validation-attempts.md",
+      "bytes": 2572,
+      "sha256": "cc814e874f858151e2c66847d5012332eba3a7f7749fb8558e0ca8d06601ed89",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/method-validation-attempts.md"
+    },
+    {
+      "source": "registration/archive-001/method-validation.json",
+      "bytes": 3215,
+      "sha256": "50e63f26e221e56810fb8282b638193990dc85263176c741d4ffbe3614e14973",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/method-validation.json"
+    },
+    {
+      "source": "registration/archive-001/null-sd-estimate.json",
+      "bytes": 1151,
+      "sha256": "2037c828f497a14ae7ac2c52ae9d901be379b56b7aef28397a36a7a225633e41",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/null-sd-estimate.json"
+    },
+    {
+      "source": "registration/archive-001/pc1.py",
+      "bytes": 31577,
+      "sha256": "137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/pc1.py"
+    },
+    {
+      "source": "registration/archive-001/predictor_hg19.manifest.json",
+      "bytes": 2244,
+      "sha256": "733647e83b7a1e44f8c3df2fa3fe6587d77ba4de054454407921d8b81da96215",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/predictor_hg19.manifest.json"
+    },
+    {
+      "source": "registration/archive-001/predictor_hg19.tsv",
+      "bytes": 640036,
+      "sha256": "1670a3c99c296b455d17a79a7143fc7fb06cb3e5b1d18c5ed7031b65843c0e53",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/predictor_hg19.tsv"
+    },
+    {
+      "source": "registration/archive-001/protocol.draft.json",
+      "bytes": 12708,
+      "sha256": "ad3d9f75cc53c484763dd4a901b7bdb337365ae7f797fce3392ec56061764eb4",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/protocol.draft.json"
+    },
+    {
+      "source": "registration/archive-001/protocol.frozen.json",
+      "bytes": 13483,
+      "sha256": "8d6cd76cb4bcb80b35ea4e34fd64fd55b359e5f4ae81ff8aea60b6be17151465",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/protocol.frozen.json"
+    },
+    {
+      "source": "registration/archive-001/replicate.py",
+      "bytes": 15162,
+      "sha256": "a084a245bab2b1935e12ada74127de31ee69535ea25d403fa4c5ebf74aef9ee1",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/replicate.py"
+    },
+    {
+      "source": "registration/archive-001/requirements.lock",
+      "bytes": 62,
+      "sha256": "d7d4cab0a8090d4c616efdc49fe58905c22a6b5453e404c73465f0ea961c59aa",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/requirements.lock"
+    },
+    {
+      "source": "registration/archive-001/skeptical-review.md",
+      "bytes": 4729,
+      "sha256": "488db9a3146d83aed43176c24921274c937981de636eea79959a8ac31ab09faa",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/skeptical-review.md"
+    },
+    {
+      "source": "registration/archive-001/test_pc1.py",
+      "bytes": 20392,
+      "sha256": "e8e0a0666a89c2eaf8ac61e55a5f4b16911dcf56c7a96e93a19ef0b82609f6af",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/test_pc1.py"
+    },
+    {
+      "source": "registration/archive-001/test_replicate.py",
+      "bytes": 14540,
+      "sha256": "a6568d079179b0cdcfcb9a725d59d606c6ef8b158443ee00f8fd7fbcaf6e5289",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/test_replicate.py"
+    },
+    {
+      "source": "registration/archive-001/validate_pc1.py",
+      "bytes": 4587,
+      "sha256": "3449aa15b10eaf12f2a9b4fba4ec7052c5de8625f2aab87cbd33bbeffe27b896",
+      "published": "campaigns/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/archive-001/validate_pc1.py"
+    },
+    {
+      "source": "results/run-001/core/summary.json",
+      "bytes": 7648,
+      "sha256": "90cd2a5601c9b44e3ab9fb56546a8ce8c590351cdc04b65e4156c1dd645ad9f6",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/core/summary.json"
+    },
+    {
+      "source": "results/run-001/core/tiles.tsv",
+      "bytes": 499124,
+      "sha256": "2cfc195b38a0e5e0e491de4efa848b49341a4f160bcc94fab613e0a3c8f8add7",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/core/tiles.tsv"
+    },
+    {
+      "source": "results/run-001/pc1/GSM9401860.pc1.stats.json",
+      "bytes": 4422,
+      "sha256": "ac9a9ac42345376132fcf10a717d9a4f1951de9299b9e8a730df8e32b614a137",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1-stats/GSM9401860.pc1.stats.json"
+    },
+    {
+      "source": "results/run-001/pc1/GSM9401861.pc1.stats.json",
+      "bytes": 4414,
+      "sha256": "14bf46e3d4313771780832416d912e791107c506e1b6385eee7c5e0bc67d6df1",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1-stats/GSM9401861.pc1.stats.json"
+    },
+    {
+      "source": "results/run-001/pc1/GSM9401862.pc1.stats.json",
+      "bytes": 4419,
+      "sha256": "1af18fc880c9f7dca926a43ef04da505cf0395455d52f93f50cb88733b4acc54",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1-stats/GSM9401862.pc1.stats.json"
+    },
+    {
+      "source": "results/run-001/pc1/GSM9401863.pc1.stats.json",
+      "bytes": 4410,
+      "sha256": "eaa34ca1f73bd4cd546ebee5f20353e29360c2fafc0185488b1abe5423cc97ee",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1-stats/GSM9401863.pc1.stats.json"
+    },
+    {
+      "source": "results/run-001/pc1-qc/GSM9401860.pc1.bedGraph",
+      "bytes": 235838,
+      "sha256": "5a512e40aa50e40a4b01a6ce773b966f6ef7859d920c3e8a6ba90c3e9b22c79c",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1/GSM9401860.pc1.bedGraph"
+    },
+    {
+      "source": "results/run-001/pc1-qc/GSM9401861.pc1.bedGraph",
+      "bytes": 235873,
+      "sha256": "76283aa299884c81a2336e2f4935edd8c0ac9d1b3893d0b108d1a61af8acb38a",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1/GSM9401861.pc1.bedGraph"
+    },
+    {
+      "source": "results/run-001/pc1-qc/GSM9401862.pc1.bedGraph",
+      "bytes": 235903,
+      "sha256": "a43b2e1f9307ba49a765bd9e55134f59dcea210f11f095484fb244bde3586135",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1/GSM9401862.pc1.bedGraph"
+    },
+    {
+      "source": "results/run-001/pc1-qc/GSM9401863.pc1.bedGraph",
+      "bytes": 235934,
+      "sha256": "18bf518ef85941fc63b508cea221710eb7247a29aa280e42b9399ba8c53c709a",
+      "published": "reports/lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24/results/pc1/GSM9401863.pc1.bedGraph"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "bio.intake-receipt.v2",
+  "intake_number": 1,
+  "campaign_id": "lmna-acute-lamina-vs-lmna-ko-lymphoblastoid-compartment-2026-09-24",
+  "freeze_sha256": "738266a86e8b1d59dd73790eda97481338c4e5526024324c25105d424f2c1c6f",
+  "intake_after_freeze": true,
+  "frozen_utc": "2026-09-24T21:14:10.175061+00:00",
+  "files": [
+    {
+      "gsm": "GSM9401860",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401860/suppl/GSM9401860_HIC.WT.1_allValidPairs.txt.gz",
+      "filename": "GSM9401860_HIC.WT.1_allValidPairs.txt.gz",
+      "bytes": 2033547121,
+      "bytes_expected": 2033547121,
+      "bytes_match_metadata": true,
+      "sha256": "9db1295d8092af532a7112d31a38cbda971d8ba4aa07e4849d26d8532d3b4a48",
+      "retrieved_utc": "2026-09-24T21:17:09.286431+00:00",
+      "retrieved_end_utc": "2026-09-24T21:23:04.502448+00:00"
+    },
+    {
+      "gsm": "GSM9401861",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401861/suppl/GSM9401861_HIC.WT.2_allValidPairs.txt.gz",
+      "filename": "GSM9401861_HIC.WT.2_allValidPairs.txt.gz",
+      "bytes": 1997529377,
+      "bytes_expected": 1997529377,
+      "bytes_match_metadata": true,
+      "sha256": "d831f4ad130ee511fce5e583720f9a916179889ad6ca6e62cbee7eee0c856567",
+      "retrieved_utc": "2026-09-24T21:23:04.503067+00:00",
+      "retrieved_end_utc": "2026-09-24T21:28:36.507147+00:00"
+    },
+    {
+      "gsm": "GSM9401862",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401862/suppl/GSM9401862_HIC.KO.1_allValidPairs.txt.gz",
+      "filename": "GSM9401862_HIC.KO.1_allValidPairs.txt.gz",
+      "bytes": 2321735949,
+      "bytes_expected": 2321735949,
+      "bytes_match_metadata": true,
+      "sha256": "079ac6d5dfbb846ae07d4ed823bada9063ca5e2d4e193da4c595d076027173ae",
+      "retrieved_utc": "2026-09-24T21:28:36.507836+00:00",
+      "retrieved_end_utc": "2026-09-24T21:33:44.097770+00:00"
+    },
+    {
+      "gsm": "GSM9401863",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM9401nnn/GSM9401863/suppl/GSM9401863_HIC.KO.2_allValidPairs.txt.gz",
+      "filename": "GSM9401863_HIC.KO.2_allValidPairs.txt.gz",
+      "bytes": 1018354190,
+      "bytes_expected": 1018354190,
+      "bytes_match_metadata": true,
+      "sha256": "a2cde688627305d25627958606c2587753ceef8d71a449fef21099230efed3e6",
+      "retrieved_utc": "2026-09-24T21:33:44.101943+00:00",
+      "retrieved_end_utc": "2026-09-24T21:36:37.761235+00:00"
+    }
+  ],
+  "paid_spend_usd": 0,
+  "inspection": "none; bytes streamed to disk and hashed only"
+}

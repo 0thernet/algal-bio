@@ -1,0 +1,47 @@
+{
+  "schema": "bio.method-validation.v1",
+  "code_pc1_sha256": "137b18c854e9c9163cf1302217e8e8c050e412125c60899e364b6b71872f5650",
+  "criteria": {
+    "V1_per_sample_spearman_vs_deposited_pc1_min": 0.8,
+    "V2_delta_spearman_min": 0.5
+  },
+  "inputs": {
+    "GSM3602092": {
+      "pairs_sha256": "a7b883007b607abb64324c3a18731ee91e165435c0bce93740f2a2742b4a7354",
+      "deposited_pc1_sha256": "063dcacc409f58fbb358b830c862164da5004affa0b26ce3490e8f0862af916d",
+      "pipeline_seconds": 93.5
+    },
+    "GSM3602088": {
+      "pairs_sha256": "25bbe65b3111a7bcee384fca78dd29e7f08b9517288831faca105391e39df8e7",
+      "deposited_pc1_sha256": "d55de07bb3d53f2dab18a1db91cecafabbcdbed8aca1894cd9e349fd8db90639",
+      "pipeline_seconds": 54.9
+    }
+  },
+  "samples": {
+    "GSM3602092": {
+      "n_tiles": 5262,
+      "spearman_pipeline_vs_deposited": 0.9225323424225147,
+      "pipeline_flipped": [],
+      "pipeline_excluded": [],
+      "deposited_flipped": [],
+      "deposited_excluded": [],
+      "V1_pass": true
+    },
+    "GSM3602088": {
+      "n_tiles": 5262,
+      "spearman_pipeline_vs_deposited": 0.880441752084357,
+      "pipeline_flipped": [],
+      "pipeline_excluded": [],
+      "deposited_flipped": [],
+      "deposited_excluded": [],
+      "V1_pass": true
+    }
+  },
+  "attempt_utc": "2026-09-24T20:58:22Z",
+  "delta": {
+    "n_tiles": 5262,
+    "spearman_delta_pipeline_vs_deposited": 0.5470636121362842,
+    "V2_pass": true
+  },
+  "passed": true
+}
