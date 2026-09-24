@@ -138,7 +138,14 @@ def test_selected_sensitive_content_is_rejected(payload):
 
 def test_pending_publication_cannot_claim_an_asset_identity(subset):
     path = subset / RELEASE / "publication.json"
-    record = read_json(path)
+    record = {
+        "contract": "bio.publication-identity.v1", "status": "pending",
+        "source_revision": None, "tag": None, "release_url": None,
+        "selected_archive_sha256": None, "qualification_archive_sha256": None,
+        "verification": "pending",
+    }
+    write_json(path, record)
+    assert publication_identity(subset / RELEASE) == record
     record["source_revision"] = "a" * 40
     write_json(path, record)
     with pytest.raises(ReleaseError, match="Pending publication"):
@@ -151,10 +158,19 @@ def test_absent_publication_record_is_not_a_published_claim(subset):
     assert report["publication_status"] == "not_recorded"
 
 
-def test_published_status_needs_source_and_both_asset_identities(subset):
+@pytest.mark.parametrize("missing", ["source_revision", "selected_archive_sha256", "qualification_archive_sha256"])
+def test_published_status_needs_source_and_both_asset_identities(subset, missing):
     path = subset / RELEASE / "publication.json"
-    record = read_json(path)
-    record.update(status="published", verification="operator_verified")
+    record = {
+        "contract": "bio.publication-identity.v1", "status": "published",
+        "source_revision": "a" * 40, "tag": "test-calibration",
+        "release_url": "https://github.com/0thernet/algal-bio/releases/tag/test-calibration",
+        "selected_archive_sha256": "b" * 64, "qualification_archive_sha256": "c" * 64,
+        "verification": "operator_verified",
+    }
+    write_json(path, record)
+    assert publication_identity(subset / RELEASE) == record
+    record[missing] = None
     write_json(path, record)
     with pytest.raises(ReleaseError, match="identity missing"):
         publication_identity(subset / RELEASE)

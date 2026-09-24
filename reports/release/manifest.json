@@ -6,7 +6,7 @@
   "prospective_status": "not_run",
   "selection_sha256": "b28eeab7f0e09a59b9f744369ec9e49a305795a6a1c0884daf7a4a34c73b68f5",
   "artifact_count": 68,
-  "total_bytes": 582827,
+  "total_bytes": 583686,
   "artifacts": [
     {
       "path": ".gitignore",
@@ -1006,8 +1006,8 @@
         ],
         "redistribution": "admitted"
       },
-      "sha256": "064944d85d2ff8416d97a05ca5e0be225e86a2e7a3546aa2f201311cc470e21f",
-      "bytes": 14059
+      "sha256": "c110b3fcebfe5500db0b5afa9b77bfaaae4e6b034a9c4dc1498a0a51466fb52b",
+      "bytes": 14918
     },
     {
       "path": "tsconfig.json",

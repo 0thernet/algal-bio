@@ -1,10 +1,10 @@
 {
   "contract": "bio.publication-identity.v1",
-  "status": "pending",
-  "source_revision": null,
-  "tag": null,
-  "release_url": null,
-  "selected_archive_sha256": null,
-  "qualification_archive_sha256": null,
-  "verification": "pending"
+  "status": "published",
+  "source_revision": "d9dea446d192c590721f29e9f29839cec779bae7",
+  "tag": "v0.1.0-calibration.1",
+  "release_url": "https://github.com/0thernet/algal-bio/releases/tag/v0.1.0-calibration.1",
+  "selected_archive_sha256": "de0cc72412c370dbf80d800e1f65b5d79f21665a2f2df4965ac93c7b44f11797",
+  "qualification_archive_sha256": "a34173d3f0f52ef6193182b4ca5ff95721d2da197017d3c864a4af18cf89253e",
+  "verification": "operator_verified"
 }
