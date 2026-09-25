@@ -1,9 +1,9 @@
 {
- "frozen_utc": "2026-09-25T19:09:14Z",
+ "frozen_utc": "2026-09-25T19:29:53Z",
  "schema": "bio.paralog-sl-freeze.v1",
  "sha256": {
   "registration/protocol.json": "c95d5654fd3a7444c42f3521061c7a718d67eef7dbef27eb4a2a0e918f23cec8",
-  "registration/holdout_map.json": "90b74340a16e1254f5da98031c0468dfe8f1d18e2f62715e34316d3123df2e38",
+  "registration/holdout_map.json": "82b53bd8386dfcea011eb02b853571c069c77837d7fa272ed997e258ef74d629",
   "registration/gold_controls.json": "5a6aa523391188d1b41c583b9ae80b8b6db5e6f0442ecdcf37ddf5fbd3960f79",
   "registration/prefreeze-review.json": "1ff9c7e12e9df98676878c3ad0c2eadbd2856dfdbdcd8ff5e1ba32008a251b4f",
   "prior-art/prior-art-paralog-sl.md": "722053076b616e31f8f4e9f8ba9b4b3adf7dfd38d6263f63e4513e2099fd85f6",
@@ -15,15 +15,15 @@
   "code/gold.py": "0d0ede49a37836a197ef5076f25e7e02cad16b887b7a41b10b0dde6eb98c9618",
   "code/freeze.py": "618051fba1fb0303fa8ef71793802c782ffd6e96f12806cd2abd588fd8ddf659",
   "code/make_protocol.py": "ce5ab14a4676758c4ca21962bee670fc2ce72291e53e97afab80b9fd34ccf7a6",
-  "code/fetch_holdout.py": "d73827643e866fc73a1f9cf460945c648e91369c56deba96a2eebdc1d308bf55",
-  "code/confirm.py": "06f0037473572b83878e28904ddf33242a9dc99c93c6780e7ff3026b2b6a5fce",
+  "code/fetch_holdout.py": "0b02b9ffdeb1579049a784cd204ef8dd5a3d15db6e3f1e6bdb9aec9b571c1290",
+  "code/confirm.py": "0b6b125e686387a08a6ad745abcd5f917bc51aeeab55fbd124cd70b6e8cf0cac",
   "data/prep/prep.receipt.json": "4b712cfd914db377779dd54863a77a0edceb716f2d0a34c67b3e055fa1fca687",
   "data/prep/pair_universe.csv": "eec02d10e7d684beb0467994d2be36d98be7047b27acc0ba86ae8a5ff0f39ca5",
   "data/prep/ctx_group.json": "9a794e1d0c0b3d947e5fa32829356a8ceb682dd0713560a7c969d7fec2708aa3",
   "data/prep/ky_pos.json": "7883a89791cbdfb741b360394c2d23141f5a3341f70465647b132a42d23397b4",
   "data/prep/lof_gene_models.json": "2fbec26f23992e01aa915f3a44296b4d8ba1bfff4e01de2bc88bb2eaa56008f7",
   "data/refs/depmap-refs.receipt.json": "7d413d50ed15bd838f7705983e50c3cfc7336aef0df1c620834405f33d68f1bc",
-  "tests/test_paralog.py": "3e8f7e56e805b2c681637c99aa59e78b188420d6b901d7cd85b602354db8876e",
+  "tests/test_paralog.py": "347532ec2463597cf23ece2d9159094e14b6645a65633ad0cedd2c1f6441522f",
   "results/screen.real.json": "58f7d515672db1714653f8e93964604e9c0eeeb8b59de1b830132a7ed42de6a8",
   "results/selection.real.csv": "a2c4d92b757ce058da3f42e817f8cf50145da88211ca3e6526a5a7cf637dd80e",
   "results/selection.annotated.csv": "5f9b749aca3711744bad13cf0137817764de65a52f9c26f05c9f734b2bc5869c",
@@ -58,5 +58,5 @@
   "data/prep/ky_pos.json",
   "data/prep/lof_gene_models.json"
  ],
- "top_digest": "4b5dc78a1ebd8450ab4ed2cc0f1245bcd7a5f92cc481ac77dc8814e1a57ffd26"
+ "top_digest": "f875b1efb0ca5ef0804623aa562696fd3260abd78166f44a0ee0f5c8589cff73"
 }

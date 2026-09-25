@@ -7,43 +7,176 @@
    "file": "in4mer_supp_table1.xlsx",
    "download_url": "https://ndownloader.figshare.com/files/44435633",
    "source": "figshare 10.6084/m9.figshare.24243832 - Esmaeili Anvar et al. 2024 Nat Commun Supp Table 1: unified dLFC + Cohen's d re-scoring of the five published combinatorial studies (Dede 2020, Thompson 2021, Parrish pgPEN 2021, CHyMErA 2020, Ito 2021) plus the in4mer/Inzolia screens",
-   "published_sl_rule": "dLFC <= -0.5 AND Cohen's d <= -1.0 within one cell line, or the row's own SL hit flag where one is provided",
+   "published_sl_rule": "in4mer Methods: 'paralog pairs with dLFC < -1 and Cohen's D > 0.8 were selected as hits' (Esmaeili Anvar et al. 2024). Erratum: an earlier draft registered dLFC<=-0.5 AND Cohen's d<=-1.0, which misstated both the threshold and the direction of the published Cohen's-D separation convention; corrected to the paper's literal rule before outcome evaluation.",
    "columns": {
-    "gene_a": ["gene.?a", "gene_?1", "paralog.?a", "a1", "query.?gene", "gene1", "geneid.?1"],
-    "gene_b": ["gene.?b", "gene_?2", "paralog.?b", "a2", "target.?gene", "gene2", "geneid.?2"],
-    "line": ["cell.?line", "cellline", "cell_line", "model", "line"],
-    "gi": ["dlfc", "delta.?lfc", "gi", "genetic.?interaction", "interaction.?score", "synergy"],
-    "sl_flag": ["hit", "sl$", "synthetic.?lethal", "interaction.?hit"],
-    "cohens_d": ["cohen.?s.?d", "cohensd", "cohen.?d", "effect.?size", "d_cohen", "cohen"],
-    "sko_a": ["sko.?a", "single.?ko.?a", "a1.?lfc", "gene.?a.?lfc", "lfc.?a"],
-    "sko_b": ["sko.?b", "single.?ko.?b", "a2.?lfc", "gene.?b.?lfc", "lfc.?b"]
+    "pair_col": [
+     "unnamed.?0",
+     "pair",
+     "gene.?pair",
+     "guide.?pair"
+    ],
+    "gi": [
+     "dlfc",
+     "delta.?lfc",
+     "delta.?mean",
+     "deltamean",
+     "gi",
+     "genetic.?interaction",
+     "interaction.?score",
+     "synergy",
+     "obs.?minus.?exp"
+    ],
+    "sl_flag": [
+     "hit",
+     "sl$",
+     "synthetic.?lethal",
+     "interaction.?hit"
+    ],
+    "cohens_d": [
+     "cohend",
+     "cohen.?s.?d",
+     "cohensd",
+     "cohen.?d",
+     "effect.?size",
+     "d_cohen",
+     "cohen"
+    ],
+    "sko_a": [
+     "sko.?a",
+     "single.?ko.?a",
+     "a1.?lfc",
+     "gene.?a.?lfc",
+     "lfc.?a",
+     "gene1_?mean",
+     "gene.?1_?mean"
+    ],
+    "sko_b": [
+     "sko.?b",
+     "single.?ko.?b",
+     "a2.?lfc",
+     "gene.?b.?lfc",
+     "lfc.?b",
+     "gene2_?mean",
+     "gene.?2_?mean"
+    ]
    },
-   "expected_lines": ["PC9", "HeLa", "A549", "HT29", "OVCAR8", "A375", "MeWo", "RPE1", "hTERT-RPE1", "HCT116", "U2OS", "K562", "MELJUSO", "DLD1", "HAP1"]
+   "expected_lines": [
+    "PC9",
+    "HeLa",
+    "A549",
+    "HT29",
+    "OVCAR8",
+    "A375",
+    "MeWo",
+    "RPE1",
+    "hTERT-RPE1",
+    "HCT116",
+    "U2OS",
+    "K562",
+    "MELJUSO",
+    "DLD1",
+    "HAP1"
+   ],
+   "layout": "sheet_per_line",
+   "sheet_line_rule": "everything after the first '_' of the sheet name (Parrish_PC9 -> PC9; Ito_TIMEL_202 -> TIMEL_202)",
+   "pair_split": ":",
+   "sl_rule_params": {
+    "gi_lt": -1.0,
+    "cohens_d_gt": 0.8
+   }
   },
   {
    "name": "pgpen_direct",
    "files": [
-    {"file": "pgpen_supplement_2.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-2.xlsx"},
-    {"file": "pgpen_supplement_3.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-3.xlsx"},
-    {"file": "pgpen_supplement_4.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-4.xlsx"},
-    {"file": "pgpen_supplement_5.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-5.xlsx"},
-    {"file": "pgpen_supplement_6.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-6.xlsx"},
-    {"file": "pgpen_supplement_7.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-7.xlsx"},
-    {"file": "pgpen_supplement_8.xlsx", "download_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8534300/bin/NIHMS1737332-supplement-8.xlsx"}
+    {
+     "file": "pgpen_supplement_2.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-2.xlsx"
+    },
+    {
+     "file": "pgpen_supplement_3.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-3.xlsx"
+    },
+    {
+     "file": "pgpen_supplement_4.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-4.xlsx"
+    },
+    {
+     "file": "pgpen_supplement_5.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-5.xlsx"
+    },
+    {
+     "file": "pgpen_supplement_6.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-6.xlsx"
+    },
+    {
+     "file": "pgpen_supplement_7.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-7.xlsx"
+    },
+    {
+     "file": "pgpen_supplement_8.xlsx",
+     "download_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/8534300/bin/NIHMS1737332-supplement-8.xlsx"
+    }
    ],
    "file_resolution": "Parrish et al. 2021 Cell Reports (DOI 10.1016/j.celrep.2021.109597), PMC8534300 supplement files 2-8. PMC filenames do not carry table labels, so every candidate is fetched sealed and confirm.py tries each against the column patterns below; the file that parses to a nonempty pair table IS treated as this dataset's table and recorded in the run. If several parse, the one containing the widest pair set is used.",
    "published_sl_rule": "GI <= -0.5 AND FDR <= 0.1 per cell line; where an FDR column exists it is used, else the GI threshold alone",
    "columns": {
-    "gene_a": ["gene.?a", "gene.?1", "a1", "paralog.?a", "guide.?a"],
-    "gene_b": ["gene.?b", "gene.?2", "a2", "paralog.?b", "guide.?b"],
-    "line": ["cell.?line", "line", "screen"],
-    "gi": ["gi", "genetic.?interaction", "interaction.?score", "gamma"],
-    "sl_flag": ["fdr", "sl", "hit"],
-    "cohens_d": ["cohen.?s.?d", "cohensd", "cohen.?d", "effect.?size"],
-    "sko_a": ["sko.?a", "a.?crispr.?score", "a1.*score", "gene.?a.*score"],
-    "sko_b": ["sko.?b", "b.?crispr.?score", "a2.*score", "gene.?b.*score"]
+    "gene_a": [
+     "gene.?a",
+     "gene.?1",
+     "a1",
+     "paralog.?a",
+     "guide.?a"
+    ],
+    "gene_b": [
+     "gene.?b",
+     "gene.?2",
+     "a2",
+     "paralog.?b",
+     "guide.?b"
+    ],
+    "line": [
+     "cell.?line",
+     "line",
+     "screen"
+    ],
+    "gi": [
+     "gi",
+     "genetic.?interaction",
+     "interaction.?score",
+     "gamma"
+    ],
+    "sl_flag": [
+     "fdr",
+     "sl",
+     "hit"
+    ],
+    "cohens_d": [
+     "cohen.?s.?d",
+     "cohensd",
+     "cohen.?d",
+     "effect.?size"
+    ],
+    "sko_a": [
+     "sko.?a",
+     "a.?crispr.?score",
+     "a1.*score",
+     "gene.?a.*score"
+    ],
+    "sko_b": [
+     "sko.?b",
+     "b.?crispr.?score",
+     "a2.*score",
+     "gene.?b.*score"
+    ]
    },
-   "expected_lines": ["PC9", "HeLa"]
+   "expected_lines": [
+    "PC9",
+    "HeLa"
+   ],
+   "sl_rule_params": {
+    "gi_lte": -0.5,
+    "fdr_lte": 0.1
+   }
   },
   {
    "name": "flister_36648",
@@ -52,38 +185,155 @@
    "unavailable_note": "Cell Reports 2025 (DOI 10.1016/j.celrep.2025.116512, PMID 41205176): supplementary Table S2 (36,648 pairs, enAsCas12a, NCI-H1299 and MDA-MB-231). No open repository deposit or directly fetchable supplement URL could be established before the freeze; the dataset stays registered and is skipped with disclosure if it remains unfetchable. If it is fetched the file lands under data/sealed/ like every holdout file.",
    "published_sl_rule": "pair observed dKO below additive single-KO expectation at the paper's registered threshold; where a hit/FDR column exists it takes precedence",
    "columns": {
-    "gene_a": ["gene.?a", "gene.?1", "paralog.?a", "a1", "gene1"],
-    "gene_b": ["gene.?b", "gene.?2", "paralog.?b", "a2", "gene2"],
-    "line": ["cell.?line", "cellline", "cell_line", "model", "line"],
-    "gi": ["dlfc", "delta.?lfc", "gi", "interaction", "synergy", "observed.?minus.?expected"],
-    "sl_flag": ["hit", "sl$", "synthetic.?lethal", "fdr", "interaction.?hit"],
-    "cohens_d": ["cohen.?s.?d", "cohensd", "cohen.?d", "effect.?size"],
-    "sko_a": ["sko.?a", "single.?ko.?a", "a1.?lfc", "gene.?a.?lfc", "lfc.?a"],
-    "sko_b": ["sko.?b", "single.?ko.?b", "a2.?lfc", "gene.?b.?lfc", "lfc.?b"]
+    "gene_a": [
+     "gene.?a",
+     "gene.?1",
+     "paralog.?a",
+     "a1",
+     "gene1"
+    ],
+    "gene_b": [
+     "gene.?b",
+     "gene.?2",
+     "paralog.?b",
+     "a2",
+     "gene2"
+    ],
+    "line": [
+     "cell.?line",
+     "cellline",
+     "cell_line",
+     "model",
+     "line"
+    ],
+    "gi": [
+     "dlfc",
+     "delta.?lfc",
+     "gi",
+     "interaction",
+     "synergy",
+     "observed.?minus.?expected"
+    ],
+    "sl_flag": [
+     "hit",
+     "sl$",
+     "synthetic.?lethal",
+     "fdr",
+     "interaction.?hit"
+    ],
+    "cohens_d": [
+     "cohen.?s.?d",
+     "cohensd",
+     "cohen.?d",
+     "effect.?size"
+    ],
+    "sko_a": [
+     "sko.?a",
+     "single.?ko.?a",
+     "a1.?lfc",
+     "gene.?a.?lfc",
+     "lfc.?a"
+    ],
+    "sko_b": [
+     "sko.?b",
+     "single.?ko.?b",
+     "a2.?lfc",
+     "gene.?b.?lfc",
+     "lfc.?b"
+    ]
    },
-   "expected_lines": ["NCI-H1299", "H1299", "MDA-MB-231", "MDAMB231"]
+   "expected_lines": [
+    "NCI-H1299",
+    "H1299",
+    "MDA-MB-231",
+    "MDAMB231"
+   ],
+   "sl_rule_params": {
+    "gi_lt": -1.0,
+    "cohens_d_gt": 0.8
+   }
   }
  ],
  "line_models": {
-  "PC9": ["ACH-000779"], "PC-9": ["ACH-000779"],
-  "HeLa": ["ACH-001086"],
-  "A549": ["ACH-000681"],
-  "HT29": ["ACH-000552"],
-  "OVCAR8": ["ACH-000696"], "OV-CAR-8": ["ACH-000696"],
-  "HCT116": ["ACH-000971"],
-  "U2OS": ["ACH-000364"], "U-2-OS": ["ACH-000364"],
-  "A375": ["ACH-000219"],
-  "MeWo": ["ACH-000987"],
-  "MELJUSO": ["ACH-000881"],
-  "K562": ["ACH-000551"],
-  "NCI-H1299": ["ACH-000510"], "NCIH1299": ["ACH-000510"], "H1299": ["ACH-000510"],
-  "MDA-MB-231": ["ACH-000768"], "MDAMB231": ["ACH-000768"],
-  "HAP1": ["ACH-002475"],
-  "DLD1": ["ACH-001061"],
-  "MCF7": ["ACH-000019"],
-  "A2058": ["ACH-000788"],
-  "JJN3": ["ACH-000653"],
-  "RPE1": [], "RPE-1": [], "hTERT-RPE1": [], "HTERT-RPE1": [], "HEK293": [], "293T": [], "HEK293T": []
+  "PC9": [
+   "ACH-000779"
+  ],
+  "PC-9": [
+   "ACH-000779"
+  ],
+  "HeLa": [
+   "ACH-001086"
+  ],
+  "A549": [
+   "ACH-000681"
+  ],
+  "HT29": [
+   "ACH-000552"
+  ],
+  "OVCAR8": [
+   "ACH-000696"
+  ],
+  "OV-CAR-8": [
+   "ACH-000696"
+  ],
+  "HCT116": [
+   "ACH-000971"
+  ],
+  "U2OS": [
+   "ACH-000364"
+  ],
+  "U-2-OS": [
+   "ACH-000364"
+  ],
+  "A375": [
+   "ACH-000219"
+  ],
+  "MeWo": [
+   "ACH-000987"
+  ],
+  "MELJUSO": [
+   "ACH-000881"
+  ],
+  "K562": [
+   "ACH-000551"
+  ],
+  "NCI-H1299": [
+   "ACH-000510"
+  ],
+  "NCIH1299": [
+   "ACH-000510"
+  ],
+  "H1299": [
+   "ACH-000510"
+  ],
+  "MDA-MB-231": [
+   "ACH-000768"
+  ],
+  "MDAMB231": [
+   "ACH-000768"
+  ],
+  "HAP1": [
+   "ACH-002475"
+  ],
+  "DLD1": [
+   "ACH-001061"
+  ],
+  "MCF7": [
+   "ACH-000019"
+  ],
+  "A2058": [
+   "ACH-000788"
+  ],
+  "JJN3": [
+   "ACH-000653"
+  ],
+  "RPE1": [],
+  "RPE-1": [],
+  "hTERT-RPE1": [],
+  "HTERT-RPE1": [],
+  "HEK293": [],
+  "293T": [],
+  "HEK293T": []
  },
  "line_models_note": "Empty list = line not a DepMap model, so its context status is 'unknown' and the pair contributes only unconditional evidence there. Context status uses the same binarisation and thresholds as discovery, computed by code/confirm.py from the shared omics only."
 }
