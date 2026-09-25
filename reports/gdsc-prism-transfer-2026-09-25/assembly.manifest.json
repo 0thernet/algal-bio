@@ -271,6 +271,42 @@
    "path_prefix_redacted": false
   },
   {
+   "source": "report.md",
+   "published": "reports/gdsc-prism-transfer-2026-09-25/report.md",
+   "bytes": 3588,
+   "bytes_published": 3588,
+   "sha256_original": "057cb35c54cf38a382f974923976fff93a0ad07d19db09f4b5b07081180faac2",
+   "sha256_published": "057cb35c54cf38a382f974923976fff93a0ad07d19db09f4b5b07081180faac2",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.csv",
+   "published": "reports/gdsc-prism-transfer-2026-09-25/results/confirmation.csv",
+   "bytes": 140949,
+   "bytes_published": 140949,
+   "sha256_original": "f09883211a3164492b29c1a7c2c885d992d7441d4ebd05d2a190cab54c6c8ed9",
+   "sha256_published": "f09883211a3164492b29c1a7c2c885d992d7441d4ebd05d2a190cab54c6c8ed9",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.runs.jsonl",
+   "published": "reports/gdsc-prism-transfer-2026-09-25/results/confirmation.runs.jsonl",
+   "bytes": 166,
+   "bytes_published": 166,
+   "sha256_original": "3b63c8901d653b5b1aece8fadc28325ade57ae8841464638bd948d86cbe30f5f",
+   "sha256_published": "3b63c8901d653b5b1aece8fadc28325ade57ae8841464638bd948d86cbe30f5f",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.summary.json",
+   "published": "reports/gdsc-prism-transfer-2026-09-25/results/confirmation.summary.json",
+   "bytes": 939,
+   "bytes_published": 939,
+   "sha256_original": "e50acd22fe1c402bcd301ba98240325ab6f25cb374526d486114d9adb167dd84",
+   "sha256_published": "e50acd22fe1c402bcd301ba98240325ab6f25cb374526d486114d9adb167dd84",
+   "path_prefix_redacted": false
+  },
+  {
    "source": "results/selection.csv",
    "published": "reports/gdsc-prism-transfer-2026-09-25/results/selection.csv",
    "bytes": 47605,

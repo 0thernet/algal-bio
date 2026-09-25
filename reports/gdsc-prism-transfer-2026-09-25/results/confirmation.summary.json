@@ -1,0 +1,53 @@
+{
+ "schema": "bio.pharmaco-confirmation.v1",
+ "freeze_utc": "2026-09-25T23:22:13Z",
+ "top_digest": "10c4107429ae79433c72e1397ed3e8ebcb4db6b965539b97bc9072621f954c28",
+ "run_utc": "2026-09-25T23:27:43Z",
+ "rules": {
+  "REP_P": 0.05,
+  "REP_FRAC": 0.5,
+  "MIN_POS": 5,
+  "MIN_N": 25
+ },
+ "primary": {
+  "tested": 278,
+  "replicated": 120,
+  "rate": 0.4316546762589928
+ },
+ "anchor_subset": {
+  "tested": 20,
+  "replicated": 16,
+  "rate": 0.8
+ },
+ "placebo": {
+  "tested": 0,
+  "replicated": 0,
+  "rate": null
+ },
+ "gold": {
+  "tested": 11,
+  "replicated": 9,
+  "rate": 0.8181818181818182
+ },
+ "empty_placebo_files": [
+  "selection.placebo20260925.csv",
+  "selection.placebo20260927.csv"
+ ],
+ "P1_anchor": {
+  "passed": true,
+  "threshold": 0.7
+ },
+ "P1_nonanchor": {
+  "passed": true,
+  "threshold": 0.4
+ },
+ "P2": {
+  "passed": false,
+  "ceiling": 0.15
+ },
+ "P5": {
+  "passed": true,
+  "threshold": 0.5
+ },
+ "label": "PHARMACO_REPLICATED"
+}
