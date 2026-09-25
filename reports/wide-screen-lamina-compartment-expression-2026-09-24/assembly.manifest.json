@@ -16,10 +16,10 @@
   {
    "source": "README.campaign.md",
    "published": "campaigns/wide-screen-lamina-compartment-expression-2026-09-24/README.md",
-   "bytes": 4634,
-   "bytes_published": 4634,
-   "sha256_original": "853fb87b6ff10c94a2a2cb49b4a4c9b63bff03c45df4391d4129e767a464d788",
-   "sha256_published": "853fb87b6ff10c94a2a2cb49b4a4c9b63bff03c45df4391d4129e767a464d788",
+   "bytes": 4817,
+   "bytes_published": 4817,
+   "sha256_original": "510224ed0336695bb91f753a702117c06d37127bccd375ef073e341e9b1da5a5",
+   "sha256_published": "510224ed0336695bb91f753a702117c06d37127bccd375ef073e341e9b1da5a5",
    "path_prefix_redacted": false
   },
   {
@@ -237,6 +237,15 @@
    "sha256_original": "8afec461e57b493301b2d966f2dbe518fc11e5d14276cb43950be4c143d0ce75",
    "sha256_published": "8920e85195eb09b58d34344330f20bd1d8e49d252cd07474da11ac91dd0d86b2",
    "path_prefix_redacted": true
+  },
+  {
+   "source": "design/pr8-review.json",
+   "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/design/pr8-review.json",
+   "bytes": 4085,
+   "bytes_published": 4085,
+   "sha256_original": "cc7b6b3bcc00fa08abf783bed9fc2f48fb723f9b31b651a983f6762ceb15e1a5",
+   "sha256_published": "cc7b6b3bcc00fa08abf783bed9fc2f48fb723f9b31b651a983f6762ceb15e1a5",
+   "path_prefix_redacted": false
   },
   {
    "source": "design/pre-discovery-review.json",
@@ -664,10 +673,10 @@
   {
    "source": "report.md",
    "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/report.md",
-   "bytes": 20676,
-   "bytes_published": 20676,
-   "sha256_original": "b64aa37e39aa299b22bff0c8443a547ddbfcadfa03437a055d1c1c11c45eea8a",
-   "sha256_published": "b64aa37e39aa299b22bff0c8443a547ddbfcadfa03437a055d1c1c11c45eea8a",
+   "bytes": 21060,
+   "bytes_published": 21060,
+   "sha256_original": "0f5e7b8818ba0fb65869450654ea8b4b9e473ff56fc2b30ed51b735e872325db",
+   "sha256_published": "0f5e7b8818ba0fb65869450654ea8b4b9e473ff56fc2b30ed51b735e872325db",
    "path_prefix_redacted": false
   },
   {

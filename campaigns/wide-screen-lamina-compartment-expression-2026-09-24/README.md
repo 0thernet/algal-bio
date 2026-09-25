@@ -19,7 +19,7 @@ Rounds 6-8 were run by Devin, continuing the Claude Code session that ran rounds
 - The frozen protocols describe GSE300197 cells as iPSC; they are hiPSC-derived cardiomyocytes (erratum in the report).
 - Personal filesystem prefixes are replaced by `<research-root>/` or `<home>/` in published copies; `assembly.manifest.json` records original and published hashes. Frozen hashes refer to the originals.
 - Not published (hashes in intake receipts or manifests): external UCSC tables and the gc5Base bigWig (`data/external`), ENCODE compartment bigWigs (`panel/data`), GSE263012 bigWigs (`damid/data`), GSE277503 bigWigs (`lbr/data`, hashes in `lbr/intake.json`), UCSC mm9 annotation (`mef/ref`, hashes in `mef/features/manifest.json`), and `features/tiles.base.tsv`. GSE126459 HOMER PC1 bedGraphs are read from the compartment campaign's data directory.
-- `lbr/` had no separate post-outcome review before publication; the PR #8 review checks its integrity (`design/pr8-review.json`).
+- `lbr/` had no separate post-outcome review before publication; the PR #8 review checks its integrity (`design/pr8-review.json`). Separately, `lbr/lbr.py run` re-executed in a scratch copy (frozen code, features and intake-verified data) reproduced `lbr/results/result.json` and `logs/lbr-run.log` byte for byte.
 - On 2026-09-25 a test-import name collision overwrote `features/tiles.tsv` and `features/manifest.json` in the private working copy; both were restored from the PR #7 published copies and re-verified against every freeze receipt (report, "Record note").
 - Paid spend for this campaign: $0.
 

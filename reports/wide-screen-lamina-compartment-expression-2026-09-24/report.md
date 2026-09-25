@@ -80,7 +80,7 @@ Hashes, timing (data files created 2-7 s after the freeze, local timestamps only
 
 ## Registered test of the LBR sign reversal (lbr/, frozen before download): DIRECTION_ONLY — not supported
 
-The LBR-loss result is not supported. The registered label is DIRECTION_ONLY in both arms: the primaries passed and a placebo failed its bound.
+The LBR-loss result is not supported. The registered label is DIRECTION_ONLY in both arms: the primaries passed and placebos failed the size bound. In the linear arm both failed (PL_batch +0.130 and PL_st +0.610 against a bound of 0.071); in the flexible arm PL_st alone failed (+0.597 against 0.073).
 
 Origin: in the damid/ campaign, K562 LBR KO gave gc ~ lamina change rho +0.32. That was a secondary readout, seen after outcome and opposite in sign to LMNA loss. This test used a fresh cohort, GSE277503 (van Schaik et al. 2025, NAR; RPE1 LMNB2 pA-DamID, WT vs LBR KO in two experiments, r13 and r14). The protocol, code, tests and pre-freeze review (design/lbr-review.json, PASS_WITH_REPAIRS, repairs applied) were frozen before any data file was downloaded.
 
@@ -123,7 +123,7 @@ Question: is a delta's GC association domain-level (between 500 kb tiles) or fin
 | RPE1 SunTag WT r6 − r7 (PL_st) | +0.706 | +0.078 |
 | RPE1 TOP2B siRNA − WT, r13 | +0.245 | +0.094 |
 
-Reading: every contrast is coarse-dominated, including the same-genotype placebo PL_st (fine +0.078 against coarse +0.706). The premise that library GC bias would show at bin level does not hold for PL_st. This diagnostic therefore cannot separate a technical GC gradient from a domain-level lamina change. It is recorded as uninformative and carries no weight for or against the LMNA result. The coarse values here are tile means of 20-25 kb bins, partialled on baseline only (no gene-density covariate), so they differ slightly from the registered values.
+Reading: every contrast is coarse-dominated, including the same-genotype placebo PL_st (fine +0.078 against coarse +0.706). The premise that library GC bias would show at bin level does not hold for PL_st. This diagnostic therefore cannot separate a technical GC gradient from a domain-level lamina change. It is recorded as uninformative and carries no weight for or against the LMNA result. The coarse values here are tile means of 20-25 kb bins, partialled on baseline only (no gene-density covariate), so they differ slightly from the registered values. K562 rows use the GEO batch labels, so 'WT r8' is the WT_r3 track of the damid/ table. The docstring of explore/fine_scale.py says 500 null shifts; its code, and the vectorized copy, use 200. The docstring is left as written.
 
 ## Record note: working-copy overwrite, restored (2026-09-25)
 The mef/ synthetic tests were first run at about 00:38 UTC on 2026-09-25. A module-name collision made `import build_features` resolve to code/build_features.py, the hg38 builder, which runs at import. It rewrote features/tiles.tsv and features/manifest.json in the private working directory with their versions from before the external features were added. No analysis ran on the overwritten files. Both files were restored from the PR #7 published copies, whose hashes equal the frozen originals. All five freeze receipts that bind them verify again: registration/freeze-pre-discovery.json, control/, panel/, damid/ and lbr/. The mouse builder was renamed mef/build_mm9_features.py so the collision cannot recur.
