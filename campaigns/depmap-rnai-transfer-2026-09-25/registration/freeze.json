@@ -1,5 +1,5 @@
 {
- "frozen_utc": "2026-09-25T20:24:27Z",
+ "frozen_utc": "2026-09-25T20:34:53Z",
  "schema": "bio.rnai-confirm-freeze.v1",
  "sha256": {
   "registration/protocol.json": "1596510abb85437d1d51f79e7f3604f1ee051cdaed2a8ead1cdc3d374b837c5c",
@@ -12,7 +12,7 @@
   "code/prep.py": "e4485a9002caff31b1cb072a3fa106ee712b1c0054b4c6e6b460ca57ad38f8f0",
   "code/freeze.py": "1a5ef96aed74406e397a637aa410f96d1e4a20915f80aaa0b0fee2e1ae2e8e87",
   "code/fetch_holdout.py": "f756a5a15c5da1015140d54dc5a3a2cfb01397b52c52012e34b425aaedc3fb2d",
-  "code/confirm.py": "c8b9cdc8a7cf92151c960d91924e6a00e21218b4dab4efad208e827bac3553d5",
+  "code/confirm.py": "eca3185a2a975af9e1a5b5191799071d7793d388f06db047f84839bbb1ecbe7a",
   "tests/test_rnai.py": "f9c95054dd550d7e1422efffbdd3899d71ceae5c4dfcf4c7fcf8b221031f553c",
   "data/prep/prep.receipt.json": "0342bcaac4c2045a21e29f3767bfe47c96014b51ae72d58a69bfa267fba4b850",
   "data/prep/d2_model_map.json": "89feaaf8c9852395c4d07bdc7c1559fcd2ac71b4f4c917daa8179e870ae43355",
@@ -20,5 +20,5 @@
   "registration/depmap_placebo20260926.csv": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
   "registration/depmap_placebo20260927.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
  },
- "top_digest": "97c3c84fe4d22301753be678b59499346203f92132a41cda672be4cf0a875274"
+ "top_digest": "f9cf08fbdfc66ae8627b27a4e4cd4e16583c697ad09d3047d898305af1aa7540"
 }

@@ -1,0 +1,53 @@
+{
+ "schema": "bio.rnai-confirmation.v1",
+ "freeze_utc": "2026-09-25T20:34:53Z",
+ "top_digest": "f9cf08fbdfc66ae8627b27a4e4cd4e16583c697ad09d3047d898305af1aa7540",
+ "run_utc": "2026-09-25T20:41:26Z",
+ "rules": {
+  "REP_P": 0.05,
+  "REP_FRAC": 0.5,
+  "MIN_POS": 3,
+  "MIN_N": 30
+ },
+ "primary": {
+  "tested": 72,
+  "replicated": 41,
+  "rate": 0.5694444444444444
+ },
+ "placebo": {
+  "tested": 3,
+  "replicated": 0,
+  "rate": 0.0
+ },
+ "novel": {
+  "tested": 31,
+  "replicated": 18,
+  "rate": 0.5806451612903226
+ },
+ "gold": {
+  "tested": 15,
+  "replicated": 11,
+  "rate": 0.7333333333333333
+ },
+ "empty_placebo_files": [
+  "depmap_placebo20260927.csv"
+ ],
+ "P1": {
+  "passed": true,
+  "threshold": 0.3
+ },
+ "P2": {
+  "passed": true,
+  "ceiling": 0.15
+ },
+ "P4": {
+  "passed": true,
+  "threshold": 0.25,
+  "min_replicated": 3
+ },
+ "P5": {
+  "passed": true,
+  "threshold": 0.5
+ },
+ "label": "RNAI_REPLICATED"
+}

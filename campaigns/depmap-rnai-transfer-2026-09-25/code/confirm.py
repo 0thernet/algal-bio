@@ -73,10 +73,25 @@ def check_freeze():
             sys.exit(f"refusing: depmap-campaign file {rel} changed "
                      "since its freeze")
     rr = json.load(open(f"{C.DEPMAP}/data/depmap24q4.receipt.json"))
+<<<<<<< HEAD
+    rfiles = rr.get("files", {})
+    # only the files this run reads, verified against the release receipt
+    need = ("OmicsSomaticMutationsMatrixDamaging.csv",
+            "OmicsSomaticMutationsMatrixHotspot.csv",
+            "OmicsAbsoluteCNGene.csv",
+            "OmicsExpressionProteinCodingGenesTPMLogp1.csv",
+            "OmicsSignatures.csv", "Model.csv")
+    for fn in need:
+        v = rfiles.get(fn)
+        want = v.get("sha256") if isinstance(v, dict) else None
+        if not want or sha(f"{C.DEPMAP}/data/depmap24q4/{fn}") != want:
+            sys.exit(f"refusing: depmap input {fn} changed or unreceipted")
+=======
     for fn, v in rr.get("files", {}).items():
         want = v.get("sha256") if isinstance(v, dict) else None
         if want and sha(f"{C.DEPMAP}/data/depmap24q4/{fn}") != want:
             sys.exit(f"refusing: depmap input {fn} changed")
+>>>>>>> origin/main
     prp = json.load(open(f"{C.DEPMAP}/data/prep/prep.receipt.json"))
     for f, v in prp.get("outputs", {}).items():
         if f.endswith("dep.npz") and sha(f"{C.DEPMAP}/{f}") != v:
@@ -103,11 +118,21 @@ def check_freeze():
 
 
 def load_d2():
+<<<<<<< HEAD
+    """D2_combined_gene_dep_scores.csv: rows are genes 'NAME (entrez)', columns
+    are CCLE_IDs. Returns the matrix transposed to models x genes with the
+    entrez suffix stripped."""
+    path = f"{ROOT}/data/sealed/D2_combined_gene_dep_scores.csv"
+    df = pd.read_csv(path, index_col=0)
+    df.index = CX.strip_entrez(df.index)
+    return df.T
+=======
     """D2_combined_gene_dep_scores.csv: rows CCLE_ID, cols genes."""
     path = f"{ROOT}/data/sealed/D2_combined_gene_dep_scores.csv"
     df = pd.read_csv(path, index_col=0)
     df.columns = CX.strip_entrez(df.columns)
     return df
+>>>>>>> origin/main
 
 
 def replicated(disc_beta, disc_lb, disc_sd, res):
