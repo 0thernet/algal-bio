@@ -1,5 +1,5 @@
 {
- "frozen_utc": "2026-09-25T21:01:17Z",
+ "frozen_utc": "2026-09-25T21:54:42Z",
  "schema": "bio.orcs-freeze.v1",
  "sha256": {
   "registration/protocol.json": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
@@ -11,8 +11,8 @@
   "code/campaign.py": "b4a58d88e4524bf8ae1539814e69a39a0b79aaa8fb50492e324fe4bf0d62bd6d",
   "code/prep.py": "e867fc034e4cb9abe8055bcd9585675740b524aa6b7b04d217cdecf979407246",
   "code/freeze.py": "e1086b6257d53bf5234686a0b867237b181e6c40153eae830f51d28663dbb62a",
-  "code/fetch_holdout.py": "2853e8c63135c68f18d8fb8a8fe01fced1ef11e183ded27bacb814221ad84e42",
-  "code/confirm.py": "f60a6a0b053cc27ff67cdb473f309bdb088f74da3731ae21d246a00c8334c732",
+  "code/fetch_holdout.py": "e6e77b918b3444173f15a0d50d755eb79ff8f52cb4a832e5af98a1f9ea5042fa",
+  "code/confirm.py": "1d66f7b60ac1d5826f541c738ebcc1f11317abebd0e7b0ae9ae75fae388ba7be",
   "tests/test_orcs.py": "35cac31599b65527e5986a02016a7f16aa5aef3c3f6648b681bc02800537d125",
   "data/prep/prep.receipt.json": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
   "data/prep/orcs_name_map.json": "667eef97ee741b2526de453fdedecf2719174d4fbf1dfa0b9209ede182085682",
@@ -21,5 +21,5 @@
   "registration/depmap_placebo20260927.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
  },
  "depmap_top_digest": "688981057cb7696f4b60c6906da0a0807c365c9cbbd7ea6a678547adb6de045b",
- "top_digest": "8aee5e1376a871f13440d08e5d57d49c4126fb4f0a5b1d3066c8e46ac8767f70"
+ "top_digest": "f2e60009f4e9b706bf75375759f49c762339647ff48c0c42c0c1e8139bf139eb"
 }

@@ -264,7 +264,7 @@ def main():
                 "direction_unresolved": 0}
 
     sel = pd.read_csv(f"{ROOT}/registration/depmap_pairs.csv")
-    gold = json.load(open(f"{ROOT}/registration/gold_controls.json"))
+    gold = json.load(open(f"{ROOT}/registration/depmap_gold_controls.json"))
     placebo_frames = []
     for f in sorted(os.listdir(f"{ROOT}/registration")):
         if f.startswith("depmap_placebo") and f.endswith(".csv"):
@@ -278,15 +278,15 @@ def main():
         | {p["dep_gene"] for p in gold["pairs"] if p.get("available")} \
         | {g for _, p in placebo_frames for g in p.get("dep_gene", [])}
 
-    screens = []
+    # decide per-screen metadata from the index FIRST (no member IO)
+    wanted = {}            # sid -> metadata dict
     for _, r in ix[ix.__usable__ & ~ix.__excl__].iterrows():
         model = r.__model__
-        if not model:
+        if not isinstance(model, str) or not model:
             coverage["unmapped_cell_lines"] += 1
             continue
         sid = str(r.get("SCREEN_ID", ""))
-        member = member_by_id.get(sid)
-        if member is None:
+        if sid not in member_by_id:
             coverage["member_unmatched"] += 1
             continue
         direction = screen_direction(r.get(c_crit, ""))
@@ -311,25 +311,38 @@ def main():
         if direction is None or score_col is None:
             coverage["direction_unresolved"] += 1
             continue
-        try:
-            sc = load_screen(tf, member, score_col)
-        except Exception:
-            sc = None
-        if sc is None:
-            coverage["bad_score_column"] += 1
-            continue
-        if len(sc) < MIN_GENES_PER_SCREEN:
-            coverage["under_gene_floor"] += 1
-            continue
-        screens.append({"model": model, "screen": sid,
-                        "pmid": r.__pmid__, "direction": direction,
-                        "scores": sc})
+        wanted[sid] = {"model": model, "screen": sid, "pmid": r.__pmid__,
+                       "direction": direction, "score_col": score_col}
+
+    # single streaming pass over the tarball: the gzip container is not
+    # seekable, so members must be read in archive order
+    tf.close()
+    screens = []
+    with tarfile.open(tgz, "r|gz") as stream:
+        for member in stream:
+            m = re.search(r"SCREEN_(\d+)", os.path.basename(member.name))
+            if not m or m.group(1) not in wanted:
+                continue
+            w = wanted[m.group(1)]
+            try:
+                sc = load_screen(stream, member, w["score_col"])
+            except Exception:
+                sc = None
+            if sc is None:
+                coverage["bad_score_column"] += 1
+                continue
+            if len(sc) < MIN_GENES_PER_SCREEN:
+                coverage["under_gene_floor"] += 1
+                continue
+            screens.append({k: v for k, v in w.items() if k != "score_col"}
+                           | {"scores": sc})
     coverage["usable_mapped"] = len(screens)
 
     # contexts for all models at once (single CX.build, not per pair*screen)
     contexts = sorted(set(sel.context)
-                      | {p["context"] for _, p in placebo_frames
-                         for c in p.get("context", [])}
+                      | {c for _, p in placebo_frames
+                         for c in (p["context"].tolist()
+                                   if "context" in p.columns else [])}
                       | {p["context"] for p in gold["pairs"]
                          if p.get("available") and p.get("context")})
     models = sorted({s["model"] for s in screens})
