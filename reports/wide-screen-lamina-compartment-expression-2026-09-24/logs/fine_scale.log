@@ -1,0 +1,3 @@
+K562 LMNA P_batch (LMNA_r8-WT_r3)    {"fine_rho": -0.03, "fine_n": 105038, "fine_null_sd": 0.003, "fine_z": -8.39, "coarse_rho": -0.241, "coarse_n": 5318}
+K562 LMNA r7 (LMNA_r7-WT_r1)         {"fine_rho": 0.013, "fine_n": 89642, "fine_null_sd": 0.003, "fine_z": 3.758, "coarse_rho": -0.24, "coarse_n": 5150}
+K562 PL_within (WT_r1-WT_r2)         {"fine_rho": -0.033, "fine_n": 104287, "fine_null_sd": 0.003, "fine_z": -10.206, "coarse_rho": -0.073, "coarse_n": 5308}

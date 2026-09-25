@@ -1,0 +1,22 @@
+{
+ "schema": "bio.mef-freeze.v1",
+ "frozen_utc": "2026-09-25T00:50:52.482022+00:00",
+ "sha256": {
+  "mef/protocol.json": "4d4083f794607c631e104fcc20109272b64532ad62f015596c06912275ab5602",
+  "mef/mef.py": "0b3fff22b9df952573fe38c289adca335fc361665191e467e6991a8ccb8927bd",
+  "mef/test_mef.py": "a5b3447b9c6ef9bad73ee39e957d246be479f60425adbe1f84047715ba914331",
+  "mef/freeze.py": "7ef621643881dc00bd4357248b40ec0a1669b2fb4520afd55ae174f084aa56ec",
+  "mef/build_mm9_features.py": "0c36f282bb485406ed5aaebaa02ce9f668f7bc1169ba43f293c8582e7efc203e",
+  "mef/features/mm9_tiles.tsv": "d9eb91f1014c2f580247934da1554e9dd83813e9fbf36e24727a6cfd12355e7e",
+  "mef/features/manifest.json": "a6905b3a200a4349d5f341fa35aaf98cbe8dc133758000860b4b9c0255f94a7b",
+  "design/mef-review.json": "bc13385dc1ecdeeea4e9e4c9936237b9c84fd29fa4f7ba5c0d227d113313ee23",
+  "design/prior-art-mef.md": "4278c9a16d22b6121f3c3bfca91fb25bf5da94f5c48a296b57e8b320aba44a92",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "lbr/lbr.py": "66a1ef5796d51f8cf65185dcd8af2c496bf9f74d603f2c34a7b34025f6384c95",
+  "panel/panel.py": "e9642096bd29c311b16774f58d343fec1d0310d7db57a34baeea21fa2951e7fb"
+ },
+ "python": "3.12.14",
+ "numpy": "2.3.3",
+ "scipy": "1.16.2",
+ "pyBigWig": "0.3.24"
+}

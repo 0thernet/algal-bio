@@ -1,0 +1,73 @@
+{
+ "schema": "bio.fresh-cohort-replication.v1",
+ "campaign_id": "gc-lamina-change-after-lamin-ac-knockdown-mef-damid-2026-09-24",
+ "status": "registered before any GSE124205 data file was downloaded or opened by this program. Read before registration: GEO metadata (series and sample SOFT, the FTP directory listing, and HTTP response headers of the 11 listed files to confirm that each name resolves; Content-Length only, no data bytes) and literature (design/prior-art-mef.md)",
+ "origin": "damid/ REPLICATED gc ~ lamina-contact change after LMNA loss in K562 (rho -0.249 / -0.272; placebos -0.061 / +0.035). The later lbr/ test (GSE277503) found that two same-genotype WT pA-DamID libraries from different experiments differ by a GC gradient of rho +0.61 (PL_st), and an exploratory fine-scale diagnostic (explore/fine_scale.json) could not separate that placebo from the LMNA contrasts. Between-library GC variation is therefore the main threat to the claim. This test uses a third, independent cohort whose design includes embryo-matched knockdown contrasts and three WT embryos, so between-embryo WT variation bounds the knockdown effect inside the same data.",
+ "hypothesis": "after depletion of lamin A/C, the change in lamin B1 contact is negatively related to GC content beyond baseline lamina contact and gene density (GC-rich regions lose lamina contact relative to AT-rich regions), and this gradient exceeds the GC gradient between WT embryos of the same cohort",
+ "cohort": "GSE124205 (Reddy lab; series title matches Luperchio et al. bioRxiv 10.1101/481598; the GEO-linked PMID 34775987 is Wong et al. 2021 Genome Biol, the GSE153919 paper): primary C57BL/6 MEFs from e13.5 embryos (pups 1.5, 1.8, x17), Dam-LaminB1 DamID-seq, deposited bigWigs = LADetector normalized log2(Dam-LaminB1 / Dam), mm9",
+ "samples": {
+  "WT_p15": "GSE124205_MEF_WT_DamID_pup1.5_replicate1_log2.bw",
+  "WT_p18": "GSE124205_MEF_WT_DamID_pup1.8_replicate1_log2.bw",
+  "WT_x17": "GSE124205_MEF_WT_DamID_pupx17_replicate2_log2.bw",
+  "AC_p15": "GSE124205_MEF_shAC_DamID_pup1.5_replicate1_log2.bw",
+  "AC_x17": "GSE124205_MEF_shAC_DamID_pupx17_replicate2_log2.bw",
+  "BIX_p18": "GSE124205_MEF_BIX01294_DamID_pup1.8_replicate1_log2.bw",
+  "BIX_x17": "GSE124205_MEF_BIX01294_DamID_pupx17_replicate2_log2.bw",
+  "DZN_p18": "GSE124205_MEF_DZNep_DamID_pup1.8_replicate1_log2.bw",
+  "DZN_x17": "GSE124205_MEF_DZNep_DamID_pupx17_replicate2_log2.bw",
+  "TSA_p18": "GSE124205_MEF_TSA_DamID_pup1.8_replicate1_log2.bw",
+  "TSA_x17": "GSE124205_MEF_TSA_DamID_pupx17_replicate2_log2.bw"
+ },
+ "sample_notes": "GEO treatment protocol: drug-treated MEFs got TSA, BIX01294 or DZNep for 18-24 h, then DamID virus, harvest at 60 h. Knockdown MEFs were infected with shLaminA/C virus overnight, puromycin-selected, given DamID virus 4 days after infection and harvested 48 h later. WT samples are labelled 'treatment: None' (no control shRNA, no puromycin, no vehicle is recorded). Pup labels identify the embryo the MEFs came from; replicate1 = pups 1.5 and 1.8, replicate2 = pup x17. Each deposited bigWig is the ratio of that sample's own Dam-LaminB1 and Dam-only libraries.",
+ "url_template": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE124nnn/GSE124205/suppl/{file}",
+ "features": "mef/features/mm9_tiles.tsv built by mef/build_mm9_features.py from UCSC mm9 annotation only (2bit, refGene, cpgIslandExt), before any outcome file exists: autosomes chr1-chr19, 500 kb tiles from 0 (last tile partial); gc = G+C fraction over non-N bases, NaN when N fraction > 0.5; tss_count = one TSS per gene symbol (5' end base of its longest refGene transcript: txStart on +, txEnd - 1 on -); cpg_n = CpG islands starting in the tile",
+ "genome_build_check": "every bigWig must list chr1 (or '1') with length 197195432 (mm9); a mismatch or missing chr1 aborts with no label; chromosome names 'chrN' and 'N' are both accepted",
+ "tiling": "value = pyBigWig exact mean over the tile [start, min(start + 500 kb, chromosome end)); NaN if exact coverage < 0.5. Pre-declared fallback because the deposited track format has not been inspected: if any sample track has fewer than 3500 finite autosomal tiles at 0.5, every track is re-tiled at coverage >= 0.1 and the threshold used is recorded",
+ "predictor": "gc",
+ "primary_contrasts": {
+  "P_p15": "delta = AC_p15 - WT_p15 (same embryo); baseline mean(WT_p18, WT_x17)",
+  "P_x17": "delta = AC_x17 - WT_x17 (same embryo); baseline mean(WT_p15, WT_p18)"
+ },
+ "placebos": {
+  "PL_15_18": "delta = WT_p15 - WT_p18 (two WT embryos, replicate series 1); baseline WT_x17",
+  "PL_x17_18": "delta = WT_x17 - WT_p18 (two WT embryos, across series); baseline WT_p15",
+  "PL_x17_15": "delta = WT_x17 - WT_p15 (two WT embryos, across series); baseline WT_p18",
+  "note": "the primaries are within-embryo contrasts; the placebos are between-embryo, so they also carry embryo-to-embryo biological variation and are conservative (larger) estimates of the library-level GC variation the primaries could contain"
+ },
+ "secondary_specificity": {
+  "contrasts": "D_{BIX,DZN,TSA}_{p18,x17} = drug track - WT track of the same embryo; baseline = mean of the other two WT embryos",
+  "label": "only if the final primary label is REPLICATED: SPECIFIC if all six drug contrasts have rho > m / 2; GENERIC if the mean of the six drug rhos <= m / 2; MIXED otherwise; m = mean raw-arm primary rho (negative). Otherwise NOT_APPLICABLE. Drug rhos are always reported"
+ },
+ "arms": {
+  "raw": "code/screen.py test_pair: rank-partial Spearman of gc vs delta, covariates tss_count and baseline (both ranked)",
+  "scale_free": "same as raw after z-scoring each tile track over its finite autosomal tiles before differencing and averaging; guards against a knockdown-vs-WT dynamic-range difference",
+  "flexible": "lbr/lbr.py test_design with covariates [1, rank(tss_count), u, u^2, u^3, (u-q1)_+^3, (u-q2)_+^3, (u-q3)_+^3], u = rank(baseline)/n - 0.5 (lbr.flex_basis); removes smooth non-linear dependence of delta on baseline; u ranks the baseline over all tiles where it is finite (a monotone rescaling of rank over the tested subset), as in lbr/"
+ },
+ "statistic": "within-chromosome circular shift of gc (min shift 10 tiles), 5000 shifts, all autosomes; test order P_p15, P_x17, PL_15_18, PL_x17_18, PL_x17_15, FL_p15, FL_x17, D_BIX_p18, D_BIX_x17, D_DZN_p18, D_DZN_x17, D_TSA_p18, D_TSA_x17; seed 20261301 + index (raw), + 100 (flexible), + 200 (scale_free)",
+ "min_n_per_test": 3000,
+ "abort_rule": "a genome-build mismatch, or any test in any arm (secondaries included) with n < 3000 or non-finite rho, aborts with no label",
+ "labels": {
+  "per_arm": {
+   "REPLICATED": "both primaries rho <= -0.05 with one-sided negative p <= 0.01; all three placebos |rho| < 0.5 * |m|; both range controls rho > 0.5 * m; m = mean primary rho of the arm",
+   "RANGE_EXPLAINED": "primaries and placebos pass, a range control fails its bound",
+   "DIRECTION_ONLY": "both primaries pass but a placebo fails the size bound",
+   "OPPOSITE": "both primaries rho >= +0.05 with positive p <= 0.01",
+   "NOT_REPLICATED": "otherwise"
+  },
+  "final_rule": "REPLICATED only if the raw, scale_free and flexible arms are all REPLICATED; if raw is REPLICATED and another arm is not, NOT_ROBUST (reported as not replicated); otherwise the raw label, with the other arms' labels beside it"
+ },
+ "no_spin": "any final label other than REPLICATED is reported as not replicated in the first sentence of the result",
+ "diagnostics_reported": "per track: autosomal tile SD and finite-tile count; Spearman among the three WT tracks and between each knockdown and WT track of the same embryo; per delta: OLS slope on its baseline and the GC slope (OLS coefficient of delta on z(gc) with z(rank tss) and z(baseline), divided by the mean tile SD of the two tracks in the delta; for FL deltas the quantile-mapped track's own SD); coverage threshold used",
+ "reported_only_probes": "primaries with cpg_n added as a third covariate (raw arm, 1000 shifts, seeds 20261401 + index); no label",
+ "disclosed_limits": "mouse primary MEFs, classic DamID-seq and shRNA knockdown differ from both earlier cohorts; two knockdown embryos; WT is untreated, so the knockdown contrast also contains viral transduction, puromycin selection and about four extra days in culture, which this design cannot separate from lamin A/C loss (the drug contrasts do not share that timeline); knockdown efficiency is not in the deposited data; gc comes from the mm9 sequence rather than a gc5Base track and tss_count from refGene rather than RefSeq Select; LADetector normalisation details beyond the GEO description are not known; the source lab's published statements (prior_knowledge_disclosure) were read before registration; its data were not opened",
+ "claim_ceiling": "REPLICATED supports: the negative GC gradient of lamina-contact change after lamin A/C loss appears in a third independent cohort (mouse MEFs, DamID-seq, shRNA knockdown) and exceeds between-embryo WT variation there. Association only; no mechanism; the knockdown confounds above remain",
+ "amendments": [
+  "pre-freeze review design/mef-review.json PASS_WITH_REPAIRS (no blocking): M1 all 11 file names re-confirmed against the GEO listing and by HTTP headers; M2 freeze binds panel/panel.py (executed at import via lbr/lbr.py); M3 minus-strand TSS placed at txEnd - 1 and features rebuilt; M4 contrast-wiring test added; M5 FL gc_slope uses the mapped track's SD; M6 status wording names what metadata was read"
+ ],
+ "range_controls": {
+  "FL_p15": "sim = WT_p18 quantile-mapped onto the empirical distribution of AC_p15 (lbr.quantile_map; rank-preserving, tiles finite in both); delta = sim - WT_p15; baseline WT_x17",
+  "FL_x17": "sim = WT_p18 quantile-mapped onto AC_x17; delta = sim - WT_x17; baseline WT_p15",
+  "rationale": "reproduces the knockdown marginal (any range expansion or compression) with no GC-specific change; an expanded knockdown range leaks through a noisy baseline in the registered (negative) direction, so a range control that reproduces at least half of the primary effect explains it. WT_p18 is the one WT track in neither primary delta. Each FL delta also spans two embryos, so it carries between-embryo variation like the placebos. Known attenuation (as in lbr/): a mapped WT keeps WT noise, so FL under-reproduces the leak when the knockdown track has much higher signal-to-noise than WT; the scale-free arm and the placebos are the other guards"
+ },
+ "prior_knowledge_disclosure": "read before registration (design/prior-art-mef.md): the Reddy lab reports that lamin A/C knockdown does not alter the MEF LAD profile by DamID (Luperchio et al. bioRxiv 10.1101/122226, same libraries; Wong et al. 2021 for GSE153919: log2 ratios 'virtually indistinguishable'); TSA disrupts LADs mainly where WT lamina signal is low; Shah et al. 2021 Cell Stem Cell report that LADs lost with pathogenic LMNA variants are gene-rich and weakly bound (categorical, unadjusted). The hypothesis concerns the GC pattern of whatever change exists, not its absolute size; a near-null change makes the placebo bound decisive"
+}

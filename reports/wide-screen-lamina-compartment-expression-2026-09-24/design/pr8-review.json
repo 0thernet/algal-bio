@@ -1,0 +1,58 @@
+{
+ "verdict": "APPROVE_WITH_REPAIRS",
+ "blocking": [],
+ "minor": [
+  {
+   "id": "M1",
+   "file": "campaigns/.../explore/fine_scale.py:8",
+   "issue": "Docstring states the fine-scale null uses 500 shifts but the code runs 200; fine_scale_fast.py notes 200 as implemented and the logs show 200-draw nulls.",
+   "repair": "Prefer a bracketed correction note rather than a silent edit of the pre-run record."
+  },
+  {
+   "id": "M2",
+   "file": "reports/.../report.md:65 vs :118",
+   "issue": "The same K562 placebo is labelled 'WT r3 - WT r1' in the damid table and 'WT r8 - WT r1' in the fine-scale table (internal index vs GEO title).",
+   "repair": "Add a parenthetical noting the naming, or harmonize."
+  },
+  {
+   "id": "M3",
+   "file": "reports/.../report.md:83",
+   "issue": "'a placebo failed its bound' understates: in the linear arm both placebos exceeded the 0.5*m bound (bound 0.071; PL_batch +0.130, PL_st +0.610).",
+   "repair": "Say both placebos failed in the linear arm."
+  },
+  {
+   "id": "M4",
+   "file": "campaigns/.../README.md:22",
+   "issue": "References design/pr8-review.json, which is not in the PR yet.",
+   "repair": "Add the review JSON before merge, or reword."
+  },
+  {
+   "id": "M5",
+   "file": "pr8-verify/lbr-rerun.log",
+   "issue": "The byte-identity re-run produced no output: the scratch copy lacked panel/protocol.json, so lbr.py crashed at import. Byte-identity not confirmed by this mechanism.",
+   "repair": "Re-copy panel/ into the scratch tree and re-run."
+  }
+ ],
+ "verified": [
+  "lbr/ label is mechanical: linear m=0.1424, bound 0.0712; primaries pass (+0.149/+0.136, p+ 0.0002); PL_batch 0.130 and PL_st 0.610 exceed the bound -> DIRECTION_ONLY in both arms; lbr.py label()/final_label() match protocol.json exactly.",
+  "Report LBR table matches lbr/results/result.json and logs/lbr-run.log exactly, including flexible PL_batch +0.045 (p+ 0.4983 shown as 0.50) and all FL/FLn/T2B signs and decimals.",
+  "No-spin rule honored; the Status section is proportionate: PL_st +0.61 is presented as unbounding between-library GC variation and the PR #7 claim is demoted to a candidate without overstating.",
+  "Fine-scale table matches explore/fine_scale.json (3 dp, all 10 contrasts); the 'uninformative' reading follows the pre-run reading rule; marked exploratory and non-evidential.",
+  "fine_scale_fast.py is a faithful vectorization (same test list, bins, seed, draw order); its first three rows equal logs/fine_scale.log byte for byte.",
+  "mef/ pre-registration: sha256_original == published sha == freeze.json sha for all 12 frozen files; mef/data and mef/results empty; no intake.json; only header-level Content-Length checks disclosed; no sign of data access.",
+  "mef.py label()/final_label()/specificity() match the protocol; tests cover wiring, abort, build check incl. Ensembl names, coverage fallback and all label branches; pre-freeze repairs M2-M6 verifiably applied.",
+  "Report mef/ description matches the protocol.",
+  "Overwrite record note is accurate and sufficient.",
+  "Hygiene: no personal paths in the published trees; excluded data dirs absent with hashes preserved; no unsent note in the source tree; feature tables are small derived files.",
+  "prior-art-mef.md correctly discloses the GSE124205 vs GSE153919 (PMID 34775987) ambiguity and the sibling-preprint quote source."
+ ],
+ "rerun_byte_identical": "not available at review time (see M5)",
+ "reviewer": "independent Devin subagent (agent 590d01c7), read-only, PR #8, 2026-09-25",
+ "repairs_applied_by_investigator": {
+  "M1": "report notes that explore/fine_scale.py's docstring says 500 shifts while its code and the fast copy use 200; the pre-run file is left unedited",
+  "M2": "report notes that K562 fine-scale rows use GEO batch labels ('WT r8' = the damid/ WT_r3 track)",
+  "M3": "LBR sentence now says both placebos failed in the linear arm (bounds 0.071 / 0.073) and PL_st alone in the flexible arm",
+  "M4": "this file is design/pr8-review.json",
+  "M5": "scratch re-run repeated with panel/protocol.json; outcome recorded in README (see below)"
+ }
+}
