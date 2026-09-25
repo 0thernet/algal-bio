@@ -1,0 +1,101 @@
+{
+ "inputs": {
+  "ScreenGeneEffect.AV.csv": "7c4e5a190e37d3db1408a35db9107768e7ffda7133641349419e6122c070a7c2",
+  "AchillesScreenQCReport.csv": "e48741c3f67536fa446f997cf7861cc081cd6a88ed41a48e04b2bef541b6033d",
+  "CRISPRScreenMap.csv": "668347965c7d5283da79ef7b6d315951d0cf6c5313551305971e8eec9503b3be",
+  "Model.csv": "b7a0c1385e6cef30132b56aff61f1261d11e3f490490b355c430d32ee0dbdcfa",
+  "AchillesCommonEssentialControls.csv": "a1a48ad516011c521b1981769e2f78de84d1410371f8517a7428349be6e6b98a",
+  "Gene.csv": "dfb5f74496ca17baf67f215a44f06197ddd835685813aede75754876b62b19db",
+  "OmicsSomaticMutationsMatrixDamaging.csv": "1b33be5c3bebf30f52421384e268016afbd5e2257b75d65cfe2c09e21daba0f9",
+  "OmicsSomaticMutationsMatrixHotspot.csv": "6444ce819a28d4228ff7b748e309611c5830c551620d8d2c7f86052e2675e3d8",
+  "OmicsAbsoluteCNGene.csv": "5f530c797bf12bce68cccc3e763b29491c368bbbced8971733bed807a13b8c13",
+  "OmicsExpressionProteinCodingGenesTPMLogp1.csv": "2a71dc94110efcc0221eae821bb93a9f03b54bea16f005818911a09d33383d56",
+  "OmicsSignatures.csv": "2eb6d83065db5b591d9904339a1eaeb769a4db8593fe80a135399d7708b39bef"
+ },
+ "outputs": {
+  "data/prep/dep.npz": "d0645c8e6de0e47ba3f5fcbf2c05a6a0ae9bbeda921974bd5e0c08ef8fe5f34f",
+  "data/prep/ctx.npz": "3380c85a88776cf45572d23f2f1fc3d556cb55a4991badedd40b701a25506749",
+  "data/prep/dep_genes.json": "0c5945af309b27e694a6ee89ebfd9da2cbd294849ac2e6c57267db1970dc2799",
+  "data/prep/ctx_names.json": "edd7a36cdcec8e4528335a0f3723bb8d373ea59bcbf754683a7a23a491bd138b",
+  "data/prep/ctx_group.json": "b927ea353641dbefe8a12ed3a94781e3c826f596bb7d9d62b21c1e27c7148f25",
+  "data/prep/ctx_duplicates.json": "03feeeb8352e1442186b60eec9c6bdd1ef0f598182b0e8c02fdc23bb94a85cf9"
+ },
+ "params": {
+  "MIN_POS": 15,
+  "MAX_POS_FRAC": 0.4,
+  "MIN_LINEAGES": 2,
+  "MIN_POS_PER_LINEAGE": 3,
+  "DEP_MIN_SD": 0.2,
+  "DEP_MIN_HIT": -0.5,
+  "DEP_MIN_HITS": 3,
+  "EXPR_LOW": 1.0,
+  "EXPR_ON": 3.0,
+  "DEEP_DEL_CN": 0.5,
+  "MSI_HI": 20.0,
+  "DUP_R": 0.95,
+  "COVARIATE_CONTEXTS": [
+   "MUT_DAM:TP53",
+   "MUT_HOT:TP53",
+   "SIG:WGD"
+  ]
+ },
+ "dependency": {
+  "screens_in": 1043,
+  "screens_dropped_failing_qc": 0,
+  "models": 1043,
+  "genes_in": 18435,
+  "genes_kept": 2609,
+  "imputed_cells": 36,
+  "reference_essentials_excluded": 1247,
+  "gene_universe": {
+   "gene_rows": 43839,
+   "protein_product": 19280,
+   "olfactory_receptors_excluded": 410,
+   "admitted": 18870
+  }
+ },
+ "context": {
+  "blocks": [
+   {
+    "kind": "MUT_DAM",
+    "features_in": 19097,
+    "outside_gene_universe": 2425,
+    "features_kept": 325
+   },
+   {
+    "kind": "MUT_HOT",
+    "features_in": 542,
+    "outside_gene_universe": 19,
+    "features_kept": 14
+   },
+   {
+    "kind": "DEL",
+    "features_in": 36700,
+    "outside_gene_universe": 19296,
+    "features_kept": 56
+   },
+   {
+    "kind": "EXPR_LOW",
+    "features_in": 9244,
+    "outside_gene_universe": 118,
+    "features_kept": 2063
+   },
+   {
+    "kind": "SIG",
+    "features_in": 2,
+    "features_kept": 1,
+    "n_pos": {
+     "SIG:MSI_HIGH": 61,
+     "SIG:WGD": 615
+    },
+    "rejected": [
+     "SIG:WGD"
+    ]
+   }
+  ],
+  "features_total": 2458,
+  "exact_duplicates_collapsed": 1,
+  "correlation_groups": 2441
+ },
+ "pairs_nominal": 6412922
+}

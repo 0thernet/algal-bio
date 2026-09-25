@@ -1,0 +1,36 @@
+{
+ "mode": "placebo",
+ "seed": "20260926",
+ "models_discovery": 1043,
+ "dep_genes": 2609,
+ "context_features": 2458,
+ "pairs_tested": 6412922,
+ "candidates_passing_filters": 35,
+ "candidates_excluding_same_chrom": 35,
+ "candidates_testable_in_ky": 4,
+ "selection_pool": 3,
+ "selected": 3,
+ "selected_testable_ky_only": 2,
+ "selected_powered_ky_only": 0,
+ "selected_by_kind": {
+  "EXPR_LOW": 3
+ },
+ "ky_models_all": 315,
+ "ky_models_only": 119,
+ "rule": {
+  "MIN_ABS_BETA": 0.3,
+  "MIN_BETA_LB": 0.2,
+  "MAX_Q": 0.01,
+  "STRATUM_N": {
+   "genetic": 50,
+   "expression": 50
+  },
+  "MAX_PER_CONTEXT": 3,
+  "MAX_PER_DEP": 3,
+  "KY_MIN_POS": 10,
+  "KY_ONLY_MIN_POS": 3,
+  "KY_ONLY_POWERED": 6,
+  "DEP_MIN_EXPR": 1.0,
+  "LB_Z": 1.96
+ }
+}

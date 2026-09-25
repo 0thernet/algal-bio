@@ -1,0 +1,2 @@
+context,context_kind,context_gene,ctx_group,dep_gene,beta,r,se,beta_lb,p,q,n_models,df,same_arm,same_chrom,unknown_locus,band_distance,same_gene_family,ky_all_pos,ky_only_pos,testable_ky,testable_ky_only,powered_ky_only,dep_expr_in_context,dep_expressed,stratum
+MUT_DAM:COL6A5,MUT_DAM,COL6A5,MUT_DAM:COL6A5,BMP8B,-0.32685828315754256,-0.18384231266576492,0.05614176979003769,0.21682041436906868,7.900854495465605e-09,0.0021111484838654284,1043,969,False,False,False,,False,10,4,True,True,False,1.7816706009569288,True,genetic

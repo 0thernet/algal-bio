@@ -1,0 +1,45 @@
+{
+ "tier_models": {
+  "A": 315,
+  "A_shared": 196,
+  "B": 119,
+  "C": 40
+ },
+ "denominators": {
+  "primary": {
+   "A": 77,
+   "A_shared": 77,
+   "B": 63,
+   "C": 42,
+   "B_powered": 35
+  },
+  "gold": {
+   "A": 17,
+   "A_shared": 17,
+   "B": 14,
+   "C": 10,
+   "B_powered": 11
+  },
+  "placebo_pooled": {
+   "A": 4,
+   "A_shared": 4,
+   "B": 3,
+   "C": 2,
+   "B_powered": 0
+  }
+ },
+ "ky_coverage": {
+  "primary": {
+   "dependency_genes": 57,
+   "targeted_by_the_ky_library": 57
+  },
+  "gold": {
+   "dependency_genes": 16,
+   "targeted_by_the_ky_library": 16
+  },
+  "placebo_pooled": {
+   "dependency_genes": 3,
+   "targeted_by_the_ky_library": 3
+  }
+ }
+}

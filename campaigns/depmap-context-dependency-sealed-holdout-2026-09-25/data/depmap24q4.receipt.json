@@ -1,0 +1,189 @@
+{
+ "source": "figshare article 27993248 (DepMap 24Q4 Public)",
+ "files": {
+  "ScreenGeneEffect.csv": {
+   "bytes": 507144194,
+   "md5": "35d57d08147456fdb3a3e46359aff179",
+   "figshare_md5": "35d57d08147456fdb3a3e46359aff179",
+   "sha256": "71cb5b34048e690e2c34e83be6991d41c540f5265027870ecf573e2ec17dd9e7",
+   "url": "https://ndownloader.figshare.com/files/51065804",
+   "md5_match": true
+  },
+  "CRISPRScreenMap.csv": {
+   "bytes": 36443,
+   "md5": "dda4409d030d486e8a66915990731a62",
+   "figshare_md5": "dda4409d030d486e8a66915990731a62",
+   "sha256": "668347965c7d5283da79ef7b6d315951d0cf6c5313551305971e8eec9503b3be",
+   "url": "https://ndownloader.figshare.com/files/51065159",
+   "md5_match": true
+  },
+  "Model.csv": {
+   "bytes": 645696,
+   "md5": "675210d17675f3517b0ce39a3c274f16",
+   "figshare_md5": "675210d17675f3517b0ce39a3c274f16",
+   "sha256": "b7a0c1385e6cef30132b56aff61f1261d11e3f490490b355c430d32ee0dbdcfa",
+   "url": "https://ndownloader.figshare.com/files/51065297",
+   "md5_match": true
+  },
+  "ModelCondition.csv": {
+   "bytes": 219100,
+   "md5": "1f6033eb5b7a843b20cebe5ab63d3feb",
+   "figshare_md5": "1f6033eb5b7a843b20cebe5ab63d3feb",
+   "sha256": "b0f22ddb886b241a3ff48674f58edba3e71c021c717aa40924e2cce67bf5200b",
+   "url": "https://ndownloader.figshare.com/files/51065300",
+   "md5_match": true
+  },
+  "OmicsSomaticMutationsMatrixDamaging.csv": {
+   "bytes": 147655356,
+   "md5": "cb20fdbe1cf3b9b0d8ed4f53e1f399b6",
+   "figshare_md5": "cb20fdbe1cf3b9b0d8ed4f53e1f399b6",
+   "sha256": "1b33be5c3bebf30f52421384e268016afbd5e2257b75d65cfe2c09e21daba0f9",
+   "url": "https://ndownloader.figshare.com/files/51065747",
+   "md5_match": true
+  },
+  "OmicsSomaticMutationsMatrixHotspot.csv": {
+   "bytes": 4210723,
+   "md5": "a5aeb1deef897ead3c955c372148d840",
+   "figshare_md5": "a5aeb1deef897ead3c955c372148d840",
+   "sha256": "6444ce819a28d4228ff7b748e309611c5830c551620d8d2c7f86052e2675e3d8",
+   "url": "https://ndownloader.figshare.com/files/51065750",
+   "md5_match": true
+  },
+  "OmicsAbsoluteCNGene.csv": {
+   "bytes": 238808692,
+   "md5": "16afffb33230de2fd13e15e753e28a9b",
+   "figshare_md5": "16afffb33230de2fd13e15e753e28a9b",
+   "sha256": "5f530c797bf12bce68cccc3e763b29491c368bbbced8971733bed807a13b8c13",
+   "url": "https://ndownloader.figshare.com/files/51065303",
+   "md5_match": true
+  },
+  "OmicsExpressionProteinCodingGenesTPMLogp1.csv": {
+   "bytes": 506628654,
+   "md5": "71794802b750ce77c422dad0720a40af",
+   "figshare_md5": "71794802b750ce77c422dad0720a40af",
+   "sha256": "2a71dc94110efcc0221eae821bb93a9f03b54bea16f005818911a09d33383d56",
+   "url": "https://ndownloader.figshare.com/files/51065489",
+   "md5_match": true
+  },
+  "OmicsFusionFiltered.csv": {
+   "bytes": 11409659,
+   "md5": "16ebb6c5cab1e066d904ac6d7488f82e",
+   "figshare_md5": "16ebb6c5cab1e066d904ac6d7488f82e",
+   "sha256": "4c697522de4485e0f581655fe8e900db739e12d457c5debc3083ae0db3e630f6",
+   "url": "https://ndownloader.figshare.com/files/51065693",
+   "md5_match": true
+  },
+  "OmicsSignatures.csv": {
+   "bytes": 131912,
+   "md5": "14bdb13656a584dab52e2959a1e11c5a",
+   "figshare_md5": "14bdb13656a584dab52e2959a1e11c5a",
+   "sha256": "2eb6d83065db5b591d9904339a1eaeb769a4db8593fe80a135399d7708b39bef",
+   "url": "https://ndownloader.figshare.com/files/51065726",
+   "md5_match": true
+  },
+  "AchillesCommonEssentialControls.csv": {
+   "bytes": 17015,
+   "md5": "9cc07e7ebc282984d8107341dfde8f26",
+   "figshare_md5": "9cc07e7ebc282984d8107341dfde8f26",
+   "sha256": "a1a48ad516011c521b1981769e2f78de84d1410371f8517a7428349be6e6b98a",
+   "url": "https://ndownloader.figshare.com/files/51063560",
+   "md5_match": true
+  },
+  "CRISPRInferredCommonEssentials.csv": {
+   "bytes": 20795,
+   "md5": "545edef0d377f252db6e5e675201bd77",
+   "figshare_md5": "545edef0d377f252db6e5e675201bd77",
+   "sha256": "0352de5335ae3bf72250dd136d1b0df87a6b72f653df34c2560cce17c0e7d928",
+   "url": "https://ndownloader.figshare.com/files/51064916",
+   "md5_match": true
+  },
+  "Gene.csv": {
+   "bytes": 16564061,
+   "md5": "ec139ccb21b8ccb0714f21bdcc6f4137",
+   "figshare_md5": "ec139ccb21b8ccb0714f21bdcc6f4137",
+   "sha256": "dfb5f74496ca17baf67f215a44f06197ddd835685813aede75754876b62b19db",
+   "url": "https://ndownloader.figshare.com/files/51065183",
+   "md5_match": true
+  },
+  "README.txt": {
+   "bytes": 43103,
+   "md5": "54628c15a10b9ff6536db245cfed5231",
+   "figshare_md5": "54628c15a10b9ff6536db245cfed5231",
+   "sha256": "f744a5cf5c112e01276e772679157aac8e85cdc4a8f6d3b86d808e3bfd332891",
+   "url": "https://ndownloader.figshare.com/files/51065795",
+   "md5_match": true
+  },
+  "OmicsDefaultModelProfiles.csv": {
+   "bytes": 90080,
+   "md5": "4d342a03701c0a4c0742fedb56c1de40",
+   "figshare_md5": "4d342a03701c0a4c0742fedb56c1de40",
+   "sha256": "096a96c39d88374cb7c37058816e6cde29d6617b820b8a14d33ae9dd821c6dc5",
+   "url": "https://ndownloader.figshare.com/files/51065339",
+   "md5_match": true
+  },
+  "OmicsProfiles.csv": {
+   "bytes": 254733,
+   "md5": "7195088a5fc41eddb3f896c6e984a992",
+   "figshare_md5": "7195088a5fc41eddb3f896c6e984a992",
+   "sha256": "0bb19ee57935d4b213d378a4db9caacaa1db7318a63ae81485d84f91c20a3bf2",
+   "url": "https://ndownloader.figshare.com/files/51065723",
+   "md5_match": true
+  },
+  "AchillesScreenQCReport.csv": {
+   "bytes": 327473,
+   "md5": "701f9dda05e9e560b160e039487a9d8d",
+   "figshare_md5": "701f9dda05e9e560b160e039487a9d8d",
+   "sha256": "e48741c3f67536fa446f997cf7861cc081cd6a88ed41a48e04b2bef541b6033d",
+   "url": "https://ndownloader.figshare.com/files/51063569",
+   "md5_match": true
+  },
+  "CRISPRGeneEffect.csv": {
+   "bytes": 428678699,
+   "md5": "6edf7ade09b9b34199210b559d4745d3",
+   "figshare_md5": "6edf7ade09b9b34199210b559d4745d3",
+   "sha256": "3d8f3ec6dbf2db7ff834b79b508622ec0b226f3518003fe96ecf5a4fcf167e3b",
+   "url": "https://ndownloader.figshare.com/files/51064667",
+   "md5_match": true
+  },
+  "KYGuideMap.csv": {
+   "bytes": 5939867,
+   "md5": "2e9f561a2514acb038af644a21065bee",
+   "figshare_md5": "2e9f561a2514acb038af644a21065bee",
+   "sha256": "ae34b14f04dbaa90dc961f57dba4a8619ebf842f8365b8cd72854a1441539337",
+   "url": "https://ndownloader.figshare.com/files/51065258",
+   "md5_match": true
+  },
+  "CRISPRInferredModelGrowthRate.csv": {
+   "bytes": 41408,
+   "md5": "0a3ff506d991f3f5f9a308b18c39bf5c",
+   "figshare_md5": "0a3ff506d991f3f5f9a308b18c39bf5c",
+   "sha256": "e47ccea8f90be1c323c120a6ebfb4ea202beec1c413fbed4a9487b0f4003ea9c",
+   "url": "https://ndownloader.figshare.com/files/51065027",
+   "md5_match": true
+  },
+  "CRISPRInferredModelEfficacy.csv": {
+   "bytes": 41488,
+   "md5": "dc1764de570b7b0adac1da60954ae930",
+   "figshare_md5": "dc1764de570b7b0adac1da60954ae930",
+   "sha256": "bb036b5374b578f1cb316370be91112da9e2f24bd511756261f7e2bd92a58262",
+   "url": "https://ndownloader.figshare.com/files/51064994",
+   "md5_match": true
+  },
+  "AchillesNonessentialControls.csv": {
+   "bytes": 11490,
+   "md5": "ca6a757db1cae49b913423ce73b818cf",
+   "figshare_md5": "ca6a757db1cae49b913423ce73b818cf",
+   "sha256": "c7add12af5a37912997fdab0a7aabeef8d811b1ac7ee23dfcffa3a06471ce097",
+   "url": "https://ndownloader.figshare.com/files/51063566",
+   "md5_match": true
+  },
+  "AvanaGuideMap.csv": {
+   "bytes": 15972027,
+   "md5": "380bb5e44d36e16bbc66123e3560e302",
+   "figshare_md5": "380bb5e44d36e16bbc66123e3560e302",
+   "sha256": "fad40ace063d0d61815bcb7719a2bc017cec6b29103a8fed3653742e834a3755",
+   "url": "https://ndownloader.figshare.com/files/51063575",
+   "md5_match": true
+  }
+ }
+}

@@ -1,0 +1,614 @@
+{
+ "schema": "bio.assembly-manifest.v2",
+ "slug": "depmap-context-dependency-sealed-holdout-2026-09-25",
+ "excluded": [
+  ".pytest_cache",
+  ".venv",
+  "__pycache__",
+  "data/depmap24q4",
+  "data/discovery",
+  "data/figshare_24q4_files.json",
+  "data/other",
+  "data/prep",
+  "data/refs",
+  "data/sanger_holdout",
+  "data/sealed"
+ ],
+ "note": "frozen hashes refer to sha256_original; redaction replaces personal path prefixes only. The DepMap 24Q4 release, the library split, the prepared matrices and the reference downloads stay external; their hashes are in the published receipts.",
+ "files": [
+  {
+   "source": ".gitignore",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/.gitignore",
+   "bytes": 245,
+   "bytes_published": 245,
+   "sha256_original": "1461ae035f340ebbe9d15c2bbaf6adee4d7d244121fbc4dc018e03b0449cd9ba",
+   "sha256_published": "1461ae035f340ebbe9d15c2bbaf6adee4d7d244121fbc4dc018e03b0449cd9ba",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "README.campaign.md",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/README.md",
+   "bytes": 5862,
+   "bytes_published": 5862,
+   "sha256_original": "40ce9c399e4506d40812f9c0d93d6418c306f240af9e525c4900c54bb3f1085a",
+   "sha256_published": "40ce9c399e4506d40812f9c0d93d6418c306f240af9e525c4900c54bb3f1085a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "assemble_public.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/assemble_public.py",
+   "bytes": 4025,
+   "bytes_published": 4025,
+   "sha256_original": "5214ffdb6574aa0fcc9e19945d2975e38439c14cc04510d24e0c203ef44a5b0a",
+   "sha256_published": "5214ffdb6574aa0fcc9e19945d2975e38439c14cc04510d24e0c203ef44a5b0a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/annotate.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/annotate.py",
+   "bytes": 10486,
+   "bytes_published": 10486,
+   "sha256_original": "0482821688af0d9d580c91a54af98c8a5de957ea5fff9e4bdfd4f1e4984e1366",
+   "sha256_published": "0482821688af0d9d580c91a54af98c8a5de957ea5fff9e4bdfd4f1e4984e1366",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/confirm.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/confirm.py",
+   "bytes": 26134,
+   "bytes_published": 26134,
+   "sha256_original": "601ed05b5a04e02a33233b83cf8fab3f842608ed6ff45131a90b97e54da518a5",
+   "sha256_published": "601ed05b5a04e02a33233b83cf8fab3f842608ed6ff45131a90b97e54da518a5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/contexts.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/contexts.py",
+   "bytes": 6712,
+   "bytes_published": 6712,
+   "sha256_original": "e3809b33ff6191e59ca5eb3fa5407666d43d391874b2e528ec27e4c441128a7a",
+   "sha256_published": "e3809b33ff6191e59ca5eb3fa5407666d43d391874b2e528ec27e4c441128a7a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/fetch_depmap.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/fetch_depmap.py",
+   "bytes": 2754,
+   "bytes_published": 2754,
+   "sha256_original": "14b94e606f013172fd98e3b6f1af34d0b1265d3fffd7a527343fb83734d5e71f",
+   "sha256_published": "14b94e606f013172fd98e3b6f1af34d0b1265d3fffd7a527343fb83734d5e71f",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/fetch_refs.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/fetch_refs.py",
+   "bytes": 4126,
+   "bytes_published": 4126,
+   "sha256_original": "6c8ca18cebaa5d8b6e8f34a36d52a0835f0bae0129ee4c38e9f484e618e6efc7",
+   "sha256_published": "6c8ca18cebaa5d8b6e8f34a36d52a0835f0bae0129ee4c38e9f484e618e6efc7",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/freeze.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/freeze.py",
+   "bytes": 7744,
+   "bytes_published": 7744,
+   "sha256_original": "436c110c9e0b4e03603692cc041914b868c8a8c5189af194df23658e71f28da0",
+   "sha256_published": "436c110c9e0b4e03603692cc041914b868c8a8c5189af194df23658e71f28da0",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/gold.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/gold.py",
+   "bytes": 10876,
+   "bytes_published": 10876,
+   "sha256_original": "916dcea70dcccaacf8838d85d991450ae14c912ea295e080021e1c8bf5abb2e2",
+   "sha256_published": "916dcea70dcccaacf8838d85d991450ae14c912ea295e080021e1c8bf5abb2e2",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/make_protocol.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/make_protocol.py",
+   "bytes": 35190,
+   "bytes_published": 35190,
+   "sha256_original": "5ec3c7048a3c3a1cbca6a32efd0da5bdcd9b709ff66e94600539fc83aa6fdab5",
+   "sha256_published": "5ec3c7048a3c3a1cbca6a32efd0da5bdcd9b709ff66e94600539fc83aa6fdab5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/prep.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/prep.py",
+   "bytes": 13077,
+   "bytes_published": 13077,
+   "sha256_original": "d73b2b9f8df1b4dcd15de176f500a96b5b5c9b0eb0a04a10415ba3ad375c41ad",
+   "sha256_published": "d73b2b9f8df1b4dcd15de176f500a96b5b5c9b0eb0a04a10415ba3ad375c41ad",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/screen.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/screen.py",
+   "bytes": 12129,
+   "bytes_published": 12129,
+   "sha256_original": "45e29baf00e997a5b925f5915b9939485ed7788b763277908151b3ce05ad6551",
+   "sha256_published": "45e29baf00e997a5b925f5915b9939485ed7788b763277908151b3ce05ad6551",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/split_screens.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/split_screens.py",
+   "bytes": 1887,
+   "bytes_published": 1887,
+   "sha256_original": "7c5052e5269dd0e13d4d8d0078d038db43a216d1c15f3a73731c4338f35e0391",
+   "sha256_published": "7c5052e5269dd0e13d4d8d0078d038db43a216d1c15f3a73731c4338f35e0391",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/stats.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/stats.py",
+   "bytes": 7730,
+   "bytes_published": 7730,
+   "sha256_original": "f472af06caf19e10b6fc2fdf95c375b76515ad469642e00a2859fbef371fd5b3",
+   "sha256_published": "f472af06caf19e10b6fc2fdf95c375b76515ad469642e00a2859fbef371fd5b3",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/testability.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/code/testability.py",
+   "bytes": 5909,
+   "bytes_published": 5909,
+   "sha256_original": "9e22345d4e730f0eb0043be90f4e8f0af24fc23e59b9858bc1ec967220537f80",
+   "sha256_published": "9e22345d4e730f0eb0043be90f4e8f0af24fc23e59b9858bc1ec967220537f80",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/depmap24q4.receipt.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/depmap24q4.receipt.json",
+   "bytes": 7483,
+   "bytes_published": 7483,
+   "sha256_original": "8640c0f1f3da705361b51e4226df9ecb5747f1b005b4bd5637eb28dc95a300b0",
+   "sha256_published": "8640c0f1f3da705361b51e4226df9ecb5747f1b005b4bd5637eb28dc95a300b0",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/ctx_duplicates.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/prep/ctx_duplicates.json",
+   "bytes": 26,
+   "bytes_published": 26,
+   "sha256_original": "03feeeb8352e1442186b60eec9c6bdd1ef0f598182b0e8c02fdc23bb94a85cf9",
+   "sha256_published": "03feeeb8352e1442186b60eec9c6bdd1ef0f598182b0e8c02fdc23bb94a85cf9",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/ctx_group.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/prep/ctx_group.json",
+   "bytes": 88713,
+   "bytes_published": 88713,
+   "sha256_original": "b927ea353641dbefe8a12ed3a94781e3c826f596bb7d9d62b21c1e27c7148f25",
+   "sha256_published": "b927ea353641dbefe8a12ed3a94781e3c826f596bb7d9d62b21c1e27c7148f25",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/ctx_names.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/prep/ctx_names.json",
+   "bytes": 44353,
+   "bytes_published": 44353,
+   "sha256_original": "edd7a36cdcec8e4528335a0f3723bb8d373ea59bcbf754683a7a23a491bd138b",
+   "sha256_published": "edd7a36cdcec8e4528335a0f3723bb8d373ea59bcbf754683a7a23a491bd138b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/dep_genes.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/prep/dep_genes.json",
+   "bytes": 24054,
+   "bytes_published": 24054,
+   "sha256_original": "0c5945af309b27e694a6ee89ebfd9da2cbd294849ac2e6c57267db1970dc2799",
+   "sha256_published": "0c5945af309b27e694a6ee89ebfd9da2cbd294849ac2e6c57267db1970dc2799",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/prep.receipt.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/prep/prep.receipt.json",
+   "bytes": 3205,
+   "bytes_published": 3205,
+   "sha256_original": "be02dd92fdfda58b00c6280d88237fa906b3defc382cbab238760b8fa07a485e",
+   "sha256_published": "be02dd92fdfda58b00c6280d88237fa906b3defc382cbab238760b8fa07a485e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/refs/refs.receipt.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/refs/refs.receipt.json",
+   "bytes": 3156,
+   "bytes_published": 3156,
+   "sha256_original": "7d413d50ed15bd838f7705983e50c3cfc7336aef0df1c620834405f33d68f1bc",
+   "sha256_published": "7d413d50ed15bd838f7705983e50c3cfc7336aef0df1c620834405f33d68f1bc",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/sanger_holdout.sha256",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/sanger_holdout.sha256",
+   "bytes": 117,
+   "bytes_published": 117,
+   "sha256_original": "be331bd9124f152c5f642f99f7952171e6993487e66b6f78e492026f46aee22f",
+   "sha256_published": "be331bd9124f152c5f642f99f7952171e6993487e66b6f78e492026f46aee22f",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/split.receipt.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/data/split.receipt.json",
+   "bytes": 665,
+   "bytes_published": 665,
+   "sha256_original": "4038d091726155b778cee5b08b8352cb17f0b593811f7bcb0e4c58dd93bc28c5",
+   "sha256_published": "4038d091726155b778cee5b08b8352cb17f0b593811f7bcb0e4c58dd93bc28c5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/annotate.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/annotate.log",
+   "bytes": 655,
+   "bytes_published": 655,
+   "sha256_original": "331644c9e53f051d67ff1bd893f56c7e3cb91a0f51045277dcaba24e06728e6a",
+   "sha256_published": "331644c9e53f051d67ff1bd893f56c7e3cb91a0f51045277dcaba24e06728e6a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/gold.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/gold.log",
+   "bytes": 1970,
+   "bytes_published": 1970,
+   "sha256_original": "b97c828a85776032bfc287fe86313516a32b08221f4fcad55b40157b5c5d7e0e",
+   "sha256_published": "b97c828a85776032bfc287fe86313516a32b08221f4fcad55b40157b5c5d7e0e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/prep.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/prep.log",
+   "bytes": 2333,
+   "bytes_published": 2320,
+   "sha256_original": "bddfd7e836824c2e21111a6ec92d676b6f634479d12e17fbad3e564fe62368e4",
+   "sha256_published": "1450f48a9b5c831309fa77c8ce06b383e18d8f41769f8630e32e199ac39a47ad",
+   "path_prefix_redacted": true
+  },
+  {
+   "source": "logs/runall.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/runall.log",
+   "bytes": 5,
+   "bytes_published": 5,
+   "sha256_original": "8221ac66be71558c921fb44cfb66f7997699aea754d917763882d6d9eddc836e",
+   "sha256_published": "8221ac66be71558c921fb44cfb66f7997699aea754d917763882d6d9eddc836e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/screen_placebo_20260925.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/screen_placebo_20260925.log",
+   "bytes": 731,
+   "bytes_published": 731,
+   "sha256_original": "064b828a0155abcabdb3f7bb31b9d05af92c743b2fb035f7bf214ef74949a3c2",
+   "sha256_published": "064b828a0155abcabdb3f7bb31b9d05af92c743b2fb035f7bf214ef74949a3c2",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/screen_placebo_20260926.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/screen_placebo_20260926.log",
+   "bytes": 732,
+   "bytes_published": 732,
+   "sha256_original": "75f52b436bf584e38aaa1ef60e50c7171f5b874e8d1ec5d3a7ede37d0c2a0c85",
+   "sha256_published": "75f52b436bf584e38aaa1ef60e50c7171f5b874e8d1ec5d3a7ede37d0c2a0c85",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/screen_placebo_20260927.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/screen_placebo_20260927.log",
+   "bytes": 714,
+   "bytes_published": 714,
+   "sha256_original": "f63e55f307ec3369df37f3354f87b6da0110ca46a745750a66caac4d82cabf8d",
+   "sha256_published": "f63e55f307ec3369df37f3354f87b6da0110ca46a745750a66caac4d82cabf8d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/screen_real.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/screen_real.log",
+   "bytes": 790,
+   "bytes_published": 790,
+   "sha256_original": "cd18adc934ec9ab0c5c4499dc9e45697fa4213a7a62ceb1e8142e962996ad585",
+   "sha256_published": "cd18adc934ec9ab0c5c4499dc9e45697fa4213a7a62ceb1e8142e962996ad585",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/testability.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/testability.log",
+   "bytes": 653,
+   "bytes_published": 653,
+   "sha256_original": "5d7d534534010a83419f06f264d823b4d295dfcea3ed4755e685f9c0733480c5",
+   "sha256_published": "5d7d534534010a83419f06f264d823b4d295dfcea3ed4755e685f9c0733480c5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "prior-art/prior-art-context-dependency.md",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/prior-art/prior-art-context-dependency.md",
+   "bytes": 119575,
+   "bytes_published": 119575,
+   "sha256_original": "392568d690ae88e54021a507e5c227c379be8dcae03d4134dd3e86f03ed0793a",
+   "sha256_published": "392568d690ae88e54021a507e5c227c379be8dcae03d4134dd3e86f03ed0793a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/freeze.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/registration/freeze.json",
+   "bytes": 7294,
+   "bytes_published": 7294,
+   "sha256_original": "5ed2f95d9cb56c2e44e71bea13ca1e9940af3078fc2ef7f7da3347522fb233bf",
+   "sha256_published": "5ed2f95d9cb56c2e44e71bea13ca1e9940af3078fc2ef7f7da3347522fb233bf",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/gold_controls.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/registration/gold_controls.json",
+   "bytes": 12673,
+   "bytes_published": 12673,
+   "sha256_original": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+   "sha256_published": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/prefreeze-review-3.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/registration/prefreeze-review-3.json",
+   "bytes": 3903,
+   "bytes_published": 3903,
+   "sha256_original": "b58321bf65742df01307d3ba859d65c048c417ef31c446244b1ef00c263aed53",
+   "sha256_published": "b58321bf65742df01307d3ba859d65c048c417ef31c446244b1ef00c263aed53",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/protocol.json",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/registration/protocol.json",
+   "bytes": 30277,
+   "bytes_published": 30277,
+   "sha256_original": "f0904a39d65e7d8c4fbb4e082ae362a155d8809cdc6c9b195f320a75d81b07ce",
+   "sha256_published": "f0904a39d65e7d8c4fbb4e082ae362a155d8809cdc6c9b195f320a75d81b07ce",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/annotation.summary.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/annotation.summary.json",
+   "bytes": 654,
+   "bytes_published": 654,
+   "sha256_original": "d4d523049eda06fc09b9074284c759ab74c64959eb09ce3638cff237bfe87d5d",
+   "sha256_published": "d4d523049eda06fc09b9074284c759ab74c64959eb09ce3638cff237bfe87d5d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260925.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/candidates.placebo20260925.csv",
+   "bytes": 3825,
+   "bytes_published": 3825,
+   "sha256_original": "744d19fc0a3af2f1b1a318a4ce03759f29498c771cb127f887d883b34c7f93c9",
+   "sha256_published": "744d19fc0a3af2f1b1a318a4ce03759f29498c771cb127f887d883b34c7f93c9",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260926.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/candidates.placebo20260926.csv",
+   "bytes": 9134,
+   "bytes_published": 9134,
+   "sha256_original": "805a39903673fd7aded49f6c166bcb03d0486568c3be634f6b2163e38e9caac5",
+   "sha256_published": "805a39903673fd7aded49f6c166bcb03d0486568c3be634f6b2163e38e9caac5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260927.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/candidates.placebo20260927.csv",
+   "bytes": 9433,
+   "bytes_published": 9433,
+   "sha256_original": "87b7b56f35d054178828e9a1854db87734634196ceda20561054be74a16f2c0b",
+   "sha256_published": "87b7b56f35d054178828e9a1854db87734634196ceda20561054be74a16f2c0b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.real.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/candidates.real.csv",
+   "bytes": 173342,
+   "bytes_published": 173342,
+   "sha256_original": "803ee8de4d6e37a936da8ea2bca6585d5e4bce78dc9a1efc455dea2d413a2b8a",
+   "sha256_published": "803ee8de4d6e37a936da8ea2bca6585d5e4bce78dc9a1efc455dea2d413a2b8a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260925.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/screen.placebo20260925.json",
+   "bytes": 730,
+   "bytes_published": 730,
+   "sha256_original": "e80a5cd38a12944dde1a87b2aa09a26b5cf8dfbf413a280de7ee891328452cd5",
+   "sha256_published": "e80a5cd38a12944dde1a87b2aa09a26b5cf8dfbf413a280de7ee891328452cd5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260926.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/screen.placebo20260926.json",
+   "bytes": 731,
+   "bytes_published": 731,
+   "sha256_original": "4c18958945a0110cfd402b4bfa0f2064e5984b82247ee595e75804ee84748598",
+   "sha256_published": "4c18958945a0110cfd402b4bfa0f2064e5984b82247ee595e75804ee84748598",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260927.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/screen.placebo20260927.json",
+   "bytes": 713,
+   "bytes_published": 713,
+   "sha256_original": "53fb6a2e1c2360863f0dfb3b7536d27bcf68790c26374b2b0863f4339ef74858",
+   "sha256_published": "53fb6a2e1c2360863f0dfb3b7536d27bcf68790c26374b2b0863f4339ef74858",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.real.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/screen.real.json",
+   "bytes": 789,
+   "bytes_published": 789,
+   "sha256_original": "43c50a669207734890d9b6de658b8c9f68ef410384e4aeeaa373f4f13458888c",
+   "sha256_published": "43c50a669207734890d9b6de658b8c9f68ef410384e4aeeaa373f4f13458888c",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.annotated.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/selection.annotated.csv",
+   "bytes": 23414,
+   "bytes_published": 23414,
+   "sha256_original": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+   "sha256_published": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260925.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/selection.placebo20260925.csv",
+   "bytes": 526,
+   "bytes_published": 526,
+   "sha256_original": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+   "sha256_published": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260926.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/selection.placebo20260926.csv",
+   "bytes": 1057,
+   "bytes_published": 1057,
+   "sha256_original": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+   "sha256_published": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260927.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/selection.placebo20260927.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.real.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/selection.real.csv",
+   "bytes": 20523,
+   "bytes_published": 20523,
+   "sha256_original": "0bb59b2e078cb974bc7fbd692fde17064af3baf02e3aff31e73502703c3870fb",
+   "sha256_published": "0bb59b2e078cb974bc7fbd692fde17064af3baf02e3aff31e73502703c3870fb",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/tier_testability.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/tier_testability.json",
+   "bytes": 21906,
+   "bytes_published": 21906,
+   "sha256_original": "233875d3d3738c20acab12c98749bcacaf3e6069f58ed261221b65152fe4fdec",
+   "sha256_published": "233875d3d3738c20acab12c98749bcacaf3e6069f58ed261221b65152fe4fdec",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/conftest.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/conftest.py",
+   "bytes": 129,
+   "bytes_published": 129,
+   "sha256_original": "4836caa598f7cc13d815f09a993d20235b2312bd2eb5ce49af73305d27657348",
+   "sha256_published": "4836caa598f7cc13d815f09a993d20235b2312bd2eb5ce49af73305d27657348",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_annotate.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_annotate.py",
+   "bytes": 6395,
+   "bytes_published": 6395,
+   "sha256_original": "e065fb8c55b1e3b878aeb4e659fe5107e1c16045dd9f7819905908916b51fd5d",
+   "sha256_published": "e065fb8c55b1e3b878aeb4e659fe5107e1c16045dd9f7819905908916b51fd5d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_contexts.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_contexts.py",
+   "bytes": 9922,
+   "bytes_published": 9922,
+   "sha256_original": "3c7b6cc6bf4d237714636aabc218f366613bc9b57a219674fc038851e23dea9f",
+   "sha256_published": "3c7b6cc6bf4d237714636aabc218f366613bc9b57a219674fc038851e23dea9f",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_end_to_end.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_end_to_end.py",
+   "bytes": 4896,
+   "bytes_published": 4896,
+   "sha256_original": "94b263c7e7bdad2369ab024e4e6120d358e7a397697d89637283506811e27604",
+   "sha256_published": "94b263c7e7bdad2369ab024e4e6120d358e7a397697d89637283506811e27604",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_freeze.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_freeze.py",
+   "bytes": 9241,
+   "bytes_published": 9241,
+   "sha256_original": "1925ea6c15349a89802f32d768480d775488c42ed37cc370a8ab1e0387aa1cbd",
+   "sha256_published": "1925ea6c15349a89802f32d768480d775488c42ed37cc370a8ab1e0387aa1cbd",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_freeze_verification.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_freeze_verification.py",
+   "bytes": 5386,
+   "bytes_published": 5386,
+   "sha256_original": "e612a3c5a3d51211843d08cc520e7b37bb32dffe2f923754b5194d936723f904",
+   "sha256_published": "e612a3c5a3d51211843d08cc520e7b37bb32dffe2f923754b5194d936723f904",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_protocol_consistency.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_protocol_consistency.py",
+   "bytes": 15764,
+   "bytes_published": 15764,
+   "sha256_original": "0a6ce6f361ed16f20e12cabf7a9028b97340098bad1ef1cc4aeff76258795bc1",
+   "sha256_published": "0a6ce6f361ed16f20e12cabf7a9028b97340098bad1ef1cc4aeff76258795bc1",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_rank_deficiency.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_rank_deficiency.py",
+   "bytes": 3143,
+   "bytes_published": 3143,
+   "sha256_original": "a7454c094cb782e28d8608b26fcb2e9e40a7ed8f3b9bb61313a79a2c457ba9d2",
+   "sha256_published": "a7454c094cb782e28d8608b26fcb2e9e40a7ed8f3b9bb61313a79a2c457ba9d2",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_replication_rule.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_replication_rule.py",
+   "bytes": 6489,
+   "bytes_published": 6489,
+   "sha256_original": "6b99926e7a09d9f549a1ed3834f1a23bc222b0a0e6815847a70b3bea3a36a89c",
+   "sha256_published": "6b99926e7a09d9f549a1ed3834f1a23bc222b0a0e6815847a70b3bea3a36a89c",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_selection_rule.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_selection_rule.py",
+   "bytes": 6696,
+   "bytes_published": 6696,
+   "sha256_original": "39b5706968e87a1462b7c8540299a000c17ce3fcf00622ed6bd6492e2ee962c9",
+   "sha256_published": "39b5706968e87a1462b7c8540299a000c17ce3fcf00622ed6bd6492e2ee962c9",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_stats.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_stats.py",
+   "bytes": 10416,
+   "bytes_published": 10416,
+   "sha256_original": "3f6f9c3a8a1aea6e16b8347ca3b968ca2e49fe98fc44f93976badf74b2700b48",
+   "sha256_published": "3f6f9c3a8a1aea6e16b8347ca3b968ca2e49fe98fc44f93976badf74b2700b48",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_verdict.py",
+   "published": "campaigns/depmap-context-dependency-sealed-holdout-2026-09-25/tests/test_verdict.py",
+   "bytes": 6084,
+   "bytes_published": 6084,
+   "sha256_original": "fb4b4d592484467b369f754798b99f4bc5f4dac76103d1d18f78f1e9d87632f8",
+   "sha256_published": "fb4b4d592484467b369f754798b99f4bc5f4dac76103d1d18f78f1e9d87632f8",
+   "path_prefix_redacted": false
+  }
+ ]
+}
