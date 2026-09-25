@@ -864,10 +864,10 @@
   {
    "source": "report.md",
    "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/report.md",
-   "bytes": 29744,
-   "bytes_published": 29744,
-   "sha256_original": "5b647b1b56a2ad6e178c750bea7569f80e96abba1df97dbb2bb61bcbb1b302ec",
-   "sha256_published": "5b647b1b56a2ad6e178c750bea7569f80e96abba1df97dbb2bb61bcbb1b302ec",
+   "bytes": 29780,
+   "bytes_published": 29780,
+   "sha256_original": "9151f7c9371a558795725dd8196beb8fb4b79b828316c0ccef21af70f725793c",
+   "sha256_published": "9151f7c9371a558795725dd8196beb8fb4b79b828316c0ccef21af70f725793c",
    "path_prefix_redacted": false
   },
   {
