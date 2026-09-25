@@ -50,17 +50,23 @@ Gold controls replicate bidirectionally where buffering is reciprocal
 
 ## Provenance and the disclosed erratum
 
-The registration was cut four times before any holdout score was read —
-each re-cut repaired parse/registration bugs found by the header-only
-inspection path (wrong PMC URL form, pair-separator, empty placebo CSVs,
-refs-receipt path resolution). One substantive erratum is recorded in
-`registration/holdout_map.json`: the in4mer hit rule was initially
-registered as `dLFC <= -0.5 AND Cohen's d <= -1.0`, which misstates the
-published convention both in threshold and direction. The frozen rule is
-the paper's literal one — `dLFC < -1 AND Cohen's D > 0.8`
-(Esmaeili Anvar et al. 2024, Methods). An evaluation under the
-misregistered rule ran first and produced UNDERPOWERED (P5 1/19); the runs
-ledger and this note disclose that outcome.
+The registration was re-cut several times during the fetch/parse repair
+cycle (wrong PMC URL form, pair-separator, empty placebo CSVs,
+refs-receipt path resolution). **One erratum postdates a holdout read:**
+an evaluation ran at 19:26:48Z under the initially registered in4mer hit
+rule (`dLFC <= -0.5 AND Cohen's d <= -1.0`, a misstatement of the
+published convention in both threshold and direction) and produced
+UNDERPOWERED — every line scored zero SL calls, and the gold controls
+(1/19) exposed the rule as unfit for the table. The registered rule was
+then corrected to the paper's literal convention — `dLFC < -1 AND
+Cohen's D > 0.8` (Esmaeili Anvar et al. 2024, Methods: *"the paralog
+pairs with dLFC < −1 and Cohen's D > 0.8 were selected as hits"*) — the
+campaign re-frozen (f875b1ef, 19:29:53Z), the files re-fetched, and
+re-evaluated at 19:31:20Z to the label above. The correction is anchored
+to the published text, not fitted to the data; the failed first
+evaluation is preserved in `results/confirmation.runs.jsonl` and this
+note, and the seal was in effect throughout — no code path other than
+`confirm.py` reads holdout scores.
 
 ## Honest limits
 
@@ -69,9 +75,13 @@ ledger and this note disclose that outcome.
 - 4/9 replication rests on 6 events; three are partner-single-KO calls — a
   weakly pair-specific test (a variably-essential partner passes for
   unrelated reasons).
-- Three documented-nonSL negatives and the three known SLs are the
+- Five selected pairs are documented non-SL negatives and two replicated
+  (TTC7B->TTC7A, FERMT1->FERMT2); the three known SLs are the
   "calibration" signal; only 2 pairs were strictly novel and only 1 was
   holdout-tested.
+- Sheet-level pooling counts Thompson's "Mewo" and Ito's "MeWo" as
+  separate line units though both map to the same DepMap model — mild
+  non-independence inside the ctx-negative denominator (32).
 - Placebo P2 passes by the disclosed zero-nomination convention — the
   selection pipeline simply nominated no placebo pairs across 5 seeds;
   this is thin evidence, not a measured holdout rate.

@@ -1,5 +1,5 @@
 {
- "frozen_utc": "2026-09-25T19:29:53Z",
+ "frozen_utc": "2026-09-25T19:52:17Z",
  "schema": "bio.paralog-sl-freeze.v1",
  "sha256": {
   "registration/protocol.json": "c95d5654fd3a7444c42f3521061c7a718d67eef7dbef27eb4a2a0e918f23cec8",
@@ -16,7 +16,7 @@
   "code/freeze.py": "618051fba1fb0303fa8ef71793802c782ffd6e96f12806cd2abd588fd8ddf659",
   "code/make_protocol.py": "ce5ab14a4676758c4ca21962bee670fc2ce72291e53e97afab80b9fd34ccf7a6",
   "code/fetch_holdout.py": "0b02b9ffdeb1579049a784cd204ef8dd5a3d15db6e3f1e6bdb9aec9b571c1290",
-  "code/confirm.py": "0b6b125e686387a08a6ad745abcd5f917bc51aeeab55fbd124cd70b6e8cf0cac",
+  "code/confirm.py": "4e3f89d461c264f6840d7c68df5cccb3ef83be70a9b689aa9755b36f4f9e00f3",
   "data/prep/prep.receipt.json": "4b712cfd914db377779dd54863a77a0edceb716f2d0a34c67b3e055fa1fca687",
   "data/prep/pair_universe.csv": "eec02d10e7d684beb0467994d2be36d98be7047b27acc0ba86ae8a5ff0f39ca5",
   "data/prep/ctx_group.json": "9a794e1d0c0b3d947e5fa32829356a8ceb682dd0713560a7c969d7fec2708aa3",
@@ -58,5 +58,5 @@
   "data/prep/ky_pos.json",
   "data/prep/lof_gene_models.json"
  ],
- "top_digest": "f875b1efb0ca5ef0804623aa562696fd3260abd78166f44a0ee0f5c8589cff73"
+ "top_digest": "3a7af17353ddfc8449822f2f908960846e9599c8e91931fc5566f934b5d80996"
 }

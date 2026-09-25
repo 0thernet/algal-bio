@@ -51,10 +51,10 @@
   {
    "source": "code/confirm.py",
    "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/confirm.py",
-   "bytes": 29965,
-   "bytes_published": 29965,
-   "sha256_original": "0b6b125e686387a08a6ad745abcd5f917bc51aeeab55fbd124cd70b6e8cf0cac",
-   "sha256_published": "0b6b125e686387a08a6ad745abcd5f917bc51aeeab55fbd124cd70b6e8cf0cac",
+   "bytes": 30192,
+   "bytes_published": 30192,
+   "sha256_original": "4e3f89d461c264f6840d7c68df5cccb3ef83be70a9b689aa9755b36f4f9e00f3",
+   "sha256_published": "4e3f89d461c264f6840d7c68df5cccb3ef83be70a9b689aa9755b36f4f9e00f3",
    "path_prefix_redacted": false
   },
   {
@@ -179,8 +179,8 @@
    "published": "campaigns/paralog-sl-doubleko-2026-09-25/registration/freeze.json",
    "bytes": 4904,
    "bytes_published": 4904,
-   "sha256_original": "327cfe7451e59cf42219af71d0a10700ea3c7f3406929008ad9db1368ff0c914",
-   "sha256_published": "327cfe7451e59cf42219af71d0a10700ea3c7f3406929008ad9db1368ff0c914",
+   "sha256_original": "d95a8933bf99b7ec3b3797da87759c35933474be2cf3d7cc018ba234531e2a69",
+   "sha256_published": "d95a8933bf99b7ec3b3797da87759c35933474be2cf3d7cc018ba234531e2a69",
    "path_prefix_redacted": false
   },
   {
@@ -222,10 +222,10 @@
   {
    "source": "report.md",
    "published": "reports/paralog-sl-doubleko-2026-09-25/report.md",
-   "bytes": 4421,
-   "bytes_published": 4421,
-   "sha256_original": "a285ce6b1d94d4d17ee466334c0e3d3c2207d24fa58af0a234521f28202c708e",
-   "sha256_published": "a285ce6b1d94d4d17ee466334c0e3d3c2207d24fa58af0a234521f28202c708e",
+   "bytes": 5101,
+   "bytes_published": 5101,
+   "sha256_original": "7630b49010ae0c701f42deff2a12cabc5b18c2316cc828b80119630524a28427",
+   "sha256_published": "7630b49010ae0c701f42deff2a12cabc5b18c2316cc828b80119630524a28427",
    "path_prefix_redacted": false
   },
   {
@@ -303,19 +303,19 @@
   {
    "source": "results/confirmation.runs.jsonl",
    "published": "reports/paralog-sl-doubleko-2026-09-25/results/confirmation.runs.jsonl",
-   "bytes": 160,
-   "bytes_published": 160,
-   "sha256_original": "ba93588adf8b810e386664bee6abd207aac8978603a68cafaf4c137903d950b3",
-   "sha256_published": "ba93588adf8b810e386664bee6abd207aac8978603a68cafaf4c137903d950b3",
+   "bytes": 243,
+   "bytes_published": 243,
+   "sha256_original": "ce53d8c1531b138b4112bf8726f71d0447711ad6a4bd525712de37cefe649e4c",
+   "sha256_published": "ce53d8c1531b138b4112bf8726f71d0447711ad6a4bd525712de37cefe649e4c",
    "path_prefix_redacted": false
   },
   {
    "source": "results/confirmation.summary.json",
    "published": "reports/paralog-sl-doubleko-2026-09-25/results/confirmation.summary.json",
-   "bytes": 3497,
-   "bytes_published": 3497,
-   "sha256_original": "245783471cb7e8cf93688e6fab6d5cf0eae09f7e6df882ce63d4fb1cd25b1dc5",
-   "sha256_published": "245783471cb7e8cf93688e6fab6d5cf0eae09f7e6df882ce63d4fb1cd25b1dc5",
+   "bytes": 3677,
+   "bytes_published": 3677,
+   "sha256_original": "e672b7987c0f618db08d19797ac70cd129657844c8663854797c8d06d5e83f1a",
+   "sha256_published": "e672b7987c0f618db08d19797ac70cd129657844c8663854797c8d06d5e83f1a",
    "path_prefix_redacted": false
   },
   {
