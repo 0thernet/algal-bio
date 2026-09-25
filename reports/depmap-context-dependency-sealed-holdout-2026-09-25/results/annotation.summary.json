@@ -1,0 +1,37 @@
+{
+ "pairs": 77,
+ "known": 43,
+ "novel": 34,
+ "known_classes": [
+  "PARALOG",
+  "COMPLEX",
+  "PATHWAY",
+  "SL_DB",
+  "PARALOG_PROXY",
+  "SIGNATURE_PROXY"
+ ],
+ "reported_only_classes": [
+  "DEPMAP_TOP",
+  "DEPMAP_TOP_ANYMOD",
+  "SIGNATURE_CONTEXT"
+ ],
+ "by_class": {
+  "PARALOG": 15,
+  "COMPLEX": 9,
+  "PATHWAY": 31,
+  "SL_DB": 11,
+  "PARALOG_PROXY": 2,
+  "SIGNATURE_PROXY": 7,
+  "DEPMAP_TOP": 29,
+  "DEPMAP_TOP_ANYMOD": 30,
+  "SIGNATURE_CONTEXT": 1
+ },
+ "reference_sizes": {
+  "ensembl_paralog_pairs": 131549,
+  "corum_complexes": 4957,
+  "corum_pairs": 46066,
+  "msigdb_sets": 4023,
+  "synlethdb_pairs": 37536,
+  "depmap_predictability_genes": 17108
+ }
+}

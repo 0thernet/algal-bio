@@ -1,0 +1,22 @@
+{
+ "source": "data/depmap24q4/ScreenGeneEffect.csv",
+ "source_sha256": "71cb5b34048e690e2c34e83be6991d41c540f5265027870ecf573e2ec17dd9e7",
+ "parts": {
+  "AV": {
+   "path": "data/discovery/ScreenGeneEffect.AV.csv",
+   "rows": 1046,
+   "sha256": "7c4e5a190e37d3db1408a35db9107768e7ffda7133641349419e6122c070a7c2"
+  },
+  "KY": {
+   "path": "data/sealed/ScreenGeneEffect.KY.csv",
+   "rows": 315,
+   "sha256": "97eb783bbf6740e139b0a324fffddfe81a795fa47dae188dfc5072c733b11d7d"
+  },
+  "CD": {
+   "path": "data/other/ScreenGeneEffect.CD.csv",
+   "rows": 40,
+   "sha256": "bfc2f6a5a82c60ca1c070b51307ff8aa847fecf19223a4466b13a24a96fd08c7"
+  }
+ },
+ "header_columns": 18435
+}

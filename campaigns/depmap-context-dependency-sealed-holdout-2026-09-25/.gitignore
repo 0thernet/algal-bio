@@ -1,0 +1,9 @@
+# Nothing under data/ is redistributed: the public tree carries receipts and
+# hashes, and the reader re-downloads the release themselves.
+data/
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+# Run logs contain absolute paths from this machine.
+logs/

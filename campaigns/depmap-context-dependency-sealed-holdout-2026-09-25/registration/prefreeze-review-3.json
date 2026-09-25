@@ -1,0 +1,28 @@
+{
+  "review": "third independent pre-freeze review (protocol v2, after the Claude Code session hit its usage limit)",
+  "reviewer": "independent read-only Devin subagent (agent_id 62b7d144), barred from data/sealed, data/other and data/sanger_holdout",
+  "date": "2026-09-25",
+  "verdict": "PASS_WITH_REPAIRS - no integrity blocker",
+  "verified": [
+    "verdict() implements the registered precedence NOT_EVALUABLE > UNDERPOWERED > PLACEBO_BREACH > CROSS_PLATFORM_REPLICATED > PARTIAL_REPLICATION > LOW_YIELD; all six labels reachable; every prediction can move the label",
+    "P2 ceiling-only decides PLACEBO_BREACH; the one-third separation clause feeds only P1 (weak primary + placebo hit = LOW_YIELD, not breach)",
+    "independent P5 floor denominator = 3 (EXPR_LOW:MLH1->WRN, MUT_DAM:STAG2->STAG1, MUT_HOT:RB1->CCND1), identical in code/confirm.py and code/make_protocol.py, fixed by frozen inputs; untested counts as not replicated",
+    "freeze binds all outcome-bearing files incl. code/make_protocol.py; dep.npz/ctx.npz re-hashed via prep.receipt outputs; confirm.py refuses without a freeze and re-verifies sealed hashes against the freeze and the split receipt",
+    "only code/confirm.py reads data/sealed; no discovery-path code reads CRISPRGeneEffect.csv, CRISPRInferred* or KY-derived files; DEPMAP_TOP (joint-fit Predictability table) is reported-only and cannot change is_novel/P4",
+    "code/contexts.py caching change is value-identical to the previous usecols + header path, including duplicate column names",
+    "protocol numbers match results: funnel 6412922/681/659/151/141/77/63/35, strata 50+27, annotation 43/34, denominators 77/35/17/4; README order of events consistent"
+  ],
+  "findings_and_repairs": [
+    {"n": 1, "severity": "MINOR", "finding": "prep.receipt.json screens_in counts models (1043) after the per-model collapse, not screens (1046); protocol said '1043 screens'.", "resolution": "protocol now reads the screen count from data/split.receipt.json (1046) and states that screens_in counts models; prep was not re-run (the field is a label, not an input)."},
+    {"n": 2, "severity": "MINOR", "finding": "with 4 pooled placebo pairs any single placebo replication exceeds the 0.15 ceiling; not spelled out.", "resolution": "stated explicitly in P2 as intended strictness."},
+    {"n": 3, "severity": "MINOR", "finding": "positive_controls.counts put floor-composition numbers next to available counts.", "resolution": "split into available_by_arm and floor_composition."},
+    {"n": 4, "severity": "MINOR", "finding": "all self-dependencies untestable -> NOT_EVALUABLE, while prose implied UNDERPOWERED.", "resolution": "convention written into the label text; unreachable on frozen inputs."},
+    {"n": 5, "severity": "MINOR", "finding": "stale comment '8 placebo pairs' in code/confirm.py.", "resolution": "corrected to 4."},
+    {"n": 6, "severity": "MINOR", "finding": "check_freeze silently skipped receipted inputs missing on disk.", "resolution": "now refuses; also found and fixed that the reference-file receipt (data/refs/refs.receipt.json) was never checked because its entries are top-level, not under 'files'; test added."}
+  ],
+  "integrator_finding_after_review": {
+    "severity": "MAJOR (leakage surface, not a leak)",
+    "finding": "the unsplit release file data/depmap24q4/ScreenGeneEffect.csv (507 MB, carries every KY row) was still unsealed on disk. Only code/split_screens.py ever read it (grep of code/ and tests/).",
+    "resolution": "moved to data/sealed/ScreenGeneEffect.csv with mv (no bytes read); added to code/freeze.py SEALED and pinned to both the release receipt and the split receipt's source_sha256; fetch_depmap.py routes it to the seal on download; split_screens.py reads it from the seal; confirm.py's receipt check treats both moved files as sealed; test asserts it is sealed and absent from data/depmap24q4."
+  }
+}

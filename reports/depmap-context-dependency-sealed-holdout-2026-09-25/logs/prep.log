@@ -1,0 +1,90 @@
+<research-root>/biology-depmap-2026-09-24/.venv/lib/python3.12/site-packages/numpy/lib/_nanfunctions_impl.py:1997: RuntimeWarning: Degrees of freedom <= 0 for slice.
+  var = nanvar(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+{
+ "outputs": {
+  "data/prep/dep.npz": "d0645c8e6de0e47ba3f5fcbf2c05a6a0ae9bbeda921974bd5e0c08ef8fe5f34f",
+  "data/prep/ctx.npz": "3380c85a88776cf45572d23f2f1fc3d556cb55a4991badedd40b701a25506749",
+  "data/prep/dep_genes.json": "0c5945af309b27e694a6ee89ebfd9da2cbd294849ac2e6c57267db1970dc2799",
+  "data/prep/ctx_names.json": "edd7a36cdcec8e4528335a0f3723bb8d373ea59bcbf754683a7a23a491bd138b",
+  "data/prep/ctx_group.json": "b927ea353641dbefe8a12ed3a94781e3c826f596bb7d9d62b21c1e27c7148f25",
+  "data/prep/ctx_duplicates.json": "03feeeb8352e1442186b60eec9c6bdd1ef0f598182b0e8c02fdc23bb94a85cf9"
+ },
+ "params": {
+  "MIN_POS": 15,
+  "MAX_POS_FRAC": 0.4,
+  "MIN_LINEAGES": 2,
+  "MIN_POS_PER_LINEAGE": 3,
+  "DEP_MIN_SD": 0.2,
+  "DEP_MIN_HIT": -0.5,
+  "DEP_MIN_HITS": 3,
+  "EXPR_LOW": 1.0,
+  "EXPR_ON": 3.0,
+  "DEEP_DEL_CN": 0.5,
+  "MSI_HI": 20.0,
+  "DUP_R": 0.95,
+  "COVARIATE_CONTEXTS": [
+   "MUT_DAM:TP53",
+   "MUT_HOT:TP53",
+   "SIG:WGD"
+  ]
+ },
+ "dependency": {
+  "screens_in": 1043,
+  "screens_dropped_failing_qc": 0,
+  "models": 1043,
+  "genes_in": 18435,
+  "genes_kept": 2609,
+  "imputed_cells": 36,
+  "reference_essentials_excluded": 1247,
+  "gene_universe": {
+   "gene_rows": 43839,
+   "protein_product": 19280,
+   "olfactory_receptors_excluded": 410,
+   "admitted": 18870
+  }
+ },
+ "context": {
+  "blocks": [
+   {
+    "kind": "MUT_DAM",
+    "features_in": 19097,
+    "outside_gene_universe": 2425,
+    "features_kept": 325
+   },
+   {
+    "kind": "MUT_HOT",
+    "features_in": 542,
+    "outside_gene_universe": 19,
+    "features_kept": 14
+   },
+   {
+    "kind": "DEL",
+    "features_in": 36700,
+    "outside_gene_universe": 19296,
+    "features_kept": 56
+   },
+   {
+    "kind": "EXPR_LOW",
+    "features_in": 9244,
+    "outside_gene_universe": 118,
+    "features_kept": 2063
+   },
+   {
+    "kind": "SIG",
+    "features_in": 2,
+    "features_kept": 1,
+    "n_pos": {
+     "SIG:MSI_HIGH": 61,
+     "SIG:WGD": 615
+    },
+    "rejected": [
+     "SIG:WGD"
+    ]
+   }
+  ],
+  "features_total": 2458,
+  "exact_duplicates_collapsed": 1,
+  "correlation_groups": 2441
+ },
+ "pairs_nominal": 6412922
+}

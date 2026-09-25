@@ -1,0 +1,38 @@
+{
+ "schema": "bio.gold-controls.v2",
+ "purpose": "sensitivity floor for the holdout confirmation test",
+ "selection": "fixed by published prior evidence before the confirmation run; not produced by the screen",
+ "denominators_fixed_here": {
+  "all_available": 17,
+  "self_dependencies": 4,
+  "classical": 10,
+  "matched": 3,
+  "unavailable": [
+   "MUT_HOT:NRAS->SHOC2",
+   "EXPR_LOW:ENO1->ENO2",
+   "EXPR_LOW:ME2->ME3",
+   "DEL:MTAP->PRMT5"
+  ]
+ }
+}
+classical MUT_DAM:SMARCA4        -> SMARCA2  beta -0.400 lb +0.334 n_pos 58
+classical MUT_DAM:APC            -> CTNNB1   beta -0.468 lb +0.350 n_pos 61
+classical MUT_DAM:RB1            -> CCND1    beta +0.880 lb +0.638 n_pos 62
+classical MUT_HOT:RB1            -> CCND1    beta +0.863 lb +0.429 n_pos 15
+classical EXPR_LOW:MLH1          -> WRN      beta -0.712 lb +0.570 n_pos 15
+classical SIG:MSI_HIGH           -> WRN      beta -0.503 lb +0.402 n_pos 61
+classical EXPR_LOW:RPP25         -> RPP25L   beta -0.724 lb +0.677 n_pos 228
+classical EXPR_LOW:TTC7B         -> TTC7A    beta -0.674 lb +0.608 n_pos 84
+classical EXPR_LOW:CYB5A         -> CYB5B    beta -0.589 lb +0.474 n_pos 52
+classical MUT_HOT:BRAF           -> MAPK1    beta -0.440 lb +0.344 n_pos 80
+classical MUT_HOT:NRAS           -> SHOC2    UNAVAILABLE
+matched   MUT_DAM:ARID1A         -> ARID1B   beta -0.309 lb +0.254 n_pos 106
+matched   EXPR_LOW:VPS4A         -> VPS4B    beta +0.000 lb -inf n_pos 0
+matched   EXPR_LOW:STAG2         -> STAG1    beta -0.719 lb +0.428 n_pos 3
+matched   EXPR_LOW:ENO1          -> ENO2     UNAVAILABLE
+matched   EXPR_LOW:ME2           -> ME3      UNAVAILABLE
+matched   DEL:MTAP               -> PRMT5    UNAVAILABLE
+self      MUT_HOT:BRAF           -> BRAF     beta -1.000 lb +0.913 n_pos 80
+self      MUT_HOT:NRAS           -> NRAS     beta -1.516 lb +1.443 n_pos 53
+self      MUT_HOT:PIK3CA         -> PIK3CA   beta -0.520 lb +0.456 n_pos 101
+self      MUT_HOT:KRAS           -> KRAS     beta -1.213 lb +1.128 n_pos 155
