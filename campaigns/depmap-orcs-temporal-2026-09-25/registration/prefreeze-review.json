@@ -1,0 +1,29 @@
+{
+ "schema": "bio.prefreeze-review.v1",
+ "reviewer": "independent-review-agent",
+ "utc": "2026-09-25T21:01:16Z",
+ "verdict": "PASS_WITH_REPAIRS",
+ "initial_verdict": "FAIL",
+ "blockers": [
+  "placebo dep_genes were excluded from dep_rank - P2 dead code; all three placebo files now contribute genes",
+  "PMID was unresolvable - index carries SOURCE_ID (pubmed-gated) + SCREEN_ID; resolved correctly",
+  "usable-screen filter axes were swapped - SCREEN_TYPE=Negative Selection, LIBRARY_METHODOLOGY=Knockout (verified against the real ORCS index via the non-human chlorocebus tarball)",
+  "score_direction read nonexistent keys - direction now comes from SIGNIFICANCE_CRITERIA tail (one-tailed only) with SCORE.N_TYPE vocabulary fallback; undecidable => screen unused",
+  "score column was unresolvable - real SCORE.1..5 columns; the criteria-referenced SCORE.N is read and cross-checked against SCORE.N_TYPE"
+ ],
+ "majors": [
+  "depmap sibling top_digest anchored inside this freeze manifest",
+  "screen-file member matching by SCREEN_ID (no fuzzy stems)",
+  "duplicate gene symbols averaged; pipe-separated CELL_LINE aliases resolved",
+  "contexts built once for all models (no per-pair x screen CX.build)",
+  "prep write ordering fixed; norm_name shared from prep"
+ ],
+ "minors_disclosed": [
+  "P2 is convention-gated when zero placebo pairs are tested (placebo set is small: 4 pairs across 3 seeds)",
+  "screens with missing PMID pass the PMID exclusion but still count in coverage",
+  "FULL_SIZE_AVAILABLE gate registered and enforced"
+ ],
+ "tests": "7 passed",
+ "sealed_human_archive_touched": false,
+ "note": "schema verified against the public chlorocebus_sabaeus tarball only - the human archive remains sealed"
+}

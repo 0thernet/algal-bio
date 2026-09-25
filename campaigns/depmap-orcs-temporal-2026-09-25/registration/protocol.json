@@ -1,0 +1,48 @@
+{
+ "schema": "bio.protocol.v1",
+ "campaign_id": "depmap-orcs-temporal-2026-09-25",
+ "status": "draft_not_frozen - pending implementation review",
+ "question": "Do DepMap-24Q4-derived context->dependency associations replicate in BioGRID ORCS independent genome-scale screens (post-24Q4 publications prioritized)?",
+ "why_it_is_worth_registering": "ORCS is a curated repository of published CRISPR screens outside the DepMap pipeline - library, lab, scorer and (by PMID filter) data-generation independent. 25Q3 DepMap itself ingests only 22 ORCS screens; the full human archive is ~1,952 screens.",
+ "data": {
+  "discovery": "DepMap 24Q4 per-library matrices (AV and KY as separate arms where usable)",
+  "holdout": "BioGRID ORCS archive build 2.0.18 (2025-09-09), human.zip - whole file pinned by sha256, fetched sealed post-freeze from downloads.thebiogrid.org",
+  "usable_screen_filter": "human (index covers the human tarball) AND LIBRARY_METHODOLOGY contains 'Knockout' AND SCREEN_TYPE contains 'Negative Selection' AND PHENOTYPE in {viability, proliferation, growth, cell viability, survival} AND FULL_SIZE_AVAILABLE == 'Yes' AND SOURCE_TYPE == 'pubmed' AND SCREEN_ID resolves to a screen file AND a resolvable per-gene score column with decidable direction",
+  "exclusion": "ORCS screens whose PMID maps to DepMap ingest (Meyers 2017 29083409; Behan 2019 30971826; verify Pacini 2024 38215750) are excluded from the holdout",
+  "score_normalization": "within-screen rank of the per-gene effect column; no cross-study raw-score comparison"
+ },
+ "registered_predictions": {
+  "P1": "primary pairs replicate at >= 0.30 of tested pairs; replication = dep_gene's within-screen lethal-rank separation, ctx-positive < ctx-negative, one-sided Mann-Whitney with BH q <= 0.10, each arm >= 3 usable mapped screens",
+  "P2": "placebo pairs replicate at <= 0.15 of tested placebo pairs",
+  "P5": "gold controls (depmap controls file, meets_discovery_floor subset) replicate at >= 0.5 of tested gold pairs",
+  "P3": "replication split reported by cell-line overlap class (same line vs disjoint lines) - reported, not gated"
+ },
+ "labels": {
+  "ORCS_REPLICATED": "P1 and P5 pass and P2 does not breach",
+  "NO_TRANSFER": "P1 fails",
+  "PLACEBO_BREACH": "P2 fails with >= 1 tested placebo pair",
+  "UNDERPOWERED": "P5 fails",
+  "NOT_EVALUABLE": "no primary or gold pair tested"
+ },
+ "constants": {
+  "Q_MAX": 0.10,
+  "MIN_SCREENS_PER_ARM": 3,
+  "MIN_GENES_PER_SCREEN": 5000,
+  "P1_MIN_RATE": 0.30,
+  "P2_MAX_PLACEBO": 0.15,
+  "P5_MIN_GOLD_RATE": 0.50,
+  "EXCLUDED_PMIDS": ["29083409", "30971826", "38215750"]
+ },
+ "caveats": [
+  "ORCS has no QC gate - per-study variability must be checked inside the registered pipeline.",
+  "Many screens share DepMap-covered cell lines; shared vs disjoint replication is reported separately.",
+  "Publication date (PMID) is the temporal proxy; deposit-date fields do not exist in ORCS.",
+  "Score heterogeneity (BAGEL/MAGeCK/CERES/L2FC) is handled by rank normalization; hit-only screens give no usable denominator."
+ ],
+ "open_items": [
+  "fetch the ORCS index TSV (metadata) to enumerate usable screens and verify the PMID exclusion list",
+  "resolve the DepMap-portal bot-wall question for 25Q3 (browser route vs figshare mirror)",
+  "register the per-screen effect-column mapping (ORCS score_type vocabulary)"
+ ],
+ "spend": "$0 - public data only"
+}
