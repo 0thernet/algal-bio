@@ -9,7 +9,8 @@ preregistration public as hraness/bio PR #23 (merged 23:24:53Z).
 Do drug-response ↔ biomarker associations discovered in GDSC2
 (fitted LN_IC50 + DepMap omics contexts, 965 shared models) replicate at
 the association level on PRISM Repurposing 19Q4 - an independent
-compound screen with no shared dose-response measurements?
+dose-response assay with no shared measurements (assay-level independence
+only - the cell panels overlap)?
 
 ## Registered result
 
@@ -20,6 +21,12 @@ compound screen with no shared dose-response measurements?
 | - mutation anchor | 20 | 16 | **0.80** | >= 0.70 (P1_anchor) | pass |
 | Placebo | 0 | 0 | — | <= 0.15 (P2) | pass* |
 | Gold | 11 | 9 | **0.818** | >= 0.50 (P5) | pass |
+
+P1_nonanchor margin note: 104/258 = 0.403 passes the 0.40 gate by the
+minimum integer count - one pair fewer would flip the label to
+PARTIAL_TRANSFER. The result is correct as executed but knife-edge; the
+anchor and gold evidence (0.80/0.82) is the stable part. P5 partially
+recounts P1_anchor: 6 of 11 tested gold pairs are also anchor rows.
 
 *The single registered placebo pair (MUT_DAM:UBASH3B→Ruxolitinib,
 nominated by seed 20260926 of 0/1/0) was untestable in PRISM (context-
