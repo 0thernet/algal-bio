@@ -27,14 +27,21 @@ matrix or under the MIN_N/MIN_POS floors on the 704 D2-mapped models).
 | MUT_HOT | 4 | 4 | 1.000 |
 | SIG | 1 | 1 | 1.000 |
 
-The registered prior — amplification/aneuploidy and copy-number contexts
-are expected NOT to transfer under RNAi (they are the classic CRISPR
-cut-site-toxicity class) — holds: **all four DEL-context pairs fail**,
-including the FOCAD->PELO deletion association, while mutation- and
-expression-silencing contexts transfer at ~0.55-0.63. This is the
-artifact-adjudication result the campaign was built for: the non-CNV
-associations are perturbation-independent biology; the CNV associations
-were not.
+The registered prior is the opposite of what the headline result assumed:
+the protocol predicts HIGH transfer for deletion-collateral-lethality
+contexts ("deletion/paralog/lineage contexts are expected to transfer";
+prior-art: "Deletion-context collateral lethality is largely RNAi-native
+biology — expect HIGH transfer") and predicts non-transfer specifically
+for *amplification/aneuploidy* contexts — of which there are **zero** in
+the pair set, so that artifact prior was never tested. The observed
+**0/4 on DEL pairs** (FOCAD/HACD4/IFNB1→PELO — the latter two sharing
+DEL:IFNB1 with byte-identical stats — plus LRP1B→TAPT1; the fifth
+registered DEL pair, LILRA6→EIF1AX, was untested) is a **prior miss**:
+either deletion-collateral lethality does not port from CRISPR to RNAi,
+or RNAi lacked sensitivity (the protocol's own caveat). Mutation and
+expression contexts transfer strongly (MUT_HOT 4/4, SIG 1/1, MUT_DAM
+0.625, EXPR_LOW 0.553); the DEL class is the registered-prior failure —
+reported as such, not as confirmation.
 
 ## Provenance & errata
 
@@ -52,12 +59,23 @@ were not.
   wrong axis. Fixed in `load_d2`; the run and its artifacts are preserved
   (`results/confirmation.run1-bad-orientation.*`, runs ledger).
 - Run 2 (20:41:26Z, this report): correct orientation; all numbers above.
+- Provenance gaps (disclosed by the post-outcome audit): the first
+  freeze manifest (20:31:50Z, digest c524f5a6) and the first fetch
+  receipt are not preserved — only the run-1 summary carries its digest.
+  However PR #17's committed `registration/protocol.json` sha256
+  (`1596510a…`) equals the frozen hash verbatim — the registration was
+  public before the sealed fetch and unchanged through the refreeze —
+  and the pair/gold/placebo inputs are bound by the depmap campaign's
+  earlier freeze (07:39Z). The audit's own diff confirms run-1 produced
+  no score-shaped data.
 
 ## Honest reading
 
 - Strength: a calibrated, mechanistically coherent transfer result —
-  0.57 overall, 0.58 among reference-novel pairs, CNV contexts correctly
-  predicted to fail.
+  0.57 overall, 0.58 among reference-novel pairs, mutation/expression
+  contexts transfer at 0.55-1.00. The deletion-collateral prior failed
+  (0/4, ~3 independent tests) — a real negative finding against the
+  registered expectation, not a confounder confirmation.
 - Caveats: D2 lines substantially overlap discovery models (assay-level,
   not cohort-level, independence); non-replication is ambiguous between
   artifact and incomplete knockdown; only 3 tested placebo pairs is a
