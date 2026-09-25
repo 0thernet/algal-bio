@@ -1,0 +1,18 @@
+{
+  "review": "algal-bio PR #11 review (libvar2/ publication)",
+  "reviewer": "independent read-only Devin subagent (agent_id bca7bf99)",
+  "date": "2026-09-25",
+  "verdict": "APPROVE_WITH_REPAIRS (non-blocking)",
+  "verified": [
+    "P1 30/46 = 0.6522; P2 38 eligible, median ratio 0.961; P3 median 0.159178; P4 4/6 groups spanning CW_* and WAPL_* - all recomputed from result.json pairs; SYSTEMATIC correct",
+    "XC excluded from label; report numbers match result.json (pooled, group, class medians, XC)",
+    "intake 58 files byte-identical names to protocol map; no prior receipts for this cohort; freeze link consistent",
+    "no raw data or personal paths; libvar2/data excluded in manifest",
+    "claim wording within registered claim_ceiling"
+  ],
+  "findings": [
+    {"n": 10, "severity": "MINOR", "finding": "test_libvar2.py:54 comment says '22 of 46 strong'; flattening wapl+cw leaves 16/46 strong. Assertion is correct.", "resolution": "Not edited: test_libvar2.py is bound by libvar2/freeze.json and editing it would break run()'s frozen-hash gate. Recorded here."},
+    {"n": 11, "severity": "MINOR", "finding": "libvar2.py: a missing intake-listed data file raises FileNotFoundError at the intake-hash check before the labeled ABORT existence check; abort still occurs, unlabeled.", "resolution": "Not edited for the same freeze reason; no effect on the executed run (all 58 files present and hash-verified). Recorded here."},
+    {"n": 12, "severity": "MINOR", "finding": "report status said 'never-opened-cohort analyses' for both, but libvar/ had only one never-opened cohort; ratio '~0.97' vs libvar2 0.961.", "resolution": "Report wording changed to 'each including a never-opened holdout' and 'ratios 0.96-0.97'."}
+  ]
+}
