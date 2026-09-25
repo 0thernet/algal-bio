@@ -1,0 +1,45 @@
+{
+ "review": "post-outcome review",
+ "reviewer": "independent read-only Devin subagent (agent_id 6f268ac9)",
+ "date": "2026-09-25",
+ "verdict": "PASS",
+ "recomputed": {
+  "P1": "66/77=0.857, placebo 0/3 separated",
+  "P2": "0/3",
+  "P3": "18/35=0.514",
+  "P4": "27/34=0.794",
+  "P5": "self 4/4, uncorrelated floor 2/3 over fixed denominator 3",
+  "label": "CROSS_PLATFORM_REPLICATED matches stored"
+ },
+ "run_integrity": "exactly one run (rerun false, top_digest matches freeze); logs/confirm.log shows freeze verification before any sealed read",
+ "wilson_95": {
+  "tier_A": [
+   0.762,
+   0.918
+  ],
+  "tier_B_powered": [
+   0.356,
+   0.67
+  ],
+  "novel_A": [
+   0.631,
+   0.897
+  ],
+  "placebo_A": [
+   0.0,
+   0.561
+  ],
+  "placebo_A_shared_1_of_3": [
+   0.061,
+   0.792
+  ]
+ },
+ "placebo_note": "4 placebo pairs were context-testable pre-freeze; 3 met the model-count requirement; the fourth is NOT TESTED per the registered convention; any single hit would have breached P2",
+ "required_disclosures": [
+  "lead with tier B powered 0.514 (independent lines); tier A shares 196 lines",
+  "placebo 0/3 excludes only rates > ~0.56; A_shared placebo 1/3",
+  "DEL:FOCAD/HACD4/IFNB1->PELO is one chr9p21 locus and arguably published; removing it leaves P3 at 15/35",
+  "novel = absent from listed reference classes, not unknown to science",
+  "one holdout; association, not mechanism"
+ ]
+}

@@ -251,6 +251,15 @@
    "path_prefix_redacted": false
   },
   {
+   "source": "logs/confirm.log",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/confirm.log",
+   "bytes": 38329,
+   "bytes_published": 38329,
+   "sha256_original": "c3c1e57a3d36c2ac6f463690ed4b2d91f7872542232742ac0e1eb3ae60ce5f1b",
+   "sha256_published": "c3c1e57a3d36c2ac6f463690ed4b2d91f7872542232742ac0e1eb3ae60ce5f1b",
+   "path_prefix_redacted": false
+  },
+  {
    "source": "logs/gold.log",
    "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/logs/gold.log",
    "bytes": 1970,
@@ -368,6 +377,15 @@
    "path_prefix_redacted": false
   },
   {
+   "source": "report.md",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/report.md",
+   "bytes": 5567,
+   "bytes_published": 5567,
+   "sha256_original": "20f15d946040211bccde0db76a0eee2cca51b5bef7d96fa5c48ce73c5275ba3c",
+   "sha256_published": "20f15d946040211bccde0db76a0eee2cca51b5bef7d96fa5c48ce73c5275ba3c",
+   "path_prefix_redacted": false
+  },
+  {
    "source": "results/annotation.summary.json",
    "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/annotation.summary.json",
    "bytes": 654,
@@ -410,6 +428,33 @@
    "bytes_published": 173342,
    "sha256_original": "803ee8de4d6e37a936da8ea2bca6585d5e4bce78dc9a1efc455dea2d413a2b8a",
    "sha256_published": "803ee8de4d6e37a936da8ea2bca6585d5e4bce78dc9a1efc455dea2d413a2b8a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.csv",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/confirmation.csv",
+   "bytes": 191401,
+   "bytes_published": 191401,
+   "sha256_original": "86efe311c82fb12c390cd6749b4080fb2b065749f8a387efd15431f367273f9d",
+   "sha256_published": "86efe311c82fb12c390cd6749b4080fb2b065749f8a387efd15431f367273f9d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.runs.jsonl",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/confirmation.runs.jsonl",
+   "bytes": 575,
+   "bytes_published": 575,
+   "sha256_original": "54367f81711c5cf96272b44d7db150d1a3f076a076af974481553c45e3399d14",
+   "sha256_published": "54367f81711c5cf96272b44d7db150d1a3f076a076af974481553c45e3399d14",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.summary.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/results/confirmation.summary.json",
+   "bytes": 38220,
+   "bytes_published": 38220,
+   "sha256_original": "cd7eff86d551cdf9d1f5bc2a7c2a06e53e54f717caaa974cd47deef1ff97d921",
+   "sha256_published": "cd7eff86d551cdf9d1f5bc2a7c2a06e53e54f717caaa974cd47deef1ff97d921",
    "path_prefix_redacted": false
   },
   {
@@ -500,6 +545,24 @@
    "bytes_published": 21906,
    "sha256_original": "233875d3d3738c20acab12c98749bcacaf3e6069f58ed261221b65152fe4fdec",
    "sha256_published": "233875d3d3738c20acab12c98749bcacaf3e6069f58ed261221b65152fe4fdec",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "review/post-outcome-review.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/review/post-outcome-review.json",
+   "bytes": 1388,
+   "bytes_published": 1388,
+   "sha256_original": "64efd77c874972b181a7f9647729ff04f9e943d2c10413dc9d96c04d022223a3",
+   "sha256_published": "64efd77c874972b181a7f9647729ff04f9e943d2c10413dc9d96c04d022223a3",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "review/pr12-review.json",
+   "published": "reports/depmap-context-dependency-sealed-holdout-2026-09-25/review/pr12-review.json",
+   "bytes": 1275,
+   "bytes_published": 1275,
+   "sha256_original": "9e347592e80e8cf4bc63359ab1acb94996c505f44c7b7b275e3927f7675b3b3e",
+   "sha256_published": "9e347592e80e8cf4bc63359ab1acb94996c505f44c7b7b275e3927f7675b3b3e",
    "path_prefix_redacted": false
   },
   {

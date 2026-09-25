@@ -1,0 +1,1872 @@
+{
+ "schema": "bio.depmap-context-dependency-confirmation.v2",
+ "freeze_utc": "2026-09-25T07:39:48Z",
+ "top_digest": "688981057cb7696f4b60c6906da0a0807c365c9cbbd7ea6a678547adb6de045b",
+ "run_utc": "2026-09-25T07:52:14Z",
+ "tiers": {
+  "primary": {
+   "A": {
+    "models": 315
+   },
+   "A_shared": {
+    "models": 196
+   },
+   "B": {
+    "models": 119
+   },
+   "C": {
+    "models": 40
+   }
+  }
+ },
+ "rule": {
+  "REP_P": 0.05,
+  "REP_FRAC": 0.5,
+  "MIN_TIER_POS": 3,
+  "MIN_TIER_N": 30,
+  "standardised": "beta divided by the dependency gene's SD within the tier; discovery uses the shrunken |beta| - 1.96 SE over the discovery SD"
+ },
+ "primary": {
+  "A": {
+   "tested": 77,
+   "replicated": 66,
+   "rate": 0.8571428571428571,
+   "sign_agreement": 0.974025974025974,
+   "beta_correlation": 0.7468431751637473
+  },
+  "A_shared": {
+   "tested": 77,
+   "replicated": 63,
+   "rate": 0.8181818181818182,
+   "sign_agreement": 0.974025974025974,
+   "beta_correlation": 0.7445499726056398
+  },
+  "B": {
+   "tested": 63,
+   "replicated": 27,
+   "rate": 0.42857142857142855,
+   "sign_agreement": 0.7777777777777778,
+   "beta_correlation": 0.5699378413968152
+  },
+  "C": {
+   "tested": 42,
+   "replicated": 18,
+   "rate": 0.42857142857142855,
+   "sign_agreement": 0.8571428571428571,
+   "beta_correlation": 0.6308594243375446
+  },
+  "B_powered": {
+   "tested": 35,
+   "replicated": 18,
+   "rate": 0.5142857142857142,
+   "note": "the primary tier B denominator: pairs with at least 6 context-positive holdout-only models. Pairs with 3 to 5 are reported under B and are underpowered by design."
+  }
+ },
+ "gold": {
+  "A": {
+   "tested": 17,
+   "replicated": 15,
+   "rate": 0.8823529411764706,
+   "self_dependencies": {
+    "tested": 4,
+    "replicated": 4,
+    "rate": 1.0
+   },
+   "by_arm": {
+    "classical": {
+     "tested": 10,
+     "replicated": 9,
+     "rate": 0.9
+    },
+    "matched": {
+     "tested": 3,
+     "replicated": 2,
+     "rate": 0.6666666666666666
+    },
+    "self": {
+     "tested": 4,
+     "replicated": 4,
+     "rate": 1.0
+    }
+   },
+   "not_nominated_by_the_screen": {
+    "note": "the sensitivity floor uncorrelated with the primary result: controls the discovery screen detects at the primary threshold, did not select, and that are not self-dependencies. The denominator is fixed before the freeze; a control that cannot be tested counts as not replicated.",
+    "denominator": 3,
+    "tested": 3,
+    "replicated": 2,
+    "rate": 0.6666666666666666
+   },
+   "including_controls_discovery_did_not_detect": {
+    "tested": 4,
+    "replicated": 2,
+    "rate": 0.5
+   },
+   "also_nominated_by_the_screen": {
+    "tested": 9,
+    "replicated": 9,
+    "rate": 1.0
+   },
+   "pairs": [
+    {
+     "context": "MUT_DAM:SMARCA4",
+     "dep_gene": "SMARCA2",
+     "beta": -0.17632512692593721,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:APC",
+     "dep_gene": "CTNNB1",
+     "beta": -0.27776707683171875,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:RB1",
+     "dep_gene": "CCND1",
+     "beta": 0.9834981198095185,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_HOT:RB1",
+     "dep_gene": "CCND1",
+     "beta": 1.0424158739816898,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "EXPR_LOW:MLH1",
+     "dep_gene": "WRN",
+     "beta": -0.349256758102067,
+     "replicated": false,
+     "also_selected": false
+    },
+    {
+     "context": "SIG:MSI_HIGH",
+     "dep_gene": "WRN",
+     "beta": -0.9134893524287273,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:RPP25",
+     "dep_gene": "RPP25L",
+     "beta": -0.8482331205283544,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:TTC7B",
+     "dep_gene": "TTC7A",
+     "beta": -0.8113870626751644,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:CYB5A",
+     "dep_gene": "CYB5B",
+     "beta": -0.3560892302175431,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "MAPK1",
+     "beta": -0.342262403671532,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:ARID1A",
+     "dep_gene": "ARID1B",
+     "beta": -0.12716308479815316,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:STAG2",
+     "dep_gene": "STAG1",
+     "beta": -0.5979397259576801,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_DAM:CREBBP",
+     "dep_gene": "EP300",
+     "beta": -0.06296265467898438,
+     "replicated": false,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "BRAF",
+     "beta": -0.22034411048848052,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:NRAS",
+     "dep_gene": "NRAS",
+     "beta": -1.324670836919511,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:PIK3CA",
+     "dep_gene": "PIK3CA",
+     "beta": -0.6985399218761906,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:KRAS",
+     "dep_gene": "KRAS",
+     "beta": -1.2072069194148576,
+     "replicated": true,
+     "also_selected": false
+    }
+   ]
+  },
+  "A_shared": {
+   "tested": 17,
+   "replicated": 17,
+   "rate": 1.0,
+   "self_dependencies": {
+    "tested": 4,
+    "replicated": 4,
+    "rate": 1.0
+   },
+   "by_arm": {
+    "classical": {
+     "tested": 10,
+     "replicated": 10,
+     "rate": 1.0
+    },
+    "matched": {
+     "tested": 3,
+     "replicated": 3,
+     "rate": 1.0
+    },
+    "self": {
+     "tested": 4,
+     "replicated": 4,
+     "rate": 1.0
+    }
+   },
+   "not_nominated_by_the_screen": {
+    "note": "the sensitivity floor uncorrelated with the primary result: controls the discovery screen detects at the primary threshold, did not select, and that are not self-dependencies. The denominator is fixed before the freeze; a control that cannot be tested counts as not replicated.",
+    "denominator": 3,
+    "tested": 3,
+    "replicated": 3,
+    "rate": 1.0
+   },
+   "including_controls_discovery_did_not_detect": {
+    "tested": 4,
+    "replicated": 4,
+    "rate": 1.0
+   },
+   "also_nominated_by_the_screen": {
+    "tested": 9,
+    "replicated": 9,
+    "rate": 1.0
+   },
+   "pairs": [
+    {
+     "context": "MUT_DAM:SMARCA4",
+     "dep_gene": "SMARCA2",
+     "beta": -0.2282132831784028,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:APC",
+     "dep_gene": "CTNNB1",
+     "beta": -0.5401035283170393,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:RB1",
+     "dep_gene": "CCND1",
+     "beta": 1.056468813428528,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_HOT:RB1",
+     "dep_gene": "CCND1",
+     "beta": 1.3066161827584153,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "EXPR_LOW:MLH1",
+     "dep_gene": "WRN",
+     "beta": -0.6627865143656999,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "SIG:MSI_HIGH",
+     "dep_gene": "WRN",
+     "beta": -0.9315292567413548,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:RPP25",
+     "dep_gene": "RPP25L",
+     "beta": -0.8950230908109262,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:TTC7B",
+     "dep_gene": "TTC7A",
+     "beta": -0.6967855868377507,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:CYB5A",
+     "dep_gene": "CYB5B",
+     "beta": -0.4160039834445456,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "MAPK1",
+     "beta": -0.2884352763376975,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:ARID1A",
+     "dep_gene": "ARID1B",
+     "beta": -0.09809297694385433,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:STAG2",
+     "dep_gene": "STAG1",
+     "beta": -0.30556193947476995,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_DAM:CREBBP",
+     "dep_gene": "EP300",
+     "beta": -0.21121951976782036,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "BRAF",
+     "beta": -0.24725943240734588,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:NRAS",
+     "dep_gene": "NRAS",
+     "beta": -1.196021133503816,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:PIK3CA",
+     "dep_gene": "PIK3CA",
+     "beta": -0.7666454167685588,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:KRAS",
+     "dep_gene": "KRAS",
+     "beta": -1.1993469683220814,
+     "replicated": true,
+     "also_selected": false
+    }
+   ]
+  },
+  "B": {
+   "tested": 14,
+   "replicated": 11,
+   "rate": 0.7857142857142857,
+   "self_dependencies": {
+    "tested": 4,
+    "replicated": 4,
+    "rate": 1.0
+   },
+   "by_arm": {
+    "classical": {
+     "tested": 7,
+     "replicated": 5,
+     "rate": 0.7142857142857143
+    },
+    "matched": {
+     "tested": 3,
+     "replicated": 2,
+     "rate": 0.6666666666666666
+    },
+    "self": {
+     "tested": 4,
+     "replicated": 4,
+     "rate": 1.0
+    }
+   },
+   "not_nominated_by_the_screen": {
+    "note": "the sensitivity floor uncorrelated with the primary result: controls the discovery screen detects at the primary threshold, did not select, and that are not self-dependencies. The denominator is fixed before the freeze; a control that cannot be tested counts as not replicated.",
+    "denominator": 3,
+    "tested": 1,
+    "replicated": 1,
+    "rate": 0.3333333333333333
+   },
+   "including_controls_discovery_did_not_detect": {
+    "tested": 2,
+    "replicated": 1,
+    "rate": 0.5
+   },
+   "also_nominated_by_the_screen": {
+    "tested": 8,
+    "replicated": 6,
+    "rate": 0.75
+   },
+   "pairs": [
+    {
+     "context": "MUT_DAM:APC",
+     "dep_gene": "CTNNB1",
+     "beta": -0.030843682925395407,
+     "replicated": false,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:RB1",
+     "dep_gene": "CCND1",
+     "beta": 0.809192326156886,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "SIG:MSI_HIGH",
+     "dep_gene": "WRN",
+     "beta": -0.7059525444355552,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:RPP25",
+     "dep_gene": "RPP25L",
+     "beta": -0.8149885487437936,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:TTC7B",
+     "dep_gene": "TTC7A",
+     "beta": -0.9746171240606144,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:CYB5A",
+     "dep_gene": "CYB5B",
+     "beta": 0.08568143983232221,
+     "replicated": false,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "MAPK1",
+     "beta": -0.3545476227602228,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:ARID1A",
+     "dep_gene": "ARID1B",
+     "beta": -0.20227570960721147,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:STAG2",
+     "dep_gene": "STAG1",
+     "beta": -1.1519639101434622,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_DAM:CREBBP",
+     "dep_gene": "EP300",
+     "beta": 0.03615369050753324,
+     "replicated": false,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "BRAF",
+     "beta": -0.18715296475899068,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:NRAS",
+     "dep_gene": "NRAS",
+     "beta": -1.452389124734906,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:PIK3CA",
+     "dep_gene": "PIK3CA",
+     "beta": -0.5631082718867352,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:KRAS",
+     "dep_gene": "KRAS",
+     "beta": -1.1215098586783843,
+     "replicated": true,
+     "also_selected": false
+    }
+   ]
+  },
+  "C": {
+   "tested": 10,
+   "replicated": 6,
+   "rate": 0.6,
+   "self_dependencies": {
+    "tested": 3,
+    "replicated": 3,
+    "rate": 1.0
+   },
+   "by_arm": {
+    "classical": {
+     "tested": 5,
+     "replicated": 2,
+     "rate": 0.4
+    },
+    "matched": {
+     "tested": 2,
+     "replicated": 1,
+     "rate": 0.5
+    },
+    "self": {
+     "tested": 3,
+     "replicated": 3,
+     "rate": 1.0
+    }
+   },
+   "not_nominated_by_the_screen": {
+    "note": "the sensitivity floor uncorrelated with the primary result: controls the discovery screen detects at the primary threshold, did not select, and that are not self-dependencies. The denominator is fixed before the freeze; a control that cannot be tested counts as not replicated.",
+    "denominator": 3,
+    "tested": 1,
+    "replicated": 1,
+    "rate": 0.3333333333333333
+   },
+   "including_controls_discovery_did_not_detect": {
+    "tested": 2,
+    "replicated": 1,
+    "rate": 0.5
+   },
+   "also_nominated_by_the_screen": {
+    "tested": 5,
+    "replicated": 2,
+    "rate": 0.4
+   },
+   "pairs": [
+    {
+     "context": "MUT_DAM:SMARCA4",
+     "dep_gene": "SMARCA2",
+     "beta": 0.5566339490196183,
+     "replicated": false,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:RB1",
+     "dep_gene": "CCND1",
+     "beta": 0.33111098610920836,
+     "replicated": false,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:RPP25",
+     "dep_gene": "RPP25L",
+     "beta": -0.0777703088522262,
+     "replicated": false,
+     "also_selected": true
+    },
+    {
+     "context": "EXPR_LOW:TTC7B",
+     "dep_gene": "TTC7A",
+     "beta": -0.7680474922465516,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "MAPK1",
+     "beta": -0.6330605140875011,
+     "replicated": true,
+     "also_selected": true
+    },
+    {
+     "context": "MUT_DAM:STAG2",
+     "dep_gene": "STAG1",
+     "beta": -1.5624720211391794,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_DAM:CREBBP",
+     "dep_gene": "EP300",
+     "beta": -0.24107498299718583,
+     "replicated": false,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:BRAF",
+     "dep_gene": "BRAF",
+     "beta": -0.9968899466596705,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:PIK3CA",
+     "dep_gene": "PIK3CA",
+     "beta": -1.7653983601750831,
+     "replicated": true,
+     "also_selected": false
+    },
+    {
+     "context": "MUT_HOT:KRAS",
+     "dep_gene": "KRAS",
+     "beta": -1.1166143389882226,
+     "replicated": true,
+     "also_selected": false
+    }
+   ]
+  }
+ },
+ "placebo": {
+  "A": {
+   "tested": 3,
+   "replicated": 0,
+   "rate": 0.0
+  },
+  "A_shared": {
+   "tested": 3,
+   "replicated": 1,
+   "rate": 0.3333333333333333
+  },
+  "B": {
+   "tested": 2,
+   "replicated": 0,
+   "rate": 0.0
+  },
+  "C": {
+   "tested": 2,
+   "replicated": 1,
+   "rate": 0.5
+  }
+ },
+ "by_class": {
+  "A": {
+   "known": {
+    "tested": 43,
+    "replicated": 39,
+    "rate": 0.9069767441860465
+   },
+   "novel": {
+    "tested": 34,
+    "replicated": 27,
+    "rate": 0.7941176470588235
+   }
+  },
+  "A_shared": {
+   "known": {
+    "tested": 43,
+    "replicated": 38,
+    "rate": 0.8837209302325582
+   },
+   "novel": {
+    "tested": 34,
+    "replicated": 25,
+    "rate": 0.7352941176470589
+   }
+  },
+  "B": {
+   "known": {
+    "tested": 37,
+    "replicated": 16,
+    "rate": 0.43243243243243246
+   },
+   "novel": {
+    "tested": 26,
+    "replicated": 11,
+    "rate": 0.4230769230769231
+   }
+  },
+  "C": {
+   "known": {
+    "tested": 23,
+    "replicated": 8,
+    "rate": 0.34782608695652173
+   },
+   "novel": {
+    "tested": 19,
+    "replicated": 10,
+    "rate": 0.5263157894736842
+   }
+  }
+ },
+ "placebo_seeds": {
+  "with_selected_pairs": [
+   "20260925",
+   "20260926"
+  ],
+  "selected_nothing": [
+   "20260927"
+  ],
+  "note": "a placebo seed that selected nothing contributes zero pairs to the placebo denominator; that is itself evidence the pipeline manufactures little from permuted contexts"
+ },
+ "replicated_pairs_tier_A": [
+  {
+   "context": "MUT_DAM:RB1",
+   "dep_gene": "CCND1",
+   "n_pos": 20,
+   "lineages": {
+    "Bone": 2,
+    "Bowel": 1,
+    "CNS/Brain": 6,
+    "Esophagus/Stomach": 1,
+    "Lung": 4,
+    "Ovary/Fallopian Tube": 1,
+    "Peripheral Nervous System": 1,
+    "Prostate": 1,
+    "Skin": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "MUT_DAM:SEC31A",
+   "dep_gene": "WRN",
+   "n_pos": 14,
+   "lineages": {
+    "Bowel": 7,
+    "Breast": 1,
+    "Esophagus/Stomach": 1,
+    "Ovary/Fallopian Tube": 2,
+    "Prostate": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "DEL:FOCAD",
+   "dep_gene": "PELO",
+   "n_pos": 11,
+   "lineages": {
+    "CNS/Brain": 3,
+    "Esophagus/Stomach": 1,
+    "Head and Neck": 1,
+    "Lung": 2,
+    "Ovary/Fallopian Tube": 1,
+    "Pancreas": 3
+   }
+  },
+  {
+   "context": "DEL:HACD4",
+   "dep_gene": "PELO",
+   "n_pos": 13,
+   "lineages": {
+    "Breast": 1,
+    "CNS/Brain": 3,
+    "Esophagus/Stomach": 1,
+    "Head and Neck": 1,
+    "Lung": 2,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 3
+   }
+  },
+  {
+   "context": "DEL:IFNB1",
+   "dep_gene": "PELO",
+   "n_pos": 13,
+   "lineages": {
+    "Breast": 1,
+    "CNS/Brain": 3,
+    "Esophagus/Stomach": 1,
+    "Head and Neck": 1,
+    "Lung": 2,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 3
+   }
+  },
+  {
+   "context": "MUT_DAM:RB1",
+   "dep_gene": "E2F3",
+   "n_pos": 20,
+   "lineages": {
+    "Bone": 2,
+    "Bowel": 1,
+    "CNS/Brain": 6,
+    "Esophagus/Stomach": 1,
+    "Lung": 4,
+    "Ovary/Fallopian Tube": 1,
+    "Peripheral Nervous System": 1,
+    "Prostate": 1,
+    "Skin": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "SIG:MSI_HIGH",
+   "dep_gene": "WRN",
+   "n_pos": 31,
+   "lineages": {
+    "Bowel": 10,
+    "Breast": 2,
+    "Esophagus/Stomach": 4,
+    "Kidney": 1,
+    "Ovary/Fallopian Tube": 5,
+    "Prostate": 3,
+    "Skin": 1,
+    "Uterus": 5
+   }
+  },
+  {
+   "context": "MUT_HOT:NRAS",
+   "dep_gene": "RAF1",
+   "n_pos": 11,
+   "lineages": {
+    "Lung": 3,
+    "Lymphoid": 2,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 1,
+    "Peripheral Nervous System": 2,
+    "Skin": 1
+   }
+  },
+  {
+   "context": "MUT_DAM:KDM2B",
+   "dep_gene": "WRN",
+   "n_pos": 11,
+   "lineages": {
+    "Bowel": 4,
+    "Esophagus/Stomach": 3,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "MUT_HOT:BRAF",
+   "dep_gene": "DUSP4",
+   "n_pos": 16,
+   "lineages": {
+    "Bowel": 7,
+    "CNS/Brain": 3,
+    "Lung": 1,
+    "Ovary/Fallopian Tube": 1,
+    "Prostate": 1,
+    "Skin": 3
+   }
+  },
+  {
+   "context": "MUT_DAM:APC",
+   "dep_gene": "CTNNB1",
+   "n_pos": 30,
+   "lineages": {
+    "Bowel": 24,
+    "Esophagus/Stomach": 2,
+    "Lung": 2,
+    "Pancreas": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "MUT_HOT:BRAF",
+   "dep_gene": "MAPK1",
+   "n_pos": 16,
+   "lineages": {
+    "Bowel": 7,
+    "CNS/Brain": 3,
+    "Lung": 1,
+    "Ovary/Fallopian Tube": 1,
+    "Prostate": 1,
+    "Skin": 3
+   }
+  },
+  {
+   "context": "MUT_HOT:BRAF",
+   "dep_gene": "MAP2K1",
+   "n_pos": 16,
+   "lineages": {
+    "Bowel": 7,
+    "CNS/Brain": 3,
+    "Lung": 1,
+    "Ovary/Fallopian Tube": 1,
+    "Prostate": 1,
+    "Skin": 3
+   }
+  },
+  {
+   "context": "MUT_DAM:SMARCA4",
+   "dep_gene": "SMARCA2",
+   "n_pos": 14,
+   "lineages": {
+    "Bowel": 1,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 1,
+    "Lung": 6,
+    "Ovary/Fallopian Tube": 4,
+    "Peripheral Nervous System": 1
+   }
+  },
+  {
+   "context": "MUT_DAM:RB1",
+   "dep_gene": "SKP2",
+   "n_pos": 20,
+   "lineages": {
+    "Bone": 2,
+    "Bowel": 1,
+    "CNS/Brain": 6,
+    "Esophagus/Stomach": 1,
+    "Lung": 4,
+    "Ovary/Fallopian Tube": 1,
+    "Peripheral Nervous System": 1,
+    "Prostate": 1,
+    "Skin": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "MUT_DAM:MIDEAS",
+   "dep_gene": "HDAC1",
+   "n_pos": 11,
+   "lineages": {
+    "Bowel": 3,
+    "Breast": 1,
+    "Esophagus/Stomach": 1,
+    "Lung": 1,
+    "Ovary/Fallopian Tube": 3,
+    "Prostate": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "MUT_DAM:ARID1A",
+   "dep_gene": "ARID1B",
+   "n_pos": 43,
+   "lineages": {
+    "Bone": 1,
+    "Bowel": 9,
+    "Breast": 3,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 7,
+    "Lung": 1,
+    "Lymphoid": 1,
+    "Ovary/Fallopian Tube": 9,
+    "Pancreas": 5,
+    "Prostate": 2,
+    "Uterus": 4
+   }
+  },
+  {
+   "context": "MUT_DAM:ATXN2L",
+   "dep_gene": "HDAC1",
+   "n_pos": 12,
+   "lineages": {
+    "Bowel": 5,
+    "Breast": 1,
+    "Esophagus/Stomach": 2,
+    "Lung": 1,
+    "Ovary/Fallopian Tube": 2,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "MUT_DAM:EP300",
+   "dep_gene": "CREBBP",
+   "n_pos": 34,
+   "lineages": {
+    "Bowel": 11,
+    "Breast": 1,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 5,
+    "Lung": 3,
+    "Lymphoid": 1,
+    "Other": 1,
+    "Ovary/Fallopian Tube": 4,
+    "Pancreas": 2,
+    "Prostate": 1,
+    "Skin": 1,
+    "Uterus": 3
+   }
+  },
+  {
+   "context": "MUT_DAM:SEC31A",
+   "dep_gene": "MRPL53",
+   "n_pos": 14,
+   "lineages": {
+    "Bowel": 7,
+    "Breast": 1,
+    "Esophagus/Stomach": 1,
+    "Ovary/Fallopian Tube": 2,
+    "Prostate": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "DEL:LRP1B",
+   "dep_gene": "TAPT1",
+   "n_pos": 12,
+   "lineages": {
+    "Bowel": 1,
+    "Breast": 1,
+    "Esophagus/Stomach": 2,
+    "Head and Neck": 3,
+    "Lung": 4,
+    "Ovary/Fallopian Tube": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:ATP6V0E2",
+   "dep_gene": "ATP6V0E1",
+   "n_pos": 11,
+   "lineages": {
+    "Bowel": 1,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 7,
+    "Head and Neck": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:RPP25",
+   "dep_gene": "RPP25L",
+   "n_pos": 38,
+   "lineages": {
+    "Bowel": 1,
+    "Breast": 1,
+    "CNS/Brain": 13,
+    "Esophagus/Stomach": 4,
+    "Head and Neck": 4,
+    "Kidney": 1,
+    "Lymphoid": 5,
+    "Ovary/Fallopian Tube": 4,
+    "Peripheral Nervous System": 1,
+    "Soft Tissue": 1,
+    "Uterus": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:TTC7B",
+   "dep_gene": "TTC7A",
+   "n_pos": 24,
+   "lineages": {
+    "Bowel": 10,
+    "Esophagus/Stomach": 4,
+    "Lung": 4,
+    "Lymphoid": 3,
+    "Pancreas": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:CYB5A",
+   "dep_gene": "CYB5B",
+   "n_pos": 16,
+   "lineages": {
+    "Breast": 1,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 4,
+    "Head and Neck": 4,
+    "Lung": 1,
+    "Lymphoid": 3,
+    "Ovary/Fallopian Tube": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:DNAJC15",
+   "dep_gene": "DNAJC19",
+   "n_pos": 38,
+   "lineages": {
+    "Bone": 2,
+    "Bowel": 4,
+    "Breast": 2,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 5,
+    "Head and Neck": 3,
+    "Lung": 3,
+    "Lymphoid": 1,
+    "Ovary/Fallopian Tube": 7,
+    "Pancreas": 1,
+    "Peripheral Nervous System": 5,
+    "Pleura": 1,
+    "Prostate": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:UAP1L1",
+   "dep_gene": "UAP1",
+   "n_pos": 11,
+   "lineages": {
+    "Esophagus/Stomach": 4,
+    "Lung": 1,
+    "Lymphoid": 1,
+    "Ovary/Fallopian Tube": 4,
+    "Pancreas": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:EMC10",
+   "dep_gene": "EMC4",
+   "n_pos": 10,
+   "lineages": {
+    "Breast": 1,
+    "CNS/Brain": 1,
+    "Esophagus/Stomach": 1,
+    "Head and Neck": 2,
+    "Ovary/Fallopian Tube": 2,
+    "Peripheral Nervous System": 2,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:TBL1X",
+   "dep_gene": "TBL1XR1",
+   "n_pos": 14,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 2,
+    "Esophagus/Stomach": 3,
+    "Head and Neck": 5,
+    "Myeloid": 1,
+    "Ovary/Fallopian Tube": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:LDAH",
+   "dep_gene": "HSD17B12",
+   "n_pos": 15,
+   "lineages": {
+    "Breast": 1,
+    "Esophagus/Stomach": 3,
+    "Head and Neck": 1,
+    "Ovary/Fallopian Tube": 5,
+    "Prostate": 1,
+    "Uterus": 4
+   }
+  },
+  {
+   "context": "EXPR_LOW:CDK6",
+   "dep_gene": "CDK4",
+   "n_pos": 17,
+   "lineages": {
+    "Bone": 2,
+    "Breast": 3,
+    "Esophagus/Stomach": 2,
+    "Head and Neck": 1,
+    "Lung": 1,
+    "Ovary/Fallopian Tube": 4,
+    "Prostate": 1,
+    "Uterus": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:KLHL5",
+   "dep_gene": "IRS2",
+   "n_pos": 11,
+   "lineages": {
+    "Bowel": 5,
+    "Breast": 2,
+    "Esophagus/Stomach": 3,
+    "Lymphoid": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:LIX1L",
+   "dep_gene": "STX4",
+   "n_pos": 63,
+   "lineages": {
+    "Bowel": 17,
+    "Breast": 8,
+    "Esophagus/Stomach": 17,
+    "Head and Neck": 7,
+    "Lung": 9,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 1,
+    "Prostate": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:SMARCA2",
+   "dep_gene": "ZNF217",
+   "n_pos": 10,
+   "lineages": {
+    "Breast": 1,
+    "Esophagus/Stomach": 3,
+    "Ovary/Fallopian Tube": 3,
+    "Pancreas": 1,
+    "Peripheral Nervous System": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:ZEB1",
+   "dep_gene": "STX4",
+   "n_pos": 123,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bone": 1,
+    "Bowel": 19,
+    "Breast": 16,
+    "Esophagus/Stomach": 23,
+    "Head and Neck": 20,
+    "Lung": 14,
+    "Lymphoid": 2,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 12,
+    "Pancreas": 8,
+    "Prostate": 2,
+    "Uterus": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:MYO5A",
+   "dep_gene": "KLF5",
+   "n_pos": 19,
+   "lineages": {
+    "Bowel": 6,
+    "Breast": 1,
+    "Esophagus/Stomach": 5,
+    "Lung": 1,
+    "Myeloid": 1,
+    "Ovary/Fallopian Tube": 3,
+    "Pancreas": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:KATNAL1",
+   "dep_gene": "STX4",
+   "n_pos": 30,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 10,
+    "Breast": 3,
+    "Esophagus/Stomach": 5,
+    "Head and Neck": 1,
+    "Lung": 3,
+    "Lymphoid": 2,
+    "Ovary/Fallopian Tube": 3,
+    "Pancreas": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:HTATIP2",
+   "dep_gene": "SRD5A3",
+   "n_pos": 21,
+   "lineages": {
+    "CNS/Brain": 8,
+    "Esophagus/Stomach": 3,
+    "Head and Neck": 1,
+    "Ovary/Fallopian Tube": 1,
+    "Peripheral Nervous System": 6,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:BNIP3",
+   "dep_gene": "KRAS",
+   "n_pos": 31,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 8,
+    "Esophagus/Stomach": 10,
+    "Lymphoid": 2,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 8
+   }
+  },
+  {
+   "context": "EXPR_LOW:RDX",
+   "dep_gene": "TTC7A",
+   "n_pos": 12,
+   "lineages": {
+    "Bowel": 6,
+    "Esophagus/Stomach": 5,
+    "Lymphoid": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:VPS35L",
+   "dep_gene": "STAMBP",
+   "n_pos": 25,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 5,
+    "Esophagus/Stomach": 8,
+    "Head and Neck": 7,
+    "Lung": 1,
+    "Pancreas": 2,
+    "Soft Tissue": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:SLC2A3",
+   "dep_gene": "SLC2A1",
+   "n_pos": 88,
+   "lineages": {
+    "Bowel": 7,
+    "Breast": 15,
+    "Esophagus/Stomach": 16,
+    "Head and Neck": 9,
+    "Kidney": 1,
+    "Lung": 11,
+    "Lymphoid": 3,
+    "Ovary/Fallopian Tube": 9,
+    "Pancreas": 9,
+    "Peripheral Nervous System": 2,
+    "Pleura": 1,
+    "Prostate": 3,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:NR3C1",
+   "dep_gene": "CTNNB1",
+   "n_pos": 30,
+   "lineages": {
+    "Bowel": 16,
+    "Breast": 2,
+    "Esophagus/Stomach": 6,
+    "Ovary/Fallopian Tube": 2,
+    "Peripheral Nervous System": 1,
+    "Prostate": 1,
+    "Uterus": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:ZEB1",
+   "dep_gene": "ELMO2",
+   "n_pos": 123,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bone": 1,
+    "Bowel": 19,
+    "Breast": 16,
+    "Esophagus/Stomach": 23,
+    "Head and Neck": 20,
+    "Lung": 14,
+    "Lymphoid": 2,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 12,
+    "Pancreas": 8,
+    "Prostate": 2,
+    "Uterus": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:KLHL5",
+   "dep_gene": "CCND2",
+   "n_pos": 11,
+   "lineages": {
+    "Bowel": 5,
+    "Breast": 2,
+    "Esophagus/Stomach": 3,
+    "Lymphoid": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:PHC1",
+   "dep_gene": "KLF5",
+   "n_pos": 14,
+   "lineages": {
+    "Bowel": 5,
+    "Esophagus/Stomach": 6,
+    "Lung": 2,
+    "Pancreas": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:AJUBA",
+   "dep_gene": "KTI12",
+   "n_pos": 10,
+   "lineages": {
+    "Lymphoid": 6,
+    "Myeloid": 1,
+    "Peripheral Nervous System": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:APOL1",
+   "dep_gene": "CFLAR",
+   "n_pos": 58,
+   "lineages": {
+    "Bone": 2,
+    "Bowel": 9,
+    "Breast": 6,
+    "CNS/Brain": 3,
+    "Esophagus/Stomach": 10,
+    "Head and Neck": 1,
+    "Lung": 8,
+    "Lymphoid": 2,
+    "Ovary/Fallopian Tube": 3,
+    "Pancreas": 2,
+    "Peripheral Nervous System": 7,
+    "Prostate": 2,
+    "Skin": 2,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:SYDE1",
+   "dep_gene": "SNAP23",
+   "n_pos": 83,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 21,
+    "Breast": 5,
+    "Esophagus/Stomach": 13,
+    "Head and Neck": 9,
+    "Lung": 9,
+    "Lymphoid": 9,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 7,
+    "Peripheral Nervous System": 2,
+    "Prostate": 2,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:SLC16A3",
+   "dep_gene": "SLC16A1",
+   "n_pos": 15,
+   "lineages": {
+    "Bone": 1,
+    "Breast": 3,
+    "CNS/Brain": 2,
+    "Esophagus/Stomach": 1,
+    "Lung": 1,
+    "Lymphoid": 2,
+    "Ovary/Fallopian Tube": 1,
+    "Peripheral Nervous System": 4
+   }
+  },
+  {
+   "context": "EXPR_LOW:SEPTIN5",
+   "dep_gene": "RAB6A",
+   "n_pos": 65,
+   "lineages": {
+    "Bowel": 15,
+    "Breast": 1,
+    "Esophagus/Stomach": 14,
+    "Head and Neck": 6,
+    "Lung": 3,
+    "Lymphoid": 6,
+    "Ovary/Fallopian Tube": 7,
+    "Pancreas": 12,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:BICDL1",
+   "dep_gene": "ELMO2",
+   "n_pos": 52,
+   "lineages": {
+    "Bone": 2,
+    "Bowel": 2,
+    "Breast": 3,
+    "CNS/Brain": 20,
+    "Esophagus/Stomach": 4,
+    "Head and Neck": 2,
+    "Lung": 4,
+    "Lymphoid": 2,
+    "Myeloid": 1,
+    "Ovary/Fallopian Tube": 4,
+    "Pancreas": 2,
+    "Peripheral Nervous System": 2,
+    "Skin": 2,
+    "Soft Tissue": 1,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:GPX8",
+   "dep_gene": "IRS2",
+   "n_pos": 27,
+   "lineages": {
+    "Bowel": 4,
+    "Breast": 2,
+    "Esophagus/Stomach": 2,
+    "Lung": 2,
+    "Lymphoid": 9,
+    "Myeloid": 2,
+    "Peripheral Nervous System": 5,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:ZEB1",
+   "dep_gene": "ITGAV",
+   "n_pos": 123,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bone": 1,
+    "Bowel": 19,
+    "Breast": 16,
+    "Esophagus/Stomach": 23,
+    "Head and Neck": 20,
+    "Lung": 14,
+    "Lymphoid": 2,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 12,
+    "Pancreas": 8,
+    "Prostate": 2,
+    "Uterus": 3
+   }
+  },
+  {
+   "context": "EXPR_LOW:PALM2AKAP2",
+   "dep_gene": "MRPS11",
+   "n_pos": 19,
+   "lineages": {
+    "Bowel": 2,
+    "Breast": 3,
+    "Esophagus/Stomach": 2,
+    "Head and Neck": 5,
+    "Ovary/Fallopian Tube": 1,
+    "Pancreas": 2,
+    "Peripheral Nervous System": 1,
+    "Prostate": 2,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:HSPG2",
+   "dep_gene": "EP300",
+   "n_pos": 10,
+   "lineages": {
+    "Breast": 1,
+    "CNS/Brain": 1,
+    "Lymphoid": 5,
+    "Peripheral Nervous System": 2,
+    "Prostate": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:KATNAL1",
+   "dep_gene": "STXBP3",
+   "n_pos": 30,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 10,
+    "Breast": 3,
+    "Esophagus/Stomach": 5,
+    "Head and Neck": 1,
+    "Lung": 3,
+    "Lymphoid": 2,
+    "Ovary/Fallopian Tube": 3,
+    "Pancreas": 2
+   }
+  },
+  {
+   "context": "EXPR_LOW:ELOVL5",
+   "dep_gene": "TCF7L2",
+   "n_pos": 13,
+   "lineages": {
+    "Bowel": 4,
+    "Esophagus/Stomach": 8,
+    "Pancreas": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:SYDE1",
+   "dep_gene": "ITGAV",
+   "n_pos": 83,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 21,
+    "Breast": 5,
+    "Esophagus/Stomach": 13,
+    "Head and Neck": 9,
+    "Lung": 9,
+    "Lymphoid": 9,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 2,
+    "Pancreas": 7,
+    "Peripheral Nervous System": 2,
+    "Prostate": 2,
+    "Uterus": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:MICALL2",
+   "dep_gene": "FDPS",
+   "n_pos": 13,
+   "lineages": {
+    "Bone": 1,
+    "Breast": 1,
+    "Lung": 1,
+    "Lymphoid": 6,
+    "Peripheral Nervous System": 4
+   }
+  },
+  {
+   "context": "EXPR_LOW:DNAJB5",
+   "dep_gene": "SNAP23",
+   "n_pos": 31,
+   "lineages": {
+    "Bowel": 15,
+    "Breast": 2,
+    "Esophagus/Stomach": 5,
+    "Head and Neck": 1,
+    "Lung": 4,
+    "Myeloid": 2,
+    "Ovary/Fallopian Tube": 1,
+    "Pancreas": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:RELB",
+   "dep_gene": "FDPS",
+   "n_pos": 11,
+   "lineages": {
+    "Bone": 1,
+    "Bowel": 1,
+    "Breast": 2,
+    "Esophagus/Stomach": 1,
+    "Lung": 1,
+    "Peripheral Nervous System": 4,
+    "Prostate": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:FERMT1",
+   "dep_gene": "FERMT2",
+   "n_pos": 40,
+   "lineages": {
+    "Bone": 1,
+    "Breast": 4,
+    "CNS/Brain": 4,
+    "Esophagus/Stomach": 1,
+    "Kidney": 1,
+    "Lymphoid": 6,
+    "Ovary/Fallopian Tube": 9,
+    "Peripheral Nervous System": 7,
+    "Pleura": 1,
+    "Skin": 2,
+    "Uterus": 4
+   }
+  },
+  {
+   "context": "EXPR_LOW:CCDC88A",
+   "dep_gene": "FOXA1",
+   "n_pos": 19,
+   "lineages": {
+    "Bowel": 8,
+    "Breast": 8,
+    "Esophagus/Stomach": 2,
+    "Lymphoid": 1
+   }
+  },
+  {
+   "context": "EXPR_LOW:EVL",
+   "dep_gene": "KRAS",
+   "n_pos": 49,
+   "lineages": {
+    "Biliary Tract": 1,
+    "Bowel": 15,
+    "Esophagus/Stomach": 10,
+    "Lung": 4,
+    "Lymphoid": 1,
+    "Ovary/Fallopian Tube": 4,
+    "Pancreas": 14
+   }
+  },
+  {
+   "context": "EXPR_LOW:PLEKHA6",
+   "dep_gene": "TXNRD1",
+   "n_pos": 64,
+   "lineages": {
+    "Bone": 5,
+    "Bowel": 1,
+    "Breast": 1,
+    "CNS/Brain": 12,
+    "Esophagus/Stomach": 10,
+    "Head and Neck": 3,
+    "Lung": 8,
+    "Lymphoid": 9,
+    "Myeloid": 1,
+    "Ovary/Fallopian Tube": 7,
+    "Pancreas": 2,
+    "Prostate": 1,
+    "Skin": 3,
+    "Uterus": 1
+   }
+  }
+ ],
+ "calibration": {
+  "note": "reported without prediction. Every candidate the rule could have selected: passes the filters, not on the same chromosome, dependency gene expressed, at least 10 context-positive holdout models. Deciles are of |beta| - 1.96*SE in discovery.",
+  "pool_size": 141,
+  "tested": 141,
+  "deciles": [
+   {
+    "decile": 1,
+    "beta_lb_min": 0.200227070707338,
+    "beta_lb_max": 0.2093730612502313,
+    "tested": 15,
+    "replicated": 6,
+    "rate": 0.4
+   },
+   {
+    "decile": 2,
+    "beta_lb_min": 0.2094839993291571,
+    "beta_lb_max": 0.2166992374037003,
+    "tested": 14,
+    "replicated": 8,
+    "rate": 0.5714285714285714
+   },
+   {
+    "decile": 3,
+    "beta_lb_min": 0.2176659511962758,
+    "beta_lb_max": 0.2274033513330477,
+    "tested": 14,
+    "replicated": 9,
+    "rate": 0.6428571428571429
+   },
+   {
+    "decile": 4,
+    "beta_lb_min": 0.2278916003614138,
+    "beta_lb_max": 0.2380028849759255,
+    "tested": 14,
+    "replicated": 11,
+    "rate": 0.7857142857142857
+   },
+   {
+    "decile": 5,
+    "beta_lb_min": 0.2390477496716089,
+    "beta_lb_max": 0.2501749488223816,
+    "tested": 14,
+    "replicated": 12,
+    "rate": 0.8571428571428571
+   },
+   {
+    "decile": 6,
+    "beta_lb_min": 0.2502899140239867,
+    "beta_lb_max": 0.2664560605334232,
+    "tested": 14,
+    "replicated": 14,
+    "rate": 1.0
+   },
+   {
+    "decile": 7,
+    "beta_lb_min": 0.2672517959881395,
+    "beta_lb_max": 0.3047326964589567,
+    "tested": 14,
+    "replicated": 14,
+    "rate": 1.0
+   },
+   {
+    "decile": 8,
+    "beta_lb_min": 0.3152430626956213,
+    "beta_lb_max": 0.3794119872537597,
+    "tested": 14,
+    "replicated": 12,
+    "rate": 0.8571428571428571
+   },
+   {
+    "decile": 9,
+    "beta_lb_min": 0.388516451066661,
+    "beta_lb_max": 0.4375482334949109,
+    "tested": 14,
+    "replicated": 14,
+    "rate": 1.0
+   },
+   {
+    "decile": 10,
+    "beta_lb_min": 0.4385011225046653,
+    "beta_lb_max": 0.6998362644432385,
+    "tested": 14,
+    "replicated": 13,
+    "rate": 0.9285714285714286
+   }
+  ],
+  "overall_rate": 0.8014184397163121,
+  "sign_agreement": 0.9361702127659575
+ },
+ "verdict": {
+  "label": "CROSS_PLATFORM_REPLICATED",
+  "not_evaluable_notes": [],
+  "P1_rate": {
+   "passed": true,
+   "tier_A_rate": 0.8571428571428571,
+   "threshold": 0.4,
+   "tested": 77,
+   "replicated": 66
+  },
+  "P2_placebo": {
+   "passed": true,
+   "tier_A_placebo_rate": 0.0,
+   "tested": 3,
+   "replicated": 0,
+   "ceiling": 0.15,
+   "max_share_of_the_primary_rate": 0.3333333333333333,
+   "primary_rate_compared_against": 0.8571428571428571,
+   "separated_from_primary": true,
+   "note": "the ceiling alone decides PLACEBO_BREACH; separation is required by P1"
+  },
+  "P3_independent_lines": {
+   "passed": true,
+   "tier_B_powered_rate": 0.5142857142857142,
+   "threshold": 0.25,
+   "tested": 35,
+   "replicated": 18,
+   "secondary_all_testable": {
+    "tested": 63,
+    "replicated": 27,
+    "rate": 0.42857142857142855,
+    "sign_agreement": 0.7777777777777778,
+    "beta_correlation": 0.5699378413968152
+   }
+  },
+  "P4_novel_yield": {
+   "passed": true,
+   "novel_tier_A_rate": 0.7941176470588235,
+   "threshold": 0.3,
+   "novel_tested": 34,
+   "novel_replicated": 27
+  },
+  "P5_sensitivity_floor": {
+   "passed": true,
+   "self_dependencies": {
+    "tested": 4,
+    "replicated": 4,
+    "rate": 1.0
+   },
+   "of_self_dependencies": 4,
+   "independent_controls": {
+    "note": "the sensitivity floor uncorrelated with the primary result: controls the discovery screen detects at the primary threshold, did not select, and that are not self-dependencies. The denominator is fixed before the freeze; a control that cannot be tested counts as not replicated.",
+    "denominator": 3,
+    "tested": 3,
+    "replicated": 2,
+    "rate": 0.6666666666666666
+   },
+   "independent_threshold": 0.5,
+   "all_controls": {
+    "tested": 17,
+    "replicated": 15,
+    "rate": 0.8823529411764706
+   }
+  }
+ }
+}
