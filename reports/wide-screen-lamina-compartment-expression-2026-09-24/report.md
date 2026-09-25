@@ -3,7 +3,7 @@
 ## Status (2026-09-25): provisional candidate, not a finding
 - The GC-lamina association below was found in a registered screen and replicated in a registered K562 test. A later registered test in another pA-DamID cohort (lbr/, GSE277503) showed that two same-genotype wild-type libraries can differ by a GC gradient of rho +0.61, larger than the effect claimed here. The K562 placebos were small, but they came from only three wild-type libraries, so between-library GC variation could explain the LMNA result. Until a test bounds that variation inside the same data, the association is a candidate, not a finding.
 - The registered LBR sign-reversal test was not supported (DIRECTION_ONLY). An exploratory fine-scale diagnostic meant to separate technical from domain-level GC gradients was uninformative (both sections below).
-- The decisive test is registered and frozen: mef/, a third cohort (GSE124205, mouse primary MEFs, DamID-seq, lamin A/C knockdown) with three wild-type embryos, so between-embryo GC variation bounds the knockdown effect inside the same data. Its data had not been downloaded when this record was published.
+- The decisive test (mef/, GSE124205, mouse primary MEFs, shLaminA/C DamID) was registered and frozen before its data were downloaded, then fetched and run on 2026-09-25: **DIRECTION_ONLY in all three arms — not replicated**. Both knockdown primaries replicate the predicted direction (rho ~-0.35) but the between-embryo wild-type placebos reach 52-83% of the primary size and breach the registered bound, so the gradient cannot be attributed to lamin A/C loss rather than library-level variation. Outcome section below.
 
 ## Summary at PR #7 (2026-09-24; kept as published, qualified by the status above)
 - Positive, pre-registered: after loss of lamin A/C, regions richer in GC lose lamin B1 contact relative to AT-rich regions, beyond baseline lamina contact and gene density. Found in a registered 47-pair screen on public data (acute siLMNA in hiPSC-derived cardiomyocytes, GSE300197; held-out even-autosome rho -0.236) and REPLICATED in a registered test in a cohort this program had never opened (chronic LMNA-knockout K562, LMNB1 pA-DamID, GSE263012; rho -0.249 batch-matched and -0.272 all replicates, both p 0.0002 against 5,000 within-chromosome circular shifts; scale-free arm -0.253 / -0.266; WT-vs-WT placebos -0.061 and +0.035). Robust to CpG-island-count adjustment (-0.25 / -0.30) and amplicon exclusion; a cubic baseline also holds (-0.30 / -0.28) though its placebo rises to -0.091; 18 of 22 autosomes negative.
@@ -128,7 +128,7 @@ Reading: every contrast is coarse-dominated, including the same-genotype placebo
 ## Record note: working-copy overwrite, restored (2026-09-25)
 The mef/ synthetic tests were first run at about 00:38 UTC on 2026-09-25. A module-name collision made `import build_features` resolve to code/build_features.py, the hg38 builder, which runs at import. It rewrote features/tiles.tsv and features/manifest.json in the private working directory with their versions from before the external features were added. No analysis ran on the overwritten files. Both files were restored from the PR #7 published copies, whose hashes equal the frozen originals. All five freeze receipts that bind them verify again: registration/freeze-pre-discovery.json, control/, panel/, damid/ and lbr/. The mouse builder was renamed mef/build_mm9_features.py so the collision cannot recur.
 
-## Registered third-cohort test (mef/, GSE124205): frozen 2026-09-25T00:50:52Z, data not yet downloaded
+## Registered third-cohort test (mef/, GSE124205): NOT REPLICATED — label DIRECTION_ONLY in all three arms
 Why this test: the lbr/ placebo showed that GC gradients between same-genotype libraries can exceed the claimed effect, and the fine-scale diagnostic could not tell them apart. A decisive test needs a cohort whose own wild-type replicates bound between-library GC variation, in data this program has never opened.
 
 Cohort: GSE124205 (Reddy lab), primary mouse embryonic fibroblasts from three e13.5 embryos, Dam-LaminB1 DamID-seq, deposited log2(Dam-LaminB1/Dam) bigWigs on mm9. It is a third species, lab, assay pipeline and perturbation class (shRNA knockdown) relative to GSE300197 and GSE263012.
@@ -157,4 +157,20 @@ Known limits:
 - There are only two knockdown embryos.
 - A systematic GC artifact confined to the knockdown libraries could not be separated from a real effect inside this cohort. Only agreement across cohorts addresses that.
 
-This registration was published before the data download. The outcome will be recorded under the no-spin rule whatever it is.
+This registration was published before the data download. The outcome is recorded here under the no-spin rule.
+
+### Outcome (fetched and run 2026-09-25; `mef/intake.json`, `mef/results/result.json`, `logs/mef-run.log`; clock times cited in this record are from local file mtimes)
+
+The GC–lamina claim is **not replicated** in this cohort. Both primaries pass in every arm — shLaminA/C minus same-embryo wild type is negative with rho about -0.35 (raw and flexible) and -0.25/-0.39 (scale-free), circular-shift p = 0.0002 — but the between-embryo wild-type placebos fail the registered bound (half the mean primary |rho|, about 0.17): PL_15_18 -0.182, PL_x17_18 -0.234, PL_x17_15 -0.230 in the raw arm, with the same pattern in flexible and two of three failing in scale-free. Every arm labels DIRECTION_ONLY; specificity is NOT_APPLICABLE and was never evaluated.
+
+Reading: the GC gradient's *direction* is consistent across all three cohorts this program has tested (hiPSC-cardiomyocyte siLMNA, K562 LMNA-KO, MEF shLMNA), but within-cohort wild-type libraries carry a GC-correlated difference of the same sign and roughly half to four-fifths the primary size (52-83% of the arm mean). The association cannot be attributed to lamin A/C loss rather than between-library variation on this evidence. Combined with the RPE1 SunTag placebo (+0.61, larger than its primary), two independent registered tests now place library-level GC variation at the scale of the claimed effect. The candidate remains provisional and is downgraded from a finding to an unresolved direction.
+
+Required disclosures (post-outcome review, `design/mef-post-outcome-review.json`, verdict PASS_WITH_REPAIRS):
+- The 5,000-shift null saturates: every one of the 39 arm tests returns the floor p = 1/5001. The p criterion had no discriminating power; the placebo bound alone decided the label.
+- The placebo failure is substantially a replicate-series scale artifact: all x17-series tracks have sd ≈1.85-2.23 against 0.55-1.25 for p15/p18, and the two cross-series placebos carry baseline slopes +2.3/+1.9. The same-series placebo PL_15_18 barely fails in raw/flexible and passes scale-free.
+- Range controls ran positive (+0.13/+0.25 raw), so a dynamic-range leak does not mimic the negative gradient; knockdown expansion direction differs by embryo.
+- Drug controls are incoherent even descriptively: DZNep is -0.33 in embryo p18 but +0.38 in x17 (opposite signs), while TSA and BIX01294 are positive in both. Had the label reached the specificity stage it would have been MIXED.
+- The CpG-adjusted probe stays negative (-0.298/-0.263, p = 0.001): the gradient is not a CpG-island artifact, but that says nothing about library attribution.
+- Integrity re-verified post hoc: all 12 frozen files and all 11 data files hash to their receipts; fetch mtimes postdate the freeze by ~15 minutes and the result postdates intake by ~10 minutes.
+
+Independent reviews: pre-freeze `design/mef-review.json` (PASS_WITH_REPAIRS, applied before freeze); post-outcome `design/mef-post-outcome-review.json` (PASS_WITH_REPAIRS; its one delegated step, byte-level re-hashing, was run by the integrator and passed).
