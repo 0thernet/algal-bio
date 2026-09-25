@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Copy this campaign's record into the algal-bio worktree.
 
-The sealed DEMETER2 matrix, the DepMap release, and derived matrices stay
+The sealed PRISM matrix, the DepMap release, and derived matrices stay
 external - hashes live in the published receipts. Personal path prefixes are
 redacted.
 
@@ -72,7 +72,7 @@ def main():
         {"schema": "bio.assembly-manifest.v2", "slug": SLUG,
          "excluded": sorted(SKIP_DIRS),
          "note": ("frozen hashes refer to sha256_original; redaction replaces "
-                  "personal path prefixes only. The sealed DEMETER2 matrix and "
+                  "personal path prefixes only. The sealed PRISM matrix and "
                   "the DepMap release stay external; hashes are in the "
                   "published receipts."),
          "files": manifest}, indent=1) + "\n")
