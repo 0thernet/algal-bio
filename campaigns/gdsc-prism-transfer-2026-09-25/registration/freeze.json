@@ -1,0 +1,30 @@
+{
+ "frozen_utc": "2026-09-25T23:22:13Z",
+ "schema": "bio.pharmaco-freeze.v1",
+ "sha256": {
+  "registration/protocol.json": "6c9550bb59211081730ce3768f23352b7bdd8838c89a26b47be496c23fca6723",
+  "registration/selection.csv": "fc962e128c65f44a5ee62d12394d3534950d8ffe23e390cfba8344bb1eb7b588",
+  "registration/gold_controls.json": "2b20941e338f5802344891a462baed6aa67dd5132e56cddf9dc18c96ebc8af05",
+  "registration/prefreeze-review.json": "0e9b0b7653d96d4e1bfe81997965c13f1b1fdf5b1a0447cb75ba9999066b4c0b",
+  "prior-art/prior-art-pharmaco.md": "d6923a44d5d69b825254274ddfe8163de866650b93babaf15bdfd7472cbd9447",
+  "README.campaign.md": "04328716c9a0b9f8ecbb55f4051c8e877e3029c75277e30b4945fd220b86562b",
+  "code/campaign.py": "db3dd33e84c658e158b3f26386b456bd9c138cc9e96b77173f193c7795f6a2da",
+  "code/prep.py": "b1e9e1a583ee4c5a287f0a20e3278e67467ad78c95341b478a5aa1b403858dee",
+  "code/screen.py": "bc09112043f887e43d4335ed9f75b7336f9d5b93bb961df6118dd5f14a58aa40",
+  "code/fetch_drug_keys.py": "831bad4ebab954a4eb94a6de7a6279300010887e90bdbc7010324ada09cb23eb",
+  "code/freeze.py": "145955bd9958d0279b76cdf5ccace74e7dae41ad7c1b35606608c9dd9817a687",
+  "code/fetch_holdout.py": "3db39352b7a4684762f8ededb339138ca2ec396646729ed85e3e43205c11e054",
+  "code/confirm.py": "31be6314ef0524a81aae9afaa3f3f19b74c572494484a89b5536d1209acb6a50",
+  "tests/test_pharmaco.py": "9081d5dabbb3bf2eb74716909aabcd17c67eecec5f6993aa181fd6bbea17e784",
+  "data/prep/prep.receipt.json": "1784b352f6888d0f1fe994012c40179a6b3edd6f8cabfcbebd49a01381349d12",
+  "data/prep/gdsc_inchikey.json": "502855201ce5641a5f553f5877dffd3f8754dd3ac2771cea7e59da5201e50cfa",
+  "data/prep/prism_inchikey.json": "58a5c80e5cfce827e52873d9e2d4988421b95e7383a86b525e760b1732517efd",
+  "data/prep/drug_crosswalk.json": "4eaeb8fe4c389c1f4522af89c8b6947708185d982d0ba6c2c83c15261dc75d51",
+  "data/prep/gdsc2.npz": "7ca7a58d50809e5eaeceea787302374c74a350eb3a19f8e9d2ebd05a7a5f2546",
+  "registration/selection.placebo20260925.csv": "dfe4e804cd35b6c8159e7c47b49c5ce508f68788cc6b50dafeb8f98c3d281fd6",
+  "registration/selection.placebo20260926.csv": "0121f1ec26f47d909880553035af5980b29d283d396a92f2fcb1feb019d59b4e",
+  "registration/selection.placebo20260927.csv": "dfe4e804cd35b6c8159e7c47b49c5ce508f68788cc6b50dafeb8f98c3d281fd6"
+ },
+ "depmap_top_digest": "688981057cb7696f4b60c6906da0a0807c365c9cbbd7ea6a678547adb6de045b",
+ "top_digest": "10c4107429ae79433c72e1397ed3e8ebcb4db6b965539b97bc9072621f954c28"
+}

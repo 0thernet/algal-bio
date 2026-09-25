@@ -1,0 +1,183 @@
+{
+ "schema": "bio.gold-controls.v1",
+ "registered_utc": "2026-09-25T21:08:24Z",
+ "source": "literature anchors, prior-art/prior-art-pharmaco.md; each pair must be present in GDSC2 with a PRISM inchikey match to enter the tested denominator",
+ "pairs": [
+  {
+   "context": "MUT_HOT:BRAF",
+   "drug": "Vemurafenib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": false,
+   "prism_matched": false,
+   "discovery_beta": null
+  },
+  {
+   "context": "MUT_HOT:BRAF",
+   "drug": "Dabrafenib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -3.1787387516389223,
+   "discovery_n": 943,
+   "discovery_npos": 73
+  },
+  {
+   "context": "MUT_HOT:BRAF",
+   "drug": "Trametinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -1.3088494934943835,
+   "discovery_n": 955,
+   "discovery_npos": 75
+  },
+  {
+   "context": "MUT_HOT:NRAS",
+   "drug": "Trametinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -1.363039038074921,
+   "discovery_n": 955,
+   "discovery_npos": 55
+  },
+  {
+   "context": "MUT_HOT:NRAS",
+   "drug": "Selumetinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -1.2664287324941288,
+   "discovery_n": 956,
+   "discovery_npos": 56
+  },
+  {
+   "context": "MUT_HOT:KRAS",
+   "drug": "Trametinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -0.9926295389061364,
+   "discovery_n": 955,
+   "discovery_npos": 122
+  },
+  {
+   "context": "MUT_DAM:TP53",
+   "drug": "Nutlin-3a (-)",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": false,
+   "prism_matched": true,
+   "discovery_beta": 0.0,
+   "discovery_n": 956,
+   "discovery_npos": 624,
+   "unavailable_reason": "discovery-side unidentified: MUT_DAM:TP53 is 65% prevalent and collinear with lineage covariates (associate returns beta=0, unidentifiable); also biologically inverted (TP53-mut = nutlin resistance) - kept registered but unevaluable"
+  },
+  {
+   "context": "MUT_HOT:EGFR",
+   "drug": "Erlotinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -0.6424567667048242,
+   "discovery_n": 944,
+   "discovery_npos": 10
+  },
+  {
+   "context": "MUT_HOT:EGFR",
+   "drug": "Gefitinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -1.3974842867023292,
+   "discovery_n": 947,
+   "discovery_npos": 10
+  },
+  {
+   "context": "MUT_HOT:EGFR",
+   "drug": "Afatinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -0.8485603300205481,
+   "discovery_n": 955,
+   "discovery_npos": 10
+  },
+  {
+   "context": "DEL:MTAP",
+   "drug": "PRMT5-inhibitor-13",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": false,
+   "prism_matched": false,
+   "discovery_beta": null
+  },
+  {
+   "context": "MUT_HOT:PIK3CA",
+   "drug": "Alpelisib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -1.3015756618263463,
+   "discovery_n": 954,
+   "discovery_npos": 85
+  },
+  {
+   "context": "MUT_HOT:PIK3CA",
+   "drug": "Pictilisib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -0.61451802276092,
+   "discovery_n": 955,
+   "discovery_npos": 85
+  },
+  {
+   "context": "MUT_HOT:ERBB2",
+   "drug": "Lapatinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -0.7843935746022276,
+   "discovery_n": 955,
+   "discovery_npos": 11
+  },
+  {
+   "context": "MUT_HOT:KIT",
+   "drug": "Imatinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": false,
+   "prism_matched": false,
+   "discovery_beta": null
+  },
+  {
+   "context": "MUT_HOT:FLT3",
+   "drug": "Quizartinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": false,
+   "prism_matched": false,
+   "discovery_beta": null
+  },
+  {
+   "context": "MUT_HOT:JAK2",
+   "drug": "Ruxolitinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -1.8174819756818044,
+   "discovery_n": 888,
+   "discovery_npos": 1
+  },
+  {
+   "context": "MUT_HOT:ALK",
+   "drug": "Crizotinib",
+   "expected": "sensitizing (beta<0 in GDSC2, negative LFC association in PRISM)",
+   "available": true,
+   "prism_matched": true,
+   "discovery_beta": -0.48217400530664556,
+   "discovery_n": 955,
+   "discovery_npos": 6
+  }
+ ],
+ "denominators_fixed_here": {
+  "floor_denominator": 13
+ }
+}

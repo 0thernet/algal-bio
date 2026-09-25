@@ -1,0 +1,39 @@
+{
+ "reviewer": "independent-subagent (subagent_explore, read-only)",
+ "verdict": "FAIL_then_repaired",
+ "reviewed_utc": "2026-09-25T23:22:08Z",
+ "scope": "pre-freeze: protocol vs code, selection integrity, crosswalk provenance, seal status, stats equivalence",
+ "blockers": [
+  "B1 confirm.py placebo glob used 'placebo*' but files are 'selection.placebo*' - P2 would silently unevaluate. FIXED.",
+  "B2 load_prism groupby(level=0) on full 'broad::dose::screen' string = no-op collapse -> every pair untested. FIXED: groupby(bids.values).",
+  "B3 eval_frame read r.beta; gold rows have discovery_beta -> AttributeError. FIXED: fallback + discovery betas computed & embedded.",
+  "B4 data/prep/gdsc2.npz read by confirm.py but absent from freeze REQUIRED. FIXED: added."
+ ],
+ "semantic_resolutions": [
+  "P5 denominator = tested subset of the registered 13-pair floor_denominator (available & prism_matched); TP53/Nutlin registered but unevaluable (discovery beta unidentified, biologically inverted).",
+  "P1_nonanchor now excludes MUT_* anchor contexts from its denominator (anchors cannot inflate the non-anchor gate).",
+  "P2: zero/tiny placebo nomination -> pass-with-disclosure, same convention as RNAi/ORCS campaigns."
+ ],
+ "minors_recorded": [
+  "ctx-neg >=5 gate is stricter than registered >=5-pos-only (conservative).",
+  "disc_sd standardized over all 965 npz models vs dep_sd over tested subset - documented asymmetry.",
+  "'synonym':'nan' PubChem artifact present in crosswalk but zero entries carry prism_broad_ids (verified).",
+  "Screening gates MIN_N=40/MAX_PER_DRUG=6/MAX_PREV=0.6/MIN_NEG=8 unregistered in protocol (implementation constants).",
+  "arm_screen df floor 10 vs depmap's 20 (internally consistent here).",
+  "FORBIDDEN omits runs.jsonl; fetch pins URL not sha (orientation check is downstream guard).",
+  "lineage_shuffle dead code removed."
+ ],
+ "tests": "11/11 pass incl. new B1-B4 regressions",
+ "sealed_access_reviewed": true,
+ "sealed_state": "data/sealed empty; no fetch.receipt.json; fetch_holdout refuses pre-freeze",
+ "selection": {
+  "candidates": 1949816,
+  "selected": 303,
+  "anchors": 21,
+  "placebos_selected": {
+   "20260925": 0,
+   "20260926": 1,
+   "20260927": 0
+  }
+ }
+}

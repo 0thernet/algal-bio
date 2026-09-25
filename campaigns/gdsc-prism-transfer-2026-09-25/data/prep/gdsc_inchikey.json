@@ -1,0 +1,2338 @@
+{
+ "Erlotinib": {
+  "inchikey": "AAKJLRGGTJKAMG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Rapamycin": {
+  "inchikey": "QFJCIRLUMZQUOT-HPLJOQBZSA-N",
+  "smiles": null
+ },
+ "Sunitinib": {
+  "inchikey": "WINHZLLDWRZWRT-ATVHPVEESA-N",
+  "smiles": null
+ },
+ "PHA-665752": {
+  "inchikey": "OYONTEXKYJZFHA-SSHUPFPWSA-N",
+  "smiles": null
+ },
+ "MG-132": {
+  "inchikey": "TZYWCYJVHRLUCT-VABKMULXSA-N",
+  "smiles": null
+ },
+ "Paclitaxel": {
+  "inchikey": "RCINICONZNJXQF-MZXODVADSA-N",
+  "smiles": null
+ },
+ "Cyclopamine": {
+  "inchikey": "QASFUMOKHFSJGL-LAFRSMQTSA-N",
+  "smiles": null
+ },
+ "AZ628": {
+  "inchikey": "ZGBGPEDJXCYQPH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Sorafenib": {
+  "inchikey": "MLDQJTXFUGDVEO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Tozasertib": {
+  "inchikey": "GCIKSSRWRFVXBI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Imatinib": {
+  "inchikey": "KTUFNOKKBVMGRW-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "NVP-TAE684": {
+  "inchikey": "QQWUGDVOUVUTOY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Crizotinib": {
+  "inchikey": "KTEIFNKAUNYNJU-GFCCVEGCSA-N",
+  "smiles": null
+ },
+ "Saracatinib": {
+  "inchikey": "OUKYUETWWIPKQR-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "S-Trityl-L-cysteine": {
+  "inchikey": "DLMYFMLKORXJPO-FQEVSTJZSA-N",
+  "smiles": null
+ },
+ "Z-LLNle-CHO": {
+  "inchikey": "RNPDUXVFGTULLP-VABKMULXSA-N",
+  "smiles": null
+ },
+ "Dasatinib": {
+  "inchikey": "ZBNZXTGUTAYRHI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GNF-2": {
+  "inchikey": "WEVYNIUIFUYDGI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CGP-60474": {
+  "inchikey": "IYNDTACKOAXKBJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CGP-082996": {
+  "inchikey": "YVXCDLCJCIDFHE-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "CINK4"
+ },
+ "A-770041": {
+  "inchikey": "ZMNWFTYYYCSSTF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WH-4-023": {
+  "inchikey": "NBTNHSGBRGTFJS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WZ-1-84": {
+  "inchikey": "OTPQDXLFXQGSHS-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "KIN001-123"
+ },
+ "BI-2536": {
+  "inchikey": "XQVVPGYIWAGRNI-JOCHJYFZSA-N",
+  "smiles": null
+ },
+ "BMS-536924": {
+  "inchikey": "ZWVZORIKUNOTCS-OAQYLSRUSA-N",
+  "smiles": null
+ },
+ "BMS-509744": {
+  "inchikey": "ZHXNIYGJAOPMSO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CMK": {
+  "inchikey": "PELFTNQHGSITLB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Pyrimethamine": {
+  "inchikey": "WKSAUQYGYAYLPV-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "JW-7-52-1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "A-443654": {
+  "inchikey": "YWTBGJGMTBHQTM-IBGZPJMESA-N",
+  "smiles": null
+ },
+ "GW843682X": {
+  "inchikey": "JSKUWFIZUALZLX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Entinostat": {
+  "inchikey": "INVTYAOGFAGBOE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Parthenolide": {
+  "inchikey": "KTEXNACQROZXEV-SLXBATTESA-N",
+  "smiles": null
+ },
+ "GSK319347A": {
+  "inchikey": "LDTAHRLHGHFHKP-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "IKK-3 inhibitor"
+ },
+ "TGX221": {
+  "inchikey": "CPRAGQJXBLMUEL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Bortezomib": {
+  "inchikey": "GXJABQQUPOEUTA-RDJZCZTQSA-N",
+  "smiles": null
+ },
+ "XMD8-85": {
+  "inchikey": "DDTPGANIPBKTNU-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Seliciclib": {
+  "inchikey": "BTIHMVBBUGXLCJ-OAHLLOKOSA-N",
+  "smiles": null
+ },
+ "Salubrinal": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Lapatinib": {
+  "inchikey": "BCFGMOOMADDAQU-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK269962A": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Doxorubicin": {
+  "inchikey": "AOJJSUZBOXZQNB-TZSSRYMLSA-N",
+  "smiles": null
+ },
+ "Etoposide": {
+  "inchikey": "VJJPUSNTGOMMGY-MRVIYFEKSA-N",
+  "smiles": null
+ },
+ "Gemcitabine": {
+  "inchikey": "SDUQYLNIPVEERB-QPPQHZFASA-N",
+  "smiles": null
+ },
+ "Mitomycin-C": {
+  "inchikey": "NWIBSHFKIJFRCO-WUDYKRTCSA-N",
+  "smiles": null
+ },
+ "Vinorelbine": {
+  "inchikey": "GBABOYUKABKIAF-IELIFDKJSA-N",
+  "smiles": null
+ },
+ "NSC-87877": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Bicalutamide": {
+  "inchikey": "LKJPYSCBVHEWIU-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Casodex"
+ },
+ "QS11": {
+  "inchikey": "DOKZLKDGUQWMSX-HKBQPEDESA-N",
+  "smiles": null
+ },
+ "CP466722": {
+  "inchikey": "ILBRKJBKDGCSCB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Midostaurin": {
+  "inchikey": "BMGQWWVMWDBQGC-IIFHNQTCSA-N",
+  "smiles": null
+ },
+ "CHIR-99021": {
+  "inchikey": "AQGNHMOJWBZFQQ-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "CHIR99021"
+ },
+ "Ponatinib": {
+  "inchikey": "PHXJVRSECIGDHY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZD6482": {
+  "inchikey": "IRTDIKMSKMREGO-OAHLLOKOSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "AZD-6482"
+ },
+ "JNK-9L": {
+  "inchikey": "AHMHIFXJPSHHPH-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "JNK inhibitor 9l"
+ },
+ "PF-562271": {
+  "inchikey": "LKLWTLXTOVZFAE-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "PF-00562271"
+ },
+ "HG6-64-1": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "JQ1": {
+  "inchikey": "DNVXATUJJDPFDM-KRWDZBQOSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "JQ-1"
+ },
+ "JQ12": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "DMOG": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "FTI-277": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "OSU-03012": {
+  "inchikey": "YULUCECVQOCQFQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Shikonin": {
+  "inchikey": "NEZONWMXZKDMKF-SNVBAGLBSA-N",
+  "smiles": null
+ },
+ "AKT inhibitor VIII": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Embelin": {
+  "inchikey": "IRSFLDGTOHBADP-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Emberine"
+ },
+ "FH535": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "PAC-1": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "IPA-3": {
+  "inchikey": "RFAXLXKIAKIUDT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK650394": {
+  "inchikey": "WVSBGSNVCDAMCF-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "GSK-650394"
+ },
+ "BAY-61-3606": {
+  "inchikey": "MLKHXLFEYOOYEY-NVNXTCNLSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Syk Inhibitor"
+ },
+ "5-Fluorouracil": {
+  "inchikey": "GHASVSINZRGABV-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Thapsigargin": {
+  "inchikey": "WWZKQHOCKIZLMA-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Octanoic acid"
+ },
+ "Obatoclax Mesylate": {
+  "inchikey": "ZVAGBRFUYHSUHA-LZOXOEDVSA-N",
+  "smiles": null
+ },
+ "BMS-754807": {
+  "inchikey": "LQVXSNNAFNGRAH-QHCPKHFHSA-N",
+  "smiles": null
+ },
+ "Linsitinib": {
+  "inchikey": "PKCDDUHJAFVJJB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Bexarotene": {
+  "inchikey": "NAVMQTYZDKMPEU-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Targretin"
+ },
+ "Bleomycin": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "LFM-A13": {
+  "inchikey": "UVSVTDVJQAJIFG-VURMDHGXSA-N",
+  "smiles": null
+ },
+ "GW-2580": {
+  "inchikey": "MYQAUKPBNJWPIE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Luminespib": {
+  "inchikey": "NDAZATDQFDPQBD-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "NVP-AUY922"
+ },
+ "Phenformin": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Bryostatin 1": {
+  "inchikey": "MJQUEDHRCUIRLF-TVIXENOKSA-N",
+  "smiles": null
+ },
+ "Pazopanib": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Dacinostat": {
+  "inchikey": "BWDQBBCUWLSASG-MDZDMXLPSA-N",
+  "smiles": null
+ },
+ "Epothilone B": {
+  "inchikey": "QXRSDHAAWVKZLJ-PVYNADRNSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "GNF-PF-193"
+ },
+ "GSK1904529A": {
+  "inchikey": "MOSKATHMXWSZTQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "BMS-345541": {
+  "inchikey": "MIDKPVLYXNLFGZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Tipifarnib": {
+  "inchikey": "PLHJCIYEEKOWNM-HHHXNRCGSA-N",
+  "smiles": null
+ },
+ "Avagacestat": {
+  "inchikey": "XEAOPVUAMONVLA-QGZVFWFLSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "BMS-708163"
+ },
+ "Ruxolitinib": {
+  "inchikey": "HFNKQEVNSGCOJV",
+  "resolved_via": "pubchem-primary"
+ },
+ "AS601245": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Ispinesib Mesylate": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "TL-2-105": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "AT-7519": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "TAK-715": {
+  "inchikey": "HEKAIDKUDLCBRU-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "TAK 715"
+ },
+ "BX-912": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "ZSTK474": {
+  "inchikey": "HGVNLRPZOWWDKD-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "ZSTK-474"
+ },
+ "AS605240": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Genentech Cpd 10": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK1070916": {
+  "inchikey": "QTBWCSQGBMPECM-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "GSK-1070916"
+ },
+ "Enzastaurin": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "GSK429286A": {
+  "inchikey": "OLIIUAHHAZEXEX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "FMK": {
+  "inchikey": "IKLGYJACVCXYIL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "QL-XII-47": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "IC-87114": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Idelalisib": {
+  "inchikey": "IFSDAJWBUCMOAH-HNNXBMFYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "CAL-101"
+ },
+ "UNC0638": {
+  "inchikey": "QOECJCJVIMVJGX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Cabozantinib": {
+  "inchikey": "ONIQOQHATWINJY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WZ3105": {
+  "inchikey": "DGEBYERMQBTMHV-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "XMD14-99": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Quizartinib": {
+  "inchikey": "CVWXJKQAOSCOAB-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "AC 220"
+ },
+ "CP724714": {
+  "inchikey": "LLVZBTWPGQVVLW-SNAWJCMRSA-N",
+  "smiles": null
+ },
+ "JW-7-24-1": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "NPK76-II-72-1": {
+  "inchikey": "KZLQLABUFJNPSZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "STF-62247": {
+  "inchikey": "KATNUHQNJGNLPW-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "STF62247"
+ },
+ "NG-25": {
+  "inchikey": "SMPGEBOIKULBCT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "TL-1-85": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "VX-11e": {
+  "inchikey": "WUTVMXLIGHTZJC-OAQYLSRUSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "VX11e"
+ },
+ "FR-180204": {
+  "inchikey": "XVECMUKVOMUNLE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "ACY-1215": {
+  "inchikey": "QGZYDVAGYRLSKP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Tubastatin A": {
+  "inchikey": "GOVYBPLHWIEHEJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Zibotentan": {
+  "inchikey": "FJHHZXWJVIEFGJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Sepantronium bromide": {
+  "inchikey": "QBIYUDDJPRGKNJ-UHFFFAOYSA-M",
+  "smiles": null
+ },
+ "NSC-207895": {
+  "inchikey": "MWFZDJLPWDCQIL-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "XI-006"
+ },
+ "VNLG/124": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "AR-42": {
+  "inchikey": "LAMIXXKAWNLXOC-INIZCTEOSA-N",
+  "smiles": null
+ },
+ "CUDC-101": {
+  "inchikey": "PLIVFNIUGLLCEK-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "CUDC 101"
+ },
+ "Belinostat": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "I-BET-762": {
+  "inchikey": "AAAQFGUYHFJNHI-SFHVURJKSA-N",
+  "smiles": null
+ },
+ "CAY10603": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Linifanib": {
+  "inchikey": "MPVGZUGXCQEXTM-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "BIX02189": {
+  "inchikey": "ZGXOBLVQIVXKEB-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "BIX 02189"
+ },
+ "Alectinib": {
+  "inchikey": "KDGFLJKFZUIJMX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Pelitinib": {
+  "inchikey": "WVUNYSQLFKLYNI-AATRIKPKSA-N",
+  "smiles": null
+ },
+ "Omipalisib": {
+  "inchikey": "CGBJSGAELGCMKE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "JNJ38877605": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "SU11274": {
+  "inchikey": "FPYJSJDOHRDAMT-KQWNVCNZSA-N",
+  "smiles": null
+ },
+ "KIN001-236": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "KIN001-244": {
+  "inchikey": "GCWCGSPBENFEPE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WHI-P97": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "KIN001-042": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "KIN001-260": {
+  "inchikey": "DYVFBWXIOCLHPP-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Bayer IKKb inhibitor"
+ },
+ "KIN001-266": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Masitinib": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "Amuvatinib": {
+  "inchikey": "FOFDIMHVKGYHRU-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "MPS-1-IN-1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "NVP-BHG712": {
+  "inchikey": "ZCCPLJOKGAACRT-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "BHG712"
+ },
+ "OSI-930": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "OSI-027": {
+  "error": "HTTP Error 503: PUGREST.ServerBusy"
+ },
+ "CX-5461": {
+  "inchikey": "XGPBJCHFROADCK-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PHA-793887": {
+  "inchikey": "HUXYBQXJVXOMKX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PI-103": {
+  "inchikey": "TUVCWJQQGGETHL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PIK-93": {
+  "inchikey": "JFVNFXCESCXMBC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "SB52334": {
+  "inchikey": "VLQVAEFYIADOKI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "TPCA-1": {
+  "inchikey": "SAYGKHKXGCPTLX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Fedratinib": {
+  "inchikey": "JOOXLOJCABQBSG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Foretinib": {
+  "inchikey": "CXQHYVUVSFXTMY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Y-39983": {
+  "inchikey": "IILQESWQPZIAGP-HNCPQSOCSA-N",
+  "smiles": null
+ },
+ "YM201636": {
+  "inchikey": "YBPIBGNBHHGLEB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Tivozanib": {
+  "inchikey": "SPMVMDHWKHCIDT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WYE-125132": {
+  "inchikey": "QLHHRYZMBGPBJG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK690693": {
+  "inchikey": "KGPGFQWBCSZGEL-ZDUSSCGKSA-N",
+  "smiles": null
+ },
+ "SNX-2112": {
+  "inchikey": "ZFVRYNYOPQZKDG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "QL-XI-92": {
+  "inchikey": "UASQUKUDXJFTCO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "XMD13-2": {
+  "inchikey": "WBLZCNIEEVRRTG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "QL-X-138": {
+  "inchikey": "JMVDIGHUQAXWIE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "XMD15-27": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "T0901317": {
+  "inchikey": "SGIWFELWJPNFDH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Selisistat": {
+  "inchikey": "FUZYTVDVLBBXDL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Tenovin-6": {
+  "inchikey": "BVJSXSQRIUSRCO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "THZ-2-49": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "KIN001-270": {
+  "inchikey": "CKUFOBCNTCLXJP-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "CDK9 inhibitor"
+ },
+ "THZ-2-102-1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "AT7867": {
+  "inchikey": "LZMOSYUFVYJEPY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CI-1033": {
+  "inchikey": "OMZCMEYTWSXEPZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PF-00299804": {
+  "inchikey": "LVXJQMNHJWSHET-AATRIKPKSA-N",
+  "smiles": null
+ },
+ "TWS119": {
+  "inchikey": "VPVLEBIVXZSOMQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Torin 2": {
+  "inchikey": "GUXXEUUYCAYESJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Pilaralisib": {
+  "inchikey": "QINPEPAQOBZPOF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK1059615": {
+  "inchikey": "QDITZBLZQQZVEE-YBEGLDIGSA-N",
+  "smiles": null
+ },
+ "Voxtalisib": {
+  "inchikey": "RGHYDLZMTYDBDT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Brivanib, BMS-540215": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BIBF-1120": {
+  "inchikey": "CPMDPSXJELVGJG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AST-1306": {
+  "inchikey": "MVZGYPSXNDCANY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Apitolisib": {
+  "inchikey": "YOVVNQKCSKSHKT-HNNXBMFYSA-N",
+  "smiles": null
+ },
+ "LIMK1 inhibitor BMS4": {
+  "inchikey": "WUCYRTXFXRZKSV-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "kb NB 142-70": {
+  "inchikey": "DHUAGGSHTKPOHU-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Sphingosine Kinase 1 Inhibitor II": {
+  "inchikey": "NPUXORBZRBIOMQ-RUZDIDTESA-N",
+  "smiles": null
+ },
+ "eEF2K Inhibitor, A-484954": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "MetAP2 Inhibitor, A832234": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Venotoclax": {
+  "inchikey": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "ABT-199"
+ },
+ "CPI-613": {
+  "inchikey": "ZYRLHJIMTROTBO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CAY10566": {
+  "inchikey": "WFOFPVXMPTVOTJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Ara-G": {
+  "inchikey": "NYHBQMYGNKIUIF-FJFJXFQQSA-N",
+  "smiles": null
+ },
+ "Pemetrexed": {
+  "inchikey": "WBXPDJSOTKVWSJ-ZDUSSCGKSA-N",
+  "smiles": null
+ },
+ "Alisertib": {
+  "inchikey": "ZLHFILGSQDJULK-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Flavopiridol": {
+  "inchikey": "BIIVYFLTOXDAOV-YVEFUNNKSA-N",
+  "smiles": null
+ },
+ "C-75": {
+  "inchikey": "VCWLZDVWHQVAJU-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CAP-232, TT-232, TLN-232": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Trichostatin A": {
+  "inchikey": "RTKIYFITIVXBLE-QEQCGCAPSA-N",
+  "smiles": null
+ },
+ "Panobinostat": {
+  "inchikey": "FPOHNWQLNRZRFC-ZHACJKMWSA-N",
+  "smiles": null
+ },
+ "LCL161": {
+  "inchikey": "UFPFGVNKHCLJJO-SSKFGXFMSA-N",
+  "smiles": null
+ },
+ "IMD-0354": {
+  "inchikey": "CHILCFMQWMQVAL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "MIM1": {
+  "inchikey": "RGGFUBMUOVFZEF-CQPAABLISA-N",
+  "smiles": null
+ },
+ "ETP-45835": {
+  "inchikey": "VXNHTGWDWVCFSI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CD532": {
+  "inchikey": "GBMIFBVLJSCVJT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "NSC319726": {
+  "inchikey": "XDHBUMNIQRLHGO-UKTHLTGXSA-N",
+  "smiles": null
+ },
+ "ARRY-520": {
+  "inchikey": "LLXISKGBWFTGEI-FQEVSTJZSA-N",
+  "smiles": null
+ },
+ "SB505124": {
+  "inchikey": "WGZOTBUYUFBEPZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "A-83-01": {
+  "inchikey": "HIJMSZGHKQPPJS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "LDN-193189": {
+  "inchikey": "CDOVNWNANFFLFJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "FTY-720": {
+  "inchikey": "SWZTYAVBMYWFGS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "BAM7": {
+  "inchikey": "WRLVHADVOGFZOZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AGI-6780": {
+  "inchikey": "CCAWRGNYALGPQH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Kobe2602": {
+  "inchikey": "NNPBSITXCGPXJC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "LGK974": {
+  "inchikey": "XXYGTCZJJLTAGH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Wnt-C59": {
+  "inchikey": "KHZOJCQBHJUJFY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "RU-SKI 43": {
+  "inchikey": "AEENEMOEBJOKGN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AICA Ribonucleotide": {
+  "inchikey": "NOTGFIUVDGNKRI-UUOKFMHZSA-N",
+  "smiles": null
+ },
+ "Camptothecin": {
+  "inchikey": "VSJKWCGYPAHWDS-FQEVSTJZSA-N",
+  "smiles": null
+ },
+ "Vinblastine": {
+  "inchikey": "JXLYSJRDGCGARV-CFWMRBGOSA-N",
+  "smiles": null
+ },
+ "Cisplatin": {
+  "inchikey": "LXZZYRPGZAFOLE-UHFFFAOYSA-L",
+  "smiles": null
+ },
+ "Cytarabine": {
+  "inchikey": "UHDGCWIWMRVCDJ-CCXZUQQUSA-N",
+  "smiles": null
+ },
+ "Docetaxel": {
+  "inchikey": "ZDZOTLJHXYCWBA-VCVYQWHSSA-N",
+  "smiles": null
+ },
+ "Methotrexate": {
+  "inchikey": "FBOZXECLQNJBKD-ZDUSSCGKSA-N",
+  "smiles": null
+ },
+ "Tretinoin": {
+  "inchikey": "SHGAZHPCJJPHSC-YCNIQYBTSA-N",
+  "smiles": null
+ },
+ "Gefitinib": {
+  "inchikey": "XGALLCVXEZPNRQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Navitoclax": {
+  "inchikey": "JLYAXFNOILIKPP-KXQOOQHDSA-N",
+  "smiles": null
+ },
+ "Vorinostat": {
+  "inchikey": "WAEXFXRVDQXREF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Nilotinib": {
+  "inchikey": "HHZIURLSWUIHRB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Refametinib": {
+  "inchikey": "RDSACQWTXKSHJT-NSHDSACASA-N",
+  "smiles": null
+ },
+ "CI-1040": {
+  "inchikey": "GFMMXOIFOQCCGU-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Temsirolimus": {
+  "inchikey": "CBPNZQVSJQDFBE-FUXHJELOSA-N",
+  "smiles": null
+ },
+ "Olaparib": {
+  "inchikey": "FDLYAMZZIXQODN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Veliparib": {
+  "inchikey": "JNAHVYVRKWKWKQ-CYBMUJFWSA-N",
+  "smiles": null
+ },
+ "Bosutinib": {
+  "inchikey": "UBPYILGKFZZVDX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Lenalidomide": {
+  "inchikey": "GOTYRUGSSMKFNF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Axitinib": {
+  "inchikey": "RITAVMQDGBJQJZ-FMIVXFBMSA-N",
+  "smiles": null
+ },
+ "AZD7762": {
+  "inchikey": "IAYGCINLNONXHY-LBPRGKRZSA-N",
+  "smiles": null
+ },
+ "GW441756": {
+  "inchikey": "GXUJPQDCLCDKLU-CHHCPSLASA-N",
+  "smiles": null
+ },
+ "Lestaurtinib": {
+  "inchikey": "UIARLYUEJFELEN-LROUJFHJSA-N",
+  "smiles": null
+ },
+ "SB216763": {
+  "inchikey": "JCSGFHVFHSKIJH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Tanespimycin": {
+  "inchikey": "AYUNIORJHRXIBJ-TXHRRWQRSA-N",
+  "smiles": null
+ },
+ "VX-702": {
+  "inchikey": "FYSRKRZDBHOFAY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Motesanib": {
+  "inchikey": "RAHBGWKEPAQNFF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "KU-55933": {
+  "inchikey": "XRKYMMUGXMWDAO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Elesclomol": {
+  "inchikey": "BKJIXTWSNXCKJH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Afatinib": {
+  "inchikey": "ULXXDDBFHOBEHA-CWDCEQMOSA-N",
+  "smiles": null
+ },
+ "Vismodegib": {
+  "inchikey": "BPQMGSKTAYIVFO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Staurosporine": {
+  "inchikey": "HKSZLNNOFSGOKW-FYTWVXJKSA-N",
+  "smiles": null
+ },
+ "PLX-4720": {
+  "inchikey": "YZDJQTHVDDOVHR-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "BX795": {
+  "inchikey": "VAVXGGRQQJZYBL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "NU7441": {
+  "inchikey": "JAMULYFATHSZJM-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "SL0101": {
+  "inchikey": "SXOZSDJHGMAEGZ-IGKKHSBFSA-N",
+  "smiles": null
+ },
+ "Doramapimod": {
+  "inchikey": "MVCOAUNKQVWQHZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "JNK Inhibitor VIII": {
+  "inchikey": "KQMPRSZTUSSXND-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Wee1 Inhibitor": {
+  "inchikey": "DPEXRCOBPACFOO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Nutlin-3a (-)": {
+  "inchikey": "BDUHCSBCVGXTJM",
+  "resolved_via": "synonym",
+  "synonym": "Nutlin-3 (connectivity layer identical to nutlin-3a)"
+ },
+ "Mirin": {
+  "inchikey": "YBHQCJILTOVLHD-YVMONPNESA-N",
+  "smiles": null
+ },
+ "PD173074": {
+  "inchikey": "DXCUKNQANPLTEJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "ZM447439": {
+  "inchikey": "OGNYUTNQZVRGMN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "RO-3306": {
+  "inchikey": "XOLMRFUGOINFDQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "MK-2206": {
+  "inchikey": "ULDXWLCXEDXJGE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Palbociclib": {
+  "inchikey": "AHJRHEGDXFFMBM-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Dactolisib": {
+  "inchikey": "JOGKUKXHTYWRGZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Pictilisib": {
+  "inchikey": "LHNIIDJUOCFXAP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZD8055": {
+  "inchikey": "KVLFRAWTRWDEDF-IRXDYDNUSA-N",
+  "smiles": null
+ },
+ "PD0325901": {
+  "inchikey": "SUDAHWBOROXANE-SECBINFHSA-N",
+  "smiles": null
+ },
+ "SB590885": {
+  "inchikey": "MLSAQOINCGAULQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Selumetinib": {
+  "inchikey": "CYOHGALHFOKKQC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CCT007093": {
+  "inchikey": "KPFZCKDPBMGECB-WGDLNXRISA-N",
+  "smiles": null
+ },
+ "EHT-1864": {
+  "inchikey": "LSECOAJFCKFQJG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CRT0105950": {
+  "inchikey": "QYDBOFPHPMYWDO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CRT0105446": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Irinotecan": {
+  "inchikey": "UWKQSNNFCGGAFS-XIFFEERXSA-N",
+  "smiles": null
+ },
+ "Oxaliplatin": {
+  "inchikey": "DRMCATBEKSVAPL-BNTLRKBRSA-N",
+  "smiles": null
+ },
+ "Cetuximab": {
+  "inchikey": "LVVRHAVPVOVPGG-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Erbitux"
+ },
+ "FS106": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "PF-4708671": {
+  "inchikey": "FBLPQCAQRNSVHB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PRIMA-1MET": {
+  "inchikey": "BGBNULCRKBVAKL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Serdemetan": {
+  "inchikey": "CEGSUKYESLWKJP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZD4547": {
+  "inchikey": "VRQMAABPASPXMW-HDICACEKSA-N",
+  "smiles": null
+ },
+ "Capivasertib": {
+  "inchikey": "JDUBGYFRJFOXQC-KRWDZBQOSA-N",
+  "smiles": null
+ },
+ "HG-5-113-01": {
+  "inchikey": "INAFQGYNNQIERK-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "HG-5-88-01": {
+  "inchikey": "IMEGLYUXMGWVQA-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "THZ-1-87": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "TW 37": {
+  "inchikey": "PQAPVTKIEGUPRN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "XMD11-50": {
+  "inchikey": "IWMCPJZTADUIFX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "XMD11-85h": {
+  "inchikey": "VIJIVCXRKDRGGA-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "ZG-10": {
+  "inchikey": "VZEONOGFXYTZGT-WEVVVXLNSA-N",
+  "smiles": null
+ },
+ "XMD8-92": {
+  "inchikey": "QAPAJIZPZGWAND-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "THZ-2-98-01": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "QL-VIII-58": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "CCT-018159": {
+  "inchikey": "OWPMENVYXDJDOW-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Rucaparib": {
+  "inchikey": "HMABYWSNWIZPAG-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Niraparib": {
+  "inchikey": "PCHKPVIQAHNQLW-CQSZACIVSA-N",
+  "smiles": null
+ },
+ "MK-1775": {
+  "inchikey": "BKWJAKQVGHWELA-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Dinaciclib": {
+  "inchikey": "PIMQWRZWLQKKBJ-SFHVURJKSA-N",
+  "smiles": null
+ },
+ "CRT0160829": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "AZ20": {
+  "inchikey": "SCGCBAAYLFTIJU-CQSZACIVSA-N",
+  "smiles": null
+ },
+ "KU-60019": {
+  "inchikey": "SCELLOWTHJGVIC-BGYRXZFFSA-N",
+  "smiles": null
+ },
+ "FS112": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "CCT245232": {
+  "inchikey": "RZQWMJAOUJLEAM-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CCT245467": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "FY026": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "FY069": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "ZL049": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "FY012": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Tamoxifen": {
+  "inchikey": "NKANXQFJJICGDU-QPLCGJKRSA-N",
+  "smiles": null
+ },
+ "Fulvestrant": {
+  "inchikey": "VWUXBMIQPBEWFH-WCCTWKNTSA-N",
+  "smiles": null
+ },
+ "torin2": {
+  "inchikey": "GUXXEUUYCAYESJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "QL-XII-61": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "HG-6-71-01": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "PFI-1": {
+  "inchikey": "TXZPMHLMPKIUGK-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "IOX2": {
+  "inchikey": "CAOSCCRYLYQBES-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "I-BET-151": {
+  "inchikey": "VUVUVNZRUGEAHB-CYBMUJFWSA-N",
+  "smiles": null
+ },
+ "EPZ004777": {
+  "inchikey": "WXRGFPHDRFQODR-ICLZECGLSA-N",
+  "smiles": null
+ },
+ "YK-4-279": {
+  "inchikey": "HLXSCTYHLQHQDJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "(5Z)-7-Oxozeaenol": {
+  "inchikey": "NEQZWEXWOFPKOT-BYRRXHGESA-N",
+  "smiles": null
+ },
+ "Piperlongumine": {
+  "inchikey": "VABYUUZNAVQNPG-BQYQJAHWSA-N",
+  "smiles": null
+ },
+ "Daporinad": {
+  "inchikey": "KPBNHDGDUADAGP-VAWYXSNFSA-N",
+  "smiles": null
+ },
+ "AZ960": {
+  "inchikey": "SUNXHXDJOIXABJ-NSHDSACASA-N",
+  "smiles": null
+ },
+ "N22899-6-C1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "N23918-95-7": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "N24798-49-A1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK-J4": {
+  "inchikey": "WBKCKEHGXNWYMO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Talazoparib": {
+  "inchikey": "HWGQMRYQVZSGDQ-HZPDHXFCSA-N",
+  "smiles": null
+ },
+ "rTRAIL": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "UNC1215": {
+  "inchikey": "PQOOIERVZAXHBP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "UNC0642": {
+  "inchikey": "RNAMYOYQYRYFQY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "SGC0946": {
+  "inchikey": "IQCKJUKAQJINMK-HUBRGWSESA-N",
+  "smiles": null
+ },
+ "ICL1100013": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "XAV939": {
+  "inchikey": "KLGQSVMIPOVQAX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "965-D2": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "993-D2": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY ACCi": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY AKT1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY-HDAC11_1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY-HDAC11_2": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY-HDAC11_4": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY-MPS1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY-MPS-combo-1 (paclitaxel 5 uM)": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BAY-MPS-combo 2 (paclitaxel 1 uM)": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Trametinib": {
+  "inchikey": "LIRYPHYGHXZJBZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Dabrafenib": {
+  "inchikey": "BFSMGDJOXZAERB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Temozolomide": {
+  "inchikey": "BPEGJWRSRHCHSN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Bleomycin (50 uM)": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "ZL109": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "AZD3514": {
+  "inchikey": "JMEYDSHPKCSIJC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Bleomycin (10 uM)": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "AZD6738": {
+  "inchikey": "DTTJKLNXNZAVSM-JYCIKRDWSA-N",
+  "smiles": null
+ },
+ "AZD5438": {
+  "inchikey": "WJRRGYBTGDJBFX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZD6094": {
+  "inchikey": "XYDNMOZJKOGZLS-NSHDSACASA-N",
+  "smiles": null
+ },
+ "Dyrk1b_0191": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD4877": {
+  "inchikey": "SMFXSYMLJDHGIE-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "EphB4_9721": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD8931": {
+  "inchikey": "DFJSJLGUIXFDJP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "FEN1_3940": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "FGFR_0939": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "FGFR_3831": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "BPTES": {
+  "inchikey": "MDJIPXYRSZHCFS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZD7969": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD5582": {
+  "inchikey": "WLMCRYCCYXHPQF-ZVMUOSSASA-N",
+  "smiles": null
+ },
+ "IAP_5620": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "IAP_7638": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "IGFR_3801": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD1480": {
+  "inchikey": "PDOQBOJDRPLBQU-QMMMGPOBSA-N",
+  "smiles": null
+ },
+ "JAK1_3715": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "JAK3_7406": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "MCT1_6447": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "MCT4_1422": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD2014": {
+  "inchikey": "JUSFANSTBFGBAF-IRXDYDNUSA-N",
+  "smiles": null
+ },
+ "AZD8186": {
+  "inchikey": "LMJFJIDLEAWOQJ-CQSZACIVSA-N",
+  "smiles": null
+ },
+ "AZD8835": {
+  "inchikey": "ZGRDYKFVDCFJCZ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PI3Ka_4409": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD1208": {
+  "inchikey": "MCUJKPPARUPFJM-UWCCDQBKSA-N",
+  "smiles": null
+ },
+ "PLK_6522": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "RAF_9304": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "PARP_9495": {
+  "error": "The read operation timed out"
+ },
+ "PARP_0108": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "PARP_9482": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "TANK_1366": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD1332": {
+  "inchikey": "LBVKEEFIPBQIMD-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "TTK_3146": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "SN-38": {
+  "inchikey": "FJHBVJOVLFPMQE-QFIPXVFZSA-N",
+  "smiles": null
+ },
+ "Epirubicin": {
+  "inchikey": "AOJJSUZBOXZQNB-VTZDEGQISA-N",
+  "smiles": null
+ },
+ "Cyclophosphamide": {
+  "inchikey": "CMSMOCZEIVJLDB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Pevonedistat": {
+  "inchikey": "MPUQHZXIXSTTDU-QXGSTGNESA-N",
+  "smiles": null
+ },
+ "PFI-3": {
+  "inchikey": "INAICWLVUAKEPB-QSTFCLMHSA-N",
+  "smiles": null
+ },
+ "I-CBP112": {
+  "inchikey": "YKNAKDFZAWQEEO-IBGZPJMESA-N",
+  "smiles": null
+ },
+ "Sapitinib": {
+  "inchikey": "DFJSJLGUIXFDJP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Uprosertib": {
+  "inchikey": "AXTAPYRUEKNRBA-JTQLQIEISA-N",
+  "smiles": null
+ },
+ "Alpelisib": {
+  "inchikey": "STUWGJZDJHPWGZ-LBPRGKRZSA-N",
+  "smiles": null
+ },
+ "Taselisib": {
+  "inchikey": "BEUQXVWXFDOSAQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "EPZ5676": {
+  "inchikey": "LXFOLMYKSYSZQS-XKHGBIBOSA-N",
+  "smiles": null
+ },
+ "SCH772984": {
+  "inchikey": "HDAJDNHIBCDLQF-RUZDIDTESA-N",
+  "smiles": null
+ },
+ "IWP-2": {
+  "inchikey": "WRKPZSMRWPJJDH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Leflunomide": {
+  "inchikey": "VHOGYURTWQBHIL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK2801": {
+  "inchikey": "KHWCPNJRJCNVRI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Bromosporine": {
+  "inchikey": "UYBRROMMFMPJAN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "SGC-CBP30": {
+  "inchikey": "GEPYBHCJBORHCE-SFHVURJKSA-N",
+  "smiles": null
+ },
+ "GSK-LSD1": {
+  "inchikey": "BASFYRLYJAZPPL-UONOGXRCSA-N",
+  "smiles": null
+ },
+ "BDOCA000347a": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "BDF00022089a": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "BDILV000379a": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "VE-822": {
+  "inchikey": "JZCWLJDSIRUGIN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WZ4003": {
+  "inchikey": "SDGJBAUIGHSMRI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CZC24832": {
+  "inchikey": "RXRZPHQBTHQXSV-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK2606414": {
+  "inchikey": "SIXVRXARNAVBTC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PFI3": {
+  "inchikey": "INAICWLVUAKEPB-QSTFCLMHSA-N",
+  "smiles": null
+ },
+ "PCI-34051": {
+  "inchikey": "AJRGHIGYPXNABY-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "RVX-208": {
+  "inchikey": "NETXMUIMUZJUTB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "OTX015": {
+  "inchikey": "GNMUEVRJHCWKTO-FQEVSTJZSA-N",
+  "smiles": null
+ },
+ "GSK343": {
+  "inchikey": "ULNXAWLQFZMIHX-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "ML323": {
+  "inchikey": "VUIRVWPJNKZOSS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Entospletinib": {
+  "inchikey": "XSMSNFMDVXXHGJ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PRT062607": {
+  "inchikey": "TXGKRVFSSHPBAJ-JKSUJKDBSA-N",
+  "smiles": null
+ },
+ "Ribociclib": {
+  "inchikey": "RHXHGRAEPCAFML-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Picolinici-acid": {
+  "inchikey": "SIOXPEMLGUPBBT-UHFFFAOYSA-M",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "Picolinate"
+ },
+ "AZD5153": {
+  "inchikey": "RSMYFSPOTCDHHJ-GOSISDBHSA-N",
+  "smiles": null
+ },
+ "CDK9_5576": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "CDK9_5038": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "Eg5_9814": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "ERK_2440": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "ERK_6604": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "IRAK4_4710": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "JAK1_8709": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "AZD5991": {
+  "inchikey": "KBQCEQAXHPIRTF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "PAK_5339": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "TAF1_5496": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "ULK1_4989": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "VSP34_8731": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "IGF1R_3801": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "JAK_8517": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "GSK2256098C": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK2276186C": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK2110183B": {
+  "inchikey": "YFQJOPFTGMHYNV-YDALLXLXSA-N",
+  "smiles": null
+ },
+ "GSK626616AC": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK3337463A": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK2830371A": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "LMB_AB1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "LMB_AB2": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "LMB_AB3": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Ibrutinib": {
+  "inchikey": "XYFPWWZEPKGCCK-GOSISDBHSA-N",
+  "smiles": null
+ },
+ "Zoledronate": {
+  "inchikey": "XRASPMIURGNCCH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Acetalax": {
+  "inchikey": "PHPUXYRXPHEJDF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Topotecan": {
+  "inchikey": "UCFGDBYHRUNTLO-QHCPKHFHSA-N",
+  "smiles": null
+ },
+ "Teniposide": {
+  "inchikey": "NRUKOCRGYNPUPR-QBPJDGROSA-N",
+  "smiles": null
+ },
+ "Mitoxantrone": {
+  "inchikey": "KKZJGLLVHKMTCM-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Dactinomycin": {
+  "inchikey": "RJURFGZVJUQBHK-IIXSONLDSA-N",
+  "smiles": null
+ },
+ "Fludarabine": {
+  "inchikey": "HBUBKKRHXORPQB-FJFJXFQQSA-N",
+  "smiles": null
+ },
+ "Nelarabine": {
+  "inchikey": "IXOXBSCIXZEQEQ-UHTZMRCNSA-N",
+  "smiles": null
+ },
+ "Dacarbazine": {
+  "inchikey": "FDKXTQMXEQVLRF-ZHACJKMWSA-N",
+  "smiles": null
+ },
+ "Romidepsin": {
+  "inchikey": "OHRURASPPZQGQM-GCCNXGTGSA-N",
+  "smiles": null
+ },
+ "123829": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "765771": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "123138": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Podophyllotoxin bromide": {
+  "inchikey": "VNDCSULMOTZMNT-KSRYTWCQSA-N",
+  "smiles": null
+ },
+ "50869": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Dihydrorotenone": {
+  "inchikey": "DTFARBHXORYQBF-HBGVWJBISA-N",
+  "smiles": null
+ },
+ "720427": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "667880": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Gallibiscoquinazole": {
+  "inchikey": "LZHVHZJESCMXKN-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "L-Oxonoreleagnine": {
+  "inchikey": "FZHZQHNKCPJTNQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "729189": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "741909": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "743380": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Elephantin": {
+  "inchikey": "HSTUUCOYVIWGLJ-DXUAHVLSSA-N",
+  "smiles": null
+ },
+ "150412": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Sinularin": {
+  "inchikey": "YKKJETNBRNDYKN-JZZWRREUSA-N",
+  "smiles": null
+ },
+ "615590": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "630600": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "LMP744": {
+  "inchikey": "QCSDJDQOJBQTDV-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "776928": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Schweinfurthin A": {
+  "inchikey": "HSDZWMOBUPRZEU-LXYWBZBZSA-N",
+  "smiles": null
+ },
+ "BEN": {
+  "inchikey": "PXXJHWLDUBFPOL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Sabutoclax": {
+  "inchikey": "RAYNZUHYMMLQQA-ZEQRLZLVSA-N",
+  "smiles": null
+ },
+ "LY2109761": {
+  "inchikey": "IHLVSLOZUHKNMQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "OF-1": {
+  "inchikey": "YUNQZQREIHWDQT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "MN-64": {
+  "inchikey": "PYTOHIUBXSJKQH-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "KRAS (G12C) Inhibitor-12": {
+  "inchikey": "JFIFBWVNHLXJFY-UHFFFAOYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "GTPL8020"
+ },
+ "BDP-00009066": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "Buparlisib": {
+  "inchikey": "CWHUFRVAEUJCEF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Ulixertinib": {
+  "inchikey": "KSERXGMCDHOLSS-LJQANCHMSA-N",
+  "smiles": null
+ },
+ "Venetoclax": {
+  "inchikey": "LQBVNQSMGBZMKD-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "ABT737": {
+  "inchikey": "HPLNQCPCUACXLM-PGUFJCEWSA-N",
+  "smiles": null
+ },
+ "Afuresertib": {
+  "inchikey": "AFJRDFWMXUECEW-LBPRGKRZSA-N",
+  "smiles": null
+ },
+ "AGI-5198": {
+  "inchikey": "FNYGWXSATBUBER-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZD3759": {
+  "inchikey": "MXDSJQHFFDGFDK-CYBMUJFWSA-N",
+  "smiles": null
+ },
+ "AZD5363": {
+  "inchikey": "JDUBGYFRJFOXQC-KRWDZBQOSA-N",
+  "smiles": null
+ },
+ "Osimertinib": {
+  "inchikey": "DUYJMQONPNNFPI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Cediranib": {
+  "inchikey": "XXJWYDDUDKYVKI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Ipatasertib": {
+  "inchikey": "GRZXWCHAXNAUHY-NSISKUIASA-N",
+  "smiles": null
+ },
+ "GDC0810": {
+  "inchikey": "BURHGPHDEVGCEZ-KJGLQBJMSA-N",
+  "smiles": null
+ },
+ "GNE-317": {
+  "inchikey": "XOZLHJMDLKDZAL-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "GSK2578215A": {
+  "inchikey": "WCIGMFCFPXZRMQ-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "I-BRD9": {
+  "inchikey": "WRUWGLUCNBMGPS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Telomerase Inhibitor IX": {
+  "inchikey": "MIQUEZGHEJGPJB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "MIRA-1": {
+  "inchikey": "YXEWPGYLMHXLPS-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "NVP-ADW742": {
+  "inchikey": "LSFLAQVDISHMNB-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "P22077": {
+  "inchikey": "RMAMGGNACJHXHO-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "Savolitinib": {
+  "inchikey": "XYDNMOZJKOGZLS-NSHDSACASA-N",
+  "smiles": null
+ },
+ "UMI-77": {
+  "inchikey": "WUGANDSUVKXMEC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WIKI4": {
+  "inchikey": "RNUXIZKXJOGYQP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "WEHI-539": {
+  "inchikey": "JKMWZKPAXZBYEH-JWHWKPFMSA-N",
+  "smiles": null
+ },
+ "BPD-00008900": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "N25720-51-A1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "N27922-53-1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "N30652-18-1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "N29087-69-1": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "HKMTI-1-005": {
+  "inchikey": "LDFAJFPHFKEJOI-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "ICL-SIRT078": {
+  "inchikey": "UEJBOCXPGHSONP-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AGK2": {
+  "inchikey": "SVENPFFEMUOOGK-SDNWHVSQSA-N",
+  "smiles": null
+ },
+ "BIBR-1532": {
+  "inchikey": "PGFQXGLPJUCTOI-WYMLVPIESA-N",
+  "smiles": null
+ },
+ "Pyridostatin": {
+  "inchikey": "VGHSATQVJCTKEF-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AMG-319": {
+  "inchikey": "KWRYMZHCQIOOEB-LBPRGKRZSA-N",
+  "smiles": null
+ },
+ "MK-8776": {
+  "inchikey": "GMIZZEXBPRLVIV-SECBINFHSA-N",
+  "smiles": null
+ },
+ "Mycophenolic acid": {
+  "inchikey": "HPNSFSBZBAHARI-RUDMXATFSA-N",
+  "smiles": null
+ },
+ "Remodelin": {
+  "inchikey": "XAEJIFARBQJLML-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "LJI308": {
+  "inchikey": "YUYJEQHNWKQNBT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AZ6102": {
+  "inchikey": "WCPTUQOMNJBIET-CALCHBBNSA-N",
+  "smiles": null
+ },
+ "GSK591": {
+  "inchikey": "TWKYXZSXXXKKJU-FQEVSTJZSA-N",
+  "smiles": null
+ },
+ "VE821": {
+  "inchikey": "DUIHHZKTCSNTGM-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "VTP-A": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "VTP-B": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "PBD-288": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "POMHEX": {
+  "inchikey": "TVFIFFUSHZDTKT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CT7033-2": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "GSK-LSD1-2HCl ": {
+  "inchikey": "SQVRNKJHWKZAKO-PFQGKNLYSA-N",
+  "smiles": null,
+  "resolved_via": "synonym",
+  "synonym": "nan"
+ },
+ "5-azacytidine": {
+  "inchikey": "NMUSYJAQQFHJEW-KVTDHHQDSA-N",
+  "smiles": null
+ },
+ "A-366": {
+  "inchikey": "BKCDJTRMYWSXMC-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "CPI-637": {
+  "inchikey": "BFTKDWYIRJGJCA-CYBMUJFWSA-N",
+  "smiles": null
+ },
+ "UNC0379": {
+  "inchikey": "WEXCGGWTIDNVNT-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "AT13148": {
+  "inchikey": "IIRWNGPLJQXWFJ-KRWDZBQOSA-N",
+  "smiles": null
+ },
+ "GSK2830371": {
+  "inchikey": "IVDUVEGCMXCMSO-FQEVSTJZSA-N",
+  "smiles": null
+ },
+ "THR-101": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "THR-102": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "THR-103": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "ascorbate (vitamin C)": {
+  "error": "HTTP Error 404: PUGREST.NotFound"
+ },
+ "glutathione": {
+  "inchikey": "RWSXRVCMGQZWBV-WDSKDSINSA-N",
+  "smiles": null
+ },
+ "alpha-lipoic acid": {
+  "inchikey": "AGBQKNBQESQNJD-UHFFFAOYSA-N",
+  "smiles": null
+ },
+ "N-acetyl cysteine": {
+  "inchikey": "PWKSKIMOESPYIA-BYPYZUCNSA-N",
+  "smiles": null
+ },
+ "Vemurafenib": {
+  "inchikey": "GPXBXXGIAQBQNI",
+  "resolved_via": "pubchem-primary"
+ }
+}

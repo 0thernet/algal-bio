@@ -1,0 +1,46 @@
+{
+ "schema": "bio.protocol.v1",
+ "campaign_id": "gdsc-prism-transfer-2026-09-25",
+ "status": "registered_pre_freeze",
+ "question": "Do drug-response <-> biomarker associations discovered in GDSC2 replicate at the association level on a sealed PRISM Repurposing holdout?",
+ "why_it_is_worth_registering": "The GDSC/CCLE/CTRP consistency debate is a decade old; no preregistered sealed-holdout association-level test exists. Known expected rates (~0.60-0.65 response-level correlation; higher for mutation anchors) make this a calibrated replication study.",
+ "data": {
+  "discovery": "GDSC2 fitted dose-response (Sanger cancerrxgene current release); biomarker contexts = DepMap omics contexts on shared models",
+  "holdout": "PRISM Repurposing 19Q4, figshare 10.6084/m9.figshare.9393293 (4,518 compounds x 578 lines) - sealed, fetched post-freeze",
+  "drug_matching": "InChIKey/broad_id only - never name matching",
+  "response_harmonization": "shared-dose-range sigmoidal AUC; no direct comparison of GDSC AUC to PRISM LFC without a registered mapping",
+  "prism_holdout_file": "figshare 10.6084/m9.figshare.9393293 file 20237757: secondary-screen replicate-collapsed logfold-change (MTS010, 489 lines x 1,448 compounds)"
+ },
+ "registered_predictions": {
+  "P1_anchor": "mutation-anchor associations replicate at >= 0.70 of tested anchor pairs",
+  "P1_nonanchor": "discovery-significant sensitizing associations replicate at >= 0.40 of tested NON-ANCHOR primary pairs (anchor = MUT_HOT/MUT_DAM contexts; the non-anchor gate excludes them so anchors cannot inflate the rate)",
+  "P2": "placebo selections replicate at <= 0.15 of tested placebo pairs; if the registered placebo set nominates <=1 testable pair, P2 is reported as pass-with-disclosure (the zero-nomination convention, same as the RNAi and ORCS campaigns)",
+  "P5": "registered gold anchors replicate at >= 0.5 of TESTED pairs from the controls file's own 13-pair floor_denominator subset (available & prism_matched); pairs unevaluable on discovery (unidentified beta or absent from the GDSC matrix) are registered but excluded from the denominator",
+  "P4": "floor-effect compounds are excluded a priori (>= 8 in-range sensitive lines), never scored as failures"
+ },
+ "caveats": [
+  "PRISM 19Q4 screened adherent lines only - hematopoietic-lineage biomarkers are untestable and are excluded before the denominator is fixed.",
+  "Same specimens across collections - assay-level independence only.",
+  "The response-metric harmonization is the dominant disagreement driver (Haverty 2016; iDRR 2026): the shared-dose-range AUC refit is part of the registered pipeline, not a post-hoc fix."
+ ],
+ "open_items": [],
+ "spend": "$0 - public data only",
+ "definitions": {
+  "discovery": "GDSC2 LN_IC50 per (SangerModelID->DepMap model, drug); per (context, drug) covariate-adjusted beta via the depmap campaign stats machinery",
+  "sensitizing": "beta <= -0.35 (LN_IC50 scale) with shrunken lower bound > 0 and BH q <= 0.01",
+  "compound_eligibility": "drug requires >= 8 in-range sensitive lines (LN_IC50 < ln(MAX_CONC)) and LN_IC50 sd > 0.05; floor-effect compounds excluded a priori, never scored",
+  "drug_matching": "GDSC DRUG_NAME -> PubChem canonical SMILES -> InChIKey connectivity layer (first 14 chars); PRISM broad_id SMILES -> InChIKey via RDKit; join on inchikey1 only",
+  "response_harmonization": "association-level replication only: beta on LN_IC50 (GDSC) vs beta on replicate-collapsed log2FC (PRISM); standardization = |beta| / outcome sd; never a raw AUC-vs-LFC comparison",
+  "replication": "same sign, one-sided p < 0.05, |z_holdout| >= 0.5 x |z_discovery|, >= 5 ctx+ and >= 25 total models",
+  "anchors": "mutation anchors = MUT_HOT/MUT_DAM contexts; the anchor floor P1 >= 0.70 applies to that subset",
+  "placebo": "context labels permuted within lineage strata, same discovery gates"
+ },
+ "labels": {
+  "PHARMACO_REPLICATED": "P1_anchor, P1_nonanchor, P5 pass and P2 does not breach",
+  "PARTIAL_TRANSFER": "exactly one of P1_anchor/P1_nonanchor passes",
+  "NO_TRANSFER": "both P1 rates fail",
+  "PLACEBO_BREACH": "P2 fails with >= 1 tested placebo pair",
+  "UNDERPOWERED": "P5 fails",
+  "NOT_EVALUABLE": "no primary or gold pair tested"
+ }
+}
