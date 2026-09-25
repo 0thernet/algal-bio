@@ -1,0 +1,55 @@
+k562 WT_r1 1778799 cross-verified
+k562 WT_r2 1166000 cross-verified
+k562 WT_r3 1780546 cross-verified
+k562 LMNAKO_r1 1021727 cross-verified
+k562 LMNAKO_r2 1156555 cross-verified
+rpe1 WT_SCII_r13 1439758 cross-verified
+rpe1 WT_SCII_r14 2228055 cross-verified
+rpe1 WT_Top2B_r13 1436344 cross-verified
+rpe1 WT_Top2B_r14 2222120 cross-verified
+rpe1 LBRKO_SCII_r13 1439629 cross-verified
+rpe1 LBRKO_SCII_r14 2224162 cross-verified
+rpe1 LBRKO_Top2B_r13 1445663 cross-verified
+rpe1 LBRKO_Top2B_r14 2229129 cross-verified
+rpe1 CAL_r13 2220229 cross-verified
+rpe1 CAL_r14 1446558 cross-verified
+mef WT_p15 39205194 cross-verified
+mef WT_p18 41314757 cross-verified
+mef WT_x17 42436783 cross-verified
+mef AC_p15 41653113 cross-verified
+mef AC_x17 42082353 cross-verified
+mef BIX_p18 41454766 cross-verified
+mef BIX_x17 41257795 cross-verified
+mef DZN_p18 42674543 cross-verified
+mef DZN_x17 38333454 cross-verified
+mef TSA_p18 38869849 cross-verified
+mef TSA_x17 29769850 cross-verified
+opc PF_8 58687836 first-receipt
+opc PF_9 58919431 first-receipt
+opc PF_10 58748139 first-receipt
+opc T3_18 58851433 first-receipt
+opc T3_19 59146287 first-receipt
+opc T3_20 59105304 first-receipt
+LV_k562_wt_r1r2    raw -0.037 (n 5324) sf -0.038
+LV_k562_wt_r1r8    raw -0.011 (n 5332) sf -0.017
+LV_k562_wt_r2r8    raw +0.013 (n 5329) sf +0.018
+LV_k562_lmna       raw -0.233 (n 5164) sf -0.231
+LV_rpe1_wt_sc      raw +0.121 (n 5352) sf +0.124
+LV_rpe1_wt_top     raw +0.428 (n 5347) sf +0.413
+LV_rpe1_lbrko_sc   raw +0.063 (n 5346) sf +0.060
+LV_rpe1_lbrko_top  raw +0.296 (n 5351) sf +0.278
+LV_rpe1_cal        raw +0.577 (n 5354) sf +0.517
+LV_mef_wt_15_18    raw -0.118 (n 4759) sf -0.092
+LV_mef_wt_15_x17   raw +0.045 (n 4755) sf +0.127
+LV_mef_wt_18_x17   raw +0.152 (n 4755) sf +0.191
+LV_mef_shac        raw +0.128 (n 4757) sf +0.134
+LV_mef_bix         raw +0.163 (n 4748) sf +0.211
+LV_mef_dzn         raw -0.225 (n 4746) sf -0.136
+LV_mef_tsa         raw +0.253 (n 4711) sf +0.272
+LV_opc_pf_8_9      raw -0.009 (n 4811) sf -0.020
+LV_opc_pf_8_10     raw +0.097 (n 4811) sf +0.095
+LV_opc_pf_9_10     raw +0.129 (n 4811) sf +0.127
+LV_opc_t3_18_19    raw +0.398 (n 4811) sf +0.325
+LV_opc_t3_18_20    raw +0.231 (n 4811) sf +0.218
+LV_opc_t3_19_20    raw -0.351 (n 4811) sf -0.336
+LABEL SYSTEMATIC {"median_abs_rho": 0.1407888929402331, "frac_abs_ge_0.10": 0.6818181818181818, "n_p2_eligible": 17, "p2_median_ratio": 0.9662128757027171, "p1": true, "p2": true, "p3": true, "p4": true, "holdout_abs": {"LV_opc_pf_8_9": 0.008819567305756573, "LV_opc_pf_8_10": 0.0965377357471657, "LV_opc_pf_9_10": 0.12922644279109477, "LV_opc_t3_18_19": 0.3981282319255484, "LV_opc_t3_18_20": 0.230835077208168, "LV_opc_t3_19_20": 0.35120765497733475}}

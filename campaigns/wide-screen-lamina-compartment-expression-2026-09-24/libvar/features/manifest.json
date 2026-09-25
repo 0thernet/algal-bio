@@ -1,0 +1,65 @@
+{
+ "schema": "bio.libvar-features.v1",
+ "assembly": "mm10",
+ "tile": 500000,
+ "chromosomes": [
+  "chr1",
+  "chr2",
+  "chr3",
+  "chr4",
+  "chr5",
+  "chr6",
+  "chr7",
+  "chr8",
+  "chr9",
+  "chr10",
+  "chr11",
+  "chr12",
+  "chr13",
+  "chr14",
+  "chr15",
+  "chr16",
+  "chr17",
+  "chr18",
+  "chr19"
+ ],
+ "n_tiles": 4935,
+ "chrom_sizes": {
+  "chr1": 195471971,
+  "chr2": 182113224,
+  "chr3": 160039680,
+  "chr4": 156508116,
+  "chr5": 151834684,
+  "chr6": 149736546,
+  "chr7": 145441459,
+  "chr8": 129401213,
+  "chr9": 124595110,
+  "chr10": 130694993,
+  "chr11": 122082543,
+  "chr12": 120129022,
+  "chr13": 120421639,
+  "chr14": 124902244,
+  "chr15": 104043685,
+  "chr16": 98207768,
+  "chr17": 94987271,
+  "chr18": 90702639,
+  "chr19": 61431566
+ },
+ "inputs_sha256": {
+  "mm10.2bit": "4de06ca0bfca5417ae3782c09cf2caf7afc97c190172f60dc07b783f1bc6f39d",
+  "refGene.txt.gz": "fab8ea8282ea60cf6d9bd17ac3ef2c91bbf3abd47c3ca7c0054b3196a7276fa1",
+  "cpgIslandExt.txt.gz": "6814cc3c100e06a4f9cc090c27a2db420ec653b131746e76f526e85e9004ee2e"
+ },
+ "input_sources": {
+  "mm10.2bit": "https://hgdownload.soe.ucsc.edu/goldenPath/mm10/bigZips/mm10.2bit",
+  "refGene.txt.gz": "https://hgdownload.soe.ucsc.edu/goldenPath/mm10/database/refGene.txt.gz",
+  "cpgIslandExt.txt.gz": "https://hgdownload.soe.ucsc.edu/goldenPath/mm10/database/cpgIslandExt.txt.gz"
+ },
+ "columns": [
+  "tss_count",
+  "gc",
+  "n_frac",
+  "cpg_n"
+ ],
+ "genes_with_tss": 24989
+}
