@@ -1,0 +1,26 @@
+linear    P_r13          rho +0.149 n 5342 p- 1.0000 p+ 0.0002 slope -0.292
+linear    P_r14          rho +0.136 n 5350 p- 1.0000 p+ 0.0002 slope -0.369
+linear    PL_batch       rho +0.130 n 5348 p- 0.9788 p+ 0.0214 slope +0.008
+linear    PL_st          rho +0.610 n 5348 p- 1.0000 p+ 0.0002 slope -0.133
+linear    FL_r13         rho -0.056 n 5342 p- 0.3649 p+ 0.6353 slope -0.237
+linear    FL_r14         rho +0.029 n 5344 p- 0.4625 p+ 0.5377 slope -0.220
+linear    T2B_r13        rho +0.189 n 5341 p- 1.0000 p+ 0.0002 slope -0.231
+linear    T2B_r14        rho +0.139 n 5353 p- 1.0000 p+ 0.0002 slope -0.139
+linear    LBRKO_T2B_r13  rho +0.110 n 5342 p- 1.0000 p+ 0.0002 slope -0.476
+linear    LBRKO_T2B_r14  rho +0.116 n 5354 p- 1.0000 p+ 0.0002 slope -0.458
+linear    FLn_r13        rho -0.021 n 5342 p- 0.3743 p+ 0.6259 slope -0.231
+linear    FLn_r14        rho +0.013 n 5344 p- 0.6599 p+ 0.3403 slope -0.259
+flexible  P_r13          rho +0.159 n 5342 p- 1.0000 p+ 0.0002 slope -0.292
+flexible  P_r14          rho +0.132 n 5350 p- 1.0000 p+ 0.0002 slope -0.369
+flexible  PL_batch       rho +0.045 n 5348 p- 0.5019 p+ 0.4983 slope +0.008
+flexible  PL_st          rho +0.597 n 5348 p- 1.0000 p+ 0.0002 slope -0.133
+flexible  FL_r13         rho -0.112 n 5342 p- 0.0170 p+ 0.9832 slope -0.237
+flexible  FL_r14         rho -0.086 n 5344 p- 0.0002 p+ 1.0000 slope -0.220
+flexible  T2B_r13        rho +0.209 n 5341 p- 1.0000 p+ 0.0002 slope -0.231
+flexible  T2B_r14        rho +0.175 n 5353 p- 1.0000 p+ 0.0002 slope -0.139
+flexible  LBRKO_T2B_r13  rho +0.105 n 5342 p- 1.0000 p+ 0.0002 slope -0.476
+flexible  LBRKO_T2B_r14  rho +0.099 n 5354 p- 1.0000 p+ 0.0002 slope -0.458
+flexible  FLn_r13        rho -0.043 n 5342 p- 0.0450 p+ 0.9552 slope -0.231
+flexible  FLn_r14        rho -0.026 n 5344 p- 0.0356 p+ 0.9646 slope -0.259
+diagnostics {"sd": {"WT_r13": 1.0887338993214408, "WT_r14": 1.0529209409320996, "LBRKO_r13": 0.7999615609546492, "LBRKO_r14": 0.8168476855484016, "ST_r6": 0.9183340230190513, "ST_r7": 1.0739402501469741, "WT_T2B_r13": 0.8462831526841015, "WT_T2B_r14": 0.928069436787643, "LBRKO_T2B_r13": 0.6882596749817249, "LBRKO_T2B_r14": 0.7409530123781729}, "spearman": {"WT_r13~WT_r14": 0.978505811473991, "WT_r13~ST_r6": 0.8173336004900579, "WT_r13~ST_r7": 0.8320563803719749, "WT_r14~ST_r6": 0.8287878910665195, "WT_r14~ST_r7": 0.8294412169410497, "ST_r6~ST_r7": 0.9777154972683948, "LBRKO_r13~LBRKO_r14": 0.9129216388196583, "WT_r13~LBRKO_r13": 0.8289384055074305, "WT_r14~LBRKO_r14": 0.6924381368249892}, "FLn_r13": {"added_sd": 0.48164780009213, "target_spearman": 0.8285894005135526}, "FLn_r14": {"added_sd": 0.7480110335531257, "target_spearman": 0.6918936566903664}}
+LABEL DIRECTION_ONLY (linear DIRECTION_ONLY / flexible DIRECTION_ONLY)

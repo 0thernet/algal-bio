@@ -1,0 +1,70 @@
+{
+ "schema": "bio.fresh-cohort-replication.v1",
+ "campaign_id": "gc-lamina-change-after-lbr-loss-rpe1-damid-2026-09-24",
+ "status": "registered before any GSE277503 data file was downloaded or opened by this program; only GEO metadata (family SOFT, filelist.txt) was read",
+ "origin": "damid/ campaign secondary, reported-only readouts in GSE263012 K562: LBR KO minus WT rho +0.316 (scale-free +0.326), LMNA/LBR DKO +0.267, opposite in sign to the replicated LMNA-loss result (rho -0.25/-0.27). Seen after outcome, so exploratory; this is its first test in unobserved data. Flattening (LBR KO track SD 1.73 vs WT 2.45) was the named alternative explanation.",
+ "hypothesis": "after loss of LBR, the change in nuclear-lamina contact is POSITIVELY related to GC content beyond baseline lamina contact and gene density (GC-rich regions gain lamina contact relative to AT-rich regions), i.e. opposite in sign to lamin A/C loss, and not explained by monotone flattening of the lamina profile",
+ "cohort": "GSE277503 (van Schaik et al. 2025 Nucleic Acids Res, DOI 10.1093/nar/gkaf964), RPE1, LMNB2 pA-DamID log2(target/Dam) bigWigs at 20 kb, hg38 (per GEO processing); verified at run time: chr1 length must equal 248956422",
+ "samples": {
+  "WT_r13": "GSM8523526_pADamID-RPE_WT_SCII_r13_Lmnb2-20kb.bw",
+  "WT_r14": "GSM8523538_pADamID-RPE_WT_SCII_r14_Lmnb2-20kb.bw",
+  "LBRKO_r13": "GSM8523532_pADamID-RPE_LBRKO_SCII_r13_Lmnb2-20kb.bw",
+  "LBRKO_r14": "GSM8523544_pADamID-RPE_LBRKO_SCII_r14_Lmnb2-20kb.bw",
+  "ST_r6": "GSM8523514_pADamID-RPE_SCII_CAL_r13_Lmnb2-20kb.bw",
+  "ST_r7": "GSM8523520_pADamID-RPE_SCII_CAL_r14_Lmnb2-20kb.bw",
+  "WT_T2B_r13": "GSM8523529_pADamID-RPE_WT_Top2B_r13_Lmnb2-20kb.bw",
+  "WT_T2B_r14": "GSM8523541_pADamID-RPE_WT_Top2B_r14_Lmnb2-20kb.bw",
+  "LBRKO_T2B_r13": "GSM8523535_pADamID-RPE_LBRKO_Top2B_r13_Lmnb2-20kb.bw",
+  "LBRKO_T2B_r14": "GSM8523547_pADamID-RPE_LBRKO_Top2B_r14_Lmnb2-20kb.bw"
+ },
+ "sample_notes": "iCUT line (RPE1 with inducible Cas9): WT and LBRKO, each with control siRNA (SCII) or TOP2B siRNA, experiments r13 and r14 (GEO titles iCUT_*_r1 / _r2). ST_r6/ST_r7 are WT RPE1 SunTag subline (RPE1_SunTag_170_10, different medium), control siRNA, LMNB2 (GEO titles SunTag_SCII_LB2_Cal_r6/_r7). Their deposited file names carry CAL_r13/CAL_r14, the lab's experiment number, so ST_r6 was processed in experiment r13 and ST_r7 in r14 alongside the iCUT samples. B = mean(ST_r6, ST_r7) therefore has measurement noise independent of each primary delta's own tracks, but it is not batch-independent: a batch effect shared by an experiment enters B at half weight. A shared batch effect cancels in each within-experiment primary delta.",
+ "url_template": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8523nnn/{gsm}/suppl/{file}",
+ "tiling": "hg38 500 kb tiles of features/tiles.tsv (autosomes); value = pyBigWig exact mean; NaN if exact coverage < 50% (panel.tile_track)",
+ "predictor": "gc (features/tiles.tsv, UCSC gc5Base)",
+ "baseline": "B = mean(ST_r6, ST_r7)",
+ "primary_contrasts": {
+  "P_r13": "delta = LBRKO_r13 - WT_r13 (same batch)",
+  "P_r14": "delta = LBRKO_r14 - WT_r14 (same batch)"
+ },
+ "placebos": {
+  "PL_batch": "delta = WT_r13 - WT_r14 (cross-experiment iCUT WT; calibrates cross-experiment GC bias); baseline B",
+  "PL_st": "delta = ST_r6 - ST_r7 (a second cross-experiment placebo in the SunTag subline, not a line contrast); baseline mean(WT_r13, WT_r14) instead of B"
+ },
+ "flattening_controls": {
+  "FL_r13": "sim = WT_r14 quantile-mapped onto the empirical distribution of LBRKO_r13 over tiles finite in both (rank-preserving; pure monotone flattening of an independent WT replicate); delta = sim - WT_r13",
+  "FL_r14": "sim = WT_r13 quantile-mapped onto LBRKO_r14; delta = sim - WT_r14",
+  "rationale": "reproduces the KO marginal (including any flattening) with no GC-specific reorganisation; a GC association it produces is the flattening leak the design must exceed; FL_r13 and FL_r14 each span experiments (the mapped WT comes from the other experiment), so they carry cross-experiment GC bias with opposite signs; requiring both to pass is conservative, and PL_batch bounds that bias. Known attenuation (pre-freeze review): when the KO track is noisier relative to its signal than the WT, a quantile-mapped WT flattens less than the real KO, so FL under-reproduces the leak (simulated FL/primary 0.67-1.05 across noise levels); the 0.5*m bound caught pure flattening at all simulated levels, but the margin narrows with noise",
+  "FLn_reported_only": "FLn_r13/FLn_r14: FL sim plus Gaussian noise (seed 20261201 + batch index) with SD chosen by bisection so that Spearman(sim, WT same experiment) equals the observed Spearman(LBRKO, WT same experiment); this matches the KO's observed disagreement with WT (including any true reorganisation, so it is a deliberately generous leak estimate); reported with no label"
+ },
+ "secondary_reported_only": {
+  "T2B_r13": "WT_T2B_r13 - WT_r13",
+  "T2B_r14": "WT_T2B_r14 - WT_r14",
+  "LBRKO_T2B_r13": "LBRKO_T2B_r13 - WT_r13",
+  "LBRKO_T2B_r14": "LBRKO_T2B_r14 - WT_r14",
+  "note": "the source paper reports that TOP2B depletion phenocopies LBR loss; the sign of these is reported with no label"
+ },
+ "arms": {
+  "linear": "code/screen.py test_pair: rank-partial Spearman of gc vs delta, covariates tss_count and B (ranked)",
+  "flexible": "same statistic, but the covariate design is [1, rank(tss_count), u, u^2, u^3, (u-q1)_+^3, (u-q2)_+^3, (u-q3)_+^3] with u = rank(B)/n - 0.5 and q the quartiles of u: removes any smooth monotone or non-monotone dependence of delta on baseline; u ranks B over all tiles where B is finite (a monotone rescaling of rank over the tested subset)"
+ },
+ "statistic": "within-chromosome circular shift of gc (min shift 10 tiles), 5000 shifts, all autosomes; seeds 20261101 + index in the order P_r13, P_r14, PL_batch, PL_st, FL_r13, FL_r14, T2B_r13, T2B_r14, LBRKO_T2B_r13, LBRKO_T2B_r14, FLn_r13, FLn_r14; flexible arm seeds +100",
+ "min_n_per_test": 3000,
+ "abort_rule": "any test with n < 3000 or non-finite rho, or a chr1 length mismatch in any file, aborts with no label; this includes secondary tests: an abort in any test withholds every label, by intent",
+ "labels": {
+  "per_arm": {
+   "SUPPORTED": "both primaries rho >= +0.05 with one-sided positive p <= 0.01; both placebos |rho| < 0.5 * m; both flattening controls rho < 0.5 * m; m = mean primary rho",
+   "FLATTENING_EXPLAINED": "primaries pass, placebos pass, a flattening control fails its bound",
+   "DIRECTION_ONLY": "primaries pass, a placebo fails its bound",
+   "OPPOSITE": "both primaries rho <= -0.05 with negative p <= 0.01",
+   "NOT_SUPPORTED": "otherwise"
+  },
+  "final_rule": "reported label is SUPPORTED only if both arms are SUPPORTED; if linear is SUPPORTED and flexible is not, NOT_ROBUST_TO_ADJUSTMENT (reported as not supported); otherwise the linear label with the flexible label beside it"
+ },
+ "no_spin": "any label other than SUPPORTED is reported as not supported in the first sentence",
+ "diagnostics_reported": "per track: autosomal SD; Spearman for all six pairs among WT_r13, WT_r14, ST_r6, ST_r7, for LBRKO_r13~LBRKO_r14, and for WT~LBRKO within each experiment; per delta: OLS slope on B",
+ "disclosed_limits": "LMNB2 (not LMNB1) DamID; RPE1 (not K562); one LBR KO line vs one WT iCUT line, and the two experiments repeat that single contrast, so line drift cannot be separated from LBR loss; the baseline B shares experiments with the primaries (see sample_notes); the flattening control attenuates when KO noise is higher (see flattening_controls); the 0.5*m bounds compare point estimates (null SD ~0.02); the LMNA side of the sign contrast comes from other cohorts (GSE300197, GSE263012), not this one; the source paper's LBR-KO findings were read before registration, though its data were not opened",
+ "claim_ceiling": "SUPPORTED supports a cross-cohort, cross-cell-type association: LBR loss shifts lamina contact toward GC-rich regions beyond baseline and flattening, opposite in sign to lamin A/C loss in other cohorts; no mechanism",
+ "amendments": [
+  "pre-freeze review design/lbr-review.json PASS_WITH_REPAIRS: full diagnostics, ST batch sharing restated and disclosed, PL_line renamed PL_st, FL attenuation disclosed and reported-only noise-matched FLn added, intake hash re-check in run, batch-GC-bias synthetic test"
+ ]
+}

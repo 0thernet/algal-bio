@@ -1,0 +1,17 @@
+{
+ "schema": "bio.lbr-freeze.v1",
+ "frozen_utc": "2026-09-25T00:01:44.862966+00:00",
+ "sha256": {
+  "lbr/protocol.json": "652a96bb86b02c75531ebea9a6b449c055e0403f7ae51061e71f82a7e50c39f4",
+  "lbr/lbr.py": "66a1ef5796d51f8cf65185dcd8af2c496bf9f74d603f2c34a7b34025f6384c95",
+  "lbr/test_lbr.py": "e3946fd1cc000980c3aa9ead22ece0dfd42e2dbae3d950799ff55ce09032a1db",
+  "lbr/freeze.py": "edccd10fb3b9d6e77fa2655e6eeab82ed034f87e3137e6302d1810258ce736dd",
+  "design/lbr-review.json": "9122c90fb3d741fb6121f108678dcb223a95fb4bc87ce6c91648e52b277653ff",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "panel/panel.py": "e9642096bd29c311b16774f58d343fec1d0310d7db57a34baeea21fa2951e7fb",
+  "features/tiles.tsv": "5a5c981a6fe7fba852cd08c2496ec09c2ea27f5c3605af5676a741709eb74cf5"
+ },
+ "python": "3.12.14",
+ "numpy": "2.3.3",
+ "scipy": "1.16.2"
+}

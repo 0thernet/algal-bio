@@ -1,0 +1,59 @@
+{
+ "verdict": "PASS_WITH_REPAIRS",
+ "blocking": [],
+ "minor": [
+  {
+   "id": "M1",
+   "file": "mef/protocol.json:9-19,22; mef/mef.py:24-28",
+   "issue": "Could not verify (no network) that the 11 GEO supplementary filenames exist exactly as listed at the series-suppl URL; a mismatch (e.g. a .gz suffix) would make the frozen test unrunnable.",
+   "repair": "Before freeze, re-confirm each name byte-for-byte against the GSE124205 suppl listing and that url_template is correct."
+  },
+  {
+   "id": "M2",
+   "file": "mef/freeze.py:10-12; lbr/lbr.py:10",
+   "issue": "mef.py imports lbr, which imports panel.tile_track at module level; panel/panel.py executes at import but is not in the freeze list.",
+   "repair": "Add panel/panel.py to the freeze list."
+  },
+  {
+   "id": "M3",
+   "file": "mef/build_mm9_features.py:68-74",
+   "issue": "Minus-strand TSS uses txEnd (exclusive); the TSS base is txEnd - 1, so a TSS at an exact 500 kb multiple lands in the next tile. Negligible.",
+   "repair": "Use b - 1 for minus-strand placement, or document."
+  },
+  {
+   "id": "M4",
+   "file": "mef/test_mef.py",
+   "issue": "No test pins the contrast wiring of tests_for (tracks per delta/baseline, key order vs protocol). Verified by hand: all 13 match.",
+   "repair": "Optional wiring test with sentinel tracks and order check."
+  },
+  {
+   "id": "M5",
+   "file": "mef/mef.py:140-146",
+   "issue": "For FL controls, gc_slope divides by the SD of AC rather than of the quantile-mapped track literally in the delta; cosmetic.",
+   "repair": "Use the mapped track's SD or note the proxy."
+  },
+  {
+   "id": "M6",
+   "file": "report.md:6; mef/protocol.json:4",
+   "issue": "report.md calls mef/ frozen before the freeze exists; status mentions Content-Length of two files without naming them.",
+   "repair": "Correct wording until freeze runs; name the probed files."
+  }
+ ],
+ "checked": [
+  "Freeze integrity: refuses if mef/data or mef/results non-empty; binds protocol, code, tests, freeze helper, builder, features, manifest, review, prior art, code/screen.py, lbr/lbr.py; run() re-verifies all hashes plus intake file hashes. Gap: panel/panel.py (M2).",
+  "Protocol-code agreement line by line (primaries, placebos, FL controls, drug contrasts, test order and seeds, thresholds, final rule, specificity, abort rules, coverage fallback, mm9 build check, cpg probe): no mismatches beyond M5.",
+  "Statistical validity: between-embryo placebos conservative (disclosed); FL controls check the negative-direction range leak; scale_free guards dynamic range; flexible arm as lbr. Null SD ~0.015 at n ~4500, ample power at rho -0.2/-0.25; realistic failure mode DIRECTION_ONLY is intended conservatism. Abort surface pre-declared and fails safe.",
+  "Feature builder: 2bit parsing correct (signature/endianness, version offsets, N blocks, mask-block skip, MSB-first T=0 C=1 A=2 G=3, N masking before GC); GC over non-N, NaN at n_frac > 0.5; partial last tile; longest-transcript TSS (M3); CpG placement.",
+  "Tests: 13 tests cover replication, null, embryo GC placebo, single-library GC bias, range leak that placebos miss, mild expansion power, OPPOSITE, GENERIC, label boundaries, abort, build check incl. Ensembl names, coverage fallback, 2bit parsing. Gaps: wiring (M4).",
+  "Wording: limits, prior knowledge, claim ceiling and no-spin bounded; no overclaims."
+ ],
+ "reviewer": "independent Devin subagent (agent c484a620), read-only, pre-freeze, 2026-09-25",
+ "repairs_applied_by_investigator": {
+  "M1": "all 11 names match the GEO suppl listing exactly (uncompressed .bw); every URL returned HTTP 200 with a Content-Length (headers only)",
+  "M2": "panel/panel.py added to mef/freeze.py",
+  "M3": "minus-strand TSS at txEnd - 1; features rebuilt (tile and gene counts unchanged)",
+  "M4": "test_contrast_wiring_matches_protocol added (sentinel tracks, order parsed from protocol.json)",
+  "M5": "FL gc_slope uses the SD of the quantile-mapped track",
+  "M6": "status wording names the metadata read; report says frozen only after mef/freeze.py ran"
+ }
+}

@@ -1,0 +1,10 @@
+K562 LMNA P_batch (LMNA_r8-WT_r3)    {"fine_rho": -0.03, "fine_n": 105038, "fine_null_sd": 0.003, "fine_z": -8.39, "coarse_rho": -0.241, "coarse_n": 5318}
+K562 LMNA r7 (LMNA_r7-WT_r1)         {"fine_rho": 0.013, "fine_n": 89642, "fine_null_sd": 0.003, "fine_z": 3.758, "coarse_rho": -0.24, "coarse_n": 5150}
+K562 PL_within (WT_r1-WT_r2)         {"fine_rho": -0.033, "fine_n": 104287, "fine_null_sd": 0.003, "fine_z": -10.206, "coarse_rho": -0.073, "coarse_n": 5308}
+K562 PL_cross (WT_r3-WT_r1)          {"fine_rho": 0.013, "fine_n": 104287, "fine_null_sd": 0.004, "fine_z": 3.676, "coarse_rho": 0.036, "coarse_n": 5308}
+K562 LBR r8 (LBR_r8-WT_r3)           {"fine_rho": 0.051, "fine_n": 103443, "fine_null_sd": 0.004, "fine_z": 11.934, "coarse_rho": 0.3, "coarse_n": 5299}
+RPE1 LBR P_r13                       {"fine_rho": 0.087, "fine_n": 131797, "fine_null_sd": 0.003, "fine_z": 29.578, "coarse_rho": 0.244, "coarse_n": 5338}
+RPE1 LBR P_r14                       {"fine_rho": 0.145, "fine_n": 132522, "fine_null_sd": 0.003, "fine_z": 42.708, "coarse_rho": 0.247, "coarse_n": 5348}
+RPE1 PL_batch                        {"fine_rho": -0.007, "fine_n": 132285, "fine_null_sd": 0.003, "fine_z": -2.42, "coarse_rho": 0.113, "coarse_n": 5344}
+RPE1 PL_st                           {"fine_rho": 0.078, "fine_n": 132476, "fine_null_sd": 0.003, "fine_z": 25.733, "coarse_rho": 0.706, "coarse_n": 5348}
+RPE1 T2B r13                         {"fine_rho": 0.094, "fine_n": 131888, "fine_null_sd": 0.003, "fine_z": 31.742, "coarse_rho": 0.245, "coarse_n": 5339}
