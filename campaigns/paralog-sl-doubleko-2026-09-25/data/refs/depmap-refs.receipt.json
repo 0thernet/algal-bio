@@ -1,0 +1,50 @@
+{
+ "synlethdb_sl": {
+  "file": "Human.SL.detailed.tsv",
+  "url": "https://zenodo.org/records/22843223/files/Human.SL.detailed.tsv?download=1",
+  "bytes": 3742521,
+  "sha256": "237e72316d53f81b155a40a6bed5217091a8dc36e98f15811bd26315e7a47c85",
+  "first_line": "x:START_ID\tx_type\tx_name\tx_source\ty:END_ID\ty_type\ty_name\ty_source\trelation\t:TYPE\trel_source\tedge_index\tcell_line\tpubmed_id\tcancer",
+  "validated": true
+ },
+ "synlethdb_nonsl": {
+  "file": "Human.non.SL.detailed.tsv",
+  "url": "https://zenodo.org/records/22843223/files/Human.non.SL.detailed.tsv?download=1",
+  "bytes": 12587566,
+  "sha256": "fe7dcb230199a6fe925b22b7889c00b719c781f9e33668fe13b70931f39e3061",
+  "first_line": "x:START_ID\tx_type\tx_name\tx_source\ty:END_ID\ty_type\ty_name\ty_source\trelation\t:TYPE\trel_source\tedge_index\tcell_line\tpubmed_id\tcancer",
+  "validated": true
+ },
+ "depmap_predictability": {
+  "file": "predictions_with_1021_lines_summary.csv",
+  "url": "https://ndownloader.figshare.com/files/49052758",
+  "bytes": 7654522,
+  "sha256": "e2a465f5727b4f151418701d7c6311a9a5f182b1028c9caecf2f1ed461ff0f4b",
+  "first_line": "gene,model,pearson,best,feature0,feature0_importance,feature1,feature1_importance,feature2,feature2_importance,feature3,feature3_importance,feature4,feature4_importance,feature5,feature5_importance,feature6,feature6_importance,feature7,feature7_importance,feature8,feature8_importance,feature9,featur",
+  "validated": true
+ },
+ "corum_human": {
+  "file": "corum_human_complexes.txt",
+  "url": "https://mips.helmholtz-muenchen.de/fastapi-corum/public/file/download_current_file?file_id=human&file_format=txt",
+  "bytes": 6268940,
+  "sha256": "5e40556eb59bb767f3396ba8c080f64c777903ffca9102345fdc35662a2e0282",
+  "first_line": "complex_id\tcomplex_name\tsynonyms\torganism\tcell_line\tpmid\tcomment_complex\tcomment_members\tcomment_disease\tcomment_drug\tcomment_drug_formal\tsubunits_uniprot_id\tsubunits_gene_name\tsubunits_gene_name_synonyms\tsubunits_protein_name\tsubunits_proteinname_synonyms\tsubunits_organism\tsubunits_drugs\tsubunits_m",
+  "validated": true
+ },
+ "msigdb_c2cp": {
+  "file": "c2.cp.v2025.1.Hs.symbols.gmt",
+  "url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2025.1.Hs/c2.cp.v2025.1.Hs.symbols.gmt",
+  "bytes": 1626547,
+  "sha256": "906012c69871393ebe45ade1f182a2024a59bdf10ddea94082dfd82285a157e1",
+  "first_line": "SA_B_CELL_RECEPTOR_COMPLEXES\thttps://www.gsea-msigdb.org/gsea/msigdb/human/geneset/SA_B_CELL_RECEPTOR_COMPLEXES\tATF2\tBCR\tBLNK\tELK1\tFOS\tGRB2\tHRAS\tJUN\tLYN\tMAP2K1\tMAP3K1\tMAPK1\tMAPK3\tMAPK8IP3\tPAPPA\tRAC1\tRPS6KA1\tRPS6KA3\tSHC1\tSOS1\tSYK\tVAV1\tVAV2\tVAV3",
+  "validated": true
+ },
+ "ensembl_paralogs": {
+  "file": "ensembl_human_paralogs.tsv",
+  "url": "https://www.ensembl.org/biomart/martservice",
+  "bytes": 16227107,
+  "sha256": "763dcf4c57779146783f789c315e261ceae1ceac65b339efd1293b3ae1a58751",
+  "first_line": "Gene stable ID\tGene name\tHuman paralogue gene stable ID\tHuman paralogue associated gene name\tParalogue %id. target Human gene identical to query gene\tParalogue %id. query gene identical to target Human gene",
+  "validated": true
+ }
+}

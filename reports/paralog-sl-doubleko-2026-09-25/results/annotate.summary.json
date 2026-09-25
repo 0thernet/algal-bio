@@ -1,0 +1,9 @@
+{
+ "selected": 10,
+ "known": 3,
+ "novel": 2,
+ "documented_nonsl": 5,
+ "nonsl_overlap": 8,
+ "same_arm_pairs": 0,
+ "del_same_arm": 0
+}

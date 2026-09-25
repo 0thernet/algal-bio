@@ -1,0 +1,35 @@
+{
+ "schema": "bio.prefreeze-review.v1",
+ "campaign_id": "paralog-sl-doubleko-2026-09-25",
+ "reviewed_utc": "2026-09-25",
+ "reviewer": "independent read-only review (subagent), report verbatim in session notes",
+ "verdict_first_round": "FAIL - 5 blockers, 13 major/minor",
+ "repairs": [
+  "B1 check_freeze: depmap-refs.receipt.json filename + per-file schema fixed; depmap24q4.receipt.json inputs re-hashed",
+  "B2 gold rows passed as Series, not dict (crash-before-recording hole closed)",
+  "B3 sKO arm is orientation-aware: the dep gene's own score is tested whichever arm it occupies",
+  "B4 SL-call rules implemented per dataset registration: boolean flags, numeric FDR columns (GI<=-0.5 AND FDR<=0.1), dLFC+Cohen's d compound rule; neither-flag-nor-GI -> UNPARSEABLE; cohens_d column patterns added to holdout_map.json",
+  "B5 column patterns anchored after normalization; gene_a must look like a symbol column; a candidate file must match >=1 registered pair and resolve >=1 registered line name, else UNPARSEABLE; file choice by matched-pair count; per-dataset notes record tried files",
+  "M6 unresolvable predictions (NaN threshold / NaN sKO) are not counted as tested",
+  "M7 column-mean imputation restored (parity with the earlier campaign's dep matrix construction)",
+  "M8 LOF contexts treat models absent from the mutation table as UNPROFILED (NaN), not wildtype, in discovery, KY prevalence, and holdout line evaluation; profiled model set stored under __profiled__ in lof_gene_models.json",
+  "M9 freeze binds tests/test_paralog.py, annotate.summary.json, lof_gene_models.json and every results/selection.placebo*.csv on disk; confirm derives the placebo set from frozen keys and refuses extras; fetch receipts carry fetched_utc >= frozen_utc and URLs are cross-checked against the frozen holdout_map",
+  "M10/M11 protocol text aligned to code: NOT_EVALUABLE conditions, P3 denominator = (dataset,line) keys carrying >=1 resolvable selected sl_gi event",
+  "M12 is_novel requires absence from BOTH reference tables; documented-nonSL pairs are a separate reported class",
+  "M13 holdout rows aggregated to one row per (dataset,line,pair) under the registered rule",
+  "M14 line names normalized on both sides before map lookup",
+  "M15 ctx/dep model-order assertion added to screen.load()",
+  "M16 same-used-guide-under-two-genes exclusion wired into the universe; prep stat genes_in fixed to pre-filter count",
+  "M17 tests added for: numeric-FDR flag, boolean flag, Cohen's-d rule, missing-signal refusal, non-gene-column refusal, unresolvable-event non-counting, sKO orientation, placebo injection refusal, zero-nomination P2, fetch timestamp/URL binding, LOF unprofiled models",
+  "M18 P4 gates DOUBLEKO_REPLICATED only when >=5 novel pairs are tested (evaluable flag disclosed); replication split by predicted-outcome type added to the verdict; T2/T3 tiers implemented"
+ ],
+ "verdict_after_repairs": "PASS_WITH_REPAIRS - all blockers addressed, test suite 21/21 green",
+ "disclosures_carried_into_protocol": [
+  "ctx-positive prediction (partner sKO lethality) is a weakly pair-specific test",
+  "in4mer has no sKO arms -> context-positive arm may be dead there",
+  "5 of 10 selected pairs are documented non-SL negatives -> replication would contradict a prior screen (reported as its own class)",
+  "novel class contains only 2 pairs -> P4 is below the evaluability floor",
+  "all 5 placebo seeds nominated 0 pairs -> P2 passes by the zero-nomination convention, thin evidence",
+  "3 known SL pairs in selection (STAG2->STAG1, SMARCA4->SMARCA2, EP300->CREBBP) double as calibration"
+ ]
+}
