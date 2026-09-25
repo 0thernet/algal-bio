@@ -33,7 +33,8 @@ for src in sorted(ROOT.rglob("*")):
         if PRIV.search(new): sys.exit(f"private path remains in {rel}")
     except UnicodeDecodeError:
         sys.exit(f"binary file not expected: {rel}")
-    dst = (rep if rel.startswith(REPORT_PREFIXES) else camp) / rel
+    pub_rel = "README.md" if rel == "README.campaign.md" else rel
+    dst = (rep if rel.startswith(REPORT_PREFIXES) else camp) / pub_rel
     dst.parent.mkdir(parents=True, exist_ok=True); dst.write_bytes(out)
     manifest.append({"source": rel, "published": str(dst.relative_to(repo)), "bytes": len(data), "bytes_published": len(out), "sha256_original": orig,
                      "sha256_published": hashlib.sha256(out).hexdigest(), "path_prefix_redacted": redacted})

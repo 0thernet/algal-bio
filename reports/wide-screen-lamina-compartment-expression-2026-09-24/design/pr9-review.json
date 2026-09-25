@@ -1,0 +1,22 @@
+{
+  "review": "algal-bio PR #9 review (mef/ outcome publication)",
+  "reviewer": "independent read-only Devin subagent (agent_id 825054db)",
+  "date": "2026-09-25",
+  "verdict": "APPROVE_WITH_REPAIRS",
+  "verified": [
+    "Outcome numbers in report.md match result.json exactly (primaries, placebos, bounds, labels, probe_cpg, flattening controls)",
+    "Label recomputation under frozen mef.py rule: DIRECTION_ONLY x3 correct; would-have-been-MIXED specificity claim verified",
+    "intake.json freeze_sha256 binds to published mef/freeze.json bytes via assembly.manifest.json; 11 files, sizes match fetch log",
+    "Ordering content-proven (fetch asserts frozen protocol hash pre-download; run re-verifies intake) in addition to mtimes",
+    "Manifest covers all published files; excluded data dirs complete; no .bw/.2bit/.gz committed; no personal paths",
+    "Claim wording: NOT REPLICATED first sentence, provisional, no absolute-novelty claim"
+  ],
+  "findings": [
+    {"n": 1, "severity": "MAJOR", "finding": "Stale campaigns/.../README.md from PR #8 kept old 'outcome follows in a later PR' text; new README.campaign.md added alongside, and README.md uncovered by manifest.", "resolution": "assemble_public.py now maps README.campaign.md -> README.md (sibling-campaign convention); stale file replaced by updated content."},
+    {"n": 2, "severity": "MAJOR", "finding": "'same-embryo wild-type placebos' factually wrong (one WT library per embryo; placebos are between-embryo) in report.md outcome and README.campaign.md.", "resolution": "Fixed to 'between-embryo wild-type placebos' in both."},
+    {"n": 3, "severity": "MAJOR", "finding": "Stale Status bullet report.md:6 still said data had not been downloaded.", "resolution": "Bullet rewritten to record the outcome (DIRECTION_ONLY, not replicated)."},
+    {"n": 4, "severity": "MINOR", "finding": "'half to two-thirds' understated the review's own 52-83% figure.", "resolution": "Harmonized to 'half to four-fifths (52-83% of the arm mean)'."},
+    {"n": 5, "severity": "MINOR", "finding": "sd range '1.9-2.2' rounded past actual 1.846-2.228.", "resolution": "Corrected to ~1.85-2.23."},
+    {"n": 6, "severity": "MINOR", "finding": "Fetch/run clock times rest on mtimes git does not preserve.", "resolution": "Outcome heading now notes times are from local file mtimes; ordering independently content-proven via freeze_sha256 binding."}
+  ]
+}
