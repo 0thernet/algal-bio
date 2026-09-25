@@ -591,8 +591,12 @@ def main():
                  "P4_min_novel_rate": P4_MIN_NOVEL_RATE,
                  "P4_min_novel_n": P4_MIN_NOVEL_N,
                  "P5_min_gold_rate": P5_MIN_GOLD_RATE,
-                 "sko_lethal_frac": SKO_LETHAL_FRAC, "gi_sl": GI_SL,
-                 "fdr_max": FDR_MAX, "cohens_d": COHENS_D},
+                 "sko_lethal_frac": SKO_LETHAL_FRAC,
+                 "applied_sl_rules": {
+                     ds["name"]: (ds.get("sl_rule_params")
+                                  or {"gi_lte": GI_SL, "fdr_lte": FDR_MAX})
+                     for ds in json.load(open(
+                         f"{ROOT}/registration/holdout_map.json"))["datasets"]}},
         "datasets": dataset_notes,
         "holdout_pairs": int(hold.pair.nunique()) if len(hold) else 0,
         "P1": {"passed": bool(rate(covered) is not None and rate(covered) >= P1_MIN_RATE),
