@@ -39,10 +39,10 @@
   {
    "source": "code/confirm.py",
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/confirm.py",
-   "bytes": 19662,
-   "bytes_published": 19662,
-   "sha256_original": "f60a6a0b053cc27ff67cdb473f309bdb088f74da3731ae21d246a00c8334c732",
-   "sha256_published": "f60a6a0b053cc27ff67cdb473f309bdb088f74da3731ae21d246a00c8334c732",
+   "bytes": 22368,
+   "bytes_published": 22368,
+   "sha256_original": "15b60e26129046309186e4d3f530a564d987f654a98dd53c32bcebebff408978",
+   "sha256_published": "15b60e26129046309186e4d3f530a564d987f654a98dd53c32bcebebff408978",
    "path_prefix_redacted": false
   },
   {
@@ -89,6 +89,15 @@
    "sha256_original": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
    "sha256_published": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
    "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/confirm.log",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/logs/confirm.log",
+   "bytes": 538,
+   "bytes_published": 499,
+   "sha256_original": "c54234b04dcba89e0c090c39523ce5d3875324c7a5b26990f62025a20e426d6f",
+   "sha256_published": "57f9100fb3f0d7785884f33758766cd15ec91e95fed09ab6979f3a2d7a501650",
+   "path_prefix_redacted": true
   },
   {
    "source": "logs/fetch.log",
@@ -158,8 +167,8 @@
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/freeze.json",
    "bytes": 1965,
    "bytes_published": 1965,
-   "sha256_original": "9bc2fb50852c31f58effc396298c64fe1ed7b4c8371d372c236ee39ad46eaefc",
-   "sha256_published": "9bc2fb50852c31f58effc396298c64fe1ed7b4c8371d372c236ee39ad46eaefc",
+   "sha256_original": "6570d918582de8bffa5dd39917f53eac5142835834c6afa8833ff48afb7b27fd",
+   "sha256_published": "6570d918582de8bffa5dd39917f53eac5142835834c6afa8833ff48afb7b27fd",
    "path_prefix_redacted": false
   },
   {
@@ -174,10 +183,46 @@
   {
    "source": "registration/protocol.json",
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/protocol.json",
-   "bytes": 3381,
-   "bytes_published": 3381,
-   "sha256_original": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
-   "sha256_published": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
+   "bytes": 3363,
+   "bytes_published": 3363,
+   "sha256_original": "f4d81e09b25ede914d732b0fada6053c9e7bdc0b43e01dc0ac80c8ee9dc20095",
+   "sha256_published": "f4d81e09b25ede914d732b0fada6053c9e7bdc0b43e01dc0ac80c8ee9dc20095",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "report.md",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/report.md",
+   "bytes": 4121,
+   "bytes_published": 4121,
+   "sha256_original": "38fbf6392d01d24f8d6c506ca5b19630386456fedfd746e8fb854748de21d65d",
+   "sha256_published": "38fbf6392d01d24f8d6c506ca5b19630386456fedfd746e8fb854748de21d65d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.csv",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/results/confirmation.csv",
+   "bytes": 34799,
+   "bytes_published": 34799,
+   "sha256_original": "e7ced42ddd30fe4313da2fa994620f7bb3101387f2d4ac169b523cac67e45173",
+   "sha256_published": "e7ced42ddd30fe4313da2fa994620f7bb3101387f2d4ac169b523cac67e45173",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.runs.jsonl",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/results/confirmation.runs.jsonl",
+   "bytes": 162,
+   "bytes_published": 162,
+   "sha256_original": "464267860d0287487e76114a271490d37ab055adf265c8cc65d0053aa2db4632",
+   "sha256_published": "464267860d0287487e76114a271490d37ab055adf265c8cc65d0053aa2db4632",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.summary.json",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/results/confirmation.summary.json",
+   "bytes": 1353,
+   "bytes_published": 1353,
+   "sha256_original": "0be2d65c082da4ef0748ab2eebefeb91be1b3b2d1a03568e5e125fc83f41fae9",
+   "sha256_published": "0be2d65c082da4ef0748ab2eebefeb91be1b3b2d1a03568e5e125fc83f41fae9",
    "path_prefix_redacted": false
   },
   {

@@ -1,7 +1,7 @@
 {
  "schema": "bio.protocol.v1",
  "campaign_id": "depmap-orcs-temporal-2026-09-25",
- "status": "draft_not_frozen - pending implementation review",
+ "status": "registered_and_frozen",
  "question": "Do DepMap-24Q4-derived context->dependency associations replicate in BioGRID ORCS independent genome-scale screens (post-24Q4 publications prioritized)?",
  "why_it_is_worth_registering": "ORCS is a curated repository of published CRISPR screens outside the DepMap pipeline - library, lab, scorer and (by PMID filter) data-generation independent. 25Q3 DepMap itself ingests only 22 ORCS screens; the full human archive is ~1,952 screens.",
  "data": {
@@ -25,13 +25,17 @@
   "NOT_EVALUABLE": "no primary or gold pair tested"
  },
  "constants": {
-  "Q_MAX": 0.10,
+  "Q_MAX": 0.1,
   "MIN_SCREENS_PER_ARM": 3,
   "MIN_GENES_PER_SCREEN": 5000,
-  "P1_MIN_RATE": 0.30,
+  "P1_MIN_RATE": 0.3,
   "P2_MAX_PLACEBO": 0.15,
-  "P5_MIN_GOLD_RATE": 0.50,
-  "EXCLUDED_PMIDS": ["29083409", "30971826", "38215750"]
+  "P5_MIN_GOLD_RATE": 0.5,
+  "EXCLUDED_PMIDS": [
+   "29083409",
+   "30971826",
+   "38215750"
+  ]
  },
  "caveats": [
   "ORCS has no QC gate - per-study variability must be checked inside the registered pipeline.",
