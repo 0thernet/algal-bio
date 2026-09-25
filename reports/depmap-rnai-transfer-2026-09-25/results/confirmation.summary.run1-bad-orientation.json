@@ -1,0 +1,53 @@
+{
+ "schema": "bio.rnai-confirmation.v1",
+ "freeze_utc": "2026-09-25T20:31:50Z",
+ "top_digest": "c524f5a677203f375e5a782bdafddab8fe4e13c7c7c8751632f73032d51fc615",
+ "run_utc": "2026-09-25T20:34:04Z",
+ "rules": {
+  "REP_P": 0.05,
+  "REP_FRAC": 0.5,
+  "MIN_POS": 3,
+  "MIN_N": 30
+ },
+ "primary": {
+  "tested": 0,
+  "replicated": 0,
+  "rate": null
+ },
+ "placebo": {
+  "tested": 0,
+  "replicated": 0,
+  "rate": null
+ },
+ "novel": {
+  "tested": 0,
+  "replicated": 0,
+  "rate": null
+ },
+ "gold": {
+  "tested": 0,
+  "replicated": 0,
+  "rate": null
+ },
+ "empty_placebo_files": [
+  "depmap_placebo20260927.csv"
+ ],
+ "P1": {
+  "passed": false,
+  "threshold": 0.3
+ },
+ "P2": {
+  "passed": false,
+  "ceiling": 0.15
+ },
+ "P4": {
+  "passed": false,
+  "threshold": 0.25,
+  "min_replicated": 3
+ },
+ "P5": {
+  "passed": false,
+  "threshold": 0.5
+ },
+ "label": "NOT_EVALUABLE"
+}

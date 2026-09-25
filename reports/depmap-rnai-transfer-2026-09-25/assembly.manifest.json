@@ -39,10 +39,10 @@
   {
    "source": "code/confirm.py",
    "published": "campaigns/depmap-rnai-transfer-2026-09-25/code/confirm.py",
-   "bytes": 12261,
-   "bytes_published": 12261,
-   "sha256_original": "c8b9cdc8a7cf92151c960d91924e6a00e21218b4dab4efad208e827bac3553d5",
-   "sha256_published": "c8b9cdc8a7cf92151c960d91924e6a00e21218b4dab4efad208e827bac3553d5",
+   "bytes": 12759,
+   "bytes_published": 12759,
+   "sha256_original": "eca3185a2a975af9e1a5b5191799071d7793d388f06db047f84839bbb1ecbe7a",
+   "sha256_published": "eca3185a2a975af9e1a5b5191799071d7793d388f06db047f84839bbb1ecbe7a",
    "path_prefix_redacted": false
   },
   {
@@ -158,8 +158,8 @@
    "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/freeze.json",
    "bytes": 1878,
    "bytes_published": 1878,
-   "sha256_original": "d0e3ce7d1d2a01e6103fa3a3faa3798400cc454ff31b20c8c7ea5ab2e9cecd97",
-   "sha256_published": "d0e3ce7d1d2a01e6103fa3a3faa3798400cc454ff31b20c8c7ea5ab2e9cecd97",
+   "sha256_original": "bb93c1b4b3104831eff7686df50e084c7a5b379138ba7bff04f48bddfe468503",
+   "sha256_published": "bb93c1b4b3104831eff7686df50e084c7a5b379138ba7bff04f48bddfe468503",
    "path_prefix_redacted": false
   },
   {
@@ -178,6 +178,60 @@
    "bytes_published": 3293,
    "sha256_original": "1596510abb85437d1d51f79e7f3604f1ee051cdaed2a8ead1cdc3d374b837c5c",
    "sha256_published": "1596510abb85437d1d51f79e7f3604f1ee051cdaed2a8ead1cdc3d374b837c5c",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "report.md",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/report.md",
+   "bytes": 2992,
+   "bytes_published": 2992,
+   "sha256_original": "9ed0134071d91ba8217540a06849cc3b499242bec42e918d8da6042f9138e016",
+   "sha256_published": "9ed0134071d91ba8217540a06849cc3b499242bec42e918d8da6042f9138e016",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.csv",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/results/confirmation.csv",
+   "bytes": 42765,
+   "bytes_published": 42765,
+   "sha256_original": "a6ab2965adb3ce902d9fb195669f06a148c415f9cdc510aa5301fca1ca9b57c7",
+   "sha256_published": "a6ab2965adb3ce902d9fb195669f06a148c415f9cdc510aa5301fca1ca9b57c7",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.run1-bad-orientation.csv",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/results/confirmation.run1-bad-orientation.csv",
+   "bytes": 7146,
+   "bytes_published": 7146,
+   "sha256_original": "7628ea4b7f292944fea61aed1d37c4801b050657cb230077d8d2ec23b9c6bf46",
+   "sha256_published": "7628ea4b7f292944fea61aed1d37c4801b050657cb230077d8d2ec23b9c6bf46",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.runs.jsonl",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/results/confirmation.runs.jsonl",
+   "bytes": 322,
+   "bytes_published": 322,
+   "sha256_original": "f55972bd78eaaef4ed8241b339a60cda2846ad92d43c522bc7ea77ecb8039278",
+   "sha256_published": "f55972bd78eaaef4ed8241b339a60cda2846ad92d43c522bc7ea77ecb8039278",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.summary.json",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/results/confirmation.summary.json",
+   "bytes": 904,
+   "bytes_published": 904,
+   "sha256_original": "0e5ac4237d39d15648f5ecc0c1cc4c5154912a7d01446286608a907212407078",
+   "sha256_published": "0e5ac4237d39d15648f5ecc0c1cc4c5154912a7d01446286608a907212407078",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/confirmation.summary.run1-bad-orientation.json",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/results/confirmation.summary.run1-bad-orientation.json",
+   "bytes": 859,
+   "bytes_published": 859,
+   "sha256_original": "05aca53e9464a577be23b5a9e2cd9c3b446fc2b494072979778183b66bfd9d08",
+   "sha256_published": "05aca53e9464a577be23b5a9e2cd9c3b446fc2b494072979778183b66bfd9d08",
    "path_prefix_redacted": false
   },
   {
