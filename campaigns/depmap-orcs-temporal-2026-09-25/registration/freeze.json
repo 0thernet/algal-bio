@@ -1,8 +1,8 @@
 {
- "frozen_utc": "2026-09-25T21:26:48Z",
+ "frozen_utc": "2026-09-25T22:16:17Z",
  "schema": "bio.orcs-freeze.v1",
  "sha256": {
-  "registration/protocol.json": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
+  "registration/protocol.json": "f4d81e09b25ede914d732b0fada6053c9e7bdc0b43e01dc0ac80c8ee9dc20095",
   "registration/depmap_pairs.csv": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
   "registration/depmap_gold_controls.json": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
   "registration/prefreeze-review.json": "73392030578ca7d1dcc81cf6592f55115c193c8172a608abcc04f1f9e90105fa",
@@ -12,7 +12,7 @@
   "code/prep.py": "e867fc034e4cb9abe8055bcd9585675740b524aa6b7b04d217cdecf979407246",
   "code/freeze.py": "e1086b6257d53bf5234686a0b867237b181e6c40153eae830f51d28663dbb62a",
   "code/fetch_holdout.py": "e6e77b918b3444173f15a0d50d755eb79ff8f52cb4a832e5af98a1f9ea5042fa",
-  "code/confirm.py": "f60a6a0b053cc27ff67cdb473f309bdb088f74da3731ae21d246a00c8334c732",
+  "code/confirm.py": "15b60e26129046309186e4d3f530a564d987f654a98dd53c32bcebebff408978",
   "tests/test_orcs.py": "35cac31599b65527e5986a02016a7f16aa5aef3c3f6648b681bc02800537d125",
   "data/prep/prep.receipt.json": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
   "data/prep/orcs_name_map.json": "667eef97ee741b2526de453fdedecf2719174d4fbf1dfa0b9209ede182085682",
@@ -21,5 +21,5 @@
   "registration/depmap_placebo20260927.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
  },
  "depmap_top_digest": "688981057cb7696f4b60c6906da0a0807c365c9cbbd7ea6a678547adb6de045b",
- "top_digest": "138f8f794ffb26a2e37d2988c2a01473a5c32bd9a0bffe64a3d28a1057687c59"
+ "top_digest": "9124f42fb9810a18b572ec343555f90e45b51b106c0ba5d22c84856e2a6e5e3e"
 }

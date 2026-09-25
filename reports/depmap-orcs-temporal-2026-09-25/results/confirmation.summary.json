@@ -1,0 +1,71 @@
+{
+ "schema": "bio.orcs-confirmation.v1",
+ "freeze_utc": "2026-09-25T22:16:17Z",
+ "top_digest": "9124f42fb9810a18b572ec343555f90e45b51b106c0ba5d22c84856e2a6e5e3e",
+ "run_utc": "2026-09-25T22:19:12Z",
+ "index_file": "BIOGRID-ORCS-SCREEN_INDEX-2.0.18.index.tab.txt",
+ "coverage": {
+  "index_rows": 1952,
+  "usable_after_filter": 998,
+  "excluded_pmid": 665,
+  "unmapped_cell_lines": 103,
+  "member_unmatched": 0,
+  "under_gene_floor": 79,
+  "bad_score_column": 0,
+  "direction_unresolved": 29,
+  "usable_mapped": 122
+ },
+ "rules": {
+  "Q_MAX": 0.1,
+  "MIN_SCREENS_PER_ARM": 3,
+  "MIN_GENES_PER_SCREEN": 5000
+ },
+ "primary": {
+  "tested": 68,
+  "replicated": 25,
+  "rate": 0.36764705882352944
+ },
+ "placebo": {
+  "tested": 2,
+  "replicated": 0,
+  "rate": 0.0
+ },
+ "novel": {
+  "tested": 32,
+  "replicated": 10,
+  "rate": 0.3125
+ },
+ "gold": {
+  "tested": 13,
+  "replicated": 12,
+  "rate": 0.9230769230769231
+ },
+ "p3_overlap_split": {
+  "same_line": {
+   "tested": 61,
+   "replicated": 24,
+   "rate": 0.39344262295081966
+  },
+  "disjoint": {
+   "tested": 35,
+   "replicated": 4,
+   "rate": 0.11428571428571428
+  }
+ },
+ "empty_placebo_files": [
+  "depmap_placebo20260927.csv"
+ ],
+ "P1": {
+  "passed": true,
+  "threshold": 0.3
+ },
+ "P2": {
+  "passed": true,
+  "ceiling": 0.15
+ },
+ "P5": {
+  "passed": true,
+  "threshold": 0.5
+ },
+ "label": "ORCS_REPLICATED"
+}
