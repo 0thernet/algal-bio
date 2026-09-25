@@ -1,0 +1,184 @@
+{
+ "schema": "bio.assembly-manifest.v2",
+ "slug": "depmap-orcs-temporal-2026-09-25",
+ "excluded": [
+  ".pytest_cache",
+  "__pycache__",
+  "data/discovery",
+  "data/sealed"
+ ],
+ "note": "frozen hashes refer to sha256_original; redaction replaces personal path prefixes only. The sealed DEMETER2 matrix and the DepMap release stay external; hashes are in the published receipts.",
+ "files": [
+  {
+   "source": "README.campaign.md",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/README.md",
+   "bytes": 1436,
+   "bytes_published": 1436,
+   "sha256_original": "e3c50ca4ade309b413bc45d202c85cc700f3179a0a6616245d9f13c27fda8c6d",
+   "sha256_published": "e3c50ca4ade309b413bc45d202c85cc700f3179a0a6616245d9f13c27fda8c6d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "assemble_public.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/assemble_public.py",
+   "bytes": 3271,
+   "bytes_published": 3271,
+   "sha256_original": "d412efac11cfd3b2fff0da0aef494e8aa24600886e8a1314b7d9fb66972ec64f",
+   "sha256_published": "d412efac11cfd3b2fff0da0aef494e8aa24600886e8a1314b7d9fb66972ec64f",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/campaign.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/campaign.py",
+   "bytes": 1340,
+   "bytes_published": 1340,
+   "sha256_original": "b4a58d88e4524bf8ae1539814e69a39a0b79aaa8fb50492e324fe4bf0d62bd6d",
+   "sha256_published": "b4a58d88e4524bf8ae1539814e69a39a0b79aaa8fb50492e324fe4bf0d62bd6d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/confirm.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/confirm.py",
+   "bytes": 19662,
+   "bytes_published": 19662,
+   "sha256_original": "f60a6a0b053cc27ff67cdb473f309bdb088f74da3731ae21d246a00c8334c732",
+   "sha256_published": "f60a6a0b053cc27ff67cdb473f309bdb088f74da3731ae21d246a00c8334c732",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/fetch_holdout.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/fetch_holdout.py",
+   "bytes": 2105,
+   "bytes_published": 2105,
+   "sha256_original": "2853e8c63135c68f18d8fb8a8fe01fced1ef11e183ded27bacb814221ad84e42",
+   "sha256_published": "2853e8c63135c68f18d8fb8a8fe01fced1ef11e183ded27bacb814221ad84e42",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/freeze.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/freeze.py",
+   "bytes": 2408,
+   "bytes_published": 2408,
+   "sha256_original": "e1086b6257d53bf5234686a0b867237b181e6c40153eae830f51d28663dbb62a",
+   "sha256_published": "e1086b6257d53bf5234686a0b867237b181e6c40153eae830f51d28663dbb62a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/prep.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/prep.py",
+   "bytes": 2274,
+   "bytes_published": 2274,
+   "sha256_original": "e867fc034e4cb9abe8055bcd9585675740b524aa6b7b04d217cdecf979407246",
+   "sha256_published": "e867fc034e4cb9abe8055bcd9585675740b524aa6b7b04d217cdecf979407246",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/orcs_name_map.json",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/data/prep/orcs_name_map.json",
+   "bytes": 127956,
+   "bytes_published": 127956,
+   "sha256_original": "667eef97ee741b2526de453fdedecf2719174d4fbf1dfa0b9209ede182085682",
+   "sha256_published": "667eef97ee741b2526de453fdedecf2719174d4fbf1dfa0b9209ede182085682",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/prep.receipt.json",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/data/prep/prep.receipt.json",
+   "bytes": 813,
+   "bytes_published": 813,
+   "sha256_original": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
+   "sha256_published": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "prior-art/prior-art-temporal.md",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/prior-art/prior-art-temporal.md",
+   "bytes": 3457,
+   "bytes_published": 3457,
+   "sha256_original": "34b3d1a314d0d941b19fe1760400479ad8cec0de01861a1cf273970c5c6c8c2e",
+   "sha256_published": "34b3d1a314d0d941b19fe1760400479ad8cec0de01861a1cf273970c5c6c8c2e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_gold_controls.json",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/depmap_gold_controls.json",
+   "bytes": 12673,
+   "bytes_published": 12673,
+   "sha256_original": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+   "sha256_published": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_pairs.csv",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/depmap_pairs.csv",
+   "bytes": 23414,
+   "bytes_published": 23414,
+   "sha256_original": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+   "sha256_published": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_placebo20260925.csv",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/depmap_placebo20260925.csv",
+   "bytes": 526,
+   "bytes_published": 526,
+   "sha256_original": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+   "sha256_published": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_placebo20260926.csv",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/depmap_placebo20260926.csv",
+   "bytes": 1057,
+   "bytes_published": 1057,
+   "sha256_original": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+   "sha256_published": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_placebo20260927.csv",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/depmap_placebo20260927.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/freeze.json",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/freeze.json",
+   "bytes": 1965,
+   "bytes_published": 1965,
+   "sha256_original": "6634c94aba47e0778cf104d8a7a705421163de9415f32bce32fc100f5a6d13db",
+   "sha256_published": "6634c94aba47e0778cf104d8a7a705421163de9415f32bce32fc100f5a6d13db",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/prefreeze-review.json",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/prefreeze-review.json",
+   "bytes": 1720,
+   "bytes_published": 1720,
+   "sha256_original": "73392030578ca7d1dcc81cf6592f55115c193c8172a608abcc04f1f9e90105fa",
+   "sha256_published": "73392030578ca7d1dcc81cf6592f55115c193c8172a608abcc04f1f9e90105fa",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/protocol.json",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/protocol.json",
+   "bytes": 3381,
+   "bytes_published": 3381,
+   "sha256_original": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
+   "sha256_published": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_orcs.py",
+   "published": "campaigns/depmap-orcs-temporal-2026-09-25/tests/test_orcs.py",
+   "bytes": 3435,
+   "bytes_published": 3435,
+   "sha256_original": "35cac31599b65527e5986a02016a7f16aa5aef3c3f6648b681bc02800537d125",
+   "sha256_published": "35cac31599b65527e5986a02016a7f16aa5aef3c3f6648b681bc02800537d125",
+   "path_prefix_redacted": false
+  }
+ ]
+}

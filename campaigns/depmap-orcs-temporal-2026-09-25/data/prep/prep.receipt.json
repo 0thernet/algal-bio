@@ -1,0 +1,14 @@
+{
+ "inputs": {
+  "registration/depmap_pairs.csv": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+  "registration/depmap_gold_controls.json": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+  "registration/depmap_placebo20260925.csv": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+  "registration/depmap_placebo20260926.csv": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+  "registration/depmap_placebo20260927.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "depmap_model_csv": "b7a0c1385e6cef30132b56aff61f1261d11e3f490490b355c430d32ee0dbdcfa"
+ },
+ "outputs": {
+  "data/prep/orcs_name_map.json": "667eef97ee741b2526de453fdedecf2719174d4fbf1dfa0b9209ede182085682"
+ },
+ "name_resolver_entries": 4124
+}
