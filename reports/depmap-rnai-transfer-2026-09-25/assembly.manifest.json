@@ -183,10 +183,10 @@
   {
    "source": "report.md",
    "published": "reports/depmap-rnai-transfer-2026-09-25/report.md",
-   "bytes": 2992,
-   "bytes_published": 2992,
-   "sha256_original": "9ed0134071d91ba8217540a06849cc3b499242bec42e918d8da6042f9138e016",
-   "sha256_published": "9ed0134071d91ba8217540a06849cc3b499242bec42e918d8da6042f9138e016",
+   "bytes": 4297,
+   "bytes_published": 4297,
+   "sha256_original": "41f51518c49044af02a2dec47b13065e5384aea8ef57c7304536abc1b3201e70",
+   "sha256_published": "41f51518c49044af02a2dec47b13065e5384aea8ef57c7304536abc1b3201e70",
    "path_prefix_redacted": false
   },
   {
