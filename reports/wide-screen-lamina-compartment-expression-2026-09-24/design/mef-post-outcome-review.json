@@ -1,0 +1,37 @@
+{
+  "review": "mef/ post-outcome review",
+  "reviewer": "independent read-only Devin subagent (agent_id c3f8f9c2) + integrator byte-level verification",
+  "date": "2026-09-25",
+  "verdict": "PASS_WITH_REPAIRS",
+  "scope": "protocol compliance, label recomputation, evidence integrity, disclosure adequacy for mef/results/result.json (GSE124205 third-cohort test)",
+  "label_recomputation": {
+    "method": "reviewer recomputed per-arm labels from result.json rhos and p values against the frozen label() rule in mef/mef.py",
+    "arms": {
+      "raw": {"primaries": [-0.3459, -0.3478], "bound": 0.17343, "placebo_abs": {"PL_15_18": 0.1818, "PL_x17_18": 0.2340, "PL_x17_15": 0.2299}, "label": "DIRECTION_ONLY", "stored_matches": true},
+      "flexible": {"primaries": [-0.3470, -0.3443], "bound": 0.17282, "placebo_abs": {"PL_15_18": 0.1796, "PL_x17_18": 0.2375, "PL_x17_15": 0.2372}, "label": "DIRECTION_ONLY", "stored_matches": true},
+      "scale_free": {"primaries": [-0.2519, -0.3940], "bound": 0.16146, "placebo_abs": {"PL_15_18": 0.1350, "PL_x17_18": 0.2671, "PL_x17_15": 0.1690}, "label": "DIRECTION_ONLY", "stored_matches": true}
+    },
+    "overall_stored": "DIRECTION_ONLY",
+    "overall_correct": true,
+    "specificity_NOT_APPLICABLE_correct": true
+  },
+  "integrity_check_by_integrator": {
+    "frozen_files_hashed": 12,
+    "frozen_mismatches": 0,
+    "freeze_link_in_intake": true,
+    "data_files_hashed": 11,
+    "data_mismatches": 0,
+    "mtime_order": "freeze 2026-09-25T00:50:52Z < fetch 01:05:43-01:06:48Z < intake 01:06:48Z < result 01:16:14Z (mtimes shown local, ordering verified)"
+  },
+  "findings": [
+    {"n": 1, "severity": "MAJOR", "finding": "Read-only reviewer could not recompute sha256; delegated to integrator.", "resolution": "Integrator re-hashed all 12 frozen files, the freeze link inside intake.json, and all 11 data files: zero mismatches. Fetch/result mtimes postdate the freeze."},
+    {"n": 2, "severity": "INFO", "finding": "Compliance PASS: all 13 contrasts x 3 arms present in protocol order; n 4711-4755 (all >= 3000); every nonzero p equals the 5000-shift floor 1/5001; probe p floor 1/1001; coverage fallback correctly untriggered; mm9 build check ran for all 11 files; diagnostics complete."},
+    {"n": 3, "severity": "MINOR", "finding": "Permutation floor saturated: all 39 arm tests return p = 1/5001; the p <= 0.01 criterion had zero discriminating power; the placebo bound alone decided the label.", "resolution": "Disclosed in report.md outcome section."},
+    {"n": 4, "severity": "MINOR", "finding": "Placebo failure is substantially a replicate-series scale artifact: x17-series sd 1.9-2.2 vs p15/p18 sd 0.55-1.25; cross-series placebos carry baseline slope +2.31/+1.94; same-series PL_15_18 barely fails raw/flexible and passes scale_free.", "resolution": "Disclosed; conclusion unchanged (placebos 52-83% of primary magnitude)."},
+    {"n": 5, "severity": "MINOR", "finding": "Expansion direction differs by embryo (AC_p15 sd 1.25 > WT 0.55; AC_x17 1.85 < WT 2.15); flattening controls positive (+0.13/+0.25) so dynamic-range leak does not reproduce the negative gradient.", "resolution": "Disclosed; supports that primaries are not a range artifact."},
+    {"n": 6, "severity": "MINOR", "finding": "Drug-control incoherence: DZNep -0.33 (p18) vs +0.38 (x17), opposite signs; TSA and BIX positive in both embryos. Had the label reached specificity it would have been MIXED.", "resolution": "Disclosed in report.md; undermines lamin-specific attribution descriptively."},
+    {"n": 7, "severity": "MINOR", "finding": "intake.json/result.json carry no embedded timestamps; post-freeze ordering rests on mtimes and the freeze-link hash.", "resolution": "Integrator verified mtimes; noted for future receipts."},
+    {"n": 8, "severity": "MINOR", "finding": "report.md still read 'data not yet downloaded' at review time.", "resolution": "Repaired: outcome section added with first-sentence NOT REPLICATED per the no-spin rule."},
+    {"n": 9, "severity": "INFO", "finding": "Interpretation confirmed: direction consistent across cohorts but within-cohort WT variation too large to certify attribution; DIRECTION_ONLY = not replicated."}
+  ]
+}

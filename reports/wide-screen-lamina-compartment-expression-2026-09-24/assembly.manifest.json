@@ -15,11 +15,11 @@
  "files": [
   {
    "source": "README.campaign.md",
-   "published": "campaigns/wide-screen-lamina-compartment-expression-2026-09-24/README.md",
-   "bytes": 4817,
-   "bytes_published": 4817,
-   "sha256_original": "510224ed0336695bb91f753a702117c06d37127bccd375ef073e341e9b1da5a5",
-   "sha256_published": "510224ed0336695bb91f753a702117c06d37127bccd375ef073e341e9b1da5a5",
+   "published": "campaigns/wide-screen-lamina-compartment-expression-2026-09-24/README.campaign.md",
+   "bytes": 5176,
+   "bytes_published": 5176,
+   "sha256_original": "1d9fe78074287363394136c4150370df1bda2877ad2e2a967a6f75c1cce8f1ba",
+   "sha256_published": "1d9fe78074287363394136c4150370df1bda2877ad2e2a967a6f75c1cce8f1ba",
    "path_prefix_redacted": false
   },
   {
@@ -200,6 +200,15 @@
    "bytes_published": 6360,
    "sha256_original": "9122c90fb3d741fb6121f108678dcb223a95fb4bc87ce6c91648e52b277653ff",
    "sha256_published": "9122c90fb3d741fb6121f108678dcb223a95fb4bc87ce6c91648e52b277653ff",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "design/mef-post-outcome-review.json",
+   "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/design/mef-post-outcome-review.json",
+   "bytes": 4201,
+   "bytes_published": 4201,
+   "sha256_original": "33acb781aa450b0650103eabef45e337419afe201fb5c70e0783f86dd4e29b5a",
+   "sha256_published": "33acb781aa450b0650103eabef45e337419afe201fb5c70e0783f86dd4e29b5a",
    "path_prefix_redacted": false
   },
   {
@@ -473,12 +482,30 @@
    "path_prefix_redacted": false
   },
   {
+   "source": "logs/mef-fetch.log",
+   "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/logs/mef-fetch.log",
+   "bytes": 182,
+   "bytes_published": 182,
+   "sha256_original": "3a911f5f06bd86f592849236ad73c8c947ad4494138980aac6d004e6fc765cd8",
+   "sha256_published": "3a911f5f06bd86f592849236ad73c8c947ad4494138980aac6d004e6fc765cd8",
+   "path_prefix_redacted": false
+  },
+  {
    "source": "logs/mef-ref-fetch.log",
    "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/logs/mef-ref-fetch.log",
    "bytes": 5,
    "bytes_published": 5,
    "sha256_original": "8221ac66be71558c921fb44cfb66f7997699aea754d917763882d6d9eddc836e",
    "sha256_published": "8221ac66be71558c921fb44cfb66f7997699aea754d917763882d6d9eddc836e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/mef-run.log",
+   "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/logs/mef-run.log",
+   "bytes": 4316,
+   "bytes_published": 4316,
+   "sha256_original": "3f7ac8e48f97f77e62ebf11adc826c231eb3caa88110c09357a558e9b6e0d8b7",
+   "sha256_published": "3f7ac8e48f97f77e62ebf11adc826c231eb3caa88110c09357a558e9b6e0d8b7",
    "path_prefix_redacted": false
   },
   {
@@ -545,6 +572,15 @@
    "path_prefix_redacted": false
   },
   {
+   "source": "mef/intake.json",
+   "published": "campaigns/wide-screen-lamina-compartment-expression-2026-09-24/mef/intake.json",
+   "bytes": 2157,
+   "bytes_published": 2157,
+   "sha256_original": "3d4ceee385fd763dbe6d46fe015ba2f4f0233a5c0f478d5ca1d53ad843b0bae6",
+   "sha256_published": "3d4ceee385fd763dbe6d46fe015ba2f4f0233a5c0f478d5ca1d53ad843b0bae6",
+   "path_prefix_redacted": false
+  },
+  {
    "source": "mef/mef.py",
    "published": "campaigns/wide-screen-lamina-compartment-expression-2026-09-24/mef/mef.py",
    "bytes": 9073,
@@ -560,6 +596,15 @@
    "bytes_published": 11116,
    "sha256_original": "4d4083f794607c631e104fcc20109272b64532ad62f015596c06912275ab5602",
    "sha256_published": "4d4083f794607c631e104fcc20109272b64532ad62f015596c06912275ab5602",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "mef/results/result.json",
+   "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/mef/results/result.json",
+   "bytes": 9698,
+   "bytes_published": 9698,
+   "sha256_original": "46a0c7d8051e3114d44b1675219adfdc47e49001076c158d462f50ee279bdb5b",
+   "sha256_published": "46a0c7d8051e3114d44b1675219adfdc47e49001076c158d462f50ee279bdb5b",
    "path_prefix_redacted": false
   },
   {
@@ -673,10 +718,10 @@
   {
    "source": "report.md",
    "published": "reports/wide-screen-lamina-compartment-expression-2026-09-24/report.md",
-   "bytes": 21060,
-   "bytes_published": 21060,
-   "sha256_original": "0f5e7b8818ba0fb65869450654ea8b4b9e473ff56fc2b30ed51b735e872325db",
-   "sha256_published": "0f5e7b8818ba0fb65869450654ea8b4b9e473ff56fc2b30ed51b735e872325db",
+   "bytes": 24035,
+   "bytes_published": 24035,
+   "sha256_original": "9336ebda88703e69dbad35d031ff8410c042f524c393e5a83cfb4678f0449380",
+   "sha256_published": "9336ebda88703e69dbad35d031ff8410c042f524c393e5a83cfb4678f0449380",
    "path_prefix_redacted": false
   },
   {

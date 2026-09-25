@@ -1,0 +1,60 @@
+{
+ "freeze_sha256": "df2204a12fdf618837d9795f10ebc4acb25aed47beae6a529cef4e9f3ee3c60d",
+ "files": {
+  "WT_p15": {
+   "file": "GSE124205_MEF_WT_DamID_pup1.5_replicate1_log2.bw",
+   "bytes": 39205194,
+   "sha256": "2f535a61df2989c46a02c5b3455e833fe2b65983b09e735b2da7b0ebf4f6a4e7"
+  },
+  "WT_p18": {
+   "file": "GSE124205_MEF_WT_DamID_pup1.8_replicate1_log2.bw",
+   "bytes": 41314757,
+   "sha256": "0337df60cb2c6323de8c4eb532c131aeb9a01887d9c76f1fbff1601db7ac3fe8"
+  },
+  "WT_x17": {
+   "file": "GSE124205_MEF_WT_DamID_pupx17_replicate2_log2.bw",
+   "bytes": 42436783,
+   "sha256": "21a17f77344ff987bb403f90bdea4c8da5690d23386449d16f43f9becd297bcf"
+  },
+  "AC_p15": {
+   "file": "GSE124205_MEF_shAC_DamID_pup1.5_replicate1_log2.bw",
+   "bytes": 41653113,
+   "sha256": "105c71fd952789431849b8251d215b43f042229f3bbe80f7fb3761f2a8893d94"
+  },
+  "AC_x17": {
+   "file": "GSE124205_MEF_shAC_DamID_pupx17_replicate2_log2.bw",
+   "bytes": 42082353,
+   "sha256": "5e3a2ed8c3af33d564138ac2a853db16312cbdd5de6ba2fedbcc6d455373c08e"
+  },
+  "BIX_p18": {
+   "file": "GSE124205_MEF_BIX01294_DamID_pup1.8_replicate1_log2.bw",
+   "bytes": 41454766,
+   "sha256": "9bef90869edeb4f669e5dbbaed943fa614d9b18111aa0d54140f5be313f052b6"
+  },
+  "BIX_x17": {
+   "file": "GSE124205_MEF_BIX01294_DamID_pupx17_replicate2_log2.bw",
+   "bytes": 41257795,
+   "sha256": "d24a4582fcf5a1ddb05ce996e4169ed90c063d66ed7082596b245d58ea55aac1"
+  },
+  "DZN_p18": {
+   "file": "GSE124205_MEF_DZNep_DamID_pup1.8_replicate1_log2.bw",
+   "bytes": 42674543,
+   "sha256": "d0a9daa81d2d1b41d363f13a9536f73785cb8c515326f7e8e89123c1ace42aca"
+  },
+  "DZN_x17": {
+   "file": "GSE124205_MEF_DZNep_DamID_pupx17_replicate2_log2.bw",
+   "bytes": 38333454,
+   "sha256": "2aee1158aae975a1986491cbccbb7f80aa0995605eca5939593b6efab02b8d96"
+  },
+  "TSA_p18": {
+   "file": "GSE124205_MEF_TSA_DamID_pup1.8_replicate1_log2.bw",
+   "bytes": 38869849,
+   "sha256": "8678270bfd041049d8dd14ba82d6cf51c37e68f29d38868684e56eae766f013d"
+  },
+  "TSA_x17": {
+   "file": "GSE124205_MEF_TSA_DamID_pupx17_replicate2_log2.bw",
+   "bytes": 29769850,
+   "sha256": "1b22dac128abff57e1a4503861671e20277cc64551e90c21b3194e67fda136fe"
+  }
+ }
+}

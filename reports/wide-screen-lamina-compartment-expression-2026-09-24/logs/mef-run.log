@@ -1,0 +1,43 @@
+raw        P_p15      rho -0.346 n 4755 p- 0.0002 p+ 1.0000 slope +0.482
+raw        P_x17      rho -0.348 n 4755 p- 0.0002 p+ 1.0000 slope -0.512
+raw        PL_15_18   rho -0.182 n 4755 p- 0.0002 p+ 1.0000 slope -0.106
+raw        PL_x17_18  rho -0.234 n 4755 p- 0.0002 p+ 1.0000 slope +2.310
+raw        PL_x17_15  rho -0.230 n 4755 p- 0.0002 p+ 1.0000 slope +1.944
+raw        FL_p15     rho +0.130 n 4755 p- 1.0000 p+ 0.0002 slope +0.315
+raw        FL_x17     rho +0.254 n 4755 p- 1.0000 p+ 0.0002 slope -0.418
+raw        D_BIX_p18  rho +0.164 n 4755 p- 1.0000 p+ 0.0002 slope +0.044
+raw        D_BIX_x17  rho +0.228 n 4748 p- 1.0000 p+ 0.0002 slope +0.157
+raw        D_DZN_p18  rho -0.328 n 4755 p- 0.0002 p+ 1.0000 slope +0.029
+raw        D_DZN_x17  rho +0.380 n 4746 p- 1.0000 p+ 0.0002 slope -0.076
+raw        D_TSA_p18  rho +0.380 n 4753 p- 1.0000 p+ 0.0002 slope -0.137
+raw        D_TSA_x17  rho +0.418 n 4711 p- 1.0000 p+ 0.0002 slope -0.403
+flexible   P_p15      rho -0.347 n 4755 p- 0.0002 p+ 1.0000 slope +0.482
+flexible   P_x17      rho -0.344 n 4755 p- 0.0002 p+ 1.0000 slope -0.512
+flexible   PL_15_18   rho -0.180 n 4755 p- 0.0002 p+ 1.0000 slope -0.106
+flexible   PL_x17_18  rho -0.237 n 4755 p- 0.0002 p+ 1.0000 slope +2.310
+flexible   PL_x17_15  rho -0.237 n 4755 p- 0.0002 p+ 1.0000 slope +1.944
+flexible   FL_p15     rho +0.130 n 4755 p- 1.0000 p+ 0.0002 slope +0.315
+flexible   FL_x17     rho +0.283 n 4755 p- 1.0000 p+ 0.0002 slope -0.418
+flexible   D_BIX_p18  rho +0.167 n 4755 p- 1.0000 p+ 0.0002 slope +0.044
+flexible   D_BIX_x17  rho +0.211 n 4748 p- 1.0000 p+ 0.0002 slope +0.157
+flexible   D_DZN_p18  rho -0.329 n 4755 p- 0.0002 p+ 1.0000 slope +0.029
+flexible   D_DZN_x17  rho +0.371 n 4746 p- 1.0000 p+ 0.0002 slope -0.076
+flexible   D_TSA_p18  rho +0.478 n 4753 p- 1.0000 p+ 0.0002 slope -0.137
+flexible   D_TSA_x17  rho +0.511 n 4711 p- 1.0000 p+ 0.0002 slope -0.403
+scale_free P_p15      rho -0.252 n 4755 p- 0.0002 p+ 1.0000 slope +0.009
+scale_free P_x17      rho -0.394 n 4755 p- 0.0002 p+ 1.0000 slope -0.028
+scale_free PL_15_18   rho -0.135 n 4755 p- 0.0002 p+ 1.0000 slope -0.009
+scale_free PL_x17_18  rho -0.267 n 4755 p- 0.0002 p+ 1.0000 slope -0.033
+scale_free PL_x17_15  rho -0.169 n 4755 p- 0.0002 p+ 1.0000 slope -0.024
+scale_free FL_p15     rho +0.108 n 4755 p- 1.0000 p+ 0.0002 slope +0.008
+scale_free FL_x17     rho +0.245 n 4755 p- 1.0000 p+ 0.0002 slope +0.030
+scale_free D_BIX_p18  rho +0.142 n 4755 p- 1.0000 p+ 0.0002 slope -0.005
+scale_free D_BIX_x17  rho +0.229 n 4748 p- 1.0000 p+ 0.0002 slope +0.011
+scale_free D_DZN_p18  rho -0.340 n 4755 p- 0.0002 p+ 1.0000 slope +0.003
+scale_free D_DZN_x17  rho +0.373 n 4746 p- 1.0000 p+ 0.0002 slope +0.010
+scale_free D_TSA_p18  rho +0.407 n 4753 p- 1.0000 p+ 0.0002 slope -0.064
+scale_free D_TSA_x17  rho +0.395 n 4711 p- 1.0000 p+ 0.0002 slope -0.040
+diagnostics {"sd": {"WT_p15": 0.5518691390457138, "WT_p18": 0.7827011664262061, "WT_x17": 2.146052583644592, "AC_p15": 1.2503812669694492, "AC_x17": 1.8468080478839928, "BIX_p18": 0.8464290429070938, "BIX_x17": 2.228493016033144, "DZN_p18": 0.818867881368628, "DZN_x17": 2.0717379537515384, "TSA_p18": 0.6326807822651075, "TSA_x17": 1.9466023168354487, "sim_FL_p15": 1.2498055326340662, "sim_FL_x17": 1.8460834464482074}, "finite_tiles": {"WT_p15": 4759, "WT_p18": 4763, "WT_x17": 4755, "AC_p15": 4765, "AC_x17": 4757, "BIX_p18": 4762, "BIX_x17": 4748, "DZN_p18": 4766, "DZN_x17": 4746, "TSA_p18": 4756, "TSA_x17": 4711}, "spearman": {"WT_p15~WT_p18": 0.9841939480746345, "WT_p15~WT_x17": 0.9466431568889989, "WT_p18~WT_x17": 0.9583692838447044, "AC_p15~WT_p15": 0.9657081362832493, "AC_x17~WT_x17": 0.9872503318408536}, "gc_slope_per_track_sd": {"P_p15": -0.0945769358760322, "P_x17": -0.083537559852251, "PL_15_18": -0.030454893578777197, "PL_x17_18": -0.13646745574986216, "PL_x17_15": -0.14318403272563218, "FL_p15": 0.03597360348132448, "FL_x17": 0.09299942481029881, "D_BIX_p18": 0.029979272260020187, "D_BIX_x17": 0.039864926802322176, "D_DZN_p18": -0.04248818470874412, "D_DZN_x17": 0.0696605660545851, "D_TSA_p18": 0.1881691279585423, "D_TSA_x17": 0.197689330856228}}
+probe_cpg {"P_p15": -0.298, "P_x17": -0.263}
+coverage_threshold 0.5
+LABEL DIRECTION_ONLY (raw DIRECTION_ONLY / flexible DIRECTION_ONLY / scale-free DIRECTION_ONLY); specificity NOT_APPLICABLE
