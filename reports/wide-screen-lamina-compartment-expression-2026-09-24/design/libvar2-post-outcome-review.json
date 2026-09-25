@@ -1,0 +1,37 @@
+{
+  "review": "libvar2/ post-outcome review",
+  "reviewer": "independent read-only Devin subagent (agent_id 4ca433d4) + integrator byte-level verification",
+  "date": "2026-09-25",
+  "verdict": "PASS",
+  "label_recomputation": {
+    "P1": "30/46 pairs |rho_raw| >= 0.10 = 0.6522 >= 0.60 TRUE",
+    "P2": "38 eligible; median |sf/raw| = 0.9612 >= 0.5 TRUE",
+    "P3": "median |rho_raw| = 0.15918 >= 0.083 TRUE",
+    "P4": "4/6 generality groups (CW_0h 0.269, CW_6h 0.192, WAPL_24h 0.185, WAPL_96h 0.250; WAPL_0h 0.027 and WAPL_6h 0.0087 fail) spanning both genotypes TRUE",
+    "label": "SYSTEMATIC - correct; XC excluded by construction"
+  },
+  "integrity_check_by_integrator": {
+    "frozen_files_hashed": 14,
+    "frozen_mismatches": 0,
+    "freeze_link_in_intake": true,
+    "data_files_hashed": 58,
+    "data_mismatches": 0,
+    "mtime_order": "freeze 02:47:18 < intake 02:48:33 < result 03:00:29 UTC"
+  },
+  "compliance": "all 46 pairs x 2 arms present, n 4712-4739 >= 3000, all rhos finite, 6 XC raw-only, seeds/build/coverage per protocol; class medians re-verified (untreated_0h 0.1052 / iaa_treated 0.1603 / drug_control 0.2252)",
+  "anomaly_findings": [
+    "WAPL_0h/6h flatness is not a degenerate-track artifact: overlapping SDs/finite_tiles/sd_ratios vs the strong WAPL_96h group, and the cross-timepoint XC contrasts (-0.114/-0.160) exceed the same-condition 0h/6h rhos - the flat groups are real per-condition structure",
+    "drug-condition pairs reach treatment-contrast size (gsk_0h +0.399, eed_0h -0.283, rad21_24h -0.283); class median drug_control 0.225 > iaa 0.160 > untreated 0.105 - must be disclosed (consistent with registered caveat that nominal-treatment pairs absorb real heterogeneity)",
+    "XC_pt_antibody -0.238: same-condition pair across an antibody-lot change - direct demonstration of prep-level technical variation (reported-only)",
+    "XC_dmso_eed_0h +0.224 (reported-only)"
+  ],
+  "required_outcome_disclosures": [
+    "single cohort - cohort-specific artifact not excluded; this tests generalization of libvar/, not rediscovery",
+    "strong non-independence (CW_0h's 6 pairs reuse 4 tracks)",
+    "treated/drug-timepoint nominal-treatment caveat incl. class-median ordering",
+    "DMSO/EED/GSK *_24h condition labels rest on GEO titles/characteristics, not filenames",
+    "depositor z-score tsvs exist but were not used; scale_free is our own per-track z-score",
+    "WAPL_0h/6h flat groups shown beside pooled stats",
+    "prior art PARTIALLY_KNOWN"
+  ]
+}

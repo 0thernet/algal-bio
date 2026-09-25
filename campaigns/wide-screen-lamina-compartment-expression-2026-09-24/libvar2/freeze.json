@@ -1,0 +1,24 @@
+{
+ "schema": "bio.libvar-freeze.v1",
+ "frozen_utc": "2026-09-25T02:47:18.692294+00:00",
+ "sha256": {
+  "libvar2/protocol.json": "5491e7918714a7b5513a5a602d936090030627c439f6a2fa2cf44ecd5556b874",
+  "libvar2/libvar2.py": "25b8bd8b1ec1318f5ce5b91d77f09d2487c4731c907e720664b114c041326ffe",
+  "libvar2/test_libvar2.py": "c89e3936f39234cb826b3ae67dc8b3edfad759672a8ab3ef748545766e789316",
+  "libvar2/freeze.py": "2a59f43cf6025dceec32b49baa0355df8ef378384ad8200859a909dd89b20ff1",
+  "libvar/libvar.py": "9c66fe2ebbb9c7520edb081ef27520a20fe5d924bcee06296136d8fc85058e7e",
+  "libvar/features/mm10_tiles.tsv": "a3991915e2909625f701cdb2a9a9a270d6c22ea061679cd794f8e1caaee7dd33",
+  "libvar/features/manifest.json": "3cb98ac979a581cf03484dddd6a2cd4ca0ef9a2b9d167e22e6afcba9ffb6f995",
+  "libvar/build_mm10_features.py": "c41452ba06c70e286235df1b5b0a0ba021d68f7176a17aa1d291241718bdb6d0",
+  "code/screen.py": "a5e1945e0597aa15963f6b2b5595bf6e844afa9520c8ea98fee5b1b99c8eab10",
+  "design/libvar2-review.json": "04186d92f73ab3d284e67ec1fa817fc06eef3fb50a8f947a2579352c61c5adeb",
+  "design/prior-art-libvar.md": "21216efef6e36062d4067029663ec78d0c64a37d355c76a52281a470785e883f",
+  "libvar/protocol.json": "33516e45893dbf65373a824a354e3f348690a9337cf49a9ee063d149c63fab2c",
+  "libvar/results/result.json": "36aabd3564f52dc70d6cc682ce7538538ba9d2c5ef88385cb589fce2c8435122",
+  "libvar/intake.json": "2e68b59944cac496ba2d23ec377c4bd6f14dd3773598b49c6fa4ef63360f549d"
+ },
+ "python": "3.12.14",
+ "numpy": "2.3.3",
+ "scipy": "1.16.2",
+ "pyBigWig": "0.3.24"
+}

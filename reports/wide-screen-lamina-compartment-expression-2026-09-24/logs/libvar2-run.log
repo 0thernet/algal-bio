@@ -1,0 +1,105 @@
+CTCF_0h_r1 2454265
+CTCF_0h_r2 2394687
+CTCF_6h_r1 2430071
+CTCF_6h_r2 2424274
+CTCF_24h_r1 2373543
+CTCF_24h_r2 2446621
+CTCF_96h_r1 2409751
+CTCF_96h_r2 2409423
+WAPL_0h_r1 2414821
+WAPL_0h_r2 2453543
+WAPL_0h_r3 2476305
+WAPL_6h_r1 2454291
+WAPL_6h_r2 2447122
+WAPL_6h_r3 2380876
+WAPL_24h_r1 2433612
+WAPL_24h_r2 2444576
+WAPL_24h_r3 2433634
+WAPL_96h_r1 2432948
+WAPL_96h_r2 2439184
+WAPL_96h_r3 2375848
+CW_0h_r1 2381548
+CW_0h_r2 2386856
+CW_0h_r3 2454964
+CW_0h_r4 2436787
+CW_6h_r1 2400158
+CW_6h_r2 2442353
+CW_6h_r3 2450629
+CW_6h_r4 2443060
+CW_24h_r1 2433776
+CW_24h_r3 2391393
+CW_24h_r4 2452420
+CW_96h_r1 2436119
+CW_96h_r2 2436422
+CW_96h_r3 2389095
+PT_0h_r1 2420994
+PT_0h_r2 2442439
+PTN_0h_r8 2507252
+PTN_0h_r9 2466291
+PTN_24h_r8 2495237
+PTN_24h_r9 2488930
+RAD21_0h_r1 2279945
+RAD21_0h_r2 2396478
+RAD21_6h_r1 2343230
+RAD21_6h_r2 2487283
+RAD21_24h_r1 2502037
+RAD21_24h_r2 2461401
+DMSO_0h_r1 2366287
+DMSO_0h_r2 2267279
+DMSO_24h_r1 2268903
+DMSO_24h_r2 2243175
+EED_0h_r1 2363837
+EED_0h_r2 2294629
+EED_24h_r1 2277042
+EED_24h_r2 2339103
+GSK_0h_r1 2266984
+GSK_0h_r2 2305242
+GSK_24h_r1 2288456
+GSK_24h_r2 2255870
+LV2_ctcf_0h        raw -0.191 (n 4722) sf -0.184
+LV2_ctcf_6h        raw +0.058 (n 4725) sf +0.059
+LV2_ctcf_24h       raw -0.220 (n 4725) sf -0.201
+LV2_ctcf_96h       raw -0.284 (n 4728) sf -0.176
+LV2_wapl_0h_12     raw +0.068 (n 4730) sf +0.045
+LV2_wapl_0h_13     raw +0.027 (n 4732) sf +0.026
+LV2_wapl_0h_23     raw -0.006 (n 4734) sf -0.010
+LV2_wapl_6h_12     raw +0.031 (n 4728) sf +0.039
+LV2_wapl_6h_13     raw +0.009 (n 4724) sf +0.011
+LV2_wapl_6h_23     raw -0.005 (n 4722) sf -0.029
+LV2_wapl_24h_12    raw -0.185 (n 4726) sf -0.152
+LV2_wapl_24h_13    raw -0.216 (n 4729) sf -0.212
+LV2_wapl_24h_23    raw -0.059 (n 4724) sf -0.073
+LV2_wapl_96h_12    raw +0.139 (n 4727) sf +0.113
+LV2_wapl_96h_13    raw -0.250 (n 4723) sf -0.223
+LV2_wapl_96h_23    raw -0.391 (n 4723) sf -0.353
+LV2_cw_0h_12       raw +0.340 (n 4722) sf +0.327
+LV2_cw_0h_13       raw +0.110 (n 4725) sf +0.107
+LV2_cw_0h_14       raw +0.320 (n 4723) sf +0.307
+LV2_cw_0h_23       raw -0.338 (n 4723) sf -0.328
+LV2_cw_0h_24       raw -0.066 (n 4723) sf -0.068
+LV2_cw_0h_34       raw +0.218 (n 4731) sf +0.230
+LV2_cw_6h_12       raw -0.230 (n 4723) sf -0.196
+LV2_cw_6h_13       raw +0.161 (n 4725) sf +0.146
+LV2_cw_6h_14       raw -0.070 (n 4726) sf -0.069
+LV2_cw_6h_23       raw +0.406 (n 4727) sf +0.387
+LV2_cw_6h_24       raw +0.158 (n 4727) sf +0.135
+LV2_cw_6h_34       raw -0.223 (n 4729) sf -0.205
+LV2_cw_24h_12      raw +0.160 (n 4723) sf +0.134
+LV2_cw_24h_13      raw +0.142 (n 4731) sf +0.129
+LV2_cw_24h_23      raw -0.028 (n 4723) sf -0.027
+LV2_cw_96h_12      raw +0.157 (n 4730) sf +0.173
+LV2_cw_96h_13      raw +0.279 (n 4729) sf +0.275
+LV2_cw_96h_23      raw +0.149 (n 4728) sf +0.156
+LV2_pt_0h          raw -0.015 (n 4725) sf +0.010
+LV2_ptn_0h         raw +0.105 (n 4736) sf +0.096
+LV2_ptn_24h        raw +0.096 (n 4739) sf +0.093
+LV2_rad21_0h       raw +0.022 (n 4718) sf +0.020
+LV2_rad21_6h       raw -0.248 (n 4719) sf -0.247
+LV2_rad21_24h      raw -0.283 (n 4734) sf -0.283
+LV2_dmso_0h        raw +0.068 (n 4716) sf +0.066
+LV2_dmso_24h       raw -0.170 (n 4712) sf -0.172
+LV2_eed_0h         raw -0.283 (n 4720) sf -0.269
+LV2_eed_24h        raw +0.088 (n 4716) sf +0.086
+LV2_gsk_0h         raw +0.399 (n 4718) sf +0.401
+LV2_gsk_24h        raw -0.280 (n 4713) sf -0.270
+LABEL SYSTEMATIC {"median_abs_rho": 0.15917849114641325, "frac_abs_ge_0.10": 0.6521739130434783, "n_p2_eligible": 38, "p2_median_ratio": 0.961196319454182, "group_medians": {"CW_0h": 0.2690125546299207, "CW_6h": 0.19187589984057063, "WAPL_0h": 0.026573930322597684, "WAPL_6h": 0.008665620514462834, "WAPL_24h": 0.18489815584221034, "WAPL_96h": 0.24980904714549976}, "p1": true, "p2": true, "p3": true, "p4": true}
