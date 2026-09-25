@@ -1,0 +1,18 @@
+{
+ "inputs": {
+  "data/discovery/GDSC2_fitted_dose_response_27Oct23.csv": "b472905ea811c145b1827f382975756a66c2ac5dffbe9ad323148bfdea38cdb5",
+  "data/refs/screened_compounds_rel_8.5.csv": "d3cbb8b595980b36bf92d54af1da1dd995d2e2ce624c7cc70aacf2a754dce782",
+  "data/refs/prism19q4_sec_treatment_info.csv": "9d0d1fb4faa87a63cd84965ec5e2b55a9df5680520a41b029abb679cfd4384f7",
+  "data/prep/gdsc_inchikey.json": "502855201ce5641a5f553f5877dffd3f8754dd3ac2771cea7e59da5201e50cfa"
+ },
+ "outputs": {
+  "data/prep/gdsc2.npz": "7ca7a58d50809e5eaeceea787302374c74a350eb3a19f8e9d2ebd05a7a5f2546",
+  "data/prep/prism_inchikey.json": "58a5c80e5cfce827e52873d9e2d4988421b95e7383a86b525e760b1732517efd",
+  "data/prep/drug_crosswalk.json": "4eaeb8fe4c389c1f4522af89c8b6947708185d982d0ba6c2c83c15261dc75d51"
+ },
+ "matrix": {
+  "models": 965,
+  "drugs": 224,
+  "matched_to_prism": 112
+ }
+}
