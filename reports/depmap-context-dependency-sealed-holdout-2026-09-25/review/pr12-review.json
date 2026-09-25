@@ -1,0 +1,29 @@
+{
+ "review": "algal-bio PR #12 (pre-registration) review",
+ "reviewer": "independent read-only Devin subagent (agent_id f6fc1d9d)",
+ "date": "2026-09-25",
+ "verdict": "APPROVE_WITH_REPAIRS",
+ "verified": [
+  "no personal paths, matrices, .npz or holdout data in the published dirs",
+  "all 54 freeze.json hashes equal assembly.manifest sha256_original",
+  "PR claims (freeze time, 77 selected, 43/34, 27/50 genetic stratum, 0.051 placebo ratio disclosed, 4 of 9 matched, 4 placebo pairs) match the files",
+  "no results/confirmation* existed at publication"
+ ],
+ "findings": [
+  {
+   "n": 1,
+   "finding": "data/ receipts reported absent from the checkout",
+   "resolution": "false positive: the reviewer's file search skips gitignored paths; git ls-files shows all nine data/ receipts force-added and committed in 47a4766 / 91c349c"
+  },
+  {
+   "n": 2,
+   "finding": "tests/test_protocol_consistency.py opens data/split.receipt.json unguarded",
+   "resolution": "moot: the receipt is committed, so the test runs rather than errors in a clean checkout"
+  },
+  {
+   "n": 3,
+   "finding": "README keeps the placeholder 'recorded below once they happen'",
+   "resolution": "README is bound by the freeze and was not edited; post-freeze events are recorded in report.md"
+  }
+ ]
+}
