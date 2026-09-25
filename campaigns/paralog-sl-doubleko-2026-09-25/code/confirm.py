@@ -94,7 +94,10 @@ def check_freeze():
     rr = json.load(open(rrc))
     for name, v in rr.items():
         if isinstance(v, dict) and "file" in v and "sha256" in v:
-            if sha(f"{ROOT}/data/refs/{v['file']}") != v["sha256"]:
+            p = f"{ROOT}/data/refs/{v['file']}"
+            if not os.path.exists(p):
+                p = f"{C.DEPMAP}/data/refs/{v['file']}"
+            if not os.path.exists(p) or sha(p) != v["sha256"]:
                 sys.exit(f"refusing: data/refs/{v['file']} does not match "
                          "the refs receipt")
     prp = json.load(open(f"{ROOT}/data/prep/prep.receipt.json"))
@@ -153,16 +156,25 @@ def read_holdout_file(path):
                        dtype=str, on_bad_lines="skip")
 
 
-def normalize(ds, df):
+def normalize(ds, df, line=None):
     """Map a raw holdout table onto the registered schema. Raises ValueError
     (-> UNPARSEABLE) when the registered minimum content cannot be resolved:
-    gene_a, gene_b must resolve AND contain plausible gene symbols, and at
-    least one of sl_flag or gi must resolve."""
+    a gene pair (two columns, or one pair column split on the registered
+    pair_split) AND at least one of sl_flag or gi."""
     cols = {}
     for key, pats in ds["columns"].items():
         cols[key] = resolve(df.columns, pats)
     if cols.get("gene_a") is None or cols.get("gene_b") is None:
-        raise ValueError("gene columns unresolvable")
+        if cols.get("pair_col") is not None and ds.get("pair_split"):
+            sp = df[cols["pair_col"]].astype(str).str.split(ds["pair_split"],
+                                                           n=1, expand=True)
+            if sp.shape[1] == 2:
+                df = df.assign(**{"__ga__": sp[0], "__gb__": sp[1]})
+                cols["gene_a"], cols["gene_b"] = "__ga__", "__gb__"
+            else:
+                raise ValueError("pair column did not split into two symbols")
+        else:
+            raise ValueError("gene columns unresolvable")
     if cols.get("sl_flag") is None and cols.get("gi") is None:
         raise ValueError("neither an SL flag nor a GI column resolves")
     ga = df[cols["gene_a"]].astype(str).str.strip()
@@ -171,7 +183,9 @@ def normalize(ds, df):
     if sym.mean() < 0.5:
         raise ValueError("gene_a column does not contain gene symbols")
     d = pd.DataFrame({"gene_a": ga, "gene_b": gb})
-    if cols.get("line") is not None:
+    if line is not None:
+        d["line"] = line
+    elif cols.get("line") is not None:
         d["line"] = df[cols["line"]].astype(str).str.strip()
     elif ds.get("default_line"):
         d["line"] = ds["default_line"]
@@ -202,17 +216,26 @@ def normalize(ds, df):
                 if cols.get(k) is not None else np.nan)
     d["pair"] = [frozenset((a, b)) for a, b in zip(d.gene_a, d.gene_b)]
     d = d[d.gene_a != d.gene_b]
-    rule = ds.get("published_sl_rule", "")
+    # the dataset's registered SL convention: an explicit sl_rule_params dict
+    # wins; then a boolean flag column; then the registered defaults
+    rp = ds.get("sl_rule_params") or {}
     if flag is not None and flag[0] == "bool":
         d["sl_called"] = flag[1].to_numpy(dtype=bool)
-    elif flag is not None and flag[0] == "numeric" and "FDR" in rule:
-        d["sl_called"] = ((d.gi <= GI_SL) & (flag[1] <= FDR_MAX)).to_numpy()
-    elif "Cohen" in rule and d.cohens_d.notna().any():
-        d["sl_called"] = ((d.gi <= GI_SL) & (d.cohens_d <= COHENS_D)).to_numpy()
+    elif flag is not None and flag[0] == "numeric" and rp.get("fdr_lte"):
+        d["sl_called"] = ((d.gi <= rp.get("gi_lte", GI_SL)) &
+                          (flag[1] <= rp["fdr_lte"])).to_numpy()
+    elif rp.get("cohens_d_gt") is not None and d.cohens_d.notna().any():
+        d["sl_called"] = ((d.gi < rp.get("gi_lt", GI_SL)) &
+                          (d.cohens_d > rp["cohens_d_gt"])).to_numpy()
+    elif rp.get("cohens_d_lt") is not None and d.cohens_d.notna().any():
+        d["sl_called"] = ((d.gi <= rp.get("gi_lte", GI_SL)) &
+                          (d.cohens_d <= rp["cohens_d_lt"])).to_numpy()
     elif flag is not None:                     # numeric flag, no FDR rule
-        d["sl_called"] = ((d.gi <= GI_SL) & (flag[1] <= FDR_MAX)).to_numpy()
+        d["sl_called"] = ((d.gi <= rp.get("gi_lte", GI_SL)) &
+                          (flag[1] <= rp.get("fdr_lte", FDR_MAX))).to_numpy()
     else:
-        d["sl_called"] = (d.gi <= GI_SL).to_numpy()
+        d["sl_called"] = (d.gi <= rp.get("gi_lte", rp.get("gi_lt", GI_SL))
+                          ).to_numpy()
     return d
 
 
@@ -226,6 +249,26 @@ def load_holdouts():
     hmap = json.load(open(f"{ROOT}/registration/holdout_map.json"))
     registered_pairs = _registered_pair_set()
     frames, notes = [], []
+    linekey = {_normkey(k) for k in hmap["line_models"]}
+
+    def sheet_frames(ds, path):
+        """sheet_per_line layout: one sheet per (study, line); the sheet name
+        supplies the line under the registered rule."""
+        import openpyxl  # noqa: F401 - engine presence
+        xl = pd.ExcelFile(path)
+        out, bad = [], []
+        for sh in xl.sheet_names:
+            ln = sh.split("_", 1)[1] if "_" in sh else sh
+            try:
+                n = normalize(ds, xl.parse(sh), line=ln)
+                out.append(n)
+            except Exception as e:                    # noqa: BLE001
+                bad.append({"sheet": sh, "error": str(e)[:120]})
+        if not out:
+            raise ValueError(f"no sheet normalized: {bad[:2]}")
+        d = pd.concat(out, ignore_index=True)
+        return d, bad
+
     for ds in hmap["datasets"]:
         candidates = ([f.get("file") for f in ds.get("files", [])]
                       or [ds.get("file")])
@@ -238,8 +281,11 @@ def load_holdouts():
                 tried.append({"file": fn, "status": "ABSENT"})
                 continue
             try:
-                df = read_holdout_file(path)
-                norm = normalize(ds, df)
+                if ds.get("layout") == "sheet_per_line":
+                    norm, sheet_bad = sheet_frames(ds, path)
+                    fnote = {"sheets_failed": sheet_bad}
+                else:
+                    norm, fnote = normalize(ds, read_holdout_file(path)), {}
             except Exception as e:                    # noqa: BLE001 - recorded
                 tried.append({"file": fn, "status": "UNPARSEABLE",
                               "error": str(e)[:200]})
@@ -255,7 +301,8 @@ def load_holdouts():
             tried.append({"file": fn, "status": "OK", "rows": len(norm),
                           "pairs": int(norm.pair.nunique()),
                           "registered_pair_rows": matched,
-                          "mapped_line_rows": lines_resolved})
+                          "mapped_line_rows": lines_resolved,
+                          **fnote})
             if matched < 1:
                 continue
             score = matched
@@ -300,7 +347,11 @@ def _registered_pair_set():
                   for p in json.load(open(g))["pairs"]}
     for f in sorted(os.listdir(f"{ROOT}/results")):
         if f.startswith("selection.placebo"):
-            d = pd.read_csv(f"{ROOT}/results/{f}")
+            p = f"{ROOT}/results/{f}"
+            try:
+                d = pd.read_csv(p)
+            except pd.errors.EmptyDataError:
+                continue                          # zero-nomination seed
             if "pair" in d.columns:
                 pairs |= {frozenset(x.split("|")) for x in d.pair}
     return pairs
@@ -466,7 +517,11 @@ def main():
     frozen_placebos = sorted(f for f in frozen["sha256"]
                              if f.startswith("results/selection.placebo"))
     for pf in frozen_placebos:
-        for _, r in pd.read_csv(f"{ROOT}/{pf}").iterrows():
+        try:
+            pdf = pd.read_csv(f"{ROOT}/{pf}")
+        except pd.errors.EmptyDataError:
+            continue                              # zero-nomination seed
+        for _, r in pdf.iterrows():
             pla_frames.append(outcome(r, "placebo"))
     for _, r in gold.iterrows():
         frames.append(outcome(r, "gold"))

@@ -30,17 +30,22 @@ def sha(p):
 
 
 def header_of(path):
-    """Structure only: column names. Never a data row."""
-    if path.endswith((".xlsx", ".xls")):
-        import pandas as pd
-        xl = pd.ExcelFile(path)
-        return {"sheets": xl.sheet_names,
-                "headers": {s: [str(c) for c in
-                                pd.read_excel(path, sheet_name=s, nrows=0).columns]
-                            for s in xl.sheet_names}}
-    with open(path, "rb") as fh:
-        first = fh.readline().decode("utf-8", errors="replace")
-    return {"first_line": first}
+    """Structure only: column names. Never a data row. Unparseable files are
+    recorded as such - a failed header read must not abort the fetch."""
+    try:
+        if path.endswith((".xlsx", ".xls")):
+            import pandas as pd
+            xl = pd.ExcelFile(path)
+            return {"sheets": xl.sheet_names,
+                    "headers": {s: [str(c) for c in
+                                    pd.read_excel(path, sheet_name=s,
+                                                  nrows=0).columns]
+                                for s in xl.sheet_names}}
+        with open(path, "rb") as fh:
+            first = fh.readline().decode("utf-8", errors="replace")
+        return {"first_line": first}
+    except Exception as e:                       # noqa: BLE001 - recorded
+        return {"error": str(e)[:200], "bytes": os.path.getsize(path)}
 
 
 def main():
@@ -48,9 +53,13 @@ def main():
     if not os.path.exists(fz):
         sys.exit("refusing: fetch_holdout runs only after the freeze exists. "
                  "The registration manifest must be frozen first.")
+    frozen = json.load(open(fz))
     hmap = json.load(open(f"{C.ROOT}/registration/holdout_map.json"))
     import urllib.request
     os.makedirs(SEAL, exist_ok=True)
+    receipt_old = {}
+    if os.path.exists(f"{SEAL}/fetch.receipt.json"):
+        receipt_old = json.load(open(f"{SEAL}/fetch.receipt.json"))
     receipt, headers = {"files": {}}, {}
     for ds in hmap["datasets"]:
         entries = ds.get("files") or [{"file": ds.get("file"),
@@ -61,15 +70,31 @@ def main():
                 print(f"skip {ds['name']}: no download_url registered", flush=True)
                 continue
             dst = f"{SEAL}/{fn}"
-            if not os.path.exists(dst):
+            prev = receipt_old.get("files", {}).get(f"data/sealed/{fn}", {}) \
+                if os.path.exists(f"{SEAL}/fetch.receipt.json") else {}
+            if (os.path.exists(dst) and prev.get("fetched_utc")
+                    and prev["fetched_utc"] >= frozen["frozen_utc"]):
+                # kept under this freeze: carry the original fetch receipt
+                # entry verbatim (its timestamp already satisfies the check)
+                receipt["files"][f"data/sealed/{fn}"] = dict(prev)
+                print("keep", ds["name"], fn, flush=True)
+            else:
                 print("fetch", ds["name"], fn, url, flush=True)
-                urllib.request.urlretrieve(url, dst + ".part")
-                os.replace(dst + ".part", dst)
-            receipt["files"][f"data/sealed/{fn}"] = {
-                "bytes": os.path.getsize(dst), "sha256": sha(dst), "url": url,
-                "dataset": ds["name"],
-                "fetched_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ",
-                                             time.gmtime())}
+                try:
+                    urllib.request.urlretrieve(url, dst + ".part")
+                    os.replace(dst + ".part", dst)
+                except Exception as e:                # noqa: BLE001 - recorded
+                    receipt.setdefault("errors", {})[f"data/sealed/{fn}"] = (
+                        {"url": url, "dataset": ds["name"],
+                         "error": str(e)[:200]})
+                    print(ds["name"], fn, "FETCH_FAILED", str(e)[:80],
+                          flush=True)
+                    continue
+                receipt["files"][f"data/sealed/{fn}"] = {
+                    "bytes": os.path.getsize(dst), "sha256": sha(dst),
+                    "url": url, "dataset": ds["name"],
+                    "fetched_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ",
+                                                 time.gmtime())}
             headers[f"{ds['name']}::{fn}"] = header_of(dst)
             print(ds["name"], fn, "OK",
                   receipt["files"][f"data/sealed/{fn}"]["sha256"][:12], flush=True)

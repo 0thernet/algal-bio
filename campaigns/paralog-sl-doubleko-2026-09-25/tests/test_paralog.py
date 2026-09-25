@@ -204,17 +204,19 @@ def test_normalize_bool_flag_only():
 
 
 def test_normalize_cohens_rule_without_flag():
+    """in4mer's published convention: dLFC < -1 AND Cohen's D > 0.8."""
     ds = {"name": "in4mer_unified", "default_line": "PC9",
-          "published_sl_rule": "dLFC <= -0.5 AND Cohen's d <= -1.0",
+          "sl_rule_params": {"gi_lt": -1.0, "cohens_d_gt": 0.8},
           "columns": {"gene_a": ["gene.?a"], "gene_b": ["gene.?b"],
                       "gi": ["dlfc"], "line": ["line"],
                       "cohens_d": ["cohen.?s.?d"],
                       "sko_a": ["x1"], "sko_b": ["x2"]}}
-    df = pd.DataFrame({"GeneA": ["A", "B", "C"], "GeneB": ["P", "Q", "R"],
-                       "Line": ["PC9"] * 3, "dLFC": [-1.0, -1.0, -0.6],
-                       "CohensD": [-2.0, -0.5, np.nan]})
+    df = pd.DataFrame({"GeneA": ["A", "B", "C", "D"], "GeneB": ["P", "Q", "R", "S"],
+                       "Line": ["PC9"] * 4,
+                       "dLFC": [-1.2, -1.2, -0.6, -1.2],
+                       "CohensD": [1.0, 0.5, 1.0, np.nan]})
     out = CF.normalize(ds, df)
-    assert out.sl_called.tolist() == [True, False, False]
+    assert out.sl_called.tolist() == [True, False, False, False]
 
 
 def test_normalize_refuses_no_signal_column():

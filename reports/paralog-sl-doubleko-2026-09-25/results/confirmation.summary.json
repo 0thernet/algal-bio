@@ -1,0 +1,151 @@
+{
+ "schema": "bio.paralog-sl-confirmation.v1",
+ "freeze_utc": "2026-09-25T19:29:53Z",
+ "run_utc": "2026-09-25T19:31:20Z",
+ "rule": {
+  "P1_min_rate": 0.3,
+  "P2_max_placebo": 0.15,
+  "P3_min_ratio": 1.5,
+  "P4_min_novel_rate": 0.25,
+  "P4_min_novel_n": 5,
+  "P5_min_gold_rate": 0.5,
+  "sko_lethal_frac": 0.05,
+  "gi_sl": -0.5,
+  "fdr_max": 0.1,
+  "cohens_d": -1.0
+ },
+ "datasets": [
+  {
+   "dataset": "in4mer_unified",
+   "status": "OK",
+   "rows": 63784,
+   "pairs": 7011,
+   "file_used": "in4mer_supp_table1.xlsx",
+   "files": [
+    {
+     "file": "in4mer_supp_table1.xlsx",
+     "status": "OK",
+     "rows": 63933,
+     "pairs": 7011,
+     "registered_pair_rows": 678,
+     "mapped_line_rows": 22222,
+     "sheets_failed": []
+    }
+   ]
+  },
+  {
+   "dataset": "pgpen_direct",
+   "status": "UNPARSEABLE",
+   "files": [
+    {
+     "file": "pgpen_supplement_2.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    },
+    {
+     "file": "pgpen_supplement_3.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    },
+    {
+     "file": "pgpen_supplement_4.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    },
+    {
+     "file": "pgpen_supplement_5.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    },
+    {
+     "file": "pgpen_supplement_6.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    },
+    {
+     "file": "pgpen_supplement_7.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    },
+    {
+     "file": "pgpen_supplement_8.xlsx",
+     "status": "UNPARSEABLE",
+     "error": "Excel file format cannot be determined, you must specify an engine manually."
+    }
+   ]
+  },
+  {
+   "dataset": "flister_36648",
+   "status": "UNPARSEABLE",
+   "files": [
+    {
+     "file": "flister_table_s2.xlsx",
+     "status": "ABSENT"
+    }
+   ]
+  }
+ ],
+ "holdout_pairs": 7011,
+ "P1": {
+  "passed": true,
+  "rate": 0.4444444444444444,
+  "threshold": 0.3,
+  "tested_pairs": 9,
+  "replicated_pairs": 4,
+  "replicated_by_outcome": {
+   "sko_dep_lethal": 3,
+   "sl_gi": 3
+  }
+ },
+ "P2": {
+  "passed": true,
+  "rate": null,
+  "nominated_pairs": 0,
+  "tested_pairs": 0,
+  "zero_nomination_pass": true,
+  "ceiling": 0.15
+ },
+ "P3": {
+  "passed": true,
+  "selected_ctxneg_sl_rate": 0.09375,
+  "ctxneg_events": 32,
+  "background_sl_rate": 0.02995315325677588,
+  "ratio": 3.1298875012029743,
+  "threshold": 1.5
+ },
+ "P4": {
+  "passed": false,
+  "evaluable": false,
+  "rate": 1.0,
+  "tested_pairs": 1,
+  "replicated_pairs": 1,
+  "threshold": 0.25,
+  "min_replicated": 5
+ },
+ "P5": {
+  "passed": true,
+  "gold_tested": 19,
+  "gold_replicated": 13,
+  "rate": 0.6842105263157895,
+  "threshold": 0.5,
+  "denominators": {
+   "registered_pairs": 20,
+   "in_universe": 2,
+   "nominated_by_screen": 2,
+   "independent_controls": 18
+  }
+ },
+ "documented_nonsl": {
+  "tested_pairs": 5,
+  "replicated_pairs": 2,
+  "rate": 0.4
+ },
+ "T2_unconditional": {
+  "pairs_replicated_anywhere": 4
+ },
+ "T3_pairs_in_2plus_datasets": {},
+ "label": "DOUBLEKO_REPLICATED",
+ "not_evaluable_notes": [
+  "P2 untestable in holdout: zero placebo pairs nominated"
+ ]
+}
