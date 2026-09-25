@@ -1,0 +1,28 @@
+{
+  "review": "libvar/ pre-freeze review",
+  "reviewer": "independent read-only Devin subagent (agent_id 69d4c735)",
+  "date": "2026-09-25",
+  "verdict": "FAIL -> repairs applied before freeze (all blocking and minor findings addressed; frozen protocol reflects the repairs)",
+  "blockers": [
+    {"n": 1, "severity": "BLOCKER", "finding": "LV_hipsc_scr and LV_hipsc_lmna were registered as 'DNK vs mCh batches', but DNK = dominant-negative KASH adenovirus (a deliberate perturbation arm, per biology-live GSE300197-family.soft and registration.draft.json), so both pairs are cross-condition treatment contrasts, not same-condition library pairs, and they share the same AdV contrast (non-independent).", "resolution": "hipsc cohort removed entirely (22 registered pairs, denominators amended); additionally GSE300197 is LMNB1 CUT&RUN, not DamID, so it could not stay even as a reported class."},
+    {"n": 2, "severity": "BLOCKER", "finding": "hipsc assay mislabeled as DamID z-score tracks; it is LMNB1 CUT&RUN.", "resolution": "cohort removed; assay wording no longer applies."},
+    {"n": 3, "severity": "MAJOR", "finding": "design/libvar-review.json must exist before freeze.py can run.", "resolution": "this file."}
+  ],
+  "minor_repairs_applied": [
+    "M4 pair non-independence disclosed in disclosed_limits (shared libraries across pairs; '60% of pairs' is a pair-level measurement)",
+    "M5 P3 noted as largely implied by P1 but retained as the explicit benchmark comparison",
+    "M6 diagnostics added: coverage threshold per cohort, previously-computed-pair count, per-cohort pair counts",
+    "M7 P2 known-pair caveat disclosed in prior_computation_disclosure (baselines differ from earlier registrations; disclosed values will not reproduce exactly)",
+    "M8 slope_on_baseline guarded (>=10 finite tiles), XC non-finite rho serialized as null, fetch asserts non-holdout receipts exist",
+    "M9 freeze binds earlier protocols/results cited by the disclosure plus code/add_external.py (provenance)",
+    "M10 tests added: P4 exact boundary, P2 eligible-count floor, abort on small n, non-vacuous flat-world assertion"
+  ],
+  "verified_correct": [
+    "pair wiring a-b, all file keys resolve to files on disk and in earlier receipts",
+    "seeds unique per pair and arm (20262701/20262801/20262901 + index)",
+    "pooled_label arithmetic matches P1-P4 as written; XC excluded from label",
+    "build checks (hg38/mm9/mm10 chr1 lengths), coverage fallback 0.5 -> 0.1, min_n 3000 abort, fetch() freeze-hash gate",
+    "feature builder reads only libvar/ref annotation; no outcome data touched pre-freeze",
+    "the 7 previously-computed pair disclosures verified against damid/lbr/mef result.json; benchmark median 0.249 verified"
+  ]
+}

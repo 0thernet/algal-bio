@@ -1,0 +1,39 @@
+{
+  "review": "libvar/ post-outcome review",
+  "reviewer": "independent read-only Devin subagent (agent_id b2cd9b82) + integrator byte-level verification",
+  "date": "2026-09-25",
+  "verdict": "PASS_WITH_REPAIRS",
+  "label_recomputation": {
+    "P1": "15/22 pairs |rho_raw| >= 0.10 = 0.6818 >= 0.60 TRUE",
+    "P2": "17 eligible (|rho_raw| >= 0.05); median |sf/raw| = 0.9662 >= 0.5 TRUE",
+    "P3": "median |rho_raw| = 0.14079 >= 0.249/3 = 0.083 TRUE",
+    "P4": "opc 5/6 pairs |rho_raw| >= 0.05 (pf_8_9 0.0088 fails) >= 4 TRUE",
+    "label": "SYSTEMATIC - correct under protocol labels; XC pairs confirmed excluded"
+  },
+  "integrity_check_by_integrator": {
+    "frozen_files_hashed": 25,
+    "frozen_mismatches": 0,
+    "freeze_link_in_intake": true,
+    "data_files_hashed": 32,
+    "data_mismatches": 0,
+    "mtime_order": "freeze 02:11:54 < intake 02:13:06 < result 02:19:01 UTC"
+  },
+  "findings": [
+    {"n": 1, "severity": "MINOR", "finding": "Read-only reviewer could not re-hash; delegated to integrator.", "resolution": "All 25 frozen files, freeze link, and all 32 data files re-hashed by integrator: zero mismatches; mtime ordering verified."},
+    {"n": 2, "severity": "MINOR", "finding": "XC PF-vs-T3 pairs share a sign (+0.03..+0.19) likely because PF tracks normalize to Dam-2_4 and T3 tracks to Dam-12_13_14 - different Dam reference pools, so the XC sign pattern partly reflects reference normalization, not only differentiation state.", "resolution": "Disclosed in report outcome section."},
+    {"n": 3, "severity": "MINOR", "finding": "LV_k562_lmna -0.233 is within-clone-14 batch variation while all 3 k562 WT pairs are ~0 (cohort median 0.025) - must be reported as clone-specific batch effect with the near-zero counterpoint; mef x17 pairs reported in both delta orientations to avoid apparent sign-flip confusion (magnitude loss explained by sd_ratio ~3-4x and baseline self-reference; sf arm recovers to +0.13/+0.19).", "resolution": "Both disclosed in report."},
+    {"n": 4, "severity": "MINOR", "finding": "fetch() gates on protocol hash alone; run() enforces all 25 frozen hashes + intake chain.", "resolution": "Noted; run() is the hard gate."},
+    {"n": 5, "severity": "INFO", "finding": "Compliance clean: 22 pairs x 2 arms, seeds unique, min_n 3000 aborts, build checks, coverage thresholds, diagnostics complete including M6 repair fields."}
+  ],
+  "required_outcome_disclosures": [
+    "pair non-independence (shared libraries across pairs; '60% of pairs' is pair-level, not independent libraries)",
+    "same-condition pairs carry biological replicate variation - conservative for a pure library-effect claim",
+    "opc tracks depositor-quantile-normalized (strongest normalization in the pool)",
+    "k562 WT near-zero counterpoint + LMNA-KO clone batch effect",
+    "hipsc removal at pre-freeze review (DNK is a perturbation arm; GSE300197 is CUT&RUN)",
+    "7 prior pairs computed under a different baseline convention - show both orientations for mef x17 pairs",
+    "XC Dam-reference confound",
+    "DamID-seq and pA-DamID deliberately pooled",
+    "gc covariate source differs by build (gc5Base vs 2bit-derived)"
+  ]
+}
