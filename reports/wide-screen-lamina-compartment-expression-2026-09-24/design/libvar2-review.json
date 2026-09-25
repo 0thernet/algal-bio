@@ -1,0 +1,29 @@
+{
+  "review": "libvar2/ pre-freeze review",
+  "reviewer": "independent read-only Devin subagent (agent_id 07f9ce87)",
+  "date": "2026-09-25",
+  "verdict": "PASS_WITH_REPAIRS -> repairs applied before freeze",
+  "verified_correct": [
+    "pair wiring a-b in listed order; XC excluded from pooled_label",
+    "URL construction: geo/samples/GSM5509nnn/GSM5509284/suppl/FILE (GSM prefix rule gsm[:-3]+nnn verified against NCBI layout for both GSM blocks)",
+    "seeds disjoint and match protocol (20263101+i raw, 20263201+i sf, 20263301+i XC)",
+    "min_n 3000 abort in both arms; chr1=195471971 mm10 build check on all files",
+    "pooled_label arithmetic matches P1-P4; pair census 46 = CTCF4+WAPL12+CW18+PT1+PTN2+RAD21_3+DMSO2+EED2+GSK2; CW_24h correctly C(3,2)=3",
+    "PT/PTN antibody-lot separation correct (cross-lot contrast is reported-only XC)",
+    "58 file-map keys cover all deposited pA-DamID 10-kb bigWigs for the contiguous GSM5509284-5509392 block + 4 GSM5898024-027 samples",
+    "freeze.py binds all outcome-bearing files incl. imported libvar/libvar.py and mm10 feature table; libvar2/data and results/ empty",
+    "no Dam-only samples in the map"
+  ],
+  "repairs_applied": [
+    {"n": 1, "severity": "MAJOR", "finding": "P4 could be satisfied by a single genotype (all 6 generality_groups are WAPL or CW).", "resolution": "P4 amended to require >=4/6 groups AND qualifying groups spanning both genotypes (>=1 WAPL_* and >=1 CW_*); code + protocol + tests updated."},
+    {"n": 2, "severity": "MINOR", "finding": "File replicate numbers renumbered vs GEO titles for several conditions.", "resolution": "Global disclosure added to status."},
+    {"n": 3, "severity": "MINOR", "finding": "*_24h drug files named DMSO_IAA_0h/EED_IAA_0h/GSK_IAA_0h; 24h rests on GEO titles/characteristics.", "resolution": "Disclosed in disclosed_limits."},
+    {"n": 4, "severity": "MINOR", "finding": "Test weaknesses (misnamed test, lax assert, literal-only seed/prefix tests, no P4 boundary).", "resolution": "Renamed, assertEqual PARTIAL, end-to-end URL assert, source-level seed asserts, P4 both-genotypes boundary test; base_pairs completed to all 46 keys."},
+    {"n": 5, "severity": "MINOR", "finding": "Missing file raises unhandled error before ABORT message; unused import; XC slope NaN serialization.", "resolution": "existence check before check_build; import screen removed; XC rho+slope coerced to null when non-finite."}
+  ],
+  "notes": [
+    "completeness claim recorded in protocol (per-sample metadata, not an independent series-level listing)",
+    "treated-timepoint 'same condition' = same nominal treatment disclosed as conservative",
+    "one anomalous library can carry at most one generality group"
+  ]
+}

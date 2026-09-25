@@ -1,0 +1,353 @@
+{
+ "freeze_sha256": "19777097c2385fa6f37b3d97d070b269f0fc689e4eb360242e63a060f75344ff",
+ "files": {
+  "esc:CTCF_0h_r1": {
+   "file": "GSM5509284_pADamID_CTCF-EL_0h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2454265,
+   "sha256": "a7d661d6873eabd56da5f4d6ac0443c348e3ae377391987a0a0bd100b6fd2d79"
+  },
+  "esc:CTCF_0h_r2": {
+   "file": "GSM5509285_pADamID_CTCF-EL_0h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2394687,
+   "sha256": "69c423d9e571e443786d797ff65a2b4ef028fd573d6f8f7390001756401833eb"
+  },
+  "esc:CTCF_6h_r1": {
+   "file": "GSM5509286_pADamID_CTCF-EL_6h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2430071,
+   "sha256": "3fa2cd635953cf916dff5c0a88a549f735ab630a3ad807c00fb548482edd983d"
+  },
+  "esc:CTCF_6h_r2": {
+   "file": "GSM5509287_pADamID_CTCF-EL_6h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2424274,
+   "sha256": "cb4e67b24f5f17e39aaf0414b85841ba9939e27ab7234b4570dcd9d6dbe58e3d"
+  },
+  "esc:CTCF_24h_r1": {
+   "file": "GSM5509288_pADamID_CTCF-EL_24h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2373543,
+   "sha256": "28b0a1659e0d3bd983018986de7b278bd77b5eab74fdd4ff151bfed61f6699f9"
+  },
+  "esc:CTCF_24h_r2": {
+   "file": "GSM5509289_pADamID_CTCF-EL_24h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2446621,
+   "sha256": "ae9abcb5ea752a5b8dd0bd1110bcca5d60fc84d68ff86b04088aae3d44e53fc3"
+  },
+  "esc:CTCF_96h_r1": {
+   "file": "GSM5509290_pADamID_CTCF-EL_96h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2409751,
+   "sha256": "d3728b55b1d5d87233c1f9fddf233ecc9eb5a12760eeb016bb514d6917542068"
+  },
+  "esc:CTCF_96h_r2": {
+   "file": "GSM5509291_pADamID_CTCF-EL_96h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2409423,
+   "sha256": "88aff6c733275e2aa3e489f42e7fab03b4ffcd6c7b1edaeb25a8b02c0383c9ab"
+  },
+  "esc:WAPL_0h_r1": {
+   "file": "GSM5509292_pADamID_NQ_WAPL_0h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2414821,
+   "sha256": "6b92bef3c0dc211980d7bf9c330da7a95b320ef699d71778d5283ec0acc40b85"
+  },
+  "esc:WAPL_0h_r2": {
+   "file": "GSM5509293_pADamID_NQ_WAPL_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2453543,
+   "sha256": "d72832bec237e1ed0e2c0e15bf308cc06a576674132fe32a086aaa1332bb3fa0"
+  },
+  "esc:WAPL_0h_r3": {
+   "file": "GSM5509294_pADamID_NQ_WAPL_0h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2476305,
+   "sha256": "9c344bf9137e32568ddaadd4ffa08ce3e3f110ad6e5689157cc765a0725e34e5"
+  },
+  "esc:WAPL_6h_r1": {
+   "file": "GSM5509295_pADamID_NQ_WAPL_6h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2454291,
+   "sha256": "d4fa3fd728bb9a804699cdad119a9c543b085bb86f730ed28a2e897a2780e7dc"
+  },
+  "esc:WAPL_6h_r2": {
+   "file": "GSM5509296_pADamID_NQ_WAPL_6h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2447122,
+   "sha256": "bfa2db9c8dcfd44a15e18e5747b907aa86510143ca078608b51f5f0c6bb8fc5a"
+  },
+  "esc:WAPL_6h_r3": {
+   "file": "GSM5509297_pADamID_NQ_WAPL_6h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2380876,
+   "sha256": "854a54c79436811b86b0ba1e3492fcd0db0bc709ed91932f48c9d1f15675955d"
+  },
+  "esc:WAPL_24h_r1": {
+   "file": "GSM5509298_pADamID_NQ_WAPL_24h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2433612,
+   "sha256": "8d85e230effc4f82151a23dea5fddede037f86a92e738a5651673725d856c22f"
+  },
+  "esc:WAPL_24h_r2": {
+   "file": "GSM5509299_pADamID_NQ_WAPL_24h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2444576,
+   "sha256": "97d05db2257d5fb7f2a54db0567bd9fc5729c0cd0439055d919bf0653237a648"
+  },
+  "esc:WAPL_24h_r3": {
+   "file": "GSM5509300_pADamID_NQ_WAPL_24h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2433634,
+   "sha256": "d53e04457366d62991c20df0ce2450648e15ffdf8bd7875f9ac8038a9a93d887"
+  },
+  "esc:WAPL_96h_r1": {
+   "file": "GSM5509301_pADamID_NQ_WAPL_96h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2432948,
+   "sha256": "1848966f1bc150985339e07a035c53c763be19221c4c46e5013f9e61224c018e"
+  },
+  "esc:WAPL_96h_r2": {
+   "file": "GSM5509302_pADamID_NQ_WAPL_96h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2439184,
+   "sha256": "53562b7128c28c3ee84935675ffb5426460b5b653ddd769f0d1451147931b9a8"
+  },
+  "esc:WAPL_96h_r3": {
+   "file": "GSM5509303_pADamID_NQ_WAPL_96h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2375848,
+   "sha256": "1cce2acccca1be2e8e86dbe5cc284a5a3a2981c7411a384bd6c983043b90d69d"
+  },
+  "esc:CW_0h_r1": {
+   "file": "GSM5509304_pADamID_NQ_CTCF-WAPL_0h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2381548,
+   "sha256": "41bd7d3e034974f913153d3ad633f0e6845dc4d3701c0f975dc594b62f84a087"
+  },
+  "esc:CW_0h_r2": {
+   "file": "GSM5509305_pADamID_NQ_CTCF-WAPL_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2386856,
+   "sha256": "46df280aad712a7f7b0fd0cffc1cae89e04ba21ce6793edcb27cd5e388b9d27a"
+  },
+  "esc:CW_0h_r3": {
+   "file": "GSM5509306_pADamID_NQ_CTCF-WAPL_0h_r6-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2454964,
+   "sha256": "b13decff4bb8dfc33730d034283d959c632e05955b374afb758ceb100af67479"
+  },
+  "esc:CW_0h_r4": {
+   "file": "GSM5509307_pADamID_NQ_CTCF-WAPL_0h_r7-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2436787,
+   "sha256": "41564bd3a474a7922b8d340906cc46c57a087b8853735ea87a135f9fa7e52cc7"
+  },
+  "esc:CW_6h_r1": {
+   "file": "GSM5509308_pADamID_NQ_CTCF-WAPL_6h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2400158,
+   "sha256": "99c0d6303bf0301287db3345e75d6e1a6566026232ccd23902913fa31cfc02b1"
+  },
+  "esc:CW_6h_r2": {
+   "file": "GSM5509309_pADamID_NQ_CTCF-WAPL_6h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2442353,
+   "sha256": "531cb8d467d87d4bfcddfeaf705d4ce56e58f59ab67a8d52158f5d8a485f8743"
+  },
+  "esc:CW_6h_r3": {
+   "file": "GSM5509310_pADamID_NQ_CTCF-WAPL_6h_r6-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2450629,
+   "sha256": "48390e5be248aeaf984ab07a07f7c50ccd862b2970df0ad51dfeaaf0a9078b74"
+  },
+  "esc:CW_6h_r4": {
+   "file": "GSM5509311_pADamID_NQ_CTCF-WAPL_6h_r7-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2443060,
+   "sha256": "0ef6e8e5ebf4f0d940891b023524218ef37e7cb48d9073d8628408866990d321"
+  },
+  "esc:CW_24h_r1": {
+   "file": "GSM5509312_pADamID_NQ_CTCF-WAPL_24h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2433776,
+   "sha256": "c7073650664f6c2d85c474cb480241291072f5dd887e3dbb9a7b50a1116a3bd5"
+  },
+  "esc:CW_24h_r3": {
+   "file": "GSM5509313_pADamID_NQ_CTCF-WAPL_24h_r6-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2391393,
+   "sha256": "073ea7b659d4d5014e064c4857e5551ac9c7bf101fde962217156204819050ef"
+  },
+  "esc:CW_24h_r4": {
+   "file": "GSM5509314_pADamID_NQ_CTCF-WAPL_24h_r7-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2452420,
+   "sha256": "679150190fa8929cadda6473c2f160b5b266bc47d865d99197675814112ff649"
+  },
+  "esc:CW_96h_r1": {
+   "file": "GSM5509315_pADamID_NQ_CTCF-WAPL_96h_r1-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2436119,
+   "sha256": "e2bf8c2c52ec4b5052db0a1b06a9234cc15d39124d95b3c128097a8f271bd3bb"
+  },
+  "esc:CW_96h_r2": {
+   "file": "GSM5509316_pADamID_NQ_CTCF-WAPL_96h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2436422,
+   "sha256": "2122dcca67ff8847ea46b7d1e75dd7fc0890d2e9f5db3d83fabdc47a262e9f73"
+  },
+  "esc:CW_96h_r3": {
+   "file": "GSM5509317_pADamID_NQ_CTCF-WAPL_96h_r6-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2389095,
+   "sha256": "80807e21a608e5d76055b2e80f6b1971966779913dd29a379c8766135439aac5"
+  },
+  "esc:PT_0h_r1": {
+   "file": "GSM5509318_pADamID_PT_0h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2420994,
+   "sha256": "21ae036601d3f63469074553339e47b41c8c4bdf5a7255e1582d582773166405"
+  },
+  "esc:PT_0h_r2": {
+   "file": "GSM5509319_pADamID_PT_0h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2442439,
+   "sha256": "68e6abe1b22d1c3dcdfce693123246b8c6ef72e96b5bed22eed6baf7359d6f3c"
+  },
+  "esc:PTN_0h_r8": {
+   "file": "GSM5898024_pADamID_PT_0h_r8-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2507252,
+   "sha256": "c2a977943096f9911256d2ff0f2241363107066f52e9e5a63244067b17168780"
+  },
+  "esc:PTN_0h_r9": {
+   "file": "GSM5898025_pADamID_PT_0h_r9-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2466291,
+   "sha256": "8c8bf20d7a628c050531465f7184f2cfaa6ba61d4367a24fe4ebcbfbf7fbc665"
+  },
+  "esc:PTN_24h_r8": {
+   "file": "GSM5898026_pADamID_PT_24h_r8-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2495237,
+   "sha256": "1d592e78d3ef12539355f150b75acda8584bd2a4978fc90b47b40d51b1bab047"
+  },
+  "esc:PTN_24h_r9": {
+   "file": "GSM5898027_pADamID_PT_24h_r9-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2488930,
+   "sha256": "4f26686c131afaa207370f31312a5cf316880b9a4c1b282acd1a4efbabec9857"
+  },
+  "esc:RAD21_0h_r1": {
+   "file": "GSM5509320_pADamID_RAD21_0h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2279945,
+   "sha256": "0ca10101513fa402336e1f4e6a38aa1eca6f1825e44d2b85caaa9aefac1645f7"
+  },
+  "esc:RAD21_0h_r2": {
+   "file": "GSM5509321_pADamID_RAD21_0h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2396478,
+   "sha256": "055362430ae05bb8df2d375a1c9856700b40adaf858e3196e334361a925fb170"
+  },
+  "esc:RAD21_6h_r1": {
+   "file": "GSM5509322_pADamID_RAD21_6h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2343230,
+   "sha256": "4fd9ea6a17b0c8b46128d4b9d9b6d9e1862d2c2b631037aa71de12420acd7fc4"
+  },
+  "esc:RAD21_6h_r2": {
+   "file": "GSM5509323_pADamID_RAD21_6h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2487283,
+   "sha256": "d6043892d99c6ccfef78f90c698854c4e7de3b023bc7342a6c7615fd7a5311ae"
+  },
+  "esc:RAD21_24h_r1": {
+   "file": "GSM5509324_pADamID_RAD21_24h_r4-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2502037,
+   "sha256": "26d2cda74c27ec610ffc16679bbb00dd54774186300972a8a567f558b7c289e5"
+  },
+  "esc:RAD21_24h_r2": {
+   "file": "GSM5509325_pADamID_RAD21_24h_r5-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2461401,
+   "sha256": "f1875459a3479910d345b4a296a9a6a3cf8243652e8239b267f22b4b2a3df402"
+  },
+  "esc:DMSO_0h_r1": {
+   "file": "GSM5509326_pADamID_CTCF-EL_DMSO_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2366287,
+   "sha256": "71d4e434204a1b18445d1ead2c6669bd1f23682c40fa517fedb03a9b3c98a328"
+  },
+  "esc:DMSO_0h_r2": {
+   "file": "GSM5509327_pADamID_CTCF-EL_DMSO_0h_r3-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2267279,
+   "sha256": "57e9a5fcac4589d0bf416321c5836f913c66ea5edbe6bb6aed2a7005d3d3ed54"
+  },
+  "esc:DMSO_24h_r1": {
+   "file": "GSM5509328_pADamID_CTCF-EL_DMSO_IAA_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2268903,
+   "sha256": "8e2f21f211a0b05c0dd3ea818c67841a445001facf43ce355a8210750bad8f10"
+  },
+  "esc:DMSO_24h_r2": {
+   "file": "GSM5509329_pADamID_CTCF-EL_DMSO_IAA_0h_r3-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2243175,
+   "sha256": "590fc5e20223a50a62729a62df4fd1bf7df7ed07c01c46bb62139bc944e7ae99"
+  },
+  "esc:EED_0h_r1": {
+   "file": "GSM5509330_pADamID_CTCF-EL_EED_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2363837,
+   "sha256": "cd0b0061ccc23ca4ba7451adf0f5ba8c0925afb93b0945642f168e7fae4bb3d9"
+  },
+  "esc:EED_0h_r2": {
+   "file": "GSM5509331_pADamID_CTCF-EL_EED_0h_r3-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2294629,
+   "sha256": "0b76a54b8605d8b691f38618be3fbcf7afbf0eaaf2218137182abb3d28defe16"
+  },
+  "esc:EED_24h_r1": {
+   "file": "GSM5509332_pADamID_CTCF-EL_EED_IAA_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2277042,
+   "sha256": "a4a53248cd8e98dac78f4f8008ba399222beb107de1f9b7cd7c2dfe42ec5b441"
+  },
+  "esc:EED_24h_r2": {
+   "file": "GSM5509333_pADamID_CTCF-EL_EED_IAA_0h_r3-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2339103,
+   "sha256": "1ea582d52edede135fbcf1a52c0e05aacce8d193146598cbbd2924ead283d53a"
+  },
+  "esc:GSK_0h_r1": {
+   "file": "GSM5509334_pADamID_CTCF-EL_GSK_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2266984,
+   "sha256": "7a5c40eff69663f27fee76f0c9e798a31d438b6ad5c9b39440b9064127d918ad"
+  },
+  "esc:GSK_0h_r2": {
+   "file": "GSM5509335_pADamID_CTCF-EL_GSK_0h_r3-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2305242,
+   "sha256": "2e1ebaf30855bdb23415283ba2c28a3e9123eb0bccae241f12651b0488557936"
+  },
+  "esc:GSK_24h_r1": {
+   "file": "GSM5509336_pADamID_CTCF-EL_GSK_IAA_0h_r2-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2288456,
+   "sha256": "06b714958cba2f27be41241d1cf649c0f42546d998d4c66611a4b855cc9f2948"
+  },
+  "esc:GSK_24h_r2": {
+   "file": "GSM5509337_pADamID_CTCF-EL_GSK_IAA_0h_r3-10kb.bw",
+   "dir": "libvar2/data",
+   "bytes": 2255870,
+   "sha256": "39176bd0c067b5e64fc15098062e76c526e05f12493194998d9adb3160f31c0a"
+  }
+ }
+}
