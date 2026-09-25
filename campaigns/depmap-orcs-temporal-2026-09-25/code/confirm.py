@@ -347,6 +347,12 @@ def main():
                          if p.get("available") and p.get("context")})
     models = sorted({s["model"] for s in screens})
     ctx_mat = CX.build(contexts, models)
+    # P3 overlap classes: an ORCS screen is "same_line" if its cell line
+    # was itself CRISPR-profiled in DepMap 24Q4 (shared specimen);
+    # "disjoint" if the line exists in the DepMap census (needed for omics
+    # contexts) but was never dependency-profiled
+    dprof = set(np.load(f"{C.DEPMAP}/data/prep/dep.npz")["models"]
+                .astype(str))
 
     # lethal rank fractions per screen x dep_gene
     dep_rank = {}
@@ -361,6 +367,7 @@ def main():
         out = []
         for _, r in pairs.iterrows():
             pos, neg = [], []
+            ov_pos, ov_neg = {}, {}
             col = ctx_mat[r.context] if r.context in ctx_mat.columns \
                 else None
             for s in screens:
@@ -371,6 +378,8 @@ def main():
                 if c is None or rf is None:
                     continue
                 (pos if c == 1 else neg).append(rf)
+                (ov_pos if c == 1 else ov_neg).setdefault(
+                    s["overlap"], []).append(rf)
             if len(pos) < MIN_SCREENS_PER_ARM or \
                     len(neg) < MIN_SCREENS_PER_ARM:
                 out.append({"set": label, "context": r.context,
@@ -380,6 +389,17 @@ def main():
                                                   "n_neg": len(neg)})})
                 continue
             stat = mannwhitneyu(pos, neg, alternative="less")
+            # P3: same-line vs disjoint sub-tests (>=3/arm), reported not gated
+            p3 = {}
+            for cls in ("same_line", "disjoint"):
+                pp_, nn_ = ov_pos.get(cls, []), ov_neg.get(cls, [])
+                if len(pp_) >= MIN_SCREENS_PER_ARM and \
+                        len(nn_) >= MIN_SCREENS_PER_ARM:
+                    s2 = mannwhitneyu(pp_, nn_, alternative="less")
+                    p3[cls] = {"n_pos": len(pp_), "n_neg": len(nn_),
+                               "median_pos": float(np.median(pp_)),
+                               "median_neg": float(np.median(nn_)),
+                               "p": float(s2.pvalue)}
             out.append({"set": label, "context": r.context,
                         "dep_gene": r.dep_gene, "tested": True,
                         "replicated": False,
@@ -388,9 +408,12 @@ def main():
                              "median_pos": float(np.median(pos)),
                              "median_neg": float(np.median(neg)),
                              "p": float(stat.pvalue),
-                             "u": float(stat.statistic)})})
+                             "u": float(stat.statistic),
+                             "p3": p3})})
         return out
 
+    for s in screens:
+        s["overlap"] = "same_line" if s["model"] in dprof else "disjoint"
     rows = eval_frame(sel, "primary")
     empty_placebos = []
     for f, pdf in placebo_frames:
@@ -437,6 +460,20 @@ def main():
     p1 = pr["rate"] is not None and pr["rate"] >= P1_MIN_RATE
     p2 = pl["rate"] is not None and pl["rate"] <= P2_MAX_PLACEBO
     p5 = go["rate"] is not None and go["rate"] >= P5_MIN_GOLD_RATE
+    # P3 aggregate: same-line vs disjoint replication among primary rows
+    p3_agg = {}
+    for cls in ("same_line", "disjoint"):
+        sub = res[(res["set"] == "primary") & res.tested]
+        hits = tot = 0
+        for _, r in sub.iterrows():
+            p3 = json.loads(r["result"]).get("p3", {})
+            if cls in p3:
+                tot += 1
+                if p3[cls]["median_pos"] < p3[cls]["median_neg"] and \
+                        p3[cls]["p"] < 0.05:
+                    hits += 1
+        p3_agg[cls] = {"tested": tot, "replicated": hits,
+                       "rate": hits / tot if tot else None}
     if not pr["tested"] or not go["tested"]:
         label = "NOT_EVALUABLE"
     elif not p5:
@@ -458,6 +495,7 @@ def main():
                          "MIN_SCREENS_PER_ARM": MIN_SCREENS_PER_ARM,
                          "MIN_GENES_PER_SCREEN": MIN_GENES_PER_SCREEN},
                "primary": pr, "placebo": pl, "novel": nov, "gold": go,
+               "p3_overlap_split": p3_agg,
                "empty_placebo_files": empty_placebos,
                "P1": {"passed": bool(p1), "threshold": P1_MIN_RATE},
                "P2": {"passed": bool(p2), "ceiling": P2_MAX_PLACEBO},

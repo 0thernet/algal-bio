@@ -1,8 +1,8 @@
 {
  "schema": "bio.orcs-confirmation.v1",
- "freeze_utc": "2026-09-25T21:54:42Z",
- "top_digest": "f2e60009f4e9b706bf75375759f49c762339647ff48c0c42c0c1e8139bf139eb",
- "run_utc": "2026-09-25T21:57:39Z",
+ "freeze_utc": "2026-09-25T22:16:17Z",
+ "top_digest": "9124f42fb9810a18b572ec343555f90e45b51b106c0ba5d22c84856e2a6e5e3e",
+ "run_utc": "2026-09-25T22:19:12Z",
  "index_file": "BIOGRID-ORCS-SCREEN_INDEX-2.0.18.index.tab.txt",
  "coverage": {
   "index_rows": 1952,
@@ -39,6 +39,18 @@
   "tested": 13,
   "replicated": 12,
   "rate": 0.9230769230769231
+ },
+ "p3_overlap_split": {
+  "same_line": {
+   "tested": 61,
+   "replicated": 24,
+   "rate": 0.39344262295081966
+  },
+  "disjoint": {
+   "tested": 35,
+   "replicated": 4,
+   "rate": 0.11428571428571428
+  }
  },
  "empty_placebo_files": [
   "depmap_placebo20260927.csv"

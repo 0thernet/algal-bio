@@ -39,10 +39,10 @@
   {
    "source": "code/confirm.py",
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/confirm.py",
-   "bytes": 20407,
-   "bytes_published": 20407,
-   "sha256_original": "1d66f7b60ac1d5826f541c738ebcc1f11317abebd0e7b0ae9ae75fae388ba7be",
-   "sha256_published": "1d66f7b60ac1d5826f541c738ebcc1f11317abebd0e7b0ae9ae75fae388ba7be",
+   "bytes": 22368,
+   "bytes_published": 22368,
+   "sha256_original": "15b60e26129046309186e4d3f530a564d987f654a98dd53c32bcebebff408978",
+   "sha256_published": "15b60e26129046309186e4d3f530a564d987f654a98dd53c32bcebebff408978",
    "path_prefix_redacted": false
   },
   {
@@ -167,8 +167,8 @@
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/freeze.json",
    "bytes": 1965,
    "bytes_published": 1965,
-   "sha256_original": "2f96b981535059ddfca604029d974c8736c5e9b0944e80ddd77c1d8692220e2c",
-   "sha256_published": "2f96b981535059ddfca604029d974c8736c5e9b0944e80ddd77c1d8692220e2c",
+   "sha256_original": "6570d918582de8bffa5dd39917f53eac5142835834c6afa8833ff48afb7b27fd",
+   "sha256_published": "6570d918582de8bffa5dd39917f53eac5142835834c6afa8833ff48afb7b27fd",
    "path_prefix_redacted": false
   },
   {
@@ -183,28 +183,28 @@
   {
    "source": "registration/protocol.json",
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/protocol.json",
-   "bytes": 3381,
-   "bytes_published": 3381,
-   "sha256_original": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
-   "sha256_published": "ae1a44d600a6a1407e3da007c5dc278ee11927ad38dda5d9d47c60fe93dfda5e",
+   "bytes": 3363,
+   "bytes_published": 3363,
+   "sha256_original": "f4d81e09b25ede914d732b0fada6053c9e7bdc0b43e01dc0ac80c8ee9dc20095",
+   "sha256_published": "f4d81e09b25ede914d732b0fada6053c9e7bdc0b43e01dc0ac80c8ee9dc20095",
    "path_prefix_redacted": false
   },
   {
    "source": "report.md",
    "published": "reports/depmap-orcs-temporal-2026-09-25/report.md",
-   "bytes": 2913,
-   "bytes_published": 2913,
-   "sha256_original": "49035a4a89d5d131c53939668dbffeb5efaabeb59c735a2ec2258f602a394099",
-   "sha256_published": "49035a4a89d5d131c53939668dbffeb5efaabeb59c735a2ec2258f602a394099",
+   "bytes": 4121,
+   "bytes_published": 4121,
+   "sha256_original": "38fbf6392d01d24f8d6c506ca5b19630386456fedfd746e8fb854748de21d65d",
+   "sha256_published": "38fbf6392d01d24f8d6c506ca5b19630386456fedfd746e8fb854748de21d65d",
    "path_prefix_redacted": false
   },
   {
    "source": "results/confirmation.csv",
    "published": "reports/depmap-orcs-temporal-2026-09-25/results/confirmation.csv",
-   "bytes": 16617,
-   "bytes_published": 16617,
-   "sha256_original": "8e2e290076c98f08c50c6d1bc9344b0605c08be952ec643f1a34a57e0a847554",
-   "sha256_published": "8e2e290076c98f08c50c6d1bc9344b0605c08be952ec643f1a34a57e0a847554",
+   "bytes": 34799,
+   "bytes_published": 34799,
+   "sha256_original": "e7ced42ddd30fe4313da2fa994620f7bb3101387f2d4ac169b523cac67e45173",
+   "sha256_published": "e7ced42ddd30fe4313da2fa994620f7bb3101387f2d4ac169b523cac67e45173",
    "path_prefix_redacted": false
   },
   {
@@ -212,17 +212,17 @@
    "published": "reports/depmap-orcs-temporal-2026-09-25/results/confirmation.runs.jsonl",
    "bytes": 162,
    "bytes_published": 162,
-   "sha256_original": "8cfdb0f91be102ad0a01608f16290c82f21b9fc11fcf147e3197b37492c26ff9",
-   "sha256_published": "8cfdb0f91be102ad0a01608f16290c82f21b9fc11fcf147e3197b37492c26ff9",
+   "sha256_original": "464267860d0287487e76114a271490d37ab055adf265c8cc65d0053aa2db4632",
+   "sha256_published": "464267860d0287487e76114a271490d37ab055adf265c8cc65d0053aa2db4632",
    "path_prefix_redacted": false
   },
   {
    "source": "results/confirmation.summary.json",
    "published": "reports/depmap-orcs-temporal-2026-09-25/results/confirmation.summary.json",
-   "bytes": 1147,
-   "bytes_published": 1147,
-   "sha256_original": "1f45fb666e2b90c67b04daaa7b1cab0eb5acffe7b262847fd9a1f8660cbdc39e",
-   "sha256_published": "1f45fb666e2b90c67b04daaa7b1cab0eb5acffe7b262847fd9a1f8660cbdc39e",
+   "bytes": 1353,
+   "bytes_published": 1353,
+   "sha256_original": "0be2d65c082da4ef0748ab2eebefeb91be1b3b2d1a03568e5e125fc83f41fae9",
+   "sha256_published": "0be2d65c082da4ef0748ab2eebefeb91be1b3b2d1a03568e5e125fc83f41fae9",
    "path_prefix_redacted": false
   },
   {
