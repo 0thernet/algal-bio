@@ -1,0 +1,28 @@
+{
+ "schema": "bio.prefreeze-review.v1",
+ "reviewer": "independent-review-agent",
+ "utc": "2026-09-25T20:23:43Z",
+ "verdict": "PASS_WITH_REPAIRS",
+ "initial_verdict": "FAIL",
+ "blockers": [
+  "empty placebo CSV crashed confirm before output (guard + empty_placebos recorded)",
+  "results/ dir never created (os.makedirs added)",
+  "sibling depmap machinery unbound: check_freeze now re-verifies code/stats.py, code/contexts.py, the depmap release receipt hashes, and dep.npz"
+ ],
+ "majors": [
+  "sealed-file check is requirement-driven (FH.FILES keys), URL matched per-file, post-freeze timestamp required",
+  "post-freeze placebo injection refused: live glob must equal the frozen set",
+  "P5 denominator restricted to controls-file meets_discovery_floor=16, registered in protocol.json",
+  "disc_sd missing now fails closed instead of vacuous pass"
+ ],
+ "minors": [
+  "top_digest verified and recorded in runs ledger",
+  "FORBIDDEN + sealed-receipt refusal added to freeze.py",
+  "verdict() extracted and unit-tested",
+  "D2->DepMap map injectivity asserted",
+  "dead gold fallback removed",
+  "campaign.py sys.path.insert(1) prevents shadowing"
+ ],
+ "tests": "10 passed",
+ "sealed_access_reviewed": false
+}

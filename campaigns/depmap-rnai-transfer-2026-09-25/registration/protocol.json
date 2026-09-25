@@ -1,0 +1,39 @@
+{
+ "schema": "bio.protocol.v1",
+ "campaign_id": "depmap-rnai-transfer-2026-09-25",
+ "status": "registered_pre_freeze",
+ "question": "Do the 77 context->dependency associations selected and registered by the DepMap campaign (registration frozen 2026-09-25, PR #12) replicate in RNAi dependency screens (DEMETER2 v6), a different perturbation chemistry?",
+ "why_it_is_worth_registering": "The DepMap campaign established cross-library CRISPR replication. Whether the associations are CRISPR-specific artifacts (cut-site toxicity, paralog cross-targeting) or perturbation-independent biology is the next causal question; RNAi knockdown shares neither Cas9 cutting nor guide cross-targeting.",
+ "data": {
+  "discovery": "DepMap 24Q4 Avana (and KY, per the earlier campaign's sealed confirmation)",
+  "holdout": "DEMETER2 v6 figshare 10.6084/m9.figshare.6025238 - D2_combined_gene_dep_scores.csv (156MB), fetched sealed post-freeze",
+  "pair_set": "results/selection.annotated.csv of the DepMap campaign copied verbatim to registration/depmap_pairs.csv; placebo selections and gold controls copied likewise. Nothing about DEMETER2 influenced selection - it has never been opened."
+ },
+ "definitions": {
+  "replication": "same sign as the discovery beta, one-sided p < 0.05, and standardized holdout effect >= 0.5x the standardized shrunken discovery effect (beta_lb / discovery dep sd)",
+  "testable": ">=30 usable models and >=3 context-positive and >=3 context-negative models on the D2-mapped DepMap models",
+  "context_evaluation": "context columns recomputed from DepMap 24Q4 omics on the D2-mapped models",
+  "gold_denominator": "P5 denominator is fixed by depmap_gold_controls.json denominators_fixed_here.floor_denominator (16): available AND meets_discovery_floor; the 2 available-but-undetected pairs (CREBBP->EP300, NAPRT->NAMPT) are excluded"
+ },
+ "registered_predictions": {
+  "P1": "primary replication rate >= 0.30 over tested pairs (lower than the KY threshold; RNAi knockdown is incomplete and the assays differ)",
+  "P2": "placebo replication rate <= 0.15 over tested placebo pairs",
+  "P4": "novel (reference-absent) pairs replicate at >= 0.25 with >= 3 replicated",
+  "P5": "gold controls replicate at >= 0.5 over tested pairs restricted to the controls file's own meets_discovery_floor=16 denominator (pairs the discovery screen did not detect cannot enter the sensitivity floor)"
+ },
+ "labels": {
+  "RNAI_REPLICATED": "P1, P2, P4, P5 all pass",
+  "PARTIAL_REPLICATION": "P1 passes; P4 fails",
+  "NO_TRANSFER": "P1 fails",
+  "PLACEBO_BREACH": "P2 fails",
+  "UNDERPOWERED": "P5 fails",
+  "NOT_EVALUABLE": "no selected, placebo, or gold pair tested"
+ },
+ "caveats": [
+  "DEMETER2 cell lines substantially overlap the discovery cohort - this tests perturbation-chemistry independence, not cohort independence.",
+  "Mechanism-stratified expectations are registered priors (prior-art/prior-art-rnai.md): amplification/aneuploidy contexts are expected NOT to transfer (cut-site artifact class); deletion/paralog/lineage contexts are expected to transfer.",
+  "D2 scores are DEMETER2-combined effect sizes, not hit probabilities.",
+  "Non-replication is ambiguous between artifact and incomplete knockdown; per-context-kind rates are reported."
+ ],
+ "spend": "$0 - public data only"
+}
