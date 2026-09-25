@@ -48,10 +48,10 @@
   {
    "source": "code/fetch_holdout.py",
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/code/fetch_holdout.py",
-   "bytes": 2105,
-   "bytes_published": 2105,
-   "sha256_original": "2853e8c63135c68f18d8fb8a8fe01fced1ef11e183ded27bacb814221ad84e42",
-   "sha256_published": "2853e8c63135c68f18d8fb8a8fe01fced1ef11e183ded27bacb814221ad84e42",
+   "bytes": 2457,
+   "bytes_published": 2457,
+   "sha256_original": "e6e77b918b3444173f15a0d50d755eb79ff8f52cb4a832e5af98a1f9ea5042fa",
+   "sha256_published": "e6e77b918b3444173f15a0d50d755eb79ff8f52cb4a832e5af98a1f9ea5042fa",
    "path_prefix_redacted": false
   },
   {
@@ -88,6 +88,15 @@
    "bytes_published": 813,
    "sha256_original": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
    "sha256_published": "a6dc9c9391dc44784ecba1ff111f5e27eee15e986f03235c0723c54c487d6fb6",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "logs/fetch.log",
+   "published": "reports/depmap-orcs-temporal-2026-09-25/logs/fetch.log",
+   "bytes": 127,
+   "bytes_published": 127,
+   "sha256_original": "ca473bdb25ec0ec4182c006bee37d32b00245a6e579984955d0a32aa105c5d3b",
+   "sha256_published": "ca473bdb25ec0ec4182c006bee37d32b00245a6e579984955d0a32aa105c5d3b",
    "path_prefix_redacted": false
   },
   {
@@ -149,8 +158,8 @@
    "published": "campaigns/depmap-orcs-temporal-2026-09-25/registration/freeze.json",
    "bytes": 1965,
    "bytes_published": 1965,
-   "sha256_original": "6634c94aba47e0778cf104d8a7a705421163de9415f32bce32fc100f5a6d13db",
-   "sha256_published": "6634c94aba47e0778cf104d8a7a705421163de9415f32bce32fc100f5a6d13db",
+   "sha256_original": "9bc2fb50852c31f58effc396298c64fe1ed7b4c8371d372c236ee39ad46eaefc",
+   "sha256_published": "9bc2fb50852c31f58effc396298c64fe1ed7b4c8371d372c236ee39ad46eaefc",
    "path_prefix_redacted": false
   },
   {

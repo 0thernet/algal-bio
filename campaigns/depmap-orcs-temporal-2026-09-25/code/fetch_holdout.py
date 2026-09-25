@@ -32,7 +32,15 @@ def main():
             continue
         print("fetch", fn, flush=True)
         try:
-            urllib.request.urlretrieve(url, dst + ".part")
+            req = urllib.request.Request(
+                url, headers={"User-Agent": "Mozilla/5.0 (research fetch)"})
+            with urllib.request.urlopen(req, timeout=3600) as r, \
+                    open(dst + ".part", "wb") as fh:
+                while True:
+                    chunk = r.read(1 << 22)
+                    if not chunk:
+                        break
+                    fh.write(chunk)
             os.replace(dst + ".part", dst)
         except Exception as e:                    # noqa: BLE001 - recorded
             receipt.setdefault("errors", {})[f"data/sealed/{fn}"] = {
