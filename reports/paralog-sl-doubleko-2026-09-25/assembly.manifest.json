@@ -1,0 +1,412 @@
+{
+ "schema": "bio.assembly-manifest.v2",
+ "slug": "paralog-sl-doubleko-2026-09-25",
+ "excluded": [
+  ".pytest_cache",
+  "__pycache__",
+  "data/depmap24q4",
+  "data/discovery",
+  "data/prep",
+  "data/refs",
+  "data/sealed"
+ ],
+ "note": "frozen hashes refer to sha256_original; redaction replaces personal path prefixes only. The DepMap 24Q4 release, the prepared matrices, the sealed holdout tables and the reference downloads stay external; their hashes are in the published receipts.",
+ "files": [
+  {
+   "source": "README.campaign.md",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/README.md",
+   "bytes": 2822,
+   "bytes_published": 2822,
+   "sha256_original": "3a93b48d5e87593b613fcb84815f212c2e8dc837ea9a6dc86308d8874232602a",
+   "sha256_published": "3a93b48d5e87593b613fcb84815f212c2e8dc837ea9a6dc86308d8874232602a",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "assemble_public.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/assemble_public.py",
+   "bytes": 3737,
+   "bytes_published": 3737,
+   "sha256_original": "de0abb980833bcb94209e7e47147d702c60d70be461064fb846f842c26250b22",
+   "sha256_published": "de0abb980833bcb94209e7e47147d702c60d70be461064fb846f842c26250b22",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/annotate.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/annotate.py",
+   "bytes": 3409,
+   "bytes_published": 3409,
+   "sha256_original": "937240f947084802ca61e4347901f4530da6f34cb3e68452882bf3b5a5b7bbc4",
+   "sha256_published": "937240f947084802ca61e4347901f4530da6f34cb3e68452882bf3b5a5b7bbc4",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/campaign.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/campaign.py",
+   "bytes": 4525,
+   "bytes_published": 4525,
+   "sha256_original": "97061f9857705dfbfd5a5a809c1716773da7a71ef24102189766733e3604d4ee",
+   "sha256_published": "97061f9857705dfbfd5a5a809c1716773da7a71ef24102189766733e3604d4ee",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/confirm.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/confirm.py",
+   "bytes": 27303,
+   "bytes_published": 27303,
+   "sha256_original": "06f0037473572b83878e28904ddf33242a9dc99c93c6780e7ff3026b2b6a5fce",
+   "sha256_published": "06f0037473572b83878e28904ddf33242a9dc99c93c6780e7ff3026b2b6a5fce",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/fetch_holdout.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/fetch_holdout.py",
+   "bytes": 3243,
+   "bytes_published": 3243,
+   "sha256_original": "d73827643e866fc73a1f9cf460945c648e91369c56deba96a2eebdc1d308bf55",
+   "sha256_published": "d73827643e866fc73a1f9cf460945c648e91369c56deba96a2eebdc1d308bf55",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/freeze.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/freeze.py",
+   "bytes": 3581,
+   "bytes_published": 3581,
+   "sha256_original": "618051fba1fb0303fa8ef71793802c782ffd6e96f12806cd2abd588fd8ddf659",
+   "sha256_published": "618051fba1fb0303fa8ef71793802c782ffd6e96f12806cd2abd588fd8ddf659",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/gold.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/gold.py",
+   "bytes": 3974,
+   "bytes_published": 3974,
+   "sha256_original": "0d0ede49a37836a197ef5076f25e7e02cad16b887b7a41b10b0dde6eb98c9618",
+   "sha256_published": "0d0ede49a37836a197ef5076f25e7e02cad16b887b7a41b10b0dde6eb98c9618",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/make_protocol.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/make_protocol.py",
+   "bytes": 15521,
+   "bytes_published": 15521,
+   "sha256_original": "ce5ab14a4676758c4ca21962bee670fc2ce72291e53e97afab80b9fd34ccf7a6",
+   "sha256_published": "ce5ab14a4676758c4ca21962bee670fc2ce72291e53e97afab80b9fd34ccf7a6",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/prep.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/prep.py",
+   "bytes": 14620,
+   "bytes_published": 14620,
+   "sha256_original": "49e1df4661d394116cebba1c5439083fb25880241df46232a7a144feac53edcf",
+   "sha256_published": "49e1df4661d394116cebba1c5439083fb25880241df46232a7a144feac53edcf",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/screen.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/code/screen.py",
+   "bytes": 10662,
+   "bytes_published": 10662,
+   "sha256_original": "615d8c796260e1960430f40f1ba25f84a71e8235279a80410004e66f7a8e72ab",
+   "sha256_published": "615d8c796260e1960430f40f1ba25f84a71e8235279a80410004e66f7a8e72ab",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/ctx_group.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/data/prep/ctx_group.json",
+   "bytes": 49341,
+   "bytes_published": 49341,
+   "sha256_original": "9a794e1d0c0b3d947e5fa32829356a8ceb682dd0713560a7c969d7fec2708aa3",
+   "sha256_published": "9a794e1d0c0b3d947e5fa32829356a8ceb682dd0713560a7c969d7fec2708aa3",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/ky_pos.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/data/prep/ky_pos.json",
+   "bytes": 29729,
+   "bytes_published": 29729,
+   "sha256_original": "7883a89791cbdfb741b360394c2d23141f5a3341f70465647b132a42d23397b4",
+   "sha256_published": "7883a89791cbdfb741b360394c2d23141f5a3341f70465647b132a42d23397b4",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/lof_gene_models.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/data/prep/lof_gene_models.json",
+   "bytes": 902763,
+   "bytes_published": 902763,
+   "sha256_original": "2fbec26f23992e01aa915f3a44296b4d8ba1bfff4e01de2bc88bb2eaa56008f7",
+   "sha256_published": "2fbec26f23992e01aa915f3a44296b4d8ba1bfff4e01de2bc88bb2eaa56008f7",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/pair_universe.csv",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/data/prep/pair_universe.csv",
+   "bytes": 7625,
+   "bytes_published": 7625,
+   "sha256_original": "eec02d10e7d684beb0467994d2be36d98be7047b27acc0ba86ae8a5ff0f39ca5",
+   "sha256_published": "eec02d10e7d684beb0467994d2be36d98be7047b27acc0ba86ae8a5ff0f39ca5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/prep.receipt.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/data/prep/prep.receipt.json",
+   "bytes": 4004,
+   "bytes_published": 4004,
+   "sha256_original": "4b712cfd914db377779dd54863a77a0edceb716f2d0a34c67b3e055fa1fca687",
+   "sha256_published": "4b712cfd914db377779dd54863a77a0edceb716f2d0a34c67b3e055fa1fca687",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/refs/depmap-refs.receipt.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/data/refs/depmap-refs.receipt.json",
+   "bytes": 3156,
+   "bytes_published": 3156,
+   "sha256_original": "7d413d50ed15bd838f7705983e50c3cfc7336aef0df1c620834405f33d68f1bc",
+   "sha256_published": "7d413d50ed15bd838f7705983e50c3cfc7336aef0df1c620834405f33d68f1bc",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "prior-art/prior-art-paralog-sl.md",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/prior-art/prior-art-paralog-sl.md",
+   "bytes": 4782,
+   "bytes_published": 4782,
+   "sha256_original": "722053076b616e31f8f4e9f8ba9b4b3adf7dfd38d6263f63e4513e2099fd85f6",
+   "sha256_published": "722053076b616e31f8f4e9f8ba9b4b3adf7dfd38d6263f63e4513e2099fd85f6",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/freeze.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/registration/freeze.json",
+   "bytes": 4904,
+   "bytes_published": 4904,
+   "sha256_original": "99fe7f191d62f38369bd24c43d016a1d269c5ebf6587127b01aaf02e823c5ff3",
+   "sha256_published": "99fe7f191d62f38369bd24c43d016a1d269c5ebf6587127b01aaf02e823c5ff3",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/gold_controls.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/registration/gold_controls.json",
+   "bytes": 5253,
+   "bytes_published": 5253,
+   "sha256_original": "5a6aa523391188d1b41c583b9ae80b8b6db5e6f0442ecdcf37ddf5fbd3960f79",
+   "sha256_published": "5a6aa523391188d1b41c583b9ae80b8b6db5e6f0442ecdcf37ddf5fbd3960f79",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/holdout_map.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/registration/holdout_map.json",
+   "bytes": 6608,
+   "bytes_published": 6608,
+   "sha256_original": "90b74340a16e1254f5da98031c0468dfe8f1d18e2f62715e34316d3123df2e38",
+   "sha256_published": "90b74340a16e1254f5da98031c0468dfe8f1d18e2f62715e34316d3123df2e38",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/prefreeze-review.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/registration/prefreeze-review.json",
+   "bytes": 3611,
+   "bytes_published": 3611,
+   "sha256_original": "1ff9c7e12e9df98676878c3ad0c2eadbd2856dfdbdcd8ff5e1ba32008a251b4f",
+   "sha256_published": "1ff9c7e12e9df98676878c3ad0c2eadbd2856dfdbdcd8ff5e1ba32008a251b4f",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/protocol.json",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/registration/protocol.json",
+   "bytes": 10658,
+   "bytes_published": 10658,
+   "sha256_original": "c95d5654fd3a7444c42f3521061c7a718d67eef7dbef27eb4a2a0e918f23cec8",
+   "sha256_published": "c95d5654fd3a7444c42f3521061c7a718d67eef7dbef27eb4a2a0e918f23cec8",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/annotate.summary.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/annotate.summary.json",
+   "bytes": 132,
+   "bytes_published": 132,
+   "sha256_original": "d36b6ade55a66e0dca65e8cdf731da538b6f1c7700ec7ddbf5c4140c0b511fb5",
+   "sha256_published": "d36b6ade55a66e0dca65e8cdf731da538b6f1c7700ec7ddbf5c4140c0b511fb5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260925.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/candidates.placebo20260925.csv",
+   "bytes": 40962,
+   "bytes_published": 40962,
+   "sha256_original": "ddcd936de7dc9e376ab594ad80e50f90df2aff4d2b494e492a4e97c6a0ef0479",
+   "sha256_published": "ddcd936de7dc9e376ab594ad80e50f90df2aff4d2b494e492a4e97c6a0ef0479",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260926.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/candidates.placebo20260926.csv",
+   "bytes": 40962,
+   "bytes_published": 40962,
+   "sha256_original": "d60c3080e523298c702f484d5958dbc0dfce5cce5e4879b8957ffffb18660a4c",
+   "sha256_published": "d60c3080e523298c702f484d5958dbc0dfce5cce5e4879b8957ffffb18660a4c",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260927.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/candidates.placebo20260927.csv",
+   "bytes": 40921,
+   "bytes_published": 40921,
+   "sha256_original": "bf82f321ed8d3104b79321e7c36184651553208e15cba20e9b744ee3433bacdd",
+   "sha256_published": "bf82f321ed8d3104b79321e7c36184651553208e15cba20e9b744ee3433bacdd",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260928.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/candidates.placebo20260928.csv",
+   "bytes": 40882,
+   "bytes_published": 40882,
+   "sha256_original": "c7a23dc1621f7c0eff899ca8a7a98fce6f356f22d28102e3cdd1b887d1a44677",
+   "sha256_published": "c7a23dc1621f7c0eff899ca8a7a98fce6f356f22d28102e3cdd1b887d1a44677",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.placebo20260929.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/candidates.placebo20260929.csv",
+   "bytes": 40948,
+   "bytes_published": 40948,
+   "sha256_original": "4ac411dc996f06f0aa9c116451268399f635ac52006a0b22884edab83bf51929",
+   "sha256_published": "4ac411dc996f06f0aa9c116451268399f635ac52006a0b22884edab83bf51929",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/candidates.real.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/candidates.real.csv",
+   "bytes": 41255,
+   "bytes_published": 41255,
+   "sha256_original": "fe9548c39f10f83af44ca0a3bca6d7c912eb622299a728c4d7b244e91af37f00",
+   "sha256_published": "fe9548c39f10f83af44ca0a3bca6d7c912eb622299a728c4d7b244e91af37f00",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260925.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/screen.placebo20260925.json",
+   "bytes": 581,
+   "bytes_published": 581,
+   "sha256_original": "ba21b7ab3a74dc8022f3dce958ba2e6d88e119a19cbb6cd46f73df2929184efd",
+   "sha256_published": "ba21b7ab3a74dc8022f3dce958ba2e6d88e119a19cbb6cd46f73df2929184efd",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260926.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/screen.placebo20260926.json",
+   "bytes": 581,
+   "bytes_published": 581,
+   "sha256_original": "eab490d45457f6968362b304f1e8d854093db395daa26332148b574656e941a0",
+   "sha256_published": "eab490d45457f6968362b304f1e8d854093db395daa26332148b574656e941a0",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260927.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/screen.placebo20260927.json",
+   "bytes": 581,
+   "bytes_published": 581,
+   "sha256_original": "ae1c077f28326edd8f159a76df5f90d9eabd5b8cecfeeaede817ed9619fc7d9b",
+   "sha256_published": "ae1c077f28326edd8f159a76df5f90d9eabd5b8cecfeeaede817ed9619fc7d9b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260928.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/screen.placebo20260928.json",
+   "bytes": 581,
+   "bytes_published": 581,
+   "sha256_original": "ce6dd6417dccca8aa3e629f905427588d1efb447cfdec78fbdb06ff64ef089c7",
+   "sha256_published": "ce6dd6417dccca8aa3e629f905427588d1efb447cfdec78fbdb06ff64ef089c7",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.placebo20260929.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/screen.placebo20260929.json",
+   "bytes": 581,
+   "bytes_published": 581,
+   "sha256_original": "2117c063bd5dc59494f35f0bc397d366d81c83179c241111c912208093c27a48",
+   "sha256_published": "2117c063bd5dc59494f35f0bc397d366d81c83179c241111c912208093c27a48",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/screen.real.json",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/screen.real.json",
+   "bytes": 608,
+   "bytes_published": 608,
+   "sha256_original": "58f7d515672db1714653f8e93964604e9c0eeeb8b59de1b830132a7ed42de6a8",
+   "sha256_published": "58f7d515672db1714653f8e93964604e9c0eeeb8b59de1b830132a7ed42de6a8",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.annotated.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.annotated.csv",
+   "bytes": 3575,
+   "bytes_published": 3575,
+   "sha256_original": "5f9b749aca3711744bad13cf0137817764de65a52f9c26f05c9f734b2bc5869c",
+   "sha256_published": "5f9b749aca3711744bad13cf0137817764de65a52f9c26f05c9f734b2bc5869c",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260925.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.placebo20260925.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260926.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.placebo20260926.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260927.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.placebo20260927.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260928.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.placebo20260928.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.placebo20260929.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.placebo20260929.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "results/selection.real.csv",
+   "published": "reports/paralog-sl-doubleko-2026-09-25/results/selection.real.csv",
+   "bytes": 3040,
+   "bytes_published": 3040,
+   "sha256_original": "a2c4d92b757ce058da3f42e817f8cf50145da88211ca3e6526a5a7cf637dd80e",
+   "sha256_published": "a2c4d92b757ce058da3f42e817f8cf50145da88211ca3e6526a5a7cf637dd80e",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_paralog.py",
+   "published": "campaigns/paralog-sl-doubleko-2026-09-25/tests/test_paralog.py",
+   "bytes": 18917,
+   "bytes_published": 18917,
+   "sha256_original": "3e8f7e56e805b2c681637c99aa59e78b188420d6b901d7cd85b602354db8876e",
+   "sha256_published": "3e8f7e56e805b2c681637c99aa59e78b188420d6b901d7cd85b602354db8876e",
+   "path_prefix_redacted": false
+  }
+ ]
+}

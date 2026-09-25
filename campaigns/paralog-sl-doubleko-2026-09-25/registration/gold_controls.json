@@ -1,0 +1,230 @@
+{
+ "pairs": [
+  {
+   "context_gene": "STAG2",
+   "dep_gene": "STAG1",
+   "context": "LOF:STAG2",
+   "available": true,
+   "in_universe": true,
+   "pair": "STAG1|STAG2",
+   "ky_pos": 9,
+   "basis": "van der Lelij 2017; widely replicated",
+   "nominated_by_screen": true
+  },
+  {
+   "context_gene": "STAG1",
+   "dep_gene": "STAG2",
+   "context": "DEL:STAG1",
+   "available": true,
+   "in_universe": false,
+   "pair": "STAG1|STAG2",
+   "ky_pos": 0,
+   "basis": "bidirectional coherence",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "SMARCA4",
+   "dep_gene": "SMARCA2",
+   "context": "LOF:SMARCA4",
+   "available": true,
+   "in_universe": true,
+   "pair": "SMARCA2|SMARCA4",
+   "ky_pos": 14,
+   "basis": "Hoffman 2014",
+   "nominated_by_screen": true
+  },
+  {
+   "context_gene": "ARID1A",
+   "dep_gene": "ARID1B",
+   "context": "LOF:ARID1A",
+   "available": true,
+   "in_universe": false,
+   "pair": "ARID1A|ARID1B",
+   "ky_pos": 43,
+   "basis": "Helming 2014",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "MAP2K1",
+   "dep_gene": "MAP2K2",
+   "context": "EXPR_LOW:MAP2K1",
+   "available": true,
+   "in_universe": false,
+   "pair": "MAP2K1|MAP2K2",
+   "ky_pos": 0,
+   "basis": "pgPEN gold standard",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "MAP2K2",
+   "dep_gene": "MAP2K1",
+   "context": "EXPR_LOW:MAP2K2",
+   "available": true,
+   "in_universe": false,
+   "pair": "MAP2K1|MAP2K2",
+   "ky_pos": 0,
+   "basis": "pgPEN gold standard",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "CDK4",
+   "dep_gene": "CDK6",
+   "context": "EXPR_LOW:CDK4",
+   "available": true,
+   "in_universe": false,
+   "pair": "CDK4|CDK6",
+   "ky_pos": 0,
+   "basis": "pgPEN gold standard",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "CDK6",
+   "dep_gene": "CDK4",
+   "context": "EXPR_LOW:CDK6",
+   "available": true,
+   "in_universe": false,
+   "pair": "CDK4|CDK6",
+   "ky_pos": 17,
+   "basis": "pgPEN gold standard",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "CCNL1",
+   "dep_gene": "CCNL2",
+   "context": "EXPR_LOW:CCNL1",
+   "available": true,
+   "in_universe": false,
+   "pair": "CCNL1|CCNL2",
+   "ky_pos": 0,
+   "basis": "Parrish 2021 top hit",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "CCNL2",
+   "dep_gene": "CCNL1",
+   "context": "EXPR_LOW:CCNL2",
+   "available": true,
+   "in_universe": false,
+   "pair": "CCNL1|CCNL2",
+   "ky_pos": 0,
+   "basis": "Parrish 2021 top hit",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "FAM50B",
+   "dep_gene": "FAM50A",
+   "context": "EXPR_LOW:FAM50B",
+   "available": true,
+   "in_universe": false,
+   "pair": "FAM50A|FAM50B",
+   "ky_pos": 0,
+   "basis": "Thompson 2021: FAM50B silencing -> FAM50A dep",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "ENO1",
+   "dep_gene": "ENO2",
+   "context": "DEL:ENO1",
+   "available": true,
+   "in_universe": false,
+   "pair": "ENO1|ENO2",
+   "ky_pos": 0,
+   "basis": "Muller 2012 collateral lethality (1p36)",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "GSK3A",
+   "dep_gene": "GSK3B",
+   "context": "EXPR_LOW:GSK3A",
+   "available": true,
+   "in_universe": false,
+   "pair": "GSK3A|GSK3B",
+   "ky_pos": 0,
+   "basis": "pgPEN PC9/HeLa SL",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "GSK3B",
+   "dep_gene": "GSK3A",
+   "context": "EXPR_LOW:GSK3B",
+   "available": true,
+   "in_universe": false,
+   "pair": "GSK3A|GSK3B",
+   "ky_pos": 0,
+   "basis": "pgPEN PC9/HeLa SL",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "CNOT7",
+   "dep_gene": "CNOT8",
+   "context": "EXPR_LOW:CNOT7",
+   "available": true,
+   "in_universe": false,
+   "pair": "CNOT7|CNOT8",
+   "ky_pos": 0,
+   "basis": "pgPEN SL",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "ASF1A",
+   "dep_gene": "ASF1B",
+   "context": "EXPR_LOW:ASF1A",
+   "available": true,
+   "in_universe": false,
+   "pair": "ASF1A|ASF1B",
+   "ky_pos": 0,
+   "basis": "De Kegel wet-validated, HAP1",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "ASF1B",
+   "dep_gene": "ASF1A",
+   "context": "EXPR_LOW:ASF1B",
+   "available": true,
+   "in_universe": false,
+   "pair": "ASF1A|ASF1B",
+   "ky_pos": 0,
+   "basis": "De Kegel wet-validated, HAP1",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "COPS7A",
+   "dep_gene": "COPS7B",
+   "context": "EXPR_LOW:COPS7A",
+   "available": true,
+   "in_universe": false,
+   "pair": "COPS7A|COPS7B",
+   "ky_pos": 0,
+   "basis": "De Kegel wet-validated, HAP1",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "COPS7B",
+   "dep_gene": "COPS7A",
+   "context": "EXPR_LOW:COPS7B",
+   "available": true,
+   "in_universe": false,
+   "pair": "COPS7A|COPS7B",
+   "ky_pos": 0,
+   "basis": "De Kegel wet-validated, HAP1",
+   "nominated_by_screen": false
+  },
+  {
+   "context_gene": "PA2G4",
+   "dep_gene": "PA2G4P4",
+   "context": "EXPR_LOW:PA2G4",
+   "available": true,
+   "in_universe": false,
+   "pair": "PA2G4|PA2G4P4",
+   "ky_pos": 0,
+   "basis": "reported SL (paralog pseudogene edge - only if map covers)",
+   "nominated_by_screen": false
+  }
+ ],
+ "denominators_fixed_here": {
+  "registered_pairs": 20,
+  "in_universe": 2,
+  "nominated_by_screen": 2,
+  "independent_controls": 18
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "mode": "placebo",
+ "seed": "20260925",
+ "models_av": 1043,
+ "models_ky": 315,
+ "contexts": 1395,
+ "universe_pairs": 160,
+ "av_pass": 0,
+ "ky_pass": 20,
+ "conjunctive": 0,
+ "dep_expressed": 0,
+ "selection_pool": 0,
+ "selected": 0,
+ "selected_pairs": 0,
+ "selected_by_kind": {},
+ "rule": {
+  "AV_MIN_BETA": -0.3,
+  "AV_MIN_LB": 0.2,
+  "AV_MAX_Q": 0.01,
+  "KY_MIN_BETA": -0.15,
+  "KY_MAX_P": 0.05,
+  "LB_Z": 1.96,
+  "MAX_PER_CONTEXT": 3,
+  "MAX_PER_DEP": 3,
+  "MAX_PER_PAIR": 1,
+  "STRATUM_N": {
+   "deletion": 30,
+   "expression": 40,
+   "lof": 30
+  },
+  "DEP_MIN_EXPR": 1.0
+ }
+}

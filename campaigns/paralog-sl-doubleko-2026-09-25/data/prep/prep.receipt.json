@@ -1,0 +1,83 @@
+{
+ "inputs": {
+  "../biology-depmap-2026-09-24/data/discovery/ScreenGeneEffect.AV.csv": "7c4e5a190e37d3db1408a35db9107768e7ffda7133641349419e6122c070a7c2",
+  "data/discovery/ScreenGeneEffect.KY.csv": "97eb783bbf6740e139b0a324fffddfe81a795fa47dae188dfc5072c733b11d7d",
+  "../biology-depmap-2026-09-24/data/refs/ensembl_human_paralogs.tsv": "763dcf4c57779146783f789c315e261ceae1ceac65b339efd1293b3ae1a58751",
+  "../biology-depmap-2026-09-24/data/depmap24q4/CRISPRScreenMap.csv": "668347965c7d5283da79ef7b6d315951d0cf6c5313551305971e8eec9503b3be",
+  "../biology-depmap-2026-09-24/data/depmap24q4/Gene.csv": "dfb5f74496ca17baf67f215a44f06197ddd835685813aede75754876b62b19db",
+  "../biology-depmap-2026-09-24/data/depmap24q4/Model.csv": "b7a0c1385e6cef30132b56aff61f1261d11e3f490490b355c430d32ee0dbdcfa",
+  "../biology-depmap-2026-09-24/data/depmap24q4/OmicsAbsoluteCNGene.csv": "5f530c797bf12bce68cccc3e763b29491c368bbbced8971733bed807a13b8c13",
+  "../biology-depmap-2026-09-24/data/depmap24q4/OmicsExpressionProteinCodingGenesTPMLogp1.csv": "2a71dc94110efcc0221eae821bb93a9f03b54bea16f005818911a09d33383d56",
+  "../biology-depmap-2026-09-24/data/depmap24q4/OmicsSomaticMutationsMatrixDamaging.csv": "1b33be5c3bebf30f52421384e268016afbd5e2257b75d65cfe2c09e21daba0f9",
+  "../biology-depmap-2026-09-24/data/depmap24q4/OmicsSomaticMutations.csv": "92e86ab6a8457ef99908daf2a2c82d9529320e23cd6c6b7adc128adc1e0f41c8",
+  "../biology-depmap-2026-09-24/data/depmap24q4/OmicsSignatures.csv": "2eb6d83065db5b591d9904339a1eaeb769a4db8593fe80a135399d7708b39bef",
+  "../biology-depmap-2026-09-24/data/depmap24q4/AchillesScreenQCReport.csv": "e48741c3f67536fa446f997cf7861cc081cd6a88ed41a48e04b2bef541b6033d",
+  "../biology-depmap-2026-09-24/data/prep/ctx.npz": "3380c85a88776cf45572d23f2f1fc3d556cb55a4991badedd40b701a25506749",
+  "../biology-depmap-2026-09-24/data/prep/ctx_group.json": "b927ea353641dbefe8a12ed3a94781e3c826f596bb7d9d62b21c1e27c7148f25",
+  "../biology-depmap-2026-09-24/data/depmap24q4/AvanaGuideMap.csv": "fad40ace063d0d61815bcb7719a2bc017cec6b29103a8fed3653742e834a3755",
+  "../biology-depmap-2026-09-24/data/depmap24q4/KYGuideMap.csv": "ae34b14f04dbaa90dc961f57dba4a8619ebf842f8365b8cd72854a1441539337"
+ },
+ "outputs": {
+  "data/prep/dep_av.npz": "96e75b7e00eadf9551a7862d6e7d6ff7a2f3895b46f604356a028ebf81fad725",
+  "data/prep/dep_ky.npz": "f19c443ae59897c1103d09d512b3d02d2009243f6a8d1a91fcbf933fa98ccef6",
+  "data/prep/ctx_paralog.npz": "489a2a01b5999fa038ce1f2ca9555d3b757b6ff386b6ed9c8093f51c23c8c52d",
+  "data/prep/pair_universe.csv": "eec02d10e7d684beb0467994d2be36d98be7047b27acc0ba86ae8a5ff0f39ca5",
+  "data/prep/ctx_group.json": "9a794e1d0c0b3d947e5fa32829356a8ceb682dd0713560a7c969d7fec2708aa3",
+  "data/prep/ky_pos.json": "7883a89791cbdfb741b360394c2d23141f5a3341f70465647b132a42d23397b4",
+  "data/prep/lof_gene_models.json": "2fbec26f23992e01aa915f3a44296b4d8ba1bfff4e01de2bc88bb2eaa56008f7"
+ },
+ "params": {
+  "PARALOG_MIN_PCTID": 40.0,
+  "PARALOG_KINDS": [
+   "DEL",
+   "EXPR_LOW",
+   "LOF"
+  ],
+  "KY_MIN_POS": 5,
+  "DEP_MIN_SD": 0.2,
+  "DEP_MIN_HIT": -0.5,
+  "DEP_MIN_HITS": 3,
+  "DEP_MAX_MISS": 0.05,
+  "EXPR_LOW": 1.0,
+  "DEEP_DEL_CN": 0.5,
+  "reference_essentials_excluded": false
+ },
+ "pair_map": {
+  "ref": "../biology-depmap-2026-09-24/data/refs/ensembl_human_paralogs.tsv",
+  "min_pctid": 40.0,
+  "directed_edges": 68901,
+  "unordered_pairs": 34486,
+  "paralog_genes": 9669
+ },
+ "universe": {
+  "multitarget_dep_pairs_excluded": 97,
+  "contexts": 1395,
+  "contexts_by_kind": {
+   "EXPR_LOW": 1208,
+   "LOF": 151,
+   "DEL": 36
+  },
+  "contexts_ky_evaluable": 1179,
+  "av": {
+   "label": "AV",
+   "screens_in": 1046,
+   "screens_used": 1043,
+   "models": 1043,
+   "genes_in": 18435,
+   "genes_kept": 3817,
+   "imputed_cells": 37
+  },
+  "ky": {
+   "label": "KY",
+   "screens_in": 315,
+   "screens_used": 315,
+   "models": 315,
+   "genes_in": 18435,
+   "genes_kept": 2547,
+   "imputed_cells": 0
+  },
+  "dep_genes_joint": 2173,
+  "directed_pairs": 160,
+  "unordered_pairs": 153
+ }
+}
