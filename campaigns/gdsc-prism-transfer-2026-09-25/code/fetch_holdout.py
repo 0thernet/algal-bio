@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""Fetch the sealed PRISM matrix. Post-freeze only."""
+import json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import campaign as C
+
+FILES = {
+    "secondary-screen-replicate-collapsed-logfold-change.csv":
+        "https://ndownloader.figshare.com/files/20237757",
+}
+
+
+def main():
+    fz = f"{C.ROOT}/registration/freeze.json"
+    if not os.path.exists(fz):
+        sys.exit("refusing: fetch only after the freeze exists")
+    frozen = json.load(open(fz))
+    import time, urllib.request
+    os.makedirs(C.SEALED, exist_ok=True)
+    receipt = {"files": {}}
+    rc = f"{C.SEALED}/fetch.receipt.json"
+    old = json.load(open(rc)).get("files", {}) if os.path.exists(rc) else {}
+    for fn, url in FILES.items():
+        dst = f"{C.SEALED}/{fn}"
+        prev = old.get(f"data/sealed/{fn}", {})
+        if (os.path.exists(dst) and prev.get("fetched_utc")
+                and prev["fetched_utc"] >= frozen["frozen_utc"]):
+            receipt["files"][f"data/sealed/{fn}"] = dict(prev)
+            print("keep", fn, flush=True)
+            continue
+        print("fetch", fn, flush=True)
+        try:
+            urllib.request.urlretrieve(url, dst + ".part")
+            os.replace(dst + ".part", dst)
+        except Exception as e:                    # noqa: BLE001 - recorded
+            receipt.setdefault("errors", {})[f"data/sealed/{fn}"] = {
+                "url": url, "error": str(e)[:200]}
+            print(fn, "FETCH_FAILED", str(e)[:80], flush=True)
+            continue
+        receipt["files"][f"data/sealed/{fn}"] = {
+            "bytes": os.path.getsize(dst), "sha256": C.sha(dst), "url": url,
+            "fetched_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ",
+                                         time.gmtime())}
+        print(fn, receipt["files"][f"data/sealed/{fn}"]["sha256"][:16],
+              flush=True)
+    json.dump(receipt, open(f"{C.SEALED}/fetch.receipt.json", "w"), indent=1)
+
+
+if __name__ == "__main__":
+    main()
