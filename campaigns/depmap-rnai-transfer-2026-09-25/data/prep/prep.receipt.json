@@ -1,0 +1,17 @@
+{
+ "inputs": {
+  "registration/depmap_pairs.csv": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+  "registration/depmap_gold_controls.json": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+  "registration/depmap_placebo20260925.csv": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+  "registration/depmap_placebo20260926.csv": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+  "registration/depmap_placebo20260927.csv": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "data/refs/demeter2_sample_info.csv": "8dcbd6da1e4858e7fa5b3910e8cf3feb1045a0c31a2e5d252eb3f2afe86dd036"
+ },
+ "outputs": {
+  "data/prep/d2_model_map.json": "89feaaf8c9852395c4d07bdc7c1559fcd2ac71b4f4c917daa8179e870ae43355"
+ },
+ "map_coverage": {
+  "mapped": 704,
+  "total": 712
+ }
+}

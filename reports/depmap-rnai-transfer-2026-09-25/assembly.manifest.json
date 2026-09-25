@@ -1,0 +1,193 @@
+{
+ "schema": "bio.assembly-manifest.v2",
+ "slug": "depmap-rnai-transfer-2026-09-25",
+ "excluded": [
+  ".pytest_cache",
+  "__pycache__",
+  "data/discovery",
+  "data/sealed"
+ ],
+ "note": "frozen hashes refer to sha256_original; redaction replaces personal path prefixes only. The sealed DEMETER2 matrix and the DepMap release stay external; hashes are in the published receipts.",
+ "files": [
+  {
+   "source": "README.campaign.md",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/README.md",
+   "bytes": 1703,
+   "bytes_published": 1703,
+   "sha256_original": "dbe3d4b0526154c92154df67abec9bfefe3697b5990e2fb0faabc10e48918202",
+   "sha256_published": "dbe3d4b0526154c92154df67abec9bfefe3697b5990e2fb0faabc10e48918202",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "assemble_public.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/assemble_public.py",
+   "bytes": 3271,
+   "bytes_published": 3271,
+   "sha256_original": "6dececa410dced30056f9857635ad4c72d2722a0647eec3631006f7a963f67b5",
+   "sha256_published": "6dececa410dced30056f9857635ad4c72d2722a0647eec3631006f7a963f67b5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/campaign.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/code/campaign.py",
+   "bytes": 2214,
+   "bytes_published": 2214,
+   "sha256_original": "c765d6e578db742ee8400ef36d94b0bc6439460d10852df75b35552806374630",
+   "sha256_published": "c765d6e578db742ee8400ef36d94b0bc6439460d10852df75b35552806374630",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/confirm.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/code/confirm.py",
+   "bytes": 12261,
+   "bytes_published": 12261,
+   "sha256_original": "c8b9cdc8a7cf92151c960d91924e6a00e21218b4dab4efad208e827bac3553d5",
+   "sha256_published": "c8b9cdc8a7cf92151c960d91924e6a00e21218b4dab4efad208e827bac3553d5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/fetch_holdout.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/code/fetch_holdout.py",
+   "bytes": 1774,
+   "bytes_published": 1774,
+   "sha256_original": "f756a5a15c5da1015140d54dc5a3a2cfb01397b52c52012e34b425aaedc3fb2d",
+   "sha256_published": "f756a5a15c5da1015140d54dc5a3a2cfb01397b52c52012e34b425aaedc3fb2d",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/freeze.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/code/freeze.py",
+   "bytes": 2076,
+   "bytes_published": 2076,
+   "sha256_original": "1a5ef96aed74406e397a637aa410f96d1e4a20915f80aaa0b0fee2e1ae2e8e87",
+   "sha256_published": "1a5ef96aed74406e397a637aa410f96d1e4a20915f80aaa0b0fee2e1ae2e8e87",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "code/prep.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/code/prep.py",
+   "bytes": 2627,
+   "bytes_published": 2627,
+   "sha256_original": "e4485a9002caff31b1cb072a3fa106ee712b1c0054b4c6e6b460ca57ad38f8f0",
+   "sha256_published": "e4485a9002caff31b1cb072a3fa106ee712b1c0054b4c6e6b460ca57ad38f8f0",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/d2_model_map.json",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/data/prep/d2_model_map.json",
+   "bytes": 25861,
+   "bytes_published": 25861,
+   "sha256_original": "89feaaf8c9852395c4d07bdc7c1559fcd2ac71b4f4c917daa8179e870ae43355",
+   "sha256_published": "89feaaf8c9852395c4d07bdc7c1559fcd2ac71b4f4c917daa8179e870ae43355",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/prep/prep.receipt.json",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/data/prep/prep.receipt.json",
+   "bytes": 853,
+   "bytes_published": 853,
+   "sha256_original": "0342bcaac4c2045a21e29f3767bfe47c96014b51ae72d58a69bfa267fba4b850",
+   "sha256_published": "0342bcaac4c2045a21e29f3767bfe47c96014b51ae72d58a69bfa267fba4b850",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "data/refs/demeter2_sample_info.csv",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/data/refs/demeter2_sample_info.csv",
+   "bytes": 76352,
+   "bytes_published": 76352,
+   "sha256_original": "8dcbd6da1e4858e7fa5b3910e8cf3feb1045a0c31a2e5d252eb3f2afe86dd036",
+   "sha256_published": "8dcbd6da1e4858e7fa5b3910e8cf3feb1045a0c31a2e5d252eb3f2afe86dd036",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "prior-art/prior-art-rnai.md",
+   "published": "reports/depmap-rnai-transfer-2026-09-25/prior-art/prior-art-rnai.md",
+   "bytes": 3273,
+   "bytes_published": 3273,
+   "sha256_original": "a4ec5151c0da8607efde59b70f4714b9d4ef5db6abc45f5aad87bcec0459e089",
+   "sha256_published": "a4ec5151c0da8607efde59b70f4714b9d4ef5db6abc45f5aad87bcec0459e089",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_gold_controls.json",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/depmap_gold_controls.json",
+   "bytes": 12673,
+   "bytes_published": 12673,
+   "sha256_original": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+   "sha256_published": "8deb36d92e3bf963ad1c087c32785d648b71ba2def242e2958bc404a8fd40c42",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_pairs.csv",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/depmap_pairs.csv",
+   "bytes": 23414,
+   "bytes_published": 23414,
+   "sha256_original": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+   "sha256_published": "7fc27235c80a83d18ce183a173cb736d8a23e7cae2a08b29073d40761a02ba59",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_placebo20260925.csv",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/depmap_placebo20260925.csv",
+   "bytes": 526,
+   "bytes_published": 526,
+   "sha256_original": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+   "sha256_published": "5e710c4a30ca7c030f252e9a610d714d2c327b57f5a911c5b94e289492cfd573",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_placebo20260926.csv",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/depmap_placebo20260926.csv",
+   "bytes": 1057,
+   "bytes_published": 1057,
+   "sha256_original": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+   "sha256_published": "7d044fdd7bc004a6c9a14c5d8fc5fe18268d7433feb81bfbbd23189522a4bff5",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/depmap_placebo20260927.csv",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/depmap_placebo20260927.csv",
+   "bytes": 1,
+   "bytes_published": 1,
+   "sha256_original": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "sha256_published": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/freeze.json",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/freeze.json",
+   "bytes": 1878,
+   "bytes_published": 1878,
+   "sha256_original": "d0e3ce7d1d2a01e6103fa3a3faa3798400cc454ff31b20c8c7ea5ab2e9cecd97",
+   "sha256_published": "d0e3ce7d1d2a01e6103fa3a3faa3798400cc454ff31b20c8c7ea5ab2e9cecd97",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/prefreeze-review.json",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/prefreeze-review.json",
+   "bytes": 1208,
+   "bytes_published": 1208,
+   "sha256_original": "28d33dc513954d082b64ab58a53a476bb5e708038fb8a68bed97e783dc1ef615",
+   "sha256_published": "28d33dc513954d082b64ab58a53a476bb5e708038fb8a68bed97e783dc1ef615",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "registration/protocol.json",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/registration/protocol.json",
+   "bytes": 3293,
+   "bytes_published": 3293,
+   "sha256_original": "1596510abb85437d1d51f79e7f3604f1ee051cdaed2a8ead1cdc3d374b837c5c",
+   "sha256_published": "1596510abb85437d1d51f79e7f3604f1ee051cdaed2a8ead1cdc3d374b837c5c",
+   "path_prefix_redacted": false
+  },
+  {
+   "source": "tests/test_rnai.py",
+   "published": "campaigns/depmap-rnai-transfer-2026-09-25/tests/test_rnai.py",
+   "bytes": 3801,
+   "bytes_published": 3801,
+   "sha256_original": "f9c95054dd550d7e1422efffbdd3899d71ceae5c4dfcf4c7fcf8b221031f553c",
+   "sha256_published": "f9c95054dd550d7e1422efffbdd3899d71ceae5c4dfcf4c7fcf8b221031f553c",
+   "path_prefix_redacted": false
+  }
+ ]
+}
