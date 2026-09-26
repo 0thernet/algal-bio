@@ -115,7 +115,9 @@ receipt = fetch(url, dest, Expect(first_line="ModelID,GeneID,score",
   `guards.Interrupted` in the main thread instead of ending Python at once,
   so the `finally` still settles what moved. The previous handlers are then
   restored and the signal is sent again, so the process still ends by it. A
-  signal that nohup set to be ignored stays ignored. This covers the
+  signal that nohup set to be ignored stays ignored. A second signal during
+  that cleanup is deferred, not raised again, and a signal that arrives while
+  the fetch settles waits until the bytes are recorded. This covers the
   documented cleanup too: SIGTERM to the slot runner's `--pidfile` pid is
   forwarded to the fetch.
 - For a fetch killed outright (SIGKILL), the reservation file holds the path
@@ -135,7 +137,11 @@ receipt = fetch(url, dest, Expect(first_line="ModelID,GeneID,score",
   own lock. On a cache hit the blob is re-hashed and re-validated, and it costs
   nothing against the budget, so a cached file counts once. Files are placed
   with a copy-on-write clone (`cp -c`, or a reflink), falling back to a copy
-  checked against the disk floor. A placed file is read-only.
+  checked against the disk floor. A placed file is read-only; a file placed
+  under `data/sealed/` or `data/sanger_holdout/` (by `fetch` or
+  `import_local`) is set to mode 000 as soon as it is open for its SHA-256
+  check, so even a fetch killed with SIGKILL before `seal.lock()` leaves no
+  readable holdout file.
 - The receipt is one line appended to `receipts.jsonl` next to the file. It
   records the url, bytes, sha256, fetch and receipt times, the source
   (network, cache or import_local), the checks that passed and the budget run.
@@ -203,11 +209,14 @@ any destination under `data/sealed/`, and it must belong to the same campaign
 
 - `lock` sets sealed files to mode 000, `receipts.jsonl` to 444 and the
   directories to 500.
-- `writable()` opens the directory for a fetch and locks it again afterwards.
+- `writable()` opens the directory for a fetch and locks it again afterwards,
+  whatever happens. SIGTERM, SIGHUP and SIGINT inside the block raise
+  `guards.Interrupted`, so the lock runs before the signal is sent again and
+  the process ends by it; a signal during the lock waits for it to finish.
 - `status()` reports counts and modes only, never names.
 - `open_sealed(campaign_dir, name, active_run)` is the only reader. It needs
   the active run handle from `runguard.run`. It opens the file, restores mode
-  000 at once, and checks the SHA-256 against the file's receipt on the open
+  000 at once (a signal meanwhile waits until mode 000 is back), and checks the SHA-256 against the file's receipt on the open
   descriptor. The run's `finish` record lists what was opened.
 
 These permissions are a speed bump against accidental reads. The evidence is
@@ -332,7 +341,10 @@ tokens are replaced with `<free-text-withheld>` and counted.
   `constants_exempt` names the constants to skip, each with a reason.
 - `lint hygiene --deny-file F [--staged --repo DIR] [paths]` flags personal
   paths, whole-word case-insensitive matches of the names in the deny file
-  (including names split across a line break) and files over 4 MB. The deny
+  (including names split across a line break, and names joined by `-`, `_`,
+  `.` or a path separator, as in `first-last`, `first_last`, `First.Last@`
+  or `name_suffix`) and files over 4 MB. The same content scan guards
+  `ledger export-public` and `assemble_public --deny-file`. The deny
   file has one name per line, and lines starting with `#` are comments. A hit
   is reported as `file:line: kind`, never with the matched text. File and
   directory names are checked too (`file: deny-list name (file path)`), and a
@@ -390,7 +402,15 @@ fixtures in temporary directories only. It covers:
   slot runner, and by SIGKILL, each charged close to the bytes served rather
   than its reservation, with no `.part` file left; stale reservations charged
   from their count, their `.part` file, or in full; orphaned `.part` files;
-  the signal handling of `interruptible()`
+  the signal handling of `interruptible()`, including a second signal during
+  cleanup and a signal while settling; the metered count written to the
+  reservation before each retry; a `.part` path outside `kit-tmp/`, which is
+  neither read nor deleted; and every malformed reservation field
+- a scaffolded `fetch_holdout.py` stopped during its second file by SIGTERM,
+  by SIGTERM to the slot runner and by SIGKILL, which leaves no readable
+  sealed file (and, for SIGTERM, a locked `data/sealed/`); `writable()` and
+  `open_sealed` under a signal; a placed sealed file unreadable before it is
+  hashed
 - budget values that are not a positive finite number, negative or
   non-integer sizes, `guards check` and a `guards record` past the budget
 - `validate_content`: a first-line prefix that matches and one that does not,
@@ -415,7 +435,8 @@ fixtures in temporary directories only. It covers:
   dicts and sets; a missing or empty constants block and an unregistered
   constant
 - deny-list hits in contents, file names and directory names, reported
-  without the name
+  without the name, including names joined by `-`, `_` or `.` in the lint,
+  the ledger's public export and the public assembly
 - path scrubbing, receipted files and nested private directories in the
   public assembly, and its refusals when a registered file would change or
   would not be published

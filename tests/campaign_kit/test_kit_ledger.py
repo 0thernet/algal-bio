@@ -285,6 +285,21 @@ def test_export_public_refuses_duplicates_and_a_missing_statuses_object(ledger_p
         ledger.export_public(ledger_path, deny_file=deny_file)
 
 
+@pytest.mark.parametrize("item", ["quillon-vantree", "quillon_vantree", "Quillon.Vantree",
+                                  "zorblat_draft"])
+def test_export_public_refuses_deny_names_joined_by_separators(ledger_path, deny_file, capsys,
+                                                               item):
+    # plain tokens, so they reach the public copy unless the deny scan catches them
+    edit(ledger_path, "src-meta", opened_for=[item], campaigns=[f"lane-{item}"])
+    with pytest.raises(ledger.LedgerError, match="hygiene check") as caught:
+        ledger.export_public(ledger_path, deny_file=deny_file)
+    assert ledger.main(["export-public", "--ledger", str(ledger_path),
+                        "--deny-file", str(deny_file)]) == 2
+    out = capsys.readouterr()
+    for part in ("quillon", "vantree", "zorblat"):
+        assert part not in (str(caught.value) + out.out + out.err).lower()
+
+
 def test_export_public_needs_a_deny_file_and_refuses_a_deny_list_hit(ledger_path, deny_file,
                                                                      capsys):
     with pytest.raises(ledger.LedgerError, match="needs --deny-file"):

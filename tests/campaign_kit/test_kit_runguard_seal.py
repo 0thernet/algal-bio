@@ -4,10 +4,12 @@ from __future__ import annotations
 
 import hashlib
 import os
+import signal
+import time
 
 import pytest
 
-from bio_lab.campaign_kit import runguard, seal
+from bio_lab.campaign_kit import guards, runguard, seal
 from bio_lab.campaign_kit.common import KitError, append_jsonl, file_lock, read_jsonl
 from conftest import make_campaign, write
 
@@ -198,3 +200,49 @@ def test_seal_cli(frozen_campaign, capsys):
     assert seal.main(["unlock", str(campaign)]) == 0
     assert seal.main(["lock", str(campaign)]) == 0
     assert read_jsonl(campaign / "data" / "sealed" / "receipts.jsonl")[0]["file"] == "holdout.csv"
+
+
+# ---------------------------------------------------------------- signals
+
+@pytest.fixture
+def saved_handlers():
+    saved = {s: signal.getsignal(s) for s in guards.INTERRUPT_SIGNALS}
+    yield
+    for s, handler in saved.items():
+        signal.signal(s, handler)
+
+
+def test_writable_locks_before_a_signal_is_sent_again(frozen_campaign, saved_handlers):
+    campaign, _, _, _ = frozen_campaign
+    seen = []
+    signal.signal(signal.SIGTERM, lambda signum, frame: seen.append(seal.status(campaign)["locked"]))
+    with pytest.raises(guards.Interrupted):
+        with seal.writable(campaign) as directory:
+            (directory / "holdout.csv").write_bytes(DATA)
+            os.kill(os.getpid(), signal.SIGTERM)
+            time.sleep(5)
+    # the previous handler ran once, after the directory was locked again
+    assert seen == [True]
+    assert seal.status(campaign)["readable_sealed_files"] == 0
+
+
+def test_open_sealed_restores_mode_000_before_a_signal_is_sent_again(frozen_campaign,
+                                                                    saved_handlers, monkeypatch):
+    campaign, lane_id, _, _ = frozen_campaign
+    path = place_sealed(campaign)
+    seen, opened = [], []
+    signal.signal(signal.SIGTERM, lambda signum, frame: seen.append(path.stat().st_mode & 0o777))
+
+    def signalled_open(*args, **kwargs):
+        os.kill(os.getpid(), signal.SIGTERM)
+        handle = open(*args, **kwargs)
+        opened.append(handle)
+        return handle
+
+    monkeypatch.setattr(seal, "open", signalled_open, raising=False)
+    with runguard.run(campaign, lane_id=lane_id) as active:
+        with pytest.raises(guards.Interrupted):
+            seal.open_sealed(campaign, "holdout.csv", active)
+        active.finish("SUPPORTED")
+    assert seen == [0] and path.stat().st_mode & 0o777 == 0
+    assert len(opened) == 1 and opened[0].closed

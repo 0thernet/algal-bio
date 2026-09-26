@@ -124,6 +124,29 @@ def test_deny_hit_is_reported_without_the_name(tmp_path, deny_file, capsys):
     assert NAME_TWO.split()[0].lower() not in (out.out + out.err).lower()
 
 
+def joined_forms(single: str, first: str, last: str) -> list[str]:
+    """Deny-list names joined by '-', '_' or '.', as they appear in slugs, identifiers
+    and e-mail addresses (first-last, first_last, First.Last@, single_word_suffix)."""
+    return [f"see notes/{first.lower()}-{last.lower()}.md",
+            f'owner = "{first.lower()}_{last.lower()}"',
+            f"mail {first}.{last}@example.org",
+            f"{single.lower()}_notes.md"]
+
+
+JOINED = joined_forms(NAME_ONE, *NAME_TWO.split())
+
+
+@pytest.mark.parametrize("line", JOINED)
+def test_deny_names_joined_by_separators_are_hits(tmp_path, deny_file, capsys, line):
+    note = write(tmp_path / "body.md", f"intro\n{line}\n")
+    assert lint.hygiene_hits([note], deny_file=deny_file, root=tmp_path) == \
+        ["body.md:2: deny-list name"]
+    assert lint.main(["hygiene", "--deny-file", str(deny_file), str(note)]) == 1
+    out = capsys.readouterr()
+    for part in (NAME_ONE, *NAME_TWO.split()):
+        assert part.lower() not in (out.out + out.err).lower()
+
+
 def test_deny_names_match_whole_words_only(tmp_path, deny_file):
     note = write(tmp_path / "ok.md", f"{NAME_ONE}ian and pre{NAME_ONE} are other words.\n")
     assert lint.hygiene_hits([note], deny_file=deny_file) == []

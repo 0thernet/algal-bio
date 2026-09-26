@@ -5,10 +5,12 @@
 lock() makes every sealed file unreadable (mode 000) and the directory
 read-only (500); receipts.jsonl stays readable because it holds only urls,
 sizes and hashes. writable() opens the directory for a fetch and locks it
-again afterwards. open_sealed() is the only reader: it needs the active run
-handle from runguard (so only a guarded confirm.py run can call it), checks
-the file against its receipt, opens it, restores mode 000 at once and
-verifies the sha256 on the open descriptor before returning it.
+again afterwards, also when SIGTERM, SIGHUP or SIGINT stops the fetch
+(fetch and import_local set each placed sealed file to mode 000 at once,
+which covers SIGKILL too). open_sealed() is the only reader: it needs the
+active run handle from runguard (so only a guarded confirm.py run can call
+it), checks the file against its receipt, opens it, restores mode 000 at
+once and verifies the sha256 on the open descriptor before returning it.
 
 Permissions are a speed bump against accidental reads by the same user, not
 access control; the freeze, the barrier and the run ledger are the evidence.
@@ -23,6 +25,7 @@ from pathlib import Path
 import stat
 import sys
 
+from . import guards
 from .common import KitError, die, sha256_fileobj
 from .receipts import RECEIPTS, receipts_for
 
@@ -80,15 +83,22 @@ def unlock(campaign_dir) -> int:
 def writable(campaign_dir):
     """Let a fetch add files to data/sealed/, then lock it again whatever happens."""
     directory = _sealed_dir(campaign_dir)
-    directory.mkdir(parents=True, exist_ok=True)
-    os.chmod(directory, 0o700)
-    receipts = directory / RECEIPTS
-    if receipts.exists():
-        os.chmod(receipts, 0o644)
-    try:
-        yield directory
-    finally:
-        lock(campaign_dir)
+    # SIGTERM, SIGHUP or SIGINT inside the block raises guards.Interrupted, so this
+    # finally locks the directory before the signal is sent again (see
+    # guards.interruptible); the lock itself is never cut short by a signal.
+    with guards.interruptible() as interrupt:
+        with interrupt.hold():
+            directory.mkdir(parents=True, exist_ok=True)
+        try:
+            with interrupt.hold():
+                os.chmod(directory, 0o700)
+                receipts = directory / RECEIPTS
+                if receipts.exists():
+                    os.chmod(receipts, 0o644)
+            yield directory
+        finally:
+            with interrupt.hold():
+                lock(campaign_dir)
 
 
 def status(campaign_dir) -> dict:
@@ -130,11 +140,19 @@ def open_sealed(campaign_dir, name: str, run):
     path = directory / name
     if path.is_symlink() or not path.is_file():
         raise SealError(f"{name} is not a regular sealed file")
-    os.chmod(path, 0o400)
+    handle = None
     try:
-        handle = open(path, "rb")
-    finally:
-        os.chmod(path, 0o000)
+        # a signal here is deferred until mode 000 is back (see guards.interruptible)
+        with guards.interruptible() as interrupt, interrupt.hold():
+            os.chmod(path, 0o400)
+            try:
+                handle = open(path, "rb")
+            finally:
+                os.chmod(path, 0o000)
+    except BaseException:
+        if handle is not None:
+            handle.close()
+        raise
     try:
         if sha256_fileobj(handle) != want:
             raise SealError(f"{name} does not match its receipt; the sealed copy changed")

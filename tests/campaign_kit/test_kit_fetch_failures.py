@@ -5,9 +5,12 @@ from __future__ import annotations
 
 import gzip
 import json
+import os
+import signal
 import socket
 import subprocess
 import sys
+import time
 import urllib.error
 
 import pytest
@@ -88,6 +91,54 @@ def test_dropped_attempts_are_charged_as_partial(tmp_path, mining):
     assert held == [1, 1, 1] and reservations(mining) == []
     assert kinds(mining) == [("download_partial", 20), ("download", len(CSV))]
     assert tmp_files(mining) == []
+
+
+def test_the_metered_count_reaches_the_reservation_before_each_retry(tmp_path, mining):
+    # a fetch killed in a backoff is charged from this count (see guards._stale_charge)
+    moved = []
+
+    def opener(request, timeout):
+        if len(moved) < 2:
+            return FakeResponse([CSV[:10]], fail=ConnectionResetError())
+        return FakeResponse([CSV], length=len(CSV))
+
+    def sleep(_seconds):
+        (path,) = reservations(mining)
+        moved.append(json.loads(path.read_text())["moved"])
+
+    fetch("https://example.invalid/data.csv", tmp_path / "data.csv", opener=opener, retries=2,
+          sleep=sleep)
+    assert moved == [10, 20]
+    assert kinds(mining) == [("download_partial", 20), ("download", len(CSV))]
+
+
+@pytest.fixture
+def saved_sigterm():
+    saved = signal.getsignal(signal.SIGTERM)
+    yield
+    signal.signal(signal.SIGTERM, saved)
+
+
+def test_a_signal_during_settle_waits_until_the_bytes_are_recorded(tmp_path, mining, monkeypatch,
+                                                                   saved_sigterm):
+    seen = []
+    signal.signal(signal.SIGTERM, lambda signum, frame: seen.append(signum))
+    real_settle = guards.settle
+
+    def settle(reservation, transfers):
+        os.kill(os.getpid(), signal.SIGTERM)
+        time.sleep(0.05)
+        return real_settle(reservation, transfers)
+
+    monkeypatch.setattr(guards, "settle", settle)
+
+    def opener(request, timeout):
+        return FakeResponse([CSV], length=len(CSV))
+
+    with pytest.raises(guards.Interrupted):
+        fetch("https://example.invalid/data.csv", tmp_path / "data.csv", opener=opener)
+    assert kinds(mining) == [("download", len(CSV))]
+    assert reservations(mining) == [] and seen == [signal.SIGTERM]
 
 
 def test_a_stream_without_length_past_the_cap_leaves_no_partial_file(tmp_path, mining):
@@ -276,3 +327,30 @@ def test_sealed_receipts_are_mirrored_outside_the_sealed_directory(server, froze
     assert again == receipt
     mirrored = read_jsonl(campaign / receipts.SEALED_RECEIPTS)
     assert mirrored == [dict(receipt, path="data/sealed/data.csv")]
+
+
+def test_a_placed_sealed_file_is_unreadable_before_it_is_hashed(frozen_campaign, tmp_path,
+                                                                monkeypatch):
+    # so a fetch killed between placing and seal.lock() leaves no readable holdout file
+    campaign, lane_id, sha, _ = frozen_campaign
+    proof = barrier.require(campaign, lane_id, sha)
+    modes = []
+    real = receipts.sha256_fileobj
+
+    def hashing(handle):
+        modes.append(os.fstat(handle.fileno()).st_mode & 0o777)
+        return real(handle)
+
+    monkeypatch.setattr(receipts, "sha256_fileobj", hashing)
+
+    def opener(request, timeout):
+        return FakeResponse([CSV], length=len(CSV))
+
+    sealed = campaign / "data" / "sealed" / "data.csv"
+    with seal.writable(campaign):
+        fetch("https://example.invalid/data.csv", sealed, barrier=proof, opener=opener)
+        assert sealed.stat().st_mode & 0o777 == 0
+    plain = tmp_path / "lane" / "data.csv"
+    fetch("https://example.invalid/data.csv", plain, opener=opener)
+    assert modes == [0, 0o444]
+    assert plain.stat().st_mode & 0o777 == 0o444

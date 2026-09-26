@@ -239,6 +239,48 @@ def test_a_stale_reservation_takes_the_larger_of_its_count_and_its_partial_file(
     assert charges(mining)[1] == ("download_unsettled", 5000) and not part.exists()
 
 
+def test_a_partial_file_outside_kit_tmp_is_neither_read_nor_deleted(mining, tmp_path):
+    # a kit-shaped name is not enough: the file must sit in the mining dir's kit-tmp
+    outside = tmp_path / "elsewhere" / f"{'ab' * 32}.{dead_pid()}.part"
+    outside.parent.mkdir()
+    outside.write_bytes(b"x" * 700)
+    stale(mining, "r", moved=5, earlier=0, part=str(outside))
+    guards.check_budget(0, run_id=RUN, budget_gb=BUDGET_GB)
+    assert charges(mining) == [("download_unsettled", 5)]
+    assert outside.read_bytes() == b"x" * 700 and reservations(mining) == []
+
+
+def live(**fields):
+    body = {"run": RUN, "bytes": 1000, "pid": os.getpid(), "host": socket.gethostname(),
+            "utc": "2026-09-26T00:00:00Z", "moved": 0, "earlier": 0}
+    body.update(fields)
+    return body
+
+
+@pytest.mark.parametrize("body", [
+    [],
+    {k: v for k, v in live().items() if k != "run"},
+    {k: v for k, v in live().items() if k != "bytes"},
+    live(bytes=-1),
+    live(bytes=True),
+    live(moved=-1),
+    live(moved="5"),
+    live(earlier=1.5),
+    live(part=7),
+], ids=["list", "no-run", "no-bytes", "bytes-negative", "bytes-bool", "moved-negative",
+        "moved-str", "earlier-float", "part-int"])
+def test_a_malformed_reservation_stops_the_budget(mining, body):
+    directory = mining / guards.RESERVATIONS_DIR
+    directory.mkdir()
+    (directory / f"{'c' * 32}.json").write_text(json.dumps(body))
+    for call in (lambda: guards.check_budget(0, run_id=RUN, budget_gb=BUDGET_GB),
+                 lambda: guards.reserve(10, run_id=RUN, budget_gb=BUDGET_GB),
+                 lambda: guards.reserved_totals()):
+        with pytest.raises(guards.BudgetError, match="malformed"):
+            call()
+    assert charges(mining) == []
+
+
 def test_orphaned_partial_files_of_dead_processes_are_deleted(mining):
     orphan = kit_part(mining, dead_pid(), 10)
     mine = kit_part(mining, os.getpid(), 10)
@@ -309,6 +351,25 @@ def test_interruptible_raises_then_sends_the_signal_again(handlers):
     assert error.value.signum == signal.SIGTERM
     assert seen == [signal.SIGTERM]            # delivered again to the previous handler
     assert signal.getsignal(signal.SIGTERM) is previous
+
+
+def test_interruptible_raises_once_so_a_second_signal_cannot_cut_the_cleanup_short(handlers):
+    # a forwarded signal and a process-group signal can both reach a fetch
+    seen = []
+    signal.signal(signal.SIGTERM, lambda signum, frame: seen.append(signum))
+    steps = []
+    with pytest.raises(guards.Interrupted):
+        with guards.interruptible():
+            try:
+                os.kill(os.getpid(), signal.SIGTERM)
+                time.sleep(5)
+            except guards.Interrupted:
+                os.kill(os.getpid(), signal.SIGTERM)
+                time.sleep(0.05)
+                steps.append("cleaned up")
+                raise
+    assert steps == ["cleaned up"]
+    assert seen == [signal.SIGTERM]            # sent again once, after the block
 
 
 def test_interruptible_defers_a_signal_while_settling(handlers):

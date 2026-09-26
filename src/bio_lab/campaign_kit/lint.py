@@ -12,7 +12,9 @@ Names listed in protocol "constants_exempt" (name -> reason) are skipped.
 
 hygiene: over files, directories, PR body and commit message files (and with
 --staged, the staged blobs): personal paths, names from the private deny
-file (one per line, '#' comments, case-insensitive whole words) and files
+file (one per line, '#' comments, case-insensitive whole words, also when
+joined by '-', '_', '.' or a path separator, as in first-last, first_last,
+First.Last@ or name_suffix) and files
 over 4 MB, in file contents and in file and directory names. Hits are
 reported as file:line and kind, never with the matched text, and a file
 label that itself holds a deny-list name is printed as a neutral
@@ -182,7 +184,8 @@ def _scan_text(label: str, data: bytes, patterns) -> list[str]:
     for number, line in enumerate(text.splitlines(), 1):
         if PERSONAL_RE.search(line):
             hits.append(f"{label}:{number}: personal path")
-        if any(p.search(line) for p in patterns):
+        # names joined by '-', '_', '.' or a path separator count too (see _deny_match)
+        if _deny_match(line, patterns):
             hits.append(f"{label}:{number}: deny-list name")
     # names split across a line break still count
     for pattern in patterns:

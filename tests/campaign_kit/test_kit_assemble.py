@@ -252,6 +252,20 @@ def test_assembly_hygiene_refuses_a_deny_hit(campaign, repo, tmp_path):
     assert not (repo / "campaigns").exists()
 
 
+@pytest.mark.parametrize("form", ["{a}-{b}", "{a}_{b}", "{A}.{B}@example.org", "{s}_suffix"])
+def test_assembly_hygiene_refuses_deny_names_joined_by_separators(campaign, repo, tmp_path, form):
+    first, last, single = "Quil" + "lon", "Van" + "tree", "Zorb" + "lax"
+    deny = tmp_path / "deny.txt"
+    deny.write_text(f"{first} {last}\n{single}\n")
+    text = form.format(a=first.lower(), b=last.lower(), A=first, B=last, s=single.lower())
+    write(campaign / "review" / "notes.md", f"reviewed; see {text}\n")
+    with pytest.raises(assemble_public.AssemblyError, match="deny-list name") as error:
+        assemble_public.plan(campaign, repo, NAME, "prereg", deny_file=deny)
+    for part in (first, last, single):
+        assert part.lower() not in str(error.value).lower()
+    assert not (repo / "campaigns").exists()
+
+
 def test_large_unregistered_files_are_skipped_with_their_hash(campaign, repo):
     big = write(campaign / "fanout" / "big.txt", "x" * (4 * 1024 * 1024 + 10))
     write(campaign / "fanout" / "matrix.npz", "binary")

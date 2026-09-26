@@ -57,7 +57,8 @@ import zlib
 
 from . import KIT_VERSION
 from .common import (KitError, SHA256_RE, append_jsonl, file_lock, fold, is_sealed_path,
-                     mining_dir, read_jsonl, sha256_file, utc_now, write_json_atomic)
+                     mining_dir, read_jsonl, sha256_file, sha256_fileobj, utc_now,
+                     write_json_atomic)
 from . import guards
 
 USER_AGENT = (f"hraness-bio-campaign-kit/{KIT_VERSION} "
@@ -341,11 +342,18 @@ def _place(blob: Path, sha: str, size: int, dest: Path, floor_gb: float) -> tupl
         raise FetchError(f"{dest.name} exists without a receipt; refusing to overwrite it")
     dest.parent.mkdir(parents=True, exist_ok=True)
     method = clone_file(blob, dest, floor_gb=floor_gb)
-    got = sha256_file(dest)
+    # A sealed file is made unreadable (mode 000) as soon as it is open for the
+    # check, so a fetch killed before seal.lock() runs (even by SIGKILL) never
+    # leaves a readable holdout file behind. Everything else is read-only.
+    sealed = is_sealed_path(dest)
+    with open(dest, "rb") as handle:
+        if sealed:
+            os.chmod(dest, 0o000)
+        got = sha256_fileobj(handle)
     if got != sha or dest.stat().st_size != size:
         dest.unlink(missing_ok=True)
         raise FetchError(f"{dest.name} did not arrive intact (sha256 mismatch after {method})")
-    os.chmod(dest, 0o444)
+    os.chmod(dest, 0o000 if sealed else 0o444)
     return method, None
 
 
