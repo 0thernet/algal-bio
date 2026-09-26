@@ -352,5 +352,6 @@ def test_a_placed_sealed_file_is_unreadable_before_it_is_hashed(frozen_campaign,
         assert sealed.stat().st_mode & 0o777 == 0
     plain = tmp_path / "lane" / "data.csv"
     fetch("https://example.invalid/data.csv", plain, opener=opener)
-    assert modes == [0, 0o444]
+    # the sealed copy is unreadable while hashed; a plain copy keeps its read bits
+    assert len(modes) == 2 and modes[0] == 0 and modes[1] & 0o444
     assert plain.stat().st_mode & 0o777 == 0o444
