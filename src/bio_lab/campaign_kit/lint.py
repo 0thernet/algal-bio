@@ -13,8 +13,9 @@ Names listed in protocol "constants_exempt" (name -> reason) are skipped.
 hygiene: over files, directories, PR body and commit message files (and with
 --staged, the staged blobs): personal paths, names from the private deny
 file (one per line, '#' comments, case-insensitive whole words, also when
-joined by '-', '_', '.' or a path separator, as in first-last, first_last,
-First.Last@ or name_suffix) and files
+joined by '-', '_', '.', a path separator or a line break, as in first-last,
+first_last, First.Last@ or name_suffix; an entry's own separators match any
+of these, so an entry 'A-B C' also matches a_b.c) and files
 over 4 MB, in file contents and in file and directory names. Hits are
 reported as file:line and kind, never with the matched text, and a file
 label that itself holds a deny-list name is printed as a neutral
@@ -36,6 +37,8 @@ from .common import KitError, MAX_PUBLIC_BYTES, PERSONAL_RE, die, read_json
 
 UPPER_RE = re.compile(r"^[A-Z][A-Z0-9_]*$")
 TRIVIAL_FLOATS = {0.0, 1.0, -1.0}
+# separators between the words of a deny-list name: whitespace, path separators, . _ -
+DENY_SEP = r"[\s/\\._-]+"
 
 
 # ---------------------------------------------------------------- protocol lint
@@ -170,7 +173,13 @@ def load_deny(deny_file) -> list[re.Pattern]:
         name = line.strip()
         if not name or name.startswith("#"):
             continue
-        body = r"\s+".join(re.escape(part) for part in name.split())
+        # an entry's own separators ('Mary-Ann Poe') match any separator run in the
+        # text, so first-last, first_last, First.Last and names across a line break
+        # all match, whichever separators the entry itself uses
+        parts = [part for part in re.split(DENY_SEP, name) if part]
+        if not parts:
+            continue
+        body = DENY_SEP.join(re.escape(part) for part in parts)
         patterns.append(re.compile(rf"(?<![0-9A-Za-z_]){body}(?![0-9A-Za-z_])", re.IGNORECASE))
     return patterns
 
@@ -187,17 +196,26 @@ def _scan_text(label: str, data: bytes, patterns) -> list[str]:
         # names joined by '-', '_', '.' or a path separator count too (see _deny_match)
         if _deny_match(line, patterns):
             hits.append(f"{label}:{number}: deny-list name")
-    # names split across a line break still count
-    for pattern in patterns:
-        for match in pattern.finditer(text):
-            if "\n" in match.group(0):
-                hits.append(f"{label}:{text.count(chr(10), 0, match.start()) + 1}: deny-list name")
+    # names split across a line break still count, also next to '-', '_' or '.'
+    # (the spaced copy keeps every line break, so line numbers agree)
+    split_lines = set()
+    for source in (text, _spaced(text)):
+        for pattern in patterns:
+            for match in pattern.finditer(source):
+                if "\n" in match.group(0):
+                    split_lines.add(source.count("\n", 0, match.start()) + 1)
+    hits.extend(f"{label}:{number}: deny-list name" for number in sorted(split_lines))
     return hits
+
+
+def _spaced(text: str) -> str:
+    """text with path separators, dots, underscores and dashes turned into spaces."""
+    return re.sub(r"[/\\._-]+", " ", text)
 
 
 def _deny_match(text: str, patterns) -> bool:
     # path separators and dots split words; a name may also span two path parts
-    spaced = re.sub(r"[/\\._-]+", " ", text)
+    spaced = _spaced(text)
     return any(p.search(text) or p.search(spaced) for p in patterns)
 
 

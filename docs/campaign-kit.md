@@ -137,11 +137,14 @@ receipt = fetch(url, dest, Expect(first_line="ModelID,GeneID,score",
   own lock. On a cache hit the blob is re-hashed and re-validated, and it costs
   nothing against the budget, so a cached file counts once. Files are placed
   with a copy-on-write clone (`cp -c`, or a reflink), falling back to a copy
-  checked against the disk floor. A placed file is read-only; a file placed
-  under `data/sealed/` or `data/sanger_holdout/` (by `fetch` or
-  `import_local`) is set to mode 000 as soon as it is open for its SHA-256
-  check, so even a fetch killed with SIGKILL before `seal.lock()` leaves no
-  readable holdout file.
+  checked against the disk floor, and are read-only. A file placed under
+  `data/sealed/` or `data/sanger_holdout/` (by `fetch` or `import_local`) is
+  never cloned, since a clone keeps the cached file's read bits: it is
+  streamed into a temporary `.<name>.part-<pid>` created with mode 000,
+  hashed on the way, synced and renamed into place, so it has no read bit at
+  any moment, even when the fetch is killed with SIGKILL. A copy that does
+  not match is deleted, and `seal.lock()` deletes the temporary files of
+  dead processes.
 - The receipt is one line appended to `receipts.jsonl` next to the file. It
   records the url, bytes, sha256, fetch and receipt times, the source
   (network, cache or import_local), the checks that passed and the budget run.
@@ -213,11 +216,16 @@ any destination under `data/sealed/`, and it must belong to the same campaign
   whatever happens. SIGTERM, SIGHUP and SIGINT inside the block raise
   `guards.Interrupted`, so the lock runs before the signal is sent again and
   the process ends by it; a signal during the lock waits for it to finish.
+  It also locks the directory on entry, before opening it.
+- One SIGKILL window remains: `open_sealed`'s brief mode 400. A file left
+  readable there is locked again by the next `writable()` or `runguard.run`,
+  which both lock on entry.
 - `status()` reports counts and modes only, never names.
 - `open_sealed(campaign_dir, name, active_run)` is the only reader. It needs
   the active run handle from `runguard.run`. It opens the file, restores mode
-  000 at once (a signal meanwhile waits until mode 000 is back), and checks the SHA-256 against the file's receipt on the open
-  descriptor. The run's `finish` record lists what was opened.
+  000 at once (a signal meanwhile waits until mode 000 is back), and checks
+  the SHA-256 against the file's receipt on the open descriptor. The run's
+  `finish` record lists what was opened.
 
 These permissions are a speed bump against accidental reads. The evidence is
 the freeze, the barrier and the run ledger.
@@ -232,7 +240,8 @@ with runguard.run(ROOT, lane_id=LANE_ID, erratum=args.erratum) as run:
 ```
 
 A run requires the freeze and passes through `barrier.require`, and only one
-process may hold it. It refuses a second run if `results/confirmation.runs.jsonl`
+process may hold it. Before its `start` record it locks `data/sealed/` again
+if the directory is not locked, and it refuses one that holds a symlink. It refuses a second run if `results/confirmation.runs.jsonl`
 already has records or any `results/confirmation.*` file exists. A rerun
 needs `erratum="errata/E<n>.md"`: an existing, nonempty file that no earlier
 run has used. An erratum on a first run is refused.
@@ -343,7 +352,9 @@ tokens are replaced with `<free-text-withheld>` and counted.
   paths, whole-word case-insensitive matches of the names in the deny file
   (including names split across a line break, and names joined by `-`, `_`,
   `.` or a path separator, as in `first-last`, `first_last`, `First.Last@`
-  or `name_suffix`) and files over 4 MB. The same content scan guards
+  or `name_suffix`). An entry that has its own separators matches any of
+  these joins, so `A-B C` also matches `a_b.c`, `A B-C` and `a-b` then `c` on
+  the next line. Files over 4 MB are flagged too. The same content scan guards
   `ledger export-public` and `assemble_public --deny-file`. The deny
   file has one name per line, and lines starting with `#` are comments. A hit
   is reported as `file:line: kind`, never with the matched text. File and
@@ -409,8 +420,12 @@ fixtures in temporary directories only. It covers:
 - a scaffolded `fetch_holdout.py` stopped during its second file by SIGTERM,
   by SIGTERM to the slot runner and by SIGKILL, which leaves no readable
   sealed file (and, for SIGTERM, a locked `data/sealed/`); `writable()` and
-  `open_sealed` under a signal; a placed sealed file unreadable before it is
-  hashed
+  `open_sealed` under a signal, including a signal partway through the final
+  lock; a sealed copy killed with SIGKILL mid-copy, before its rename and
+  after it, which leaves nothing readable, and whose temporary file the next
+  lock deletes; a sealed copy with mode 000 at every chunk; a mismatched
+  sealed copy deleted; `writable()` and `runguard.run` locking a file left
+  at mode 400
 - budget values that are not a positive finite number, negative or
   non-integer sizes, `guards check` and a `guards record` past the budget
 - `validate_content`: a first-line prefix that matches and one that does not,
@@ -436,7 +451,8 @@ fixtures in temporary directories only. It covers:
   constant
 - deny-list hits in contents, file names and directory names, reported
   without the name, including names joined by `-`, `_` or `.` in the lint,
-  the ledger's public export and the public assembly
+  the ledger's public export and the public assembly, and deny entries that
+  contain their own separators, joined any way or across a line break
 - path scrubbing, receipted files and nested private directories in the
   public assembly, and its refusals when a registered file would change or
   would not be published

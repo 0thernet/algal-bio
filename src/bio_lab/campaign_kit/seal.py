@@ -5,12 +5,16 @@
 lock() makes every sealed file unreadable (mode 000) and the directory
 read-only (500); receipts.jsonl stays readable because it holds only urls,
 sizes and hashes. writable() opens the directory for a fetch and locks it
-again afterwards, also when SIGTERM, SIGHUP or SIGINT stops the fetch
-(fetch and import_local set each placed sealed file to mode 000 at once,
-which covers SIGKILL too). open_sealed() is the only reader: it needs the
-active run handle from runguard (so only a guarded confirm.py run can call
-it), checks the file against its receipt, opens it, restores mode 000 at
-once and verifies the sha256 on the open descriptor before returning it.
+again afterwards, also when SIGTERM, SIGHUP or SIGINT stops the fetch.
+fetch and import_local write a sealed file through a temporary file created
+with mode 000, so it never has a read bit, even under SIGKILL. One SIGKILL
+window remains: open_sealed's brief mode 400. writable() and runguard.run()
+therefore lock the directory again on entry, so a file left readable there is
+locked before the next fetch or run; lock() also deletes the temporary files
+of dead processes. open_sealed() is the only reader: it needs the active run
+handle from runguard (so only a guarded confirm.py run can call it), checks
+the file against its receipt, opens it, restores mode 000 at once and
+verifies the sha256 on the open descriptor before returning it.
 
 Permissions are a speed bump against accidental reads by the same user, not
 access control; the freeze, the barrier and the run ledger are the evidence.
@@ -27,7 +31,7 @@ import sys
 
 from . import guards
 from .common import KitError, die, sha256_fileobj
-from .receipts import RECEIPTS, receipts_for
+from .receipts import RECEIPTS, SEALED_PART_RE, receipts_for
 
 SEALED = "data/sealed"
 
@@ -49,13 +53,27 @@ def _files(directory: Path) -> list[Path]:
     return out
 
 
+def _drop_stale_parts(files: list[Path]) -> list[Path]:
+    """Delete the temporary files of sealed copies whose process is gone."""
+    kept = []
+    for path in files:
+        match = SEALED_PART_RE.match(path.name)
+        if match and not path.is_symlink() and not guards._pid_alive(int(match.group(1))):
+            path.unlink(missing_ok=True)
+        else:
+            kept.append(path)
+    return kept
+
+
 def lock(campaign_dir) -> int:
-    """Mode 000 for sealed files, 444 for receipts, 500 for directories. Returns the file count."""
+    """Mode 000 for sealed files, 444 for receipts, 500 for directories. Returns the file count.
+
+    Temporary files of sealed copies left by dead processes are deleted first."""
     directory = _sealed_dir(campaign_dir)
     if not directory.is_dir():
         raise SealError("data/sealed/ does not exist")
     os.chmod(directory, 0o700)
-    files = _files(directory)
+    files = _drop_stale_parts(_files(directory))
     for path in files:
         if path.is_symlink():
             raise SealError("data/sealed/ holds a symlink; refusing to lock through it")
@@ -89,6 +107,9 @@ def writable(campaign_dir):
     with guards.interruptible() as interrupt:
         with interrupt.hold():
             directory.mkdir(parents=True, exist_ok=True)
+            # a process killed while a sealed file was readable (open_sealed's
+            # mode 400) left it so; lock everything before opening the directory
+            lock(campaign_dir)
         try:
             with interrupt.hold():
                 os.chmod(directory, 0o700)
@@ -99,6 +120,15 @@ def writable(campaign_dir):
         finally:
             with interrupt.hold():
                 lock(campaign_dir)
+
+
+def relock_if_open(campaign_dir) -> bool:
+    """Lock data/sealed/ again when it exists and is not locked. True if it relocked."""
+    directory = _sealed_dir(campaign_dir)
+    if not directory.is_dir() or status(campaign_dir)["locked"]:
+        return False
+    lock(campaign_dir)
+    return True
 
 
 def status(campaign_dir) -> dict:

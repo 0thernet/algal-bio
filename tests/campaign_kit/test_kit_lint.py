@@ -147,6 +147,38 @@ def test_deny_names_joined_by_separators_are_hits(tmp_path, deny_file, capsys, l
         assert part.lower() not in (out.out + out.err).lower()
 
 
+HYPHENATED = ("Tas" + "sel", "Wren" + "ly", "Fos" + "kett")   # an entry 'A-B C'
+
+
+@pytest.mark.parametrize("text, line", [
+    ("{a}-{b}_{c}", 1), ("{A}-{B}.{C}@example.org", 1), ("{a}_{b} {c}", 1), ("{a} {b} {c}", 1),
+    ("see {A}/{B}/{C}.md", 1), ("{a}-{b}-\n{c}", 1), ("x_{a}-\n{b} {c}", 1),
+    ("intro\n{first}-\n{last}", 2), ("intro\nx_{first}_\n{last}", 2),
+])
+def test_deny_entries_with_their_own_separators_match_any_joined_form(tmp_path, text, line,
+                                                                      capsys):
+    a, b, c = HYPHENATED
+    deny = tmp_path / "deny.txt"
+    deny.write_text(f"{a}-{b} {c}\n{NAME_TWO}\n")
+    first, last = NAME_TWO.split()
+    note = write(tmp_path / "body.md", text.format(a=a.lower(), b=b.lower(), c=c.lower(), A=a, B=b,
+                                                   C=c, first=first.lower(), last=last.lower()))
+    assert lint.hygiene_hits([note], deny_file=deny, root=tmp_path) == \
+        [f"body.md:{line}: deny-list name"]
+    assert lint.main(["hygiene", "--deny-file", str(deny), str(note)]) == 1
+    out = capsys.readouterr()
+    for part in (a, b, c, first, last):
+        assert part.lower() not in (out.out + out.err).lower()
+
+
+def test_deny_entries_with_separators_still_match_whole_words_only(tmp_path):
+    a, b, c = HYPHENATED
+    deny = tmp_path / "deny.txt"
+    deny.write_text(f"{a}-{b} {c}\n")
+    note = write(tmp_path / "ok.md", f"{a}{b} {c}\n{a}-{b} {c}s\npre{a}-{b} {c}\n")
+    assert lint.hygiene_hits([note], deny_file=deny) == []
+
+
 def test_deny_names_match_whole_words_only(tmp_path, deny_file):
     note = write(tmp_path / "ok.md", f"{NAME_ONE}ian and pre{NAME_ONE} are other words.\n")
     assert lint.hygiene_hits([note], deny_file=deny_file) == []

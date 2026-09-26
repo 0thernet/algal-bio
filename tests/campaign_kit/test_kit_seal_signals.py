@@ -23,9 +23,9 @@ import time
 
 import pytest
 
-from bio_lab.campaign_kit import barrier, freeze, guards, seal
+from bio_lab.campaign_kit import barrier, freeze, guards, receipts, seal
 from bio_lab.campaign_kit.common import read_jsonl
-from conftest import barrier_doc, frozen_entry
+from conftest import barrier_doc, frozen_entry, kit_env, make_campaign
 
 REPO = Path(__file__).resolve().parents[2]
 NAME = "demo-lane-2026-09-26"
@@ -227,3 +227,116 @@ def test_sigkill_during_the_second_file_leaves_no_readable_sealed_file(server, l
         assert_sealed_and_settled(target, mining, locked=False)
     finally:
         stop(proc)
+
+
+# ---------------------------------------------------------------- SIGKILL around a sealed copy
+
+PLACE = '''
+import hashlib
+import os
+import signal
+import sys
+from pathlib import Path
+
+from bio_lab.campaign_kit import receipts
+
+blob, dest, point = Path(sys.argv[1]), Path(sys.argv[2]), sys.argv[3]
+data = blob.read_bytes()
+
+
+def die():
+    os.kill(os.getpid(), signal.SIGKILL)
+
+
+if point == "mid-copy":
+    receipts.COPY_CHUNK = 1 << 16
+    real = hashlib.sha256
+
+    class Dying:
+        def __init__(self):
+            self.inner, self.calls = real(), 0
+
+        def update(self, chunk):
+            self.calls += 1
+            if self.calls == 3:
+                die()
+            self.inner.update(chunk)
+
+        def hexdigest(self):
+            return self.inner.hexdigest()
+
+    receipts.hashlib = type("hashlib", (), {"sha256": staticmethod(Dying)})
+elif point == "before-rename":
+    os.replace = lambda *args, **kwargs: die()
+elif point == "after-rename":
+    real_replace = os.replace
+
+    def replace(*args, **kwargs):
+        real_replace(*args, **kwargs)
+        die()
+
+    os.replace = replace
+receipts._place(blob, hashlib.sha256(data).hexdigest(), len(data), dest, 0)
+'''
+
+
+@pytest.mark.parametrize("point, placed", [("mid-copy", 0), ("before-rename", 0),
+                                           ("after-rename", 1)])
+def test_sigkill_during_a_sealed_copy_leaves_no_readable_file(tmp_path, point, placed):
+    campaign = make_campaign(tmp_path / "research")
+    blob = tmp_path / "blob.csv"
+    blob.write_bytes(b"model_id,gene,score\n" + b"x" * (1 << 18))
+    os.chmod(blob, 0o444)                     # like a cache blob, which a clone would copy
+    script = tmp_path / "place.py"
+    script.write_text(PLACE)
+    dest = campaign / "data" / "sealed" / "holdout.csv"
+    done = subprocess.run([sys.executable, str(script), str(blob), str(dest), point],
+                          env=kit_env(), capture_output=True, timeout=120)
+    assert done.returncode == -signal.SIGKILL, done.stderr.decode(errors="replace")
+    state = seal.status(campaign)
+    # the temporary file (or the placed file) exists, and nothing has a read bit
+    assert state["sealed_files"] == 1 and state["readable_sealed_files"] == 0, state
+    # the next lock deletes the dead process's temporary file
+    seal.lock(campaign)
+    state = seal.status(campaign)
+    assert state["sealed_files"] == placed and state["locked"] is True, state
+    seal.unlock(campaign)
+
+
+def test_a_sealed_copy_is_never_readable_while_written(tmp_path, monkeypatch):
+    campaign = make_campaign(tmp_path / "research")
+    blob = tmp_path / "blob.csv"
+    blob.write_bytes(b"model_id,gene,score\n" + b"x" * (1 << 18))
+    dest = campaign / "data" / "sealed" / "holdout.csv"
+    modes = []
+    monkeypatch.setattr(receipts, "COPY_CHUNK", 1 << 16)
+    real = receipts.hashlib.sha256
+
+    class Watching:
+        def __init__(self):
+            self.inner = real()
+
+        def update(self, chunk):
+            modes.append(receipts.sealed_part_path(dest).stat().st_mode & 0o777)
+            self.inner.update(chunk)
+
+        def hexdigest(self):
+            return self.inner.hexdigest()
+
+    monkeypatch.setattr(receipts, "hashlib", type("hashlib", (), {"sha256": staticmethod(Watching)}))
+    data = blob.read_bytes()
+    method, prior = receipts._place(blob, real(data).hexdigest(), len(data), dest, 0)
+    assert method == "sealed-copy" and prior is None
+    assert len(modes) == 5 and set(modes) == {0}
+    assert dest.stat().st_mode & 0o777 == 0 and seal.status(campaign)["readable_sealed_files"] == 0
+    seal.unlock(campaign)
+
+
+def test_a_sealed_copy_that_does_not_match_is_removed(tmp_path):
+    campaign = make_campaign(tmp_path / "research")
+    blob = tmp_path / "blob.csv"
+    blob.write_bytes(b"model_id\n1\n")
+    dest = campaign / "data" / "sealed" / "holdout.csv"
+    with pytest.raises(receipts.FetchError, match="did not arrive intact"):
+        receipts._place(blob, "0" * 64, 11, dest, 0)
+    assert list(dest.parent.iterdir()) == []

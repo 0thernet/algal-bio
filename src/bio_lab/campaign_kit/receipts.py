@@ -57,8 +57,7 @@ import zlib
 
 from . import KIT_VERSION
 from .common import (KitError, SHA256_RE, append_jsonl, file_lock, fold, is_sealed_path,
-                     mining_dir, read_jsonl, sha256_file, sha256_fileobj, utc_now,
-                     write_json_atomic)
+                     mining_dir, read_jsonl, sha256_file, utc_now, write_json_atomic)
 from . import guards
 
 USER_AGENT = (f"hraness-bio-campaign-kit/{KIT_VERSION} "
@@ -333,27 +332,69 @@ def _authorize_import(dest: Path, barrier, ledger, campaign, source, subdir: str
     return None
 
 
+SEALED_PART_RE = re.compile(r"^\..+\.part-([0-9]+)$")
+COPY_CHUNK = 1 << 20
+
+
+def sealed_part_path(dest: Path) -> Path:
+    """The temporary file a sealed copy is written to (see _write_sealed)."""
+    return dest.with_name(f".{dest.name}.part-{os.getpid()}")
+
+
+def _write_sealed(blob: Path, dest: Path, floor_gb: float) -> tuple[str, int]:
+    """Copy blob to a sealed dest through a file created with mode 000.
+
+    The temporary file is created by os.open with mode 000 and written through
+    that descriptor, hashed as it is written, synced, then renamed into place,
+    so no path under the sealed directory ever has a read bit, even for a
+    process killed with SIGKILL at any point. Returns (sha256, bytes).
+    """
+    guards.require_disk_floor(dest.parent, blob.stat().st_size, floor_gb)
+    tmp = sealed_part_path(dest)
+    tmp.unlink(missing_ok=True)          # left by a dead process that had this pid
+    fd = os.open(tmp, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o000)
+    digest, size = hashlib.sha256(), 0
+    try:
+        with os.fdopen(fd, "wb") as out, open(blob, "rb") as src:
+            while True:
+                chunk = src.read(COPY_CHUNK)
+                if not chunk:
+                    break
+                digest.update(chunk)
+                out.write(chunk)
+                size += len(chunk)
+            out.flush()
+            os.fsync(out.fileno())
+        os.replace(tmp, dest)
+    except BaseException:
+        tmp.unlink(missing_ok=True)
+        raise
+    return digest.hexdigest(), size
+
+
 def _place(blob: Path, sha: str, size: int, dest: Path, floor_gb: float) -> tuple[str, dict | None]:
-    """Clone blob to dest unless dest already holds it. Returns (method, prior receipt)."""
+    """Clone blob to dest unless dest already holds it. Returns (method, prior receipt).
+
+    A sealed destination is never cloned: _write_sealed copies it through a file
+    created with mode 000, so it never has a read bit. Everything else is cloned,
+    checked and made read-only.
+    """
     prior = _existing_receipt(dest, sha)
     if dest.exists() or dest.is_symlink():
         if prior is not None:
             return "existing", prior
         raise FetchError(f"{dest.name} exists without a receipt; refusing to overwrite it")
     dest.parent.mkdir(parents=True, exist_ok=True)
-    method = clone_file(blob, dest, floor_gb=floor_gb)
-    # A sealed file is made unreadable (mode 000) as soon as it is open for the
-    # check, so a fetch killed before seal.lock() runs (even by SIGKILL) never
-    # leaves a readable holdout file behind. Everything else is read-only.
-    sealed = is_sealed_path(dest)
-    with open(dest, "rb") as handle:
-        if sealed:
-            os.chmod(dest, 0o000)
-        got = sha256_fileobj(handle)
-    if got != sha or dest.stat().st_size != size:
+    if is_sealed_path(dest):
+        method = "sealed-copy"
+        got, got_size = _write_sealed(blob, dest, floor_gb)
+    else:
+        method = clone_file(blob, dest, floor_gb=floor_gb)
+        got, got_size = sha256_file(dest), dest.stat().st_size
+    if got != sha or got_size != size or dest.stat().st_size != size:
         dest.unlink(missing_ok=True)
         raise FetchError(f"{dest.name} did not arrive intact (sha256 mismatch after {method})")
-    os.chmod(dest, 0o000 if sealed else 0o444)
+    os.chmod(dest, 0o000 if method == "sealed-copy" else 0o444)
     return method, None
 
 

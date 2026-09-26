@@ -327,31 +327,3 @@ def test_sealed_receipts_are_mirrored_outside_the_sealed_directory(server, froze
     assert again == receipt
     mirrored = read_jsonl(campaign / receipts.SEALED_RECEIPTS)
     assert mirrored == [dict(receipt, path="data/sealed/data.csv")]
-
-
-def test_a_placed_sealed_file_is_unreadable_before_it_is_hashed(frozen_campaign, tmp_path,
-                                                                monkeypatch):
-    # so a fetch killed between placing and seal.lock() leaves no readable holdout file
-    campaign, lane_id, sha, _ = frozen_campaign
-    proof = barrier.require(campaign, lane_id, sha)
-    modes = []
-    real = receipts.sha256_fileobj
-
-    def hashing(handle):
-        modes.append(os.fstat(handle.fileno()).st_mode & 0o777)
-        return real(handle)
-
-    monkeypatch.setattr(receipts, "sha256_fileobj", hashing)
-
-    def opener(request, timeout):
-        return FakeResponse([CSV], length=len(CSV))
-
-    sealed = campaign / "data" / "sealed" / "data.csv"
-    with seal.writable(campaign):
-        fetch("https://example.invalid/data.csv", sealed, barrier=proof, opener=opener)
-        assert sealed.stat().st_mode & 0o777 == 0
-    plain = tmp_path / "lane" / "data.csv"
-    fetch("https://example.invalid/data.csv", plain, opener=opener)
-    # the sealed copy is unreadable while hashed; a plain copy keeps its read bits
-    assert len(modes) == 2 and modes[0] == 0 and modes[1] & 0o444
-    assert plain.stat().st_mode & 0o777 == 0o444

@@ -246,3 +246,45 @@ def test_open_sealed_restores_mode_000_before_a_signal_is_sent_again(frozen_camp
         active.finish("SUPPORTED")
     assert seen == [0] and path.stat().st_mode & 0o777 == 0
     assert len(opened) == 1 and opened[0].closed
+
+
+def test_writable_and_a_run_relock_a_file_left_readable(frozen_campaign):
+    # open_sealed's brief mode 400, left behind by a process killed with SIGKILL
+    campaign, lane_id, _, _ = frozen_campaign
+    path = place_sealed(campaign)
+    path.chmod(0o400)
+    assert seal.status(campaign)["readable_sealed_files"] == 1
+    with seal.writable(campaign):
+        assert seal.status(campaign)["readable_sealed_files"] == 0
+    path.chmod(0o400)
+    with runguard.run(campaign, lane_id=lane_id) as active:
+        assert seal.status(campaign)["locked"] is True
+        active.finish("NOT_RUN")
+
+
+def test_a_signal_during_the_final_lock_waits_until_everything_is_locked(frozen_campaign,
+                                                                         saved_handlers,
+                                                                         monkeypatch):
+    campaign, _, _, _ = frozen_campaign
+    seen, armed, calls = [], [], []
+    signal.signal(signal.SIGTERM, lambda signum, frame: seen.append(
+        (seal.status(campaign)["readable_sealed_files"], seal.status(campaign)["dir_mode"])))
+    real_chmod = os.chmod
+
+    def chmod(path, mode, *args, **kwargs):
+        real_chmod(path, mode, *args, **kwargs)
+        if armed and mode == 0o000:
+            calls.append(path)
+            if len(calls) == 2:            # partway through lock()'s per-file loop
+                os.kill(os.getpid(), signal.SIGTERM)
+                time.sleep(0.05)
+
+    monkeypatch.setattr(os, "chmod", chmod)
+    with pytest.raises(guards.Interrupted):
+        with seal.writable(campaign) as directory:
+            for name in ("a.csv", "b.csv", "c.csv", "d.csv"):
+                (directory / name).write_bytes(DATA)
+            armed.append(True)
+    monkeypatch.undo()
+    assert len(calls) == 4
+    assert seen == [(0, "0o500")]

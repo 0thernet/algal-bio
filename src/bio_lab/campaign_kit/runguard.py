@@ -82,6 +82,9 @@ def run(campaign_dir, *, lane_id: str, erratum: str | None = None):
     with file_lock(campaign_dir / LOCK, blocking=False):
         freeze_sha = _freeze.freeze_sha256(campaign_dir)
         proof = _barrier.require(campaign_dir, lane_id, freeze_sha)
+        # an earlier run killed inside open_sealed may have left a file readable
+        from .seal import relock_if_open
+        relock_if_open(campaign_dir)
         records = history(campaign_dir)
         if _prior_runs(campaign_dir, records):
             if not erratum:

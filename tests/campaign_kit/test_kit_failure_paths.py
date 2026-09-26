@@ -149,17 +149,26 @@ def test_open_sealed_refuses_another_campaigns_run_and_a_symlink(tmp_path):
                  {"file": "link.csv", "sha256": hashlib.sha256(DATA).hexdigest()})
     with pytest.raises(seal.SealError, match="symlink"):
         seal.lock(first)
+    # a run relocks the sealed directory on entry, so it refuses one with a symlink
+    with pytest.raises(seal.SealError, match="symlink"):
+        with runguard.run(first, lane_id="S01"):
+            pass
+    assert runguard.history(first) == []
     try:
         with runguard.run(second, lane_id="S02") as other:
             with pytest.raises(seal.SealError, match="this campaign's active runguard run"):
                 seal.open_sealed(first, "holdout.csv", other)
             other.finish("NOT_RUN")
+        link.unlink()
         with runguard.run(first, lane_id="S01") as active:
+            # planted after the run started
+            seal.unlock(first)
+            link.symlink_to(outside)
             with pytest.raises(seal.SealError, match="not a regular sealed file"):
                 seal.open_sealed(first, "link.csv", active)
             active.finish("NOT_RUN")
     finally:
-        link.unlink()
+        link.unlink(missing_ok=True)
         seal.unlock(first)
         seal.unlock(second)
 
