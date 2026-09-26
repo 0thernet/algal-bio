@@ -133,6 +133,40 @@ def test_validate_content_checks(tmp_path):
         receipts.validate_content(empty, CSV_EXPECT)
 
 
+def test_first_line_prefix_is_checked(tmp_path):
+    path = tmp_path / "f.csv"
+    path.write_bytes(b"\xef\xbb\xbfmodel_id,gene,score\r\nM1,G1,0.5\n")
+    checks = receipts.validate_content(path, Expect(first_line_prefix="model_id,"))
+    assert checks == ["not_html", "not_json_error", "first_line_prefix"]
+    for prefix in ("gene", "model_id,score", "MODEL_ID", "model_id,gene,score,extra"):
+        with pytest.raises(receipts.ValidationError, match="expected prefix"):
+            receipts.validate_content(path, Expect(first_line_prefix=prefix))
+    gz = tmp_path / "f.csv.gz"
+    gz.write_bytes(gzip.compress(CSV))
+    assert "first_line_prefix" in receipts.validate_content(gz, Expect(first_line_prefix="model_id"))
+    with pytest.raises(receipts.ValidationError, match="expected prefix"):
+        receipts.validate_content(gz, Expect(first_line_prefix="\x1f"))
+
+
+def test_allow_json_accepts_a_well_formed_body_and_refuses_a_broken_one(tmp_path):
+    good = tmp_path / "list.json"
+    good.write_bytes(b'[{"gene": "G1", "score": 0.5}, {"gene": "G2", "score": -0.25}]\n')
+    expect = Expect(first_line_prefix="[", allow_json=True)
+    assert receipts.validate_content(good, expect) == ["not_html", "not_json_error",
+                                                       "first_line_prefix"]
+    obj = tmp_path / "obj.json"
+    obj.write_bytes(b'{"genes": ["G1", "G2"]}')
+    assert "not_json_error" in receipts.validate_content(obj, Expect(first_line_prefix="{",
+                                                                     allow_json=True))
+    truncated = tmp_path / "truncated.json"
+    truncated.write_bytes(b'[{"gene": "G1", "score": 0.5}, {"gene": "G2", "sc')
+    with pytest.raises(receipts.ValidationError, match="not valid JSON"):
+        receipts.validate_content(truncated, expect)
+    # without allow_json the same well-formed body is refused as a probable API error
+    with pytest.raises(receipts.ValidationError, match="API error"):
+        receipts.validate_content(good, Expect(first_line_prefix="["))
+
+
 def test_validation_errors_never_echo_content(tmp_path):
     path = tmp_path / "f.csv"
     path.write_bytes(b"secret_column_value,other\n")

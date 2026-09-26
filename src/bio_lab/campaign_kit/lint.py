@@ -48,7 +48,11 @@ def _same(a, b) -> bool:
     if isinstance(a, dict) and isinstance(b, dict):
         return a.keys() == b.keys() and all(_same(a[k], b[k]) for k in a)
     if isinstance(a, (set, frozenset)) and isinstance(b, (list, tuple)):
-        return set(a) == set(b)
+        # a set literal matches a registered list of distinct values in any order,
+        # compared element by element so True never stands in for 1
+        items = list(a)
+        return len(items) == len(b) and all(any(_same(x, y) for y in b) for x in items) \
+            and all(any(_same(x, y) for x in items) for y in b)
     return type(a) is type(b) and a == b
 
 

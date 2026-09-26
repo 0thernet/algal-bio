@@ -44,18 +44,54 @@ def test_disk_floor_rejects_negative_need(tmp_path):
 
 # ---------------------------------------------------------------- data budget
 
-def test_budget_records_and_refuses_an_overrun(mining):
+def test_budget_records_an_overrun_and_then_stops(mining):
     assert guards.record_download(600_000_000, run_id="r1", budget_gb=1) == 600_000_000
-    with pytest.raises(guards.BudgetError, match="would pass"):
+    # the bytes were spent: they are recorded, then the call says stop
+    with pytest.raises(guards.BudgetExceeded, match="over its budget") as error:
         guards.record_download(500_000_000, run_id="r1", budget_gb=1)
+    assert error.value.total == 1_100_000_000
     # another run's budget is separate
     assert guards.record_download(500_000_000, run_id="r2", budget_gb=1) == 500_000_000
     lines = (mining / "data-budget.jsonl").read_text().splitlines()
-    assert [json.loads(line)["run"] for line in lines] == ["r1", "r2"]
-    assert guards.budget_totals() == {"r1": 600_000_000, "r2": 500_000_000}
-    with pytest.raises(guards.BudgetError):
-        guards.check_budget(400_000_001, run_id="r1", budget_gb=1)
-    assert guards.check_budget(400_000_000, run_id="r1", budget_gb=1) == 0
+    assert [json.loads(line)["run"] for line in lines] == ["r1", "r1", "r2"]
+    assert guards.budget_totals() == {"r1": 1_100_000_000, "r2": 500_000_000}
+    with pytest.raises(guards.BudgetError, match="would pass"):
+        guards.check_budget(1, run_id="r1", budget_gb=1)
+    with pytest.raises(guards.BudgetError, match="would pass"):
+        guards.check_budget(500_000_001, run_id="r2", budget_gb=1)
+    assert guards.check_budget(500_000_000, run_id="r2", budget_gb=1) == 0
+
+
+def test_check_counts_reservations_and_settles_stale_ones(mining):
+    guards.record_download(100, run_id="r1", budget_gb=1)
+    held = guards.reserve(10 ** 9 - 400, run_id="r1", budget_gb=1)
+    assert guards.check_budget(300, run_id="r1", budget_gb=1) == 0
+    with pytest.raises(guards.BudgetError, match="reserved by fetches in progress"):
+        guards.check_budget(301, run_id="r1", budget_gb=1)
+    guards.settle(held, [("download", 50, {})])
+    assert guards.check_budget(301, run_id="r1", budget_gb=1) == 10 ** 9 - 451
+    with pytest.raises(guards.BudgetError, match="nonnegative"):
+        guards.check_budget(-1, run_id="r1", budget_gb=1)
+
+
+def test_record_and_check_cli(mining, capsys):
+    base = ["--run", "r1", "--budget-gb", "1"]
+    assert guards.main(["check", *base, "--need-gb", "0.9"]) == 0
+    assert guards.main(["record", *base, "--bytes", "900000000"]) == 0
+    assert guards.main(["check", *base, "--need-bytes", "100000000"]) == 0
+    assert guards.main(["check", *base, "--need-gb", "0.2"]) == 2
+    assert "would pass" in capsys.readouterr().err
+    # a download that happened anyway is recorded, and the exit status says stop
+    assert guards.main(["record", *base, "--bytes", "200000000"]) == 3
+    captured = capsys.readouterr()
+    assert "run total 1.100 GB" in captured.out and "over budget" in captured.err
+    assert guards.budget_totals() == {"r1": 1_100_000_000}
+    assert guards.main(["budget", *base]) == 0
+    assert "1.100 GB recorded" in capsys.readouterr().out
+    assert guards.main(["check", *base, "--need-bytes", "0"]) == 2
+    for bad in (["--need-gb", "nan"], ["--need-gb", "-1"], ["--need-bytes", "-5"]):
+        assert guards.main(["check", *base, *bad]) == 2
+    assert guards.budget_totals() == {"r1": 1_100_000_000}
 
 
 def test_budget_needs_a_run_id_and_a_budget(monkeypatch):
@@ -68,6 +104,58 @@ def test_budget_needs_a_run_id_and_a_budget(monkeypatch):
     assert guards.record_download(1000) == 1000
     with pytest.raises(guards.BudgetError):
         guards.record_download(1)
+
+
+@pytest.mark.parametrize("value", ["abc", "0", "-1", "nan", "inf"])
+def test_budget_env_must_be_a_positive_finite_number(monkeypatch, mining, value):
+    monkeypatch.setenv("BIO_DATA_BUDGET_GB", value)
+    with pytest.raises(guards.BudgetError, match="not a number|positive number"):
+        guards.budget_bytes_from(None)
+    with pytest.raises(guards.BudgetError):
+        guards.reserve(1, run_id="r1")
+    with pytest.raises(guards.BudgetError):
+        guards.check_budget(1, run_id="r1")
+    assert list(mining.iterdir()) in ([], [mining / "data-budget.jsonl.lock"])
+
+
+@pytest.mark.parametrize("value", [0, -1, float("nan"), float("inf"), 0.0, -0.5])
+def test_budget_argument_must_be_a_positive_finite_number(mining, value):
+    with pytest.raises(guards.BudgetError, match="positive number"):
+        guards.budget_bytes_from(value)
+    with pytest.raises(guards.BudgetError, match="positive number"):
+        guards.reserve(1, run_id="r1", budget_gb=value)
+    with pytest.raises(guards.BudgetError, match="positive number"):
+        guards.check_budget(1, run_id="r1", budget_gb=value)
+    # a download that happened is still recorded; the invalid budget is then reported
+    with pytest.raises(guards.BudgetError, match="recorded, but the budget cannot be checked"):
+        guards.record_download(1, run_id="r1", budget_gb=value)
+    assert guards.budget_totals() == {"r1": 1}
+    assert not (mining / guards.RESERVATIONS_DIR).exists()
+
+
+@pytest.mark.parametrize("size", [-1, True, 1.5, "10"])
+def test_negative_or_non_integer_sizes_are_refused(mining, size):
+    with pytest.raises(guards.BudgetError, match="nonnegative integer"):
+        guards.record_download(size, run_id="r1", budget_gb=1)
+    assert not (mining / "data-budget.jsonl").exists()
+
+
+@pytest.mark.parametrize("want", [0, -1, True, 2.0])
+def test_a_reservation_must_be_positive(mining, want):
+    with pytest.raises(guards.BudgetError, match="positive number of bytes"):
+        guards.reserve(want, run_id="r1", budget_gb=1)
+    assert not (mining / guards.RESERVATIONS_DIR).exists()
+
+
+@pytest.mark.parametrize("size", [-1, True])
+def test_settle_refuses_a_negative_transfer_and_records_nothing(mining, size):
+    held = guards.reserve(100, run_id="r1", budget_gb=1)
+    with pytest.raises(guards.BudgetError, match="nonnegative integer"):
+        guards.settle(held, [("download", 10, {}), ("download_partial", size, {})])
+    assert not (mining / "data-budget.jsonl").exists()
+    assert not held.settled and held.path.exists()
+    guards.settle(held, [("download", 10, {})])
+    assert guards.budget_totals() == {"r1": 10} and not held.path.exists()
 
 
 def test_budget_refuses_a_malformed_ledger(mining):

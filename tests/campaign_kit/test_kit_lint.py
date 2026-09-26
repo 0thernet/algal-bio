@@ -51,6 +51,37 @@ def test_protocol_lint_flags_a_literal_that_differs(tmp_path):
     assert len(problems) == 1 and "ALPHA = 0.1 but protocol.json registers 0.05" in problems[0]
 
 
+TYPED = {"MODE": "strict", "USE_X": True, "COUNT": 1, "GRID": [1, 2, 3],
+         "MAP": {"a": 1, "b": [0.5, 2]}, "TAGS": ["x", "y"], "FLAGS": [1, 0], "DUPS": [1, 1],
+         "NESTED": [[1, 2]]}
+
+
+@pytest.mark.parametrize("literal", [
+    "MODE = 'strict'", "USE_X = True", "COUNT = 1", "GRID = [1, 2, 3]", "GRID = (1, 2, 3)",
+    "MAP = {'a': 1, 'b': [0.5, 2]}", "MAP = {'b': (0.5, 2), 'a': 1}", "TAGS = {'y', 'x'}",
+    "TAGS = ['x', 'y']", "GRID = {3, 1, 2}", "FLAGS = {0, 1}", "NESTED = {(1, 2)}",
+])
+def test_protocol_lint_accepts_literals_equal_to_their_registration(tmp_path, literal):
+    assert lint.lint_protocol(protocol_campaign(tmp_path, literal + "\n", constants=TYPED)) == []
+
+
+@pytest.mark.parametrize("literal", [
+    "MODE = 'loose'", "MODE = 'Strict'", "MODE = 1",
+    "USE_X = 1", "USE_X = False", "USE_X = 'True'",      # a bool matches only a bool
+    "COUNT = True", "COUNT = 1.5",
+    "GRID = [1, 2]", "GRID = [1, 2, 4]", "GRID = [3, 2, 1]", "GRID = [1, 2, True]",
+    "MAP = {'a': 1}", "MAP = {'a': 2, 'b': [0.5, 2]}", "MAP = {'a': 1, 'b': [0.5, 2], 'c': 0}",
+    "MAP = {'a': True, 'b': [0.5, 2]}", "MAP = [('a', 1), ('b', [0.5, 2])]",
+    "TAGS = {'x', 'z'}", "TAGS = {'x'}", "TAGS = {'x', 'y', 'z'}", "TAGS = 'xy'",
+    "FLAGS = {True, False}", "DUPS = {1}", "NESTED = {1, 2}",
+])
+def test_protocol_lint_flags_literals_that_differ_from_their_registration(tmp_path, literal):
+    problems = lint.lint_protocol(protocol_campaign(tmp_path, literal + "\n", constants=TYPED))
+    name = literal.split(" =")[0]
+    assert len(problems) == 1 and f"{name} = " in problems[0] and "but protocol.json registers" \
+        in problems[0]
+
+
 def test_protocol_lint_flags_unregistered_constants_and_reads(tmp_path):
     code = ("K = load_constants('.')\nBETA = 3\nx = K['GAMMA']\ny = K.get('DELTA')\n"
             "z = constant('.', 'EPSILON')\nw = protocol['constants']['ZETA']\n")

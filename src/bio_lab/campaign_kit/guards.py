@@ -15,9 +15,11 @@ import os
 from pathlib import Path
 import re
 import shutil
+import signal
 import socket
 import statistics
 import sys
+import threading
 import time
 import uuid
 
@@ -34,6 +36,16 @@ SLOTS_DIR = "slots"
 # download_partial: bytes of a transfer that dropped or passed its cap;
 # download_unsettled: a reservation whose fetch died before recording.
 TRANSFER_KINDS = ("download", "download_rejected", "download_partial", "download_unsettled")
+# A reservation file carries the fetch's metered byte count, rewritten at least
+# every PROGRESS_BYTES or PROGRESS_SECONDS, and the path of its partial file.
+PROGRESS_BYTES = 1 << 22
+PROGRESS_SECONDS = 2.0
+# partial downloads live in <mining>/cache/kit-tmp/<key>.<pid>.part
+PART_DIR = ("cache", "kit-tmp")
+PART_RE = re.compile(r"^[0-9a-f]{64}\.([0-9]+)\.part$")
+INTERRUPT_SIGNALS = (signal.SIGTERM, signal.SIGHUP, signal.SIGINT)
+# a reservation file being rewritten: .<name>.json.<pid>.tmp
+RESERVATION_TMP_RE = re.compile(r"^\.[0-9a-f]{32}\.json\.([0-9]+)\.tmp$")
 
 
 class DiskFloorError(KitError):
@@ -50,6 +62,26 @@ class SlotBusyError(KitError):
 
 class OrientationError(KitError):
     pass
+
+
+class BudgetExceeded(BudgetError):
+    """A download was recorded, and the run's total now passes its budget."""
+
+    def __init__(self, message: str, total: int):
+        super().__init__(message)
+        self.total = total
+
+
+class Interrupted(BaseException):
+    """SIGTERM, SIGHUP or SIGINT arrived while a budget reservation was held.
+
+    A BaseException, like KeyboardInterrupt, so no `except KitError` or
+    `except Exception` mistakes it for a refusal or a failed download.
+    """
+
+    def __init__(self, signum: int):
+        super().__init__(f"interrupted by signal {signum}")
+        self.signum = signum
 
 
 # ---------------------------------------------------------------- disk floor
@@ -146,26 +178,95 @@ def _read_reservations(mining) -> list[tuple[Path, dict]]:
                               "a manual look") from None
         size = record.get("bytes") if isinstance(record, dict) else None
         if not isinstance(record, dict) or not isinstance(record.get("run"), str) \
-                or not isinstance(size, int) or isinstance(size, bool) or size < 0:
+                or not _count(size) \
+                or any(key in record and not _count(record[key]) for key in ("moved", "earlier")) \
+                or ("part" in record and not isinstance(record["part"], str)):
             raise BudgetError(f"budget reservation {path.name} is malformed; the budget needs "
                               "a manual look")
         out.append((path, record))
     return out
 
 
+def _count(value) -> bool:
+    return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def _part_file(mining, record: dict) -> Path | None:
+    """The reservation's partial file, only when it is a kit partial in the mining dir."""
+    part = record.get("part")
+    if not isinstance(part, str):
+        return None
+    path = Path(part)
+    if not PART_RE.match(path.name) \
+            or path.parent.resolve() != mining_dir(mining).joinpath(*PART_DIR).resolve():
+        return None
+    return path
+
+
+def _stale_charge(mining, record: dict) -> tuple[int, str]:
+    """Bytes to charge for a reservation whose fetch died, and how they were counted.
+
+    The larger of the metered count last written to the reservation and the
+    bytes of earlier attempts plus the partial file's size; the whole
+    reservation only when neither can be read.
+    """
+    counts = []
+    if _count(record.get("moved")):
+        counts.append(record["moved"])
+    part = _part_file(mining, record)
+    if part is not None:
+        try:
+            counts.append(record.get("earlier", 0) + part.stat().st_size)
+        except OSError:
+            pass
+    if not counts:
+        return record["bytes"], "reservation of a fetch that exited without settling; counted in full"
+    return max(counts), ("reservation of a fetch that exited without settling; counted from "
+                         "its metered bytes and partial file")
+
+
 def _settle_stale(mining) -> None:
-    """Charge in full, then drop, the reservations of processes on this host that exited
-    without settling (a killed fetch). Caller holds the budget lock."""
+    """Charge, then drop, the reservations of processes on this host that exited
+    without settling (a killed fetch), and delete partial files whose process is
+    gone. Caller holds the budget lock. See _stale_charge for the amount."""
     host = socket.gethostname()
+    held_parts = set()
     for path, record in _read_reservations(mining):
         if record.get("host") == host and not _pid_alive(record.get("pid")):
-            entry = {"run": record["run"], "bytes": record["bytes"], "utc": utc_now(),
-                     "kind": "download_unsettled",
-                     "note": "reservation of a fetch that exited without settling; counted in full"}
+            charge, note = _stale_charge(mining, record)
+            entry = {"run": record["run"], "bytes": charge, "utc": utc_now(),
+                     "kind": "download_unsettled", "note": note, "reserved": record["bytes"]}
             if isinstance(record.get("url"), str):
                 entry["url"] = record["url"]
             append_jsonl(_budget_path(mining), entry)
+            part = _part_file(mining, record)
+            if part is not None:
+                part.unlink(missing_ok=True)
             path.unlink()
+        elif isinstance(record.get("part"), str):
+            held_parts.add(str(Path(record["part"]).resolve()))
+    _sweep_parts(mining, held_parts)
+    directory = _reservations_dir(mining)
+    if directory.is_dir():
+        for path in directory.iterdir():
+            match = RESERVATION_TMP_RE.match(path.name)
+            if match and not _pid_alive(int(match.group(1))):
+                path.unlink(missing_ok=True)
+
+
+def _sweep_parts(mining, held: set) -> None:
+    """Delete kit partial files whose process on this host is gone and that no open
+    reservation names; their bytes were settled already or just now."""
+    directory = mining_dir(mining).joinpath(*PART_DIR)
+    if not directory.is_dir():
+        return
+    for path in directory.iterdir():
+        match = PART_RE.match(path.name)
+        if match is None or str(path.resolve()) in held or path.is_symlink() \
+                or not path.is_file():
+            continue
+        if not _pid_alive(int(match.group(1))):
+            path.unlink(missing_ok=True)
 
 
 def reserved_totals(mining=None) -> dict[str, int]:
@@ -185,38 +286,55 @@ def budget_remaining(run_id: str | None = None, budget_gb: float | None = None, 
 
 def check_budget(add_bytes: int, run_id: str | None = None, budget_gb: float | None = None,
                  mining=None) -> int:
-    """Refuse when this run's total would pass its budget. Returns the bytes left after."""
-    left = budget_remaining(run_id, budget_gb, mining) - add_bytes
+    """Refuse when add_bytes more would pass this run's budget, counting the recorded
+    bytes and the reservations of fetches in progress (stale ones are settled first).
+    Run it before a download made outside the kit. Returns the bytes left after."""
+    if not _count(add_bytes):
+        raise BudgetError("a download size must be a nonnegative integer")
+    run_id = run_id_from(run_id)
+    budget = budget_bytes_from(budget_gb)
+    with _budget_lock(mining):
+        _settle_stale(mining)
+        total = budget_totals(mining).get(run_id, 0)
+        reserved = reserved_totals(mining).get(run_id, 0)
+    left = budget - total - reserved - add_bytes
     if left < 0:
-        raise BudgetError(f"data budget: run {run_id_from(run_id)} would pass its budget by "
-                          f"{-left / GB:.2f} GB; stop and report")
+        raise BudgetError(f"data budget: run {run_id} has {total / GB:.3f} GB recorded and "
+                          f"{reserved / GB:.3f} GB reserved by fetches in progress; "
+                          f"{add_bytes / GB:.3f} GB more would pass its budget of "
+                          f"{budget / GB:.3f} GB by {-left / GB:.3f} GB; stop and report")
     return left
 
 
 def record_download(nbytes: int, *, run_id: str | None = None, budget_gb: float | None = None,
                     mining=None, url: str | None = None, sha256: str | None = None,
                     file: str | None = None, note: str | None = None) -> int:
-    """Append one download to the data-budget ledger under its lock.
+    """Append one download that has already happened to the data-budget ledger.
 
-    The check and the append happen under one lock, so two lanes cannot both
-    squeeze under the limit. Returns the run's total after the append.
+    The bytes were spent, so they are always recorded, under the budget lock.
+    Afterwards it raises BudgetExceeded when the run's recorded total passes
+    its budget (stop downloading), or BudgetError when no valid budget is set.
+    Returns the run's total after the append. Check before downloading with
+    check_budget.
     """
-    if not isinstance(nbytes, int) or isinstance(nbytes, bool) or nbytes < 0:
+    if not _count(nbytes):
         raise BudgetError("a download size must be a nonnegative integer")
     run_id = run_id_from(run_id)
-    budget = budget_bytes_from(budget_gb)
     path = _budget_path(mining)
     with _budget_lock(mining):
         _settle_stale(mining)
-        total = budget_totals(mining).get(run_id, 0)
-        reserved = reserved_totals(mining).get(run_id, 0)
-        if total + reserved + nbytes > budget:
-            raise BudgetError(f"data budget: run {run_id} has {total / GB:.2f} GB recorded and "
-                              f"{reserved / GB:.2f} GB reserved by fetches in progress; "
-                              f"{nbytes / GB:.2f} GB more would pass {budget / GB:.2f} GB")
         append_jsonl(path, _record(run_id, nbytes, "download", url=url, sha256=sha256,
                                    file=file, note=note))
-    return total + nbytes
+        total = budget_totals(mining).get(run_id, 0)
+    try:
+        budget = budget_bytes_from(budget_gb)
+    except BudgetError as error:
+        raise BudgetError(f"recorded, but the budget cannot be checked: {error}") from None
+    if total > budget:
+        raise BudgetExceeded(f"data budget: recorded, but run {run_id} now has {total / GB:.3f} GB "
+                             f"recorded, over its budget of {budget / GB:.3f} GB; stop "
+                             "downloading and report", total)
+    return total
 
 
 def _budget_lock(mining):
@@ -242,11 +360,45 @@ class Reservation:
     path: Path
     mining: object
     settled: bool = False
+    record: dict = dataclasses.field(default_factory=dict)
+    _written: tuple = (0, 0.0)
+
+    def progress(self, moved: int, earlier: int, force: bool = False) -> None:
+        """Write the metered byte count (moved: all attempts so far; earlier: attempts
+        already ended) into the reservation file, at most every PROGRESS_BYTES or
+        PROGRESS_SECONDS unless forced, so a killed fetch is charged what it moved."""
+        if self.settled:
+            return
+        last_bytes, last_time = self._written
+        now = time.monotonic()
+        if not force and moved - last_bytes < PROGRESS_BYTES and now - last_time < PROGRESS_SECONDS:
+            return
+        self.record = dict(self.record, moved=moved, earlier=earlier)
+        _write_reservation(self.path, self.record, create=False)
+        self._written = (moved, now)
+
+
+def _write_reservation(path: Path, body: dict, *, create: bool) -> None:
+    """Write a reservation file whole (temporary file, then rename), so a reader or a
+    kill never sees half of one."""
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    try:
+        with open(tmp, "w", encoding="utf-8") as handle:
+            json.dump(body, handle, sort_keys=True)
+            handle.flush()
+            if create:
+                os.fsync(handle.fileno())
+        if create and path.exists():
+            raise BudgetError("a reservation file with this name exists already")
+        os.replace(tmp, path)
+    except BaseException:
+        tmp.unlink(missing_ok=True)
+        raise
 
 
 def reserve(want: int, *, run_id: str | None = None, budget_gb: float | None = None,
-            mining=None, url: str | None = None, wait: float = 0.0,
-            poll: float = 1.0) -> Reservation:
+            mining=None, url: str | None = None, part: os.PathLike | str | None = None,
+            wait: float = 0.0, poll: float = 1.0) -> Reservation:
     """Hold up to want bytes of the run's budget before a transfer starts.
 
     Concurrent fetches see each other's reservations, so two of them cannot
@@ -254,7 +406,10 @@ def reserve(want: int, *, run_id: str | None = None, budget_gb: float | None = N
     no budget the call refuses at once. When only other fetches' reservations
     stand in the way it waits up to wait seconds for them to settle, then takes
     what is left, or refuses when nothing is. Every reservation must end in
-    settle(); one left by a process that died is charged in full.
+    settle(). part names the fetch's partial file; Reservation.progress keeps
+    a metered byte count in the file. One left by a process that died is
+    charged the larger of that count and the partial file's size (plus
+    earlier attempts), or in full when neither can be read.
     """
     if not isinstance(want, int) or isinstance(want, bool) or want <= 0:
         raise BudgetError("a reservation must be a positive number of bytes")
@@ -276,14 +431,13 @@ def reserve(want: int, *, run_id: str | None = None, budget_gb: float | None = N
                 directory.mkdir(parents=True, exist_ok=True)
                 path = directory / f"{uuid.uuid4().hex}.json"
                 body = {"run": run_id, "bytes": grant, "pid": os.getpid(),
-                        "host": socket.gethostname(), "utc": utc_now()}
+                        "host": socket.gethostname(), "utc": utc_now(), "moved": 0, "earlier": 0}
                 if url is not None:
                     body["url"] = url
-                with open(path, "x", encoding="utf-8") as handle:
-                    json.dump(body, handle, sort_keys=True)
-                    handle.flush()
-                    os.fsync(handle.fileno())
-                return Reservation(run_id, grant, path, mining)
+                if part is not None:
+                    body["part"] = str(Path(part).resolve())
+                _write_reservation(path, body, create=True)
+                return Reservation(run_id, grant, path, mining, record=body)
             if time.monotonic() >= deadline:
                 raise BudgetError(f"no room left: run {run_id} has no data budget left beyond "
                                   f"{others} bytes reserved by fetches in progress")
@@ -298,15 +452,77 @@ def settle(reservation: Reservation, transfers) -> None:
     """
     if reservation.settled:
         raise BudgetError("this reservation is already settled")
+    transfers = list(transfers)
+    for _kind, nbytes, _fields in transfers:
+        if not _count(nbytes):
+            raise BudgetError("a transfer size must be a nonnegative integer")
     path = _budget_path(reservation.mining)
     with _budget_lock(reservation.mining):
         for kind, nbytes, fields in transfers:
-            if not isinstance(nbytes, int) or nbytes < 0:
-                raise BudgetError("a transfer size must be a nonnegative integer")
             if nbytes:
                 append_jsonl(path, _record(reservation.run_id, nbytes, kind, **fields))
         reservation.path.unlink(missing_ok=True)
         reservation.settled = True
+
+
+class _SignalGuard:
+    """State of interruptible(): the first signal raises Interrupted, unless held."""
+
+    def __init__(self):
+        self.previous: dict = {}
+        self.pending: int | None = None
+        self.raised = False
+        self.holding = 0
+
+    def _handler(self, signum, _frame):
+        if self.pending is None:
+            self.pending = signum
+        if not self.raised and not self.holding:
+            self.raised = True
+            raise Interrupted(signum)
+
+    @contextlib.contextmanager
+    def hold(self):
+        """Defer a signal until the block ends (use it around settle)."""
+        self.holding += 1
+        try:
+            yield
+        finally:
+            self.holding -= 1
+        if self.pending is not None and not self.raised and not self.holding:
+            self.raised = True
+            raise Interrupted(self.pending)
+
+
+@contextlib.contextmanager
+def interruptible():
+    """While a reservation is held: turn SIGTERM, SIGHUP and SIGINT into Interrupted.
+
+    A killed Python process runs no finally, so a fetch killed by SIGTERM
+    would never settle its reservation. Inside this block the first of these
+    signals raises Interrupted instead, so the fetch's finally records the
+    bytes it moved. On exit the previous handlers are restored and the signal
+    is sent again, so the process ends (or not) as it would have without the
+    block. Signals set to be ignored (nohup's SIGHUP) stay ignored. It works in
+    the main thread only; elsewhere it changes nothing.
+    """
+    guard = _SignalGuard()
+    if threading.current_thread() is not threading.main_thread():
+        yield guard
+        return
+    try:
+        for signum in INTERRUPT_SIGNALS:
+            current = signal.getsignal(signum)
+            if current is None or current == signal.SIG_IGN:
+                continue
+            guard.previous[signum] = current
+            signal.signal(signum, guard._handler)
+        yield guard
+    finally:
+        for signum, handler in guard.previous.items():
+            signal.signal(signum, handler)
+        if guard.pending is not None and guard.pending in guard.previous:
+            os.kill(os.getpid(), guard.pending)
 
 
 # ---------------------------------------------------------------- compute slots
@@ -488,7 +704,16 @@ def main(argv=None) -> int:
     budget.add_argument("--run")
     budget.add_argument("--budget-gb", type=float)
     budget.add_argument("--mining-dir")
-    record = sub.add_parser("record", help="append a download made outside the kit")
+    check = sub.add_parser("check", help="before a download made outside the kit: refuse "
+                           "when it would pass the run's budget, counting reservations")
+    check.add_argument("--run")
+    need = check.add_mutually_exclusive_group(required=True)
+    need.add_argument("--need-bytes", type=int)
+    need.add_argument("--need-gb", type=float)
+    check.add_argument("--budget-gb", type=float)
+    check.add_argument("--mining-dir")
+    record = sub.add_parser("record", help="append a download made outside the kit; it is "
+                            "always recorded, and exits 3 when the run is then over its budget")
     record.add_argument("--run")
     record.add_argument("--bytes", type=int, required=True)
     record.add_argument("--budget-gb", type=float)
@@ -511,10 +736,25 @@ def main(argv=None) -> int:
             if args.budget_gb is not None or os.environ.get(BUDGET_ENV):
                 line += f" of {budget_bytes_from(args.budget_gb) / GB:.3f} GB"
             print(line)
+        elif args.cmd == "check":
+            if args.need_gb is not None:
+                if not (math.isfinite(args.need_gb) and args.need_gb >= 0):
+                    raise BudgetError("--need-gb must be a nonnegative number")
+                need_bytes = math.ceil(args.need_gb * GB)
+            else:
+                need_bytes = args.need_bytes
+            left = check_budget(need_bytes, run_id=args.run, budget_gb=args.budget_gb,
+                                mining=args.mining_dir)
+            print(f"ok: {left / GB:.3f} GB of the budget left after this download")
         elif args.cmd == "record":
-            total = record_download(args.bytes, run_id=args.run, budget_gb=args.budget_gb,
-                                    mining=args.mining_dir, url=args.url, sha256=args.sha256,
-                                    file=args.file)
+            try:
+                total = record_download(args.bytes, run_id=args.run, budget_gb=args.budget_gb,
+                                        mining=args.mining_dir, url=args.url, sha256=args.sha256,
+                                        file=args.file)
+            except BudgetExceeded as error:
+                print(f"recorded; run total {error.total / GB:.3f} GB")
+                print(f"over budget: {error}", file=sys.stderr)
+                return 3
             print(f"recorded; run total {total / GB:.3f} GB")
         elif args.cmd == "markers":
             hits = find_conflict_markers(args.paths)

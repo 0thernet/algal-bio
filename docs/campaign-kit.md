@@ -110,9 +110,23 @@ receipt = fetch(url, dest, Expect(first_line="ModelID,GeneID,score",
   otherwise refuses. Each attempt streams at most what is still reserved.
 - Every byte transferred is charged, in a `finally`, when the fetch settles:
   `download` for an accepted body, `download_rejected` for a body that failed
-  validation, and `download_partial` for dropped or refused attempts. A
-  reservation left by a process that died is charged in full as
-  `download_unsettled` by the next budget check.
+  validation, and `download_partial` for dropped or refused attempts.
+- While the reservation is held, SIGTERM, SIGHUP and SIGINT raise
+  `guards.Interrupted` in the main thread instead of ending Python at once,
+  so the `finally` still settles what moved. The previous handlers are then
+  restored and the signal is sent again, so the process still ends by it. A
+  signal that nohup set to be ignored stays ignored. This covers the
+  documented cleanup too: SIGTERM to the slot runner's `--pidfile` pid is
+  forwarded to the fetch.
+- For a fetch killed outright (SIGKILL), the reservation file holds the path
+  of its `.part` file and a metered byte count, rewritten at least every
+  4 MiB or 2 seconds and whenever an attempt starts or ends. The next budget
+  check charges the dead fetch as `download_unsettled` with the larger of
+  that count and the earlier attempts plus the `.part` file's size, deletes
+  the `.part` file, and records the reservation size alongside. It charges the
+  whole reservation only when neither the count nor the file can be read (a
+  reservation from an older kit). `.part` files in `cache/kit-tmp/` whose
+  process is gone and that no open reservation names are deleted.
 - When the body starts with the gzip magic, the HTML and JSON-error checks
   also run on its first 64 KB after decompression, so a compressed error page
   is refused too.
@@ -237,14 +251,27 @@ Randomness always comes from an explicit integer seed or a `random.Random`.
 
 - **Disk floor.** `require_disk_floor(path, need_bytes, floor_gb=10)` refuses
   unless free space stays above the floor after the write.
-- **Data budget.** `record_download` appends to
-  `$BIO_MINING_DIR/data-budget.jsonl`. The check and the append happen under
-  one lock, with records of the form `{"run", "bytes", "utc", "kind", ...}`,
-  where kind is `download`, `download_rejected`, `download_partial` or
-  `download_unsettled`; all of them count. `reserve` holds headroom for a
-  fetch before it starts and `settle` charges what it actually moved.
-  `budget_totals` sums the bytes for each run, and `budget_remaining`
-  subtracts open reservations too.
+- **Data budget.** Records in `$BIO_MINING_DIR/data-budget.jsonl` have the
+  form `{"run", "bytes", "utc", "kind", ...}`, where kind is `download`,
+  `download_rejected`, `download_partial` or `download_unsettled`; all of them
+  count. `reserve` holds headroom for a fetch before it starts and `settle`
+  charges what it actually moved. `budget_totals` sums the bytes for each run,
+  and `budget_remaining` subtracts open reservations too. The budget comes
+  from `budget_gb` or `BIO_DATA_BUDGET_GB` and must be a positive, finite
+  number of GB; anything else refuses.
+- **Downloads made outside the kit.** Check first, then record:
+
+  ```
+  python -m <kit>.guards check --run RUN --need-bytes N   # or --need-gb G
+  python -m <kit>.guards record --run RUN --bytes N [--url U] [--sha256 S] [--file F]
+  ```
+
+  `check` (`check_budget`) settles stale reservations under the budget lock,
+  then refuses (exit 2) when N more bytes would pass the run's budget,
+  counting recorded bytes and open reservations. `record`
+  (`record_download`) always appends, because the bytes were spent; when the
+  run's recorded total then passes its budget it prints the total and exits
+  3 (`BudgetExceeded` in Python): stop downloading and report.
 - **Compute slots.** `compute_slot()` holds an fcntl lock over
   `$BIO_MINING_DIR/slots/slot-*.lock`. `python -m <kit>.slot run [--no-wait] [--timeout S] [--pidfile P] -- <cmd>`
   runs a command inside a slot, sets `BIO_SLOT` and forwards SIGTERM, SIGINT
@@ -359,24 +386,39 @@ fixtures in temporary directories only. It covers:
   expectation, a non-http(s) URL
 - budget accounting: rejected bodies, dropped attempts, a concurrent fetch
   refused by a reservation, a stale reservation charged as unsettled
+- a fetch with no size hint stopped mid-transfer by SIGTERM, by SIGTERM to the
+  slot runner, and by SIGKILL, each charged close to the bytes served rather
+  than its reservation, with no `.part` file left; stale reservations charged
+  from their count, their `.part` file, or in full; orphaned `.part` files;
+  the signal handling of `interruptible()`
+- budget values that are not a positive finite number, negative or
+  non-integer sizes, `guards check` and a `guards record` past the budget
+- `validate_content`: a first-line prefix that matches and one that does not,
+  and `allow_json` with a well-formed and a truncated body
 - sealed destinations in other letter cases, with no barrier, or with another
   lane's barrier
 - `import_local` refusals: no authority, a size mismatch, traversal, a
   symlinked source, a missing receipts file
 - barrier refusals: a lane id mismatch, a freeze replaced after the barrier,
-  an invalid barrier file
-- freeze refusals, including a deny-list hit, symlinks and escaping includes
+  an invalid barrier file, and every malformed barrier `write` refuses
+  without creating the file
+- freeze refusals, including a deny-list hit, symlinks (a symlinked
+  registered root too), escaping includes, and a manifest that is not a kit
+  freeze or lacks its file list
 - seal and runguard refusals, and rerun refusal
 - the disk floor
 - slot contention, SIGTERM forwarding, the pidfile, and a runner killed with
   SIGKILL while its command still holds the slot
 - ledger idempotence, the ledger's refusal to rewrite, disjoint reuse and
   usage mismatches, and every public-export refusal
-- a protocol mismatch
+- a protocol mismatch, for numbers, strings, bools against ints, lists,
+  dicts and sets; a missing or empty constants block and an unregistered
+  constant
 - deny-list hits in contents, file names and directory names, reported
   without the name
 - path scrubbing, receipted files and nested private directories in the
-  public assembly
+  public assembly, and its refusals when a registered file would change or
+  would not be published
 - cache reuse
 - a scaffolded campaign whose vendored kit freezes and whose tests pass, and
   whose tests never reach a mining dir set in the environment

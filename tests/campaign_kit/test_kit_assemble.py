@@ -260,3 +260,49 @@ def test_large_unregistered_files_are_skipped_with_their_hash(campaign, repo):
     assert skipped["fanout/big.txt"]["reason"] == "over 4 MB"
     assert skipped["fanout/big.txt"]["sha256"] == sha256_file(big)
     assert skipped["fanout/matrix.npz"]["reason"] == "binary data format"
+
+
+# ---------------------------------------------------------------- registered files kept whole
+
+def repo_files(repo):
+    return sorted(p.relative_to(repo).as_posix() for p in repo.rglob("*")
+                  if p.is_file() and ".git" not in p.relative_to(repo).parts)
+
+
+@pytest.mark.parametrize("layout", ["receipted", "skipped dir", "lock name"])
+def test_registered_files_that_would_not_be_published_refuse(tmp_path, repo, layout):
+    campaign = make_campaign(tmp_path / "research", NAME)
+    if layout == "receipted":
+        # a registered file that its directory's receipts.jsonl lists as third-party data
+        write(campaign / "code" / "table.csv", "a,b\n1,2\n")
+        append_jsonl(campaign / "code" / "receipts.jsonl", {"file": "table.csv"})
+        missing = "code/table.csv"
+    elif layout == "skipped dir":
+        # the freeze registers it, but the assembly never walks a .git directory
+        write(campaign / "code" / ".git" / "notes.txt", "registered\n")
+        missing = "code/.git/notes.txt"
+    else:
+        write(campaign / "tests" / ".confirmation.lock", "")
+        missing = "tests/.confirmation.lock"
+    manifest, _ = freeze.build(campaign)
+    assert missing in manifest["sha256"]
+    with pytest.raises(assemble_public.AssemblyError,
+                       match=f"registered files would not be published: {missing}"):
+        assemble_public.assemble(campaign, repo, NAME, "prereg")
+    assert repo_files(repo) == []
+
+
+def test_a_registered_file_that_scrubbing_would_change_refuses(tmp_path, repo, monkeypatch):
+    campaign = make_campaign(tmp_path / "research", NAME)
+    write(campaign / "code" / "paths.py", "ROOT = 'synthetic-private-root/lane'\n")
+    freeze.build(campaign)
+    monkeypatch.setattr(assemble_public, "scrub_rules",
+                        lambda _campaign: [("synthetic-private-root", "<research-root>")])
+    with pytest.raises(assemble_public.AssemblyError,
+                       match="registered file code/paths.py would change in the public copy"):
+        assemble_public.assemble(campaign, repo, NAME, "prereg")
+    assert repo_files(repo) == []
+    monkeypatch.undo()                     # without the synthetic rule the same tree publishes
+    assemble_public.assemble(campaign, repo, NAME, "prereg")
+    assert (repo / "campaigns" / NAME / "code" / "paths.py").read_bytes() == (
+        campaign / "code" / "paths.py").read_bytes()

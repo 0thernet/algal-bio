@@ -105,6 +105,38 @@ def test_freeze_verify_refuses_an_edited_manifest(tmp_path):
         freeze.verify(campaign)
 
 
+@pytest.mark.parametrize("edit, message", [
+    (lambda m: m.update(schema="other"), "not a kit freeze manifest"),
+    (lambda m: m.pop("schema"), "not a kit freeze manifest"),
+    (lambda m: m.update(sha256={}), "lacks its file list"),
+    (lambda m: m.update(sha256=[]), "lacks its file list"),
+    (lambda m: m.pop("sha256"), "lacks its file list"),
+    (lambda m: m.update(declared="code"), "lacks its file list"),
+    (lambda m: m.pop("declared"), "lacks its file list"),
+])
+def test_freeze_verify_refuses_a_manifest_that_is_not_a_kit_freeze(tmp_path, edit, message):
+    campaign = make_campaign(tmp_path)
+    freeze.build(campaign)
+    assert freeze.verify(campaign)["ok"]
+    path = campaign / freeze.FREEZE
+    manifest = json.loads(path.read_text())
+    edit(manifest)
+    path.write_text(json.dumps(manifest))
+    with pytest.raises(freeze.FreezeError, match=message):
+        freeze.verify(campaign)
+
+
+@pytest.mark.parametrize("root", ["code", "tests", "registration"])
+def test_freeze_refuses_a_symlinked_registered_root(tmp_path, root):
+    campaign = make_campaign(tmp_path / "lane")
+    real = tmp_path / f"real-{root}"
+    (campaign / root).rename(real)
+    (campaign / root).symlink_to(real, target_is_directory=True)
+    with pytest.raises(freeze.FreezeError, match=f"{root} is a symlink"):
+        freeze.build(campaign)
+    assert not (campaign / freeze.FREEZE).exists() and not (real / "freeze.json").exists()
+
+
 def test_freeze_ignores_bytecode_caches(tmp_path):
     campaign = make_campaign(tmp_path)
     freeze.build(campaign)
@@ -206,6 +238,39 @@ def test_barrier_validation(mutate, message):
     mutate(doc)
     with pytest.raises(barrier.BarrierError, match=message):
         barrier.canonical(doc)
+
+
+def _entry(**changes):
+    item = frozen_entry("S01", "demo", "b" * 64)
+    item.update(changes)
+    return item
+
+
+@pytest.mark.parametrize("mutate, message", [
+    (lambda d: d.update(run_id=""), "run_id must be a nonempty string"),
+    (lambda d: d.update(run_id=None), "run_id must be a nonempty string"),
+    (lambda d: d.update(run_id=20260926), "run_id must be a nonempty string"),
+    (lambda d: d.update(members=[]), "lists no members"),
+    (lambda d: d.update(frozen=_entry()), "frozen must be a list"),
+    (lambda d: d.update(frozen=None), "frozen must be a list"),
+    (lambda d: d.update(frozen=["S01"]), "each frozen member needs exactly"),
+    (lambda d: d["frozen"][0].pop("merge_sha"), "each frozen member needs exactly"),
+    (lambda d: d["frozen"][0].update(note="x"), "each frozen member needs exactly"),
+    (lambda d: d["frozen"][0].update(id=""), "id and campaign must be nonempty"),
+    (lambda d: d["frozen"][0].update(campaign=""), "id and campaign must be nonempty"),
+    (lambda d: d["frozen"][0].update(id=1), "id and campaign must be nonempty"),
+    (lambda d: d.update(frozen=[_entry(), _entry()]), "frozen member twice"),
+    (lambda d: d.update(frozen=[], released=["S01", "S02"]), "no frozen member"),
+])
+def test_a_malformed_barrier_is_never_written(tmp_path, mutate, message):
+    campaign = make_campaign(tmp_path)
+    doc = barrier_doc(["S01", "S02"], [frozen_entry("S01", "demo", "b" * 64)], released=["S02"])
+    barrier.canonical(doc)                 # the unmutated document is valid
+    mutate(doc)
+    with pytest.raises(barrier.BarrierError, match=message):
+        barrier.write(campaign, doc)
+    assert not (campaign / barrier.BARRIER).exists()
+    assert not (campaign / "audit").exists()
 
 
 def test_barrier_cli(frozen_campaign, capsys):

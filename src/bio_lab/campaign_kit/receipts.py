@@ -17,7 +17,10 @@ A network fetch reserves its byte allowance in the data budget before any
 byte moves (guards.reserve), so concurrent fetches see each other, and
 records every byte it read when it settles, whatever the outcome: kind
 download for a validated file, download_rejected for a body that failed
-validation, download_partial for dropped or over-cap transfers.
+validation, download_partial for dropped or over-cap transfers. While the
+reservation is held, SIGTERM, SIGHUP and SIGINT still settle it
+(guards.interruptible); for SIGKILL the reservation file carries a metered
+byte count and the partial file's path, which the next budget check charges.
 
 import_local(name, dest, receipts_file=...) brings in an owner-downloaded
 file that has no fetchable URL. It refuses unless it has the barrier proof
@@ -357,16 +360,31 @@ _TRANSIENT = (urllib.error.URLError, ConnectionError, TimeoutError, http.client.
 
 
 class _Meter:
-    """Bytes read from the network, per attempt, whatever became of them."""
+    """Bytes read from the network, per attempt, whatever became of them.
 
-    def __init__(self):
+    report(moved, earlier, force) receives the running count (for the budget
+    reservation file): moved over all attempts, earlier over the ended ones.
+    """
+
+    def __init__(self, report=None):
         self.attempts: list[int] = []
+        self.report = report
 
     def start(self) -> None:
         self.attempts.append(0)
+        self._report(True)
 
     def add(self, n: int) -> None:
         self.attempts[-1] += n
+        self._report(False)
+
+    def end(self) -> None:
+        """An attempt ended; called while its partial file still exists."""
+        self._report(True)
+
+    def _report(self, force: bool) -> None:
+        if self.report is not None and self.attempts:
+            self.report(self.total, self.total - self.attempts[-1], force)
 
     @property
     def total(self) -> int:
@@ -410,20 +428,22 @@ def _download(url: str, part: Path, *, cap: int, allowance: int, meter: _Meter, 
                                              "fetch may write; stopped")
                         digest.update(chunk)
                         handle.write(chunk)
+                        # the partial file's size is what a killed fetch is charged
+                        handle.flush()
                     handle.flush()
                     os.fsync(handle.fileno())
                 if length is not None and length.isdigit() and written != int(length):
                     raise http.client.IncompleteRead(b"", int(length) - written)
                 return written, digest.hexdigest()
         except urllib.error.HTTPError as error:
-            part.unlink(missing_ok=True)
+            _drop_part(meter, part)
             if error.code not in (408, 425, 429, 500, 502, 503, 504) or attempt > retries:
                 raise FetchError(f"HTTP {error.code} for {url}") from None
         except FetchError:
-            part.unlink(missing_ok=True)
+            _drop_part(meter, part)
             raise
         except _TRANSIENT as error:
-            part.unlink(missing_ok=True)
+            _drop_part(meter, part)
             if attempt > retries:
                 raise FetchError(f"download failed after {attempt} attempts: "
                                  f"{type(error).__name__}") from None
@@ -431,6 +451,11 @@ def _download(url: str, part: Path, *, cap: int, allowance: int, meter: _Meter, 
             part.unlink(missing_ok=True)
             raise
         sleep(min(60.0, 2.0 ** attempt))
+
+
+def _drop_part(meter: _Meter, part: Path) -> None:
+    meter.end()
+    part.unlink(missing_ok=True)
 
 
 def _cache_paths(cache: Path, url: str):
@@ -492,35 +517,42 @@ def fetch(url: str, dest: os.PathLike | str, expect: Expect, *, run_id: str | No
             if cap <= 0:
                 raise guards.DiskFloorError("no room left: the disk is at its floor or the "
                                             "registered size is zero")
+            part = tmp_dir / f"{index_path.stem}.{os.getpid()}.part"
             # Reserve before any byte moves, so concurrent fetches see this one; every
             # byte read is recorded when the reservation settles, whatever the outcome.
-            reservation = guards.reserve(cap * (retries + 1), run_id=run_id,
-                                         budget_gb=budget_gb, mining=mining, url=url,
-                                         wait=budget_wait)
-            meter, transfers = _Meter(), None
-            part = tmp_dir / f"{index_path.stem}.{os.getpid()}.part"
-            try:
-                size, sha = _download(url, part, cap=cap, allowance=reservation.bytes,
-                                      meter=meter, opener=opener or _default_opener,
-                                      timeout=timeout, retries=retries, sleep=sleep,
-                                      user_agent=user_agent)
-                earlier = {"url": url, "file": dest.name, "note": "failed earlier attempts"}
-                final = {"url": url, "sha256": sha, "file": dest.name}
+            # While it is held, SIGTERM, SIGHUP and SIGINT raise guards.Interrupted, so
+            # the finally still settles; the reservation file keeps a metered count and
+            # the partial file's path for a fetch killed outright (SIGKILL).
+            with guards.interruptible() as interrupt:
+                reservation = guards.reserve(cap * (retries + 1), run_id=run_id,
+                                             budget_gb=budget_gb, mining=mining, url=url,
+                                             part=part, wait=budget_wait)
+                meter, transfers = _Meter(reservation.progress), None
                 try:
-                    checks = validate_content(part, expect)
-                except KitError:
-                    part.unlink(missing_ok=True)
+                    size, sha = _download(url, part, cap=cap, allowance=reservation.bytes,
+                                          meter=meter, opener=opener or _default_opener,
+                                          timeout=timeout, retries=retries, sleep=sleep,
+                                          user_agent=user_agent)
+                    earlier = {"url": url, "file": dest.name, "note": "failed earlier attempts"}
+                    final = {"url": url, "sha256": sha, "file": dest.name}
+                    try:
+                        checks = validate_content(part, expect)
+                    except KitError:
+                        part.unlink(missing_ok=True)
+                        transfers = [("download_partial", meter.total - size, earlier),
+                                     ("download_rejected", size, final)]
+                        raise
                     transfers = [("download_partial", meter.total - size, earlier),
-                                 ("download_rejected", size, final)]
+                                 ("download", size, final)]
+                except BaseException:
+                    if transfers is None:
+                        transfers = [("download_partial", meter.total,
+                                      {"url": url, "file": dest.name})]
+                    part.unlink(missing_ok=True)
                     raise
-                transfers = [("download_partial", meter.total - size, earlier),
-                             ("download", size, final)]
-            except BaseException:
-                if transfers is None:
-                    transfers = [("download_partial", meter.total, {"url": url, "file": dest.name})]
-                raise
-            finally:
-                guards.settle(reservation, transfers or [])
+                finally:
+                    with interrupt.hold():
+                        guards.settle(reservation, transfers or [])
             blob = _blob_path(cache, sha)
             blob.parent.mkdir(parents=True, exist_ok=True)
             if blob.exists() and sha256_file(blob) == sha:
