@@ -25,9 +25,9 @@ from pathlib import Path
 import sys
 
 from . import KIT_VERSION
-from .common import (KitError, MAX_PUBLIC_BYTES, PERSONAL_RE, dir_has_files, die,
-                     is_sealed_path, read_json, safe_relative, sha256_bytes, sha256_file,
-                     utc_now)
+from .common import (KitError, MAX_PUBLIC_BYTES, PERSONAL_RE, SEALED_PARTS, dir_has_files, die,
+                     fold, is_sealed_path, is_sealed_relative, read_json, safe_relative,
+                     sha256_bytes, sha256_file, utc_now)
 
 SCHEMA = "bio-kit-freeze/1"
 FREEZE = "registration/freeze.json"
@@ -48,12 +48,15 @@ def top_digest(sha_map: dict[str, str]) -> str:
 
 
 def _check_root(relative: str) -> str:
+    """Refuse a registered root under results/ or private data, caselessly (see fold)."""
     path = safe_relative(relative)
     text = path.as_posix()
+    parts = [fold(p) for p in path.parts]
     for forbidden in FORBIDDEN_ROOTS:
-        if text == forbidden or text.startswith(forbidden + "/"):
+        want = forbidden.split("/")
+        if parts[:len(want)] == want:
             raise FreezeError(f"{text} may not be registered: {forbidden}/ is never frozen")
-    if "sealed" in path.parts:
+    if "sealed" in parts or is_sealed_relative(text):
         raise FreezeError(f"{text} may not be registered: sealed paths are never frozen")
     return text
 
@@ -91,10 +94,28 @@ def collect(campaign_dir: Path, roots) -> list[str]:
     for rel in files:
         if is_sealed_path(campaign_dir / rel):
             raise FreezeError(f"{rel} is under a sealed path")
+        _check_root(rel)
     return sorted(files)
 
 
+def _sealed_has_files(campaign_dir: Path) -> bool:
+    """Whether any data/<sealed part> directory, in any letter case, holds a file.
+    Counts only; names stay unread."""
+    for data in [c for c in campaign_dir.iterdir() if c.is_dir() and fold(c.name) == "data"]:
+        for child in data.iterdir():
+            if child.is_dir() and fold(child.name) in SEALED_PARTS and dir_has_files(child):
+                return True
+    return False
+
+
 def _publishable(campaign_dir: Path, rel: str, deny_file) -> None:
+    # the deny check runs first: its hits carry neutral labels for a path that
+    # holds a deny-list name, so the later messages never print such a path
+    if deny_file is not None:
+        from .lint import hygiene_hits
+        hits = hygiene_hits([campaign_dir / rel], deny_file=deny_file, root=campaign_dir)
+        if hits:
+            raise FreezeError(f"{hits[0]}; fix it before freezing")
     data = (campaign_dir / rel).read_bytes()
     if len(data) > MAX_PUBLIC_BYTES:
         raise FreezeError(f"{rel} is over 4 MB; a registered file must be publishable")
@@ -103,11 +124,6 @@ def _publishable(campaign_dir: Path, rel: str, deny_file) -> None:
         if PERSONAL_RE.search(line):
             raise FreezeError(f"{rel}:{number} contains a personal path; the public copy would "
                               "differ from the registered file")
-    if deny_file is not None:
-        from .lint import hygiene_hits
-        hits = hygiene_hits([campaign_dir / rel], deny_file=deny_file, root=campaign_dir)
-        if hits:
-            raise FreezeError(f"{hits[0]}; fix it before freezing")
 
 
 def build(campaign_dir: os.PathLike | str, include=(), *, deny_file=None) -> tuple[dict, str]:
@@ -119,7 +135,7 @@ def build(campaign_dir: os.PathLike | str, include=(), *, deny_file=None) -> tup
                           "(use verify)")
     if dir_has_files(campaign_dir / "results"):
         raise FreezeError("results/ already holds files; a freeze must come before any result")
-    if dir_has_files(campaign_dir / "data" / "sealed"):
+    if _sealed_has_files(campaign_dir):
         raise FreezeError("data/sealed/ already holds files; nothing may be fetched before the freeze")
     lane = read_json(campaign_dir / "lane.json", "lane.json")
     if not isinstance(lane.get("id"), str) or not lane["id"]:

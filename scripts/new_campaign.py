@@ -174,6 +174,17 @@ sys.path.insert(0, os.path.join(CAMPAIGN_DIR, "code"))
 @pytest.fixture
 def campaign_dir():
     return CAMPAIGN_DIR
+
+
+@pytest.fixture(autouse=True)
+def _isolated_mining(tmp_path, monkeypatch):
+    """Tests never reach the real mining dir, run ledger, budget or slots."""
+    mining = tmp_path / "mining"
+    mining.mkdir()
+    monkeypatch.setenv("BIO_MINING_DIR", str(mining))
+    for name in ("BIO_RUN_ID", "BIO_DATA_BUDGET_GB", "BIO_SLOT"):
+        monkeypatch.delenv(name, raising=False)
+    return mining
 '''
 
 SCAFFOLD_TEST = '''"""Scaffold checks: the vendored kit is intact and lane.json names a lane."""

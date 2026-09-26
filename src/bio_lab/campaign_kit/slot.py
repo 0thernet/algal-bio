@@ -4,44 +4,76 @@
     python -m bio_lab.campaign_kit.slot status
 
 From a vendored copy: PYTHONPATH=<campaign>/code python -m campaign_kit.slot run -- ...
-The slot is an fcntl lock over $BIO_MINING_DIR/slots/slot-*.lock, held until
-the command exits. SIGTERM, SIGINT and SIGHUP are forwarded to the command, so
-killing the runner (its pid is in --pidfile) stops the job too.
+The slot is an fcntl lock over $BIO_MINING_DIR/slots/slot-*.lock. The command
+inherits the locked descriptor, so the slot stays busy until both the runner
+and the command have exited: killing the runner, even with SIGKILL, never
+frees the slot while the command still runs. SIGTERM, SIGINT and SIGHUP sent
+to the runner (its pid is in --pidfile) are forwarded to the command. The
+pidfile is written once the command has started and removed when the runner
+exits normally.
 """
 
 from __future__ import annotations
 
 import argparse
 import os
+from pathlib import Path
 import signal
 import subprocess
 import sys
 
 from .common import KitError, die
-from .guards import compute_slot, slot_status
+from .guards import hold_slot, slot_status
+
+FORWARDED = (signal.SIGTERM, signal.SIGINT, signal.SIGHUP)
+
+
+def _write_pidfile(pidfile: Path) -> None:
+    tmp = pidfile.with_name(f".{pidfile.name}.tmp-{os.getpid()}")
+    tmp.write_text(f"{os.getpid()}\n", encoding="utf-8")
+    os.replace(tmp, pidfile)
+
+
+def _remove_pidfile(pidfile: Path) -> None:
+    try:
+        if pidfile.read_text(encoding="utf-8").strip() == str(os.getpid()):
+            pidfile.unlink()
+    except OSError:
+        pass
 
 
 def run(cmd: list[str], *, mining=None, wait: bool = True, timeout: float | None = None,
         pidfile: str | None = None) -> int:
     if not cmd:
         raise KitError("no command given after --")
-    with compute_slot(mining, wait=wait, timeout=timeout) as slot:
+    with hold_slot(mining, wait=wait, timeout=timeout) as (slot, handle):
         env = dict(os.environ, BIO_SLOT=slot)
-        child = subprocess.Popen(cmd, env=env)
-        if pidfile:
-            with open(pidfile, "w") as handle:
-                handle.write(f"{os.getpid()}\n")
+        state = {"child": None, "pending": []}
 
         def forward(signum, _frame):
-            if child.poll() is None:
+            child = state["child"]
+            if child is None:
+                state["pending"].append(signum)
+            elif child.poll() is None:
                 child.send_signal(signum)
 
-        previous = {s: signal.signal(s, forward) for s in (signal.SIGTERM, signal.SIGINT, signal.SIGHUP)}
+        previous = {s: signal.signal(s, forward) for s in FORWARDED}
+        path = Path(pidfile) if pidfile else None
         try:
+            # the child keeps the locked descriptor: the slot frees only when both exit
+            child = subprocess.Popen(cmd, env=env, pass_fds=(handle.fileno(),))
+            state["child"] = child
+            for signum in state["pending"]:
+                if child.poll() is None:
+                    child.send_signal(signum)
+            if path is not None:
+                _write_pidfile(path)
             return child.wait()
         finally:
             for s, handler in previous.items():
                 signal.signal(s, handler)
+            if path is not None:
+                _remove_pidfile(path)
 
 
 def main(argv=None) -> int:
@@ -56,7 +88,7 @@ def main(argv=None) -> int:
     parser.add_argument("--mining-dir")
     parser.add_argument("--no-wait", action="store_true", help="fail at once when every slot is busy")
     parser.add_argument("--timeout", type=float, help="seconds to wait for a slot")
-    parser.add_argument("--pidfile", help="write the runner's pid here")
+    parser.add_argument("--pidfile", help="write the runner's pid here while the command runs")
     args = parser.parse_args(argv)
     try:
         if args.action == "status":

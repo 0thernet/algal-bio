@@ -2,7 +2,6 @@
 
 from __future__ import annotations
 
-import json
 import subprocess
 
 import pytest
@@ -55,22 +54,150 @@ def test_unregistered_files_are_scrubbed(campaign, repo, tmp_path):
         campaign / "audit" / "metadata.md")
 
 
-def test_private_data_is_never_walked_but_receipts_are_published(tmp_path, repo):
+def test_private_data_is_never_walked_and_sealed_receipts_come_from_audit(tmp_path, repo):
     campaign = make_campaign(tmp_path / "research", NAME)
     write(campaign / "data" / "discovery" / "table.csv", "a,b\n1,2\n")
     append_jsonl(campaign / "data" / "discovery" / "receipts.jsonl", {"file": "table.csv"})
     freeze.build(campaign)
     write(campaign / "data" / "sealed" / "holdout.csv", "synthetic\n")
     append_jsonl(campaign / "data" / "sealed" / "receipts.jsonl", {"file": "holdout.csv"})
+    append_jsonl(campaign / "audit" / "sealed-receipts.jsonl",
+                 {"file": "holdout.csv", "path": "data/sealed/holdout.csv", "sha256": "0" * 64})
     manifest = assemble_public.assemble(campaign, repo, NAME, "prereg")
-    out = repo / "campaigns" / NAME / "data"
-    assert (out / "sealed" / "receipts.jsonl").is_file()
-    assert (out / "discovery" / "receipts.jsonl").is_file()
-    assert not (out / "sealed" / "holdout.csv").exists()
-    assert not (out / "discovery" / "table.csv").exists()
+    out = repo / "campaigns" / NAME
+    assert not (out / "data" / "sealed").exists()
+    assert (out / "data" / "discovery" / "receipts.jsonl").is_file()
+    assert not (out / "data" / "discovery" / "table.csv").exists()
+    assert (out / "audit" / "sealed-receipts.jsonl").read_bytes() == (
+        campaign / "audit" / "sealed-receipts.jsonl").read_bytes()
     skipped = {s["source"]: s["reason"] for s in manifest["skipped"]}
-    assert skipped["data/sealed/"] == "private data" and skipped["data/discovery/"] == "private data"
-    assert "holdout.csv" not in json.dumps(manifest)
+    assert skipped["data/sealed/"] == "sealed data" and skipped["data/discovery/"] == "private data"
+    assert not any(s.startswith("data/sealed/") and s != "data/sealed/" for s in skipped)
+
+
+@pytest.fixture
+def spy(monkeypatch):
+    """Record every directory listed and every file opened during the assembly."""
+    import builtins
+    import io
+    import os as _os
+
+    seen = []
+    real_scandir, real_open, real_io_open = _os.scandir, builtins.open, io.open
+
+    def scandir(path="."):
+        seen.append(str(path))
+        return real_scandir(path)
+
+    def opener(real):
+        def wrapped(file, *args, **kwargs):
+            seen.append(str(file))
+            return real(file, *args, **kwargs)
+        return wrapped
+
+    monkeypatch.setattr(_os, "scandir", scandir)
+    monkeypatch.setattr(builtins, "open", opener(real_open))
+    monkeypatch.setattr(io, "open", opener(real_io_open))
+    return seen
+
+
+SEALED_DIRS = ["data/sealed", "Data/Sealed/inner", "data/sanger_holdout", "sub/data/sealed",
+               "results/sealed", "deep/x/data/Sanger_Holdout", "misc/SEALED"]
+
+
+def test_nested_and_case_variant_sealed_dirs_are_never_listed_or_read(tmp_path, repo, spy):
+    campaign = make_campaign(tmp_path / "research", NAME)
+    freeze.build(campaign)
+    for rel in SEALED_DIRS:
+        target = campaign.joinpath(*rel.split("/"))
+        write(target / "values.csv", "synthetic\n")
+        append_jsonl(target / "receipts.jsonl", {"file": "values.csv"})
+    write(campaign / "deep" / "x" / "data" / "discovery" / "t.csv", "a\n")
+    append_jsonl(campaign / "deep" / "x" / "data" / "discovery" / "receipts.jsonl", {"file": "t.csv"})
+    write(campaign / "results" / "confirmation.summary.json", '{"label": "SUPPORTED"}\n')
+    write(campaign / "report.md", "# Report\n")
+    spy.clear()
+    manifest = assemble_public.assemble(campaign, repo, NAME, "outcome")
+    from bio_lab.campaign_kit.common import folded_parts, is_sealed_path
+    touched = [p for p in spy if is_sealed_path(p) or "sealed" in folded_parts(p)]
+    assert touched == []
+    # the spy does see the walk and the reads of everything else
+    assert any(p.endswith("registration") for p in spy) and any(p.endswith("report.md") for p in spy)
+    out = repo / "campaigns" / NAME
+    published = {f["source"] for f in manifest["files"]}
+    assert "deep/x/data/discovery/receipts.jsonl" in published
+    assert not any("values.csv" in p or "sealed" in p.lower() or "holdout" in p.lower()
+                   for p in published)
+    assert not (out / "results" / "sealed").exists() and not (out / "misc").exists()
+    reasons = {s["source"]: s["reason"] for s in manifest["skipped"]}
+    for rel in ("data/sealed/", "data/sanger_holdout/", "sub/data/sealed/", "results/sealed/",
+                "deep/x/data/Sanger_Holdout/", "misc/SEALED/"):
+        assert reasons[rel] == "sealed data", rel
+    assert reasons["deep/x/data/discovery/"] == "private data"
+
+
+def test_receipted_files_are_skipped_in_any_directory(campaign, repo):
+    write(campaign / "downloads" / "table.csv", "a,b\n1,2\n")
+    write(campaign / "downloads" / "notes.md", "our notes\n")
+    append_jsonl(campaign / "downloads" / "receipts.jsonl", {"file": "table.csv", "sha256": "x"})
+    write(campaign / "deep" / "er" / "raw.tsv", "a\tb\n")
+    append_jsonl(campaign / "deep" / "er" / "receipts.jsonl", {"file": "raw.tsv"})
+    manifest = assemble_public.assemble(campaign, repo, NAME, "prereg")
+    out = repo / "campaigns" / NAME
+    assert not (out / "downloads" / "table.csv").exists()
+    assert not (out / "deep" / "er" / "raw.tsv").exists()
+    assert (out / "downloads" / "receipts.jsonl").is_file()
+    assert (out / "deep" / "er" / "receipts.jsonl").is_file()
+    assert (out / "downloads" / "notes.md").is_file()
+    reasons = {s["source"]: s["reason"] for s in manifest["skipped"]}
+    assert reasons["downloads/table.csv"] == "receipted third-party data"
+    assert reasons["deep/er/raw.tsv"] == "receipted third-party data"
+
+
+@pytest.mark.parametrize("body", ["{not json\n", '{"file": "../escape.csv"}\n', '{"url": "x"}\n',
+                                  "[1]\n"])
+def test_a_malformed_receipts_file_refuses(campaign, repo, body):
+    write(campaign / "downloads" / "receipts.jsonl", body)
+    with pytest.raises(assemble_public.AssemblyError, match="receipts.jsonl"):
+        assemble_public.plan(campaign, repo, NAME, "prereg")
+
+
+def test_a_personal_path_that_survives_scrubbing_refuses(campaign, repo):
+    write(campaign / "audit" / "env.md", "hosts at " + "/" + "private" + "/etc/hosts\n")
+    with pytest.raises(assemble_public.AssemblyError, match="survives scrubbing"):
+        assemble_public.plan(campaign, repo, NAME, "prereg")
+    assert not (repo / "campaigns").exists()
+
+
+def test_prereg_refuses_once_a_report_exists(campaign, repo):
+    write(campaign / "report.md", "# Report\n")
+    with pytest.raises(assemble_public.AssemblyError, match="report.md exists"):
+        assemble_public.plan(campaign, repo, NAME, "prereg")
+
+
+def test_a_worktree_inside_the_campaign_refuses(campaign):
+    inner = campaign / "public"
+    inner.mkdir()
+    subprocess.run(["git", "init", "-q", str(inner)], check=True)
+    with pytest.raises(assemble_public.AssemblyError, match="separate trees"):
+        assemble_public.plan(campaign, inner, NAME, "prereg")
+
+
+def test_assembly_hygiene_checks_file_and_directory_names(campaign, repo, tmp_path):
+    name = "Zorb" + "lax"
+    deny = tmp_path / "deny.txt"
+    deny.write_text(name + "\n")
+    for target in (campaign / "review" / f"{name.lower()}-notes.md",
+                   campaign / f"{name}_dir" / "notes.md",
+                   campaign / "fanout" / f"{name}.npz"):
+        write(target, "nothing personal\n")
+        with pytest.raises(assemble_public.AssemblyError, match="deny-list name") as error:
+            assemble_public.plan(campaign, repo, NAME, "prereg", deny_file=deny)
+        assert name.lower() not in str(error.value).lower()
+        target.unlink()
+        if target.parent != campaign and not any(target.parent.iterdir()):
+            target.parent.rmdir()
+    assemble_public.plan(campaign, repo, NAME, "prereg", deny_file=deny)
 
 
 def test_prereg_refuses_once_results_exist(campaign, repo):

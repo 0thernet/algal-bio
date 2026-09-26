@@ -25,7 +25,8 @@ import os
 from pathlib import Path
 import sys
 
-from .common import (GIT_SHA_RE, SHA256_RE, KitError, die, read_json, sha256_bytes)
+from .common import (GIT_SHA_RE, SHA256_RE, KitError, die, folded_parts, read_json,
+                     sha256_bytes)
 from . import freeze as _freeze
 
 SCHEMA = "bio-group-barrier/1"
@@ -40,7 +41,8 @@ class BarrierError(KitError):
 
 @dataclass(frozen=True)
 class BarrierProof:
-    """Returned only by require(); fetch and import_local demand it for sealed paths."""
+    """Returned only by require(). fetch and import_local demand it for sealed paths, and
+    import_local accepts it (instead of a ledger record) for any path in the campaign's data/."""
     campaign_dir: Path
     lane_id: str
     campaign: str
@@ -166,12 +168,15 @@ def require(campaign_dir: os.PathLike | str, lane_id: str, freeze_sha256: str) -
 
 
 def require_proof(proof, dest: Path) -> BarrierProof:
-    """Check that proof came from require() and covers dest's campaign sealed dir."""
+    """Check that proof came from require() and covers dest's campaign data dir.
+
+    The comparison is caseless, like is_sealed_path, because the volume is.
+    """
     if not isinstance(proof, BarrierProof):
-        raise BarrierError("a sealed destination needs the proof returned by barrier.require()")
-    sealed = proof.campaign_dir / "data"
-    dest = Path(dest).resolve()
-    if not dest.is_relative_to(sealed):
+        raise BarrierError("this destination needs the proof returned by barrier.require()")
+    data = folded_parts(proof.campaign_dir / "data")
+    dest_parts = folded_parts(Path(dest).resolve())
+    if len(dest_parts) <= len(data) or dest_parts[:len(data)] != data:
         raise BarrierError("the barrier proof belongs to another campaign")
     return proof
 

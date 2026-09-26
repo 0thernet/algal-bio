@@ -125,6 +125,64 @@ def test_hygiene_reads_staged_blobs(tmp_path, deny_file):
     assert hits == ["staged:notes.md:1: deny-list name"]
 
 
+def _no_name(text: str) -> bool:
+    low = text.lower()
+    return NAME_ONE.lower() not in low and NAME_TWO.split()[0].lower() not in low
+
+
+def test_a_deny_name_in_a_file_name_is_a_hit_with_a_neutral_label(tmp_path, deny_file, capsys):
+    note = write(tmp_path / "notes" / f"thanks-{NAME_ONE.lower()}.md", "nothing personal\n")
+    hits = lint.hygiene_hits([note], deny_file=deny_file)
+    assert len(hits) == 1 and hits[0].endswith(": deny-list name (file path)")
+    assert hits[0].startswith("<path #1 sha256:") and _no_name(hits[0])
+    assert lint.main(["hygiene", "--deny-file", str(deny_file), str(note)]) == 1
+    out = capsys.readouterr()
+    assert _no_name(out.out + out.err)
+    # a relative argument keeps its whole path, so its directories are checked too
+    split = write(tmp_path / f"{NAME_TWO.split()[0]}_{NAME_TWO.split()[1]}.txt", "clean\n")
+    hits = lint.hygiene_hits([split], deny_file=deny_file, root=tmp_path)
+    assert hits and all(_no_name(h) for h in hits)
+
+
+def test_a_deny_name_in_a_directory_name_is_a_hit(tmp_path, deny_file):
+    folder = tmp_path / "work" / f"{NAME_ONE}-review"
+    write(folder / "a.md", "clean\n")
+    write(folder / "sub" / "b.md", "clean\n")
+    for args in ({"root": tmp_path}, {}):
+        hits = lint.hygiene_hits([folder], deny_file=deny_file, **args)
+        assert len(hits) == 2 and all(h.endswith("deny-list name (file path)") for h in hits)
+        assert all(_no_name(h) for h in hits)
+    # the parent of the argument does not count: only what can reach Git is checked
+    clean = write(tmp_path / f"{NAME_ONE}-outside" / "c.md", "clean\n")
+    assert lint.hygiene_hits([clean], deny_file=deny_file) == []
+
+
+def test_staged_paths_are_checked_with_neutral_labels(tmp_path, deny_file):
+    repo = tmp_path / "repo"
+    repo.mkdir()
+    subprocess.run(["git", "init", "-q", str(repo)], check=True)
+    write(repo / f"{NAME_ONE.lower()}" / "notes.md", "clean\n")
+    write(repo / "ok" / f"with {NAME_ONE}.md", "clean\n")
+    write(repo / "fine.md", "clean\n")
+    subprocess.run(["git", "-C", str(repo), "add", "."], check=True)
+    hits = lint.hygiene_hits([], deny_file=deny_file, staged_repo=repo)
+    assert len(hits) == 2 and all(h.endswith("deny-list name (file path)") for h in hits)
+    assert all(h.startswith("<path #") and _no_name(h) for h in hits)
+
+
+def test_a_personal_path_in_a_file_path_is_a_hit(tmp_path, deny_file):
+    nested = write(tmp_path / "copy" / "home" / "someone" / "x.md", "clean\n")
+    hits = lint.hygiene_hits([tmp_path / "copy"], deny_file=deny_file, root=tmp_path)
+    assert hits == ["copy/" + "home" + "/someone/x.md: personal path (file path)"]
+    assert lint.hygiene_hits([nested], deny_file=deny_file) == []
+
+
+def test_a_missing_path_is_reported_without_a_deny_name(tmp_path, deny_file):
+    with pytest.raises(KitError) as error:
+        lint.hygiene_hits([tmp_path / f"{NAME_ONE}.md"], deny_file=deny_file)
+    assert "no such file" in str(error.value) and _no_name(str(error.value))
+
+
 # ---------------------------------------------------------------- the kit lints itself
 
 def test_kit_files_pass_the_hygiene_lint(deny_file):

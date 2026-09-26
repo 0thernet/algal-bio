@@ -15,7 +15,7 @@ locations come from explicit arguments or from these environment variables:
 
 | Variable | Meaning |
 | --- | --- |
-| `BIO_MINING_DIR` | The program's private mining directory: `cache/`, `slots/`, `data-budget.jsonl` |
+| `BIO_MINING_DIR` | The program's private mining directory: `cache/`, `slots/`, `data-budget.jsonl`, `data-budget.reservations/` |
 | `BIO_RUN_ID` | The run id that downloads are charged to in `data-budget.jsonl` |
 | `BIO_DATA_BUDGET_GB` | That run's download cap, in GB (10^9 bytes) |
 
@@ -23,6 +23,12 @@ When a guard refuses, it raises `KitError`, or a subclass that names the
 guard. The message says what failed. From the command line, a refusal prints
 `refusing: <reason>` and exits with status 2. Messages never quote file
 contents or deny-list names.
+
+Every sealed-path comparison is caseless. APFS ignores letter case and
+Unicode normalization, so `Data/Sealed/` and `data/SEALED/` name the same
+directory as `data/sealed/`, and the kit compares path parts after
+`common.fold` (NFKD, then casefold). This applies to the fetch and import
+guards, the freeze and the public assembly alike.
 
 ## Lane lifecycle
 
@@ -56,8 +62,10 @@ A lane is one campaign. Its private directory is `biology-<name>`, where
    `audit/group-barrier.json`. Then `barrier require` must pass for this lane
    and this freeze sha.
 8. **Holdout ledger.** Run
-   `python -m bio_lab.campaign_kit.ledger record-open --ledger <ledger> --source <id> --campaign <name> --barrier audit/group-barrier.json`
-   for each source that the lane opens or reuses.
+   `python -m bio_lab.campaign_kit.ledger record-open --ledger <ledger> --source <id> --campaign <name> --barrier audit/group-barrier.json --usage holdout|reused_disjoint`
+   for each source that the lane opens or reuses. `--usage` must match the
+   registration: `holdout` for a source nobody has opened, `reused_disjoint`
+   for one an earlier, disjoint group opened.
 9. **Fetch.** Run `python code/fetch_holdout.py --freeze-sha256 <sha>`. It
    calls `barrier.require` before any network access, then fetches every
    registered holdout file into `data/sealed/` with receipts, and locks the
@@ -92,9 +100,22 @@ receipt = fetch(url, dest, Expect(first_line="ModelID,GeneID,score",
   and a published SHA-256.
 - Retries cover status 408, 425, 429 and 5xx, and dropped connections, with
   backoff. Any other HTTP error fails at once.
-- Before downloading, the fetch checks the disk floor and the run's remaining
-  budget. The stream is capped at the smaller of the two, and at `bytes` or
-  `max_bytes` when those are registered.
+- Before downloading, the fetch checks the disk floor and caps the stream at
+  the free space above the floor, and at `bytes` or `max_bytes` when those are
+  registered. It then reserves the cap times the number of attempts against
+  the run's budget, under the budget lock, so two concurrent fetches cannot
+  both spend the same headroom. The reservation is a file under
+  `$BIO_MINING_DIR/data-budget.reservations/`; a fetch that finds too little
+  room waits up to `budget_wait` seconds for other reservations to settle, and
+  otherwise refuses. Each attempt streams at most what is still reserved.
+- Every byte transferred is charged, in a `finally`, when the fetch settles:
+  `download` for an accepted body, `download_rejected` for a body that failed
+  validation, and `download_partial` for dropped or refused attempts. A
+  reservation left by a process that died is charged in full as
+  `download_unsettled` by the next budget check.
+- When the body starts with the gzip magic, the HTML and JSON-error checks
+  also run on its first 64 KB after decompression, so a compressed error page
+  is refused too.
 - The cache is content-addressed and lives under `$BIO_MINING_DIR/cache/`, in
   `kit-index/`, `kit-blobs/`, `kit-locks/` and `kit-tmp/`. Each URL has its
   own lock. On a cache hit the blob is re-hashed and re-validated, and it costs
@@ -106,10 +127,18 @@ receipt = fetch(url, dest, Expect(first_line="ModelID,GeneID,score",
   (network, cache or import_local), the checks that passed and the budget run.
   A second call for the same destination returns the existing receipt. A
   receipt with a different sha, or an existing file with no receipt, is
-  refused.
-- `import_local(name, dest, receipts_file=...)` brings in an owner-downloaded
-  file from `$BIO_MINING_DIR/cache/depmap-26q1-portal/`. It checks the size
-  and SHA-256 recorded in the owner's receipts file
+  refused. A receipt for a sealed destination is also appended to
+  `audit/sealed-receipts.jsonl` (with its campaign-relative path), which is
+  how sealed receipts reach the public copy without anything under
+  `data/sealed/` being read.
+- `import_local(name, dest, receipts_file=..., barrier=proof)` or
+  `import_local(name, dest, receipts_file=..., ledger=..., campaign=..., source=...)`
+  brings in an owner-downloaded file from
+  `$BIO_MINING_DIR/cache/depmap-26q1-portal/`. It refuses unless it has this
+  campaign's barrier proof for the destination, or the holdout ledger records
+  this campaign's discovery use of the named source (`record-discovery`); the
+  default subdirectory implies the source `depmap-26q1-portal-omics`. It
+  checks the size and SHA-256 recorded in the owner's receipts file
   (`<sha256>  <name>  md5=<hex>  bytes=<n>`), refuses on any mismatch and
   writes the same kind of receipt.
 
@@ -121,8 +150,10 @@ Paths are campaign-relative, so the same manifest verifies the private copy
 and the public copy. `build` refuses when:
 
 - the freeze already exists
-- any file exists under `results/` or `data/sealed/`
+- any file exists under `results/`, `data/sealed/` or `data/sanger_holdout/`
+  (in any letter case)
 - a registered path is a symlink, or sits under a sealed or discovery path
+  (caseless)
 - a registered file is over 4 MB, contains a personal path, or (with
   `--deny-file`) hits the deny list
 
@@ -151,7 +182,8 @@ these hold:
 - `freeze verify` passes
 
 It returns a `BarrierProof`. `fetch` and `import_local` require that proof for
-any destination under `data/sealed/`, and it must belong to the same campaign.
+any destination under `data/sealed/`, and it must belong to the same campaign
+(the destination must sit under that campaign's `data/`, compared caseless).
 
 ### seal: permissions and hash-verified reads
 
@@ -207,12 +239,18 @@ Randomness always comes from an explicit integer seed or a `random.Random`.
   unless free space stays above the floor after the write.
 - **Data budget.** `record_download` appends to
   `$BIO_MINING_DIR/data-budget.jsonl`. The check and the append happen under
-  one lock, with records of the form `{"run", "bytes", "utc", "kind": "download", ...}`.
-  `budget_totals` sums the bytes for each run.
+  one lock, with records of the form `{"run", "bytes", "utc", "kind", ...}`,
+  where kind is `download`, `download_rejected`, `download_partial` or
+  `download_unsettled`; all of them count. `reserve` holds headroom for a
+  fetch before it starts and `settle` charges what it actually moved.
+  `budget_totals` sums the bytes for each run, and `budget_remaining`
+  subtracts open reservations too.
 - **Compute slots.** `compute_slot()` holds an fcntl lock over
   `$BIO_MINING_DIR/slots/slot-*.lock`. `python -m <kit>.slot run [--no-wait] [--timeout S] [--pidfile P] -- <cmd>`
   runs a command inside a slot, sets `BIO_SLOT` and forwards SIGTERM, SIGINT
-  and SIGHUP to the command.
+  and SIGHUP to the command. The command inherits the locked descriptor, so
+  the slot stays busy until both the runner and the command exit; killing the
+  runner, even with SIGKILL, does not free it early.
 - **Conflict markers.** `find_conflict_markers(paths)` checks only the paths
   given to it. A bare separator line counts only in a file that also has an
   open or close marker.
@@ -223,10 +261,15 @@ Randomness always comes from an explicit integer seed or a `random.Random`.
 ### ledger: the private holdout ledger
 
 - `record_discovery(ledger, source, campaign)`
-- `record_open(ledger, source, frozen_campaigns, campaign, date, barrier_sha256)`
+- `record_open(ledger, source, frozen_campaigns, campaign, date, barrier_sha256, usage=...)`
 
 Both run under `<ledger>.lock` and are idempotent for each campaign and
-source. After each change the kit checks that the change only added:
+source. `usage` is `holdout` or `reused_disjoint` (`--usage` on the command
+line) and must agree with the ledger: `holdout` needs a source that is not yet
+`OPENED`, and `reused_disjoint` needs one that is. A reuse must be disjoint:
+it is refused when any frozen campaign is already in the entry's `campaigns`
+or in the `opened_for` of any earlier opening. After each change the kit
+checks that the change only added:
 
 - the target entry's status may change
 - lists may only grow at the end
@@ -240,9 +283,14 @@ The first group to open a source sets its status to `OPENED`, and records
 later, disjoint group appends a `reused_disjoint` opening and does not change
 the first one.
 
-`python -m <kit>.ledger export-public --ledger <path>` prints the public copy,
-deterministic with sorted keys: id, kind, name, status, opened_for, opened_on,
-campaigns and verified.
+`python -m <kit>.ledger export-public --ledger <path> --deny-file F` prints the
+public copy (schema `bio-holdout-ledger-public/2`), deterministic with sorted
+keys: id, kind, status, opened_for, opened_on, campaigns and verified. The
+free-text `name` is dropped. It refuses when id, kind or status is not a
+plain token, a status is not one of the ledger's statuses, `opened_on` is not
+a `YYYY-MM-DD` date or null, `verified` is not a boolean, an id repeats, or
+the deny-list scan of the output finds a hit. List items that are not plain
+tokens are replaced with `<free-text-withheld>` and counted.
 
 ### lint
 
@@ -259,8 +307,11 @@ campaigns and verified.
   paths, whole-word case-insensitive matches of the names in the deny file
   (including names split across a line break) and files over 4 MB. The deny
   file has one name per line, and lines starting with `#` are comments. A hit
-  is reported as `file:line: kind`, never with the matched text. `--staged`
-  also reads the blobs in the git index.
+  is reported as `file:line: kind`, never with the matched text. File and
+  directory names are checked too (`file: deny-list name (file path)`), and a
+  label that itself holds a deny-list name is printed as a neutral
+  `<path #n sha256:...>`. `--staged` also reads the blobs and paths in the git
+  index.
 
 ### assemble_public
 
@@ -269,8 +320,14 @@ copies the campaign to `campaigns/<name>/`. At the outcome stage `report.md`
 goes to `reports/<name>/report.md`. It writes an `assembly.manifest.json` with
 the schema `bio.assembly-manifest.v2`.
 
-It never walks `data/sealed/`, `data/sanger_holdout/`, `data/discovery/` or
-any other `sealed/` directory. Only their `receipts.jsonl` is published.
+It never walks, lists or reads a directory under `data/sealed/` or
+`data/sanger_holdout/`, or any other `sealed/` directory, at any depth and in
+any letter case, receipts included. Sealed receipts are published through
+`audit/sealed-receipts.jsonl`, an ordinary campaign file. A `data/discovery/`
+directory at any depth is not walked either; only its `receipts.jsonl` is
+published. In every directory it walks, the files listed in that directory's
+`receipts.jsonl` are third-party data: they are skipped and only the receipts
+file is published. A malformed receipts file refuses.
 
 It skips caches, locks, and unregistered binary data or unregistered files
 over 4 MB, recording each skip with its hash. In unregistered files it
@@ -283,29 +340,46 @@ It refuses before writing anything when:
 - a registered file would change, would be skipped, or differs from a copy
   already in the worktree
 - a symlink is present
-- a personal path survives scrubbing
-- the hygiene lint finds a hit
+- a personal path survives scrubbing, or would appear in the manifest
+- with `--deny-file`, the hygiene lint finds a hit in a published path, a
+  published file or the manifest
 
 At the prereg stage it also refuses when `results/` or `report.md` exists.
 
 ## Tests
 
-`tests/campaign_kit/` exercises every guard's failure path, using synthetic
+`tests/campaign_kit/` exercises the guards' failure paths, using synthetic
 fixtures in temporary directories only. It covers:
 
-- an HTML body served with status 200 by a local HTTP server
-- freeze refusals
-- rerun refusal
-- a fetch with no barrier, or with another lane's barrier
+- an HTML body served with status 200 by a local HTTP server, plain and
+  gzip-compressed
+- fetch failures: a conflicting receipt, an over-cap stream with no
+  Content-Length, a truncated body, exhausted retries, a malformed cache
+  index, a missing or truncated blob, a cache hit that fails a new
+  expectation, a non-http(s) URL
+- budget accounting: rejected bodies, dropped attempts, a concurrent fetch
+  refused by a reservation, a stale reservation charged as unsettled
+- sealed destinations in other letter cases, with no barrier, or with another
+  lane's barrier
+- `import_local` refusals: no authority, a size mismatch, traversal, a
+  symlinked source, a missing receipts file
+- barrier refusals: a lane id mismatch, a freeze replaced after the barrier,
+  an invalid barrier file
+- freeze refusals, including a deny-list hit, symlinks and escaping includes
+- seal and runguard refusals, and rerun refusal
 - the disk floor
-- slot contention
-- a budget overrun
-- ledger idempotence and the ledger's refusal to rewrite
+- slot contention, SIGTERM forwarding, the pidfile, and a runner killed with
+  SIGKILL while its command still holds the slot
+- ledger idempotence, the ledger's refusal to rewrite, disjoint reuse and
+  usage mismatches, and every public-export refusal
 - a protocol mismatch
-- a deny-list hit reported without the name
-- path scrubbing
+- deny-list hits in contents, file names and directory names, reported
+  without the name
+- path scrubbing, receipted files and nested private directories in the
+  public assembly
 - cache reuse
-- a scaffolded campaign whose vendored kit freezes and whose tests pass
+- a scaffolded campaign whose vendored kit freezes and whose tests pass, and
+  whose tests never reach a mining dir set in the environment
 
 One test runs the hygiene lint and the conflict-marker check over the kit's
 own files.

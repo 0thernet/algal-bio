@@ -2,8 +2,8 @@
 
     python -m bio_lab.campaign_kit.ledger record-discovery --ledger L --source ID --campaign NAME
     python -m bio_lab.campaign_kit.ledger record-open --ledger L --source ID --campaign NAME \
-        --barrier audit/group-barrier.json [--date YYYY-MM-DD]
-    python -m bio_lab.campaign_kit.ledger export-public --ledger L
+        --usage holdout|reused_disjoint --barrier audit/group-barrier.json [--date YYYY-MM-DD]
+    python -m bio_lab.campaign_kit.ledger export-public --ledger L --deny-file F
 
 Updates run under an fcntl lock (<ledger>.lock) and only ever add: a status
 transition, a campaign name appended to a list, fields that were absent, and
@@ -14,9 +14,13 @@ beyond the transition this operation makes); otherwise nothing is written.
 record_open records a holdout group's transition once per source (status
 OPENED, opened_for = every frozen member's campaign, opened_on, campaign,
 frozen_set_sha256 = the barrier file's sha256) and appends a group-member
-history item for each later member. A source that an earlier group opened is
-reused disjointly: its first opening stays as it was and the new group is
-added to "openings". Every call is idempotent per campaign and source.
+history item for each later member. The lane's registered usage is explicit:
+"holdout" needs a clean source, "reused_disjoint" a source an earlier group
+opened; the call refuses when the ledger disagrees. A reuse keeps the first
+opening as it was and adds the new group to "openings", and it refuses unless
+the group is disjoint from every campaign that already used the source
+(discovery users and every earlier opening's group). Every call is
+idempotent per campaign and source.
 """
 
 from __future__ import annotations
@@ -26,11 +30,18 @@ import copy
 import datetime as _dt
 import json
 from pathlib import Path
+import re
 import sys
 
-from .common import KitError, SHA256_RE, die, file_lock, read_json, sha256_file, write_json_atomic
+from .common import (KitError, PERSONAL_RE, SHA256_RE, die, file_lock, read_json, sha256_file,
+                     write_json_atomic)
 
-PUBLIC_FIELDS = ("id", "kind", "name", "status", "opened_for", "opened_on", "campaigns", "verified")
+PUBLIC_FIELDS = ("id", "kind", "status", "opened_for", "opened_on", "campaigns", "verified")
+PUBLIC_SCHEMA = "bio-holdout-ledger-public/2"
+PLACEHOLDER = "<free-text-withheld>"
+TOKEN_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._+-]{0,95}$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+USAGES = ("holdout", "reused_disjoint")
 DISCOVERY_FROM = {"FRESH": "DISCOVERY", "METADATA": "DISCOVERY", "UNOBSERVED_SUBSET": "DISCOVERY",
                   "DISCOVERY": "DISCOVERY", "OPENED": "OPENED", "ANNOTATION": "ANNOTATION"}
 OPEN_FROM = {"FRESH", "UNOBSERVED_SUBSET", "METADATA", "FUTURE"}
@@ -153,9 +164,56 @@ def record_discovery(ledger_path, source: str, campaign: str, date: str | None =
     return _update(ledger_path, source, change)
 
 
+def discovery_recorded(ledger_path, source: str, campaign: str) -> bool:
+    """Whether the ledger holds a discovery history item for (source, campaign) and the
+    entry lists the campaign. Read-only; used by import_local before any read."""
+    ledger = read_json(ledger_path, "holdout ledger")
+    entry = _entry(ledger, source)
+    history = ledger.get("history")
+    if not isinstance(history, list):
+        return False
+    campaigns = entry.get("campaigns")
+    return (isinstance(campaigns, list) and campaign in campaigns
+            and entry.get("status") in ("DISCOVERY", "OPENED", "ANNOTATION")
+            and any(isinstance(h, dict) and h.get("action") == "discovery"
+                    and h.get("entry") == source and h.get("campaign") == campaign
+                    for h in history))
+
+
+def _earlier_users(entry: dict, history: list, source: str) -> set:
+    """Every campaign that already used source: discovery users and earlier groups."""
+    users = set()
+    for key in ("campaigns", "opened_for"):
+        value = entry.get(key)
+        if isinstance(value, list):
+            users.update(v for v in value if isinstance(v, str))
+    for opening in entry.get("openings") or []:
+        if isinstance(opening, dict) and isinstance(opening.get("opened_for"), list):
+            users.update(v for v in opening["opened_for"] if isinstance(v, str))
+    for item in history:
+        if isinstance(item, dict) and item.get("entry") == source \
+                and isinstance(item.get("campaign"), str) \
+                and item.get("action") in ("discovery", "open", "reuse_disjoint", "group_member"):
+            users.add(item["campaign"])
+        if isinstance(item, dict) and item.get("entry") == source \
+                and isinstance(item.get("opened_for"), list):
+            users.update(v for v in item["opened_for"] if isinstance(v, str))
+    return users
+
+
 def record_open(ledger_path, source: str, frozen_campaigns, campaign: str, date: str,
-                barrier_sha256: str) -> str:
-    """Record a holdout group's opening of source. Returns opened|reused|member|unchanged."""
+                barrier_sha256: str, *, usage: str) -> str:
+    """Record a holdout group's opening of source. Returns opened|reused|member|unchanged.
+
+    usage is what the lane registered: "holdout" (the group opens a clean
+    source: FRESH, UNOBSERVED_SUBSET, METADATA or FUTURE) or "reused_disjoint"
+    (a source an earlier group opened). The call refuses when the ledger state
+    disagrees with the registered usage, and when any frozen campaign of the
+    group already used the source: as discovery data, in an earlier opening's
+    group, or under another barrier.
+    """
+    if usage not in USAGES:
+        raise LedgerError(f"usage must be one of {', '.join(USAGES)}")
     frozen = list(frozen_campaigns)
     if not frozen or not all(isinstance(c, str) and c for c in frozen) or len(set(frozen)) != len(frozen):
         raise LedgerError("frozen_campaigns must be a nonempty list of distinct names")
@@ -174,6 +232,9 @@ def record_open(ledger_path, source: str, frozen_campaigns, campaign: str, date:
         if group:
             if sorted(group[0].get("opened_for") or []) != frozen_sorted:
                 raise LedgerError("this barrier was recorded with another frozen set")
+            if group[0].get("usage") != usage:
+                raise LedgerError(f"this group's opening of {source} is recorded as "
+                                  f"{group[0].get('usage')}, not {usage}")
             if group[0].get("campaign") == campaign or any(
                     isinstance(h, dict) and h.get("action") == "group_member"
                     and h.get("entry") == source and h.get("campaign") == campaign
@@ -184,6 +245,16 @@ def record_open(ledger_path, source: str, frozen_campaigns, campaign: str, date:
                             "change": f"group member {campaign} of an opening already recorded"})
             return "member"
         status = entry.get("status")
+        overlap = sorted(set(frozen_sorted) & _earlier_users(entry, history, source))
+        if overlap:
+            raise LedgerError(f"{', '.join(overlap)} already used {source} (as discovery data or "
+                              "in an earlier opening); a reuse needs a disjoint group")
+        if usage == "holdout" and status == "OPENED":
+            raise LedgerError(f"source {source} is OPENED by an earlier group; the lane registered "
+                              "it as a clean holdout, so the registration and the ledger disagree")
+        if usage == "reused_disjoint" and status != "OPENED":
+            raise LedgerError(f"source {source} is {status}, not OPENED; the lane registered a "
+                              "disjoint reuse, so the registration and the ledger disagree")
         opening = {"opened_on": date, "campaign": campaign, "frozen_set_sha256": barrier_sha256,
                    "opened_for": frozen_sorted}
         if status == "OPENED":
@@ -211,23 +282,79 @@ def record_open(ledger_path, source: str, frozen_campaigns, campaign: str, date:
     return _update(ledger_path, source, change)
 
 
-def export_public(ledger_path) -> str:
-    """Deterministic public copy: fixed fields only, no notes, locators or free text."""
+def _token(value, what: str, source) -> str:
+    if not isinstance(value, str) or not TOKEN_RE.match(value) or PERSONAL_RE.search(value):
+        raise LedgerError(f"entry {source if isinstance(source, str) and TOKEN_RE.match(source) else '?'}: "
+                          f"{what} is not a plain token; the public export refuses it")
+    return value
+
+
+def export_public(ledger_path, *, deny_file) -> str:
+    """Deterministic public copy: fixed, checked fields only; no notes, locators or names.
+
+    id, kind and status must be tokens and status one of the ledger's own
+    statuses; opened_on is YYYY-MM-DD or null; verified is a bool or null.
+    List items (opened_for, campaigns) that are not tokens are replaced with
+    a placeholder and counted. The output is then scanned for personal paths
+    and, with the required deny file, for deny-list names; any hit refuses.
+    """
+    if deny_file is None:
+        raise LedgerError("export-public needs --deny-file")
     ledger = read_json(ledger_path, "holdout ledger")
-    rows = []
-    for entry in ledger.get("entries") or []:
-        if not isinstance(entry, dict) or not isinstance(entry.get("id"), str):
-            raise LedgerError("a ledger entry has no id")
-        row = {}
-        for key in PUBLIC_FIELDS:
+    statuses = ledger.get("statuses")
+    if not isinstance(statuses, dict) or not statuses:
+        raise LedgerError("the ledger has no statuses object to check entry statuses against")
+    for status in statuses:
+        _token(status, "a status name", None)
+    rows, replaced = [], 0
+    entries = ledger.get("entries")
+    if not isinstance(entries, list):
+        raise LedgerError("the ledger has no entries list")
+    for entry in entries:
+        if not isinstance(entry, dict):
+            raise LedgerError("a ledger entry is not an object")
+        source = _token(entry.get("id"), "id", entry.get("id"))
+        row = {"id": source, "kind": _token(entry.get("kind"), "kind", source)}
+        status = _token(entry.get("status"), "status", source)
+        if status not in statuses:
+            raise LedgerError(f"entry {source}: its status is not one of the ledger's statuses")
+        row["status"] = status
+        opened_on = entry.get("opened_on")
+        if opened_on is not None and (not isinstance(opened_on, str) or not DATE_RE.match(opened_on)):
+            raise LedgerError(f"entry {source}: opened_on must be YYYY-MM-DD or null")
+        if opened_on is not None:
+            _check_date(opened_on)
+        row["opened_on"] = opened_on
+        verified = entry.get("verified")
+        if verified is not None and not isinstance(verified, bool):
+            raise LedgerError(f"entry {source}: verified must be true, false or null")
+        row["verified"] = verified
+        for key in ("opened_for", "campaigns"):
             value = entry.get(key)
-            if key in ("opened_for", "campaigns"):
-                value = [str(v) for v in (value or [])]
-            row[key] = value
+            if value is None:
+                value = []
+            if not isinstance(value, list):
+                raise LedgerError(f"entry {source}: {key} must be a list")
+            items = []
+            for item in value:
+                if isinstance(item, str) and TOKEN_RE.match(item) and not PERSONAL_RE.search(item):
+                    items.append(item)
+                else:
+                    items.append(PLACEHOLDER)
+                    replaced += 1
+            row[key] = items
         rows.append(row)
     rows.sort(key=lambda r: r["id"])
-    public = {"schema": "bio-holdout-ledger-public/1", "entries": rows}
-    return json.dumps(public, indent=1, sort_keys=True, ensure_ascii=False) + "\n"
+    if len({r["id"] for r in rows}) != len(rows):
+        raise LedgerError("the ledger lists an id twice")
+    public = {"schema": PUBLIC_SCHEMA, "entries": rows, "free_text_items_withheld": replaced}
+    text = json.dumps(public, indent=1, sort_keys=True, ensure_ascii=False) + "\n"
+    from .lint import _scan_text, load_deny
+    hits = _scan_text("export", text.encode(), load_deny(deny_file))
+    if hits:
+        raise LedgerError(f"the public export fails the hygiene check ({len(hits)} hit(s), "
+                          f"first: {hits[0]})")
+    return text
 
 
 def main(argv=None) -> int:
@@ -241,16 +368,24 @@ def main(argv=None) -> int:
     parser.add_argument("--barrier", help="group-barrier.json: its sha256 and frozen campaigns")
     parser.add_argument("--frozen-campaign", action="append", default=[])
     parser.add_argument("--barrier-sha256")
+    parser.add_argument("--usage", choices=USAGES,
+                        help="record-open: the usage the lane registered for this source")
+    parser.add_argument("--deny-file", help="export-public: the private name deny list")
     args = parser.parse_args(argv)
     try:
         if args.action == "export-public":
-            sys.stdout.write(export_public(args.ledger))
+            if not args.deny_file:
+                raise LedgerError("export-public needs --deny-file")
+            sys.stdout.write(export_public(args.ledger, deny_file=args.deny_file))
             return 0
         if not args.source or not args.campaign:
             raise LedgerError("--source and --campaign are required")
         if args.action == "record-discovery":
             print(record_discovery(args.ledger, args.source, args.campaign, args.date))
             return 0
+        if not args.usage:
+            raise LedgerError("record-open needs --usage holdout or --usage reused_disjoint, "
+                              "as the lane registered it")
         frozen, sha = args.frozen_campaign, args.barrier_sha256
         if args.barrier:
             from .barrier import canonical
@@ -263,7 +398,8 @@ def main(argv=None) -> int:
             frozen, sha = barrier_frozen, sha256_file(args.barrier)
         if not frozen or not sha:
             raise LedgerError("record-open needs --barrier, or --frozen-campaign and --barrier-sha256")
-        print(record_open(args.ledger, args.source, frozen, args.campaign, args.date or _today(), sha))
+        print(record_open(args.ledger, args.source, frozen, args.campaign, args.date or _today(),
+                          sha, usage=args.usage))
     except (KitError, OSError, json.JSONDecodeError) as error:
         return die(error)
     return 0

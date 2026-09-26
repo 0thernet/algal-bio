@@ -6,12 +6,13 @@ import gzip
 import hashlib
 import http.server
 import io
+import json
 import threading
 import urllib.error
 
 import pytest
 
-from bio_lab.campaign_kit import barrier, guards, receipts, seal
+from bio_lab.campaign_kit import barrier, guards, ledger, receipts, seal
 from bio_lab.campaign_kit.common import read_jsonl
 from bio_lab.campaign_kit.receipts import Expect
 from conftest import make_campaign
@@ -38,8 +39,13 @@ class Server:
                     self.send_response(404)
                     self.end_headers()
                     return
+                headers = {}
+                if isinstance(body, tuple):
+                    body, headers = body
                 self.send_response(200)
                 self.send_header("Content-Length", str(len(body)))
+                for key, value in headers.items():
+                    self.send_header(key, value)
                 self.end_headers()
                 self.wfile.write(body)
 
@@ -62,7 +68,9 @@ class Server:
 @pytest.fixture
 def server():
     srv = Server({"/data.csv": CSV, "/login": HTML, "/error.json": b'{"error": "quota"}\n',
-                  "/big.csv": CSV * 100})
+                  "/big.csv": CSV * 100, "/other.csv": CSV + b"M3,G3,1.0\n",
+                  "/login.gz": (gzip.compress(HTML), {"Content-Encoding": "gzip"}),
+                  "/error.json.gz": gzip.compress(b'{"error": "quota"}\n')})
     yield srv
     srv.close()
 
@@ -81,7 +89,9 @@ def test_html_served_with_status_200_is_refused(server, tmp_path, mining):
     with pytest.raises(receipts.ValidationError, match="HTML"):
         fetch(server.url("/login"), tmp_path / "out" / "data.csv")
     assert not (tmp_path / "out" / "data.csv").exists()
-    assert guards.budget_totals() == {}
+    # the rejected body was transferred, so it is charged
+    assert guards.budget_totals() == {"test-run": len(HTML)}
+    assert [r["kind"] for r in read_jsonl(mining / "data-budget.jsonl")] == ["download_rejected"]
     assert server.requests[0]["user_agent"] == receipts.USER_AGENT
     assert "hraness-bio-campaign-kit" in receipts.USER_AGENT
 
@@ -273,25 +283,111 @@ def owner_file(mining, name, data):
     return f"{sha}  {name}  md5={md5}  bytes={len(data)}\n"
 
 
+PORTAL_SOURCE = receipts.SUBDIR_SOURCES[receipts.PORTAL_SUBDIR]
+LANE = "demo-lane-2026-09-26"
+
+
+def portal_ledger(tmp_path, *, discovery_by=None):
+    """A synthetic holdout ledger whose portal entry records discovery use by discovery_by."""
+    path = tmp_path / "holdout-ledger.json"
+    doc = {"schema": "bio-holdout-ledger/1", "statuses": {"METADATA": "x", "DISCOVERY": "x"},
+           "entries": [{"id": PORTAL_SOURCE, "kind": "table", "status": "METADATA",
+                        "opened_for": [], "campaigns": []}],
+           "history": []}
+    path.write_text(json.dumps(doc) + "\n")
+    if discovery_by:
+        ledger.record_discovery(path, PORTAL_SOURCE, discovery_by, "2026-09-26")
+    return path
+
+
 def test_import_local_checks_size_and_hash(tmp_path, mining):
     line = owner_file(mining, "Model.csv", CSV)
     receipts_file = tmp_path / "owner-receipts.txt"
     receipts_file.write_text("# owner receipts\n" + line)
-    dest = tmp_path / "prep" / "Model.csv"
-    receipt = receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0)
+    ledger_path = portal_ledger(tmp_path, discovery_by=LANE)
+    lane = tmp_path / f"biology-{LANE}"
+    route = {"ledger": ledger_path, "campaign": LANE}
+    dest = lane / "prep" / "Model.csv"
+    receipt = receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0,
+                                    **route)
     assert dest.read_bytes() == CSV and receipt["source"] == "import_local"
     assert receipt["url"] == f"local:{receipts.PORTAL_SUBDIR}/Model.csv"
     assert guards.budget_totals() == {}
     # a changed cache file is refused
     (mining / "cache" / receipts.PORTAL_SUBDIR / "Model.csv").write_bytes(CSV.replace(b"M1", b"M9"))
     with pytest.raises(receipts.ValidationError, match="published"):
-        receipts.import_local("Model.csv", tmp_path / "other" / "Model.csv",
-                              receipts_file=receipts_file, floor_gb=0)
+        receipts.import_local("Model.csv", lane / "other" / "Model.csv",
+                              receipts_file=receipts_file, floor_gb=0, **route)
     with pytest.raises(receipts.KitError, match="not in the owner receipts"):
-        receipts.import_local("Other.csv", tmp_path / "o.csv", receipts_file=receipts_file)
+        receipts.import_local("Other.csv", lane / "o.csv", receipts_file=receipts_file, **route)
     with pytest.raises(receipts.ValidationError, match="disagrees"):
-        receipts.import_local("Model.csv", tmp_path / "x.csv", receipts_file=receipts_file,
-                              expect=Expect(sha256="1" * 64))
+        receipts.import_local("Model.csv", lane / "x.csv", receipts_file=receipts_file,
+                              expect=Expect(sha256="1" * 64), **route)
+
+
+def test_import_local_needs_a_barrier_or_a_recorded_discovery_use(tmp_path, mining):
+    receipts_file = tmp_path / "owner-receipts.txt"
+    receipts_file.write_text(owner_file(mining, "Model.csv", CSV))
+    lane = tmp_path / f"biology-{LANE}"
+    dest = lane / "prep" / "Model.csv"
+    with pytest.raises(receipts.KitError, match="needs the barrier proof"):
+        receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0)
+    unrecorded = portal_ledger(tmp_path)
+    with pytest.raises(receipts.KitError, match="records no discovery use"):
+        receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0,
+                              ledger=unrecorded, campaign=LANE)
+    ledger.record_discovery(unrecorded, PORTAL_SOURCE, "another-lane", "2026-09-26")
+    with pytest.raises(receipts.KitError, match="records no discovery use"):
+        receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0,
+                              ledger=unrecorded, campaign=LANE)
+    ledger.record_discovery(unrecorded, PORTAL_SOURCE, LANE, "2026-09-26")
+    # the named source must be the one the subdirectory holds
+    with pytest.raises(receipts.KitError, match="holds ledger source"):
+        receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0,
+                              ledger=unrecorded, campaign=LANE, source="some-other-source")
+    # the destination must be inside that campaign's directory
+    with pytest.raises(receipts.KitError, match="not inside campaign"):
+        receipts.import_local("Model.csv", tmp_path / "elsewhere" / "Model.csv",
+                              receipts_file=receipts_file, floor_gb=0, ledger=unrecorded,
+                              campaign=LANE)
+    assert not dest.exists()
+    receipt = receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0,
+                                    ledger=unrecorded, campaign=LANE)
+    assert receipt["sha256"] == hashlib.sha256(CSV).hexdigest()
+
+
+def test_import_local_refusals(tmp_path, mining, frozen_campaign):
+    campaign, lane_id, sha, name = frozen_campaign
+    proof = barrier.require(campaign, lane_id, sha)
+    receipts_file = tmp_path / "owner-receipts.txt"
+    line = owner_file(mining, "Model.csv", CSV)
+    dest = campaign / "data" / "prep" / "Model.csv"
+    # a size that disagrees with the owner receipt
+    receipts_file.write_text(line.replace(f"bytes={len(CSV)}", f"bytes={len(CSV) + 1}"))
+    with pytest.raises(receipts.ValidationError, match="the receipt says"):
+        receipts.import_local("Model.csv", dest, receipts_file=receipts_file, floor_gb=0,
+                              barrier=proof)
+    receipts_file.write_text(line)
+    # traversal in the name or the subdirectory
+    for bad in ("../Model.csv", "a/Model.csv", ".hidden"):
+        with pytest.raises(receipts.KitError, match="plain file name"):
+            receipts.import_local(bad, dest, receipts_file=receipts_file, barrier=proof)
+    for bad in ("..", "../cache", "a/b"):
+        with pytest.raises(receipts.KitError, match="plain directory name"):
+            receipts.import_local("Model.csv", dest, receipts_file=receipts_file, barrier=proof,
+                                  subdir=bad)
+    # a symlinked cache file
+    portal = mining / "cache" / receipts.PORTAL_SUBDIR
+    (portal / "Link.csv").symlink_to(portal / "Model.csv")
+    receipts_file.write_text(line + line.replace("Model.csv", "Link.csv"))
+    with pytest.raises(receipts.KitError, match="not in the cache as a regular file"):
+        receipts.import_local("Link.csv", campaign / "data" / "prep" / "Link.csv",
+                              receipts_file=receipts_file, floor_gb=0, barrier=proof)
+    # a missing receipts file
+    with pytest.raises(receipts.KitError, match="does not exist"):
+        receipts.import_local("Model.csv", dest, receipts_file=tmp_path / "missing.txt",
+                              barrier=proof)
+    assert not dest.exists()
 
 
 def test_import_local_into_sealed_needs_the_barrier(tmp_path, mining, frozen_campaign):

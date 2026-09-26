@@ -110,6 +110,36 @@ def test_vendored_kit_freezes_and_its_own_tests_pass(new_campaign, tmp_path):
         {p.name for p in (target / "results").iterdir()} <= {".confirmation.lock"}
 
 
+DECOY_TEST = '''import os
+
+from campaign_kit import guards
+
+
+def test_budget_writes_stay_in_the_test_mining_dir(tmp_path):
+    for name in ("BIO_RUN_ID", "BIO_DATA_BUDGET_GB", "BIO_SLOT"):
+        assert name not in os.environ
+    assert os.environ["BIO_MINING_DIR"] == str(tmp_path / "mining")
+    guards.record_download(10, run_id="lane-test", budget_gb=1)
+    assert (tmp_path / "mining" / "data-budget.jsonl").is_file()
+'''
+
+
+def test_scaffolded_tests_never_reach_the_mining_dir_in_the_environment(new_campaign, tmp_path):
+    target = scaffolded(new_campaign, tmp_path)
+    (target / "tests" / "test_decoy_budget.py").write_text(DECOY_TEST)
+    decoy = tmp_path / "decoy-mining"
+    decoy.mkdir()
+    env = plain_env()
+    env.update(BIO_MINING_DIR=str(decoy), BIO_RUN_ID="real-run", BIO_DATA_BUDGET_GB="5",
+               BIO_SLOT="slot-9")
+    tests = subprocess.run([sys.executable, "-m", "pytest", "-q", "-p", "no:cacheprovider",
+                            "--rootdir", str(target), str(target / "tests")],
+                           capture_output=True, text=True, env=env, cwd=target)
+    assert tests.returncode == 0, tests.stdout + tests.stderr
+    assert "3 passed" in tests.stdout
+    assert list(decoy.iterdir()) == []
+
+
 def test_cli(tmp_path):
     target = tmp_path / NAME
     done = subprocess.run([sys.executable, str(REPO / "scripts" / "new_campaign.py"), NAME, str(target)],

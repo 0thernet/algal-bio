@@ -13,14 +13,17 @@ Names listed in protocol "constants_exempt" (name -> reason) are skipped.
 hygiene: over files, directories, PR body and commit message files (and with
 --staged, the staged blobs): personal paths, names from the private deny
 file (one per line, '#' comments, case-insensitive whole words) and files
-over 4 MB. Hits are reported as file:line and kind, never with the matched
-text, so the deny list does not leak into logs.
+over 4 MB, in file contents and in file and directory names. Hits are
+reported as file:line and kind, never with the matched text, and a file
+label that itself holds a deny-list name is printed as a neutral
+'<path #n sha256:...>', so the deny list does not leak into logs.
 """
 
 from __future__ import annotations
 
 import argparse
 import ast
+import hashlib
 import os
 from pathlib import Path
 import re
@@ -166,7 +169,8 @@ def load_deny(deny_file) -> list[re.Pattern]:
     return patterns
 
 
-def _scan(label: str, data: bytes, patterns) -> list[str]:
+def _scan_text(label: str, data: bytes, patterns) -> list[str]:
+    """Content hits only, labelled with label as given (the caller makes it safe)."""
     hits = []
     if len(data) > MAX_PUBLIC_BYTES:
         hits.append(f"{label}: file over 4 MB")
@@ -184,46 +188,90 @@ def _scan(label: str, data: bytes, patterns) -> list[str]:
     return hits
 
 
-def _expand(paths) -> list[Path]:
+def _deny_match(text: str, patterns) -> bool:
+    # path separators and dots split words; a name may also span two path parts
+    spaced = re.sub(r"[/\\._-]+", " ", text)
+    return any(p.search(text) or p.search(spaced) for p in patterns)
+
+
+def safe_label(label: str, patterns, index: int) -> str:
+    """label, or a neutral '<path #n sha256:...>' when it holds a deny-list name."""
+    if _deny_match(label, patterns):
+        return f"<path #{index} sha256:{hashlib.sha256(label.encode()).hexdigest()[:12]}>"
+    return label
+
+
+def scan_blob(label: str, checked_path: str, data: bytes, patterns, index: int = 1) -> list[str]:
+    """Hygiene hits for one file: its path as it will appear in Git (checked_path) and
+    its content. A label that holds a deny-list name is replaced with a neutral one
+    before it is printed or raised."""
+    shown = safe_label(label, patterns, index)
+    hits = []
+    if PERSONAL_RE.search(checked_path):
+        hits.append(f"{shown}: personal path (file path)")
+    if _deny_match(checked_path, patterns):
+        hits.append(f"{shown}: deny-list name (file path)")
+    return hits + _scan_text(shown, data, patterns)
+
+
+def _expand(paths, patterns=()) -> list[tuple[Path, str]]:
+    """(file, the part of its path that can reach Git) for every file under paths.
+
+    A relative argument keeps its whole path; an absolute one keeps its own name
+    and everything below it.
+    """
     out = []
     for raw in paths:
         path = Path(raw)
+        base = Path() if not path.is_absolute() else path.parent
         if path.is_dir():
             for root, dirs, files in os.walk(path):
                 dirs[:] = sorted(d for d in dirs if d not in (".git", "__pycache__", ".pytest_cache"))
-                out.extend(Path(root) / f for f in sorted(files) if not f.endswith(".pyc"))
+                for name in sorted(files):
+                    if not name.endswith(".pyc"):
+                        full = Path(root) / name
+                        out.append((full, full.relative_to(base).as_posix()))
         elif path.is_file():
-            out.append(path)
+            out.append((path, path.relative_to(base).as_posix()))
         else:
-            raise KitError(f"no such file or directory: {raw}")
+            raise KitError(f"no such file or directory: {safe_label(str(raw), patterns, 0)}")
     return out
 
 
 def hygiene_hits(paths, *, deny_file, root=None, staged_repo=None) -> list[str]:
-    """Every hygiene hit as 'file:line: kind'. deny_file is required."""
+    """Every hygiene hit as 'file:line: kind' or 'file: kind (file path)'.
+
+    File paths are checked as well as contents, and a file label that holds a
+    deny-list name is printed as a neutral '<path #n sha256:...>'. deny_file is
+    required.
+    """
     if deny_file is None:
         raise KitError("the hygiene lint needs --deny-file")
     patterns = load_deny(deny_file)
     hits = []
-    for path in _expand(paths):
+    index = 0
+    for path, checked in _expand(paths, patterns):
+        index += 1
         label = str(path)
         if root is not None:
             try:
-                label = path.resolve().relative_to(Path(root).resolve()).as_posix()
+                label = checked = path.resolve().relative_to(Path(root).resolve()).as_posix()
             except ValueError:
                 pass
-        hits.extend(_scan(label, path.read_bytes(), patterns))
+        hits.extend(scan_blob(label, checked, path.read_bytes(), patterns, index))
     if staged_repo is not None:
         listing = subprocess.run(["git", "-C", str(staged_repo), "diff", "--cached", "--name-only",
                                   "--diff-filter=ACMR", "-z"], capture_output=True, check=False)
         if listing.returncode:
             raise KitError("git could not list the staged files")
         for name in [n for n in listing.stdout.decode().split("\0") if n]:
+            index += 1
             blob = subprocess.run(["git", "-C", str(staged_repo), "show", f":{name}"],
                                   capture_output=True, check=False)
             if blob.returncode:
-                raise KitError(f"git could not read the staged blob of {name}")
-            hits.extend(_scan(f"staged:{name}", blob.stdout, patterns))
+                raise KitError(f"git could not read the staged blob of "
+                               f"{safe_label(name, patterns, index)}")
+            hits.extend(scan_blob(f"staged:{name}", name, blob.stdout, patterns, index))
     return hits
 
 

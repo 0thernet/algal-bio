@@ -10,6 +10,7 @@ import os
 from pathlib import Path, PurePosixPath
 import re
 import time
+import unicodedata
 
 MINING_ENV = "BIO_MINING_DIR"
 RUN_ENV = "BIO_RUN_ID"
@@ -173,13 +174,48 @@ def rel_posix(root: Path, path: Path) -> str:
     return path.relative_to(root).as_posix()
 
 
+def fold(name: str) -> str:
+    """Caseless form of a path part for comparisons.
+
+    APFS and most macOS volumes ignore case and Unicode normalization, so
+    Data/Sealed names the same directory as data/sealed. Every sealed-path
+    comparison in the kit goes through this function.
+    """
+    return unicodedata.normalize("NFKD", unicodedata.normalize("NFKD", name).casefold())
+
+
+SEALED_PARTS = ("sealed", "sanger_holdout")
+PRIVATE_PARTS = SEALED_PARTS + ("discovery",)
+
+
+def folded_parts(path: os.PathLike | str) -> list[str]:
+    return [fold(part) for part in Path(os.path.abspath(path)).parts]
+
+
+def _has_sealed_pair(parts: list[str]) -> bool:
+    return any(parts[i] == "data" and parts[i + 1] in SEALED_PARTS for i in range(len(parts) - 1))
+
+
 def is_sealed_path(path: os.PathLike | str) -> bool:
-    """True for anything under a data/sealed/ or data/sanger_holdout/ directory."""
-    parts = Path(os.path.abspath(path)).parts
-    for index in range(len(parts) - 1):
-        if parts[index] == "data" and parts[index + 1] in ("sealed", "sanger_holdout"):
-            return True
-    return False
+    """True for anything under a data/sealed/ or data/sanger_holdout/ directory.
+
+    The comparison is caseless (see fold): data/Sealed and Data/sealed count too.
+    """
+    return _has_sealed_pair(folded_parts(path))
+
+
+def is_sealed_relative(relative: str) -> bool:
+    """is_sealed_path for a campaign-relative POSIX path (no filesystem lookup)."""
+    return _has_sealed_pair([fold(p) for p in PurePosixPath(relative).parts])
+
+
+def is_private_data_dir(path: os.PathLike | str) -> bool:
+    """True for a directory under a sealed path, or whose path ends in
+    data/sealed, data/sanger_holdout or data/discovery (caseless)."""
+    parts = folded_parts(path)
+    if len(parts) >= 2 and parts[-2] == "data" and parts[-1] in PRIVATE_PARTS:
+        return True
+    return _has_sealed_pair(parts)
 
 
 def dir_has_files(path: Path) -> bool:

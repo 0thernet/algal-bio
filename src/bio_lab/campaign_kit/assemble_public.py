@@ -9,14 +9,22 @@ bio.assembly-manifest.v2) goes to campaigns/<name>/assembly.manifest.json at
 prereg and reports/<name>/assembly.manifest.json at outcome, where the lane
 adds its rights list.
 
-Skipped: data/sealed/, data/sanger_holdout/, data/discovery/ and any other
-sealed/ directory are never walked (only their receipts.jsonl is published), caches, locks, known binary data formats, and
-unregistered files over 4 MB; each skip is recorded with its sha256 when
-readable. Personal path prefixes are scrubbed. The assembly refuses, before
-writing anything, when: the freeze does not verify; a registered file (or
-freeze.json) would change in scrubbing, would be skipped, or differs from a
-copy already in the worktree; a symlink is present; a personal path survives
-scrubbing; or, with --deny-file, the hygiene lint finds a hit.
+Skipped, never walked and never read: any directory under a data/sealed/ or
+data/sanger_holdout/ path, and any directory named sealed, at any depth and
+in any letter case. Sealed receipts reach the public copy only through
+audit/sealed-receipts.jsonl, which fetch and import_local append outside
+data/sealed/. A data/discovery/ directory at any depth is skipped too; only
+its receipts.jsonl is published. In every walked directory, the files listed
+in that directory's receipts.jsonl are third-party data and are skipped
+(the receipts file itself is published; a malformed one refuses). Also
+skipped: caches, locks, known binary data formats, and unregistered files
+over 4 MB; each such skip is recorded with its sha256. Personal path
+prefixes are scrubbed. The assembly refuses, before writing anything, when:
+the freeze does not verify; a registered file (or freeze.json) would change
+in scrubbing, would be skipped, or differs from a copy already in the
+worktree; a symlink is present; a personal path survives scrubbing; or, with
+--deny-file, the hygiene lint finds a hit in a published path, a published
+file or the manifest (labels holding a deny-list name are shown neutrally).
 """
 
 from __future__ import annotations
@@ -29,12 +37,14 @@ from pathlib import Path
 import re
 import sys
 
-from .common import (KitError, MAX_PUBLIC_BYTES, MINING_ENV, NAME_RE, PERSONAL_RE, die,
-                     safe_relative, sha256_bytes)
+from .common import (KitError, MAX_PUBLIC_BYTES, MINING_ENV, NAME_RE, PERSONAL_RE,
+                     PRIVATE_PARTS, SEALED_PARTS, die, fold, is_sealed_path, is_sealed_relative,
+                     read_jsonl, safe_relative, sha256_bytes)
 from . import freeze as _freeze
 
 SCHEMA = "bio.assembly-manifest.v2"
 PRIVATE_DATA = ("data/sealed", "data/sanger_holdout", "data/discovery")
+RECEIPTS = "receipts.jsonl"
 SKIP_DIRS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".ipynb_checkpoints", ".git"}
 SKIP_NAMES = {".DS_Store", ".confirmation.lock"}
 BINARY_DATA = (".npz", ".npy", ".gz", ".zip", ".bz2", ".xz", ".parquet", ".feather", ".h5",
@@ -88,6 +98,40 @@ def _skip_reason(rel: str, size: int, registered: bool) -> str | None:
     return None
 
 
+def _dir_kind(root: Path, rel_d: str, name: str) -> str | None:
+    """'sealed' (never read), 'private' (publish only its receipts) or None (walk)."""
+    parts = [fold(p) for p in rel_d.split("/")]
+    if fold(name) == "sealed" or is_sealed_relative(rel_d) or is_sealed_path(root / name):
+        return "sealed"
+    if len(parts) >= 2 and parts[-2] == "data" and parts[-1] in SEALED_PARTS:
+        return "sealed"
+    if len(parts) >= 2 and parts[-2] == "data" and parts[-1] in PRIVATE_PARTS:
+        return "private"
+    return None
+
+
+def _receipted(root: Path, rel_root: str, label) -> set[str]:
+    """File names that root/receipts.jsonl lists as third-party data."""
+    path = root / RECEIPTS
+    if not path.exists() and not path.is_symlink():
+        return set()
+    where = RECEIPTS if rel_root == "." else f"{rel_root}/{RECEIPTS}"
+    if path.is_symlink() or not path.is_file():
+        raise AssemblyError(f"{label(where)} is not a regular file")
+    try:
+        records = read_jsonl(path)
+    except KitError as error:
+        raise AssemblyError(f"{label(where)} is malformed ({error})") from None
+    names = set()
+    for number, record in enumerate(records, 1):
+        name = record.get("file")
+        if not isinstance(name, str) or not name or "/" in name or name in (".", "..") \
+                or name == RECEIPTS:
+            raise AssemblyError(f"{label(where)} line {number} has no plain file name")
+        names.add(name)
+    return names
+
+
 def plan(campaign_dir, repo, name: str, stage: str, exclude=(), deny_file=None) -> dict:
     """Compute every write without performing one. Raises AssemblyError on any refusal."""
     campaign_dir = Path(campaign_dir).resolve()
@@ -118,6 +162,18 @@ def plan(campaign_dir, repo, name: str, stage: str, exclude=(), deny_file=None) 
                                     if p.is_file()):
             raise AssemblyError("results/ holds files; a preregistration is assembled before any outcome")
     camp, rep = repo / "campaigns" / name, repo / "reports" / name
+    patterns = None
+    if deny_file is not None:
+        from .lint import load_deny
+        patterns = load_deny(deny_file)
+    counter = iter(range(1, 1 << 30))
+
+    def label(rel: str) -> str:
+        if patterns is None:
+            return rel
+        from .lint import safe_label
+        return safe_label(rel, patterns, next(counter))
+
     rules = scrub_rules(campaign_dir)
     writes, files, skipped = [], [], []
     for root, dirs, names in os.walk(campaign_dir):
@@ -125,25 +181,36 @@ def plan(campaign_dir, repo, name: str, stage: str, exclude=(), deny_file=None) 
         rel_root = root.relative_to(campaign_dir).as_posix()
         for d in list(dirs):
             if (root / d).is_symlink():
-                raise AssemblyError(f"symlink in the campaign dir: {(root / d).relative_to(campaign_dir)}")
+                raise AssemblyError(f"symlink in the campaign dir: "
+                                    f"{label((root / d).relative_to(campaign_dir).as_posix())}")
         dirs[:] = sorted(d for d in dirs if d not in SKIP_DIRS)
         kept = []
         for d in dirs:
             rel_d = d if rel_root == "." else f"{rel_root}/{d}"
-            if rel_d in PRIVATE_DATA or d == "sealed":
-                # never walked, read or hashed; only the receipts file is public
+            kind = _dir_kind(root, rel_d, d)
+            if kind == "sealed":
+                # never walked, listed, read or hashed, receipts included: sealed
+                # receipts are published through audit/sealed-receipts.jsonl
+                skipped.append({"source": rel_d + "/", "reason": "sealed data"})
+            elif kind == "private":
+                # never walked; only its receipts file is public
                 skipped.append({"source": rel_d + "/", "reason": "private data"})
-                receipts = root / d / "receipts.jsonl"
+                receipts = root / d / RECEIPTS
                 if receipts.is_file() and not receipts.is_symlink():
-                    names.append(f"{d}/receipts.jsonl")
+                    names.append(f"{d}/{RECEIPTS}")
             else:
                 kept.append(d)
         dirs[:] = kept
+        third_party = _receipted(root, rel_root, label)
         for fname in sorted(names):
             src = root / fname
             rel = fname if rel_root == "." else f"{rel_root}/{fname}"
             if src.is_symlink():
-                raise AssemblyError(f"symlink in the campaign dir: {rel}")
+                raise AssemblyError(f"symlink in the campaign dir: {label(rel)}")
+            if fname in third_party:
+                skipped.append({"source": rel, "reason": "receipted third-party data",
+                                "bytes": src.stat().st_size})
+                continue
             if rel in excluded or any(rel.startswith(e + "/") for e in excluded):
                 skipped.append({"source": rel, "reason": "excluded by flag"})
                 continue
@@ -157,22 +224,22 @@ def plan(campaign_dir, repo, name: str, stage: str, exclude=(), deny_file=None) 
                 continue
             data = src.read_bytes()
             if len(data) > MAX_PUBLIC_BYTES:
-                raise AssemblyError(f"{rel} is registered and over 4 MB")
+                raise AssemblyError(f"{label(rel)} is registered and over 4 MB")
             try:
                 out = scrub(data.decode("utf-8"), rules).encode("utf-8")
             except UnicodeDecodeError:
                 out = data
             if PERSONAL_RE.search(out.decode("utf-8", errors="replace")):
-                raise AssemblyError(f"a personal path survives scrubbing in {rel}")
+                raise AssemblyError(f"a personal path survives scrubbing in {label(rel)}")
             if is_reg and out != data:
-                raise AssemblyError(f"registered file {rel} would change in the public copy")
+                raise AssemblyError(f"registered file {label(rel)} would change in the public copy")
             if rel == "report.md" and stage == "outcome":
                 dst = rep / "report.md"
             else:
                 dst = camp / rel
             if is_reg and dst.exists() and dst.read_bytes() != data:
-                raise AssemblyError(f"registered file {rel} differs from the copy already in the "
-                                    "worktree")
+                raise AssemblyError(f"registered file {label(rel)} differs from the copy already "
+                                    "in the worktree")
             writes.append((dst, out))
             files.append({"source": rel, "published": dst.relative_to(repo).as_posix(),
                           "bytes": len(data), "bytes_published": len(out),
@@ -181,12 +248,13 @@ def plan(campaign_dir, repo, name: str, stage: str, exclude=(), deny_file=None) 
                           "path_prefix_redacted": out != data, "registered": is_reg})
     missing = sorted(registered - {f["source"] for f in files})
     if missing:
-        raise AssemblyError(f"registered files would not be published: {', '.join(missing)}")
-    if deny_file is not None:
-        from .lint import _scan, load_deny
-        patterns = load_deny(deny_file)
-        for dst, out in writes:
-            hits = _scan(dst.relative_to(repo).as_posix(), out, patterns)
+        raise AssemblyError("registered files would not be published: "
+                            f"{', '.join(label(m) for m in missing)}")
+    if patterns is not None:
+        from .lint import scan_blob
+        for index, (dst, out) in enumerate(writes, 1):
+            published = dst.relative_to(repo).as_posix()
+            hits = scan_blob(published, published, out, patterns, index)
             if hits:
                 raise AssemblyError(f"hygiene: {hits[0]}")
     manifest_path = (camp if stage == "prereg" else rep) / "assembly.manifest.json"
@@ -196,10 +264,20 @@ def plan(campaign_dir, repo, name: str, stage: str, exclude=(), deny_file=None) 
         "excluded": sorted(PRIVATE_DATA), "skipped": skipped,
         "note": ("Frozen hashes refer to sha256_original; registered files are published "
                  "byte-identical. Redaction replaces personal path prefixes in unregistered "
-                 "files only. Sealed and discovery data stay external; their receipts are "
-                 "published."),
+                 "files only. Sealed data is never read; its receipts are published in "
+                 "audit/sealed-receipts.jsonl. Discovery data and files listed in a "
+                 "receipts.jsonl stay external; their receipts are published."),
         "files": files,
     }
+    manifest_text = json.dumps(public_manifest, indent=1) + "\n"
+    if PERSONAL_RE.search(manifest_text):
+        raise AssemblyError("a personal path would appear in the assembly manifest")
+    if patterns is not None:
+        from .lint import _scan_text
+        hits = _scan_text("assembly.manifest.json", manifest_text.encode("utf-8"), patterns)
+        if hits:
+            raise AssemblyError(f"hygiene: {hits[0]} (a skipped or published path holds a "
+                                "deny-list name)")
     return {"writes": writes, "manifest_path": manifest_path, "manifest": public_manifest}
 
 
